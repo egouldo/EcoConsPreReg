@@ -1,0 +1,40 @@
+﻿group,id,project,phase,decision_point,sheet_step_number
+FW,8,Survey of Giant Rush response to floods at Barmah Forest.,NA,"Vague project topic (starting of a new job) + discussion with colleagues about issue (i.e. invasive plant, what were the impacts of flooding on it?)",1
+FW,8,Survey of Giant Rush response to floods at Barmah Forest.,NA,organised meeting / visit to site with land manager. - discuss issue - see location -> ideas.etc - important to visit site first?? I found this hugely valuable.,2
+FW,8,Survey of Giant Rush response to floods at Barmah Forest.,NA,"survey plan, site selection - data collection approach - e.g. quadrat size, variables to collect",3
+FW,8,Survey of Giant Rush response to floods at Barmah Forest.,NA,survey in field. Adjustment of method when things didn't work. E.g. moving some sites to capture rush as GIS maps were wrong.,4
+FW,8,Survey of Giant Rush response to floods at Barmah Forest.,NA,Survey dates were a bit ad hoc as couldn't predict flow patterns -> visits as required as hydrograph changed.,5
+FW,8,Survey of Giant Rush response to floods at Barmah Forest.,NA,Flow predictor variables -> method wasn't finalised till a long time after surveys finished. Worked out in the field how to quantify flooding depths.,6
+FW,8,Survey of Giant Rush response to floods at Barmah Forest.,NA,Stats assistance also sought well after fieldwork ended.,7
+FW,8,Survey of Giant Rush response to floods at Barmah Forest.,NA,Entire analysis reworked after reject and resubit from a journal. Then subsequently accepted.,8
+FW,8,Survey of Giant Rush response to floods at Barmah Forest.,NA,Conceptual thinking developed refined during course of multiple survey (Alternative stable states in the forest).,9
+FW,9,Predicting bird occurrence in woodlands based on vegetation characteristics,NA,Lit review - work out what types of variables might be relevant.,0
+FW,9,Predicting bird occurrence in woodlands based on vegetation characteristics,NA,Find what variables were used in a previous study of the area.,1
+FW,9,Predicting bird occurrence in woodlands based on vegetation characteristics,NA,Create a data collection plant that captures all of these variables,2
+FW,9,Predicting bird occurrence in woodlands based on vegetation characteristics,NA,"Choose methods of data measurement. - pointing - quadrats (<- shape) - transects (<- shape) - 2ha, 20 minute bird surveys",3
+FW,9,Predicting bird occurrence in woodlands based on vegetation characteristics,NA,Pick sites (ensure that survey sites are the same as in previous work),4
+FW,9,Predicting bird occurrence in woodlands based on vegetation characteristics,NA,Collect data,5
+FW,9,Predicting bird occurrence in woodlands based on vegetation characteristics,NA,Do descriptive analysis,6
+FW,9,Predicting bird occurrence in woodlands based on vegetation characteristics,NA,Refer to lit review and develop a model to investigate relationships,7
+FW,9,Predicting bird occurrence in woodlands based on vegetation characteristics,NA,Built into a decision support tool,8
+FW,10,"Understand the relationshp between fire frequency, severity and plant trait group responses",NA,Review literature,1
+FW,10,"Understand the relationshp between fire frequency, severity and plant trait group responses",NA,Develop conceptual model and present to scientific committee + slight modifications,2
+FW,10,"Understand the relationshp between fire frequency, severity and plant trait group responses",NA,Develop sampling design (can we answer the question?) + hypothesis for each trait group.,3
+FW,10,"Understand the relationshp between fire frequency, severity and plant trait group responses",NA,Review design (needs to fit budget) Consulted biometrician and power analysis. Good for somethings marginal for others. Site Reccy.,4
+FW,10,"Understand the relationshp between fire frequency, severity and plant trait group responses",NA,Field data collection.,5
+FW,10,"Understand the relationshp between fire frequency, severity and plant trait group responses",NA,"Data analysis. Model didn't fit very well, different modelling approach chosen. Would have been good to do this earlier. ",6
+FW,10,"Understand the relationshp between fire frequency, severity and plant trait group responses",NA,First draft manuscript. Co-authors suggested additional analysis. Which means hypothesising after data collection.,7
+FW,10,"Understand the relationshp between fire frequency, severity and plant trait group responses",NA,Additional unplanned analysis.,8
+FW,10,"Understand the relationshp between fire frequency, severity and plant trait group responses",NA,Next draft of the manuscript (rejected).,9
+FW,10,"Understand the relationshp between fire frequency, severity and plant trait group responses",NA,"Submit to a new journal with some changes (inc, more analysis, suggested by co-authors)",10
+FW,10,"Understand the relationshp between fire frequency, severity and plant trait group responses",NA,Rejected again (analysis too complicated),11
+FW,10,"Understand the relationshp between fire frequency, severity and plant trait group responses",NA,"Dunno, go back to plan A?",12
+FW,11,"Murray River resnagging. Does increasing habitat heterogeneity lead to an increase in fish biomass in a degraded river, or just redistribute fish already present.",NA,Review of literature following previous project.,1
+FW,11,"Murray River resnagging. Does increasing habitat heterogeneity lead to an increase in fish biomass in a degraded river, or just redistribute fish already present.",NA,Study design - collaborate with experts (CMR / Bayesian),2
+FW,11,"Murray River resnagging. Does increasing habitat heterogeneity lead to an increase in fish biomass in a degraded river, or just redistribute fish already present.",NA,Test study design @ expert workshop.,3
+FW,11,"Murray River resnagging. Does increasing habitat heterogeneity lead to an increase in fish biomass in a degraded river, or just redistribute fish already present.",NA,Submit project bid + study design.,4
+FW,11,"Murray River resnagging. Does increasing habitat heterogeneity lead to an increase in fish biomass in a degraded river, or just redistribute fish already present.",NA,Begin sampling / experiments,5
+FW,11,"Murray River resnagging. Does increasing habitat heterogeneity lead to an increase in fish biomass in a degraded river, or just redistribute fish already present.",NA,Implement management intervention,6
+FW,11,"Murray River resnagging. Does increasing habitat heterogeneity lead to an increase in fish biomass in a degraded river, or just redistribute fish already present.",NA,Complete sampling / experiments,7
+FW,11,"Murray River resnagging. Does increasing habitat heterogeneity lead to an increase in fish biomass in a degraded river, or just redistribute fish already present.",NA,Undertake analyses,8
+FW,11,"Murray River resnagging. Does increasing habitat heterogeneity lead to an increase in fish biomass in a degraded river, or just redistribute fish already present.",NA,Publish,9
