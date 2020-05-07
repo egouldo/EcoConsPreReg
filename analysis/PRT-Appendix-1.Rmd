@@ -1,0 +1,48 @@
+---
+title: "Untitled"
+description: |
+  A new article created using the Distill format.
+author:
+  - name: ELise Gould 
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+```{r}
+library(tidyverse)
+library(here)
+memos <- readr::read_csv(here("./data/PRT-WorkshopCoding - Memo Manager.csv"))%>% 
+  select(Name, Groups, Comment) %>% 
+  mutate(phase = substr(Name, 1,1) %>%  as.numeric(),
+         step = substr(Name, 3,3) %>% as.numeric())
+
+#@TODO Alternative 2: Make new Groups in Atlas that match with the Phase and step names
+
+#@TODO: for appendix, we want justifications and also quotations of sources.
+#For the latter, we can filter out quotes that come from documents in the PDF group only, and then join those in.
+
+
+codes <- readr::read_csv(here("data/PRT-WorkshopCoding - Code Manager.csv")) %>%  
+  select(Name, Comment, Groups) %>% 
+  mutate(phase = substr(Name, 1,1) %>%  as.numeric(),
+         step = ifelse(str_detect(Groups, "step"), substr(Name, 3,3),"0") %>% as.numeric())
+
+PRT_items <- bind_rows(codes, memos) %>% select(phase, step, Name, Comment) %>% arrange(phase, step)
+
+knitr::kable(PRT_items) #@TODO how to nest
+
+PRT_items <- 
+  PRT_items %>% mutate(response = "")
+
+
+```
+
+```{r write-draft-template, echo = FALSE, eval = FALSE}
+write.csv(PRT_items, file = here("./outputs/draft_template.csv"))
+```
+
