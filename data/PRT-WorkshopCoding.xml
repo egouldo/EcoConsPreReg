@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="US-ASCII" standalone="yes"?>
-<storedHU xmlns:aml="http://www.atlasti.com/hu/ns2003" lastSaved="2020-05-09T19:14:02" creator="ATLAS.ti" method="AML (ATLAS Markup Language)" version="7.1.5" mode="complete">
+<storedHU xmlns:aml="http://www.atlasti.com/hu/ns2003" lastSaved="2020-05-09T21:35:33" creator="ATLAS.ti" method="AML (ATLAS Markup Language)" version="7.1.5" mode="complete">
     <hermUnit name="PRT-WorkshopCoding" au="egould" cDate="2020-04-21T16:33:15" mDate="2020-04-21T16:33:15" lastPD="" prot="private"/>
     <coAuthors/>
     <dataSources size="103">
@@ -6071,7 +6071,7 @@ Does it make sense to preregister your conceptual model? That can be quite a pro
             <comment type="text/html" size="227">
                 <p>Grimm, V., Augusiak, J., Focks, A., Frank, B. M., Gabsi, F., Johnston, A. S. A., . . . Railsback, S. F. (2014). Towards better modelling and decision support: Documenting model development, testing, and analysis using TRACE ...</p>
             </comment>
-            <quotations size="41">
+            <quotations size="49">
                 <q name="model analysis&#8217;, examining the model&#8217;s sensitivity to changes in param- eters and formulation to und&#8230;" id="q94_1_1066" au="egould" cDate="2020-04-29T16:03:02" mDate="2020-04-29T16:03:02" loc="5:4781:5:4970">
                     <content size="189">
                         <p>model analysis&#8217;, examining the model&#8217;s sensitivity to changes in param- eters and formulation to understand the model&#8217;s main behaviours and describing and justifying simulation experiments;</p>
@@ -6325,6 +6325,47 @@ Does it make sense to preregister your conceptual model? That can be quite a pro
                         <p>In order to ensure that the computer code implementing the model works according to its specification in the ODD model description, a series of tests has been performed. These tests included syntax checking of the code, visual testing through NetLogo interface, print statements, spot tests with agent monitors, stress tests with extreme parameters values, test procedures and test programs, and code reviews.</p>
                     </content>
                 </q>
+                <q name="How model predictions compare to independent data and patterns that were not used, and preferably no&#8230;" id="q94_42_1107" au="egould" cDate="2020-05-09T19:21:40" mDate="2020-05-09T19:21:40" loc="4:2457:4:2861">
+                    <content size="404">
+                        <p>How model predictions compare to independent data and patterns that were not used, and preferably not even known, while the model was developed,</p>
+                        <p>parameterized, and verified. By documenting model output corroboration, model users learn about evidence which, in addition to model output verification, indicates that the model is structurally realistic so that its predictions can be trusted to some degree.</p>
+                    </content>
+                </q>
+                <q name="(1) How sensitive model output is to changes in model parameters (sensitivity analysis), and (2) how&#8230;" id="q94_43_1108" au="egould" cDate="2020-05-09T19:21:49" mDate="2020-05-09T19:21:49" loc="4:2300:4:2456">
+                    <content size="156">
+                        <p>(1) How sensitive model output is to changes in model parameters (sensitivity analysis), and (2) how well the emergence of model output has been understood.</p>
+                    </content>
+                </q>
+                <q name="(1) How well model output matches observations and (2) how much calibration and effects of environme&#8230;" id="q94_44_1109" au="egould" cDate="2020-05-09T19:22:12" mDate="2020-05-09T19:22:12" loc="4:2124:4:2299">
+                    <content size="175">
+                        <p>(1) How well model output matches observations and (2) how much calibration and effects of environmental drivers were involved in obtaining good fits of model output and data.</p>
+                    </content>
+                </q>
+                <q name="(1) Whether the computer code implementing the model has been thoroughly tested for programming erro&#8230;" id="q94_45_1110" au="egould" cDate="2020-05-09T19:22:29" mDate="2020-05-09T19:22:29" loc="4:1727:4:2123">
+                    <content size="396">
+                        <p>(1) Whether the computer code implementing the model has been thoroughly tested for programming errors, (2) whether the implemented model performs as indicated by the model description, and (3) how the software has been designed and documented to provide necessary usability tools (interfaces, automation of experiments, etc.) and to facilitate future installation, modification, and maintenance.</p>
+                    </content>
+                </q>
+                <q name="The simplifying assumptions underlying a model&#8217;s design, both with regard to empirical knowledge and&#8230;" id="q94_46_1111" au="egould" cDate="2020-05-09T19:22:39" mDate="2020-05-09T19:22:39" loc="4:1457:4:1726">
+                    <content size="269">
+                        <p>The simplifying assumptions underlying a model&#8217;s design, both with regard to empirical knowledge and general, basic principles. This critical evaluation allows model users to understand that model design was not ad hoc but based on carefully scrutinized considerations.</p>
+                    </content>
+                </q>
+                <q name="The quality and sources of numerical and qualitative data used to parameterize the model, both direc&#8230;" id="q94_47_1112" au="egould" cDate="2020-05-09T19:22:55" mDate="2020-05-09T19:22:55" loc="4:1096:4:1456">
+                    <content size="360">
+                        <p>The quality and sources of numerical and qualitative data used to parameterize the model, both directly and inversely via calibration, and of the observed patterns that were used to design the overall model structure. This critical evaluation will allow model users to assess the scope and the uncertainty of the data and knowledge on which the model is based.</p>
+                    </content>
+                </q>
+                <q name="The model, i.e. a detailed written model description. For individual/agent-based and other simulatio&#8230;" id="q94_48_1113" au="egould" cDate="2020-05-09T19:23:21" mDate="2020-05-09T19:23:21" loc="4:767:4:1095">
+                    <content size="328">
+                        <p>The model, i.e. a detailed written model description. For individual/agent-based and other simulation models, the ODD protocol is recommended as standard format. For complex submodels, include concise explanations of the underlying rationale. Model users should learn what the model is, how it works, and what guided its design.</p>
+                    </content>
+                </q>
+                <q name="The decision-making context in which the model will be used; the types of model clients or stakehold&#8230;" id="q94_49_1114" au="egould" cDate="2020-05-09T19:23:55" mDate="2020-05-09T19:23:55" loc="4:403:4:766">
+                    <content size="363">
+                        <p>The decision-making context in which the model will be used; the types of model clients or stakeholders addressed; a precise specification of the question(s) that should be answered with the model, including a specification of necessary model outputs; and a statement of the domain of applicability of the model, including the extent of acceptable extrapolations.</p>
+                    </content>
+                </q>
             </quotations>
         </primDoc>
         <primDoc name="Araujo_et_al_2019.pdf" id="pd_95_95" loc="doc_95" au="egould" cDate="2020-04-30T12:50:15" mDate="2020-04-30T12:50:15" qIndex="">
@@ -6332,17 +6373,17 @@ Does it make sense to preregister your conceptual model? That can be quite a pro
                 <p>Ara&#250;jo, M. B., Anderson, R. P., M&#225;rcia Barbosa, A., Beale, C. M., Dormann, C. F., Early, R., . . . Rahbek, C. (2019). Standards for distribution models in biodiversity assessments. Sci Adv, 5(1), eaat4858. doi:10.1126/sc</p>
             </comment>
             <quotations size="3">
-                <q name="Evaluation of model assumptions" id="q95_1_1107" au="egould" cDate="2020-04-30T15:18:16" mDate="2020-04-30T15:18:16" loc="4:6235:4:6266">
+                <q name="Evaluation of model assumptions" id="q95_1_1115" au="egould" cDate="2020-04-30T15:18:16" mDate="2020-04-30T15:18:16" loc="4:6235:4:6266">
                     <content size="31">
                         <p>Evaluation of model assumptions</p>
                     </content>
                 </q>
-                <q name="Evaluation of model outputs" id="q95_2_1108" au="egould" cDate="2020-04-30T15:18:44" mDate="2020-04-30T15:18:44" loc="4:6310:4:6337">
+                <q name="Evaluation of model outputs" id="q95_2_1116" au="egould" cDate="2020-04-30T15:18:44" mDate="2020-04-30T15:18:44" loc="4:6310:4:6337">
                     <content size="27">
                         <p>Evaluation of model outputs</p>
                     </content>
                 </q>
-                <q name="When evaluating biodiversity models, three critical questions need to be addressed: How robust is th&#8230;" id="q95_3_1109" au="egould" cDate="2020-04-30T15:21:19" mDate="2020-04-30T15:21:19" loc="4:4598:4:5611">
+                <q name="When evaluating biodiversity models, three critical questions need to be addressed: How robust is th&#8230;" id="q95_3_1117" au="egould" cDate="2020-04-30T15:21:19" mDate="2020-04-30T15:21:19" loc="4:4598:4:5611">
                     <content size="1013">
                         <p>When evaluating biodiversity models, three critical questions need to be addressed: How robust is the model to departures from the assumptions? How meaningful are the evaluation metrics used? How predictive is the model when tested against independent data? In addressing these questions, at least three properties of the models can be evaluated (37, 61): realism, accuracy, and generality. Realism is the ability of a model to identify the critical predictors directly affecting the system and to characterize their effects and interac- tions appropriately. Accuracy is the ability of the model to predict events correctly within the system being modeled (e.g., species dis- tributions in the same space and time as the input data). Generality is the ability of the model to predict events outside the modeled system via projection or transfer to a different resolution, geograph- ic location, or time period. Depending on the question at hand, one of these properties might be more important than the other (25)</p>
                     </content>
@@ -6354,7 +6395,7 @@ Does it make sense to preregister your conceptual model? That can be quite a pro
                 <p>Moallemi, E. A., Elsawah, S., &amp; Ryan, M. J. (2019). Strengthening &#8216;good&#8217; modelling practices in robust decision support: A reporting guideline for combining multiple model-based methods. Mathematics and Computers in Simu</p>
             </comment>
             <quotations size="8">
-                <q name="Explain analytical objectives" id="q96_1_1110" au="egould" cDate="2020-04-30T13:20:44" mDate="2020-04-30T13:20:44" loc="8:605:8:635">
+                <q name="Explain analytical objectives" id="q96_1_1118" au="egould" cDate="2020-04-30T13:20:44" mDate="2020-04-30T13:20:44" loc="8:605:8:635">
                     <content size="30">
                         <p>Explain analytical objectives </p>
                     </content>
@@ -6362,8 +6403,8 @@ Does it make sense to preregister your conceptual model? That can be quite a pro
                         <p>Moallemi, E. A., Elsawah, S., &amp; Ryan, M. J. (2019). Strengthening &#8216;good&#8217; modelling practices in robust decision support: A reporting guideline for combining multiple model-based methods. Mathematics and Computers in Simu</p>
                     </comment>
                 </q>
-                <q name="Quotation 96:2" id="q96_2_1111" au="egould" cDate="2020-04-30T15:03:32" mDate="2020-04-30T15:03:32" loc="8:339:135:38:380"/>
-                <q name="Identify outcomes to evaluate decisions under scenarios Descriptive statistic measures, e.g., a mode&#8230;" id="q96_3_1112" au="egould" cDate="2020-04-30T15:04:13" mDate="2020-04-30T15:04:13" loc="8:2578:8:2936">
+                <q name="Quotation 96:2" id="q96_2_1119" au="egould" cDate="2020-04-30T15:03:32" mDate="2020-04-30T15:03:32" loc="8:339:135:38:380"/>
+                <q name="Identify outcomes to evaluate decisions under scenarios Descriptive statistic measures, e.g., a mode&#8230;" id="q96_3_1120" au="egould" cDate="2020-04-30T15:04:13" mDate="2020-04-30T15:04:13" loc="8:2578:8:2936">
                     <content size="358">
                         <p>Identify outcomes to evaluate decisions under scenarios</p>
                         <p>Descriptive statistic measures, e.g., a model outcome in the top 10th percentile of worst conditions [73]; satisficing measures, e.g., a minimum performance threshold for achieving a performance objective [65]; regret measures, e.g., choosing a decision with the minimum regret [45] (See more in [50]).</p>
@@ -6372,9 +6413,9 @@ Does it make sense to preregister your conceptual model? That can be quite a pro
                         <p>Descriptive statistic measures, e.g., a model outcome in the top 10th percentile of worst conditions [73]; satisficing measures, e.g., a minimum performance threshold for achieving a performance objective [65]; regret measures, e.g., choosing a decision with the minimum regret [45] (See more in [50]).</p>
                     </comment>
                 </q>
-                <q name="Quotation 96:4" id="q96_4_1113" au="egould" cDate="2020-04-30T15:04:38" mDate="2020-04-30T15:04:38" loc="8:295:136:39:378"/>
-                <q name="Quotation 96:5" id="q96_5_1114" au="egould" cDate="2020-04-30T15:05:38" mDate="2020-04-30T15:05:38" loc="8:228:134:61:378"/>
-                <q name="Depending on the case, this can be: e.g., to evaluate/trade-off between candidate decisions and anal&#8230;" id="q96_6_1115" au="egould" cDate="2020-05-01T14:07:33" mDate="2020-05-01T14:07:33" loc="8:650:8:1233">
+                <q name="Quotation 96:4" id="q96_4_1121" au="egould" cDate="2020-04-30T15:04:38" mDate="2020-04-30T15:04:38" loc="8:295:136:39:378"/>
+                <q name="Quotation 96:5" id="q96_5_1122" au="egould" cDate="2020-04-30T15:05:38" mDate="2020-04-30T15:05:38" loc="8:228:134:61:378"/>
+                <q name="Depending on the case, this can be: e.g., to evaluate/trade-off between candidate decisions and anal&#8230;" id="q96_6_1123" au="egould" cDate="2020-05-01T14:07:33" mDate="2020-05-01T14:07:33" loc="8:650:8:1233">
                     <content size="583">
                         <p>Depending on the case, this can be: e.g., to evaluate/trade-off between candidate decisions and analyse their sensitivity under future scenarios (e.g., [43]); to stress test decisions to find their vulnerabilities in the future (e.g., [10]); to identify worst possible outcomes that a set of decisions could yield (e.g., [21]); to search for &#8216;good&#8217; decisions which make trade-offs between multiple objectives (e.g., [31]); to search for &#8216;robust&#8217; decisions making trade-offs between multiple objectives while remaining valid under uncertainty (e.g., [37,53,54]); etc. (also see [36]).</p>
                     </content>
@@ -6382,8 +6423,8 @@ Does it make sense to preregister your conceptual model? That can be quite a pro
                         <p>Moallemi, E. A., Elsawah, S., &amp; Ryan, M. J. (2019). Strengthening &#8216;good&#8217; modelling practices in robust decision support: A reporting guideline for combining multiple model-based methods. Mathematics and Computers in Simu</p>
                     </comment>
                 </q>
-                <q name="Quotation 96:7" id="q96_7_1116" au="egould" cDate="2020-05-05T08:09:18" mDate="2020-05-05T08:09:18" loc="13:171:205:103:199"/>
-                <q name="Quotation 96:8" id="q96_8_1117" au="egould" cDate="2020-05-05T08:09:37" mDate="2020-05-05T08:09:37" loc="13:170:117:45:69"/>
+                <q name="Quotation 96:7" id="q96_7_1124" au="egould" cDate="2020-05-05T08:09:18" mDate="2020-05-05T08:09:18" loc="13:171:205:103:199"/>
+                <q name="Quotation 96:8" id="q96_8_1125" au="egould" cDate="2020-05-05T08:09:37" mDate="2020-05-05T08:09:37" loc="13:170:117:45:69"/>
             </quotations>
         </primDoc>
         <primDoc name="Augusiak-2014-Ecological_Modelling.pdf" id="pd_97_97" loc="doc_97" au="egould" cDate="2020-04-30T12:52:30" mDate="2020-04-30T12:52:30" qIndex="">
@@ -6397,7 +6438,7 @@ Does it make sense to preregister your conceptual model? That can be quite a pro
                 <p>Yates, K. L., Bouchet, P. J., Caley, M. J., Mengersen, K., Randin, C. F., Parnell, S., . . . Sequeira, A. M. M. (2018). Outstanding Challenges in the Transferability of Ecological Models. Trends Ecol. Evol. (Amst.), 33(1</p>
             </comment>
             <quotations size="13">
-                <q name="Ensemble: single model, mul&#1113088;model average ." id="q98_1_1118" au="egould" cDate="2020-04-30T13:09:46" mDate="2020-04-30T13:09:46" loc="8:1101:8:1145">
+                <q name="Ensemble: single model, mul&#1113088;model average ." id="q98_1_1126" au="egould" cDate="2020-04-30T13:09:46" mDate="2020-04-30T13:09:46" loc="8:1101:8:1145">
                     <content size="44">
                         <p>Ensemble: single model, mul&#1113088;model average .</p>
                     </content>
@@ -6405,66 +6446,66 @@ Does it make sense to preregister your conceptual model? That can be quite a pro
                         <p>Yates, K. L., Bouchet, P. J., Caley, M. J., Mengersen, K., Randin, C. F., Parnell, S., . . . Sequeira, A. M. M. (2018). Outstanding Challenges in the Transferability of Ecological Models. Trends Ecol. Evol. (Amst.), 33(1</p>
                     </comment>
                 </q>
-                <q name="Scheme: internal cross-valida&#1113088;on versus external testingg on independent datasets ..." id="q98_2_1119" au="egould" cDate="2020-04-30T13:10:17" mDate="2020-05-08T21:53:59" loc="8:1189:8:1274">
+                <q name="Scheme: internal cross-valida&#1113088;on versus external testingg on independent datasets ..." id="q98_2_1127" au="egould" cDate="2020-04-30T13:10:17" mDate="2020-05-08T21:53:59" loc="8:1189:8:1274">
                     <content size="85">
                         <p>Scheme: internal cross-valida&#1113088;on versus external</p>
                         <p>tes&#1113088;ng on independent datasets ...</p>
                     </content>
                 </q>
-                <q name="Performance: correla&#1113088;on score, coefficient of determina&#1113088;on, specificity, sensi&#1113088;vity, AUC ..." id="q98_3_1120" au="egould" cDate="2020-04-30T13:10:33" mDate="2020-04-30T13:10:33" loc="8:1275:8:1370">
+                <q name="Performance: correla&#1113088;on score, coefficient of determina&#1113088;on, specificity, sensi&#1113088;vity, AUC ..." id="q98_3_1128" au="egould" cDate="2020-04-30T13:10:33" mDate="2020-04-30T13:10:33" loc="8:1275:8:1370">
                     <content size="95">
                         <p>Performance: correla&#1113088;on score, coefficient of determina&#1113088;on, specificity, sensi&#1113088;vity, AUC ...</p>
                     </content>
                 </q>
-                <q name="Stage 6 Model applica&#1113088;on" id="q98_4_1121" au="egould" cDate="2020-04-30T13:10:53" mDate="2020-04-30T13:10:53" loc="8:1371:8:1396">
+                <q name="Stage 6 Model applica&#1113088;on" id="q98_4_1129" au="egould" cDate="2020-04-30T13:10:53" mDate="2020-04-30T13:10:53" loc="8:1371:8:1396">
                     <content size="25">
                         <p>Stage 6 Model applica&#1113088;on</p>
                     </content>
                 </q>
-                <q name="Predic&#1113088;on: project model across space, &#1113088;me, taxa (into novel condi&#1113088;ons) ..." id="q98_5_1122" au="egould" cDate="2020-04-30T13:11:21" mDate="2020-04-30T13:11:21" loc="8:1397:8:1475">
+                <q name="Predic&#1113088;on: project model across space, &#1113088;me, taxa (into novel condi&#1113088;ons) ..." id="q98_5_1130" au="egould" cDate="2020-04-30T13:11:21" mDate="2020-04-30T13:11:21" loc="8:1397:8:1475">
                     <content size="78">
                         <p>Predic&#1113088;on: project model across space, &#1113088;me, taxa (into novel condi&#1113088;ons) ...</p>
                     </content>
                 </q>
-                <q name="Visualiza&#1113088;on: map (or plot) model outputs and associated measure(s) of confidence ..." id="q98_6_1123" au="egould" cDate="2020-04-30T13:11:40" mDate="2020-04-30T13:11:40" loc="8:1476:8:1562">
+                <q name="Visualiza&#1113088;on: map (or plot) model outputs and associated measure(s) of confidence ..." id="q98_6_1131" au="egould" cDate="2020-04-30T13:11:40" mDate="2020-04-30T13:11:40" loc="8:1476:8:1562">
                     <content size="86">
                         <p>Visualiza&#1113088;on: map (or plot) model outputs and associated measure(s) of confidence ...</p>
                     </content>
                 </q>
-                <q name="Stage 4 Model choice and implementa&#1113088;on" id="q98_7_1124" au="egould" cDate="2020-04-30T13:12:13" mDate="2020-04-30T13:12:13" loc="8:969:8:1008">
+                <q name="Stage 4 Model choice and implementa&#1113088;on" id="q98_7_1132" au="egould" cDate="2020-04-30T13:12:13" mDate="2020-04-30T13:12:13" loc="8:969:8:1008">
                     <content size="39">
                         <p>Stage 4 Model choice and implementa&#1113088;on</p>
                     </content>
                 </q>
-                <q name="Model choice and implementa&#1113088;on" id="q98_8_1125" au="egould" cDate="2020-04-30T13:12:36" mDate="2020-04-30T13:12:36" loc="8:977:8:1008">
+                <q name="Model choice and implementa&#1113088;on" id="q98_8_1133" au="egould" cDate="2020-04-30T13:12:36" mDate="2020-04-30T13:12:36" loc="8:977:8:1008">
                     <content size="31">
                         <p>Model choice and implementa&#1113088;on</p>
                     </content>
                 </q>
-                <q name="Class: correla&#1113088;ve, mechanis&#1113088;c, hybrid ... Algorithm: GLM/GAM, MaxEnt, CLIMEX, FATE-HD ... Ensemble&#8230;" id="q98_9_1126" au="egould" cDate="2020-04-30T13:12:40" mDate="2020-04-30T13:12:40" loc="8:1009:8:1147">
+                <q name="Class: correla&#1113088;ve, mechanis&#1113088;c, hybrid ... Algorithm: GLM/GAM, MaxEnt, CLIMEX, FATE-HD ... Ensemble&#8230;" id="q98_9_1134" au="egould" cDate="2020-04-30T13:12:40" mDate="2020-04-30T13:12:40" loc="8:1009:8:1147">
                     <content size="138">
                         <p>Class: correla&#1113088;ve, mechanis&#1113088;c, hybrid ...</p>
                         <p>Algorithm: GLM/GAM, MaxEnt, CLIMEX, FATE-HD ... Ensemble: single model, mul&#1113088;model average ...</p>
                     </content>
                 </q>
-                <q name="Explora&#1113088;on: collinearity, spa&#1113088;al &amp; temporal coverage, quality and resolu&#1113088;on, outliers, transforma&#8230;" id="q98_10_1127" au="egould" cDate="2020-04-30T13:13:08" mDate="2020-04-30T13:13:08" loc="8:859:8:968">
+                <q name="Explora&#1113088;on: collinearity, spa&#1113088;al &amp; temporal coverage, quality and resolu&#1113088;on, outliers, transforma&#8230;" id="q98_10_1135" au="egould" cDate="2020-04-30T13:13:08" mDate="2020-04-30T13:13:08" loc="8:859:8:968">
                     <content size="109">
                         <p>Explora&#1113088;on: collinearity, spa&#1113088;al &amp; temporal coverage, quality and resolu&#1113088;on, outliers, transforma&#1113088;ons ...</p>
                     </content>
                 </q>
-                <q name="Preparati&#1113088;on: manipula&#1113088;tion of environmental layers, e.g., standardisa&#1113088;on, geographic projec&#1113088;on ..." id="q98_11_1128" au="egould" cDate="2020-04-30T13:13:47" mDate="2020-05-07T21:49:44" loc="8:759:8:858">
+                <q name="Preparati&#1113088;on: manipula&#1113088;tion of environmental layers, e.g., standardisa&#1113088;on, geographic projec&#1113088;on ..." id="q98_11_1136" au="egould" cDate="2020-04-30T13:13:47" mDate="2020-05-07T21:49:44" loc="8:759:8:858">
                     <content size="99">
                         <p>Prepara&#1113088;on: manipula&#1113088;on of environmental layers, e.g., standardisa&#1113088;on, geographic projec&#1113088;on ...</p>
                     </content>
                 </q>
-                <q name="Response variable(s) Type: presence, absence, abundance ... Species traits: dispersal, physiological&#8230;" id="q98_12_1129" au="egould" cDate="2020-04-30T13:14:08" mDate="2020-04-30T13:14:08" loc="8:614:8:728">
+                <q name="Response variable(s) Type: presence, absence, abundance ... Species traits: dispersal, physiological&#8230;" id="q98_12_1137" au="egould" cDate="2020-04-30T13:14:08" mDate="2020-04-30T13:14:08" loc="8:614:8:728">
                     <content size="114">
                         <p>Response variable(s)</p>
                         <p>Type: presence, absence, abundance ...</p>
                         <p>Species traits: dispersal, physiological tolerance ...</p>
                     </content>
                 </q>
-                <q name="Focal taxa and study objec&#1113088;ves Organisms: terrestrial, marine, freshwater ... Common goals: conserv&#8230;" id="q98_13_1130" au="egould" cDate="2020-04-30T13:14:26" mDate="2020-04-30T13:14:26" loc="8:430:8:605">
+                <q name="Focal taxa and study objec&#1113088;ves Organisms: terrestrial, marine, freshwater ... Common goals: conserv&#8230;" id="q98_13_1138" au="egould" cDate="2020-04-30T13:14:26" mDate="2020-04-30T13:14:26" loc="8:430:8:605">
                     <content size="175">
                         <p>Focal taxa and study objec&#1113088;ves</p>
                         <p>Organisms: terrestrial, marine, freshwater ... Common goals: conserva&#1113088;on planning, impact assessment, theore&#1113088;cal ecology, niche evolu&#1113088;on ...</p>
@@ -6486,7 +6527,7 @@ Does it make sense to preregister your conceptual model? That can be quite a pro
                 <p>Moon, K., Guerrero, A. M., Adams, V. M., Biggs, D., Blackman, D. A., Craven, L., . . . Ross, H. (2019). Mental models for conservation research and practice. Conservation Letters, 12(3), e12642. doi:10.1111/conl.12642</p>
             </comment>
             <quotations size="1">
-                <q name="An ongoing challenge with mental models research is that it is difficult to decide which method is t&#8230;" id="q100_1_1131" au="egould" cDate="2020-04-30T13:05:41" mDate="2020-04-30T13:05:41" loc="2:1334:2:2135">
+                <q name="An ongoing challenge with mental models research is that it is difficult to decide which method is t&#8230;" id="q100_1_1139" au="egould" cDate="2020-04-30T13:05:41" mDate="2020-04-30T13:05:41" loc="2:1334:2:2135">
                     <content size="801">
                         <p>An ongoing challenge with mental models research is that it is difficult to decide which method is the most appropri- ate for a given context and why. Several methods are avail- able to elicit mental models, namely interviews (Morgan, Fischoff, Bostrom, &amp; Atman, 2002), drawings (Jones et al., 2014), repertory grids (Kelly, 1955), and a variety of map- ping techniques including influence diagrams (Diffenbach, 1982), cognitive maps (Axelrod 1976), fuzzy cognitive maps (O&#776;zesmi &amp; O&#776;zesmi, 2004), and Bayesian belief networks (BBN) (e.g., Pollino, Woodberry, Nicholson, Korb, &amp; Hart, 2007). Depending on the application, some elicitation and analysis methods will be more suitable than others, yet the literature provides little guidance in how to navigate among the choices (see Jones et al., 2014).</p>
                     </content>
@@ -6501,12 +6542,12 @@ Does it make sense to preregister your conceptual model? That can be quite a pro
                 <p>Supplementary material from Araujo et al. 2019.</p>
             </comment>
             <quotations size="2">
-                <q name="The acquisition, preparation and selection of predictor variables are thus crucial steps for constru&#8230;" id="q101_1_1132" au="egould" cDate="2020-04-30T15:26:54" mDate="2020-04-30T15:26:54" loc="7:469:7:607">
+                <q name="The acquisition, preparation and selection of predictor variables are thus crucial steps for constru&#8230;" id="q101_1_1140" au="egould" cDate="2020-04-30T15:26:54" mDate="2020-04-30T15:26:54" loc="7:469:7:607">
                     <content size="138">
                         <p>The acquisition, preparation and selection of predictor variables are thus crucial steps for construction of species distributions models.</p>
                     </content>
                 </q>
-                <q name="The gold standard requires that the conditions on which the response variable depends be captured by&#8230;" id="q101_2_1133" au="egould" cDate="2020-04-30T15:27:28" mDate="2020-04-30T15:27:28" loc="7:608:7:924">
+                <q name="The gold standard requires that the conditions on which the response variable depends be captured by&#8230;" id="q101_2_1141" au="egould" cDate="2020-04-30T15:27:28" mDate="2020-04-30T15:27:28" loc="7:608:7:924">
                     <content size="316">
                         <p>The gold standard requires that the conditions on which the response variable depends be captured by the predictor variables selected, at the spatial and temporal resolutions chosen, and that the uncertainty around these conditions (i.e., based on measurement and/or model errors) be quantifiable in the final model.</p>
                     </content>
@@ -6521,58 +6562,68 @@ Does it make sense to preregister your conceptual model? That can be quite a pro
         </primDoc>
         <primDoc name="Araujo_et_al_201_SupplementaryText.pdf" id="pd_103_103" loc="doc_103" au="egould" cDate="2020-05-09T18:48:41" mDate="2020-05-09T18:49:05" qIndex="">
             <quotations size="12">
-                <q name="In cases where a researcher tests assumptions and finds departures from them, it is necessary to ass&#8230;" id="q103_1_1134" au="egould" cDate="2020-05-09T18:50:07" mDate="2020-05-09T18:50:07" loc="11:973:11:1448">
+                <q name="In cases where a researcher tests assumptions and finds departures from them, it is necessary to ass&#8230;" id="q103_1_1142" au="egould" cDate="2020-05-09T18:50:07" mDate="2020-05-09T18:50:07" loc="11:973:11:1448">
                     <content size="475">
                         <p>In cases where a researcher tests assumptions and finds departures from them, it is necessary to assess the consequences on interpretation of the results. If violation of assumptions cannot be avoided, explicit exploration and discussion of consequences for the interpretation of results in the particular context in which they are being used represents the bronze standard (25, 50). Blindly using models without testing assumptions should be considered a deficient practice.</p>
                     </content>
                 </q>
-                <q name="Violation of the theoretical and statistical assumptions of a particular model can lead to unreliabl&#8230;" id="q103_2_1135" au="egould" cDate="2020-05-09T18:50:22" mDate="2020-05-09T18:50:22" loc="11:680:11:971">
+                <q name="Violation of the theoretical and statistical assumptions of a particular model can lead to unreliabl&#8230;" id="q103_2_1143" au="egould" cDate="2020-05-09T18:50:22" mDate="2020-05-09T18:50:22" loc="11:680:11:971">
                     <content size="291">
                         <p>Violation of the theoretical and statistical assumptions of a particular model can lead to unreliable results (37, 134, 137, 138) for model interpretation, geographic predictions, and projections (38, 50). Demonstrating that no model assumptions were violated is a gold standard in modelling</p>
                     </content>
                 </q>
-                <q name="The gold standard is to evaluate model results using multiple lines of independent evidence." id="q103_3_1136" au="egould" cDate="2020-05-09T18:51:46" mDate="2020-05-09T18:51:46" loc="12:58:12:150">
+                <q name="The gold standard is to evaluate model results using multiple lines of independent evidence." id="q103_3_1144" au="egould" cDate="2020-05-09T18:51:46" mDate="2020-05-09T18:51:46" loc="12:58:12:150">
                     <content size="92">
                         <p>The gold standard is to evaluate model results using multiple lines of independent evidence.</p>
                     </content>
                 </q>
-                <q name="A key step in evaluating models is to compare their results against statistically independent data (&#8230;" id="q103_4_1137" au="egould" cDate="2020-05-09T18:52:53" mDate="2020-05-09T18:52:53" loc="11:1490:11:2374">
+                <q name="A key step in evaluating models is to compare their results against statistically independent data (&#8230;" id="q103_4_1145" au="egould" cDate="2020-05-09T18:52:53" mDate="2020-05-09T18:52:53" loc="11:1490:11:2374">
                     <content size="884">
                         <p>A key step in evaluating models is to compare their results against statistically independent data (134). This generally means using a testing dataset of response and predictor variables that are spatially or temporally independent from the training dataset to avoid artefactual inflation of performance measures (129, 139, 140). The best currently available independent data come from separate geographic areas (130, 140-142), or from data collected in different time periods than the ones used to construct the models; cases of temporally independent test data for evaluation of model outputs have included repeated species inventories over time (28), fossil data to test the ability of models to project distributions in different times (96, 97), or ancient genetic data to test for the ability of models to project past climatic suitability as a surrogate for abundance (143, 144)</p>
                     </content>
                 </q>
-                <q name="The performance of a model can be assessed from many different perspectives (149- 154). The traditio&#8230;" id="q103_5_1138" au="egould" cDate="2020-05-09T18:54:02" mDate="2020-05-09T18:54:02" loc="12:751:12:1418">
+                <q name="The performance of a model can be assessed from many different perspectives (149- 154). The traditio&#8230;" id="q103_5_1146" au="egould" cDate="2020-05-09T18:54:02" mDate="2020-05-09T18:54:02" loc="12:751:12:1418">
                     <content size="667">
                         <p>The performance of a model can be assessed from many different perspectives (149- 154). The traditional statistical approach to predictive performance is to quantify how close the predictions are to the actual outcome, using goodness-of-fit statistics (e.g., R2 statistics) (155) and other measures of agreement between predictions and independent observations (149, 156). For probability predictions from presence-absence or presence- only models, performance assessment includes estimating accuracy, bias, calibration, discrimination, refinement, resolution, and skill (157), as well as characterising spatial, temporal, and environmental patterns in errors (126). </p>
                     </content>
                 </q>
-                <q name="Reporting several performance measures that reflect different aspects of a model&#1113135;s performance (gol&#8230;" id="q103_6_1139" au="egould" cDate="2020-05-09T18:54:34" mDate="2020-05-09T18:54:34" loc="12:1418:12:1588">
+                <q name="Reporting several performance measures that reflect different aspects of a model&#1113135;s performance (gol&#8230;" id="q103_6_1147" au="egould" cDate="2020-05-09T18:54:34" mDate="2020-05-09T18:54:34" loc="12:1418:12:1588">
                     <content size="170">
                         <p>Reporting several performance measures that reflect different aspects of a model&#1113135;s performance (gold and silver) (158) is superior to reporting only one aspect (bronze).</p>
                     </content>
                 </q>
-                <q name="Furthermore, whenever possible, the spatial, temporal and environmental pattern of errors and varian&#8230;" id="q103_7_1140" au="egould" cDate="2020-05-09T18:54:57" mDate="2020-05-09T18:54:57" loc="12:2203:12:2459">
+                <q name="Furthermore, whenever possible, the spatial, temporal and environmental pattern of errors and varian&#8230;" id="q103_7_1148" au="egould" cDate="2020-05-09T18:54:57" mDate="2020-05-09T18:54:57" loc="12:2203:12:2459">
                     <content size="256">
                         <p>Furthermore, whenever possible, the spatial, temporal and environmental pattern of errors and variance should be comprehensively characterised (160, 161), as these can change the interpretation of model predictions and related conservation decisions (162).</p>
                     </content>
                 </q>
-                <q name="Discrimination is &#1113161;the ability to distinguish between occupied and unoccupied sites&#1113162; and includes&#8230;" id="q103_8_1141" au="egould" cDate="2020-05-09T18:55:14" mDate="2020-05-09T18:55:14" loc="12:1976:12:2202">
+                <q name="Discrimination is &#1113161;the ability to distinguish between occupied and unoccupied sites&#1113162; and includes&#8230;" id="q103_8_1149" au="egould" cDate="2020-05-09T18:55:14" mDate="2020-05-09T18:55:14" loc="12:1976:12:2202">
                     <content size="226">
                         <p>Discrimination is &#1113161;the ability to distinguish between occupied and unoccupied sites&#1113162; and includes the non-parametric statistics of sensitivity, specificity, and the area under a receiver operating characteristic curve (149).</p>
                     </content>
                 </q>
-                <q name="When uncertainty in predictor variables is not quantified, studies should minimally acknowledge like&#8230;" id="q103_9_1142" au="egould" cDate="2020-05-09T18:58:03" mDate="2020-05-09T18:58:03" loc="8:1934:8:2112">
+                <q name="When uncertainty in predictor variables is not quantified, studies should minimally acknowledge like&#8230;" id="q103_9_1150" au="egould" cDate="2020-05-09T18:58:03" mDate="2020-05-09T18:58:03" loc="8:1934:8:2112">
                     <content size="178">
                         <p>When uncertainty in predictor variables is not quantified, studies should minimally acknowledge likely sources (125) and consider their possible effects in interpretations (126).</p>
                     </content>
                 </q>
-                <q name="Quotation 103:10" id="q103_10_1143" au="egould" cDate="2020-05-09T19:04:27" mDate="2020-05-09T19:04:27" loc="41:54:418:727:86">
+                <q name="Quotation 103:10" id="q103_10_1151" au="egould" cDate="2020-05-09T19:04:27" mDate="2020-05-09T19:04:27" loc="41:54:418:727:86">
                     <comment type="text/html" size="473">
                         <p>Explain how you will demonstrate a lack of violation of or robustness to model assumptions. If you cannot perform quantitative tests, specify what theoretical justifications would justify a lack of violation of or robustness to model assumptions. If you cannot demonstrate or theoretically justify violation or robustness to assumptions, explain why not, and specify whether you will discuss assumption violations and their consequences for interpretation of model outputs.</p>
                     </comment>
                 </q>
-                <q name="Quotation 103:11" id="q103_11_1144" au="egould" cDate="2020-05-09T19:08:18" mDate="2020-05-09T19:08:18" loc="41:65:226:724:183"/>
-                <q name="Dealing with modelling and parameter uncertainty" id="q103_12_1145" au="egould" cDate="2020-05-09T19:09:07" mDate="2020-05-09T19:09:23" loc="40:832:40:2479">
+                <q name="Quotation 103:11" id="q103_11_1152" au="egould" cDate="2020-05-09T19:08:18" mDate="2020-05-09T19:08:18" loc="41:65:226:724:183">
+                    <comment type="text/html" size="355">
+                        <p>Ideally, model output or predictions are compared to independent data that were not used, and preferably unknown to the analyst or modeller during the process of building, refining and verifying the model.&#160;
+
+
+
+
+
+Will the independent data used to evaluate the modeller known to any of the analysts before developing, parameterising and verifying the model?</p>
+                    </comment>
+                </q>
+                <q name="Dealing with modelling and parameter uncertainty" id="q103_12_1153" au="egould" cDate="2020-05-09T19:09:07" mDate="2020-05-09T19:09:23" loc="40:832:40:2479">
                     <content size="1647">
                         <p>Uncertainty arising from different modelling techniques, response data, and predictor variables is comprehensively characterized. Results are obtained from several SDM techniques that are representative of all appropriate current distribution modelling techniques in order to characterize model uncertainty (sometimes called ensemble modelling). Uncertainty is fully propagated through the modelling process in order to quantify, map, and interpret uncertainty in results. Biases arising from similarities among structures of model classes, and the effects these could have on results are discussed.</p>
                         <p>Major suspected model and data uncertainties are characterized and: 1) known uncertainties are propagated through the model; or 2) the range of predictions built using different scenarios (including parameter and model technique) are quantified and mapped, and sensitivity analysis is conducted. Results are obtained from several SDM techniques that are representative of all appropriate current distribution modelling techniques in order to characterize model uncertainty. Biases arising from similarities among structures of model classes are quantified, accounted for, and discussed.</p>
@@ -6584,7 +6635,7 @@ Does it make sense to preregister your conceptual model? That can be quite a pro
         </primDoc>
     </primDocs>
     <codes size="54">
-        <code name="1-problem_formulation" id="co_1" au="egould" cDate="2020-04-23T13:21:11" mDate="2020-04-25T15:22:39" color="008C96" guid="C39B2526-6D3C-4F68-890D-F1277E795A96" cCount="5" qCount="2">
+        <code name="1-problem_formulation" id="co_1" au="egould" cDate="2020-04-23T13:21:11" mDate="2020-04-25T15:22:39" color="008C96" guid="C39B2526-6D3C-4F68-890D-F1277E795A96" cCount="5" qCount="3">
             <comment type="text/html" size="372">
                 <p>Problem Formulation - specifies the decision-making context in which the model will be used, the clients driving model development or stakeholders addressed by the model. It also includes specification of model outputs, statements of the domain of applicability of the model, as well as the extent by which model outputs may be acceptably extrapolated (Grimm et al. 2014).</p>
             </comment>
@@ -6650,12 +6701,12 @@ Specify key assumptions and uncertainties underlying the model&#8217;s design. D
                 <p>Identify and define system variables structures).: i) What variables will support this decision or action (things we can control). ii) What additional variables may interact with this system (things we can&#8217;t control, but can hopefully measure). iii) In what ways do we expect these variables to interact (model structures). The identification and definition of primary model input variables should be driven by scenario definitions, and by the scope of the model described in the problem formulation phase&#160;[@Mahmoud2009].</p>
             </comment>
         </code>
-        <code name="2.4-define_conceptual_model: prior knowledge data specification and evaluation" id="co_11" au="egould" cDate="2020-04-25T16:12:18" mDate="2020-04-27T16:55:12" color="006EFF" guid="0732E937-EF8B-4E9C-8540-BC44AF812390" cCount="1" qCount="14">
+        <code name="2.4-define_conceptual_model: prior knowledge data specification and evaluation" id="co_11" au="egould" cDate="2020-04-25T16:12:18" mDate="2020-04-27T16:55:12" color="006EFF" guid="0732E937-EF8B-4E9C-8540-BC44AF812390" cCount="1" qCount="15">
             <comment type="text/html" size="122">
                 <p>Collect, process and prepare data available for parameterisation, determining model structure, and for scenario analysis. </p>
             </comment>
         </code>
-        <code name="2.5-define_conceptual_model: conceptual model evaluation" id="co_12" au="egould" cDate="2020-04-25T16:12:18" mDate="2020-04-27T16:55:33" color="006EFF" guid="2E86A6D1-7175-4D7B-84CC-84917ABF2769" cCount="1" qCount="3">
+        <code name="2.5-define_conceptual_model: conceptual model evaluation" id="co_12" au="egould" cDate="2020-04-25T16:12:18" mDate="2020-04-27T16:55:33" color="006EFF" guid="2E86A6D1-7175-4D7B-84CC-84917ABF2769" cCount="1" qCount="4">
             <comment type="text/html" size="322">
                 <p>Describe how the model will be critically evaluated. Evaluation includes both the overall model structure, and any submodels if relevant. How will any simplifying assumptiosn be critically assessed[@Augusiak:2014gz]?&#160;Explain whether this process will include consultation or feedback from a client, manager, or model user.</p>
             </comment>
@@ -6665,7 +6716,7 @@ Specify key assumptions and uncertainties underlying the model&#8217;s design. D
                 <p>Do we need to include any PRT items that speak to expert elicitation or not?</p>
             </comment>
         </code>
-        <code name="3.0-formalise_specify_model" id="co_14" au="egould" cDate="2020-04-23T14:02:53" mDate="2020-04-27T16:58:45" color="463CC8" guid="3BCC6CEF-D888-423E-940B-552DABD9DCE8" cCount="5" qCount="3">
+        <code name="3.0-formalise_specify_model" id="co_14" au="egould" cDate="2020-04-23T14:02:53" mDate="2020-04-27T16:58:45" color="463CC8" guid="3BCC6CEF-D888-423E-940B-552DABD9DCE8" cCount="5" qCount="4">
             <comment type="text/html" size="434">
                 <p>Formalise and Specify Model - Critical decisions are made here about the type of model, modelling framework and approach to be used. The model is formalised into a mathematical / statistical description of the system and respective changes it can experience (Mahmoud et al. 2009). In this section describe what quantitative methods you will use to build the model/s, explain how they are relevant to the client/manager/user&#8217;s purpose.</p>
             </comment>
@@ -6721,13 +6772,13 @@ For data-driven and model-selection approaches that determine model structure an
                 <p>Describe the validation scheme you will use for model testing and evaluation.&#160;&#160;Please explain your reasoning for your choice of model calibration and validation scheme. The model may be tested on data independent of those used to parameterise the model (external validation), or the model may be cross-validated on random sub-samples of the data used to parameterise the model (internal cross-validation)  [@Yates2018;[@Barnard2019]. Although using independent data is the gold-standard or idealised practice for model evaluation, Typically testing on independent datasets is not possible for large and/or integrated models, especially when they are being used to generate anticipatory predictions beyond the conditions on which they were calibrated [@Jakeman:2006ii]. Describe and justify the method for your calibration and validation schema, including how many folds and what methods you will use to partition the data set into training/testing data. (What other items, esp. re. partitioning are missing?)</p>
             </comment>
         </code>
-        <code name="4.2-model_calibration_fitting_checking: Implementation verification" id="co_23" au="egould" cDate="2020-04-25T16:51:18" mDate="2020-05-09T16:53:08" color="8C32A0" guid="A1BBF854-141C-400A-9ECE-A223E4EDCB21" cCount="2" qCount="7">
+        <code name="4.2-model_calibration_fitting_checking: Implementation verification" id="co_23" au="egould" cDate="2020-04-25T16:51:18" mDate="2020-05-09T16:53:08" color="8C32A0" guid="A1BBF854-141C-400A-9ECE-A223E4EDCB21" cCount="2" qCount="8">
             <comment type="text/html" size="788">
                 <p>What Quality Assurance measures will you take to verify the modle has been correctly implemented as per the formal model specification ? This could be as simple as an informal &#8216;model walkthrough&#8217; to examine the model&#8217;s behaviour qualitatively, or it could include more sophisticated approaches such as formal unit testing approaches using continuous integration platforms (see [@Yenni2019]). Qualitative tests could include syntax checking of code,&#160;and code reviews by peers. Checks for verification implementation should include i) thoroughy checking for bugs or programming errors, &#160;and ii) whether the implemented model performs as dictated by the model description  [@Grimm:2014es].&#160;Specifying up front QA tests for implementation verification may help to avoid selective debugging.&#160;
 </p>
             </comment>
         </code>
-        <code name="4.3-model_calibration_fitting_checking: model checking" id="co_24" au="egould" cDate="2020-04-25T16:51:18" mDate="2020-05-09T17:32:23" color="8C32A0" guid="EB23380A-F8B8-436C-896A-11BEA097E067" cCount="2" qCount="16">
+        <code name="4.3-model_calibration_fitting_checking: model checking" id="co_24" au="egould" cDate="2020-04-25T16:51:18" mDate="2020-05-09T17:32:23" color="8C32A0" guid="EB23380A-F8B8-436C-896A-11BEA097E067" cCount="2" qCount="17">
             <comment type="text/html" size="819">
                 <p>&#8220;Model Checking&#8221; goes by many names (&#8220;conditional verification&#8221;, &#8220;quantitative verification&#8221;, &#8220;model output verification&#8221; &lt;cite&gt;), but refers to a series of analyses that assess a model&#8217;s performance in representing the system of interest [@Conn:2018hd]. During this process, observed data, or data and patterns that guided model design and calibration is compared to model output in order to identify if and where there are any systematic differences. Model checking therefore heps diagnose assumption violations, and reveals where a model might need to be altered to better represent the data, and therefore system [@Conn:2018hd]. Quantitative model checking diagnostics include goodness of fit, tests on residuals or errors, such as for heteroscedascity, cross-correlation, and autocorrelation [@Jakeman:2006ii]. 
 
@@ -6735,16 +6786,46 @@ For data-driven and model-selection approaches that determine model structure an
 </p>
             </comment>
         </code>
-        <code name="5.0- Model Validation and Evaluation" id="co_25" au="egould" cDate="2020-04-23T14:35:19" mDate="2020-05-09T18:36:27" color="F00082" guid="B9394934-D486-47FB-A7ED-CCC8B0389128" cCount="5" qCount="10">
-            <comment type="text/html" size="1173">
+        <code name="5.0- Model Validation and Evaluation" id="co_25" au="egould" cDate="2020-04-23T14:35:19" mDate="2020-05-09T18:36:27" color="F00082" guid="B9394934-D486-47FB-A7ED-CCC8B0389128" cCount="5" qCount="11">
+            <comment type="text/html" size="1387">
                 <p>Model Validation &amp; Evaluation - This phase consists of a suite of analyses that collectively inform the decision and whether and when a model is suitable to meet its intended purpose (Augusiak, Van den Brink and Grimm 2014). Errors in design and implementation of the model and their implication on the model output are assessed. Ideally independent data is used against the model outputs to assess whether the model output behaviour exhibits the required accuracy for the model&#8217;s intended purpose. The outcomes of these analyses build confidence in the model applications and increase understandingof model strengths and limitations.
 
 
 
-Model evaluation including model analysis and other testing should complement model checking. It should evaluate model checking, and consider over-fitting and extrapolation. &#8220;The higher the proportion of calibrated, or uncertain parameters, the greater the risk that the model seems to work correctly [&#8230;] but for the wrong reasons&#8221; Evaluation thus complements model checking because we can rule out the chance that the model fits the calibration data well, but has not captured the relevant ecological mecahnisms of the system (Grimm).</p>
+Model evaluation including model analysis and other testing should complement model checking. It should evaluate model checking, and consider over-fitting and extrapolation. &#8220;The higher the proportion of calibrated, or uncertain parameters, the greater the risk that the model seems to work correctly [&#8230;] but for the wrong reasons&#8221; Evaluation thus complements model checking because we can rule out the chance that the model fits the calibration data well, but has not captured the relevant ecological mecahnisms of the system (Grimm).
+
+
+
+Evaluation of model outputs against external data in conjunction with the results from model checking provide information about the structural realism and therefore credibility of the model (Grimm et al. 2014).</p>
             </comment>
         </code>
-        <code name="5.2- Model Validation and Evaluation: model analysis" id="co_26" au="egould" cDate="2020-04-25T16:58:19" mDate="2020-05-09T18:38:26" color="F00082" guid="4DF4D3E5-3DCF-43BB-8B7B-6A58327B0218" cCount="1" qCount="7">
+        <code name="5.1- Model Validation and Evaluation: model output corroboration" id="co_26" au="egould" cDate="2020-04-25T16:58:19" mDate="2020-05-09T19:58:32" color="F00082" guid="BB816B47-E587-4459-A26F-CA4DF4536888" cCount="1" qCount="14">
+            <comment type="text/html" size="1695">
+                <p>Ideally, model outputs or predictions are compared to independent data and patterns that were not used to develop, parameterise, or verify the model. Testing against a dataset of response and predictor variables that are sptially and/or temporally independent from the training dataset&#160;minimises the risk of artificially inflating model performance measures [@Araujo2019].
+
+State whether you will corroborate the model outputs on external data, and please document any independent validation data in step &lt;2.4&gt;.
+
+It is preferable that any independent data used for model evaluation remains unknown to modellers during the process of model building, please describe the relationship modllers have to model validation data, will independent datasets be known to any modeller or analyst involved in the model building process?
+
+Although the corroboration of model outputs against an independent validation dataset is considered the &#8216;gold standard&#8217; for showing that a model properly represents the internal organisation of the system ), model validation is not always possible because empirical experiments are infeasible or model users are working on rapid-response time-frames &#8212; hence, why ecologists often model in the first place&#160;(Grimm, et al. 2014. Independent predictions can instead be tested on submodels. Alternatively, patterns in model output that are robust and seem characteristic of the system can be identified and evaluated in consultation with the literature or by experts to judge how accurate the model&#8217;s output is (Grimm et al.2014). If unable to evaluate the model outputs against independent data, explain why and explain what steps you will take to interrogate the model. 
+
+
+</p>
+            </comment>
+        </code>
+        <code name="5.2- Model Validation and Evaluation: choose performance metrics and criteria" id="co_27" au="egould" cDate="2020-04-25T16:58:19" mDate="2020-05-09T21:33:09" color="F00082" guid="6C5CA71C-1D2B-400A-8DB1-180F29A46374" cCount="1" qCount="4">
+            <comment type="text/html" size="1015">
+                <p>Model performance can be quantified by a range of tests, including measures of agreement between predictions and independent observations, or estimates of accuracy, bias, calibration, discrimination refinement, resolution and skill [@Araujo2019]. Specify what performance measures you will use to evaluate the model and briefly explain how each test relates to different desired properties of a model&#8217;s performance.
+
+Spatial, temporal and environmental pattern of errors and variance can change the interpretation of model predictions and conservation decisions [@Araujo2019], where relevant and possible, describe how you will characterise and report the spatial, temporal and environmental pattern of errors and variance.
+
+If comparing alternative models, specify what measures of model comparison or out-of-sample performance metrics will you use to find support for alternative models or else to optimise predictive ability. State what numerical threshold or qualities you will use for each of these metrics.
+
+
+</p>
+            </comment>
+        </code>
+        <code name="5.2- Model Validation and Evaluation: model analysis" id="co_28" au="egould" cDate="2020-04-25T16:58:19" mDate="2020-05-09T18:38:26" color="F00082" guid="4DF4D3E5-3DCF-43BB-8B7B-6A58327B0218" cCount="1" qCount="8">
             <comment type="text/html" size="180">
                 <p>&#8220;(1) How sensitive model output is to changes in model parameters (sensitivity analysis), and (2) how well the emergence of model output has been understood.&#8221; [@Grimm:2014es].
 
@@ -6754,37 +6835,7 @@ Model evaluation including model analysis and other testing should complement mo
 </p>
             </comment>
         </code>
-        <code name="5.3- Model Validation and Evaluation: model output corroboration" id="co_27" au="egould" cDate="2020-04-25T16:58:19" mDate="2020-05-09T18:38:08" color="F00082" guid="BB816B47-E587-4459-A26F-CA4DF4536888" cCount="1" qCount="12">
-            <comment type="text/html" size="451">
-                <p>&#8220;How model predictions compare to independent data and patterns that were not used, and preferably not even known, while the model was developed,&#8232;parameterized, and verified. By documenting model output corroboration, model users learn about evidence which, in addition to model output verification, indicates that the model is structurally realistic so that its predictions can be trusted to some degree.&#8221;
-
-This is what we typically call &#8220;validation&#8221;</p>
-            </comment>
-        </code>
-        <code name="5.4- Model Validation and Evaluation: choose metric and performance criteria" id="co_28" au="egould" cDate="2020-04-25T16:58:19" mDate="2020-05-09T18:37:53" color="F00082" guid="6C5CA71C-1D2B-400A-8DB1-180F29A46374" cCount="1" qCount="4">
-            <comment type="text/html" size="1122">
-                <p>I think this should be shifted to problem formulation&#8230; where I originally had this item&#8230; described here as:
-
-"An a priori method or methods of evaluating and distinguishing the performance of scenario outcomes is necessary. The performance measures link back to the analytical objectives. Examples include descriptive statistic measures, such as a model in the top 10th percentile of worst conditions, satisficing measures, e.g. a minimum performance threshold for achieving a performance objective, regret measures, e.g. choosing a decision with minimum regret [@Moallemi2019].&#8221;
-
-
-
-
-
-Test different aspects of the model, such as realism, generality and accuracy. &#160;&#160;
-
-Ideally more than one performance measure is tested
-
-
-Performance assessment might include a suite of
-estimates, including tests of &#8220;accuracy, bias, calibration, discrimination,
-refinement, resolution, and skill (157)&#8221; [@Araujo2019].
-
-
-Also&#8230; I think this description by Moallemi actually pertains to the model application part.. not the model evaluation part. Model evaluation is still answering the question &#8220;Do we have a useful/credible/feasible model"</p>
-            </comment>
-        </code>
-        <code name="5.5- Model Validation and Evaluation: evaluate model assumptions" id="co_29" au="egould" cDate="2020-04-25T16:58:19" mDate="2020-05-09T18:38:03" color="F00082" guid="74F7273F-F5E6-406B-A6F1-20EFBC41349A" cCount="1" qCount="6">
+        <code name="5.3- Model Validation and Evaluation: evaluate model assumptions" id="co_29" au="egould" cDate="2020-04-25T16:58:19" mDate="2020-05-09T21:35:05" color="F00082" guid="74F7273F-F5E6-406B-A6F1-20EFBC41349A" cCount="1" qCount="6">
             <comment type="text/html" size="1026">
                 <p>What tests, analyses or visualisations will be performed to evaluate whether model assumptions have been violated?&#160;
 
@@ -6832,8 +6883,12 @@ Liasing with experts, clients and stakeholders once the results from the modelli
             </comment>
         </code>
         <code name="6.1-model_application: choose performance criteria for scenario analysis" id="co_32" au="egould" cDate="2020-04-25T17:05:05" mDate="2020-04-30T15:10:06" color="FFBE00" guid="0FC3CF49-D1A3-4F5A-B6EF-D02A2DE1139B" cCount="1" qCount="4">
-            <comment type="text/html" size="416">
-                <p>I think this phase might be missing some steps. Namely decisions about how we analyse the model output to answer our research question, how we might graph or plot the model output so that we can meaningfully analyse it and interpret it to answer our research questions / meet the modelling purpose?
+            <comment type="text/html" size="890">
+                <p>"An a priori method or methods of evaluating and distinguishing the performance of scenario outcomes is necessary. The performance measures link back to the analytical objectives. Examples include descriptive statistic measures, such as a model in the top 10th percentile of worst conditions, satisficing measures, e.g. a minimum performance threshold for achieving a performance objective, regret measures, e.g. choosing a decision with minimum regret [@Moallemi2019].&#8221;
+
+
+
+I think this phase might be missing some steps. Namely decisions about how we analyse the model output to answer our research question, how we might graph or plot the model output so that we can meaningfully analyse it and interpret it to answer our research questions / meet the modelling purpose?
 
 
 
@@ -6870,7 +6925,7 @@ Of phase or of item only?
 </p>
             </comment>
         </code>
-        <code name="PRT-approach" id="co_38" au="egould" cDate="2020-04-23T16:20:17" mDate="2020-04-23T16:20:17" color="" guid="48F64555-67CF-4DC3-88F5-51B0A1342A1E" cCount="0" qCount="14"/>
+        <code name="PRT-approach" id="co_38" au="egould" cDate="2020-04-23T16:20:17" mDate="2020-04-23T16:20:17" color="" guid="48F64555-67CF-4DC3-88F5-51B0A1342A1E" cCount="0" qCount="15"/>
         <code name="Reporting Requirements" id="co_39" au="egould" cDate="2020-04-29T16:08:28" mDate="2020-04-29T16:08:28" color="" guid="F09D439A-4D7D-45D5-BDB9-698670E9A6BA" cCount="0" qCount="4"/>
         <code name="data_exploration" id="co_40" au="egould" cDate="2020-04-23T14:42:08" mDate="2020-04-25T16:21:05" color="FF7800" guid="9BDDB1DE-FEFA-4406-97F8-A31AD34914E1" cCount="0" qCount="5">
             <comment type="text/html" size="247">
@@ -7273,248 +7328,257 @@ BUT perhaps, this goes under the &#8220;PRIOR KNOWLEDGE&lt; DATA SPECIFICATION A
         <superPrimDocFamilies size="0"/>
     </families>
     <netViews size="2">
-        <netView name="Modelling Workflow-PreregistrationTemplate" id="nw_1" au="egould" cDate="2020-04-25T15:23:32" size="191">
-            <node obj="q94_40_1105" x="1055" y="500" width="403" height="243"/>
-            <node obj="q93_24_1039" x="2475" y="6115" width="240" height="102"/>
-            <node obj="q94_14_1079" x="2339" y="8149" width="228" height="276"/>
-            <node obj="q93_11_1026" x="2268" y="5552" width="155" height="238"/>
-            <node obj="me_17" x="1911" y="9142" width="423" height="202"/>
-            <node obj="q52_5_574" x="2806" y="1355" width="155" height="94"/>
-            <node obj="q15_13_168" x="2311" y="11234" width="155" height="72"/>
-            <node obj="q94_15_1080" x="1279" y="8928" width="317" height="303"/>
-            <node obj="co_10" x="1483" y="2597" width="287" height="234"/>
-            <node obj="q6_5_61" x="2201" y="1854" width="303" height="385"/>
-            <node obj="q58_5_640" x="995" y="7248" width="155" height="72"/>
-            <node obj="q94_37_1102" x="2280" y="6519" width="277" height="196"/>
-            <node obj="q15_12_167" x="2431" y="12154" width="202" height="89"/>
-            <node obj="co_24" x="1188" y="8582" width="413" height="270"/>
-            <node obj="q28_5_307" x="826" y="8672" width="155" height="72"/>
-            <node obj="q46_5_508" x="1879" y="7110" width="155" height="114"/>
-            <node obj="q93_22_1037" x="2225" y="6977" width="155" height="128"/>
-            <node obj="q17_5_184" x="391" y="11106" width="155" height="142"/>
-            <node obj="q94_3_1068" x="2470" y="8818" width="154" height="238"/>
-            <node obj="q98_9_1126" x="1914" y="4894" width="224" height="252"/>
-            <node obj="q93_38_1053" x="2832" y="677" width="340" height="406"/>
-            <node obj="q93_13_1028" x="1741" y="905" width="154" height="244"/>
-            <node obj="q19_5_206" x="1825" y="2395" width="255" height="75"/>
-            <node obj="me_1" x="195" y="4935" width="155" height="44"/>
-            <node obj="co_29" x="1930" y="12232" width="481" height="228"/>
-            <node obj="q94_19_1084" x="1114" y="10463" width="364" height="251"/>
-            <node obj="q50_5_552" x="995" y="14417" width="155" height="128"/>
-            <node obj="q93_49_1064" x="2764" y="6109" width="287" height="196"/>
-            <node obj="co_16" x="1381" y="5497" width="265" height="206"/>
-            <node obj="q94_38_1103" x="1381" y="3743" width="317" height="158"/>
-            <node obj="q94_6_1071" x="2057" y="3664" width="228" height="155"/>
-            <node obj="q53_8_588" x="3141" y="1120" width="181" height="188"/>
-            <node obj="me_22" x="972" y="1732" width="155" height="44"/>
-            <node obj="co_34" x="1087" y="13520" width="288" height="439"/>
-            <node obj="q54_5_596" x="2090" y="2781" width="155" height="128"/>
-            <node obj="q93_26_1041" x="2532" y="5332" width="208" height="326"/>
-            <node obj="q62_5_685" x="1436" y="13946" width="155" height="114"/>
-            <node obj="me_4" x="2398" y="1328" width="329" height="155"/>
-            <node obj="co_33" x="757" y="13506" width="250" height="453"/>
-            <node obj="q94_32_1097" x="2017" y="10772" width="398" height="298"/>
-            <node obj="q3_5_27" x="2144" y="3139" width="234" height="164"/>
-            <node obj="q4_5_38" x="1784" y="4194" width="234" height="196"/>
-            <node obj="me_2" x="1354" y="1196" width="254" height="189"/>
-            <node obj="me_7" x="2565" y="3115" width="285" height="182"/>
-            <node obj="co_22" x="1195" y="7735" width="484" height="241"/>
-            <node obj="q93_28_1043" x="1252" y="5106" width="242" height="300"/>
-            <node obj="q98_3_1120" x="2013" y="6905" width="140" height="130"/>
-            <node obj="q94_4_1069" x="2163" y="8170" width="155" height="252"/>
-            <node obj="co_30" x="1374" y="12173" width="403" height="631"/>
-            <node obj="q93_40_1055" x="3210" y="1551" width="385" height="155"/>
-            <node obj="q75_8_831" x="1838" y="2607" width="245" height="155"/>
-            <node obj="q96_3_1112" x="1937" y="1710" width="189" height="104"/>
-            <node obj="q43_5_475" x="498" y="5396" width="155" height="128"/>
-            <node obj="co_2" x="1197" y="896" width="225" height="285"/>
-            <node obj="q92_5_1015" x="692" y="11256" width="319" height="209"/>
-            <node obj="q20_5_217" x="1921" y="2765" width="155" height="86"/>
-            <node obj="q94_1_1066" x="3355" y="10684" width="155" height="142"/>
-            <node obj="q40_5_442" x="2245" y="2636" width="179" height="128"/>
-            <node obj="q93_33_1048" x="1518" y="272" width="308" height="475"/>
-            <node obj="q93_23_1038" x="2145" y="6716" width="155" height="114"/>
-            <node obj="q93_1_1016" x="1831" y="8870" width="155" height="114"/>
-            <node obj="me_12" x="1782" y="5680" width="385" height="159"/>
-            <node obj="co_6" x="1606" y="2059" width="224" height="173"/>
-            <node obj="q81_8_897" x="2288" y="4865" width="155" height="128"/>
-            <node obj="q96_2_1111" x="1674" y="1791" width="155" height="58"/>
-            <node obj="q90_8_996" x="2077" y="11077" width="155" height="100"/>
-            <node obj="co_21" x="730" y="7789" width="362" height="165"/>
-            <node obj="q93_27_1042" x="1873" y="5893" width="353" height="245"/>
-            <node obj="q85_8_941" x="544" y="10492" width="242" height="142"/>
-            <node obj="q94_17_1082" x="2855" y="8411" width="377" height="261"/>
-            <node obj="me_10" x="2555" y="4080" width="348" height="177"/>
-            <node obj="co_4" x="1531" y="1560" width="366" height="189"/>
-            <node obj="q94_22_1087" x="3055" y="10394" width="155" height="142"/>
-            <node obj="q76_8_842" x="1926" y="2482" width="232" height="100"/>
-            <node obj="co_17" x="1860" y="6191" width="542" height="209"/>
-            <node obj="q93_44_1059" x="1387" y="3387" width="312" height="330"/>
-            <node obj="q32_5_353" x="2331" y="2859" width="260" height="102"/>
-            <node obj="q94_35_1100" x="2985" y="3070" width="369" height="237"/>
-            <node obj="me_8" x="2272" y="3306" width="213" height="155"/>
-            <node obj="co_9" x="1506" y="2882" width="420" height="227"/>
-            <node obj="q95_2_1108" x="2321" y="11410" width="155" height="58"/>
-            <node obj="q103_3_1136" x="1956" y="11594" width="155" height="128"/>
-            <node obj="q94_24_1089" x="3055" y="10741" width="155" height="128"/>
-            <node obj="co_32" x="375" y="13488" width="247" height="467"/>
-            <node obj="q12_5_127" x="2260" y="3492" width="265" height="155"/>
-            <node obj="q98_5_1122" x="1495" y="13797" width="155" height="100"/>
-            <node obj="q31_5_342" x="1886" y="904" width="242" height="208"/>
-            <node obj="q61_5_674" x="1644" y="13333" width="155" height="100"/>
-            <node obj="co_13" x="961" y="1887" width="155" height="86"/>
-            <node obj="q93_31_1046" x="2350" y="5842" width="329" height="255"/>
-            <node obj="q93_37_1052" x="1898" y="1206" width="202" height="72"/>
-            <node obj="q1_5_5" x="2199" y="2305" width="321" height="223"/>
-            <node obj="q93_32_1047" x="1841" y="273" width="282" height="476"/>
-            <node obj="q94_5_1070" x="1111" y="4043" width="250" height="196"/>
-            <node obj="q55_5_607" x="2630" y="2906" width="155" height="114"/>
-            <node obj="q94_21_1086" x="3543" y="10552" width="316" height="214"/>
-            <node obj="me_9" x="2565" y="3629" width="481" height="178"/>
-            <node obj="co_8" x="1502" y="2248" width="298" height="290"/>
-            <node obj="q96_1_1110" x="1908" y="1547" width="155" height="72"/>
-            <node obj="q93_14_1029" x="1485" y="7467" width="155" height="201"/>
-            <node obj="q98_8_1125" x="807" y="4655" width="155" height="182"/>
-            <node obj="co_12" x="942" y="3658" width="291" height="224"/>
-            <node obj="q26_5_285" x="708" y="9559" width="155" height="114"/>
-            <node obj="q94_23_1088" x="3355" y="10444" width="155" height="142"/>
-            <node obj="q96_6_1115" x="2118" y="1553" width="155" height="142"/>
-            <node obj="me_3" x="2384" y="1144" width="337" height="155"/>
-            <node obj="co_7" x="1045" y="2338" width="331" height="235"/>
-            <node obj="q51_5_563" x="3773" y="1364" width="289" height="260"/>
-            <node obj="q84_8_930" x="426" y="11256" width="155" height="142"/>
-            <node obj="q93_12_1027" x="1912" y="3153" width="201" height="155"/>
-            <node obj="co_14" x="442" y="5192" width="307" height="142"/>
-            <node obj="q36_5_397" x="2442" y="12244" width="155" height="86"/>
-            <node obj="q13_5_138" x="807" y="2753" width="252" height="162"/>
-            <node obj="q98_13_1130" x="2137" y="906" width="236" height="245"/>
-            <node obj="me_15" x="1910" y="6725" width="155" height="100"/>
-            <node obj="q94_39_1104" x="850" y="1057" width="256" height="279"/>
-            <node obj="q94_36_1101" x="2215" y="3835" width="390" height="237"/>
-            <node obj="q78_8_864" x="1175" y="1699" width="155" height="114"/>
-            <node obj="co_25" x="817" y="10773" width="410" height="341"/>
-            <node obj="q44_5_486" x="2190" y="7177" width="155" height="100"/>
-            <node obj="q38_5_420" x="1554" y="989" width="173" height="97"/>
-            <node obj="q93_29_1044" x="430" y="4763" width="155" height="389"/>
-            <node obj="q98_6_1123" x="1572" y="13508" width="155" height="114"/>
-            <node obj="q41_5_453" x="2460" y="2651" width="155" height="114"/>
-            <node obj="q94_29_1094" x="2755" y="10451" width="155" height="128"/>
-            <node obj="me_20" x="2623" y="6594" width="155" height="58"/>
-            <node obj="co_11" x="1408" y="3177" width="281" height="143"/>
-            <node obj="q94_18_1083" x="2466" y="9117" width="300" height="410"/>
-            <node obj="q93_50_1065" x="2759" y="6303" width="308" height="163"/>
-            <node obj="q103_11_1144" x="2020" y="11371" width="155" height="59"/>
-            <node obj="q93_25_1040" x="2188" y="5170" width="260" height="261"/>
-            <node obj="q9_8_97" x="2866" y="1167" width="155" height="100"/>
-            <node obj="q79_8_875" x="1248" y="2200" width="259" height="102"/>
-            <node obj="q48_5_530" x="2217" y="2970" width="210" height="78"/>
-            <node obj="me_14" x="1827" y="6859" width="155" height="101"/>
-            <node obj="co_27" x="1530" y="11081" width="434" height="157"/>
-            <node obj="q98_11_1128" x="2003" y="3301" width="249" height="155"/>
-            <node obj="q59_5_651" x="720" y="8007" width="155" height="86"/>
-            <node obj="q45_5_497" x="2581" y="6463" width="155" height="100"/>
-            <node obj="co_19" x="1207" y="7238" width="351" height="169"/>
-            <node obj="q94_13_1078" x="1779" y="8070" width="305" height="256"/>
-            <node obj="q92_3_1013" x="2476" y="8472" width="277" height="193"/>
-            <node obj="q98_2_1119" x="1821" y="7742" width="234" height="196"/>
-            <node obj="me_6" x="1985" y="1836" width="155" height="196"/>
-            <node obj="co_23" x="1210" y="8158" width="415" height="235"/>
-            <node obj="q25_13_280" x="2567" y="8683" width="155" height="72"/>
-            <node obj="co_18" x="1412" y="6643" width="388" height="362"/>
-            <node obj="q23_5_250" x="767" y="2495" width="155" height="128"/>
-            <node obj="q94_10_1075" x="553" y="3844" width="270" height="196"/>
-            <node obj="q63_5_696" x="1817" y="13538" width="155" height="114"/>
-            <node obj="me_18" x="547" y="2531" width="155" height="58"/>
-            <node obj="co_5" x="1644" y="1887" width="230" height="159"/>
-            <node obj="q93_3_1018" x="2072" y="8471" width="385" height="193"/>
-            <node obj="q77_8_853" x="1963" y="3016" width="155" height="100"/>
-            <node obj="q92_1_1011" x="2297" y="8830" width="155" height="210"/>
-            <node obj="me_13" x="1822" y="5271" width="260" height="229"/>
-            <node obj="q92_4_1014" x="1675" y="8469" width="378" height="211"/>
-            <node obj="q93_35_1050" x="2142" y="500" width="378" height="238"/>
-            <node obj="q94_8_1073" x="823" y="4062" width="292" height="241"/>
-            <node obj="co_3" x="1665" y="1306" width="222" height="159"/>
-            <node obj="q93_48_1063" x="2478" y="6203" width="236" height="171"/>
-            <node obj="q93_39_1054" x="3160" y="1307" width="478" height="207"/>
-            <node obj="q39_5_431" x="2084" y="2636" width="155" height="114"/>
-            <node obj="q2_5_16" x="1626" y="7242" width="266" height="164"/>
-            <node obj="co_15" x="1387" y="4811" width="342" height="213"/>
-            <node obj="q94_33_1098" x="1547" y="10749" width="333" height="255"/>
-            <node obj="q37_5_409" x="1414" y="13331" width="155" height="72"/>
-            <node obj="q7_5_72" x="1898" y="12433" width="155" height="114"/>
-            <node obj="q93_4_1019" x="1212" y="9585" width="303" height="358"/>
-            <node obj="q93_34_1049" x="2139" y="270" width="377" height="239"/>
-            <node obj="q93_21_1036" x="2419" y="6735" width="274" height="279"/>
-            <node obj="q94_41_1106" x="2577" y="8172" width="312" height="224"/>
-            <node obj="q91_8_1007" x="1714" y="9073" width="155" height="100"/>
-            <node obj="q73_5_806" x="1751" y="6475" width="271" height="142"/>
-            <node obj="me_5" x="2401" y="1506" width="334" height="155"/>
-            <node obj="co_26" x="2940" y="10604" width="421" height="90"/>
-            <node obj="q86_8_952" x="2390" y="7088" width="155" height="86"/>
-            <node obj="q42_5_464" x="2791" y="1541" width="155" height="86"/>
-            <node obj="q92_2_1012" x="2751" y="8705" width="273" height="242"/>
-            <node obj="co_31" x="653" y="13014" width="339" height="230"/>
-            <node obj="q5_12_56" x="2071" y="9381" width="155" height="224"/>
-            <node obj="q93_30_1045" x="1395" y="5813" width="353" height="245"/>
-            <node obj="q94_16_1081" x="813" y="8808" width="268" height="166"/>
-            <node obj="me_11" x="1555" y="5078" width="252" height="300"/>
-            <node obj="co_1" x="992" y="1425" width="379" height="147"/>
-            <node obj="q98_1_1118" x="2501" y="6386" width="194" height="75"/>
-            <node obj="q93_2_1017" x="1192" y="9281" width="329" height="279"/>
-            <node obj="q5_5_49" x="2261" y="7989" width="432" height="151"/>
-            <node obj="me_16" x="1940" y="8685" width="299" height="163"/>
-            <node obj="co_28" x="833" y="11735" width="479" height="275"/>
-            <node obj="q72_5_795" x="2072" y="6496" width="158" height="128"/>
+        <netView name="Modelling Workflow-PreregistrationTemplate" id="nw_1" au="egould" cDate="2020-04-25T15:23:32" size="199">
+            <node obj="q94_17_1082" x="3360" y="8411" width="377" height="261"/>
+            <node obj="co_13" x="1466" y="1887" width="155" height="86"/>
+            <node obj="me_11" x="2060" y="5078" width="252" height="300"/>
+            <node obj="q94_4_1069" x="2668" y="8170" width="155" height="252"/>
+            <node obj="q94_30_1095" x="2551" y="11512" width="248" height="227"/>
+            <node obj="co_14" x="947" y="5192" width="307" height="142"/>
+            <node obj="q98_6_1131" x="2077" y="13508" width="155" height="114"/>
+            <node obj="q5_12_56" x="2576" y="9381" width="155" height="224"/>
+            <node obj="q93_40_1055" x="3715" y="1551" width="385" height="155"/>
+            <node obj="me_6" x="2490" y="1836" width="155" height="196"/>
+            <node obj="q93_13_1028" x="2246" y="905" width="154" height="244"/>
+            <node obj="q93_35_1050" x="2647" y="500" width="378" height="238"/>
+            <node obj="me_1" x="700" y="4935" width="155" height="44"/>
+            <node obj="q94_2_1067" x="2550" y="11747" width="265" height="196"/>
+            <node obj="q63_5_696" x="2322" y="13538" width="155" height="114"/>
+            <node obj="co_26" x="2432" y="10785" width="481" height="421"/>
+            <node obj="q93_31_1046" x="2855" y="5842" width="329" height="255"/>
+            <node obj="co_3" x="2170" y="1306" width="222" height="159"/>
+            <node obj="q94_13_1078" x="2284" y="8070" width="305" height="256"/>
+            <node obj="q98_11_1136" x="2508" y="3301" width="249" height="155"/>
+            <node obj="q58_5_640" x="1500" y="7248" width="155" height="72"/>
+            <node obj="q93_32_1047" x="2346" y="273" width="282" height="476"/>
+            <node obj="me_13" x="2327" y="5271" width="260" height="229"/>
+            <node obj="q93_11_1026" x="2773" y="5552" width="155" height="238"/>
+            <node obj="q93_22_1037" x="2730" y="6977" width="155" height="128"/>
+            <node obj="co_4" x="2036" y="1560" width="366" height="189"/>
+            <node obj="q94_33_1098" x="2193" y="11244" width="333" height="255"/>
+            <node obj="q103_5_1146" x="3290" y="12230" width="305" height="221"/>
+            <node obj="q93_44_1059" x="1892" y="3387" width="312" height="330"/>
+            <node obj="q91_8_1007" x="2219" y="9073" width="155" height="100"/>
+            <node obj="q81_8_897" x="2793" y="4865" width="155" height="128"/>
+            <node obj="me_2" x="1859" y="1196" width="254" height="189"/>
+            <node obj="q93_4_1019" x="1717" y="9585" width="303" height="358"/>
+            <node obj="q19_5_206" x="2330" y="2395" width="255" height="75"/>
+            <node obj="co_8" x="2007" y="2248" width="298" height="290"/>
+            <node obj="q93_12_1027" x="2417" y="3153" width="201" height="155"/>
+            <node obj="q86_8_952" x="2895" y="7088" width="155" height="86"/>
+            <node obj="co_31" x="1158" y="13014" width="339" height="230"/>
+            <node obj="q94_37_1102" x="2785" y="6519" width="277" height="196"/>
+            <node obj="q94_6_1071" x="2562" y="3664" width="228" height="155"/>
+            <node obj="q20_5_217" x="2426" y="2765" width="155" height="86"/>
+            <node obj="q96_6_1123" x="2623" y="1553" width="155" height="142"/>
+            <node obj="co_15" x="1892" y="4811" width="342" height="213"/>
+            <node obj="q92_2_1012" x="3256" y="8705" width="273" height="242"/>
+            <node obj="q93_33_1048" x="2023" y="272" width="308" height="475"/>
+            <node obj="co_5" x="2149" y="1887" width="230" height="159"/>
+            <node obj="q61_5_674" x="2149" y="13333" width="155" height="100"/>
+            <node obj="q93_48_1063" x="2983" y="6203" width="236" height="171"/>
+            <node obj="q93_23_1038" x="2650" y="6716" width="155" height="114"/>
+            <node obj="q98_3_1128" x="2518" y="6905" width="140" height="130"/>
+            <node obj="me_12" x="2287" y="5680" width="385" height="159"/>
+            <node obj="q90_8_996" x="3002" y="11054" width="155" height="100"/>
+            <node obj="co_29" x="2413" y="12387" width="481" height="228"/>
+            <node obj="q59_5_651" x="1225" y="8007" width="155" height="86"/>
+            <node obj="q73_5_806" x="2256" y="6475" width="271" height="142"/>
+            <node obj="q94_19_1084" x="1619" y="10463" width="364" height="251"/>
+            <node obj="q41_5_453" x="2965" y="2651" width="155" height="114"/>
+            <node obj="q51_5_563" x="4278" y="1364" width="289" height="260"/>
+            <node obj="co_25" x="1322" y="10773" width="410" height="341"/>
+            <node obj="q93_27_1042" x="2378" y="5893" width="353" height="245"/>
+            <node obj="q85_8_941" x="1049" y="10492" width="242" height="182"/>
+            <node obj="q76_8_842" x="2431" y="2482" width="232" height="100"/>
+            <node obj="q92_1_1011" x="2802" y="8830" width="155" height="210"/>
+            <node obj="co_1" x="1497" y="1425" width="379" height="147"/>
+            <node obj="q94_15_1080" x="1784" y="8928" width="317" height="303"/>
+            <node obj="q94_5_1070" x="1616" y="4043" width="250" height="196"/>
+            <node obj="q17_5_184" x="950" y="9547" width="155" height="252"/>
+            <node obj="q72_5_795" x="2577" y="6496" width="158" height="128"/>
+            <node obj="q50_5_552" x="1500" y="14417" width="155" height="128"/>
+            <node obj="q46_5_508" x="2384" y="7110" width="155" height="114"/>
+            <node obj="me_9" x="3070" y="3629" width="481" height="178"/>
+            <node obj="q93_1_1016" x="2336" y="8870" width="155" height="114"/>
+            <node obj="q62_5_685" x="1941" y="13946" width="155" height="114"/>
+            <node obj="co_22" x="1700" y="7735" width="484" height="241"/>
+            <node obj="q1_5_5" x="2704" y="2305" width="321" height="223"/>
+            <node obj="q23_5_250" x="1272" y="2495" width="155" height="128"/>
+            <node obj="co_12" x="1447" y="3658" width="291" height="224"/>
+            <node obj="q39_5_431" x="2589" y="2636" width="155" height="114"/>
+            <node obj="q94_14_1079" x="2844" y="8149" width="228" height="276"/>
+            <node obj="q84_8_930" x="931" y="11256" width="155" height="142"/>
+            <node obj="q94_16_1081" x="1318" y="8808" width="268" height="166"/>
+            <node obj="co_23" x="1715" y="8158" width="415" height="235"/>
+            <node obj="me_10" x="3060" y="4080" width="348" height="177"/>
+            <node obj="q94_24_1089" x="838" y="12747" width="155" height="128"/>
+            <node obj="q94_32_1097" x="2279" y="10574" width="398" height="168"/>
+            <node obj="q94_40_1105" x="1560" y="500" width="403" height="243"/>
+            <node obj="q44_5_486" x="2695" y="7177" width="155" height="100"/>
+            <node obj="q52_5_574" x="3311" y="1355" width="155" height="94"/>
+            <node obj="q32_5_353" x="2836" y="2859" width="260" height="102"/>
+            <node obj="q96_2_1119" x="2179" y="1791" width="155" height="58"/>
+            <node obj="me_22" x="1477" y="1732" width="155" height="44"/>
+            <node obj="me_16" x="2445" y="8685" width="299" height="163"/>
+            <node obj="q93_38_1053" x="3337" y="677" width="340" height="406"/>
+            <node obj="q93_39_1054" x="3665" y="1307" width="478" height="207"/>
+            <node obj="q25_13_280" x="3072" y="8683" width="155" height="72"/>
+            <node obj="co_28" x="723" y="12610" width="421" height="90"/>
+            <node obj="co_10" x="1988" y="2597" width="287" height="234"/>
+            <node obj="q92_4_1014" x="2180" y="8469" width="378" height="211"/>
+            <node obj="co_27" x="2417" y="12003" width="494" height="216"/>
+            <node obj="q26_5_285" x="1223" y="9615" width="155" height="114"/>
+            <node obj="q98_5_1130" x="2000" y="13797" width="155" height="100"/>
+            <node obj="q93_21_1036" x="2924" y="6735" width="274" height="279"/>
+            <node obj="me_7" x="3070" y="3115" width="285" height="182"/>
+            <node obj="q98_13_1138" x="2642" y="906" width="236" height="245"/>
+            <node obj="q93_34_1049" x="2644" y="270" width="377" height="239"/>
+            <node obj="co_34" x="1592" y="13520" width="288" height="439"/>
+            <node obj="q92_5_1015" x="2037" y="11018" width="319" height="209"/>
+            <node obj="q40_5_442" x="2750" y="2636" width="179" height="128"/>
+            <node obj="q103_7_1148" x="2984" y="12000" width="284" height="233"/>
+            <node obj="q79_8_875" x="1753" y="2200" width="259" height="102"/>
+            <node obj="q94_36_1101" x="2720" y="3835" width="390" height="237"/>
+            <node obj="me_15" x="2415" y="6725" width="155" height="100"/>
+            <node obj="q94_21_1086" x="1326" y="12558" width="316" height="214"/>
+            <node obj="q94_1_1066" x="1138" y="12690" width="155" height="142"/>
+            <node obj="q98_1_1126" x="3006" y="6386" width="194" height="75"/>
+            <node obj="co_16" x="1886" y="5497" width="265" height="206"/>
+            <node obj="q96_3_1120" x="2442" y="1710" width="189" height="104"/>
+            <node obj="q3_5_27" x="2649" y="3139" width="234" height="164"/>
+            <node obj="q94_23_1088" x="1138" y="12450" width="155" height="142"/>
+            <node obj="q93_50_1065" x="3264" y="6303" width="308" height="163"/>
+            <node obj="q98_2_1127" x="2326" y="7742" width="234" height="196"/>
+            <node obj="q94_39_1104" x="1355" y="1057" width="256" height="279"/>
+            <node obj="me_20" x="3128" y="6594" width="155" height="58"/>
+            <node obj="q98_8_1133" x="1312" y="4655" width="155" height="182"/>
+            <node obj="q9_8_97" x="3371" y="1167" width="155" height="100"/>
+            <node obj="co_24" x="1693" y="8582" width="413" height="270"/>
+            <node obj="co_17" x="2365" y="6191" width="542" height="209"/>
+            <node obj="q12_5_127" x="2765" y="3492" width="265" height="155"/>
+            <node obj="q43_5_475" x="1003" y="5396" width="155" height="128"/>
+            <node obj="q103_4_1145" x="3031" y="11451" width="302" height="344"/>
+            <node obj="q42_5_464" x="3296" y="1541" width="155" height="86"/>
+            <node obj="me_14" x="2332" y="6859" width="155" height="101"/>
+            <node obj="q45_5_497" x="3086" y="6463" width="155" height="100"/>
+            <node obj="q5_5_49" x="2766" y="7989" width="432" height="151"/>
+            <node obj="co_2" x="1702" y="896" width="225" height="285"/>
+            <node obj="q28_5_307" x="1331" y="8672" width="155" height="72"/>
+            <node obj="co_30" x="1877" y="12351" width="403" height="631"/>
+            <node obj="q94_38_1103" x="1886" y="3743" width="317" height="158"/>
+            <node obj="q38_5_420" x="2059" y="989" width="173" height="97"/>
+            <node obj="q94_31_1096" x="2550" y="11240" width="268" height="255"/>
+            <node obj="me_8" x="2777" y="3306" width="213" height="155"/>
+            <node obj="co_7" x="1550" y="2338" width="331" height="235"/>
+            <node obj="q94_10_1075" x="1058" y="3844" width="270" height="196"/>
+            <node obj="q4_5_38" x="2289" y="4194" width="234" height="196"/>
+            <node obj="co_19" x="1712" y="7238" width="351" height="169"/>
+            <node obj="q94_42_1107" x="1593" y="11217" width="321" height="239"/>
+            <node obj="q94_41_1106" x="3082" y="8172" width="312" height="224"/>
+            <node obj="q103_6_1147" x="3289" y="11994" width="292" height="211"/>
+            <node obj="q93_3_1018" x="2577" y="8471" width="385" height="193"/>
+            <node obj="q98_9_1134" x="2419" y="4894" width="224" height="252"/>
+            <node obj="q93_37_1052" x="2403" y="1206" width="202" height="72"/>
+            <node obj="me_5" x="2906" y="1506" width="334" height="155"/>
+            <node obj="q94_35_1100" x="3490" y="3070" width="369" height="237"/>
+            <node obj="q7_5_72" x="2020" y="13007" width="155" height="114"/>
+            <node obj="co_9" x="2011" y="2882" width="420" height="227"/>
+            <node obj="q96_1_1118" x="2413" y="1547" width="155" height="72"/>
+            <node obj="co_21" x="1235" y="7789" width="362" height="165"/>
+            <node obj="q31_5_342" x="2391" y="904" width="242" height="208"/>
+            <node obj="q92_3_1013" x="2981" y="8472" width="277" height="193"/>
+            <node obj="q37_5_409" x="1919" y="13331" width="155" height="72"/>
+            <node obj="q53_8_588" x="3646" y="1120" width="181" height="188"/>
+            <node obj="co_11" x="1913" y="3177" width="281" height="143"/>
+            <node obj="q93_29_1044" x="935" y="4763" width="155" height="389"/>
+            <node obj="q15_12_167" x="3424" y="12590" width="202" height="89"/>
+            <node obj="q94_8_1073" x="1328" y="4062" width="292" height="241"/>
+            <node obj="q93_24_1039" x="2980" y="6115" width="240" height="102"/>
+            <node obj="co_33" x="1262" y="13506" width="250" height="453"/>
+            <node obj="q6_5_61" x="2706" y="1854" width="303" height="385"/>
+            <node obj="q77_8_853" x="2468" y="3016" width="155" height="100"/>
+            <node obj="q93_14_1029" x="1990" y="7467" width="155" height="201"/>
+            <node obj="me_3" x="2889" y="1144" width="337" height="155"/>
+            <node obj="q93_49_1064" x="3269" y="6109" width="287" height="196"/>
+            <node obj="q75_8_831" x="2343" y="2607" width="245" height="155"/>
+            <node obj="co_6" x="2111" y="2059" width="224" height="173"/>
+            <node obj="q54_5_596" x="2595" y="2781" width="155" height="128"/>
+            <node obj="co_32" x="880" y="13488" width="247" height="467"/>
+            <node obj="q103_8_1149" x="3013" y="12229" width="258" height="237"/>
+            <node obj="q93_28_1043" x="1757" y="5106" width="242" height="300"/>
+            <node obj="q93_30_1045" x="1900" y="5813" width="353" height="245"/>
+            <node obj="q93_2_1017" x="1697" y="9281" width="329" height="279"/>
+            <node obj="me_4" x="2903" y="1328" width="329" height="155"/>
+            <node obj="q94_34_1099" x="3187" y="11074" width="331" height="290"/>
+            <node obj="q78_8_864" x="1680" y="1699" width="155" height="114"/>
+            <node obj="co_18" x="1917" y="6643" width="388" height="362"/>
+            <node obj="q94_3_1068" x="2975" y="8818" width="154" height="238"/>
+            <node obj="q2_5_16" x="2131" y="7242" width="266" height="164"/>
+            <node obj="q94_18_1083" x="2971" y="9117" width="300" height="410"/>
+            <node obj="q93_25_1040" x="2693" y="5170" width="260" height="261"/>
+            <node obj="q36_5_397" x="3435" y="12680" width="155" height="86"/>
+            <node obj="q55_5_607" x="3135" y="2906" width="155" height="114"/>
+            <node obj="me_18" x="1052" y="2531" width="155" height="58"/>
+            <node obj="q103_3_1144" x="2871" y="11655" width="155" height="238"/>
+            <node obj="me_17" x="2416" y="9142" width="423" height="202"/>
+            <node obj="q48_5_530" x="2722" y="2970" width="210" height="78"/>
+            <node obj="q103_11_1152" x="2946" y="11348" width="155" height="59"/>
+            <node obj="q94_22_1087" x="838" y="12400" width="155" height="142"/>
+            <node obj="q94_29_1094" x="538" y="12457" width="155" height="128"/>
+            <node obj="q13_5_138" x="1312" y="2753" width="252" height="162"/>
+            <node obj="q93_26_1041" x="3037" y="5332" width="208" height="326"/>
         </netView>
         <netView name="PRT Format, Workflow and Internal Model" id="nw_2" au="egould" cDate="2020-04-25T17:24:16" size="36">
-            <node obj="q30_12_336" x="710" y="80" width="155" height="58"/>
-            <node obj="co_41" x="1316" y="171" width="155" height="52"/>
-            <node obj="q93_10_1025" x="422" y="1174" width="155" height="156"/>
-            <node obj="q10_5_105" x="1153" y="216" width="155" height="86"/>
-            <node obj="q80_8_886" x="1133" y="730" width="155" height="128"/>
-            <node obj="q67_5_740" x="556" y="430" width="155" height="58"/>
-            <node obj="co_40" x="484" y="798" width="155" height="313"/>
-            <node obj="q11_5_116" x="1849" y="85" width="155" height="142"/>
-            <node obj="q82_8_908" x="1443" y="724" width="155" height="128"/>
-            <node obj="q66_5_729" x="864" y="402" width="155" height="114"/>
-            <node obj="q83_8_919" x="1224" y="1332" width="155" height="100"/>
-            <node obj="q14_5_149" x="784" y="763" width="155" height="128"/>
-            <node obj="pd_11_11" x="1849" y="0" width="155" height="44"/>
-            <node obj="co_36" x="2168" y="89" width="155" height="52"/>
-            <node obj="q29_5_318" x="267" y="223" width="155" height="72"/>
-            <node obj="co_42" x="710" y="261" width="155" height="159"/>
-            <node obj="q35_5_386" x="184" y="763" width="155" height="128"/>
             <node obj="q94_7_1072" x="992" y="639" width="155" height="114"/>
-            <node obj="co_38" x="915" y="1000" width="155" height="52"/>
-            <node obj="me_1" x="57" y="1251" width="351" height="419"/>
-            <node obj="q34_5_375" x="320" y="316" width="155" height="128"/>
-            <node obj="q89_8_985" x="683" y="945" width="155" height="72"/>
-            <node obj="q93_42_1057" x="771" y="1176" width="155" height="142"/>
-            <node obj="co_39" x="1348" y="580" width="155" height="66"/>
-            <node obj="q79_8_875" x="1272" y="1504" width="155" height="142"/>
-            <node obj="q93_15_1030" x="816" y="1491" width="155" height="114"/>
-            <node obj="q81_8_897" x="572" y="1399" width="155" height="128"/>
-            <node obj="co_4" x="2053" y="277" width="155" height="467"/>
-            <node obj="me_20" x="1121" y="527" width="155" height="58"/>
+            <node obj="co_42" x="710" y="261" width="155" height="159"/>
             <node obj="co_14" x="1265" y="978" width="155" height="299"/>
-            <node obj="q68_5_751" x="421" y="123" width="155" height="58"/>
-            <node obj="q23_5_250" x="484" y="643" width="155" height="128"/>
-            <node obj="co_3" x="1648" y="291" width="155" height="355"/>
-            <node obj="q65_5_718" x="999" y="123" width="155" height="58"/>
-            <node obj="q93_45_1060" x="1067" y="1422" width="155" height="128"/>
             <node obj="q48_5_530" x="1100" y="330" width="155" height="100"/>
+            <node obj="q93_42_1057" x="771" y="1176" width="155" height="142"/>
+            <node obj="me_20" x="1121" y="527" width="155" height="58"/>
+            <node obj="q67_5_740" x="556" y="430" width="155" height="58"/>
+            <node obj="q93_15_1030" x="816" y="1491" width="155" height="114"/>
+            <node obj="q93_10_1025" x="422" y="1174" width="155" height="156"/>
+            <node obj="co_3" x="1648" y="291" width="155" height="355"/>
+            <node obj="co_40" x="484" y="798" width="155" height="313"/>
+            <node obj="q23_5_250" x="484" y="643" width="155" height="128"/>
+            <node obj="q30_12_336" x="710" y="80" width="155" height="58"/>
+            <node obj="q79_8_875" x="1272" y="1504" width="155" height="142"/>
+            <node obj="q65_5_718" x="999" y="123" width="155" height="58"/>
+            <node obj="pd_11_11" x="1849" y="0" width="155" height="44"/>
+            <node obj="co_4" x="2053" y="277" width="155" height="467"/>
+            <node obj="co_36" x="2168" y="89" width="155" height="52"/>
+            <node obj="q35_5_386" x="184" y="763" width="155" height="128"/>
+            <node obj="q29_5_318" x="267" y="223" width="155" height="72"/>
+            <node obj="q14_5_149" x="784" y="763" width="155" height="128"/>
+            <node obj="q83_8_919" x="1224" y="1332" width="155" height="100"/>
+            <node obj="q11_5_116" x="1849" y="85" width="155" height="142"/>
+            <node obj="co_39" x="1348" y="580" width="155" height="66"/>
+            <node obj="q66_5_729" x="864" y="402" width="155" height="114"/>
+            <node obj="q34_5_375" x="320" y="316" width="155" height="128"/>
+            <node obj="q68_5_751" x="421" y="123" width="155" height="58"/>
+            <node obj="me_1" x="57" y="1251" width="351" height="419"/>
+            <node obj="q10_5_105" x="1153" y="216" width="155" height="86"/>
+            <node obj="q93_45_1060" x="1067" y="1422" width="155" height="128"/>
+            <node obj="co_41" x="1316" y="171" width="155" height="52"/>
+            <node obj="co_38" x="915" y="1000" width="155" height="52"/>
+            <node obj="q82_8_908" x="1443" y="724" width="155" height="128"/>
+            <node obj="q81_8_897" x="572" y="1399" width="155" height="128"/>
+            <node obj="q89_8_985" x="683" y="945" width="155" height="72"/>
+            <node obj="q80_8_886" x="1133" y="730" width="155" height="128"/>
         </netView>
     </netViews>
     <networkFamilies size="0"/>
     <superNetworkFamilies size="0"/>
     <links>
         <objectSegmentLinks>
-            <codings size="1293">
+            <codings size="1304">
                 <iLink obj="co_1" qRef="q78_8_864"/>
                 <iLink obj="co_1" qRef="q94_39_1104"/>
+                <iLink obj="co_1" qRef="q94_49_1114"/>
                 <iLink obj="co_2" qRef="q31_5_342"/>
                 <iLink obj="co_2" qRef="q38_5_420"/>
-                <iLink obj="co_2" qRef="q98_13_1130"/>
+                <iLink obj="co_2" qRef="q98_13_1138"/>
                 <iLink obj="co_2" qRef="q93_13_1028"/>
                 <iLink obj="co_2" qRef="q93_32_1047"/>
                 <iLink obj="co_2" qRef="q93_33_1048"/>
@@ -7531,14 +7595,14 @@ BUT perhaps, this goes under the &#8220;PRIOR KNOWLEDGE&lt; DATA SPECIFICATION A
                 <iLink obj="co_3" qRef="q93_38_1053"/>
                 <iLink obj="co_3" qRef="q93_39_1054"/>
                 <iLink obj="co_3" qRef="q93_40_1055"/>
-                <iLink obj="co_4" qRef="q96_1_1110"/>
-                <iLink obj="co_4" qRef="q96_3_1112"/>
+                <iLink obj="co_4" qRef="q96_1_1118"/>
+                <iLink obj="co_4" qRef="q96_3_1120"/>
                 <iLink obj="co_4" qRef="q31_5_342"/>
                 <iLink obj="co_4" qRef="q11_5_116"/>
-                <iLink obj="co_4" qRef="q96_6_1115"/>
-                <iLink obj="co_5" qRef="q96_2_1111"/>
+                <iLink obj="co_4" qRef="q96_6_1123"/>
+                <iLink obj="co_5" qRef="q96_2_1119"/>
                 <iLink obj="co_5" qRef="q6_5_61"/>
-                <iLink obj="co_6" qRef="q96_4_1113"/>
+                <iLink obj="co_6" qRef="q96_4_1121"/>
                 <iLink obj="co_6" qRef="q6_5_61"/>
                 <iLink obj="co_7" qRef="q1_5_5"/>
                 <iLink obj="co_7" qRef="q19_5_206"/>
@@ -7552,17 +7616,17 @@ BUT perhaps, this goes under the &#8220;PRIOR KNOWLEDGE&lt; DATA SPECIFICATION A
                 <iLink obj="co_7" qRef="q93_43_1058"/>
                 <iLink obj="co_7" qRef="q93_46_1061"/>
                 <iLink obj="co_7" qRef="q93_47_1062"/>
-                <iLink obj="co_8" qRef="q100_1_1131"/>
+                <iLink obj="co_8" qRef="q100_1_1139"/>
                 <iLink obj="co_8" qRef="q76_8_842"/>
                 <iLink obj="co_8" qRef="q93_41_1056"/>
                 <iLink obj="co_9" qRef="q48_5_530"/>
-                <iLink obj="co_9" qRef="q96_5_1114"/>
-                <iLink obj="co_9" qRef="q96_7_1116"/>
-                <iLink obj="co_9" qRef="q96_8_1117"/>
+                <iLink obj="co_9" qRef="q96_5_1122"/>
+                <iLink obj="co_9" qRef="q96_7_1124"/>
+                <iLink obj="co_9" qRef="q96_8_1125"/>
                 <iLink obj="co_9" qRef="q77_8_853"/>
                 <iLink obj="co_9" qRef="q94_11_1076"/>
-                <iLink obj="co_10" qRef="q101_1_1132"/>
-                <iLink obj="co_10" qRef="q101_2_1133"/>
+                <iLink obj="co_10" qRef="q101_1_1140"/>
+                <iLink obj="co_10" qRef="q101_2_1141"/>
                 <iLink obj="co_10" qRef="q55_5_607"/>
                 <iLink obj="co_10" qRef="q20_5_217"/>
                 <iLink obj="co_10" qRef="q71_5_784"/>
@@ -7575,8 +7639,8 @@ BUT perhaps, this goes under the &#8220;PRIOR KNOWLEDGE&lt; DATA SPECIFICATION A
                 <iLink obj="co_10" qRef="q40_5_442"/>
                 <iLink obj="co_10" qRef="q54_5_596"/>
                 <iLink obj="co_10" qRef="q75_8_831"/>
-                <iLink obj="co_10" qRef="q98_10_1127"/>
-                <iLink obj="co_10" qRef="q98_12_1129"/>
+                <iLink obj="co_10" qRef="q98_10_1135"/>
+                <iLink obj="co_10" qRef="q98_12_1137"/>
                 <iLink obj="co_11" qRef="q57_5_629"/>
                 <iLink obj="co_11" qRef="q56_5_618"/>
                 <iLink obj="co_11" qRef="q13_5_138"/>
@@ -7585,15 +7649,17 @@ BUT perhaps, this goes under the &#8220;PRIOR KNOWLEDGE&lt; DATA SPECIFICATION A
                 <iLink obj="co_11" qRef="q3_5_27"/>
                 <iLink obj="co_11" qRef="q12_5_127"/>
                 <iLink obj="co_11" qRef="q94_6_1071"/>
-                <iLink obj="co_11" qRef="q98_11_1128"/>
+                <iLink obj="co_11" qRef="q98_11_1136"/>
                 <iLink obj="co_11" qRef="q93_12_1027"/>
                 <iLink obj="co_11" qRef="q94_35_1100"/>
                 <iLink obj="co_11" qRef="q94_36_1101"/>
                 <iLink obj="co_11" qRef="q94_38_1103"/>
                 <iLink obj="co_11" qRef="q93_44_1059"/>
+                <iLink obj="co_11" qRef="q94_47_1112"/>
                 <iLink obj="co_12" qRef="q94_5_1070"/>
                 <iLink obj="co_12" qRef="q94_8_1073"/>
                 <iLink obj="co_12" qRef="q94_10_1075"/>
+                <iLink obj="co_12" qRef="q94_46_1111"/>
                 <iLink obj="co_13" qRef="q13_5_138"/>
                 <iLink obj="co_13" qRef="q23_5_250"/>
                 <iLink obj="co_13" qRef="q17_5_184"/>
@@ -7602,13 +7668,14 @@ BUT perhaps, this goes under the &#8220;PRIOR KNOWLEDGE&lt; DATA SPECIFICATION A
                 <iLink obj="co_14" qRef="q43_5_475"/>
                 <iLink obj="co_14" qRef="q80_8_886"/>
                 <iLink obj="co_14" qRef="q82_8_908"/>
+                <iLink obj="co_14" qRef="q94_48_1113"/>
                 <iLink obj="co_15" qRef="q4_5_38"/>
                 <iLink obj="co_15" qRef="q33_5_364"/>
                 <iLink obj="co_15" qRef="q21_5_228"/>
                 <iLink obj="co_15" qRef="q24_5_261"/>
                 <iLink obj="co_15" qRef="q81_8_897"/>
-                <iLink obj="co_15" qRef="q98_8_1125"/>
-                <iLink obj="co_15" qRef="q98_9_1126"/>
+                <iLink obj="co_15" qRef="q98_8_1133"/>
+                <iLink obj="co_15" qRef="q98_9_1134"/>
                 <iLink obj="co_15" qRef="q93_29_1044"/>
                 <iLink obj="co_16" qRef="q93_11_1026"/>
                 <iLink obj="co_16" qRef="q93_25_1040"/>
@@ -7617,7 +7684,7 @@ BUT perhaps, this goes under the &#8220;PRIOR KNOWLEDGE&lt; DATA SPECIFICATION A
                 <iLink obj="co_16" qRef="q93_28_1043"/>
                 <iLink obj="co_16" qRef="q93_30_1045"/>
                 <iLink obj="co_16" qRef="q93_31_1046"/>
-                <iLink obj="co_17" qRef="q98_1_1118"/>
+                <iLink obj="co_17" qRef="q98_1_1126"/>
                 <iLink obj="co_17" qRef="q45_5_497"/>
                 <iLink obj="co_17" qRef="q72_5_795"/>
                 <iLink obj="co_17" qRef="q73_5_806"/>
@@ -7626,8 +7693,8 @@ BUT perhaps, this goes under the &#8220;PRIOR KNOWLEDGE&lt; DATA SPECIFICATION A
                 <iLink obj="co_17" qRef="q93_48_1063"/>
                 <iLink obj="co_17" qRef="q93_49_1064"/>
                 <iLink obj="co_17" qRef="q93_50_1065"/>
-                <iLink obj="co_18" qRef="q98_3_1120"/>
-                <iLink obj="co_18" qRef="q95_3_1109"/>
+                <iLink obj="co_18" qRef="q98_3_1128"/>
+                <iLink obj="co_18" qRef="q95_3_1117"/>
                 <iLink obj="co_18" qRef="q46_5_508"/>
                 <iLink obj="co_18" qRef="q86_8_952"/>
                 <iLink obj="co_18" qRef="q93_14_1029"/>
@@ -7643,7 +7710,7 @@ BUT perhaps, this goes under the &#8220;PRIOR KNOWLEDGE&lt; DATA SPECIFICATION A
                 <iLink obj="co_20" qRef="q87_8_963"/>
                 <iLink obj="co_21" qRef="q28_5_307"/>
                 <iLink obj="co_21" qRef="q59_5_651"/>
-                <iLink obj="co_22" qRef="q98_2_1119"/>
+                <iLink obj="co_22" qRef="q98_2_1127"/>
                 <iLink obj="co_22" qRef="q93_14_1029"/>
                 <iLink obj="co_23" qRef="q93_4_1019"/>
                 <iLink obj="co_23" qRef="q94_4_1069"/>
@@ -7652,6 +7719,7 @@ BUT perhaps, this goes under the &#8220;PRIOR KNOWLEDGE&lt; DATA SPECIFICATION A
                 <iLink obj="co_23" qRef="q94_13_1078"/>
                 <iLink obj="co_23" qRef="q94_14_1079"/>
                 <iLink obj="co_23" qRef="q94_41_1106"/>
+                <iLink obj="co_23" qRef="q94_45_1110"/>
                 <iLink obj="co_24" qRef="q92_1_1011"/>
                 <iLink obj="co_24" qRef="q93_1_1016"/>
                 <iLink obj="co_24" qRef="q92_2_1012"/>
@@ -7668,7 +7736,8 @@ BUT perhaps, this goes under the &#8220;PRIOR KNOWLEDGE&lt; DATA SPECIFICATION A
                 <iLink obj="co_24" qRef="q94_16_1081"/>
                 <iLink obj="co_24" qRef="q94_17_1082"/>
                 <iLink obj="co_24" qRef="q94_20_1085"/>
-                <iLink obj="co_25" qRef="q95_3_1109"/>
+                <iLink obj="co_24" qRef="q94_44_1109"/>
+                <iLink obj="co_25" qRef="q95_3_1117"/>
                 <iLink obj="co_25" qRef="q17_5_184"/>
                 <iLink obj="co_25" qRef="q92_5_1015"/>
                 <iLink obj="co_25" qRef="q93_5_1020"/>
@@ -7678,38 +7747,42 @@ BUT perhaps, this goes under the &#8220;PRIOR KNOWLEDGE&lt; DATA SPECIFICATION A
                 <iLink obj="co_25" qRef="q85_8_941"/>
                 <iLink obj="co_25" qRef="q93_9_1024"/>
                 <iLink obj="co_25" qRef="q94_19_1084"/>
-                <iLink obj="co_26" qRef="q94_1_1066"/>
-                <iLink obj="co_26" qRef="q28_5_307"/>
-                <iLink obj="co_26" qRef="q94_21_1086"/>
-                <iLink obj="co_26" qRef="q94_22_1087"/>
-                <iLink obj="co_26" qRef="q94_23_1088"/>
-                <iLink obj="co_26" qRef="q94_24_1089"/>
-                <iLink obj="co_26" qRef="q94_29_1094"/>
-                <iLink obj="co_27" qRef="q94_2_1067"/>
-                <iLink obj="co_27" qRef="q95_2_1108"/>
-                <iLink obj="co_27" qRef="q103_3_1136"/>
-                <iLink obj="co_27" qRef="q103_4_1137"/>
-                <iLink obj="co_27" qRef="q90_8_996"/>
-                <iLink obj="co_27" qRef="q103_11_1144"/>
-                <iLink obj="co_27" qRef="q15_13_168"/>
-                <iLink obj="co_27" qRef="q94_30_1095"/>
-                <iLink obj="co_27" qRef="q94_31_1096"/>
-                <iLink obj="co_27" qRef="q94_32_1097"/>
-                <iLink obj="co_27" qRef="q94_33_1098"/>
-                <iLink obj="co_27" qRef="q94_34_1099"/>
-                <iLink obj="co_28" qRef="q103_5_1138"/>
-                <iLink obj="co_28" qRef="q103_6_1139"/>
-                <iLink obj="co_28" qRef="q103_7_1140"/>
-                <iLink obj="co_28" qRef="q103_8_1141"/>
-                <iLink obj="co_29" qRef="q95_1_1107"/>
-                <iLink obj="co_29" qRef="q103_1_1134"/>
-                <iLink obj="co_29" qRef="q103_2_1135"/>
+                <iLink obj="co_25" qRef="q94_32_1097"/>
+                <iLink obj="co_26" qRef="q94_2_1067"/>
+                <iLink obj="co_26" qRef="q95_2_1116"/>
+                <iLink obj="co_26" qRef="q103_3_1144"/>
+                <iLink obj="co_26" qRef="q103_4_1145"/>
+                <iLink obj="co_26" qRef="q92_5_1015"/>
+                <iLink obj="co_26" qRef="q90_8_996"/>
+                <iLink obj="co_26" qRef="q103_11_1152"/>
+                <iLink obj="co_26" qRef="q15_13_168"/>
+                <iLink obj="co_26" qRef="q94_30_1095"/>
+                <iLink obj="co_26" qRef="q94_31_1096"/>
+                <iLink obj="co_26" qRef="q94_32_1097"/>
+                <iLink obj="co_26" qRef="q94_33_1098"/>
+                <iLink obj="co_26" qRef="q94_34_1099"/>
+                <iLink obj="co_26" qRef="q94_42_1107"/>
+                <iLink obj="co_27" qRef="q103_5_1146"/>
+                <iLink obj="co_27" qRef="q103_6_1147"/>
+                <iLink obj="co_27" qRef="q103_7_1148"/>
+                <iLink obj="co_27" qRef="q103_8_1149"/>
+                <iLink obj="co_28" qRef="q94_1_1066"/>
+                <iLink obj="co_28" qRef="q28_5_307"/>
+                <iLink obj="co_28" qRef="q94_21_1086"/>
+                <iLink obj="co_28" qRef="q94_22_1087"/>
+                <iLink obj="co_28" qRef="q94_23_1088"/>
+                <iLink obj="co_28" qRef="q94_24_1089"/>
+                <iLink obj="co_28" qRef="q94_29_1094"/>
+                <iLink obj="co_28" qRef="q94_43_1108"/>
+                <iLink obj="co_29" qRef="q95_1_1115"/>
+                <iLink obj="co_29" qRef="q103_1_1142"/>
+                <iLink obj="co_29" qRef="q103_2_1143"/>
                 <iLink obj="co_29" qRef="q36_5_397"/>
-                <iLink obj="co_29" qRef="q103_10_1143"/>
+                <iLink obj="co_29" qRef="q103_10_1151"/>
                 <iLink obj="co_29" qRef="q15_12_167"/>
                 <iLink obj="co_30" qRef="q7_5_72"/>
                 <iLink obj="co_30" qRef="q93_8_1023"/>
-                <iLink obj="co_30" qRef="q103_12_1145"/>
+                <iLink obj="co_30" qRef="q103_12_1153"/>
                 <iLink obj="co_30" qRef="q93_16_1031"/>
                 <iLink obj="co_30" qRef="q93_17_1032"/>
                 <iLink obj="co_30" qRef="q93_18_1033"/>
@@ -7720,7 +7793,7 @@ BUT perhaps, this goes under the &#8220;PRIOR KNOWLEDGE&lt; DATA SPECIFICATION A
                 <iLink obj="co_30" qRef="q94_26_1091"/>
                 <iLink obj="co_30" qRef="q94_27_1092"/>
                 <iLink obj="co_30" qRef="q94_28_1093"/>
-                <iLink obj="co_31" qRef="q98_4_1121"/>
+                <iLink obj="co_31" qRef="q98_4_1129"/>
                 <iLink obj="co_31" qRef="q16_5_173"/>
                 <iLink obj="co_32" qRef="q8_5_83"/>
                 <iLink obj="co_32" qRef="q64_5_707"/>
@@ -7739,16 +7812,16 @@ BUT perhaps, this goes under the &#8220;PRIOR KNOWLEDGE&lt; DATA SPECIFICATION A
                 <iLink obj="co_34" qRef="q28_5_307"/>
                 <iLink obj="co_34" qRef="q6_5_61"/>
                 <iLink obj="co_34" qRef="q37_5_409"/>
-                <iLink obj="co_34" qRef="q98_5_1122"/>
-                <iLink obj="co_34" qRef="q98_6_1123"/>
-                <iLink obj="co_35" qRef="q96_6_1115"/>
+                <iLink obj="co_34" qRef="q98_5_1130"/>
+                <iLink obj="co_34" qRef="q98_6_1131"/>
+                <iLink obj="co_35" qRef="q96_6_1123"/>
                 <iLink obj="co_35" qRef="q93_33_1048"/>
                 <iLink obj="co_35" qRef="q94_40_1105"/>
                 <iLink obj="co_35" qRef="q94_41_1106"/>
                 <iLink obj="co_36" qRef="q31_5_342"/>
                 <iLink obj="co_36" qRef="q11_5_116"/>
                 <iLink obj="co_36" qRef="q93_13_1028"/>
-                <iLink obj="co_36" qRef="q98_13_1130"/>
+                <iLink obj="co_36" qRef="q98_13_1138"/>
                 <iLink obj="co_37" qRef="q94_8_1073"/>
                 <iLink obj="co_37" qRef="q94_20_1085"/>
                 <iLink obj="co_37" qRef="q93_20_1035"/>
@@ -7767,9 +7840,10 @@ BUT perhaps, this goes under the &#8220;PRIOR KNOWLEDGE&lt; DATA SPECIFICATION A
                 <iLink obj="co_37" qRef="q93_43_1058"/>
                 <iLink obj="co_37" qRef="q93_44_1059"/>
                 <iLink obj="co_37" qRef="q93_47_1062"/>
-                <iLink obj="co_38" qRef="q103_1_1134"/>
+                <iLink obj="co_38" qRef="q103_1_1142"/>
                 <iLink obj="co_38" qRef="q16_5_173"/>
                 <iLink obj="co_38" qRef="q17_5_184"/>
+                <iLink obj="co_38" qRef="q26_5_285"/>
                 <iLink obj="co_38" qRef="q94_7_1072"/>
                 <iLink obj="co_38" qRef="q82_8_908"/>
                 <iLink obj="co_38" qRef="q81_8_897"/>
@@ -7783,13 +7857,13 @@ BUT perhaps, this goes under the &#8220;PRIOR KNOWLEDGE&lt; DATA SPECIFICATION A
                 <iLink obj="co_38" qRef="q93_45_1060"/>
                 <iLink obj="co_39" qRef="q94_7_1072"/>
                 <iLink obj="co_39" qRef="q83_8_919"/>
-                <iLink obj="co_39" qRef="q103_9_1142"/>
+                <iLink obj="co_39" qRef="q103_9_1150"/>
                 <iLink obj="co_39" qRef="q94_20_1085"/>
                 <iLink obj="co_40" qRef="q14_5_149"/>
                 <iLink obj="co_40" qRef="q23_5_250"/>
                 <iLink obj="co_40" qRef="q35_5_386"/>
                 <iLink obj="co_40" qRef="q89_8_985"/>
-                <iLink obj="co_40" qRef="q98_10_1127"/>
+                <iLink obj="co_40" qRef="q98_10_1135"/>
                 <iLink obj="co_41" qRef="q19_5_206"/>
                 <iLink obj="co_41" qRef="q2_5_16"/>
                 <iLink obj="co_41" qRef="q24_5_261"/>
@@ -8808,7 +8882,7 @@ BUT perhaps, this goes under the &#8220;PRIOR KNOWLEDGE&lt; DATA SPECIFICATION A
                 <iLink obj="me_1" qRef="q93_29_1044"/>
                 <iLink obj="me_2" qRef="q31_5_342"/>
                 <iLink obj="me_2" qRef="q38_5_420"/>
-                <iLink obj="me_2" qRef="q98_13_1130"/>
+                <iLink obj="me_2" qRef="q98_13_1138"/>
                 <iLink obj="me_2" qRef="q93_13_1028"/>
                 <iLink obj="me_3" qRef="q9_8_97"/>
                 <iLink obj="me_3" qRef="q93_38_1053"/>
@@ -8816,11 +8890,11 @@ BUT perhaps, this goes under the &#8220;PRIOR KNOWLEDGE&lt; DATA SPECIFICATION A
                 <iLink obj="me_4" qRef="q93_38_1053"/>
                 <iLink obj="me_5" qRef="q42_5_464"/>
                 <iLink obj="me_5" qRef="q93_38_1053"/>
-                <iLink obj="me_6" qRef="q96_3_1112"/>
+                <iLink obj="me_6" qRef="q96_3_1120"/>
                 <iLink obj="me_7" qRef="q12_5_127"/>
                 <iLink obj="me_7" qRef="q3_5_27"/>
                 <iLink obj="me_7" qRef="q93_12_1027"/>
-                <iLink obj="me_8" qRef="q98_11_1128"/>
+                <iLink obj="me_8" qRef="q98_11_1136"/>
                 <iLink obj="me_9" qRef="q12_5_127"/>
                 <iLink obj="me_10" qRef="q94_6_1071"/>
                 <iLink obj="me_10" qRef="q94_36_1101"/>
@@ -8831,7 +8905,7 @@ BUT perhaps, this goes under the &#8220;PRIOR KNOWLEDGE&lt; DATA SPECIFICATION A
                 <iLink obj="me_13" qRef="q93_11_1026"/>
                 <iLink obj="me_13" qRef="q93_25_1040"/>
                 <iLink obj="me_13" qRef="q93_26_1041"/>
-                <iLink obj="me_14" qRef="q98_3_1120"/>
+                <iLink obj="me_14" qRef="q98_3_1128"/>
                 <iLink obj="me_14" qRef="q46_5_508"/>
                 <iLink obj="me_14" qRef="q44_5_486"/>
                 <iLink obj="me_14" qRef="q86_8_952"/>
@@ -8887,9 +8961,9 @@ BUT perhaps, this goes under the &#8220;PRIOR KNOWLEDGE&lt; DATA SPECIFICATION A
             <codeLink rel="IS PROPERTY OF" source="co_23" target="co_21" au="egould" cDate="2020-04-28T11:30:31"/>
             <codeLink rel="IS PROPERTY OF" source="co_24" target="co_21" au="egould" cDate="2020-04-28T11:30:36"/>
             <codeLink rel="IS ASSOCIATED WITH" source="co_24" target="co_23" au="egould" cDate="2020-04-28T11:52:29"/>
-            <codeLink rel="IS PROPERTY OF" source="co_26" target="co_25" au="egould" cDate="2020-04-29T11:24:24"/>
-            <codeLink rel="IS PROPERTY OF" source="co_27" target="co_25" au="egould" cDate="2020-04-29T11:24:41"/>
-            <codeLink rel="IS PROPERTY OF" source="co_28" target="co_25" au="egould" cDate="2020-04-29T11:24:55"/>
+            <codeLink rel="IS PROPERTY OF" source="co_26" target="co_25" au="egould" cDate="2020-04-29T11:24:41"/>
+            <codeLink rel="IS PROPERTY OF" source="co_27" target="co_25" au="egould" cDate="2020-04-29T11:24:55"/>
+            <codeLink rel="IS PROPERTY OF" source="co_28" target="co_25" au="egould" cDate="2020-04-29T11:24:24"/>
             <codeLink rel="IS PROPERTY OF" source="co_29" target="co_25" au="egould" cDate="2020-04-29T11:25:27"/>
             <codeLink rel="IS PROPERTY OF" source="co_30" target="co_25" au="egould" cDate="2020-04-29T11:25:14"/>
             <codeLink rel="IS PROPERTY OF" source="co_32" target="co_31" au="egould" cDate="2020-05-09T18:29:28"/>
@@ -8906,10 +8980,11 @@ BUT perhaps, this goes under the &#8220;PRIOR KNOWLEDGE&lt; DATA SPECIFICATION A
             <hyperLinkProto id="JUSTIFIES" label1="!&gt;" label2="just" formalProp="transitive" layout="U" descr="justifies" au="ATLAS.ti"/>
             <hyperLinkProto id="SUPPORTS" label1="*&gt;" label2="supp" formalProp="transitive" layout="U" descr="supports" au="ATLAS.ti"/>
         </hyperLinkProtos>
-        <hyperLinks size="6">
+        <hyperLinks size="7">
             <hyperLink rel="SUPPORTS" source="q93_4_1019" target="q26_5_285" au="egould" cDate="2020-05-09T17:31:39"/>
             <hyperLink rel="EXPANDS" source="q51_5_563" target="q52_5_574" au="egould" cDate="2020-05-01T14:16:34"/>
-            <hyperLink rel="EXPANDS" source="q96_6_1115" target="q96_1_1110" au="egould" cDate="2020-05-01T14:08:00"/>
+            <hyperLink rel="SUPPORTS" source="q26_5_285" target="q17_5_184" au="egould" cDate="2020-05-09T19:33:02"/>
+            <hyperLink rel="EXPANDS" source="q96_6_1123" target="q96_1_1118" au="egould" cDate="2020-05-01T14:08:00"/>
             <hyperLink rel="JUSTIFIES" source="q53_8_588" target="q9_8_97" au="egould" cDate="2020-05-01T11:57:34"/>
             <hyperLink rel="SUPPORTS" source="q93_39_1054" target="q52_5_574" au="egould" cDate="2020-05-01T11:54:37"/>
             <hyperLink rel="EXPLAINS" source="q93_40_1055" target="q93_39_1054" au="egould" cDate="2020-05-01T11:56:09"/>
