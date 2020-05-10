@@ -1,8 +1,74 @@
 Ecology and Conservation Modelling Preregistration Template – DRAFT
 ================
 Elise Gould, Add your name here if you edit or make comments on this
-document, TBD:workshop collaborators
+document,TBD:workshop collaborators
 10 May, 2020
+
+# About this template
+
+This template has been collated from a combination of literature reviews
+of the ‘Good Modelling Practice’ and other modelling literature, as well
+as a collaborative workshop at DELWP. Chris Jones has kindly volunteered
+one component of the VEFMAP project investigating vegetation responses
+to environmental flows as a testing ground for the use of
+preregistration templates in applied ecological modelling research. This
+template will be used to preregister this research, and we will use the
+VEFMAP project to both develop and evaluate the template ‘in situ’.
+
+The template is largely structured around 6 “phases” in the process of
+developing, evaluating and analysing a model or models in ecological
+applications: `Problem Formulation`, `Define Conceptual Model`,
+`Formalise and Specify Model`, `Model Validation and Evaluation`, `Model
+Analysis`, `Model Application`. These have been defined and described to
+some extent throughout the template.
+
+## iterative model development and a ‘living preregistration’
+
+One of the major challenges in designing a template for modelling is
+that the process of model development is inherently iterative.
+Typically, the process of preregistration is completely distinct from
+and precedes the implementation of the analysis plan laid out in the
+preregistration. However, translating the preregistration process to a
+modelling research context is not so clear cut because some decisions
+are inherently dependent on the outcomes and results of previous
+decisions and analyses. For example, some items at the later stages of
+modelling probably can’t be answered until the model itself is fully or
+close to fully developed, especially for more complex process models
+(e.g. specifying exactly what sensitivity analyses or uncertainty
+analyses will be conducted). Thus deciding on the inner logic of the
+template, and what is in and out of scope has been particularly
+difficult.
+
+One method around this is to accept that the current model of
+preregistration is not going to work for iterative model development.
+Again, the more complex the model, the more likely this is to be the
+case. Consequently I propose a different model of preregistration that I
+think will work for modeling research contexts. At the moment I’m
+calling it ‘living preregistration’ but please suggest another name.
+Others have termed this ‘adaptive preregistration’, and this is maybe a
+better name.
+
+In this model of preregistration, all questions that can be answered,
+should be answered before any data analysis or modelling proceeds. For
+some items, particularly during model evaluation and analysis, perhaps
+only responses of a general nature can be provided. That is OK. As the
+modelling proceeds. Further detail can be provided and the next phase of
+analysis can be preregistered. Where the results of model evaluation and
+analysis reveal that there are problems with the model, or perhaps
+assumption violations, plans can be changed, and again the next phase of
+analysis can be preregistered.
+
+A static document for this type of process doesn’t really make sense
+then. I propose leveraging the code and project management tools within
+the GitHub platform as a way of hosting a ‘living’ or ‘adaptive’
+preregistration. Because GitHub documents are ‘time-stamped’, the
+genesis of the preregistration from one version to the next can be
+traced and tagged with versions. Since the document would exist in the
+repository with the code itself, any results from analyses that cause
+the analysis plan to change can be linked and referenced in the updated
+plan.
+
+-----
 
 # 1\. Problem Formulation
 

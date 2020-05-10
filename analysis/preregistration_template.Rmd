@@ -1,10 +1,11 @@
 ---
 title: "Ecology and Conservation Modelling Preregistration Template -- DRAFT"
-author: "Elise Gould, Add your name here if you edit or make comments on this document, TBD:workshop collaborators"
+author: "Elise Gould, Add your name here if you edit or make comments on this document,TBD:workshop collaborators"
+  
 date: "`r format(Sys.time(), '%d %B, %Y')`"
-output: 
-  github_document
-bibliography: "../data/references.bib"
+output:
+  github_document: default
+bibliography: ../data/references.bib
 ---
 
 # About this template
