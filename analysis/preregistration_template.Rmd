@@ -88,15 +88,15 @@ To be honest, I don't know how I might apply this to my work or any future works
 
 *This step should list and explain the critical conceptual design decisions, including: spatial and temporal scales, selection of entities and processes, representation of stochasticity and heterogeneity, consideration of local versus global interactions, environmental drivers, etc. [@Grimm:2014es]. The influence of particular theories, concepts, or importantly, earlier models, should be explained and justified against alternative conceptual design decisions that might lead to alternative model structures [@Grimm:2014es]. Specify key assumptions and uncertainties underlying the model's design. Describe how uncertainty and variation will be represented in this model. This includes both exogenous uncertainties affecting the system, parametric uncertainty in input data and structural / conceptual nonparametric uncertainty in the model [@Moallemi2019].*
 
-## 2.3-define_conceptual_model: identify predictor response variables	
+## 2.3 Define conceptual model: identify predictor response variables	
 
 *The identification and definition of primary model input variables should be driven by scenario definitions, and by the scope of the model described in the problem formulation phase [@Mahmoud2009] -- Identify and define system variables structures:*
 
 - *What variables would support taking this action or making this decision?* 
-- *What additional variables may interact with this system (things we can't control, but can hopefully measure).* 
-- *In what ways do we expect these variables to interact (model structures).* 
-Should you include variables that haven't been measured and that might also interact with the system (not ideal, but this happens in field studies). Possibly also variables that are assumed to be a surrogate measure of variables that we can't or haven't measured. 
-
+- *What additional variables may interact with this system (things we can't control, but can hopefully measure)?*
+- *What variables have not been measured, but may interact with the system (often occurs in field or observational studies)?*
+- *What variables are indice or surrogate measures of variables that we cannot or have not measured?*
+- *In what ways do we expect these variables to interact (model structures)?* 
 
 ## 2.4 Define prior knowledge, data specification and evaluation	
 
