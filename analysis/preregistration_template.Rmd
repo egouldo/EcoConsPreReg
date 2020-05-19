@@ -108,7 +108,9 @@ To be honest, I don't know how I might apply this to my work or any future works
 
 ### 2.4.2 Data Processing and Preparation	
 
-*Describe any data preparation and processing steps, including manipulation of environmental layers, e.g. standardisation and geographic projection.* Something about always retaining the raw data in a safe place, no manipulations to the raw file.
+*Describe any data preparation and processing steps, including manipulation of environmental layers, e.g. standardisation and geographic projection.* 
+
+*Describe how you will separate and distinguish between raw data, manipulated data, and outputs from modelling or any analyses of the model.*
 
 ### 2.4.3 Describe any data exploration or preliminary data analyses.	
 
@@ -116,7 +118,11 @@ To be honest, I don't know how I might apply this to my work or any future works
 
 ### 2.4.4 Data Evaluation	
 
-*Describe how you will evaluate the quality and sources of both numerical and qualitative data that available for model parameterisation, and for determining the overall model structure [@Grimm:2014es].¬†Ideally, model input data should be internally consistent across temporal and spatial scales and resolutions, and appropriate to the problem at hand [@Mahmoud2009]. Document any issues with data reliability. This is important because data quality and ecological relevance might be constrained by measurement error, inappropriate experimental design, and heterogeneity and variability inherent in ecological systems [@Grimm:2014es].*
+*Describe how you will evaluate the quality and sources of both numerical and qualitative data that available for model parameterisation, and for determining the overall model structure [@Grimm:2014es]. Ideally, model input data should be internally consistent across temporal and spatial scales and resolutions, and appropriate to the problem at hand [@Mahmoud2009]. Document any issues with data reliability. This is important because data quality and ecological relevance might be constrained by measurement error, inappropriate experimental design, and heterogeneity and variability inherent in ecological systems [@Grimm:2014es].*
+
+*Data Exclusion: How will you determine what data, if any, will be excluded from your analyses? How will outliers be handled? Describe rules for identifying outlier data, and for excluding a site, transect, quadrat, year or season, species, trait, etc.*
+
+*Missing data: How will you identify and deal with incomplete or missing data?*
 
 ## 2.5 Conceptual model evaluation	
 
@@ -177,7 +183,13 @@ To be honest, I don't know how I might apply this to my work or any future works
 
 ## 4.1 Model calibration and validation scheme	
 
-*Describe the validation scheme you will use for model testing and evaluation.¬†¬†Please explain your reasoning for your choice of model calibration and validation scheme. The model may be tested on data independent of those used to parameterise the model (external validation), or the model may be cross-validated on random sub-samples of the data used to parameterise the model (internal cross-validation)  [@Yates2018;[@Barnard2019]. Although using independent data is the gold-standard or idealised practice for model evaluation, Typically testing on independent datasets is not possible for large and/or integrated models, especially when they are being used to generate anticipatory predictions beyond the conditions on which they were calibrated [@Jakeman:2006ii]. Describe and justify the method for your calibration and validation schema, including how many folds and what methods you will use to partition the data set into training/testing data. (What other items, esp. re. partitioning are missing?)*
+*Describe the validation scheme you will use for model testing and evaluation. Please explain your reasoning for your choice of model calibration and validation scheme. The model may be tested on data independent of those used to parameterise the model (external validation), or the model may be cross-validated on random sub-samples of the data used to parameterise the model (internal cross-validation)  [@Yates2018;[@Barnard2019]. Although using independent data is the gold-standard or idealised practice for model evaluation, Typically testing on independent datasets is not possible for large and/or integrated models, especially when they are being used to generate anticipatory predictions beyond the conditions on which they were calibrated [@Jakeman:2006ii]. Describe and justify the method for your calibration and validation schema.*
+
+## 4.1.2 Data partitioning
+
+*Describe the approach for partitioning the data in support of the calibration and validation schema described above. For example, specify the number of folds that will be created and the relative size of each.*
+
+*How will you document and/or share the partitioned data such that the data partitioning and any subsequent modelling based on this partitioning can be computationally reproduced?*
 
 ## 4.2 Implementation verification	
 
