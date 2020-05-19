@@ -1,6 +1,6 @@
 ---
 title: "Ecology and Conservation Modelling Preregistration Template -- DRAFT"
-author: "Elise Gould, Add your name here if you edit or make comments on this document, TBD:workshop collaborators"
+author: "Elise Gould, Megan Good, TBD:workshop collaborators"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: 
   github_document
@@ -21,7 +21,7 @@ One method around this is to accept that the current model of preregistration is
 
 In this model of preregistration, all questions that can be answered, should be answered before any data analysis or modelling proceeds. For some items, particularly during model evaluation and analysis, perhaps only responses of a general nature can be provided. That is OK. As the modelling proceeds. Further detail can be provided and the next phase of analysis can be preregistered. Where the results of model evaluation and analysis reveal that there are problems with the model, or perhaps assumption violations, plans can be changed, and again the next phase of analysis can be preregistered.
 
-A static document for this type of process doesn't really make sense then. I propose leveraging the code and project management tools within the GitHub platform as a way of hosting a 'living' or 'adaptive' preregistration. Because GitHub documents are 'time-stamped', the genesis of the preregistration from one version to the next can be traced and tagged with versions. Since the document would exist in the repository with the code itself, any results from analyses that cause the analysis plan to change can be linked and referenced in the updated plan.
+A static document for this type of process doesn't really make sense. I propose leveraging the code and project management tools within the GitHub platform as a way of hosting a 'living' or 'adaptive' preregistration. Because GitHub documents are 'time-stamped', the genesis of the preregistration from one version to the next can be traced and tagged with versions. Since the document would exist in the repository with the code itself, any results from analyses that cause the analysis plan to change can be linked and referenced in the updated plan.
 
 --------------------------------
 
@@ -35,7 +35,7 @@ A static document for this type of process doesn't really make sense then. I pro
 
 ### 1.1.1 Define model purpose and problem context
 
-*Provide a clear statement of the modelling objectives and problem that the model seeks to illuminate. What is the purpose of the model/s? Ensure that you specify any focal taxa and study objectives, as well as any clients for whom the model is developed for. Briefly outline the ecological problem and the decision-problem, including the decision-trigger and any regulatory frameworks relevant to the problem.*
+*Provide a clear statement of the modelling objectives and problem that the model seeks to illuminate. What is the purpose of the model/s? Ensure that you specify any focal taxa and study objectives, as well as any clients for whom the model is developed. Briefly outline the ecological problem and the decision-problem, including the decision-trigger and any regulatory frameworks relevant to the problem.*
 
 ## 1.2 Specify modelling context	
 
@@ -47,7 +47,8 @@ A static document for this type of process doesn't really make sense then. I pro
 
 ### 1.2.2 Model Scope and Scale
 
-*Determine the temporal and spatial scope of the model. Where is the boundary of the modelled system? Everything beyond the boundary and not crossing it is to be ignored within the domain of the model, and everything crossing the boundary is to be treated as external forcing (known/unknown), or else as model outputs (observed, or not, Jakeman et al. 2006).The choice of a model's boundaries is closely linked to the choice of how finely to aggregate the behaviour within the model (Jakeman et al., 2006) - what is the intended scale and resolution of the model (temporal, spatial or otherwise)?Explain how any key concepts or terms within problem or decision-making contexts, such as regulatory terms, will be operationalised and defined in a biologically meaningful way to answer the research question appropriately? (Should this last step go here or within define conceptual framework?).What is the intended domain of applicability of the model, what is the extent of acceptable extrapolations (Grimm)? This is relevant to model transferability... (similar to a COG statement..)*
+*Determine the temporal and spatial scope of the model. Where is the boundary of the modelled system? Everything beyond the boundary and not crossing it is to be ignored within the domain of the model, and everything crossing the boundary is to be treated as external forcing (known/unknown), or else as model outputs (observed, or not, Jakeman et al. 2006).The choice of a model's boundaries is closely linked to the choice of how finely to aggregate the behaviour within the model (Jakeman et al., 2006) - what is the intended scale and resolution of the model (temporal, spatial or otherwise)? Explain how any key concepts or terms within problem or decision-making contexts, such as regulatory terms, will be operationalised and defined in a biologically meaningful way to answer the research question appropriately? (Should this last step go here or within define conceptual framework?). What is the intended domain of applicability of the model, what is the extent of acceptable extrapolations (Grimm)? This is relevant to model transferability... (similar to a COG statement..)* 
+A comment:This section feels a bit too big and confusing from my perspective and I do think you might need to move some of it to a different section to reduce the risk of misinterpretation. I'm just thinking about how I might fill this out for an imagined study. The literal boundaries of the study are usually straightforward, but the theoretic boundaries are a different and also big thing to try to conceptualise in one section. You could have a section for the spatial/temporal boundaries of the study, and another section on how far the results can be extrapolated based on the study design. This makes sense to me in how I design experiments, if I have too many confounding variables and not enough spatial and environmental replication then I'm less likely to make any broad claims. However, if I have controlled or experimentally manipulated factors then I feel safer making bigger generalisations about results.
 
 
 ### 1.2.3 Logistical Constraints	
@@ -65,6 +66,7 @@ A static document for this type of process doesn't really make sense then. I pro
 ### 1.3.2 - Identify outcomes to evaluate decisions under scenarios
 
 *The outcomes should speak directly to the analytical objectives identified in 1.3.1. Outcomes could be qualitative or quantitative, and include descriptive statistic measures, satisficing measures or regret measures (Moallemi et al. 2019). For example, a model outcome in the top 10th percentile of worst conditions, or some minimum performance threshold for meeting a performance objective, or choosing a decision with the minimum regret or least amount of uncertainty.*
+To be honest, I don't know how I might apply this to my work or any future works. Maybe I do not have enough knowledge of this type of research to apply it to my basic ecology research. But this isn't to say it's not important, I just wonder if there's a way to make this accessible to non-desicion or modelling peeps. Like, how would I apply it to the woodland condition analysis? 
 
 ## 1.4 Define candidate actions decisions	
 
@@ -86,14 +88,14 @@ A static document for this type of process doesn't really make sense then. I pro
 
 *This step should list and explain the critical conceptual design decisions, including: spatial and temporal scales, selection of entities and processes, representation of stochasticity and heterogeneity, consideration of local versus global interactions, environmental drivers, etc. [@Grimm:2014es]. The influence of particular theories, concepts, or importantly, earlier models, should be explained and justified against alternative conceptual design decisions that might lead to alternative model structures [@Grimm:2014es]. Specify key assumptions and uncertainties underlying the model's design. Describe how uncertainty and variation will be represented in this model. This includes both exogenous uncertainties affecting the system, parametric uncertainty in input data and structural / conceptual nonparametric uncertainty in the model [@Moallemi2019].*
 
-##2.3-define_conceptual_model: identify predictor response variables	
+## 2.3-define_conceptual_model: identify predictor response variables	
 
 *The identification and definition of primary model input variables should be driven by scenario definitions, and by the scope of the model described in the problem formulation phase [@Mahmoud2009] -- Identify and define system variables structures:*
 
-- *What variables will support this decision or action (things we can control).* 
+- *What variables would support taking this action or making this decision?* 
 - *What additional variables may interact with this system (things we can't control, but can hopefully measure).* 
 - *In what ways do we expect these variables to interact (model structures).* 
-
+Should you include variables that haven't been measured and that might also interact with the system (not ideal, but this happens in field studies). Possibly also variables that are assumed to be a surrogate measure of variables that we can't or haven't measured. 
 
 
 ## 2.4 Define prior knowledge, data specification and evaluation	
@@ -106,7 +108,7 @@ A static document for this type of process doesn't really make sense then. I pro
 
 ### 2.4.2 Data Processing and Preparation	
 
-*Describe any data preparation and processing steps, including manipulation of environmental layers, e.g. standardisatino and geographic projection.*
+*Describe any data preparation and processing steps, including manipulation of environmental layers, e.g. standardisation and geographic projection.* Something about always retaining the raw data in a safe place, no manipulations to the raw file.
 
 ### 2.4.3 Describe any data exploration or preliminary data analyses.	
 
@@ -131,7 +133,7 @@ A static document for this type of process doesn't really make sense then. I pro
 
 ##  3.2 Choose model features and family
 
-*All modelling approaches require the selection of model features, which conform with the conceptual model and data specified in previous steps (Jakeman 2006). The choice of model are determined in conjunction with features are selected.Usually difficult to change fundamental features of a model beyond an early stage of model development, so careful thought and planning here is useful to the modeller (Jakeman, 2006). However, if changes to these fundamental aspects of the model do need to change, please document how and why these choices were made.*
+*All modelling approaches require the selection of model features, which conform with the conceptual model and data specified in previous steps (Jakeman 2006). The choice of model are determined in conjunction with features are selected. Usually difficult to change fundamental features of a model beyond an early stage of model development, so careful thought and planning here is useful to the modeller (Jakeman, 2006). However, if changes to these fundamental aspects of the model do need to change, please document how and why these choices were made.*
 
 ### 3.2.1 Explain how you will operationalise response variable(s)	
 
@@ -195,7 +197,7 @@ A static document for this type of process doesn't really make sense then. I pro
 
 # 5.0 Model Validation and Evaluation	
 
-*Model Validation & Evaluation - This phase consists of a suite of analyses that collectively inform the decision and whether and when a model is suitable to meet its intended purpose (Augusiak, Van den Brink and Grimm 2014). Errors in design and implementation of the model and their implication on the model output are assessed. Ideally independent data is used against the model outputs to assess whether the model output behaviour exhibits the required accuracy for the model's intended purpose. The outcomes of these analyses build confidence in the model applications and increase understandingof model strengths and limitations.Model evaluation including model analysis and other testing should complement model checking. It should evaluate model checking, and consider over-fitting and extrapolation. ‚ÄúThe higher the proportion of calibrated, or uncertain parameters, the greater the risk that the model seems to work correctly [‚Ä¶] but for the wrong reasons" Evaluation thus complements model checking because we can rule out the chance that the model fits the calibration data well, but has not captured the relevant ecological mecahnisms of the system (Grimm).Evaluation of model outputs against external data in conjunction with the results from model checking provide information about the structural realism and therefore credibility of the model (Grimm et al. 2014).*
+*Model Validation & Evaluation - This phase consists of a suite of analyses that collectively inform the decision and whether and when a model is suitable to meet its intended purpose (Augusiak, Van den Brink and Grimm 2014). Errors in design and implementation of the model and their implication on the model output are assessed. Ideally independent data is used against the model outputs to assess whether the model output behaviour exhibits the required accuracy for the model's intended purpose. The outcomes of these analyses build confidence in the model applications and increase understandingof model strengths and limitations. Model evaluation including model analysis and other testing should complement model checking. It should evaluate model checking, and consider over-fitting and extrapolation. The higher the proportion of calibrated, or uncertain parameters, the greater the risk that the model seems to work correctly [‚Ä¶] but for the wrong reasons" Evaluation thus complements model checking because we can rule out the chance that the model fits the calibration data well, but has not captured the relevant ecological mecahnisms of the system (Grimm). Evaluation of model outputs against external data in conjunction with the results from model checking provide information about the structural realism and therefore credibility of the model (Grimm et al. 2014).*
 
 ## 5.1 Model output corroboration	
 
