@@ -108,7 +108,7 @@ Should you include variables that haven't been measured and that might also inte
 
 ### 2.4.2 Data Processing and Preparation	
 
-*Describe any data preparation and processing steps, including manipulation of environmental layers, e.g. standardisatino and geographic projection.* Something about always retaining the raw data in a safe place, no manipulations to the raw file.
+*Describe any data preparation and processing steps, including manipulation of environmental layers, e.g. standardisation and geographic projection.* Something about always retaining the raw data in a safe place, no manipulations to the raw file.
 
 ### 2.4.3 Describe any data exploration or preliminary data analyses.	
 
