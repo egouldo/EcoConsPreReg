@@ -104,7 +104,25 @@ To be honest, I don't know how I might apply this to my work or any future works
 
 ### 2.4.1 Collate available data sources that could be used to parameterise or structure the model	
 
-*Document the identity, quantity and provenance of any data used to develop, identify and test the model. Describe how the data is arranged, in terms of replication and covariates. Explain how you will summarise what data and knowledge will be used to designa and parameterise the model, including references, data sources, and information about whom, when and where those data were collected [@Grimm:2014es].*
+*Document the identity, quantity and provenance of any data used to develop, identify and test the model. Describe how the data is arranged, in terms of replication and covariates.Explain how you will summarise what data and knowledge will be used to design and parameterise the model, including references, data sources, and information about whom, when and where those data were collected [@Grimm:2014es].*
+
+**For pre-existing data: -- as appropriate.**
+
+- *For each dataset, is the data open or publically available? (Y/N)*
+- *How can the data be accessed? Provide a link or contact as appropriate, indicating any restrctions on the use of data.*
+- *Date of download, access, or future access:*
+- *Describe the source of the data - what entity originally collected this data? (National Data Set, Private Organisational Data, Own Lab Collection, Other Lab Collection, External Contractor, Meta-Analysis, Expert Elicitation, Other).*
+- *Codebook. If a Codebook is available, please link to it here and / or upload the document.*
+- *Prior work based on this dataset - Have you published / presented any previous work based on this dataset? Include any publications, conference presentations (papers, posters), or working papers (in-prep, unpublished, preprints) based ont his dataset you have worked on.*
+- *Prior Research Activity - Have you worked with these data before? Describe any prior but unpublished research activity using these data. Be specific and transparent.*
+- *Prior knowledge of the current dataset - Describe any prior knowledge of the dataset. Be specific.*
+
+**Sampling Plan (For data you will collect) -- delete as appropriate.**
+
+- Data collection procedures - Please describe your data collection process, including how sites and transects or any other physical unit were selected. Describe any inclusion or exclusion rules, and the study timeline. 
+- Sample Size - Describe the sample size of your study.
+- Sample Size Rationale - Describe how you determined the appropriate sample size for your study. It could include feasibility constraints, such as time, money or personnel. 
+- If sample size cannot be specified, specify a stopping rule - i.e. how will you decide when to terminate your data collection?
 
 ### 2.4.2 Data Processing and Preparation	
 
