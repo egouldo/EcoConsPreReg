@@ -1,7 +1,6 @@
 Ecology and Conservation Modelling Preregistration Template – DRAFT
 ================
-Elise Gould, Add your name here if you edit or make comments on this
-document,TBD:workshop collaborators
+Elise Gould, Megan Good, TBD:workshop collaborators
 19 May, 2020
 
 # About this template
@@ -58,9 +57,9 @@ analysis reveal that there are problems with the model, or perhaps
 assumption violations, plans can be changed, and again the next phase of
 analysis can be preregistered.
 
-A static document for this type of process doesn’t really make sense
-then. I propose leveraging the code and project management tools within
-the GitHub platform as a way of hosting a ‘living’ or ‘adaptive’
+A static document for this type of process doesn’t really make sense. I
+propose leveraging the code and project management tools within the
+GitHub platform as a way of hosting a ‘living’ or ‘adaptive’
 preregistration. Because GitHub documents are ‘time-stamped’, the
 genesis of the preregistration from one version to the next can be
 traced and tagged with versions. Since the document would exist in the
@@ -94,7 +93,7 @@ distinct from the analytical objectives of the model.*
 *Provide a clear statement of the modelling objectives and problem that
 the model seeks to illuminate. What is the purpose of the model/s?
 Ensure that you specify any focal taxa and study objectives, as well as
-any clients for whom the model is developed for. Briefly outline the
+any clients for whom the model is developed. Briefly outline the
 ecological problem and the decision-problem, including the
 decision-trigger and any regulatory frameworks relevant to the problem.*
 
@@ -123,14 +122,27 @@ everything crossing the boundary is to be treated as external forcing
 al. 2006).The choice of a model’s boundaries is closely linked to the
 choice of how finely to aggregate the behaviour within the model
 (Jakeman et al., 2006) - what is the intended scale and resolution of
-the model (temporal, spatial or otherwise)?Explain how any key concepts
+the model (temporal, spatial or otherwise)? Explain how any key concepts
 or terms within problem or decision-making contexts, such as regulatory
 terms, will be operationalised and defined in a biologically meaningful
 way to answer the research question appropriately? (Should this last
-step go here or within define conceptual framework?).What is the
+step go here or within define conceptual framework?). What is the
 intended domain of applicability of the model, what is the extent of
 acceptable extrapolations (Grimm)? This is relevant to model
-transferability… (similar to a COG statement..)*
+transferability… (similar to a COG statement..)* A comment:This section
+feels a bit too big and confusing from my perspective and I do think you
+might need to move some of it to a different section to reduce the risk
+of misinterpretation. I’m just thinking about how I might fill this out
+for an imagined study. The literal boundaries of the study are usually
+straightforward, but the theoretic boundaries are a different and also
+big thing to try to conceptualise in one section. You could have a
+section for the spatial/temporal boundaries of the study, and another
+section on how far the results can be extrapolated based on the study
+design. This makes sense to me in how I design experiments, if I have
+too many confounding variables and not enough spatial and environmental
+replication then I’m less likely to make any broad claims. However, if I
+have controlled or experimentally manipulated factors then I feel safer
+making bigger generalisations about results.
 
 ### 1.2.3 Logistical Constraints
 
@@ -163,7 +175,13 @@ include descriptive statistic measures, satisficing measures or regret
 measures (Moallemi et al. 2019). For example, a model outcome in the top
 10th percentile of worst conditions, or some minimum performance
 threshold for meeting a performance objective, or choosing a decision
-with the minimum regret or least amount of uncertainty.*
+with the minimum regret or least amount of uncertainty.* To be honest, I
+don’t know how I might apply this to my work or any future works. Maybe
+I do not have enough knowledge of this type of research to apply it to
+my basic ecology research. But this isn’t to say it’s not important, I
+just wonder if there’s a way to make this accessible to non-desicion or
+modelling peeps. Like, how would I apply it to the woodland condition
+analysis?
 
 ## 1.4 Define candidate actions decisions
 
@@ -222,19 +240,23 @@ includes both exogenous uncertainties affecting the system, parametric
 uncertainty in input data and structural / conceptual nonparametric
 uncertainty in the model (Moallemi, Elsawah, and Ryan 2019).*
 
-\#\#2.3-define\_conceptual\_model: identify predictor response variables
+## 2.3 Define conceptual model: identify predictor response variables
 
 *The identification and definition of primary model input variables
 should be driven by scenario definitions, and by the scope of the model
 described in the problem formulation phase (Mahmoud et al. 2009) –
 Identify and define system variables structures:*
 
-  - *What variables will support this decision or action (things we can
-    control).*
+  - *What variables would support taking this action or making this
+    decision?*
   - *What additional variables may interact with this system (things we
-    can’t control, but can hopefully measure).*
+    can’t control, but can hopefully measure)?*
+  - *What variables have not been measured, but may interact with the
+    system (often occurs in field or observational studies)?*
+  - *What variables are indice or surrogate measures of variables that
+    we cannot or have not measured?*
   - *In what ways do we expect these variables to interact (model
-    structures).*
+    structures)?*
 
 ## 2.4 Define prior knowledge, data specification and evaluation
 
@@ -246,16 +268,56 @@ analysis.*
 
 *Document the identity, quantity and provenance of any data used to
 develop, identify and test the model. Describe how the data is arranged,
-in terms of replication and covariates. Explain how you will summarise
-what data and knowledge will be used to designa and parameterise the
+in terms of replication and covariates.Explain how you will summarise
+what data and knowledge will be used to design and parameterise the
 model, including references, data sources, and information about whom,
 when and where those data were collected (Grimm et al. 2014).*
+
+**For pre-existing data: – as appropriate.**
+
+  - *For each dataset, is the data open or publically available? (Y/N)*
+  - *How can the data be accessed? Provide a link or contact as
+    appropriate, indicating any restrctions on the use of data.*
+  - *Date of download, access, or future access:*
+  - *Describe the source of the data - what entity originally collected
+    this data? (National Data Set, Private Organisational Data, Own Lab
+    Collection, Other Lab Collection, External Contractor,
+    Meta-Analysis, Expert Elicitation, Other).*
+  - *Codebook. If a Codebook is available, please link to it here and /
+    or upload the document.*
+  - *Prior work based on this dataset - Have you published / presented
+    any previous work based on this dataset? Include any publications,
+    conference presentations (papers, posters), or working papers
+    (in-prep, unpublished, preprints) based ont his dataset you have
+    worked on.*
+  - *Prior Research Activity - Have you worked with these data before?
+    Describe any prior but unpublished research activity using these
+    data. Be specific and transparent.*
+  - *Prior knowledge of the current dataset - Describe any prior
+    knowledge of the dataset. Be specific.*
+
+**Sampling Plan (For data you will collect) – delete as appropriate.**
+
+  - Data collection procedures - Please describe your data collection
+    process, including how sites and transects or any other physical
+    unit were selected. Describe any inclusion or exclusion rules, and
+    the study timeline.
+  - Sample Size - Describe the sample size of your study.
+  - Sample Size Rationale - Describe how you determined the appropriate
+    sample size for your study. It could include feasibility
+    constraints, such as time, money or personnel.
+  - If sample size cannot be specified, specify a stopping rule -
+    i.e. how will you decide when to terminate your data collection?
 
 ### 2.4.2 Data Processing and Preparation
 
 *Describe any data preparation and processing steps, including
-manipulation of environmental layers, e.g. standardisatino and
+manipulation of environmental layers, e.g. standardisation and
 geographic projection.*
+
+*Describe how you will separate and distinguish between raw data,
+manipulated data, and outputs from modelling or any analyses of the
+model.*
 
 ### 2.4.3 Describe any data exploration or preliminary data analyses.
 
@@ -274,13 +336,21 @@ tabular or otherwise) to represent your data and any analyses.*
 *Describe how you will evaluate the quality and sources of both
 numerical and qualitative data that available for model
 parameterisation, and for determining the overall model structure (Grimm
-et al. 2014).¬†Ideally, model input data should be internally consistent
+et al. 2014). Ideally, model input data should be internally consistent
 across temporal and spatial scales and resolutions, and appropriate to
 the problem at hand (Mahmoud et al. 2009). Document any issues with data
 reliability. This is important because data quality and ecological
 relevance might be constrained by measurement error, inappropriate
 experimental design, and heterogeneity and variability inherent in
 ecological systems (Grimm et al. 2014).*
+
+*Data Exclusion: How will you determine what data, if any, will be
+excluded from your analyses? How will outliers be handled? Describe
+rules for identifying outlier data, and for excluding a site, transect,
+quadrat, year or season, species, trait, etc.*
+
+*Missing data: How will you identify and deal with incomplete or missing
+data?*
 
 ## 2.5 Conceptual model evaluation
 
@@ -317,7 +387,7 @@ system that are expected to give rise to the data (White and Marshall
 *All modelling approaches require the selection of model features, which
 conform with the conceptual model and data specified in previous steps
 (Jakeman 2006). The choice of model are determined in conjunction with
-features are selected.Usually difficult to change fundamental features
+features are selected. Usually difficult to change fundamental features
 of a model beyond an early stage of model development, so careful
 thought and planning here is useful to the modeller (Jakeman, 2006).
 However, if changes to these fundamental aspects of the model do need to
@@ -450,7 +520,7 @@ could we change the wording to make this optional if not relevant?)*
 ## 4.1 Model calibration and validation scheme
 
 *Describe the validation scheme you will use for model testing and
-evaluation.¬†¬†Please explain your reasoning for your choice of model
+evaluation. Please explain your reasoning for your choice of model
 calibration and validation scheme. The model may be tested on data
 independent of those used to parameterise the model (external
 validation), or the model may be cross-validated on random sub-samples
@@ -461,10 +531,17 @@ Typically testing on independent datasets is not possible for large
 and/or integrated models, especially when they are being used to
 generate anticipatory predictions beyond the conditions on which they
 were calibrated (Jakeman, Letcher, and Norton 2006). Describe and
-justify the method for your calibration and validation schema, including
-how many folds and what methods you will use to partition the data set
-into training/testing data. (What other items, esp. re. partitioning are
-missing?)*
+justify the method for your calibration and validation schema.*
+
+## 4.1.2 Data partitioning
+
+*Describe the approach for partitioning the data in support of the
+calibration and validation schema described above. For example, specify
+the number of folds that will be created and the relative size of each.*
+
+*How will you document and/or share the partitioned data such that the
+data partitioning and any subsequent modelling based on this
+partitioning can be computationally reproduced?*
 
 ## 4.2 Implementation verification
 
@@ -531,17 +608,17 @@ data is used against the model outputs to assess whether the model
 output behaviour exhibits the required accuracy for the model’s intended
 purpose. The outcomes of these analyses build confidence in the model
 applications and increase understandingof model strengths and
-limitations.Model evaluation including model analysis and other testing
+limitations. Model evaluation including model analysis and other testing
 should complement model checking. It should evaluate model checking, and
-consider over-fitting and extrapolation. ‚ÄúThe higher the proportion of
+consider over-fitting and extrapolation. The higher the proportion of
 calibrated, or uncertain parameters, the greater the risk that the model
 seems to work correctly \[‚Ä¶\] but for the wrong reasons" Evaluation
 thus complements model checking because we can rule out the chance that
 the model fits the calibration data well, but has not captured the
-relevant ecological mecahnisms of the system (Grimm).Evaluation of model
-outputs against external data in conjunction with the results from model
-checking provide information about the structural realism and therefore
-credibility of the model (Grimm et al. 2014).*
+relevant ecological mecahnisms of the system (Grimm). Evaluation of
+model outputs against external data in conjunction with the results from
+model checking provide information about the structural realism and
+therefore credibility of the model (Grimm et al. 2014).*
 
 ## 5.1 Model output corroboration
 
