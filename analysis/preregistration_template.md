@@ -71,11 +71,7 @@ plan.
 
 # 1\. Problem Formulation
 
-*Specifies the decision-making context in which the model will be used,
-the clients driving model development or stakeholders addressed by the
-model. It also includes specification of model outputs, statements of
-the domain of applicability of the model, as well as the extent by which
-model outputs may be acceptably extrapolated (Grimm et al. 2014).*
+*Specifies the decision-making context in which the model will be used. Important components include the decision maker and stakeholders (including experts) and their view on: i) the nature of the problem or decision addressed and how the scope of the modelling tool fits within the (broader) context (i.e. model purpose; ii) the relevant spatial and temporal scales relevant to the decision context; iii) specified desired outputs; iv) role and inclusion in model development and testing; v) whether they forsee unnacceptable outcomes that need to be represented in the model (i.e. as constraints), and; vi) what future scenarios does the model need to account for (noting this may be revised later).  It should also provide a summary of the domain of applicability of the model, and reasonable extrapolation limits (Grimm et al. 2014).*
 
 ## 1.1 Model Purpose
 
@@ -156,7 +152,7 @@ and operating the model?*
 need to be quickly reconfigured to explore new scenarios or problems
 proposed by clients / managers / model-users?*
 
-## 1.3.1 Explain analytical objectives
+## 1.3.1 Explain analytical objectives (MAKE THIS A SEPARATE SECTION WHICH INCLUDES PERF MEASURES)
 
 *How will the model be analysed, what analytical questions will the
 model be used to answer? Examples from ecological decision-making
