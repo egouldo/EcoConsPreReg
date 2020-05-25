@@ -10,6 +10,23 @@ output:
   distill::distill_article:
     self_contained: false
 ---
+The Abstract must not exceed 350 words and should list the main results and conclusions, using simple, factual, numbered statements:
+
+Point 1: set the context for and purpose of the work;
+
+Point 2: indicate the approach and methods;
+
+Point 3: outline the main results;
+
+Point 4: identify the conclusions and the wider implications.
+
+
+
+**Keywords:**
+
+
+----
+
 
 ## Introduction ##
 
@@ -54,7 +71,7 @@ Objectives of the Template itself & internal model of preregistration (this will
 
 
 
-   
+\*\*About the Approach\*\* 
 
 As Pu et al. (2019) identify, a designer's intention for preregistration and users' purposes for preregistration may be in conflict and undermine the overarching goal of preregistration --- to improve the reliability of scientific findings. In order to bridge this mismatch, we have taken a user-centred design approach to the problem of preregistration. We do this in two ways, by first using a series of structured and collaborative activities in a workshop setting to reflect on our own research experiences in order to capture scientific workflows as they are done in practice. And secondly to, use a real-world research problem as a case-study to test and evaluate the templates for utility and feasibility in practice.
 
@@ -72,14 +89,10 @@ c) Use this knowledge to inform the design of the templates so they meet their i
 
    
 
-**Case Study: Environmental Flows Management**
-
-   
-
-\<TEXT HERE DESCRIBING THE ENVIRONMENTAL FLOWS MANAGEMENT PROBLEM + RESEARCH PROBLEM\>
+\*\*
 
 
-### Designing Preregistration Templates Workshop ###
+### Identifying Ecological Modelling Workflows in Practice ###
 
 
 
@@ -111,7 +124,7 @@ This second activity aimed to identify critical challenges and roadblocks to the
 Questions included: should we and how can we change the medium of the template and/or archiving platform to accomodate any roadblocks? How could we change the medium of both the template and the archiving platform to accommodate these issues? What procedural and or technical solutions could we implement to address these roadblocks to preregistration? What decision-tools could be used to aid in completing a preregistration? What sort of parsimony should we aim for in terms of the resolution of the templates and therefore their applicability across different methodologies?
 
 
-### Workshop Data Collation and Analysis - Identifying Scientific Workflows and Decision Steps ###
+### Turning the Workflows into Preregistration Templates ###
 
 
 
@@ -134,11 +147,7 @@ At the end of this exercise we expect to:
 
 Have a complete draft workflow for both fieldwork and modelling and data-analysis that will form the basis of the final preregistration templates.
 
-
-### Turning the Workflows into Preregistration Templates ###
-
-
-
+   
 
 Part I: Identify Scientific Workflows for ecological modelling, both real/in-practice and idealised.
 
@@ -175,7 +184,7 @@ We translated the workflows into the preregistration template by using the follo
 3\. Choices ---\> each 'choice' corresponds to a uniquely numbered item on the PRT requiring a response from user. The style should be in the form of a directive or a question. E.g. "explain how you will do xyzzy". Or "What performance measure will you use for assessing 'goodness of fit'?" In addition, we turned to existing preregistration templates to guide the wording  of some items.
 
 
-### In-situ Evaluation and Testing of Templates ###
+### 'In-situ' Evaluation and Testing of Templates ###
 
 
 
@@ -198,109 +207,11 @@ Instruction to
 
 The reason why tried to capture this as we went, is because "the process of creating preregistration  is difficult to reconstruct with interview questions alone" p16.
 
-
-### Pu et al. ###
-
-
-
-
-What is the purpose of preregistration? Specifically in modelling.
+**Case Study: Environmental Flows Management**
 
    
 
-The original purpose of preregistration is "the action of confirming an unalterable version of one's research plan prior to collecting data", such that the act distinguishes preregistered, confirmatory findings from exploratory findings (Nosek et al. 2018 + Kidwell et al. 2016) by way of constraining 'researcher degrees of freedom' or flexibility in both experimental design and data analysis, which has been posited as one of the key reasons contributing to the replication crisis (Ioannidis, 2005, Wagenmakers, 2012).
-
-   
-
-Pu et al. treat preregistration as a user-centred design problem to ask whether it achieves its proposed goals *in practice*, and how the process might be improved. They ask whether the current implementation of preregistration in practice, in terms of its design of the form, and how the process integrates into research practice and the peer review practice, effectively supports its intended goals. By interviewing academic psychologists, they attempt to characterise current understanding of practice, and both the norms and purposes for preregistration that actual users have. The keybindings are:
-
-\- Norms around how people use preregistration are uncertain, and vary among users
-
-\- different users have "different purposes for adopting preregistration, and these differ from the original purpose of distinguishing exploratory and confirmatory findings"
-
-\- Depending on what role you assume, there are different 'use-cases' for authors, reviewers/editors. BUT, these different use cases are not explicitly designed for.
-
-\- There are "conceptual barriers to adopting preregistration, including users from different disciplines feeling that preregistration is not for them"
-
-   
-
-Pu et al found that because different users ascribed different purposes to preregistration, it resulted in conflicting designs of preregistration formats, which they argue may ultimately undermine the overarching goal of preregistration: "improving the reliability of scientific findings"
-
-   
-
-   
-
-What do we define as the *purposes* of preregistration, specifically within ecological modelling contexts?
-
-   
-
-\- P**rimary purpose:** "Delimiting flexibility" Following from Pu et al. we define the primary purpose of preregistration for modelling exercises so as to 
-
-   
-
-We take emphasis *off* of the dichotomy of exploratory vs. confirmatory research, because I think these categories are confused and confusing in modelling, and actually unhelpful. Instead I want to focus on delimiting researcher degrees of freedom, so as to reduce the potential for cognitive biases, such as confirmation bias, and the potential for resultant QRPs, such as, cherry-picking, HARKing, etc. etc. Link to my other manuscript.
-
-   
-
-   
-
-\- **Secondary purpose: increasing transparency** \<insert refs to modelling reporting literature - it's dire, can't properly be evaluated by a reviewer, moreover can't be reproduced\> Thus, want to improve the transparency of decision-making and methodology. What is "research transparency" 'Lupia and Elman define *research transparency* to be production transparency (open access data or data collection procedures) and analytic transparency ("a full account of how they draw their analytic conclusions from the data")' --- Lupia and Elman 2014. Pu et al. page 13.
-
-\- **Possibly:** As a way of providing better decision-making to authors. By shifting decision-making to the front. Front-heavy research process. Delays the start of analysis, but results in better decision-making, because the decision-making is more carefully reasoned. But not sure want to set this out as a 'purpose' of the template, or just have this as a section in the reflection towards the end of the manuscript (will depend on how I set up the angle, and the structure of the paper). At the moment, this is my hypothesis, is that it can improve the process, but we'd need to reflect on this. And I think we could do that at the end of the manuscript.
-
-This relates to what Pu et al. found where participants 'felt their research workflow improved by having preregistration as a "forcing function" \[...\] For example, writing down study plans ahead of time might prompt them to think more thoroughly and to anticipate flexibilities / researchers' degree of freedmen advance.' (Page 13). For reviewers 'participant reports that pregistration makes the review process "easier".'
-
-   
-
-   
-
-So what are *our* use-cases?
-
-The shiny-app, allows us to tailor the form firstly to authors and analysts. With help-text, and descriptions of the modelling phase, and step under consideration, as well as definitions and references to supporting resources ---  such as decision-tools for choosing and justifying methodological choices. 
-
-By being able to 'generate a report' - we aim to target reviewers/editors, to allow for a condensed version of the template to be exported. Importantly, Pu et al show that "not all preregistered studies confirm to their preregistrations, or are inconsistent in reporting deviations", thus by making the preregistration available to reviewers, and by providing a platform and method for linking the actual analysis under-taken, we can allow reviewers to properly evaluate the preregistration against the final paper. (AND, must talk back to original aim of bad reporting practices in modelling). Moreover, if you combine formatting changes with our proposed method with GitHub, we hope to tailor the presentation of the completed preregistration + analysis, such that actual analyses and decisions can be linked directly to both files and outcomes.
-
-   
-
-Preregistration *Norms*: 
-
-   
-
-Pu et al.'s working definition of *norms* is 'as a set of ideal behaviours'. A key finding was that norms around both creating and using a preregistration are uncertain. *How will my work address this confusion among researchers about what the norms are, how will it address uncertain norms?*
-
-   
-
-Creating: 
-
-   
-
-\- E.g. what sorts of decisions should be preregistered? Conflicting ideas about whether a power analysis, should for example be included in a preregistration.
-
-   
-
-Using:
-
-\- How to mark the preregistered from the non-preregistered parts of the paper?
-
-\- how to evaluate studies that have used preregistrations and when they should be compared against their preregistration\> This process of "checking" a preregistered study is provisionally defined by Pu et al. as "comparing a manuscript to its preregistration and verifying that the study and the analyses are conducted as the preregistration has specified." Who engages in 'checking' a preregistration? "Authors, reviewers and editors may all engage in checking." *How do we  facilitate checking? And the "checking problem"* "to what detail should or does an author or reviewer / editor check? Pu et al found that the authors engaged in a linear and thorough checking process, but reviewers on editors were not nearly "as exhaustive with checking". How can we facilitate the process? They found that if the "paper is very specific to referring to parts of the preregistration" then this made it easier for reviewers and editors to check. Maybe we could do something else, rather than get the paper to refer to the parts of the preregistration (but I think we should do this with Chris anyway). If we propose the norm of using GitHub to create and check the preregistration., I think this could be a good way of getting around this checking problem. At the very end we have a 'how to box' targeted at authors. And then maybe we have a box targeted at reviewers? Not sure, maybe just focus this paper on authors and the process of creating and using a preregistration.
-
-   
-
-In order to address tis confusion among norms, I state the expected norms that the template has been designed around here. However, I don't expect users to agree on this process. Because we have kept the template in a GitHub repository that can be *forked*, people are free to adapt the template (the items themselves) to suit whatever norm they see fit about how preregistrations should be created and used.
-
-   
-
-*Problems and Challenges in designing preregistration templates*
-
-***TIME***
-
-\- "A natural consequence of increased transparency, is that preregistrations become longer as more possible decisions are made transparent: *increased transparency* implies *increased length*. This trade-off was something we considered important during the design phase, and deciding what was in and out of scope for the preregistration was particularly challenging. Some authors agreed that it did add extra time, but that it was worth it.
-
-\- However, as Pu et al. note, some participants who were both authors and reviewers didn't think that the time-costs of preregistration in research were significantly greater than not preregistering research. Instead they thought of the preregistration process invoking a 'time shift', that brought 'decision points' before data collection instead of during analysis." P.19. In addition, "some reviewers thought that preregistration saves them the time they might have spent wondering about undisclosed flexibilities when working on an un-preregistered paper."
-
-**PURPOSE AND DESIGN IMPLEMENTATION**
-
-\- Competing objectives? Although the purposes of preregistration are not mutually exclusive - as we have decided the purpose of preregistration we have defined here is to both delimit/state flexibility, *and* be flexible. However, "the preference of one purpose over another can have tangible effects on the design of preregistration" p15.
+\<TEXT HERE DESCRIBING THE ENVIRONMENTAL FLOWS MANAGEMENT PROBLEM + RESEARCH PROBLEM\>
 
 ----
 
@@ -381,5 +292,127 @@ This obviously breaks with the convention of preregistrations as 'static' one-of
 Pu et al: tendency for preregistrations to go from vague / general to specific over time.
 
 *\<div style="width: 960px; height: 720px; margin: 10px; position: relative;"\>\<iframe allowfullscreen frameborder="0" style="width:960px; height:720px" src="https://app.lucidchart.com/documents/embeddedchart/9c4480bc-8465-4731-83e6-d24d7d2b7818" id="K4J1KZqFLi3u"\>\</iframe\>\</div\>*
+
+
+### Pu et al. ###
+
+
+
+
+What is the purpose of preregistration? Specifically in modelling.
+
+   
+
+The original purpose of preregistration is "the action of confirming an unalterable version of one's research plan prior to collecting data", such that the act distinguishes preregistered, confirmatory findings from exploratory findings (Nosek et al. 2018 + Kidwell et al. 2016) by way of constraining 'researcher degrees of freedom' or flexibility in both experimental design and data analysis, which has been posited as one of the key reasons contributing to the replication crisis (Ioannidis, 2005, Wagenmakers, 2012).
+
+   
+
+Pu et al. treat preregistration as a user-centred design problem to ask whether it achieves its proposed goals *in practice*, and how the process might be improved. They ask whether the current implementation of preregistration in practice, in terms of its design of the form, and how the process integrates into research practice and the peer review practice, effectively supports its intended goals. By interviewing academic psychologists, they attempt to characterise current understanding of practice, and both the norms and purposes for preregistration that actual users have. The key findings are:
+
+\- Norms around how people use preregistration are uncertain, and vary among users
+
+\- different users have "different purposes for adopting preregistration, and these differ from the original purpose of distinguishing exploratory and confirmatory findings"
+
+\- Depending on what role you assume, there are different 'use-cases' for authors, reviewers/editors. BUT, these different use cases are not explicitly designed for.
+
+\- There are "conceptual barriers to adopting preregistration, including users from different disciplines feeling that preregistration is not for them"
+
+   
+
+Pu et al found that because different users ascribed different purposes to preregistration, it resulted in conflicting designs of preregistration formats, which they argue may ultimately undermine the overarching goal of preregistration: "improving the reliability of scientific findings"
+
+   
+
+   
+
+What do we define as the *purposes* of preregistration, specifically within ecological modelling contexts?
+
+   
+
+\- P**rimary purpose:** "Delimiting flexibility" Following from Pu et al. we define the primary purpose of preregistration for modelling exercises so as to 
+
+   
+
+We take emphasis *off* of the dichotomy of exploratory vs. confirmatory research, because I think these categories are confused and confusing in modelling, and actually unhelpful. Instead I want to focus on delimiting researcher degrees of freedom, so as to reduce the potential for cognitive biases, such as confirmation bias, and the potential for resultant QRPs, such as, cherry-picking, HARKing, etc. etc. Link to my other manuscript.
+
+   
+
+   
+
+\- **Secondary purpose: increasing transparency** \<insert refs to modelling reporting literature - it's dire, can't properly be evaluated by a reviewer, moreover can't be reproduced\> Thus, want to improve the transparency of decision-making and methodology. What is "research transparency" 'Lupia and Elman define *research transparency* to be production transparency (open access data or data collection procedures) and analytic transparency ("a full account of how they draw their analytic conclusions from the data")' --- Lupia and Elman 2014. Pu et al. page 13.
+
+\- **Possibly:** As a way of providing better decision-making to authors. By shifting decision-making to the front. Front-heavy research process. Delays the start of analysis, but results in better decision-making, because the decision-making is more carefully reasoned. But not sure want to set this out as a 'purpose' of the template, or just have this as a section in the reflection towards the end of the manuscript (will depend on how I set up the angle, and the structure of the paper). At the moment, this is my hypothesis, is that it can improve the process, but we'd need to reflect on this. And I think we could do that at the end of the manuscript.
+
+This relates to what Pu et al. found where participants 'felt their research workflow improved by having preregistration as a "forcing function" \[...\] For example, writing down study plans ahead of time might prompt them to think more thoroughly and to anticipate flexibilities / researchers' degree of freedmen advance.' (Page 13). For reviewers 'participant reports that pregistration makes the review process "easier".'
+
+   
+
+   
+
+So what are *our* use-cases?
+
+The shiny-app, allows us to tailor the form firstly to authors and analysts. With help-text, and descriptions of the modelling phase, and step under consideration, as well as definitions and references to supporting resources ---  such as decision-tools for choosing and justifying methodological choices. 
+
+By being able to 'generate a report' - we aim to target reviewers/editors, to allow for a condensed version of the template to be exported. Importantly, Pu et al show that "not all preregistered studies confirm to their preregistrations, or are inconsistent in reporting deviations", thus by making the preregistration available to reviewers, and by providing a platform and method for linking the actual analysis under-taken, we can allow reviewers to properly evaluate the preregistration against the final paper. (AND, must talk back to original aim of bad reporting practices in modelling). Moreover, if you combine formatting changes with our proposed method with GitHub, we hope to tailor the presentation of the completed preregistration + analysis, such that actual analyses and decisions can be linked directly to both files and outcomes.
+
+   
+
+Preregistration *Norms*: 
+
+   
+
+Pu et al.'s working definition of *norms* is 'as a set of ideal behaviours'. A key finding was that norms around both creating and using a preregistration are uncertain. *How will my work address this confusion among researchers about what the norms are, how will it address uncertain norms?*
+
+   
+
+Creating: 
+
+   
+
+\- E.g. what sorts of decisions should be preregistered? Conflicting ideas about whether a power analysis, should for example be included in a preregistration.
+
+   
+
+Using:
+
+\- How to mark the preregistered from the non-preregistered parts of the paper?
+
+\- how to evaluate studies that have used preregistrations and when they should be compared against their preregistration\> This process of "checking" a preregistered study is provisionally defined by Pu et al. as "comparing a manuscript to its preregistration and verifying that the study and the analyses are conducted as the preregistration has specified." Who engages in 'checking' a preregistration? "Authors, reviewers and editors may all engage in checking." *How do we  facilitate checking? And the "checking problem"* "to what detail should or does an author or reviewer / editor check? Pu et al found that the authors engaged in a linear and thorough checking process, but reviewers on editors were not nearly "as exhaustive with checking". How can we facilitate the process? They found that if the "paper is very specific to referring to parts of the preregistration" then this made it easier for reviewers and editors to check. Maybe we could do something else, rather than get the paper to refer to the parts of the preregistration (but I think we should do this with Chris anyway). If we propose the norm of using GitHub to create and check the preregistration., I think this could be a good way of getting around this checking problem. At the very end we have a 'how to box' targeted at authors. And then maybe we have a box targeted at reviewers? Not sure, maybe just focus this paper on authors and the process of creating and using a preregistration.
+
+   
+
+In order to address tis confusion among norms, I state the expected norms that the template has been designed around here. However, I don't expect users to agree on this process. Because we have kept the template in a GitHub repository that can be *forked*, people are free to adapt the template (the items themselves) to suit whatever norm they see fit about how preregistrations should be created and used.
+
+----
+
+
+## Discussion ##
+
+
+
+## talking points ##
+
+
+
+
+*We really didn't know what to expect when we began completing these preregistrations...*
+
+   
+
+*Problems and Challenges in designing preregistration templates*
+
+***TIME***
+
+\- "A natural consequence of increased transparency, is that preregistrations become longer as more possible decisions are made transparent: *increased transparency* implies *increased length*. This trade-off was something we considered important during the design phase, and deciding what was in and out of scope for the preregistration was particularly challenging. Some authors agreed that it did add extra time, but that it was worth it.
+
+\- However, as Pu et al. note, some participants who were both authors and reviewers didn't think that the time-costs of preregistration in research were significantly greater than not preregistering research. Instead they thought of the preregistration process invoking a 'time shift', that brought 'decision points' before data collection instead of during analysis." P.19. In addition, "some reviewers thought that preregistration saves them the time they might have spent wondering about undisclosed flexibilities when working on an un-preregistered paper."
+
+**PURPOSE AND DESIGN IMPLEMENTATION**
+
+\- Competing objectives? Although the purposes of preregistration are not mutually exclusive - as we have decided the purpose of preregistration we have defined here is to both delimit/state flexibility, *and* be flexible. However, "the preference of one purpose over another can have tangible effects on the design of preregistration" p15.
+
+\- **Possibly:** As a way of providing better decision-making to authors. By shifting decision-making to the front. Front-heavy research process. Delays the start of analysis, but results in better decision-making, because the decision-making is more carefully reasoned. But not sure want to set this out as a 'purpose' of the template, or just have this as a section in the reflection towards the end of the manuscript (will depend on how I set up the angle, and the structure of the paper). At the moment, this is my hypothesis, is that it can improve the process, but we'd need to reflect on this. And I think we could do that at the end of the manuscript.
+
+This relates to what Pu et al. found where participants 'felt their research workflow improved by having preregistration as a "forcing function" \[...\] For example, writing down study plans ahead of time might prompt them to think more thoroughly and to anticipate flexibilities / researchers' degree of freedmen advance.' (Page 13). For reviewers 'participant reports that pregistration makes the review process "easier".'
 --------------------------
 # References
