@@ -1,7 +1,7 @@
 ---
-title: "EcoConsPreReg"
+title: "Preregistration for modelling in ecolgy and conservation"
 description: |
-  A new article created using the Distill format.
+  Working Draft.
 author:
   - name: Elise Gould 
     affiliation: School of BioSciences, University of Melbourne
@@ -10,6 +10,10 @@ output:
   distill::distill_article:
     self_contained: false
 ---
+
+
+Intended journal: Methods in Ecology and Evolution.
+
 The Abstract must not exceed 350 words and should list the main results and conclusions, using simple, factual, numbered statements:
 
 Point 1: set the context for and purpose of the work;
@@ -22,7 +26,7 @@ Point 4: identify the conclusions and the wider implications.
 
 
 
-**Keywords: preregistration, preregistration template, modelling, applied ecology, conservation decision-making, metaresearch, reproducibility, non-hypothesis testing(?)**
+**Keywords: preregistration, preregistration template, modelling, applied ecology, conservation decision-making, metaresearch, reproducibility, non-hypothesis testing(?) (no more than 8 for MEE).**
 
 
 ----
@@ -75,67 +79,67 @@ Objectives of the Template itself & internal model of preregistration (this will
 
 
 
-\*\*About the Approach\*\* 
+**Designing Preregistration Templates with a User-Centred Design Approach**
 
    
 
-As Pu et al. (2019) identify, a designer's intention for preregistration and users' purposes for preregistration may be in conflict and undermine the overarching goal of preregistration --- to improve the reliability of scientific findings. In order to avert this mismatch, we have taken a user-centred design approach to the problem of preregistration. We do this in two ways, firstly, by running a series of structured and collaborative activities in a workshop setting to reflect on our own research experiences in order to capture scientific workflows as they occur practice. And secondly to, use a real-world research problem as a case-study to test and evaluate the templates for utility and feasibility in practice.
+As Pu et al. (2019) identify, a designer's intention for preregistration and users' purposes for preregistration may be in conflict and undermine the overarching goal of preregistration --- to improve the reliability of scientific findings. In order to avert this mismatch, we have taken a user-centred design approach to the problem of preregistration. We do this in two ways, firstly, by running a series of structured and collaborative activities in a workshop setting to reflect on our own research experiences in order to capture scientific workflows as they occur practice. And secondly, by using a real-world research problem as a case-study to test and evaluate the templates for utility and feasibility in practice.
 
    
 
-\*\*Defining the purpose of preregistration\*\*
+@TODO what does a UX design approach entail... stating purpose, use-case and contexts a priori? Explain.
 
    
 
-Pu et al's key finding: 
-
-\- different users have "different purposes for adopting preregistration, and these differ from the original purpose of distinguishing exploratory and confirmatory findings"
-
-Pu et al. "Current designs represent a failure of designers to make their internal model of preregistration clear to users: the purpose of each question, and indeed the entire form, is often opaque."
+**Intended Purpose of this Preregistration**
 
    
 
-Pu et al found that because different users ascribed different purposes to preregistration, it resulted in conflicting designs of preregistration formats, which they argue may ultimately undermine the overarching goal of preregistration: "improving the reliability of scientific findings". 
+Defining the purpose and intended use-cases of a preregistration template has important implications for the design of the template --- from its structure, content, user-interface and use within the broader research workflow. We define the primary purpose of the template as "to delimit researcher degrees of freedom" when conducting model-based research in applied ecology and conservation. Although others have defined the purpose of preregistration to include 'delineating between *exploratory* from *confirmatory* research' \<refs\>, this is not the intended purpose of the template here. Beyond hypothesis-testing contexts, this is a simplifying dichotomy that, in practice, is more blurred and nuanced than the ideal. For instance researchers might move back and forth between different research-modes throughout the modelling cycle. Thinking through how modes of inference might hold within applied ecological modelling contexts requires further, more careful thought, perhaps with the aid of some philosophers of science. Consequently, we wish to deemphasise the purpose of distinguishing between exploratory and confirmatory research, and focus the design of the templates in being able to delimit researcher degrees of freedom, so as to reduce the potential for cognitive biases, such as confirmation bias, and other questionable research practices, like cherry-picking, HARKing etc. \<insert ref to my QRP manuscript\>.
 
    
 
-We state the intended purposes of the preregistration template up front:
+The secondary purpose of the model is to increase *research transparency* of model-based research in ecology and conservation. *Research transparency* refers to both production transparency --- which includes research artefacts like open-access data and materials, or data collection procedures --- and analytic transparency --- which describes a complete account of how the analytic conclusions are drawn from the data (Lupia and Elman, 2014). \<refs to model reporting literature- it's dire, can't properly be evaluated by a reviewer, moreover can't be reproduced\>
 
    
 
-\- P**rimary purpose:** "Delimiting flexibility" Following from Pu et al. we define the primary purpose of preregistration for modelling exercises so as to 
+**Preregistration template users and research-contexts**
 
    
 
-We take emphasis *off* of the dichotomy of exploratory vs. confirmatory research, because I think these categories are confused and confusing in modelling, and actually unhelpful. Instead I want to focus on delimiting researcher degrees of freedom, so as to reduce the potential for cognitive biases, such as confirmation bias, and the potential for resultant QRPs, such as, cherry-picking, HARKing, etc. etc. Link to my other manuscript.
-
-\- **Secondary purpose: increasing transparency** \<insert refs to modelling reporting literature - it's dire, can't properly be evaluated by a reviewer, moreover can't be reproduced\> Thus, want to improve the transparency of decision-making and methodology. What is "research transparency" 'Lupia and Elman define *research transparency* to be production transparency (open access data or data collection procedures) and analytic transparency ("a full account of how they draw their analytic conclusions from the data")' --- Lupia and Elman 2014. Pu et al. page 13.
+Given the stated purposes of the preregistration templates we designed, it implies two types of users: creators of preregistrations using the template, and reviewers of a completed template, including reviewers, journal editors and any readership. The content and structure of the items on the template will be designed with the preregistration-creator and the preregistration readership in mind - it will capture critical decision-points that may influence the overall model and analysis and recommendations or decisions that the model informs, thus delimiting researcher degrees of freedom at these junctures in the modelling decision process. It should also enhance the research transparency of the study, ensuring that these choices are documented with sufficient transparency to let the reader make informed decisions about the credibility and reliability of the model and associated analysis and interventions.
 
    
 
-\*\*Acknowledging different use-cases\*\*
-
-Pu et al:
-
-\- norms around how people use preregistration are uncertain, and vary among users.
-
-\- Depending on what role you assume, there are different 'use-cases' for authors, reviewers/editors. BUT, these different use cases are not explicitly designed for.
+More specifically, we intend this template to be suitable not just in 'pure-research'-only contexts, but to be suitable for ecologists and conservation decision-makers who are working in the 'actionable sciences' \<which guy was this again.. Sutherland?? define\>.  The template should be adequate for use by scientists and modellers working in applied ecological contexts, but also for management and conservation decision-making contest where there are real-world decisions hinging on the model-based research.
 
    
 
-Our use-cases:
+\<Research Types: Modelling - what do we mean by modelling?? I think if we don't specify this then people will just think 'classical linear regression' as modelling, and then will say, well why don't use existing hypothesis testing templates, like AsPredicted. I need to specify some particularities about the type of modelling that occurs in in these research contexts, and why existing templates don't suit, and that we need to design specifically for these research contexts.\>
 
    
 
-1\. As creators
+**Use-Cases**
 
-2\. As users:
+   
+
+Depending on what role is assumed, there are different 'use-cases' for authors, reviewers/editors *Pu et al.* However, these use-cases are not typically explicitly designed for.  For example, reviewers and editors (and sometimes authors) face the problem of 'checking' --- that is, 'the process of comparing a manuscript to its preregistration and verifying that the study and the analyses are conducted as the preregistration has specified.' Existing preregistration formats are designed with the role of the author in mind --- they are text-based documents, that are ill-suited to checking the reported study against the preregistration.
+
+Consequently, we aim not just to simply design a new template, deciding on its structure and content, but we propose a workflow and methodology to be implemented by the author when completing a preregistration of their model-based research \<see section - inner logic of the model - discuss features model-based research, like iterative development?\>
 
 
 ### Identifying Ecological Modelling Workflows in Practice ###
 
 
 
+
+What attributes do we aim for the template
+
+A) an interface that ensures ease of use for the creator of a preregistration
+
+B) structure and content that is necessarily opinionated.. forces user to a particular workflow, so getting that workflow right, that reflects both norms and practice of model-based research is pivotal.
+
+   
 
 On the 4^th^ March 2020, we ran a series of structured activities designed to inform the development of two pre-registration templates, one for field-work and sampling design, the other for modelling and data-analysis. We split the activities into two groups, to better focus discussion for each of these templates. All workshop materials and workshop outputs can be found on the OSF component here \<LINK\>.
 
@@ -418,6 +422,16 @@ The shiny-app, allows us to tailor the form firstly to authors and analysts. Wit
 
 By being able to 'generate a report' - we aim to target reviewers/editors, to allow for a condensed version of the template to be exported. Importantly, Pu et al show that "not all preregistered studies confirm to their preregistrations, or are inconsistent in reporting deviations", thus by making the preregistration available to reviewers, and by providing a platform and method for linking the actual analysis under-taken, we can allow reviewers to properly evaluate the preregistration against the final paper. (AND, must talk back to original aim of bad reporting practices in modelling). Moreover, if you combine formatting changes with our proposed method with GitHub, we hope to tailor the presentation of the completed preregistration + analysis, such that actual analyses and decisions can be linked directly to both files and outcomes.
 
+   
+
+@TODO Insert screenshot of app.
+
+@TODO link to shiny app.
+
+   
+
+As *Pu et al* find, norms around preregistration are both uncertain and vary among users. By norms, we mean \<insert definition from Pu\>. Although the design of the template in terms of the content and structure is *opinionated*, in that it forces a particular view of the modelling research workflow, people are free to modify the template according to their needs. \<The preregistration infrastructure we provide here allows for people to modify the template easily - set up the infrastructure of the shiny app to take in a CSV file, which is then exported to a JSON file for creating the shiny app (alt, just modify the JSON directly)\>
+
 What is the purpose of preregistration? Specifically in modelling.
 
    
@@ -536,6 +550,6 @@ This relates to what Pu et al. found where participants 'felt their research wor
 
    
 
-**DEALING WITH CONFLICTING NORMS IN CREATING & USING the PREREGISTRATION TEMPLATE**
+**DEALING WITH CONFLICTING NORMS IN CREATING & USING the PREREGISTRATION TEMPLATE**  
 --------------------------
 # References
