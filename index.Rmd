@@ -5,6 +5,14 @@ description: |
 author:
   - name: Elise Gould 
     affiliation: School of BioSciences, University of Melbourne
+  - name: Chris Jones
+    affiliation: Department of Environment Land and Water
+  - name: Libby Rumpff
+    affiliation: School of BioSciences, University of Melbourne
+  - name: Hannah Fraser
+    affiliation: School of BioSciences, University of Melbourne
+  - name: Fiona Fidler
+    affiliation: School of BioSciences, University of Melbourne
 date: "`r Sys.Date()`"
 output: 
   distill::distill_article:
@@ -41,13 +49,25 @@ Point 4: identify the conclusions and the wider implications.
 
 
 
+
+Failure to reproduce a large proportion of published studies in psychology and medicine has received considerable attention and provoked heated discussion among researchers in the broader scientific community. Initial meta-research in ecology has revealed that the conditions found to foster irreproducibility are present (Fidler et al. 2017), evidencing that the discipline is also at risk of a "reproducibility crisis," with rates of Questionable Research Practices in ecology similar to those in other fields (Fraser et al. 2018). Ecology has seen recent improvements in journal policy concerning reporting guidelines and data/code archiving, but there has been slow uptake of other important tools, like preregistration and registered reports (Parker, Fraser, and Nakagawa 2019).
+
+
+Preregistration is designed to mitigate the opportunistic misuse of researcher degrees of freedom, or "Questionable Research Practices" (QRPs, Wicherts et al. (2016)). Researcher degrees of freedom refer to the many analytic decisions a researcher makes during the planning, data collection, data analysis and reporting of results in scientific studies (Wicherts et al. 2016; Simmons, Nelson, and Simonsohn 2011). Examples of these analytic choices include whether to exclude observations, whether more data should be collected, which set of conditions should be combined and compared, which model evaluation metric should be used, etc. Coupled with a lack of transparency -- or "undisclosed flexibility" -- researcher degrees of freedom are vulnerable to being exploited by researchers because of cognitive biases.
+
+
+Within basic ecological research employing null hypothesis significance testing, QRPs may increase the probability of false-positive findings (Seaman and Weber 2015; Earp and Trafimow 2015), and may spuriously increase effect size estimates (Wicherts et al. 2016; Parker et al. 2016). QRPs in model-based research may "artificially increase the accuracy or precision of a model, its predictions, and or/evaluation tests to the effect that the model is perceived to be more credible than it would be if the QRP did not occur" (Gould et al. 2019). They are "practices that lead to consumers of the model placing false belief in the reliability, validity and utility of the model than would be warranted without the QRP" (Gould et al. 2019). Some examples of questionable research practices in model-based research include cherry-picking and 'statistic-hacking' model evaluation and test results in order to overemphasise the model's performance and tweaking model priors after fitting the model to data and checking results (Gould, n.d.).
+
+
+Preregistration requires the methods and analysis plan of a future study are registered in a secure and accessible platform prior to any data collection, and after submission it can no longer be altered. Preregistration guards against questionable research practices, by making clear what is a genuine a priori planned analysis, and what is not (Parker, Fraser, and Nakagawa 2019). Different research methodologies, and their specific and nuanced application across different domains and fields of study follow different analytical choices and are therefore susceptible to different QRPs. Consequently, domain-specific templates are necessary for guiding preregistration in such a way that restricts researcher degrees of freedom unique to a particular domain-specific methodology. Moreover, we believe that a lack of discipline-specific preregistration templates is a key impediment to the uptake of these Open Science tools.
+
+------
+
+   
+
 Problem: "Conceptual barriers to adopting preregistration, including users from different disciplines feeling that preregistration is not for them" Pu et al. (2019).
 
-   
-
 "Preregistration considered alienating. Researchers who do non-experimental studies expressed a "not for me" sentiment." We have experienced this first-hand by our peers, and even by ourselves, when opening and looking at preregistration templates.
-
-   
 
 Questions about whether preregistration is useful for exploratory work because it 'limits flexibility' --- and moreover, modelling is, by many, considered exploratory.
 
@@ -57,20 +77,8 @@ Questions about whether preregistration is useful for exploratory work because i
 
 
 
-Research Aim: To develop a Template for Ecology and Conservation.
 
-   
-
-But not just a pre-registration template, we take into account the iterative nature of model development
-
-   
-
-Objectives of the Template itself & internal model of preregistration (this will build upon previous work of mine, namely the QRP chapter. See also Pu et al. for the four 'purposes' of preregistration that they identified in their analysis.
-
-----
-
-
-## Methods ##
+There are many templates for preregistering experimental research, particularly for studies employing null-hypothesis significance testing. However, to date there is only a single published template for pre-registering model-based studies, and it is for cognitive modelling in psychology (Crüwell and Evans 2019). Consequently, this project aims to develop a template for preregistering ecological modelling research. In this project we aim to develop a template and new methodology for implementing preregistration of ecological models in applied ecology. This research builds on recently developed "QRP roadmaps" (Gould et al. 2019) and research by Cruwell et al. (2019) showing that existing templates are too general, and do not account for domain-specific and research category-specific nuances and questionable research practices. Template development and testing will be driven by a real-world case study of environmental-flow modelling.
 
 
 
@@ -126,6 +134,12 @@ More specifically, we intend this template to be suitable not just in 'pure-rese
 Depending on what role is assumed, there are different 'use-cases' for authors, reviewers/editors *Pu et al.* However, these use-cases are not typically explicitly designed for.  For example, reviewers and editors (and sometimes authors) face the problem of 'checking' --- that is, 'the process of comparing a manuscript to its preregistration and verifying that the study and the analyses are conducted as the preregistration has specified.' Existing preregistration formats are designed with the role of the author in mind --- they are text-based documents, that are ill-suited to checking the reported study against the preregistration.
 
 Consequently, we aim not just to simply design a new template, deciding on its structure and content, but we propose a workflow and methodology to be implemented by the author when completing a preregistration of their model-based research \<see section - inner logic of the model - discuss features model-based research, like iterative development?\>
+
+----
+
+
+## Methods ##
+
 
 
 ### Identifying Ecological Modelling Workflows in Practice ###
