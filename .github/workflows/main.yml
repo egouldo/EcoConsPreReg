@@ -29,8 +29,10 @@ jobs:
         sudo apt-get update && apt-get install -y --no-install-recommends \
         libxml2-dev \
         libssl-dev \
-        libcurl4-openssl-dev \
-        pandoc
+        libcurl4-openssl-dev
+        curl -fLo /tmp/pandoc-2.2-1-amd64.deb https://github.com/jgm/pandoc/releases/download/2.2/pandoc-2.2-1-amd64.deb
+        sudo dpkg -i /tmp/pandoc-2.2-1-amd64.deb
+        rm /tmp/pandoc-2.2-1-amd64.deb
         
     - name: Install R Package Dependencies
       run: |
