@@ -18,23 +18,19 @@ output:
   distill::distill_article:
     self_contained: false
 ---
+**Intended journal:** Methods in Ecology and Evolution.
 
+*The Abstract must not exceed 350 words and should list the main results and conclusions, using simple, factual, numbered statements:*
 
-Intended journal: Methods in Ecology and Evolution.
+*Point 1: set the context for and purpose of the work;*
 
-The Abstract must not exceed 350 words and should list the main results and conclusions, using simple, factual, numbered statements:
+*Point 2: indicate the approach and methods;*
 
-Point 1: set the context for and purpose of the work;
+*Point 3: outline the main results;*
 
-Point 2: indicate the approach and methods;
+*Point 4: identify the conclusions and the wider implications.*
 
-Point 3: outline the main results;
-
-Point 4: identify the conclusions and the wider implications.
-
-
-
-**Keywords: preregistration, preregistration template, modelling, applied ecology, conservation decision-making, metaresearch, reproducibility, non-hypothesis testing(?) (no more than 8 for MEE).**
+**Keywords** *(no more than 8 for MEE).***:** *preregistration, preregistration template, modelling, applied ecology, conservation decision-making, metaresearch, reproducibility, non-hypothesis testing(?).*
 
 
 ----
@@ -325,8 +321,6 @@ The iterative nature of model development was identified in our structured discu
 
 Typically, the process of preregistration is completely distinct from and precedes the implementation of the analysis plan laid out in the preregistration.	In fact, preregistration has been defined as "the action of confirming an unalterable version of one's research plan prior to collecting data" (Nosek et al. 2018) or prior to analysing the data (Ref, or link to secondary data preregistration template). This results in a linear research workflow, whereby a researcher shifts from the process of ideation and design, documentation of that design in a preregistration, to the process of action, where the researcher executes the plan specified in the preregistration \<insert link to this fig..\>
 
-   
-
 Translating the preregistration process to a modelling research context is thus challenging because the iterative nature of model development conflicts with the inner logic of existing preregistration templates that presume a linear research workflow. For instance, some modelling decisions are inherently dependent on the outcomes and results of previous decisions and analyses, which involves conducting some preliminary or investigatory analyses before being able to specify future decision-steps in an analysis plan, contravening the critical(?adj) feature of preregistration of specifying the analysis plan prior to seeing the data. Moreover, some items in the template, particularly at later stages of modelling, might not be able to be answered by the researcher until the model is fully or close to fully specified on a first-pass (e.g. specifying exactly what sensitivity analyses or uncertainty analyses will be conducted). This might especially hold true for more complex process models. \<Mention that this is not a flaw in preregistration, but rather reflects the inner logic of preregistration for hypothesis-testing contexts\>
 
    
@@ -357,7 +351,43 @@ In order to address this confusion among norms, I state the expected norms that 
 
 
 
-Given this defining feature of the modelling process, it is critical that the design of the interface and procedure for implementing the preregistration inherently capture this iterative nature of development. We attempt to do this by...
+Given this defining feature of the modelling process, it is critical that the design of the interface and procedure for implementing the preregistration inherently capture this iterative nature of development. Current formats for preregistration are inappropriate given the iterative nature of the model development cycle, and the need for checking the preregistration against the reported model and analysis. Existing templates are text-based documents wherein authors respond to template items to complete the preregistration. They are standalone documents, with no way of linking the specified decision points to the actual analysis - thereby making model checking extremely tedious. 
+
+   
+
+**Preregistration Interface**
+
+   
+
+We felt that the length and presence of large chunks of help-text within the template we developed would make using the template to create a preregistration for a study cumbersome, and might act as a barrier for model-based researchers to adopt preregistration. We considered removing in-template text describing and defining key concepts, phases and steps, as well as reducing the number of decision-points in a model-based research workflow captured by the template by removing items within the template. \<@TODO - did we end up removing any items by the end of the preregistration and evaluation with Chris' study?\> While we 'tweaked' the template items and descriptive text during the in situ evaluation of the templates for the environmental flows preregistration, we decided not to alter the template structure and content significantly, but to instead implement a new format and interface for working with the template. We outline these reasons below.
+
+   
+
+1\. Opinionated Design - norms around modelling practice.  'Good Modelling Practice' Literature. This also has the benefit of aiding new modellers.
+
+2\. A related point: linguistic ambiguity and other problems with modelling concepts and terms. Contested terms in the ecological modelling literature about what each different step is, their activities, etc.
+
+3\. *research transparency*. We felt that the decision-points captured in the template are critical to increasing reporting transparency sufficiently for others to properly evaluate the modelling and analysis.
+
+   
+
+Consequently, we instead decided to implement a user-friendly interface that makes the completion of a preregistration with our template much more *approachable\<?adj\>*.
+
+   
+
+   
+
+   
+
+**Living Preregistration Workflow** 
+
+   
+
+2\. Workflow - allows for iterative model development AND 
+
+   
+
+Why, what is the current form? Existing templates are read-only documents. 
 
 
 
@@ -412,111 +442,9 @@ This obviously breaks with the convention of preregistrations as 'static' one-of
 
 Pu et al: tendency for preregistrations to go from vague / general to specific over time.
 
-![Living Preregistration Workflow - Research Workflow for implementing a 'living' preregistration in a modelling context](./figures/LivingPreregistration.png)
-
-
-### Preregistration Items ###
-
-
-
-
-This will be a box or a table with numbered items, with just the preregistration item directives or question. The help-text describing each phase or key steps in the workflow is removed, as this goes in the previous table under 'model scientific workflow'.
-
-
-### Shiny App ###
-
-
-
-
-Speak back to the the predefined use-cases, how does our proposed methodology and its template address the intended use-cases and purposes?
-
    
 
-The shiny-app, allows us to tailor the form firstly to authors and analysts. With help-text, and descriptions of the modelling phase, and step under consideration, as well as definitions and references to supporting resources ---  such as decision-tools for choosing and justifying methodological choices. 
-
-By being able to 'generate a report' - we aim to target reviewers/editors, to allow for a condensed version of the template to be exported. Importantly, Pu et al show that "not all preregistered studies confirm to their preregistrations, or are inconsistent in reporting deviations", thus by making the preregistration available to reviewers, and by providing a platform and method for linking the actual analysis under-taken, we can allow reviewers to properly evaluate the preregistration against the final paper. (AND, must talk back to original aim of bad reporting practices in modelling). Moreover, if you combine formatting changes with our proposed method with GitHub, we hope to tailor the presentation of the completed preregistration + analysis, such that actual analyses and decisions can be linked directly to both files and outcomes.
-
-   
-
-@TODO Insert screenshot of app.
-
-@TODO link to shiny app.
-
-   
-
-As *Pu et al* find, norms around preregistration are both uncertain and vary among users. By norms, we mean \<insert definition from Pu\>. Although the design of the template in terms of the content and structure is *opinionated*, in that it forces a particular view of the modelling research workflow, people are free to modify the template according to their needs. \<The preregistration infrastructure we provide here allows for people to modify the template easily - set up the infrastructure of the shiny app to take in a CSV file, which is then exported to a JSON file for creating the shiny app (alt, just modify the JSON directly)\>
-
-What is the purpose of preregistration? Specifically in modelling.
-
-   
-
-The original purpose of preregistration is "the action of confirming an unalterable version of one's research plan prior to collecting data", such that the act distinguishes preregistered, confirmatory findings from exploratory findings (Nosek et al. 2018 + Kidwell et al. 2016) by way of constraining 'researcher degrees of freedom' or flexibility in both experimental design and data analysis, which has been posited as one of the key reasons contributing to the replication crisis (Ioannidis, 2005, Wagenmakers, 2012).
-
-   
-
-Pu et al. treat preregistration as a user-centred design problem to ask whether it achieves its proposed goals *in practice*, and how the process might be improved. They ask whether the current implementation of preregistration in practice, in terms of its design of the form, and how the process integrates into research practice and the peer review practice, effectively supports its intended goals. By interviewing academic psychologists, they attempt to characterise current understanding of practice, and both the norms and purposes for preregistration that actual users have. The key findings are:
-
-\- Norms around how people use preregistration are uncertain, and vary among users
-
-\- different users have "different purposes for adopting preregistration, and these differ from the original purpose of distinguishing exploratory and confirmatory findings"
-
-\- Depending on what role you assume, there are different 'use-cases' for authors, reviewers/editors. BUT, these different use cases are not explicitly designed for.
-
-\- There are "conceptual barriers to adopting preregistration, including users from different disciplines feeling that preregistration is not for them"
-
-   
-
-Pu et al found that because different users ascribed different purposes to preregistration, it resulted in conflicting designs of preregistration formats, which they argue may ultimately undermine the overarching goal of preregistration: "improving the reliability of scientific findings"
-
-   
-
-   
-
-What do we define as the *purposes* of preregistration, specifically within ecological modelling contexts?
-
-   
-
-\- P**rimary purpose:** "Delimiting flexibility" Following from Pu et al. we define the primary purpose of preregistration for modelling exercises so as to 
-
-   
-
-We take emphasis *off* of the dichotomy of exploratory vs. confirmatory research, because I think these categories are confused and confusing in modelling, and actually unhelpful. Instead I want to focus on delimiting researcher degrees of freedom, so as to reduce the potential for cognitive biases, such as confirmation bias, and the potential for resultant QRPs, such as, cherry-picking, HARKing, etc. etc. Link to my other manuscript.
-
-   
-
-   
-
-\- **Secondary purpose: increasing transparency** \<insert refs to modelling reporting literature - it's dire, can't properly be evaluated by a reviewer, moreover can't be reproduced\> Thus, want to improve the transparency of decision-making and methodology. What is "research transparency" 'Lupia and Elman define *research transparency* to be production transparency (open access data or data collection procedures) and analytic transparency ("a full account of how they draw their analytic conclusions from the data")' --- Lupia and Elman 2014. Pu et al. page 13.
-
-\- **Possibly:** As a way of providing better decision-making to authors. By shifting decision-making to the front. Front-heavy research process. Delays the start of analysis, but results in better decision-making, because the decision-making is more carefully reasoned. But not sure want to set this out as a 'purpose' of the template, or just have this as a section in the reflection towards the end of the manuscript (will depend on how I set up the angle, and the structure of the paper). At the moment, this is my hypothesis, is that it can improve the process, but we'd need to reflect on this. And I think we could do that at the end of the manuscript.
-
-This relates to what Pu et al. found where participants 'felt their research workflow improved by having preregistration as a "forcing function" \[...\] For example, writing down study plans ahead of time might prompt them to think more thoroughly and to anticipate flexibilities / researchers' degree of freedmen advance.' (Page 13). For reviewers 'participant reports that pregistration makes the review process "easier".'
-
-   
-
-   
-
-So what are *our* use-cases?
-
-The shiny-app, allows us to tailor the form firstly to authors and analysts. With help-text, and descriptions of the modelling phase, and step under consideration, as well as definitions and references to supporting resources ---  such as decision-tools for choosing and justifying methodological choices. 
-
-By being able to 'generate a report' - we aim to target reviewers/editors, to allow for a condensed version of the template to be exported. Importantly, Pu et al show that "not all preregistered studies confirm to their preregistrations, or are inconsistent in reporting deviations", thus by making the preregistration available to reviewers, and by providing a platform and method for linking the actual analysis under-taken, we can allow reviewers to properly evaluate the preregistration against the final paper. (AND, must talk back to original aim of bad reporting practices in modelling). Moreover, if you combine formatting changes with our proposed method with GitHub, we hope to tailor the presentation of the completed preregistration + analysis, such that actual analyses and decisions can be linked directly to both files and outcomes.
-
-   
-
-Preregistration *Norms*: 
-
-   
-
-Pu et al.'s working definition of *norms* is 'as a set of ideal behaviours'. A key finding was that norms around both creating and using a preregistration are uncertain. *How will my work address this confusion among researchers about what the norms are, how will it address uncertain norms?*
-
-   
-
-Creating: 
-
-   
-
-\- E.g. what sorts of decisions should be preregistered? Conflicting ideas about whether a power analysis, should for example be included in a preregistration.
+Importantly, Pu et al show that "not all preregistered studies confirm to their preregistrations, or are inconsistent in reporting deviations", thus by making the preregistration available to reviewers, and by providing a platform and method for linking the actual analysis under-taken, we can allow reviewers to properly evaluate the preregistration against the final paper. (AND, must talk back to original aim of bad reporting practices in modelling). Moreover, if you combine formatting changes with our proposed method with GitHub, we hope to tailor the presentation of the completed preregistration + analysis, such that actual analyses and decisions can be linked directly to both files and outcomes.
 
    
 
@@ -530,6 +458,36 @@ Using:
 
 In order to address this confusion among norms, I state the expected norms that the template has been designed around here. However, I don't expect users to agree on this process. Because we have kept the template in a GitHub repository that can be *forked*, people are free to adapt the template (the items themselves) to suit whatever norm they see fit about how preregistrations should be created and used.
 
+This will be a box or a table with numbered items, with just the preregistration item directives or question. The help-text describing each phase or key steps in the workflow is removed, as this goes in the previous table under 'model scientific workflow'.
+
+
+### Shiny Preregistration ###
+
+
+
+
+The shiny app is intended as an interface for authors and analysts to respond to template items and input their planned decisions to complete a preregistration for their study. In addition to having directive text and questions for each item, there is also 'help-text' consisting of descriptions of the modelling phases and steps, as well as definitions and references to supporting resources, such as decision-tools for choosing and justifying methodological choices \<reference to image with shiny app\>
+
+Once the preregistration has been completed \<for the time being, it doesn't actually have to be complete, see 'living preregistration' section\>, the author is able to 'generate a report'. The report removes any supporting text in the user interface, and generates a text-based document, containing the preregistration template items and any responses to them by the author or analyst. This feature is targeted towards reviewers and editors, providing a more condensed version of the preregistration for greater ease of reading.
+
+Norms around preregistration are both uncertain and vary among preregistration users (Pu et al.) By norms, we mean \<insert definition from Pu\>. Given that the preregistration template is *opinionated* in that it presumes particular norms around the modelling research workflow and sets of activities, and decision-points to be reported, we have designed both the underlying infrastructure of the shiny app, and chosen to host the template and interface on GitHub to allow users to adapt any aspect of the template itself to be congruent with their personal needs and norms around model-based practice. 
+
+The GitHub repository storing the template and infrastructure implementing the interface is open-source and able to be *forked* --- this means that a user is able to copy the entire contents of the repository to their own user account on GitHub, to be changed in any way they see fit. We have included design features in the infrastructure of the shiny app that allow for people to very easily change the structure and content of the template, that will then be rendered into the user-interface.  \<Probably won't describe here, but could link to a vignette on the app that describes the following: easy modification - set up the infrastructure of the shiny app to take in a CSV file, which is then exported to a JSON file for creating the shiny app (alt, just modify the JSON directly)\>
+
+   
+
+   
+
+@TODO Insert screenshot of app.
+
+@TODO link to shiny app (make a doi for it).
+
+@TODO make an issue in the shiny repository for being able to 'load' a partially completed preregistration... Maybe we need to export in JSON?
+
+   
+
+![Living Preregistration Workflow - Research Workflow for implementing a 'living' preregistration in a modelling context](./figures/LivingPreregistration.png)
+
 ----
 
 
@@ -537,7 +495,7 @@ In order to address this confusion among norms, I state the expected norms that 
 
 
 
-## talking points ##
+### talking points ###
 
 
 
@@ -550,20 +508,21 @@ In order to address this confusion among norms, I state the expected norms that 
 
 ***TIME***
 
-\- "A natural consequence of increased transparency, is that preregistrations become longer as more possible decisions are made transparent: *increased transparency* implies *increased length*. This trade-off was something we considered important during the design phase, and deciding what was in and out of scope for the preregistration was particularly challenging. Some authors agreed that it did add extra time, but that it was worth it.
+- "A natural consequence of increased transparency, is that preregistrations become longer as more possible decisions are made transparent: *increased transparency* implies *increased length*. This trade-off was something we considered important during the design phase, and deciding what was in and out of scope for the preregistration was particularly challenging. Some authors agreed that it did add extra time, but that it was worth it.
 
-\- However, as Pu et al. note, some participants who were both authors and reviewers didn't think that the time-costs of preregistration in research were significantly greater than not preregistering research. Instead they thought of the preregistration process invoking a 'time shift', that brought 'decision points' before data collection instead of during analysis." P.19. In addition, "some reviewers thought that preregistration saves them the time they might have spent wondering about undisclosed flexibilities when working on an un-preregistered paper."
+- However, as Pu et al. note, some participants who were both authors and reviewers didn't think that the time-costs of preregistration in research were significantly greater than not preregistering research. Instead they thought of the preregistration process invoking a 'time shift', that brought 'decision points' before data collection instead of during analysis." P.19. In addition, "some reviewers thought that preregistration saves them the time they might have spent wondering about undisclosed flexibilities when working on an un-preregistered paper."
 
 **PURPOSE AND DESIGN IMPLEMENTATION**
 
-\- Competing objectives? Although the purposes of preregistration are not mutually exclusive - as we have decided the purpose of preregistration we have defined here is to both delimit/state flexibility, *and* be flexible. However, "the preference of one purpose over another can have tangible effects on the design of preregistration" p15.
+- Competing objectives? Although the purposes of preregistration are not mutually exclusive - as we have decided the purpose of preregistration we have defined here is to both delimit/state flexibility, *and* be flexible. However, "the preference of one purpose over another can have tangible effects on the design of preregistration" p15.
 
-\- **Front-heavy research timeline:** As a way of providing better decision-making to authors. By shifting decision-making to the front. Front-heavy research process. Delays the start of analysis, but results in better decision-making, because the decision-making is more carefully reasoned. But not sure want to set this out as a 'purpose' of the template, or just have this as a section in the reflection towards the end of the manuscript (will depend on how I set up the angle, and the structure of the paper). At the moment, this is my hypothesis, is that it can improve the process, but we'd need to reflect on this. And I think we could do that at the end of the manuscript.
+- **Front-heavy research timeline:** As a way of providing better decision-making to authors. By shifting decision-making to the front. Front-heavy research process. Delays the start of analysis, but results in better decision-making, because the decision-making is more carefully reasoned. But not sure want to set this out as a 'purpose' of the template, or just have this as a section in the reflection towards the end of the manuscript (will depend on how I set up the angle, and the structure of the paper). At the moment, this is my hypothesis, is that it can improve the process, but we'd need to reflect on this. And I think we could do that at the end of the manuscript.
 
 This relates to what Pu et al. found where participants 'felt their research workflow improved by having preregistration as a "forcing function" \[...\] For example, writing down study plans ahead of time might prompt them to think more thoroughly and to anticipate flexibilities / researchers' degree of freedmen advance.' (Page 13). For reviewers 'participant reports that pregistration makes the review process "easier".'
 
    
 
-**DEALING WITH CONFLICTING NORMS IN CREATING & USING the PREREGISTRATION TEMPLATE**  
+**DEALING WITH CONFLICTING NORMS IN CREATING & USING the PREREGISTRATION TEMPLATE** 
+
 --------------------------
 # References
