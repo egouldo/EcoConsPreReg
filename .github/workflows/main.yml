@@ -45,4 +45,4 @@ jobs:
 
     - name: Knit Rmarkdown Documents
       run: |
-        Rscript -e "rmarkdown::render(input = "index.Rmd")"
+        Rscript -e "rmarkdown::render(input = 'index.Rmd')"
