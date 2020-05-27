@@ -29,8 +29,8 @@ jobs:
         sudo apt-get update && apt-get install -y --no-install-recommends \
         libxml2-dev \
         libssl-dev \
-        libcurl4-openssl-dev
-        sudo apt-get install pandoc
+        libcurl4-openssl-dev \
+        pandoc
         
     - name: Install R Package Dependencies
       run: |
