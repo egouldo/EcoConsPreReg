@@ -38,6 +38,11 @@ jobs:
         Rscript -e "install.packages('knitr', repos = 'https://demo.rstudiopm.com/all/__linux__/bionic/latest')"
         Rscript -e "install.packages('distill', repos = 'https://demo.rstudiopm.com/all/__linux__/bionic/latest')"
 
+    - name: Where am I and what is here
+      run: |
+        pwd
+        ls -f
+
     - name: Knit Rmarkdown Documents
       run: |
         Rscript -e "rmarkdown::render(input = "index.Rmd")"
