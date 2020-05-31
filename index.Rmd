@@ -255,31 +255,27 @@ We translated the workflows into the preregistration template by using the follo
 
 
 
-Rather than 'digging back' through the version history of a completed preregistration to ask researchers about the process and how it had been developed in detail, we chose to leverage the version-control and collaborative project management features of GitHub \<cite\> as a tool for documenting both the analytic decisions of the researcher, and for using the preregistration process itself to 'live-develop' the template template. For example, if it turned out that we had missed an important item, or perhaps the phrasing of an item or the order and structure of the template needed to change whilst in the process of completing the preregistration, the suggested change, and its justification would be both recorded in GitHub and linked to an actual preregistration.
+*Evaluation Criteria and Rationale*
 
    
 
-How we did this using GitHub:
+\<which other template design papers have included evaluation criteria and rationale, Sophia's?\>
+
+Of primary concern was the structure and content of the preregistration template. Much like variable selection during model-building, the template should be 'parsimonious' - without the inclusion of any given item on the template, it would not adequately a) constrain researcher degrees of freedom and b) transparently document the decision-process of the modeller during model development. The template items were evaluated based on these criteria.
+
+Modellers \<here, here, and here\> have expressed concern about preregistration making modelling a more difficult task than it already is, and hampering the ability to meet project deadlines, especially in decision-problems. Many modellers already struggle with sufficiently documenting models during publication and reporting \<ref, model reporting and transparency review\>, and modellers working in government or other agencies have expressed concern that preregistration will simply add to the list of  'red-tape' expected of them. Given these concerns, and considering the concerns of many with regard to the iterative nature of model development precluding making preregistration impossible or inappropriate, we figured it was of utmost importance that the templates be evaluated on their ease-of-use and feasibility.
 
    
 
-Instruction to 
+*Evaluation Method*
 
    
 
-(As Pu et al did, they used qualitative interviews to 'walk through the version history of the preregistration, and discuss how it had developed in detail' (p.9) --- we can capture some of that thinking in the moment, by using comments and GitHub issues to capture the reasoning in the moment, as to why a particular decision was made or needs to change. However, I do think we should supplement this process with a structured reflection session. 
+We tested and evaluated the templates on the ability to meet these criteria by using a model-based research case-study \<see box\>.  Rather than 'digging back' through the version history of a completed preregistration to ask researchers about the process and how it had been developed in detail \<like Pu et al\>, we chose to leverage the version-control and collaborative project management features of GitHub \<cite\> as a tool for documenting both the analytic decisions of the researcher, and for using the preregistration process itself to 'live-develop' the template template. For example, if it turned out that we had missed an important item, or perhaps the phrasing of an item or the order and structure of the template needed to change whilst in the process of completing the preregistration, the suggested change, and its justification would be both recorded in GitHub and linked to the actual preregistration. Since *Pu et al* (p16). Found that the process of creating a preregistration is 'difficult to reconstruct with interview questions alone', we we aimed to capture the analysts 'thinking in the moment' by using comments and GitHub issues as to why a particular decision about the template item inclusion and specification should change. \<How we did this using GitHub:How to present this material? Link to the wiki issue and instructions to users?\> 
 
-   
+Finally, we supplemented this 'in situ' testing and evaluation process with a semi-structured interviews in order to capture more detailed reflections of the analysts. This was because analysts were often under strict time-constraints, trying to meet their deliverables for the project. In addition, the process of preregistration was a new and unfamiliar task.
 
-The reason why tried to capture this as we went, is because "the process of creating preregistration  is difficult to reconstruct with interview questions alone" p16.
-
-   
-
-**Case Study: Environmental Flows Management**
-
-   
-
-\<TEXT HERE DESCRIBING THE ENVIRONMENTAL FLOWS MANAGEMENT PROBLEM + RESEARCH PROBLEM\>
+\<TEXT HERE DESCRIBING THE ENVIRONMENTAL FLOWS MANAGEMENT PROBLEM + RESEARCH PROBLEM, to be completed by Chris / Lyndsey\>.
 
 ----
 
@@ -289,11 +285,11 @@ The reason why tried to capture this as we went, is because "the process of crea
 
 
 
-Failing to make the 'internal model of preregistration' clear to users is a critical source of confusion among preregistration template users that may impede preregistration uptake, and undermine the ability of the template to achieve its objectives (Pu et al. 2020). Consequently, in this section we articulate the inner conceptual model of preregistration driving the content, structure and our proposed procedure for implementing the template. 
+Failing to make the 'internal model of preregistration' clear to users is a critical source of confusion among preregistration template users that may impede preregistration uptake, and undermine the ability of the template to achieve its objectives (Pu et al. 2020). Consequently, in this section we articulate the inner logic of preregistration the preregistration template that informs the the content, structure of the template, and our proposed procedure and interface for implementing the template.
 
    
 
-\*\*Modelling workflows for Ecology and Conservation\*\*
+**Modelling workflows for Ecology and Conservation**
 
    
 
@@ -305,7 +301,7 @@ Table X, below, describes the 'model scientific workflow' underpinning the templ
 
    
 
-\*\*Iterative Cycle of Model Development\*\*
+**Iterative Cycle of Model Development**
 
    
 
@@ -325,11 +321,28 @@ Translating the preregistration process to a modelling research context is thus 
 
    
 
-\*\*The \*checking\* problem\*\*
+__The *checking* problem__
 
    
 
-Model Checking:
+The iterative nature of model construction and development complicates what is known as the preregistration *checking problem* even further. The process of checking a preregistered study involves comparing a manuscript to its preregistration, to verify that the study and analyses are conducted as specified in the preregistration Pu *et al.* Typically journal editors and reviewers might engage in checking, however, sometimes authors might too. Pu et al found that the authors engaged in a linear and thorough checking process, but reviewers on editors were not nearly "as exhaustive with checking". 
+
+
+
+The two main issues with checking are;  *And the 'checking problem' --- how do we evaluate studies that have used preregistrations, when should they be compared against their preregistration, and* 
+
+
+
+*to what detail should a reviewer or editor check the preregistration?*
+
+
+
+   
+
+\- how to evaluate studies that have used preregistrations and when they should be compared against their preregistration\> 
+
+*How do we  facilitate checking? And the "checking problem"* "to what detail should or does an author or reviewer / editor check? 
+
 
 "Existing preregistration formats are designed primarily for authors to quickly input the desired information, but may verge on being write-only media: they are ill-suited to the checking task that reviewers, paper readers, and in some cases even authors themselves might perform. Thus, we recommend exploring designs that (1) make relevant preregistration content easier to *query* and (2) encourage wider *coverage* of preregistration content during review." Pu et al. 
 
@@ -337,7 +350,12 @@ Model Checking:
 
    
 
-\- how to evaluate studies that have used preregistrations and when they should be compared against their preregistration\> This process of "checking" a preregistered study is provisionally defined by Pu et al. as "comparing a manuscript to its preregistration and verifying that the study and the analyses are conducted as the preregistration has specified." Who engages in 'checking' a preregistration? "Authors, reviewers and editors may all engage in checking." *How do we  facilitate checking? And the "checking problem"* "to what detail should or does an author or reviewer / editor check? Pu et al found that the authors engaged in a linear and thorough checking process, but reviewers on editors were not nearly "as exhaustive with checking". How can we facilitate the process? They found that if the "paper is very specific to referring to parts of the preregistration" then this made it easier for reviewers and editors to check. Maybe we could do something else, rather than get the paper to refer to the parts of the preregistration (but I think we should do this with Chris anyway). If we propose the norm of using GitHub to create and check the preregistration., I think this could be a good way of getting around this checking problem. At the very end we have a 'how to box' targeted at authors. And then maybe we have a box targeted at reviewers? Not sure, maybe just focus this paper on authors and the process of creating and using a preregistration.
+
+*The question we face in terms of designing the format of the template is, how do we facilitate checking?*
+
+   
+
+How can we facilitate the process? They found that if the "paper is very specific to referring to parts of the preregistration" then this made it easier for reviewers and editors to check. Maybe we could do something else, rather than get the paper to refer to the parts of the preregistration (but I think we should do this with Chris anyway). If we propose the norm of using GitHub to create and check the preregistration., I think this could be a good way of getting around this checking problem. At the very end we have a 'how to box' targeted at authors. And then maybe we have a box targeted at reviewers? Not sure, maybe just focus this paper on authors and the process of creating and using a preregistration.
 
    
 
@@ -486,7 +504,7 @@ The GitHub repository storing the template and infrastructure implementing the i
 
    
 
-![Living Preregistration Workflow - Research Workflow for implementing a 'living' preregistration in a modelling context](./figures/LivingPreregistration.png)
+!\[Living Preregistration Workflow - Research Workflow for implementing a 'living' preregistration in a modelling context](./figures/LivingPreregistration.png)
 
 ----
 
@@ -508,21 +526,34 @@ The GitHub repository storing the template and infrastructure implementing the i
 
 ***TIME***
 
-- "A natural consequence of increased transparency, is that preregistrations become longer as more possible decisions are made transparent: *increased transparency* implies *increased length*. This trade-off was something we considered important during the design phase, and deciding what was in and out of scope for the preregistration was particularly challenging. Some authors agreed that it did add extra time, but that it was worth it.
+\- "A natural consequence of increased transparency, is that preregistrations become longer as more possible decisions are made transparent: *increased transparency* implies *increased length*. This trade-off was something we considered important during the design phase, and deciding what was in and out of scope for the preregistration was particularly challenging. Some authors agreed that it did add extra time, but that it was worth it.
 
-- However, as Pu et al. note, some participants who were both authors and reviewers didn't think that the time-costs of preregistration in research were significantly greater than not preregistering research. Instead they thought of the preregistration process invoking a 'time shift', that brought 'decision points' before data collection instead of during analysis." P.19. In addition, "some reviewers thought that preregistration saves them the time they might have spent wondering about undisclosed flexibilities when working on an un-preregistered paper."
+\- However, as Pu et al. note, some participants who were both authors and reviewers didn't think that the time-costs of preregistration in research were significantly greater than not preregistering research. Instead they thought of the preregistration process invoking a 'time shift', that brought 'decision points' before data collection instead of during analysis." P.19. In addition, "some reviewers thought that preregistration saves them the time they might have spent wondering about undisclosed flexibilities when working on an un-preregistered paper."
 
 **PURPOSE AND DESIGN IMPLEMENTATION**
 
-- Competing objectives? Although the purposes of preregistration are not mutually exclusive - as we have decided the purpose of preregistration we have defined here is to both delimit/state flexibility, *and* be flexible. However, "the preference of one purpose over another can have tangible effects on the design of preregistration" p15.
+\- Competing objectives? Although the purposes of preregistration are not mutually exclusive - as we have decided the purpose of preregistration we have defined here is to both delimit/state flexibility, *and* be flexible. However, "the preference of one purpose over another can have tangible effects on the design of preregistration" p15.
 
-- **Front-heavy research timeline:** As a way of providing better decision-making to authors. By shifting decision-making to the front. Front-heavy research process. Delays the start of analysis, but results in better decision-making, because the decision-making is more carefully reasoned. But not sure want to set this out as a 'purpose' of the template, or just have this as a section in the reflection towards the end of the manuscript (will depend on how I set up the angle, and the structure of the paper). At the moment, this is my hypothesis, is that it can improve the process, but we'd need to reflect on this. And I think we could do that at the end of the manuscript.
+\- **Front-heavy research timeline:** As a way of providing better decision-making to authors. By shifting decision-making to the front. Front-heavy research process. Delays the start of analysis, but results in better decision-making, because the decision-making is more carefully reasoned. But not sure want to set this out as a 'purpose' of the template, or just have this as a section in the reflection towards the end of the manuscript (will depend on how I set up the angle, and the structure of the paper). At the moment, this is my hypothesis, is that it can improve the process, but we'd need to reflect on this. And I think we could do that at the end of the manuscript.
 
 This relates to what Pu et al. found where participants 'felt their research workflow improved by having preregistration as a "forcing function" \[...\] For example, writing down study plans ahead of time might prompt them to think more thoroughly and to anticipate flexibilities / researchers' degree of freedmen advance.' (Page 13). For reviewers 'participant reports that pregistration makes the review process "easier".'
 
    
 
-**DEALING WITH CONFLICTING NORMS IN CREATING & USING the PREREGISTRATION TEMPLATE** 
+**DEALING WITH CONFLICTING NORMS IN CREATING & USING the PREREGISTRATION TEMPLATE**
+
+   
+
+**------**
+
+   
+
+**"**We fear that preregistration will lessen the engagement of analysts with data and that it represents a step back toward the punch card style of analysis." MacEachern, S. N., & Van Zandt, T. (2019). Preregistration of Modeling Exercises May Not Be Useful. Comput Brain Behav, 2(3-4), 179-182. doi:10.1007/s42113-019-00038-x
+
+   
+
+Ask Chris to reflect on the preregistration process and whether this is true or not. I don't think it is true. I think the opposite is true. This "Punchcard" style analysis they describe is probably actually an artefact of the way statistical analyses are done in science these days - science is a sausage factory of p-values. 
+
 
 --------------------------
 # References
