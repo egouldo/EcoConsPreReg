@@ -298,7 +298,6 @@ HF- I feel that this belongs at the end of section 1
 
 
 ## 6.2 Synthesis of model application results	
-HF- I think this should stay here at the end
 *Specify how you will map, plot or otherwise display and synthesise the results of scenario and model analyses. Explain how will they support meaningful analysis and interpretation to aid in answering the analytical objectives and modelling context specified in the problem formulation phase.Explain how you will analyse the model analysis output to answer your analytical objectives. For instance, describe any trade-off or robustness analyses you will undertake to help evaluate and choose between different alternatives in consultation with experts or decision-makers.*
 
 ## 6.3 Consultation with Experts, Clients, Stakeholders	
