@@ -32,7 +32,7 @@ output:
 
 **Keywords** *(no more than 8 for MEE).***:** *preregistration, preregistration template, modelling, applied ecology, conservation decision-making, metaresearch, reproducibility, non-hypothesis testing(?).*
 
-update for test knit
+
 ----
 
 
@@ -143,6 +143,12 @@ Consequently, we aim not just to simply design a new template, deciding on its s
 
 
 
+**Identifying** 
+
+   
+
+   
+
 What attributes do we aim for the template
 
 A) an interface that ensures ease of use for the creator of a preregistration
@@ -167,7 +173,7 @@ c) Use this knowledge to inform the design of the templates so they meet their i
 
    
 
-**Activity 1 - Capturing Workflows and Decision Steps**
+**Activity 1 - Capturing Scientific Workflows and Decision Points**
 
    
 
@@ -176,6 +182,8 @@ The objective of this activity was to capture critical decision-steps in the des
    
 
 In the second part of this exercise, we came together as a group to collate each of the steps in our personal workflows onto a group workflow template This template was prepared earlier (\<specific OSF link to the document\>), and consisted of several key 'phases' of the scientific process, with decision-steps grouped under each phase. The development of the draft modelling workflow was derived from previous work by Gould et al. *in prep.,* whilst the field sampling workflow was created specifically for this exercise. We sorted and categorised each decision-step as belonging to a particular workflow phase. Next we grouped similar decision-steps that could be included as a single item on a preregistration template. At the end of this process we reviewed the suggested phases on the workflow to assess whether phases needed further discretisation, aggregation, removal, or amendment. 
+
+   
 
 **Activity 2 - Challenges and Solutions to Preregistration in Ecology**
 
@@ -195,59 +203,47 @@ Questions included: should we and how can we change the medium of the template a
 
 
 
-All workshop outputs can be found here (\<Link to Workshop Outputs OSF repository\>). 
+**1\. Synthesise Workshop Outputs: Identify Scientific Workflows for ecological modelling, both real/in-practice and idealised.**
 
    
 
-After the workshop, data sheets from activity 1 were collated and coded using atlas.TI. 
+The goal of this analysis task was to generate a complete draft workflow for both fieldwork and modelling and data-analysis that will form the basis of the final preregistration templates. We used a combination of inductive and deductive coding \<is this what it is called\> to analyse the workshop outputs and generate a model scientific workflow for model-based research that would constitute the presumed scientific workflow that would be used to guide the structure of the preregistration template. We collated and coded the workshop outputs using \<atlas.TI, insert software citation and version\>, \<a qualitative coding software\>. All workshop outputs can be found here (\<Link to Workshop Outputs OSF repository\>). 
+
+A preliminary idealised scientific workflow for ecological modelling research was synthesised after reviewing the literature on 'good modelling practice' and structured decision-making literature in ecological management. Steps in the workflow were coded and broken down into 'phases' consisting of 'steps' and 'substep' \<insert link to appendices or just present the final?\>. Each decision-point in the personal modelling workflows generated from activity one of the collaborative workshop were coded as belonging to one of these phases, steps and substeps. We revised the coding structure \<inductively (is this the word)\>, according to patterns and themes identified across multiple personal workflows. For example, we added the final phase \<name for last phase\>, which aimed to capture the fact that analysts usually present the results of their modelling to clients, decision-makers or other stakeholders that must interpret the evidence and are responsible for making management decisions. In this way, we identified a common or generalised workflow from different types of applied ecological modelling projects that synthesised both \<idealised norms and norms of practice, Pu et al., see other philosophy of sci refs\>. This workflow is used to provide structure and content to the preregistration template.
 
    
 
-The point of this activity is to build on the suggested workflows for both fieldwork and modelling to provide structure and content to the preregistration templates.
+**2\. Translating Workflows into Preregistration Templates**
 
    
 
-At the end of this exercise we expect to:
+We translated the model-based workflow identified in part I of workshop analysis into a text-based preregistration template. Reflecting on existing templates \<link to OSF repository of templates \>, we identified common elements / units of preregistration templates that we mapped onto the generalised modelling workflow identified in part I of workshop output analysis. We synthesised the following ontologies:
 
    
 
-Have a complete draft workflow for both fieldwork and modelling and data-analysis that will form the basis of the final preregistration templates.
+1\. Decision Phase - each has a "title" and "description" or "definition", steps are grouped under phases. \<Note, that these are being scrapped from the template and are turned into tool-tips\>
+
+2\. Decision Step - each has a "title" and "description" or "definition" choices are grouped into 'steps'. Corresponds to an activity or set of activities in a scientific workflow. \<again, these are being scrapped and turned into tool-tips.\>
+
+3\. Choices ---\> each 'choice' corresponds to a uniquely numbered item on the PRT requiring a response from user. The style should be in the form of a directive or a question. E.g. "explain how you will do xyzzy". Or "What performance measure will you use for assessing 'goodness of fit'?"
 
    
 
-Part I: Identify Scientific Workflows for ecological modelling, both real/in-practice and idealised.
+**3\. Designing a new methodology for implementing preregistration in model-based research**
 
    
 
-Objective: Identify common workflow.
+We analysed the outputs of Activity 2 in the collaborative workshop identifying barriers and solutions to undertaking preregistration in model-based research and to broader adoption of preregistration in the applied ecology and modeller communities of practice to design a preregistration procedure appropriate for this research domain. We considered such questions as:
+
+\- What should a research workflow look like for a modeller in an applied ecology setting who wishes to preregister their work?
+
+\- How do we accommodate the iterative cycle of model development into the preregistration process?
+
+\- At what stage in a modelling or structured decision-making process should preregistration begin?
 
    
 
-Step 1: As a group, reflect on personal experience to identify unique decision-steps. Can a generalised / common workflow across individuals be derived? 
-
-   
-
-Step 2: Search literature to to identify an idealised scientific workflow for ecological modelling research. 
-
-   
-
-Step 3: Code workflows identified in step 1 using codes identified in step 3. Revise common workflow.
-
-   
-
-Part II: Translating Workflows into Preregistration Templates
-
-   
-
-We translated the workflows into the preregistration template by using the following ontology:
-
-   
-
-1\. Decision Phase - each has a "title" and "description" or "definition", steps are grouped under phases. 
-
-2\. Decision Step - each has a "title" and "description" or "definition" choices are grouped into 'steps'. Corresponds to an activity or set of activities in a scientific workflow.
-
-3\. Choices ---\> each 'choice' corresponds to a uniquely numbered item on the PRT requiring a response from user. The style should be in the form of a directive or a question. E.g. "explain how you will do xyzzy". Or "What performance measure will you use for assessing 'goodness of fit'?" In addition, we turned to existing preregistration templates to guide the wording  of some items.
+We then used 'in situ evaluation' to test and evaluate both the template and procedure design.
 
 
 ### 'In-situ' Evaluation and Testing of Templates ###
@@ -273,7 +269,13 @@ Modellers \<here, here, and here\> have expressed concern about preregistration 
 
 We tested and evaluated the templates on the ability to meet these criteria by using a model-based research case-study \<see box\>.  Rather than 'digging back' through the version history of a completed preregistration to ask researchers about the process and how it had been developed in detail \<like Pu et al\>, we chose to leverage the version-control and collaborative project management features of GitHub \<cite\> as a tool for documenting both the analytic decisions of the researcher, and for using the preregistration process itself to 'live-develop' the template template. For example, if it turned out that we had missed an important item, or perhaps the phrasing of an item or the order and structure of the template needed to change whilst in the process of completing the preregistration, the suggested change, and its justification would be both recorded in GitHub and linked to the actual preregistration. Since *Pu et al* (p16). Found that the process of creating a preregistration is 'difficult to reconstruct with interview questions alone', we we aimed to capture the analysts 'thinking in the moment' by using comments and GitHub issues as to why a particular decision about the template item inclusion and specification should change. \<How we did this using GitHub:How to present this material? Link to the wiki issue and instructions to users?\> 
 
-Finally, we supplemented this 'in situ' testing and evaluation process with a semi-structured interviews in order to capture more detailed reflections of the analysts. This was because analysts were often under strict time-constraints, trying to meet their deliverables for the project. In addition, the process of preregistration was a new and unfamiliar task.
+Finally, we supplemented this 'in situ' testing and evaluation process with a semi-structured interviews in order to capture more detailed reflections of the analysts. This was because analysts were often under strict time-constraints, trying to meet their deliverables for the project. In addition, the process of preregistration was a new and unfamiliar task. 
+
+   
+
+\<WHAT DID WE EVALUATE\>
+
+NOT JUST THE TEMPLATES THEMSELVES BUT ALSO THE PROCEDURE, and the INTERFACE. I.e. bc *in situ evaluation is used to inform the design of a new* interface *- the shiny app...*
 
 \<TEXT HERE DESCRIBING THE ENVIRONMENTAL FLOWS MANAGEMENT PROBLEM + RESEARCH PROBLEM, to be completed by Chris / Lyndsey\>.
 
@@ -484,6 +486,14 @@ This will be a box or a table with numbered items, with just the preregistration
 
 
 
+Reflecting on the in situ evaluation - shiny app
+
+   
+
+*And the in situ evaluation is used to inform the design of a new* interface *- the shiny app.*
+
+   
+
 The shiny app is intended as an interface for authors and analysts to respond to template items and input their planned decisions to complete a preregistration for their study. In addition to having directive text and questions for each item, there is also 'help-text' consisting of descriptions of the modelling phases and steps, as well as definitions and references to supporting resources, such as decision-tools for choosing and justifying methodological choices \<reference to image with shiny app\>
 
 Once the preregistration has been completed \<for the time being, it doesn't actually have to be complete, see 'living preregistration' section\>, the author is able to 'generate a report'. The report removes any supporting text in the user interface, and generates a text-based document, containing the preregistration template items and any responses to them by the author or analyst. This feature is targeted towards reviewers and editors, providing a more condensed version of the preregistration for greater ease of reading.
@@ -504,7 +514,7 @@ The GitHub repository storing the template and infrastructure implementing the i
 
    
 
-!\[Living Preregistration Workflow - Research Workflow for implementing a 'living' preregistration in a modelling context](./figures/LivingPreregistration.png)
+![Living Preregistration Workflow - Research Workflow for implementing a 'living' preregistration in a modelling context](./figures/LivingPreregistration.png)
 
 ----
 
@@ -552,7 +562,7 @@ This relates to what Pu et al. found where participants 'felt their research wor
 
    
 
-Ask Chris to reflect on the preregistration process and whether this is true or not. I don't think it is true. I think the opposite is true. This "Punchcard" style analysis they describe is probably actually an artefact of the way statistical analyses are done in science these days - science is a sausage factory of p-values. 
+Ask Chris to reflect on the preregistration process and whether this is true or not. I don't think it is true. I think the opposite is true. This "Punchcard" style analysis they describe is probably actually an artefact of the way statistical analyses are done in science these days - science is a sausage factory of p-values.  
 
 
 --------------------------
