@@ -67,7 +67,6 @@ A comment:This section feels a bit too big and confusing from my perspective and
 
 *The outcomes should speak directly to the analytical objectives identified in 1.3.1. Outcomes could be qualitative or quantitative. For example, you might be using your model in a scenario analysis to determine which management decision is associated with minimum regret or the highest likelihood of improvement.*
 To be honest, I don't know how I might apply this to my work or any future works. Maybe I do not have enough knowledge of this type of research to apply it to my basic ecology research. But this isn't to say it's not important, I just wonder if there's a way to make this accessible to non-desicion or modelling peeps. Like, how would I apply it to the woodland condition analysis? 
-HF - Made the changes above in response to the comment.... do they help? If not, I'm struggling to understand exactly what this step is achieving.
 
 ## 1.4 Define candidate decisions and method of identifying relevant management actions	
 
