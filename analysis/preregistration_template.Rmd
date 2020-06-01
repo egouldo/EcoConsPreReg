@@ -106,7 +106,6 @@ To be honest, I don't know how I might apply this to my work or any future works
 ## 2.4 Define prior knowledge, data specification and evaluation	
 
 *Collect, process and prepare data available for parameterisation, determining model structure, and for scenario analysis.*
-HF - this isn't super clear to me. Maybe we need more clarification here or an example
 
 ### 2.4.1 Collate available data sources that could be used to parameterise or structure the model	
 
