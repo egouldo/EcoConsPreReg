@@ -87,7 +87,7 @@ HF- Love this step
 *Describe what method you will use to elicit or identify the conceptual model. Some common methods include interviews, drawings, and mapping techniques including influence diagrams, cognitive maps and Bayesian belief networks (Moon et al. 2019). (Libby, to provide link to any structured expert elicitation methods?).While it is difficult to decide and justify which method is most appropriate, however Moon et al. (2019) provide guidance addressing this methodological question. Finally, how do you intend on representing the final conceptual model? This will likely depend on the method chosen to elicit the conceptual model.*
 HF- not sure if this step is required - I think we should expect people to have already done this bit before they start their preregistration... Or we could put it into 2.0 as an addendum - "if you haven't defined your conceptual model yet describe how you plan to do so."
 
-## 2.2 Specify key assumptions and uncertainties	
+## 2.2.1 Explain Critical Conceptual Design Decisions	
 
 *This step should list and explain the critical conceptual design decisions, including: spatial and temporal scales, selection of entities and processes, representation of stochasticity and heterogeneity, consideration of local versus global interactions, environmental drivers, etc. [@Grimm:2014es]. The influence of particular theories, concepts, or importantly, earlier models, should be explained and justified against alternative conceptual design decisions that might lead to alternative model structures [@Grimm:2014es].*
 
