@@ -138,7 +138,6 @@ To be honest, I don't know how I might apply this to my work or any future works
 ### 2.4.3 Describe any data exploration or preliminary data analyses.	
 
 *In most modelling cases, it is necessary to perform preliminary analyses to understand the data and check that assumptions and requirements of the chosen modelling procedures are met. Data exploration prior to model fitting or development may include exploratory analyses to check for collinearity, spatial and temporal coverage, quality and resolution, outliers, or the need for transformations [@Yates2018]. Describe how you will summarise and explore your data, and explain what method you will use (graphical, tabular or otherwise) to represent your data and any analyses. Specify what you intend to find out or hope to learn from each data exploration analysis.*
-HF- should we include something here asking people to specify what they intend to find out from the data exploration?
 
 ### 2.4.4 Data Evaluation	
 
@@ -154,7 +153,7 @@ HF- should we include something here asking people to specify what they intend t
 
 *Describe how your conceptual model will be critically evaluated. Evaluation includes both the completeness and suitability of the overall model structure.*
 
-*How will any simplifying assumptions be critically assessed [@Augusiak:2014gz]?* HF- I'm not sure how to answer this one. Maybe an example would help?
+*How will any simplifying assumptions be critically assessed [@Augusiak:2014gz]?*
 
 *†Explain whether this process will include consultation or feedback from a client, manager, or model user.*
 
@@ -179,16 +178,20 @@ HF- this is great. Only slight concern is the deceptively difficult task that la
 
 ### 3.2.2 Choose model family	
 
-*Specify which family of statistical distributions you will use in your model, and describe any transformations, or link functions. Justify your decision based on the purpose, objectives, prior knowledge and logistical constraints (Jakeman, 2006) specified in the problem formulation phase.* HF- great
+*Specify which family of statistical distributions you will use in your model, and describe any transformations, or link functions. Justify your decision based on the purpose, objectives, prior knowledge and logistical constraints (Jakeman, 2006) specified in the problem formulation phase.*
 
-*Include in your rational for selection, detail about which variables the model outputs are sensitive to, what aspects of their behaviour are important, and any associated spatial or temporal dimensions in sampling.* HF - I feel like this belongs somewhere else. I'm not sure where thinking about which variables the model outputs are sensitive to would relate to me choosing between logistic and cloglog models etc
+*Include in your rational for selection, detail about which variables the model outputs are sensitive to, what aspects of their behaviour are important, and any associated spatial or temporal dimensions in sampling.* 
 
 
 ### 3.2.3 Choose model features	
 
 *Specify which variables are included in the model, and the nature of their treatment (e.g. lumped/distributed, linear/non-linear, stochastic/deterministic, Jakeman, 2006).*
 
-*Specify model structural features, including:- the functional form of interactions,- data structures- measures used to specify links,- any bins or discretisation of continuous variables.*
+*Specify model structural features, including:
+- the functional form of interactions,
+- data structures
+- measures used to specify links,
+- any bins or discretisation of continuous variables.*
 
 ## 3.3 Choose approach for identifying model structure and parameters	
 
@@ -214,16 +217,13 @@ HF- I think that it might be double dipping to include structure here as well as
 ## 3.6 Specify formal model	
 
 *Once critical decisions have been made about the approach and method of model specification,¬†translate the conceptual model into the quantitative model. For data-driven and model-selection approaches that determine model structure and parameters, describe any initial model specifications and parameterisations, including for any tune-in parameters. (Should this go here or in model calibration?)*
-HF- I thought that this had already been covered in 3.2 and 3.3. Help me understand how this is distinct?
 
 # 4.0 Model Calibration, Model Fitting & Checking
 
-*This phase involves fitting the formally defined model to data and checking and testing the fitted model (what should go in thisphase if using a numerical or mathematical, but not correlative model or how could we change the wording to make this optional if not relevant?)*
-HF- I dont think this paragraph is necessary
 
 ## 4.1 Model calibration and validation scheme	
 
-*Describe how you will validate and check the calibration of the model. The model may be tested on data independent of those used to parameterise the model (external validation), or the model may be cross-validated on random sub-samples of the data used to parameterise the model (internal cross-validation)  [@Yates2018;[@Barnard2019]. Justify your choice*
+*Describe how you will validate and check the calibration of the model. The model may be tested on data independent of those used to parameterise the model (external validation), or the model may be cross-validated on random sub-samples of the data used to parameterise the model (internal cross-validation)  [@Yates2018;@Barnard2019]. Justify your choice*
 
 ## 4.1.2 Describe validation data 
 
@@ -233,13 +233,11 @@ HF- I dont think this paragraph is necessary
 
 ## 4.2 Implementation verification	
 
-*What Quality Assurance measures will you take to verify the model has been correctly implemented? Tests could include syntax checking of code,¬†and code reviews by peers. Checks for verification implementation should include i) thoroughy checking for bugs or programming errors, ¬†and ii) whether the implemented model performs as dictated by the model description  [@Grimm:2014es]. Specifying up front quality assurance tests for implementation verification may help to avoid selective debugging.*
-HF- I've tweaked this section to make it more distinct from 4.3
+*What Quality Assurance measures will you take to verify the model has been correctly implemented? Tests could include syntax checking of code, and code reviews by peers. Checks for verification implementation should include i) thoroughly checking for bugs or programming errors, and ii) whether the implemented model performs as dictated by the model description  [@Grimm:2014es]. Specifying up front quality assurance tests for implementation verification may help to avoid selective debugging.*
 
 ## 4.3 Model checking	
 
 *"Model Checking" goes by many names ("conditional verification", "quantitative verification", "model output verification" <cite>), and refers to a series of analyses that assess a model's performance in representing the system of interest [@Conn:2018hd].  Model checking therefore heps diagnose assumption violations, and reveals where a model might need to be altered to better represent the data, and therefore system [@Conn:2018hd]. Quantitative model checking diagnostics include goodness of fit, tests on residuals or errors, such as for heteroscedascity, cross-correlation, and autocorrelation [@Jakeman:2006ii].*
-HF- I've oved some of the information otu of 4.3 and put it in the sub headings so that this paragraph isn't necessary
 
 ### 4.3.1 Quantitative Model Checking	
 
@@ -247,7 +245,7 @@ HF- I've oved some of the information otu of 4.3 and put it in the sub headings 
 
 ### 4.3.2 Qualitative Model Checking	
 
-*This step is largely informal and case-specific, but requires ‚Äòface validation' with model users / clients / managers who aren't involved in the development of the model to assess whether the interactions and outcomes of the model are feasible an ddefensible  [@Grimm:2014es]. This process could be called a ‚Äúlaugh test" or a ‚Äúpub test, and in addition to checking the model's believability, it builds the client's confidence in the model [@Jakeman:2006ii].¬†Face validation could include structured walk-throughs, or presenting descriptions, visualisations or summaries of model results to experts for assessment. Briefly explain how you will qualitatively check the model, and whether + how you will include users and clients in the process.*
+*This step is largely informal and case-specific, but requires ‚ 'face validation' with model users / clients / managers who aren't involved in the development of the model to assess whether the interactions and outcomes of the model are feasible an defensible  [@Grimm:2014es]. This process could be called a ‚"laugh test" or a "pub test" and in addition to checking the model's believability, it builds the client's confidence in the model [@Jakeman:2006ii]. Face validation could include structured walk-throughs, or presenting descriptions, visualisations or summaries of model results to experts for assessment. Briefly explain how you will qualitatively check the model, and whether and how you will include users and clients in the process.*
 HF- great section
 
 # 5.0 Model Validation and Evaluation
