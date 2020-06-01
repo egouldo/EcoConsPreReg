@@ -80,7 +80,6 @@ HF - Made the changes above in response to the comment.... do they help? If not,
 # 2.0	Define Conceptual Model
 
 *Conceptual models underpin the formal or quantitative model (Cartwright et al. 2016). The conceptual model describes the biological mechanisms relevant to the ecological problem and should capture basic premises about how the target system works, including any prior knowledge and assumptions about system processes. Conceptual models may be representeed in a variety of formats, such as influence diagrams, linguistic model block diagram or bond graphs, and these illustrate how model drivers are linked to both outputs or observed responses, and internal (state) variables (Jakeman, Letcher, and Norton, 2006).*
-HF- Love this step
 
 ## 2.1 Choose elicitation and representation method	
 
