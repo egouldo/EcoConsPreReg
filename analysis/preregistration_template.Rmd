@@ -133,7 +133,7 @@ To be honest, I don't know how I might apply this to my work or any future works
 
 *Describe any data preparation and processing steps, including manipulation of environmental layers, e.g. standardisation and geographic projection.* 
 
-*Describe how you will separate and distinguish between raw data, manipulated data, and outputs from modelling or any analyses of the model.* HF - Not sure exactly what this means
+*Describe how you will separate and distinguish between raw data, manipulated data, and outputs from modelling or any analyses of the model.*
 
 ### 2.4.3 Describe any data exploration or preliminary data analyses.	
 
