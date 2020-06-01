@@ -71,7 +71,7 @@ HF - Made the changes above in response to the comment.... do they help? If not,
 
 ## 1.4 Define candidate decisions and method of identifying relevant management actions	
 
-*Candidate decisions should be investigated and are specified a priori. Depending on the modelling context, they may be specified by stakeholders, model users or the analyst[@Moallemi2019].¬†Describe the method used to identify relevant management actions.*
+*Candidate decisions should be investigated and are specified a priori. Depending on the modelling context, they may be specified by stakeholders, model users or the analyst[@Moallemi2019]. Describe the method used to identify relevant management actions.*
 
 ## 1.5 Specify scenarios	
 
