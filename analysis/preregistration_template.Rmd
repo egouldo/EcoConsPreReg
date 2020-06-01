@@ -137,7 +137,7 @@ To be honest, I don't know how I might apply this to my work or any future works
 
 ### 2.4.3 Describe any data exploration or preliminary data analyses.	
 
-*In most modelling cases, it is necessary to perform preliminary analyses to understand the data and check that assumptions and requirements of the chosen modelling procedures are met. Data exploration prior to model fitting or development may include exploratory analyses to check for collinearity, spatial and temporal coverage, quality and resolution, outliers, or the need for transformations [@Yates2018]. Describe how you will summarise and explore your data, and explain what method you will use (graphical, tabular or otherwise) to represent your data and any analyses.*
+*In most modelling cases, it is necessary to perform preliminary analyses to understand the data and check that assumptions and requirements of the chosen modelling procedures are met. Data exploration prior to model fitting or development may include exploratory analyses to check for collinearity, spatial and temporal coverage, quality and resolution, outliers, or the need for transformations [@Yates2018]. Describe how you will summarise and explore your data, and explain what method you will use (graphical, tabular or otherwise) to represent your data and any analyses. Specify what you intend to find out or hope to learn from each data exploration analysis.*
 HF- should we include something here asking people to specify what they intend to find out from the data exploration?
 
 ### 2.4.4 Data Evaluation	
