@@ -143,11 +143,17 @@ To be honest, I don't know how I might apply this to my work or any future works
 
 *Describe how you will determine how reliable the data is for the given purpose. Ideally, model input data should be internally consistent across temporal and spatial scales and resolutions, and appropriate to the problem at hand [@Mahmoud2009].* 
 ### 2.4.5 Data Evaluation: Data reliability reporting
+### 2.4.5. Data Evaluation: data reliability reporting
+
 *Document any issues with data reliability. This is important because data quality and ecological relevance might be constrained by measurement error, inappropriate experimental design, and heterogeneity and variability inherent in ecological systems [@Grimm:2014es].*
 
-*Data Exclusion: How will you determine what data, if any, will be excluded from your analyses? How will outliers be handled? Describe rules for identifying outlier data, and for excluding a site, transect, quadrat, year or season, species, trait, etc.*
+### 2.4.6. Data evaluation: data exclusion
 
-*Missing data: How will you identify and deal with incomplete or missing data?*
+*How will you determine what data, if any, will be excluded from your analyses? How will outliers be handled? Describe rules for identifying outlier data, and for excluding a site, transect, quadrat, year or season, species, trait, etc.*
+
+### 2.4.7 Data Evaluation: Missing Data
+
+*How will you identify and deal with incomplete or missing data?*
 
 ## 2.5 Conceptual model evaluation	
 
