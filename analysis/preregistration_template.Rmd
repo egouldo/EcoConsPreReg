@@ -90,7 +90,6 @@ HF- not sure if this step is required - I think we should expect people to have 
 
 *This step should list and explain the critical conceptual design decisions, including: spatial and temporal scales, selection of entities and processes, representation of stochasticity and heterogeneity, consideration of local versus global interactions, environmental drivers, etc. [@Grimm:2014es]. The influence of particular theories, concepts, or importantly, earlier models, should be explained and justified against alternative conceptual design decisions that might lead to alternative model structures [@Grimm:2014es].*
 
-HF comment: the above part of 2.2 seems like a big ask. I think we want to achieve that we will need to break it down further. Would it be sufficient to just have the bit below?
 
 *Specify key assumptions and uncertainties underlying the model's design. Describe how uncertainty and variation will be represented in this model. This includes both exogenous uncertainties affecting the system, parametric uncertainty in input data and structural / conceptual nonparametric uncertainty in the model [@Moallemi2019].*
 
