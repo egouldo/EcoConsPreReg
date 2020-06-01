@@ -105,8 +105,6 @@ HF- not sure if this step is required - I think we should expect people to have 
 - *What variables are indice or surrogate measures of variables that we cannot or have not measured?*
 - *In what ways do we expect these variables to interact (model structures)?* 
 
-HF- love this step
-
 ## 2.4 Define prior knowledge, data specification and evaluation	
 
 *Collect, process and prepare data available for parameterisation, determining model structure, and for scenario analysis.*
