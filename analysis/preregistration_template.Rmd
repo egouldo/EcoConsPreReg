@@ -83,7 +83,6 @@ To be honest, I don't know how I might apply this to my work or any future works
 ## 2.1 Choose elicitation and representation method	
 
 *Describe what method you will use to elicit or identify the conceptual model. Some common methods include interviews, drawings, and mapping techniques including influence diagrams, cognitive maps and Bayesian belief networks (Moon et al. 2019). (Libby, to provide link to any structured expert elicitation methods?).While it is difficult to decide and justify which method is most appropriate, however Moon et al. (2019) provide guidance addressing this methodological question. Finally, how do you intend on representing the final conceptual model? This will likely depend on the method chosen to elicit the conceptual model.*
-HF- not sure if this step is required - I think we should expect people to have already done this bit before they start their preregistration... Or we could put it into 2.0 as an addendum - "if you haven't defined your conceptual model yet describe how you plan to do so."
 
 ## 2.2.1 Explain Critical Conceptual Design Decisions	
 
