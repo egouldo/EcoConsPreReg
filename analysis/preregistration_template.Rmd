@@ -120,7 +120,7 @@ To be honest, I don't know how I might apply this to my work or any future works
 - *Codebook and meta-data. If a Codebook or other meta-data is available, please link to it here and / or upload the document(s).*
 - *Prior work based on this dataset - Have you published / presented any previous work based on this dataset? Include any publications, conference presentations (papers, posters), or working papers (in-prep, unpublished, preprints) based ont this dataset you have worked on.* HF- Love this question
 - *Unpublished Prior Research Activity - Describe any prior but unpublished research activity using these data. Be specific and transparent.*
-- *Prior knowledge of the current dataset - Describe any prior knowledge of the dataset. Be specific.* HF- not sure how someone would answer this question. Maybe we need a more specific Q or an example
+- *Prior knowledge of the current dataset - Describe any prior knowledge of or interaction with the dataset before commencing this study. For example, have you read any reports or publications about this data? * 
 
 **Sampling Plan (For data you will collect) -- delete as appropriate.**
 
@@ -155,7 +155,7 @@ To be honest, I don't know how I might apply this to my work or any future works
 
 *How will any simplifying assumptions be critically assessed [@Augusiak:2014gz]?*
 
-*†Explain whether this process will include consultation or feedback from a client, manager, or model user.*
+*Explain whether this process will include consultation or feedback from a client, manager, or model user.*
 
 # 3.0	Formalise and Specify Model
 
@@ -246,7 +246,6 @@ HF- I think that it might be double dipping to include structure here as well as
 ### 4.3.2 Qualitative Model Checking	
 
 *This step is largely informal and case-specific, but requires ‚ 'face validation' with model users / clients / managers who aren't involved in the development of the model to assess whether the interactions and outcomes of the model are feasible an defensible  [@Grimm:2014es]. This process could be called a ‚"laugh test" or a "pub test" and in addition to checking the model's believability, it builds the client's confidence in the model [@Jakeman:2006ii]. Face validation could include structured walk-throughs, or presenting descriptions, visualisations or summaries of model results to experts for assessment. Briefly explain how you will qualitatively check the model, and whether and how you will include users and clients in the process.*
-HF- great section
 
 # 5.0 Model Validation and Evaluation
 HF- I think that this is covered in section 4 with descriptions of validation and checking. I'm not sure how this section is different.
@@ -254,7 +253,6 @@ HF- I think that this is covered in section 4 with descriptions of validation an
 *Model Validation & Evaluation - This phase consists of a suite of analyses that collectively inform the decision and whether and when a model is suitable to meet its intended purpose (Augusiak, Van den Brink and Grimm 2014). Errors in design and implementation of the model and their implication on the model output are assessed. Ideally independent data is used against the model outputs to assess whether the model output behaviour exhibits the required accuracy for the model's intended purpose. The outcomes of these analyses build confidence in the model applications and increase understandingof model strengths and limitations. Model evaluation including model analysis and other testing should complement model checking. It should evaluate model checking, and consider over-fitting and extrapolation. The higher the proportion of calibrated, or uncertain parameters, the greater the risk that the model seems to work correctly [‚Ä¶] but for the wrong reasons" Evaluation thus complements model checking because we can rule out the chance that the model fits the calibration data well, but has not captured the relevant ecological mecahnisms of the system (Grimm). Evaluation of model outputs against external data in conjunction with the results from model checking provide information about the structural realism and therefore credibility of the model (Grimm et al. 2014).*
 
 ## 5.1 Model output corroboration	
-HF- This sounds like a second round of validation. I dont think I've ever seen this happen.
 *Ideally, model outputs or predictions are compared to independent data and patterns that were not used to develop, parameterise, or verify the model. Testing against a dataset of response and predictor variables that are sptially and/or temporally independent from the training dataset¬†minimises the risk of artificially inflating model performance measures [@Araujo2019].State whether you will corroborate the model outputs on external data, and please document any independent validation data in step <2.4>.It is preferable that any independent data used for model evaluation remains unknown to modellers during the process of model building, please describe the relationship modllers have to model validation data, will independent datasets be known to any modeller or analyst involved in the model building process?Although the corroboration of model outputs against an independent validation dataset is considered the 'gold standard' for showing that a model properly represents the internal organisation of the system ), model validation is not always possible because empirical experiments are infeasible or model users are working on rapid-response time-frames ‚Äî hence, why ecologists often model in the first place (Grimm, et al. 2014. Independent predictions can instead be tested on submodels. Alternatively, patterns in model output that are robust and seem characteristic of the system can be identified and evaluated in consultation with the literature or by experts to judge how accurate the model's output is (Grimm et al.2014). If unable to evaluate the model outputs against independent data, explain why and explain what steps you will take to interrogate the model.*
 
 ## 5.2 Choose performance metrics and criteria
