@@ -26,7 +26,6 @@ A static document for this type of process doesn't really make sense. I propose 
 --------------------------------
 
 # 1. Problem Formulation
-***HF comment: I think this paragraph makes things more rather than less confusing - and I wonder if its necessary given that each point is stepped through below. I would recommend removing it***
 
 *Specifies the decision-making context in which the model will be used or the intended scope and context of conclusions. Important components include the decision maker and stakeholders (including experts) and their view on: i) the nature of the problem or decision addressed and how the scope of the modelling tool fits within the (broader) context (i.e. model purpose; ii) the spatial and temporal scales relevant to the decision context; iii) specified desired outputs; iv) role and inclusion in model development and testing; v) whether they forsee unnacceptable outcomes that need to be represented in the model (i.e. as constraints), and; vi) what future scenarios does the model need to account for (noting this may be revised later).  It should also provide a summary of the domain of applicability of the model, and reasonable extrapolation limits (Grimm et al. 2014).*
 
