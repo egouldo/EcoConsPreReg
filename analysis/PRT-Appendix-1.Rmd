@@ -1,17 +1,14 @@
 ---
-title: "Untitled"
-description: |
-  A new article created using the Distill format.
-author:
-  - name: ELise Gould 
+title: "PRT Appendix - 1"
 date: "`r Sys.Date()`"
-output: distill::distill_article
+output: github_document
 ---
+
+Table specifying phases, steps, and item inclusion with justifications from workshop and literature in support.
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
-
 
 ```{r}
 library(tidyverse)
@@ -44,5 +41,9 @@ PRT_items <-
 
 ```{r write-draft-template, echo = FALSE, eval = FALSE}
 write.csv(PRT_items, file = here("./outputs/draft_template.csv"))
+```
+
+```{r session-info, echo = TRUE, eval = TRUE}
+sessionInfo()
 ```
 

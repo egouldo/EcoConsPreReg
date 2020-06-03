@@ -8,4 +8,4 @@ This project and associated manuscript is in development, and may be cited as:
 
 "Gould, E., Jones, C.S., Good, M.K., Fraser, H., Rumpff, E., Fidler, F. (In Prep.) Designing, Evaluating and Testing Preregistration Templates for Ecology and Conservation"
 
-TBD, Draft manuscript is here: [https://egouldo.github.io/EcoConsPreReg/](https://egouldo.github.io/EcoConsPreReg/)
+Working Draft manuscript is here: [https://egouldo.github.io/EcoConsPreReg/](https://egouldo.github.io/EcoConsPreReg/)

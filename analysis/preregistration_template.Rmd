@@ -74,11 +74,10 @@ A comment:This section feels a bit too big and confusing from my perspective and
 
 *The outcomes should speak directly to the analytical objectives identified in 1.3.1. Outcomes could be qualitative or quantitative. For example, you might be using your model in a scenario analysis to determine which management decision is associated with minimum regret or the highest likelihood of improvement.*
 To be honest, I don't know how I might apply this to my work or any future works. Maybe I do not have enough knowledge of this type of research to apply it to my basic ecology research. But this isn't to say it's not important, I just wonder if there's a way to make this accessible to non-desicion or modelling peeps. Like, how would I apply it to the woodland condition analysis? 
-HF - Made the changes above in response to the comment.... do they help? If not, I'm struggling to understand exactly what this step is achieving.
 
 ## 1.4 Define candidate decisions and method of identifying relevant management actions	
 
-*Candidate decisions should be investigated and are specified a priori. Depending on the modelling context, they may be specified by stakeholders, model users or the analyst[@Moallemi2019].¬†Describe the method used to identify relevant management actions.*
+*Candidate decisions should be investigated and are specified a priori. Depending on the modelling context, they may be specified by stakeholders, model users or the analyst[@Moallemi2019]. Describe the method used to identify relevant management actions.*
 
 ## 1.5 Specify scenarios	
 
@@ -87,20 +86,19 @@ HF - Made the changes above in response to the comment.... do they help? If not,
 # 2.0	Define Conceptual Model
 
 *Conceptual models underpin the formal or quantitative model (Cartwright et al. 2016). The conceptual model describes the biological mechanisms relevant to the ecological problem and should capture basic premises about how the target system works, including any prior knowledge and assumptions about system processes. Conceptual models may be representeed in a variety of formats, such as influence diagrams, linguistic model block diagram or bond graphs, and these illustrate how model drivers are linked to both outputs or observed responses, and internal (state) variables (Jakeman, Letcher, and Norton, 2006).*
-HF- Love this step
 
 ## 2.1 Choose elicitation and representation method	
 
 *Describe what method you will use to elicit or identify the conceptual model. Some common methods include interviews, drawings, and mapping techniques including influence diagrams, cognitive maps and Bayesian belief networks (Moon et al. 2019). (Libby, to provide link to any structured expert elicitation methods?).While it is difficult to decide and justify which method is most appropriate, however Moon et al. (2019) provide guidance addressing this methodological question. Finally, how do you intend on representing the final conceptual model? This will likely depend on the method chosen to elicit the conceptual model.*
-HF- not sure if this step is required - I think we should expect people to have already done this bit before they start their preregistration... Or we could put it into 2.0 as an addendum - "if you haven't defined your conceptual model yet describe how you plan to do so."
 
-## 2.2 Specify key assumptions and uncertainties	
+## 2.2.1 Explain Critical Conceptual Design Decisions	
 
 *This step should list and explain the critical conceptual design decisions, including: spatial and temporal scales, selection of entities and processes, representation of stochasticity and heterogeneity, consideration of local versus global interactions, environmental drivers, etc. [@Grimm:2014es]. The influence of particular theories, concepts, or importantly, earlier models, should be explained and justified against alternative conceptual design decisions that might lead to alternative model structures [@Grimm:2014es].*
 
-HF comment: the above part of 2.2 seems like a big ask. I think we want to achieve that we will need to break it down further. Would it be sufficient to just have the bit below?
 
-*Specify key assumptions and uncertainties underlying the model's design. Describe how uncertainty and variation will be represented in this model. This includes both exogenous uncertainties affecting the system, parametric uncertainty in input data and structural / conceptual nonparametric uncertainty in the model [@Moallemi2019].*
+## 2.2.2 Specify key assumptions and uncertainties underlying the model's design.
+
+* Describe how uncertainty and variation will be represented in this model. This includes both exogenous uncertainties affecting the system, parametric uncertainty in input data and structural / conceptual nonparametric uncertainty in the model [@Moallemi2019].*
 
 ## 2.3 Identify predictor and response variables	
 
@@ -112,12 +110,9 @@ HF comment: the above part of 2.2 seems like a big ask. I think we want to achie
 - *What variables are indice or surrogate measures of variables that we cannot or have not measured?*
 - *In what ways do we expect these variables to interact (model structures)?* 
 
-HF- love this step
-
 ## 2.4 Define prior knowledge, data specification and evaluation	
 
 *Collect, process and prepare data available for parameterisation, determining model structure, and for scenario analysis.*
-HF - this isn't super clear to me. Maybe we need more clarification here or an example
 
 ### 2.4.1 Collate available data sources that could be used to parameterise or structure the model	
 
@@ -132,7 +127,7 @@ HF - this isn't super clear to me. Maybe we need more clarification here or an e
 - *Codebook and meta-data. If a Codebook or other meta-data is available, please link to it here and / or upload the document(s).*
 - *Prior work based on this dataset - Have you published / presented any previous work based on this dataset? Include any publications, conference presentations (papers, posters), or working papers (in-prep, unpublished, preprints) based ont this dataset you have worked on.* HF- Love this question
 - *Unpublished Prior Research Activity - Describe any prior but unpublished research activity using these data. Be specific and transparent.*
-- *Prior knowledge of the current dataset - Describe any prior knowledge of the dataset. Be specific.* HF- not sure how someone would answer this question. Maybe we need a more specific Q or an example
+- *Prior knowledge of the current dataset - Describe any prior knowledge of or interaction with the dataset before commencing this study. For example, have you read any reports or publications about this data? * 
 
 **Sampling Plan (For data you will collect) -- delete as appropriate.**
 
@@ -145,30 +140,35 @@ HF - this isn't super clear to me. Maybe we need more clarification here or an e
 
 *Describe any data preparation and processing steps, including manipulation of environmental layers, e.g. standardisation and geographic projection.* 
 
-*Describe how you will separate and distinguish between raw data, manipulated data, and outputs from modelling or any analyses of the model.* HF - Not sure exactly what this means
+*Describe how you will separate and distinguish between raw data, manipulated data, and outputs from modelling or any analyses of the model.*
 
 ### 2.4.3 Describe any data exploration or preliminary data analyses.	
 
-*In most modelling cases, it is necessary to perform preliminary analyses to understand the data and check that assumptions and requirements of the chosen modelling procedures are met. Data exploration prior to model fitting or development may include exploratory analyses to check for collinearity, spatial and temporal coverage, quality and resolution, outliers, or the need for transformations [@Yates2018]. Describe how you will summarise and explore your data, and explain what method you will use (graphical, tabular or otherwise) to represent your data and any analyses.*
-HF- should we include something here asking people to specify what they intend to find out from the data exploration?
+*In most modelling cases, it is necessary to perform preliminary analyses to understand the data and check that assumptions and requirements of the chosen modelling procedures are met. Data exploration prior to model fitting or development may include exploratory analyses to check for collinearity, spatial and temporal coverage, quality and resolution, outliers, or the need for transformations [@Yates2018]. Describe how you will summarise and explore your data, and explain what method you will use (graphical, tabular or otherwise) to represent your data and any analyses. Specify what you intend to find out or hope to learn from each data exploration analysis.*
 
 ### 2.4.4 Data Evaluation	
 
 *Describe how you will determine how reliable the data is for the given purpose. Ideally, model input data should be internally consistent across temporal and spatial scales and resolutions, and appropriate to the problem at hand [@Mahmoud2009].* 
+### 2.4.5 Data Evaluation: Data reliability reporting
+### 2.4.5. Data Evaluation: data reliability reporting
 
 *Document any issues with data reliability. This is important because data quality and ecological relevance might be constrained by measurement error, inappropriate experimental design, and heterogeneity and variability inherent in ecological systems [@Grimm:2014es].*
 
-*Data Exclusion: How will you determine what data, if any, will be excluded from your analyses? How will outliers be handled? Describe rules for identifying outlier data, and for excluding a site, transect, quadrat, year or season, species, trait, etc.*
+### 2.4.6. Data evaluation: data exclusion
 
-*Missing data: How will you identify and deal with incomplete or missing data?*
+*How will you determine what data, if any, will be excluded from your analyses? How will outliers be handled? Describe rules for identifying outlier data, and for excluding a site, transect, quadrat, year or season, species, trait, etc.*
+
+### 2.4.7 Data Evaluation: Missing Data
+
+*How will you identify and deal with incomplete or missing data?*
 
 ## 2.5 Conceptual model evaluation	
 
 *Describe how your conceptual model will be critically evaluated. Evaluation includes both the completeness and suitability of the overall model structure.*
 
-*How will any simplifying assumptions be critically assessed [@Augusiak:2014gz]?* HF- I'm not sure how to answer this one. Maybe an example would help?
+*How will any simplifying assumptions be critically assessed [@Augusiak:2014gz]?*
 
-*†Explain whether this process will include consultation or feedback from a client, manager, or model user.*
+*Explain whether this process will include consultation or feedback from a client, manager, or model user.*
 
 # 3.0	Formalise and Specify Model
 
@@ -191,16 +191,20 @@ HF- this is great. Only slight concern is the deceptively difficult task that la
 
 ### 3.2.2 Choose model family	
 
-*Specify which family of statistical distributions you will use in your model, and describe any transformations, or link functions. Justify your decision based on the purpose, objectives, prior knowledge and logistical constraints (Jakeman, 2006) specified in the problem formulation phase.* HF- great
+*Specify which family of statistical distributions you will use in your model, and describe any transformations, or link functions. Justify your decision based on the purpose, objectives, prior knowledge and logistical constraints (Jakeman, 2006) specified in the problem formulation phase.*
 
-*Include in your rational for selection, detail about which variables the model outputs are sensitive to, what aspects of their behaviour are important, and any associated spatial or temporal dimensions in sampling.* HF - I feel like this belongs somewhere else. I'm not sure where thinking about which variables the model outputs are sensitive to would relate to me choosing between logistic and cloglog models etc
+*Include in your rational for selection, detail about which variables the model outputs are sensitive to, what aspects of their behaviour are important, and any associated spatial or temporal dimensions in sampling.* 
 
 
 ### 3.2.3 Choose model features	
 
 *Specify which variables are included in the model, and the nature of their treatment (e.g. lumped/distributed, linear/non-linear, stochastic/deterministic, Jakeman, 2006).*
 
-*Specify model structural features, including:- the functional form of interactions,- data structures- measures used to specify links,- any bins or discretisation of continuous variables.*
+*Specify model structural features, including:
+- the functional form of interactions,
+- data structures
+- measures used to specify links,
+- any bins or discretisation of continuous variables.*
 
 ## 3.3 Choose approach for identifying model structure and parameters	
 
@@ -226,16 +230,13 @@ HF- I think that it might be double dipping to include structure here as well as
 ## 3.6 Specify formal model	
 
 *Once critical decisions have been made about the approach and method of model specification,¬†translate the conceptual model into the quantitative model. For data-driven and model-selection approaches that determine model structure and parameters, describe any initial model specifications and parameterisations, including for any tune-in parameters. (Should this go here or in model calibration?)*
-HF- I thought that this had already been covered in 3.2 and 3.3. Help me understand how this is distinct?
 
 # 4.0 Model Calibration, Model Fitting & Checking
 
-*This phase involves fitting the formally defined model to data and checking and testing the fitted model (what should go in thisphase if using a numerical or mathematical, but not correlative model or how could we change the wording to make this optional if not relevant?)*
-HF- I dont think this paragraph is necessary
 
 ## 4.1 Model calibration and validation scheme	
 
-*Describe how you will validate and check the calibration of the model. The model may be tested on data independent of those used to parameterise the model (external validation), or the model may be cross-validated on random sub-samples of the data used to parameterise the model (internal cross-validation)  [@Yates2018;[@Barnard2019]. Justify your choice*
+*Describe how you will validate and check the calibration of the model. The model may be tested on data independent of those used to parameterise the model (external validation), or the model may be cross-validated on random sub-samples of the data used to parameterise the model (internal cross-validation)  [@Yates2018;@Barnard2019]. Justify your choice*
 
 ## 4.1.2 Describe validation data 
 
@@ -245,13 +246,11 @@ HF- I dont think this paragraph is necessary
 
 ## 4.2 Implementation verification	
 
-*What Quality Assurance measures will you take to verify the model has been correctly implemented? Tests could include syntax checking of code,¬†and code reviews by peers. Checks for verification implementation should include i) thoroughy checking for bugs or programming errors, ¬†and ii) whether the implemented model performs as dictated by the model description  [@Grimm:2014es]. Specifying up front quality assurance tests for implementation verification may help to avoid selective debugging.*
-HF- I've tweaked this section to make it more distinct from 4.3
+*What Quality Assurance measures will you take to verify the model has been correctly implemented? Tests could include syntax checking of code, and code reviews by peers. Checks for verification implementation should include i) thoroughly checking for bugs or programming errors, and ii) whether the implemented model performs as dictated by the model description  [@Grimm:2014es]. Specifying up front quality assurance tests for implementation verification may help to avoid selective debugging.*
 
 ## 4.3 Model checking	
 
 *"Model Checking" goes by many names ("conditional verification", "quantitative verification", "model output verification" <cite>), and refers to a series of analyses that assess a model's performance in representing the system of interest [@Conn:2018hd].  Model checking therefore heps diagnose assumption violations, and reveals where a model might need to be altered to better represent the data, and therefore system [@Conn:2018hd]. Quantitative model checking diagnostics include goodness of fit, tests on residuals or errors, such as for heteroscedascity, cross-correlation, and autocorrelation [@Jakeman:2006ii].*
-HF- I've oved some of the information otu of 4.3 and put it in the sub headings so that this paragraph isn't necessary
 
 ### 4.3.1 Quantitative Model Checking	
 
@@ -259,8 +258,7 @@ HF- I've oved some of the information otu of 4.3 and put it in the sub headings 
 
 ### 4.3.2 Qualitative Model Checking	
 
-*This step is largely informal and case-specific, but requires ‚Äòface validation' with model users / clients / managers who aren't involved in the development of the model to assess whether the interactions and outcomes of the model are feasible an ddefensible  [@Grimm:2014es]. This process could be called a ‚Äúlaugh test" or a ‚Äúpub test, and in addition to checking the model's believability, it builds the client's confidence in the model [@Jakeman:2006ii].¬†Face validation could include structured walk-throughs, or presenting descriptions, visualisations or summaries of model results to experts for assessment. Briefly explain how you will qualitatively check the model, and whether + how you will include users and clients in the process.*
-HF- great section
+*This step is largely informal and case-specific, but requires ‚ 'face validation' with model users / clients / managers who aren't involved in the development of the model to assess whether the interactions and outcomes of the model are feasible an defensible  [@Grimm:2014es]. This process could be called a ‚"laugh test" or a "pub test" and in addition to checking the model's believability, it builds the client's confidence in the model [@Jakeman:2006ii]. Face validation could include structured walk-throughs, or presenting descriptions, visualisations or summaries of model results to experts for assessment. Briefly explain how you will qualitatively check the model, and whether and how you will include users and clients in the process.*
 
 # 5.0 Model Validation and Evaluation
 HF- I think that this is covered in section 4 with descriptions of validation and checking. I'm not sure how this section is different.
@@ -268,7 +266,6 @@ HF- I think that this is covered in section 4 with descriptions of validation an
 *Model Validation & Evaluation - This phase consists of a suite of analyses that collectively inform the decision and whether and when a model is suitable to meet its intended purpose (Augusiak, Van den Brink and Grimm 2014). Errors in design and implementation of the model and their implication on the model output are assessed. Ideally independent data is used against the model outputs to assess whether the model output behaviour exhibits the required accuracy for the model's intended purpose. The outcomes of these analyses build confidence in the model applications and increase understandingof model strengths and limitations. Model evaluation including model analysis and other testing should complement model checking. It should evaluate model checking, and consider over-fitting and extrapolation. The higher the proportion of calibrated, or uncertain parameters, the greater the risk that the model seems to work correctly [‚Ä¶] but for the wrong reasons" Evaluation thus complements model checking because we can rule out the chance that the model fits the calibration data well, but has not captured the relevant ecological mecahnisms of the system (Grimm). Evaluation of model outputs against external data in conjunction with the results from model checking provide information about the structural realism and therefore credibility of the model (Grimm et al. 2014).*
 
 ## 5.1 Model output corroboration	
-HF- This sounds like a second round of validation. I dont think I've ever seen this happen.
 *Ideally, model outputs or predictions are compared to independent data and patterns that were not used to develop, parameterise, or verify the model. Testing against a dataset of response and predictor variables that are sptially and/or temporally independent from the training dataset¬†minimises the risk of artificially inflating model performance measures [@Araujo2019].State whether you will corroborate the model outputs on external data, and please document any independent validation data in step <2.4>.It is preferable that any independent data used for model evaluation remains unknown to modellers during the process of model building, please describe the relationship modllers have to model validation data, will independent datasets be known to any modeller or analyst involved in the model building process?Although the corroboration of model outputs against an independent validation dataset is considered the 'gold standard' for showing that a model properly represents the internal organisation of the system ), model validation is not always possible because empirical experiments are infeasible or model users are working on rapid-response time-frames ‚Äî hence, why ecologists often model in the first place (Grimm, et al. 2014. Independent predictions can instead be tested on submodels. Alternatively, patterns in model output that are robust and seem characteristic of the system can be identified and evaluated in consultation with the literature or by experts to judge how accurate the model's output is (Grimm et al.2014). If unable to evaluate the model outputs against independent data, explain why and explain what steps you will take to interrogate the model.*
 
 ## 5.2 Choose performance metrics and criteria
@@ -289,7 +286,7 @@ HF- I would put 5.4 and it's sbsections up in section 4 and get rid of section 5
 
 ### 5.4.2 Sensitivity Analyses
 
-*Sensitivity analysis examines how uncertainty in model outputs can be apportioned to different sources of uncertainty in model input [@Saltelli2019]. Model sensitivity can be evaluated using 3 approaches: 1. deterministic sensitivity, stochastic sensitivity (variability in the model), or scenario sensitivity (effect of changes based on scenarios). Describe any sensitivity analyses you will conduct by specifying which parameters will be held constant, which will be varied, and the range and intervals of values over which those parameterrs will be varied. State the primary objective of each sensitvity analysis, for example, to identify which input variables contribute the most to model uncertainty so that these variables can be targeted for further data collection, or altertantively to identify which variables or factors contribute little to overall model outputs, and so can be ‚Äòdropped' from future iterations of the model [@Saltelli2019].*
+*Sensitivity analysis examines how uncertainty in model outputs can be apportioned to different sources of uncertainty in model input [@Saltelli2019]. Model sensitivity can be evaluated using 3 approaches: 1. deterministic sensitivity, stochastic sensitivity (variability in the model), or scenario sensitivity (effect of changes based on scenarios). Describe any sensitivity analyses you will conduct by specifying which parameters will be held constant, which will be varied, and the range and intervals of values over which those parameters will be varied. State the primary objective of each sensitivity analysis, for example, to identify which input variables contribute the most to model uncertainty so that these variables can be targeted for further data collection, or alternatively to identify which variables or factors contribute little to overall model outputs, and so can be ‚'dropped' from future iterations of the model [@Saltelli2019].*
 
 ### 5.4.3 Other simulation experiments and robustness analyses
 
@@ -305,7 +302,6 @@ HF- I feel that this belongs at the end of section 1
 
 
 ## 6.2 Synthesis of model application results	
-HF- I think this should stay here at the end
 *Specify how you will map, plot or otherwise display and synthesise the results of scenario and model analyses. Explain how will they support meaningful analysis and interpretation to aid in answering the analytical objectives and modelling context specified in the problem formulation phase.Explain how you will analyse the model analysis output to answer your analytical objectives. For instance, describe any trade-off or robustness analyses you will undertake to help evaluate and choose between different alternatives in consultation with experts or decision-makers.*
 
 ## 6.3 Consultation with Experts, Clients, Stakeholders	
