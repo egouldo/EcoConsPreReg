@@ -64,7 +64,7 @@ A comment:This section feels a bit too big and confusing from my perspective and
 
 *What effort and resources are available for both developing the model and operating the model?* ***HF comment; as written this might be slightly confronting because you could interpret this to include writing explictly about budget constraints which might be confidential. Maybe this could be alleviated with with an example?***
 
-*What degree of flexibility is required from the model? Might the model need to be quickly reconfigured to explore new scenarios or problems proposed by clients / managers / model-users?* ***HF comment: love the inclusion of this question***
+*What degree of flexibility is required from the model? Might the model need to be quickly reconfigured to explore new scenarios or problems proposed by clients / managers / model-users?* 
 
 ## 1.3.1 Explain analytical objectives (MAKE THIS A SEPARATE SECTION WHICH INCLUDES PERF MEASURES)
 
