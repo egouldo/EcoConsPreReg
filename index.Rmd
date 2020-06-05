@@ -20,6 +20,8 @@ output:
 ---
 **Intended journal:** Methods in Ecology and Evolution.
 
+**Article Type:** Research Article
+
 *The Abstract must not exceed 350 words and should list the main results and conclusions, using simple, factual, numbered statements:*
 
 *Point 1: set the context for and purpose of the work;*
@@ -282,14 +284,20 @@ NOT JUST THE TEMPLATES THEMSELVES BUT ALSO THE PROCEDURE, and the INTERFACE. I.e
 ----
 
 
-## A methodology for 'Living Preregistrations' ##
+## Results: A methodology for Preregistration in Ecology and Conservation ##
+
+
+This will be a box or a table with numbered items, with just the preregistration item directives or question. The help-text describing each phase or key steps in the workflow is removed, as this goes in the previous table under 'model scientific workflow'. Could possibly go into the appendix, but I think given that it's the primary research output, it should go into the main-text of the manuscript.
+
+----
+
+
+### Internal Model of Preregistration ###
 
 
 
 
 Failing to make the 'internal model of preregistration' clear to users is a critical source of confusion among preregistration template users that may impede preregistration uptake, and undermine the ability of the template to achieve its objectives (Pu et al. 2020). Consequently, in this section we articulate the inner logic of preregistration the preregistration template that informs the the content, structure of the template, and our proposed procedure and interface for implementing the template.
-
-   
 
 **Modelling workflows for Ecology and Conservation**
 
@@ -301,7 +309,7 @@ Table X, below, describes the 'model scientific workflow' underpinning the templ
 
 @TODO - anything about *applied contexts??* Aligning with management? (In terms of the structure and steps above).
 
-   
+@TODO insert table from atlas TI.
 
 **Iterative Cycle of Model Development**
 
@@ -320,8 +328,6 @@ The iterative nature of model development was identified in our structured discu
 Typically, the process of preregistration is completely distinct from and precedes the implementation of the analysis plan laid out in the preregistration.	In fact, preregistration has been defined as "the action of confirming an unalterable version of one's research plan prior to collecting data" (Nosek et al. 2018) or prior to analysing the data (Ref, or link to secondary data preregistration template). This results in a linear research workflow, whereby a researcher shifts from the process of ideation and design, documentation of that design in a preregistration, to the process of action, where the researcher executes the plan specified in the preregistration \<insert link to this fig..\>
 
 Translating the preregistration process to a modelling research context is thus challenging because the iterative nature of model development conflicts with the inner logic of existing preregistration templates that presume a linear research workflow. For instance, some modelling decisions are inherently dependent on the outcomes and results of previous decisions and analyses, which involves conducting some preliminary or investigatory analyses before being able to specify future decision-steps in an analysis plan, contravening the critical(?adj) feature of preregistration of specifying the analysis plan prior to seeing the data. Moreover, some items in the template, particularly at later stages of modelling, might not be able to be answered by the researcher until the model is fully or close to fully specified on a first-pass (e.g. specifying exactly what sensitivity analyses or uncertainty analyses will be conducted). This might especially hold true for more complex process models. \<Mention that this is not a flaw in preregistration, but rather reflects the inner logic of preregistration for hypothesis-testing contexts\>
-
-   
 
 __The *checking* problem__
 
@@ -363,17 +369,85 @@ How can we facilitate the process? They found that if the "paper is very specifi
 
 In order to address this confusion among norms, I state the expected norms that the template has been designed around here. However, I don't expect users to agree on this process. Because we have kept the template in a GitHub repository that can be *forked*, people are free to adapt the template (the items themselves) to suit whatever norm they see fit about how preregistrations should be created and used.
 
-@TODO insert table from atlas TI.
+   
+
+\- how to evaluate studies that have used preregistrations and when they should be compared against their preregistration\> This process of "checking" a preregistered study is provisionally defined by Pu et al. as "comparing a manuscript to its preregistration and verifying that the study and the analyses are conducted as the preregistration has specified." Who engages in 'checking' a preregistration? "Authors, reviewers and editors may all engage in checking." *How do we  facilitate checking? And the "checking problem"* "to what detail should or does an author or reviewer / editor check? Pu et al found that the authors engaged in a linear and thorough checking process, but reviewers on editors were not nearly "as exhaustive with checking". How can we facilitate the process? They found that if the "paper is very specific to referring to parts of the preregistration" then this made it easier for reviewers and editors to check.
+
+----
 
 
-### Iterative Model Development & "Living" Preregistrations ###
+### Adaptive Preregistration ###
 
 
 
 
-Given this defining feature of the modelling process, it is critical that the design of the interface and procedure for implementing the preregistration inherently capture this iterative nature of development. Current formats for preregistration are inappropriate given the iterative nature of the model development cycle, and the need for checking the preregistration against the reported model and analysis. Existing templates are text-based documents wherein authors respond to template items to complete the preregistration. They are standalone documents, with no way of linking the specified decision points to the actual analysis - thereby making model checking extremely tedious. 
+The process of preregistration as it is currently implemented is tailored towards the hypothetic-deductive model of the scientific method, and thus follows a linear process, where the process of planning and preregistering is distinct and completely precedes the execution of that plan. The researcher shifts from ideation, to study/analysis design and preregistration, to collecting and analysing the data, writing the report or manuscript, to publishing ([*cos.io/rr*](http://cos.io/rr)) \<See also Figure 1 in Pu et al.\> The iterative nature of model development, however, inherently precludes this model of preregistration from being applied to model-based research in ecology and conservation.
+
+Firstly, as Srivastava notes, there are some decisions that are either difficult to anticipate, or simply cannot be made in advance \<Srivastava\>. This is particularly true for decisions occurring at the later phases of the modelling construction and development process (Fig X), where downstream decisions depend on the outcomes of earlier decisions and outcomes of modelling analyses. For example, in the modelling process we have described (previous section), some decisions cannot be made unless you have a fully specified model, such as \<sensitivity analysis, and other model evaluation tasks and test\>.
+
+Secondly, very often in modelling, preliminary or exploratory analyses must be implemented before decisions can be made about how to proceed. For example, modellers might need to check the distribution of particular variables in order to determine how to specify the model, perform assumption checks, or check for collinearity or spatial autocorrelation. Sometimes the results of these analyses and checks mean that the modeller is forced to return to earlier decision-points and change the analysis. For instance, the model might fail to converge, or perhaps there is insfufficient data to fit the desired model such that the model runs out of variation to apportion to all the different variables \<there's a name for this\>.
 
    
+
+Consequently, we take an 'expanded view of preregistration', that fits with the concept of 'adaptive preregistration' proposed by \<Srivastava\>. This view of preregistration breaks with the current model of preregistration, wherein the author writes a single deterministic preregistration containing a rule for every decision, and shifts from ideation, preregistration to execution of the plan. Two features define adaptive preregistration. It contains 'plans to deploy flexible strategies' \<Srivastava\> wherein the author can supply a heuristic consisting of multiple different analysis or modelling strategies whose execution depends on the outcome of previous decision-points or analyses. Secondly, the preregistration may be iterative and consist of interim preregistrations that mark phases of modelling and analysis as different parts of the data are observed \<Srivastava\>. Thus, as the modeller proceeds through the model development process, the researcher can shift from ideation, preregistration, execution of the analysis and back to ideation and preregistration again, depending on the observed outcomes as each interim preregistration is executed \<Link to Figure, GitHub as a platform for adaptive preregistration, <x-scrivener-item:///Users/egould/Dropbox/Apps/Scrivener/PhD_thesis.scriv?id=32FCFBDA-7CEE-4FD9-B8DD-F3073309C0D0>\>.
+
+Given the iterative nature of adaptive preregistration then, the current convention of the static text-based document format of preregistration is inadequate. If there are interim versions of a preregistration, each version must be time-stamped and *version-controlled*, such that it is clear not just that two or more versions differ from each other, but it is apparent in exactly *how* they differ. Moreover, the *checking problem*, is exacerbated --- for flexible modelling and analysis strategies, we need to be able to link the results of preliminary analyses back to the specified strategy: the link between a particular triggered decision, and the analysis outcome that triggered it must be explicit. In addition, if the results of some preliminary analyses cause revisions to the model itself or a different modelling procedure or approach to be selected, then the trigger for this decision must be explicitly linked to the new version of the preregistration. 
+
+   
+
+We propose leveraging both the *version-control* and the project management features of *GitHub* \<link to GitHub\> as a tool for implementing adaptive preregistration \<link to box\>. When a document is version-controlled using git and GitHub, each version of a document is time-stamped, and is assigned its own unique document identifier, or *commit-hash.* Because GitHub documents are 'time-stamped' the genesis of the preregistration from one version to the next is apparent. Moreover, using the *diff* view of a document on *GitHub*, exactly *how* a document has changed between versions is clear - additions are coloured green, deletions are coloured red, and changes within a line are highlighted \<insert picture\>. Since the preregistration document would exist within the project *repository* containing the data and modelling and analysis code itself, any results from analyses that cause the analysis plan to change can be linked and referenced in the updated version of the plan --- thus facilitating the process of model checking. By providing a method for contrasting the actual analysis undertaken against the registered analysis, this is a mechanism for allowing reviewers to properly evaluate  the preregistration against the reported analysis. It thus provides a way of marking preregistered parts of a report from non-preregistered parts of the analysis. 
+
+   
+
+   
+
+   
+
+   
+
+**How it works....**
+
+GitHub is used to track amendments to the preregistration --- each time an additional question is answered, or an alteration is made to the preregistration, the change should be *committed* to the *repository*. *Semantic versioning \<insert link\>* is used to document each version of the preregistration.  \<explain semantic versioning in one sentence\>. Using *GitHub's* tag and release feature, each interim preregistration is tagged and released with its semantic version number. 
+
+All questions that can be answered should be completed before any data analysis or modelling proceeds. The preregistration should be completed until a) no further detail can be supplied or b) no additional template item can be answered until preliminary investigations or analyses are undertaken (Fig X, steps 1 - 3).
+
+   
+
+**Shifting from planning to execution**
+
+Before shifting from planning to the execution of the interim preregistration, each complete response in the interim preregistration should have a corresponding *GitHub issue* created (Figure X, step 3, document). \<define GitHub issue, <https://guides.github.com/features/issues/>\>. Relevant discussion between analysts about how to proceed with the intended analysis or interpreting preliminary results are tracked within an *issue*'s thread. Each issue is assigned a unique number. Any code or analysis outputs, such as figures, tables or other files, should be committed and tagged with the issue number, so that all analysis addressing that task is tracked within the *issue's* thread (Fig X, step 4, Do) \<screen-cap?\>. The URL for the GitHub issue should then be added to the relevant preregistration item, the preregistration document should then be committed with the changes, and the version number of the preregistration updated in a new *release*. 
+
+   
+
+... **And back again.**
+
+As the modelling proceeds, further detail on later phases of the analysis can be iteratively updated and preregistered. Where the results of model evaluation and analysis reveal that there are problems with the model, plans can be changed, and again the next phase can be preregistered. For example, if a researcher finds that assumptions are violated or other unexpected results occur that force a change to the planned analysis, the preregistration can be updated based on the findings of those analyses. When this occurs, the *major* version number of the preregistration document should be incremented (Fig X steps 5 - 6). Since the findings of the analyses are tracked within the relevant issue for that template item, and the issue is recorded in the preregistration itself, the trigger for the change in the plan is made explicitly clear.
+
+For each altered or new preregistration item, a the issue thread should either be updated, or a new issue created respectively (Fig X, step 6). Those analyses are then either reconnected based on the revised plan or the new investigatory analyses are then conducted (Fig X, step 7).
+
+This process continues until the preregistration is complete, and the researcher can continue to execute the plan as it has been fully described in the final version of the preregistration document (Fig X, step 8 - 9).
+
+   
+
+**Flexible Strategies, Preliminary Analyses or Investigations**
+
+When a researcher needs to conduct preliminary analyses or check parts of the data before committing to a particular decision about the model or analysis, they can specify a flexible strategy in their response to that preregistration item by:
+
+- stating what needs to be known to move forward with the modelling and analysis
+
+- explaining how the researcher will test this, and what parts of the data will be used in that analysis
+
+- describing how the results will be interpreted, listing each potential decision and the analysis result that will trigger that decision, where possible.
+
+   
+
+![Adaptive Preregistration Workflow - Research Workflow for implementing a 'adaptive' preregistration in a modelling context](./figures/LivingPreregistration.png)
+
+----
+
+
+### Preregistration Interface - Shiny App ###
+
 
 **Preregistration Interface**
 
@@ -396,95 +470,6 @@ Consequently, we instead decided to implement a user-friendly interface that mak
    
 
    
-
-   
-
-**Living Preregistration Workflow** 
-
-   
-
-2\. Workflow - allows for iterative model development AND 
-
-   
-
-Why, what is the current form? Existing templates are read-only documents. 
-
-
-
-
-Capturing this inner logic has repercussions for 
-
-Thus deciding on the inner logic of the template, and what is in and out of scope has been particularly difficult.
-
-One method around this is to accept that the current model of preregistration is not going to work for iterative model development. Again, the more complex the model, the more likely this is to be the case. Consequently I propose a different model of preregistration that I think will work for modeling research contexts. At the moment I'm calling it 'living preregistration' but please suggest another name. Others have termed this 'adaptive preregistration', and this is maybe a better name.
-
-In this model of preregistration, all questions that can be answered, should be answered before any data analysis or modelling proceeds. For some items, particularly during model evaluation and analysis, perhaps only responses of a general nature can be provided. That is OK. As the modelling proceeds. Further detail can be provided and the next phase of analysis can be preregistered. Where the results of model evaluation and analysis reveal that there are problems with the model, or perhaps assumption violations, plans can be changed, and again the next phase of analysis can be preregistered.
-
-A static document for this type of process doesn't really make sense. I propose leveraging the code and project management tools within the GitHub platform as a way of hosting a 'living' or 'adaptive' preregistration. Because GitHub documents are 'time-stamped', the genesis of the preregistration from one version to the next can be traced and tagged with versions. Since the document would exist in the repository with the code itself, any results from analyses that cause the analysis plan to change can be linked and referenced in the updated plan.
-
-   
-
-*How do we accommodate this structurally and procedurally into the PRT?*
-
-   
-
-*1\. Instruction to PRT users:*
-
-   
-
-"If you find yourself needing to check something with the data before committing to a particular decision about the model or analysis (And you hadn't anticipated needing to perform this check), record:
-
-A) the relevant decision in the template.
-
-B) What do you need to know to move forward?
-
-C) How you will test this? What test or analysis will you perform?
-
-D) What values or outputs of the test or analysis map onto particular decisions (they can be qualitative as well)."
-
-   
-
-I will create a template on GitHub based on the above to be used by Chris + Lyndsey for when this occurs, to be stored on the repository wiki. They can insert this template into the relevant decision step / PRT item and fill out.
-
-   
-
-*2\. "Living" or "Timestamped" or "Adaptive" Preregistrations ---Preregistration in the research process:*
-
-   
-
-See Figure 1 in Pu et al. And [*cos.io/rr*](http://cos.io/rr) - Traditionally the process of preregistration and the 'doing' or execution of the plan is a distinct and sequential process. However, this isn't going to work for modelling (What are the *norms* about the process of modelling - stated that it's iterative. And how does this look in practice --- use our in situ evaluation and testing to capture this.
-
-   
-
-This obviously breaks with the convention of preregistrations as 'static' one-off documents... does it break with this convention so far as to no longer be a 'preregistration'?
-
-   
-
-Pu et al: tendency for preregistrations to go from vague / general to specific over time.
-
-   
-
-Importantly, Pu et al show that "not all preregistered studies confirm to their preregistrations, or are inconsistent in reporting deviations", thus by making the preregistration available to reviewers, and by providing a platform and method for linking the actual analysis under-taken, we can allow reviewers to properly evaluate the preregistration against the final paper. (AND, must talk back to original aim of bad reporting practices in modelling). Moreover, if you combine formatting changes with our proposed method with GitHub, we hope to tailor the presentation of the completed preregistration + analysis, such that actual analyses and decisions can be linked directly to both files and outcomes.
-
-   
-
-Using:
-
-\- How to mark the preregistered from the non-preregistered parts of the paper?
-
-\- how to evaluate studies that have used preregistrations and when they should be compared against their preregistration\> This process of "checking" a preregistered study is provisionally defined by Pu et al. as "comparing a manuscript to its preregistration and verifying that the study and the analyses are conducted as the preregistration has specified." Who engages in 'checking' a preregistration? "Authors, reviewers and editors may all engage in checking." *How do we  facilitate checking? And the "checking problem"* "to what detail should or does an author or reviewer / editor check? Pu et al found that the authors engaged in a linear and thorough checking process, but reviewers on editors were not nearly "as exhaustive with checking". How can we facilitate the process? They found that if the "paper is very specific to referring to parts of the preregistration" then this made it easier for reviewers and editors to check. Maybe we could do something else, rather than get the paper to refer to the parts of the preregistration (but I think we should do this with Chris anyway). If we propose the norm of using GitHub to create and check the preregistration., I think this could be a good way of getting around this checking problem. At the very end we have a 'how to box' targeted at authors. And then maybe we have a box targeted at reviewers? Not sure, maybe just focus this paper on authors and the process of creating and using a preregistration.
-
-   
-
-In order to address this confusion among norms, I state the expected norms that the template has been designed around here. However, I don't expect users to agree on this process. Because we have kept the template in a GitHub repository that can be *forked*, people are free to adapt the template (the items themselves) to suit whatever norm they see fit about how preregistrations should be created and used.
-
-This will be a box or a table with numbered items, with just the preregistration item directives or question. The help-text describing each phase or key steps in the workflow is removed, as this goes in the previous table under 'model scientific workflow'.
-
-
-### Shiny Preregistration ###
-
-
-
 
 Reflecting on the in situ evaluation - shiny app
 
@@ -511,10 +496,6 @@ The GitHub repository storing the template and infrastructure implementing the i
 @TODO link to shiny app (make a doi for it).
 
 @TODO make an issue in the shiny repository for being able to 'load' a partially completed preregistration... Maybe we need to export in JSON?
-
-   
-
-![Living Preregistration Workflow - Research Workflow for implementing a 'living' preregistration in a modelling context](./figures/LivingPreregistration.png)
 
 ----
 
@@ -554,6 +535,14 @@ This relates to what Pu et al. found where participants 'felt their research wor
 
    
 
+Hosting the preregistration template on GitHub, has the added benefit of providing a mechanism for dealing with *uncertain* *norms* in modelling practice \<Pu et al\>, and for following modelling methods and decision contexts that might not fit the presumed modelling development cycle underpinning the preregistration template we designed. Anyone is free to *fork* our GitHub repository, meaning that the entire contents of the repository can be copied to a users own repository, and the template is free to be altered as the user sees fit. This provides the opportunity for creating domain- and/or modelling-approach-specific templates \<Cruwell\>.
+
+   
+
+   
+
+   
+
 **------**
 
    
@@ -563,7 +552,6 @@ This relates to what Pu et al. found where participants 'felt their research wor
    
 
 Ask Chris to reflect on the preregistration process and whether this is true or not. I don't think it is true. I think the opposite is true. This "Punchcard" style analysis they describe is probably actually an artefact of the way statistical analyses are done in science these days - science is a sausage factory of p-values.  
-
 
 --------------------------
 # References
