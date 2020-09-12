@@ -14,6 +14,7 @@ author:
   - name: Fiona Fidler
     affiliation: School of BioSciences, University of Melbourne
 date: "`r Sys.Date()`"
+bibliography: ./data/references.bib
 output: 
   distill::distill_article:
     self_contained: false
@@ -92,32 +93,42 @@ Finally, we develop and evaluate both the template and proposed adaptive preregi
 
 
 
-### User-centred design approach ###
+### Designing Preregistration Templates with a User-Centred Design Approach ###
 
 
 
-
-**Designing Preregistration Templates with a User-Centred Design Approach**
 
    
 
-We took a user-centred design (UCD) approach to the task of translating preregistration into model-based research contexts for ecology and conservation. UCD is a philosophy for designing services or products that accounts for user requirements at all stages of the design process --- the goal of which is to generate both an effective and usable tool for specific people in specific contexts [@Pavelin2012]. As Pavelin et al illustrate,  it is critically important that users be involved in the design process because it is difficult to predict how users will actually use a resource. This mirrors Pu et al's qualitative analysis into preregistration design, that a designer's intention for preregistration and users' purposes for preregistration may be in conflict and undermine the overarching goal of preregistration --- to improve the reliability of scientific findings. Consequently, although user-centered design is typically used within software engineering domains, we heed Pu's advice that "It is crucial to treat preregistration [...] as a user-centered design problem to ensure preregistration achieves its intended goal."
+We took a user-centred design (UCD) approach to the task of translating preregistration into model-based research contexts for ecology and conservation. UCD is a philosophy for designing services or products that accounts for user requirements at all stages of the design process --- the goal of which is to generate both an effective and usable resource for specific people in specific contexts [@Pavelin2012]. As Pavelin et al illustrate,  it is critically important that users be involved in the design process because it is difficult to predict how users will actually use a resource. This mirrors Pu et al's qualitative analysis of preregistration template design, finding that a designer's intention for preregistration and users' purposes for preregistration may be in conflict and undermine the overarching goal of preregistration --- to improve the reliability of scientific findings. Consequently, although user-centered design is typically used within software engineering domains, we heed Pu's advice that "It is crucial to treat preregistration [...] as a user-centered design problem to ensure preregistration achieves its intended goal."
 
    
 
-We borrow from the UCD methodology proposed by Pavelin et al. [-@Pavelin2012], and follow the core steps ![](./figures/user-centered-design-preregistration.png): 1. Define the goals of the resource under development and identify audience, 2. Characterise users and their needs, 3. Design mock-ups of your product, 4. Build prototypes of selected mock-ups and test with users, 5. Implement the product, writing technical implementations and building the product. In the case of this project, the 'product' consists of a preregistration template, specification of the internal logic of the template, including an updated domain-specific procedure for using the template, a user-interface for completing the preregistration, and a user-guide to accompany the template and interface.
+We borrow from the UCD methodology proposed by Pavelin et al. [-@Pavelin2012], and follow the core steps ![](./figures/user-centered-design-preregistration.png): 
 
+   
 
-#### Define Vision & Objectives ####
+1\. Define the goals of the resource under development and identify the audience, 
 
+2\. Characterise users and their needs, 
 
+3\. Design mock-ups of your product, 
 
+4\. Build prototypes of selected mock-ups and test with users, 
+
+5\. Implement the product, write technical implementations and build the product. 
+
+   
+
+In this case, the 'product' so-to-speak, consists of a preregistration template, specification of the internal logic of the template, including an updated domain-specific procedure for using the template, a user-interface for completing the preregistration, and a user-guide to accompany the template and interface.
+
+The first step in a user-centred design approach is to articulate the goals, objectives and target audience of the tool, consequently we define the intended purpose of the preregistration, the intended users of the templates, and their research contexts. These aspirations for the preregistration template are the guiding principles for the development and evaluation of ecology-specific preregistration, and have important implications for the design of the template - from its structure, content, user-interface and usage within the broader research workflow.
+
+   
 
 **Intended Purpose of this Preregistration**
 
-   
-
-Defining the purpose and intended use-cases of a preregistration template has important implications for the design of the template --- from its structure, content, user-interface and use within the broader research workflow. We define the primary purpose of the template as "to delimit researcher degrees of freedom" when conducting model-based research in applied ecology and conservation. Although others have defined the purpose of preregistration to include 'delineating between *exploratory* from *confirmatory* research' \<refs\>, this is not the intended purpose of the template here. Beyond hypothesis-testing contexts, this is a simplifying dichotomy that, in practice, is more blurred and nuanced than the ideal. For instance researchers might move back and forth between different reasoning-modes throughout the modelling cycle. Thinking through how modes of inference might hold within applied ecological modelling contexts requires further, more careful thought, and consideration of research from philosophy of science. Consequently, we wish to deemphasise the purpose of distinguishing between exploratory and confirmatory research, and focus the design of the templates in being able to delimit researcher degrees of freedom, so as to reduce the potential for cognitive biases, such as confirmation bias, and other questionable research practices, like cherry-picking, HARKing etc. \<insert ref to my QRP manuscript\>.
+We define the primary purpose of the template as "to delimit researcher degrees of freedom" when conducting model-based research in applied ecology and conservation. Although others have defined the purpose of preregistration to include 'delineating between *exploratory* from *confirmatory* research' \<refs\>, this is not the intended purpose of the template here. Beyond hypothesis-testing contexts, this is an idealised and simplifying dichotomy that, in practice, is more complicated and nuanced. For instance researchers might move back and forth between different reasoning-modes throughout the modelling cycle. Thinking through how modes of inference might hold within applied ecological modelling contexts requires further, more careful thought, and consideration of perspectives from philosophy of science. Consequently, we wish to deemphasise the purpose of distinguishing between exploratory and confirmatory research, and focus the design of the templates in being able to delimit researcher degrees of freedom, so as to reduce the potential for cognitive biases, such as confirmation bias, and other questionable research practices, like cherry-picking, HARKing etc. \<insert ref to my QRP manuscript\>.
 
    
 
@@ -129,17 +140,13 @@ Brief mention of abduction.
 
    
 
-   
-
 The secondary purpose of the model is to increase *research transparency* of model-based research in ecology and conservation. *Research transparency* refers to both production transparency --- which includes research artefacts like open-access data and materials, or data collection procedures --- and analytic transparency --- which describes a complete account of how the analytic conclusions are drawn from the data (Lupia and Elman, 2014). \<refs to model reporting literature- it's dire, can't properly be evaluated by a reviewer, moreover can't be reproduced\>
 
    
 
 **Preregistration template users and research-contexts**
 
-   
-
-Given the stated purposes of the preregistration templates we designed, it implies two types of users: creators of preregistrations using the template, and reviewers of a completed template, including reviewers, journal editors and any readership. The content and structure of the items on the template will be designed with the preregistration-creator and the preregistration readership in mind - it will capture critical decision-points that may influence the overall model and analysis and recommendations or decisions that the model informs, thus delimiting researcher degrees of freedom at these junctures in the modelling decision process. It should also enhance the research transparency of the study, ensuring that these choices are documented with sufficient transparency to let the reader make informed decisions about the credibility and reliability of the model and associated analysis and interventions.
+Given the stated purposes of the preregistration templates we designed, it implies two types of users: creators of preregistrations using the template, and reviewers of a completed template, including reviewers, journal editors and any readership. The content and structure of the items on the template will be designed with the preregistration-creator and the preregistration readership in mind - it will capture critical decision-points that may influence the overall model and analysis and recommendations or decisions that the model informs, thus delimiting researcher degrees of freedom at these junctures in the modelling decision process. It should also enhance the research transparency of the study, ensuring that these choices are documented with sufficient transparency to let the reader make informed decisions about the credibility and reliability of the model and associated analysis and interventions. (MOVE RESEARCH TRANSPARENCY QUOTES FROM BELOW TO HERE).
 
    
 
@@ -151,7 +158,7 @@ More specifically, we intend this template to be suitable not just in 'pure-rese
 
    
 
-**Use-Cases**
+**Preregistration use-cases**
 
    
 
@@ -175,13 +182,7 @@ A) an interface that ensures ease of use for the creator of a preregistration
 
 B) structure and content that is necessarily opinionated.. forces user to a particular workflow, so getting that workflow right, that reflects both norms and practice of model-based research is pivotal.
 
-
-#### User Research ####
-
-
-
-
-On the 4^th^ March 2020, we ran a series of structured activities designed to inform the development of two pre-registration templates, one for field-work and sampling design, the other for modelling and data-analysis. We split the activities into two groups, to better focus discussion for each of these templates. All workshop materials and workshop outputs can be found on the OSF component here \<LINK\>.
+On the 4^th^ March 2020, we ran a series of structured activities designed to inform the development of two preregistration templates, one for field-work and sampling design, the other for modelling and data-analysis. We split the activities into two groups, to better focus discussion for each of these templates. All workshop materials and workshop outputs can be found on the OSF component here \<LINK\>.
 
    
 
@@ -197,45 +198,31 @@ c) Use this knowledge to inform the design of the templates so they meet their i
 
    
 
-**Activity 1 - Capturing Scientific Workflows and Decision Points**
+Failing to make the 'internal model of preregistration' clear to users is a critical source of confusion among preregistration template users that may impede preregistration uptake, and undermine the ability of the template to achieve its objectives (Pu et al. 2020). Consequently, we aim to articulate a generalised modelling workflow that is used to structure the preregistration template, and to guide the selection of items for inclusion in the template.
 
-   
+## Workshop Activity 1: Identifying Ecological Modelling Workflows Norms and Practice
 
-The objective of this activity was to capture critical decision-steps in the design of both field sampling efforts and modelling exercises. This activity was intended to identify key decision-steps in the scientific process that should be included in a preregistration template.  The first part of this activity was done as individuals, where we reflected on our scientific process for a recent or memorable research project. We listed the steps in the workflow from beginning to end. We attempted to document  critical decision-steps in this process that should be present on a preregistration template. By "critical" we mean that without these decision-steps the template would not a) adequately constrain researcher degrees of freedom and b) transparently document the analytic decision-process. 
-
-   
-
-In the second part of this exercise, we came together as a group to collate each of the steps in our personal workflows onto a group workflow template This template was prepared earlier (\<specific OSF link to the document\>), and consisted of several key 'phases' of the scientific process, with decision-steps grouped under each phase. The development of the draft modelling workflow was derived from previous work by Gould et al. *in prep.,* whilst the field sampling workflow was created specifically for this exercise. We sorted and categorised each decision-step as belonging to a particular workflow phase. Next we grouped similar decision-steps that could be included as a single item on a preregistration template. At the end of this process we reviewed the suggested phases on the workflow to assess whether phases needed further discretisation, aggregation, removal, or amendment. 
-
-   
+The objective of this activity was to identify modelling workflows that capture critical decision-steps in the process of field sampling efforts and modelling exercises that should be included in a preregistration template. By "critical" we mean that without these decision-steps the template would not a) adequately constrain researcher degrees of freedom and b) transparently document the analytic decision-process. The activity consisted of two-parts, first, we individually reflected on our scientific process for a recent or memorable research project, listing the steps we undertook from the beginning to end.  In the second part of this exercise, we came together as a group to collate each of the steps in our personal workflows onto a group workflow template. This template was prepared earlier (\<specific OSF link to the document\>), and consisted of several key 'phases' of the scientific process, with decision-steps grouped under each phase. The development of the draft modelling workflow was derived from previous work by Gould et al. *in prep.,* whilst the field sampling workflow was created specifically for this exercise. We sorted and categorised each decision-step as belonging to a particular workflow phase. Next we grouped similar decision-steps that could be included as a single item on a preregistration template. At the end of this process we reviewed the suggested phases on the workflow to assess whether phases needed further discretisation, aggregation, removal, or amendment.
 
 ## Workshop Activity 2: Understanding ecology- and modelling-specific challenges to adopting preregistration in research practice
 
    
 
-This second activity aimed to identify critical challenges and roadblocks to the implementation and uptake of preregistration in ecology and conservation, as well as their solutions. We conducted two lots of structured discussions, one for each of the field and modelling template groups. Each discussion was structured using a series of pre-prepared questions and talking points informed by recent debates about preregistration in the literature. These talking points were chosen with the aim of identifying problems in the content and or structuring of the phases and decision steps that were collectively identified in activity 1, as well as any conceptual or philosophical issues with preregistration in ecology, conservation, and in particular modelling, that might impact on the template structure, content and procedural implementation of preregistration.
+This second activity aimed to identify critical challenges and roadblocks to the implementation and uptake of preregistration in ecology and conservation, as well as brainstorming solutions to these challenges. We conducted two lots of structured discussions, one for each of the field and modelling template groups. Each discussion was structured using a series of pre-prepared questions and talking points informed by recent debates about preregistration in the literature \<cite / link to OSF, or even discuss??\>. These talking points were chosen with the aim of identifying problems in the content and or structuring of the phases and decision steps that were collectively identified in activity 1, as well as any conceptual or philosophical issues with preregistration in ecology, conservation, and in particular modelling, that might impact on the template structure, content and procedural implementation of preregistration.
 
 
-##### Workshop Analysis #####
+#### Analysis and Design ####
 
 
+   
 
-#### Design ####
-
-
-
-##### Translating Workflows into a Preregistration Template #####
-
-
-
-
-**1\. Synthesise Workshop Outputs: Identify Scientific Workflows for ecological modelling, both real/in-practice and idealised.**
+**1\. Identify Scientific Workflows for ecological modelling, both real/in-practice and idealised.**
 
    
 
 The goal of this analysis task was to generate a complete draft workflow for both fieldwork and modelling and data-analysis that will form the basis of the final preregistration templates. We used a combination of inductive and deductive coding \<is this what it is called\> to analyse the workshop outputs and generate a model scientific workflow for model-based research that would constitute the presumed scientific workflow that would be used to guide the structure of the preregistration template. We collated and coded the workshop outputs using \<atlas.TI, insert software citation and version\>, \<a qualitative coding software\>. All workshop outputs can be found here (\<Link to Workshop Outputs OSF repository\>). 
 
-A preliminary idealised scientific workflow for ecological modelling research was synthesised after reviewing the literature on 'good modelling practice' and structured decision-making literature in ecological management. Steps in the workflow were coded and broken down into 'phases' consisting of 'steps' and 'substep' \<insert link to appendices or just present the final?\>. Each decision-point in the personal modelling workflows generated from activity one of the collaborative workshop were coded as belonging to one of these phases, steps and substeps. We revised the coding structure \<inductively (is this the word)\>, according to patterns and themes identified across multiple personal workflows. For example, we added the final phase \<name for last phase\>, which aimed to capture the fact that analysts usually present the results of their modelling to clients, decision-makers or other stakeholders that must interpret the evidence and are responsible for making management decisions. In this way, we identified a common or generalised workflow from different types of applied ecological modelling projects that synthesised both \<idealised norms and norms of practice, Pu et al., see other philosophy of sci refs\>. This workflow is used to provide structure and content to the preregistration template.
+A preliminary idealised scientific workflow for ecological modelling research was synthesised after reviewing the literature on 'good modelling practice' and structured decision-making literature in ecological management. Steps in the workflow were coded and broken down into 'phases' consisting of 'steps' and 'substeps', in line with the ontology we specified for translating a modelling workflow into a preregistration template [section link], \<insert link to appendices or just present the final?\>. Each decision-point in the personal modelling workflows generated from activity one of the collaborative workshop were coded as belonging to one of these phases, steps and substeps. We revised the coding structure \<inductively (is this the word)\>, according to patterns and themes identified across multiple personal workflows. For example, we added the final phase \<name for last phase\>, which aimed to capture the fact that analysts usually present the results of their modelling to clients, decision-makers or other stakeholders that must interpret the evidence and are responsible for making management decisions. In this way, we identified a common or generalised workflow from different types of applied ecological modelling projects that synthesised both \<idealised norms and norms of practice, Pu et al., see other philosophy of sci refs\>. This workflow is used to provide structure and content to the preregistration template.
 
    
 
@@ -243,39 +230,27 @@ A preliminary idealised scientific workflow for ecological modelling research wa
 
    
 
-We translated the model-based workflow identified in part I of workshop analysis into a text-based preregistration template. Reflecting on existing templates \<link to OSF repository of templates \>, we identified common elements / units of preregistration templates that we mapped onto the generalised modelling workflow identified in part I of workshop output analysis. We synthesised the following ontologies:
+We translated the model-based workflow identified in part I of workshop analysis into a text-based preregistration template. Reflecting on existing templates \<link to OSF repository of templates page\>, we identified common elements / units of preregistration templates that we mapped onto the generalised modelling workflow identified in part I of workshop output analysis. Following the features of a good guideline identified by Moallemi et al. [-@Moallemi2019], we provide examples of choices or illustrations to clarify each step of the preregistration, for parts of the modelling process that are semantically, epistemically and/or philosophically contentious or ambiguous \<link to paper describing contentious issues in modelling history\>. We synthesised the following ontology to build our preregistration template:
 
    
 
 1\. Decision Phase - each has a "title" and "description" or "definition", steps are grouped under phases. \<Note, that these are being scrapped from the template and are turned into tool-tips\>
 
-2\. Decision Step - each has a "title" and "description" or "definition" choices are grouped into 'steps'. Corresponds to an activity or set of activities in a scientific workflow. \<again, these are being scrapped and turned into tool-tips.\>
+2\. Decision Step - each has a "title" and "description" or "definition" choices are grouped into 'steps', which corresponds to an activity or set of related activities in a scientific workflow. \<again, these are being scrapped and turned into tool-tips.\>
 
 3\. Choices ---\> each 'choice' corresponds to a uniquely numbered item on the PRT requiring a response from user. The style should be in the form of a directive or a question. E.g. "explain how you will do xyzzy". Or "What performance measure will you use for assessing 'goodness of fit'?"
 
-   
-
-[@Moallemi2019] featuresof a good guideline:
-
-   
-
-a) A standard step-wise structure relevant to a variety of (exploratory modelling) methods in robust decision
-
-support.
-
-(b) The enumeration of (methodological and mixing design) choices available at each step to reflect on alternative
-
-options available to researchers.
-
-(c) Examples/illustrations to clarify the step of the guideline and choices at each step.
-
-(d) An easy to follow checklist to promote wider adoption.
-
-   
-
-   
-
 **3\. Designing a new methodology for implementing preregistration in model-based research**
+
+   
+
+   
+
+   
+
+   
+
+**What about the challenges and solutions part + the group discussion? Make sure to discuss the atlas TI part for this...**
 
    
 
@@ -290,16 +265,6 @@ We analysed the outputs of Activity 2 in the collaborative workshop identifying 
    
 
 We then used 'in situ evaluation' to test and evaluate both the template and procedure design.
-
-
-##### Redesigning a new methodology for preregistering model-based ecology and conservation research #####
-
-
-
-##### 'In-situ' Evaluation and Testing of Templates #####
-
-
-
 
 *Evaluation Criteria and Rationale*
 
@@ -337,7 +302,7 @@ Finally, we supplemented this 'in situ' testing and evaluation process with a se
 
 
 
-Failing to make the 'internal model of preregistration' clear to users is a critical source of confusion among preregistration template users that may impede preregistration uptake, and undermine the ability of the template to achieve its objectives (Pu et al. 2020). Consequently, in this section we articulate the inner logic of our preregistration templates that informs the the content, structure of the template, and our proposed procedure and interface for implementing the template.
+The modelling workflow + adaptive preregistration process described below articulates the inner logic of the preregistration templates that underpins the content, structure of the template, as well as our proposed procedure and interface for implementing the template.
 
 **Modelling workflows for Ecology and Conservation**
 
@@ -438,7 +403,7 @@ AND it is possible that in other cases the author deviated from their plan for s
 ---------
 
 
-This will be a box or a table with numbered items, with just the preregistration item directives or question. The help-text describing each phase or key steps in the workflow is removed, as this goes in the previous table under 'model scientific workflow'. Could possibly go into the appendix, but I think given that it's the primary research output, it should go into the main-text of the manuscript.
+The template is designed to be used within an adaptive preregistration methodology \<link to section\>.
 
 ----
 
@@ -720,7 +685,7 @@ Ask Chris to reflect on the preregistration process and whether this is true or 
 
 Combining with other open science tools.
 
-I thinkthe preregistration can easily be usd with a reporting check
+I think the preregistration can easily be usd with a reporting check
 
 It's, such as t proposed by Feng et al. The decisions and details are recorded within the preregistration. Along with any deviation from the initial plan.  
 --------------------------
