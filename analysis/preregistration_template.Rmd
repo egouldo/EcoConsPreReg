@@ -1,33 +1,62 @@
 ---
-title: "Ecology and Conservation Modelling Preregistration Template -- DRAFT"
+title: "Preregistration Template for Modelling in Ecology and Conservation"
 author: "Elise Gould, Megan Good, Libby Rumpff, TBD:workshop collaborators"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
-  github_document: default
+  word_document
 bibliography: ../data/references.bib
 ---
 
 # About this template
 
-This template has been collated from a combination of literature reviews of the 'Good Modelling Practice' and other modelling literature, as well as a collaborative workshop at DELWP. Chris Jones has kindly volunteered one component of the VEFMAP project investigating vegetation responses to environmental flows as a testing ground for the use of preregistration templates in applied ecological modelling research. This template will be used to preregister this research, and we will use the VEFMAP project to both develop and evaluate the template 'in situ'.
+This template has been collated from a combination of literature reviews of the 'Good Modeling Practice' and other modeling literature, as well as a collaborative workshop at DELWP/ARI. Chris Jones has kindly volunteered one component of the VEFMAP project investigating vegetation responses to environmental flows as a testing ground for the use of preregistration templates in applied ecological modeling research.
 
-The template is largely structured around 6 "phases" in the process of developing, evaluating and analysing a model or models in ecological applications: `Problem Formulation`, `Define Conceptual Model`, `Formalise and Specify Model`,  `Model Validation and Evaluation`, `Model Analysis`, `Model Application`. These have been defined and described to some extent throughout the template.
+The template is largely structured around 6 "phases" in the process of developing, evaluating and analysing a model or models in ecological applications: `Problem Formulation`, `Define Conceptual Model`, `Formalise and Specify Model`,  `Model Validation and Evaluation`, `Model Analysis`, `Model Application`. These have been defined and described to some extent throughout the template. This text (usually italicised) will eventually be converted to 'help-text', in the form-of mouse-over pop-ups, or else prompt-text within a text-box. Other parts of this text will be pulled into a supporting diagram describing the modelling workflow stages.
 
-## iterative model development and a 'living preregistration'
+## Adaptive Preregistration
 
-One of the major challenges in designing a template for modelling is that the process of model development is inherently iterative. Typically, the process of preregistration is completely distinct from and precedes the implementation of the analysis plan laid out in the preregistration. However, translating the preregistration process to a modelling research context is not so clear cut because some decisions are inherently dependent on the outcomes and results of previous decisions and analyses. For example, which sensitivity analyses will be conducted will depend on the relationships between variables found during earlier earlier stages in the modelling process. 
+The following is an excerpt from my manuscript as at 21 September 2020. It describes the procedure for how this template is meant to be used within a modeling context. I hope to write this up as a guide (including screen-shots) that will accompany the template.
 
-One method around this is to accept that the current model of preregistration is not going to work for iterative model development. Again, the more complex the model, the more likely this is to be the case. Consequently I propose an 'adaptive preregistration' model  that I think will work for modeling research contexts. 
+Adaptive Preregistration for model-based research using GitHub
+We propose leveraging both the version-control and the project management features of GitHub <link to GitHub> as a tool for implementing adaptive preregistration <link to box>. When a document is version-controlled using git and GitHub, each version of a document is time-stamped, and is assigned its own unique document identifier, or commit-hash. Because GitHub documents are ‘time-stamped’ the genesis of the preregistration from one version to the next is apparent. Moreover, using the diff view of a document on GitHub, exactly how a document has changed between versions is clear - additions are coloured green, deletions are coloured red, and changes within a line are highlighted <insert picture>. Since the preregistration document would exist within the project repository containing the data and modelling and analysis code itself, any results from analyses that cause the analysis plan to change can be linked and referenced in the updated version of the plan — thus facilitating the process of model checking. By providing a method for contrasting the actual analysis undertaken against the registered analysis, this is a mechanism for allowing reviewers to properly evaluate the preregistration against the reported analysis. It thus provides a way of marking preregistered parts of a report from non-preregistered parts of the analysis.
 
-In this model of preregistration, all questions that can be answered, should be answered before any data analysis or modelling proceeds. For some items, particularly during model evaluation and analysis, perhaps only responses of a general nature can be provided. That is OK. As the modelling proceeds, further detail can be provided and the next phase of analysis can be preregistered. Where the results of model evaluation and analysis reveal that there are problems with the model, or perhaps assumption violations, plans can be changed, and again the next phase of analysis can be preregistered.
+How it works….
 
-A static document for this type of process doesn't really make sense. I propose leveraging the code and project management tools within the GitHub platform as a way of hosting an 'adaptive' preregistration. Because GitHub documents are 'time-stamped', the genesis of the preregistration from one version to the next can be traced and tagged with versions. Since the document would exist in the repository with the code itself, any results from analyses that cause the analysis plan to change can be linked and referenced in the updated plan.
+GitHub is used to track amendments to the preregistration — each time an additional question is answered, or an alteration is made to the preregistration, the change should be committed to the repository. Semantic versioning is used to document each version of the preregistration. Semantic versioning is an open-source software engineering practice used to document and and communicate the development of software, in a way that allows others to depend on it  . We have created our own semantic versioning scheme to be used to specifically document the incremental version of the preregistration, in tandem with GitHub’s tag and release feature, each interim preregistration is tagged and released with its semantic version number.
+
+All questions that can be answered should be completed before any data analysis or modelling proceeds. The preregistration should be completed until a) no further detail can be supplied or b) no additional template item can be answered until preliminary investigations or analyses are undertaken (Fig X, steps 1 - 3).
+
+Shifting from planning to execution
+
+Before shifting from planning to the execution of the interim preregistration, each complete response in the interim preregistration should have a corresponding GitHub issue created (Figure X, step 3, document). <define GitHub issue, https://guides.github.com/features/issues/>. Relevant discussion between analysts about how to proceed with the intended analysis or interpreting preliminary results are tracked within an issue’s thread. Each issue is assigned a unique number. Any code or analysis outputs, such as figures, tables or other files, should be committed and tagged with the issue number, so that all analysis addressing that task is tracked within the issue’s thread (Fig X, step 4, Do) <screen-cap?>. The URL for the GitHub issue should then be added to the relevant preregistration item, the preregistration document should then be committed with the changes, and the version number of the preregistration updated in a new release.
+
+… And back again.
+
+As the modelling proceeds, further detail on later phases of the analysis can be iteratively updated and preregistered. Where the results of model evaluation and analysis reveal that there are problems with the model, plans can be changed, and again the next phase can be preregistered. For example, if a researcher finds that assumptions are violated or other unexpected results occur that force a change to the planned analysis, the preregistration can be updated based on the findings of those analyses. When this occurs, the major version number of the preregistration document should be incremented (Fig X steps 5 - 6). Since the findings of the analyses are tracked within the relevant issue for that template item, and the issue is recorded in the preregistration itself, the trigger for the change in the plan is made explicitly clear.
+
+For each altered or new preregistration item, a the issue thread should either be updated, or a new issue created respectively (Fig X, step 6). Those analyses are then either reconnected based on the revised plan or the new investigatory analyses are then conducted (Fig X, step 7).
+
+This process continues until the preregistration is complete, and the researcher can continue to execute the plan as it has been fully described in the final version of the preregistration document (Fig X, step 8 - 9).
+
+Flexible Strategies, Preliminary Analyses or Investigations
+
+When a researcher needs to conduct preliminary analyses or check parts of the data before committing to a particular decision about the model or analysis, they can specify a flexible strategy in their response to that preregistration item by:
+
+- stating what needs to be known to move forward with the modeling and analysis
+
+- explaining how the researcher will test this, and what parts of the data will be used in that analysis
+
+- describing how the results will be interpreted, listing each potential decision and the analysis result that will trigger that decision, where possible.
+
+![Adaptive Preregistration Workflow - Research Workflow for implementing a ‘adaptive’ preregistration in a modelling context](../figures/LivingPreregistration.png)
+
+
 
 --------------------------------
 
 # 1. Problem Formulation
 
-*Specifies the decision-making context in which the model will be used or the intended scope and context of conclusions. Important components include the decision maker and stakeholders (including experts) and their view on: i) the nature of the problem or decision addressed and how the scope of the modelling tool fits within the (broader) context (i.e. model purpose; ii) the spatial and temporal scales relevant to the decision context; iii) specified desired outputs; iv) role and inclusion in model development and testing; v) whether they forsee unnacceptable outcomes that need to be represented in the model (i.e. as constraints), and; vi) what future scenarios does the model need to account for (noting this may be revised later).  It should also provide a summary of the domain of applicability of the model, and reasonable extrapolation limits (Grimm et al. 2014).*
+*Specifies the decision-making context in which the model will be used or the intended scope and context of conclusions. Important components include the decision maker and stakeholders (including experts) and their view on: i) the nature of the problem or decision addressed and how the scope of the modeling tool fits within the (broader) context (i.e. model purpose; ii) the spatial and temporal scales relevant to the decision context; iii) specified desired outputs; iv) role and inclusion in model development and testing; v) whether they foresee unacceptable outcomes that need to be represented in the model (i.e. as constraints), and; vi) what future scenarios does the model need to account for (noting this may be revised later).  It should also provide a summary of the domain of applicability of the model, and reasonable extrapolation limits (Grimm et al. 2014).*
 
 ## 1.1 Model Purpose
 
