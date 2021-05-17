@@ -1,6 +1,12 @@
 Ecology and Conservation Modelling Preregistration Template – DRAFT
 ================
-Chris Jones, Elliot Gould
+
+Chris Jones, Elliot Gould, Libby Rumpff, Megan Good.
+
+Please cite as:
+
+Gould, Good, Jones, Rumpff (2021) Preregistration Template for Model-Based Research in Ecology and Conservation. https://osf.io/846ev/
+
 03 May, 2021
 
 # 1. Problem Formulation
