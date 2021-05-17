@@ -5,7 +5,7 @@ Chris Jones, Elliot Gould, Libby Rumpff, Megan Good.
 
 Please cite as:
 
-Gould, Good, Jones, Rumpff (2021) Preregistration Template for Model-Based Research in Ecology and Conservation. https://osf.io/846ev/
+Gould, E., Fraser, H., Good, M., Jones, C., Rumpff, L. (2021) Preregistration Template for Model-Based Research in Ecology and Conservation. https://osf.io/846ev/
 
 03 May, 2021
 
