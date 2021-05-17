@@ -243,7 +243,7 @@ It is often necessary when modeling to perform preliminary analyses to
 check assumptions and ensure requirements of the chosen modelling
 procedure are met, for instance, exploratory analyses to check for
 collinearity, spatial and temporal coverage, quality and resolution,
-outliers or the need for transformations (Yates et al. 2018). Because
+outliers or the need for transformations (Yates et al. 2018, White et al. 2019). Because
 each preliminary analysis increases the risk of researcher degrees of
 freedom, flexible analysis strategies may be specified. For each
 separate preliminary or investigatory analysis:
