@@ -21,73 +21,116 @@ options(htmltools.dir.version = FALSE)
 
 # Background & Motivation
 
-
 ```{r, fig.margin = TRUE, fig.width=10, fig.height = 5, echo = FALSE, fig.cap= "Figure 1: Conventional Preregistration Process, as illustrated by Pu et al (2019)."}
 magick::image_read(path = "./Pu_et_al_fig_prereg.png")
 ```
 
-
-
-The iterative nature of model development is a significant barrier to adopting preregistration for model-based research. Translating the preregistration process to a modelling research context is challenging because the iterative nature of model development conflicts with the inner logic of existing preregistration templates that presume a linear research workflow. The process of preregistration as it is currently implemented is tailored towards the hypothetico-deductive model of the scientific method. As such, the process of preregistration is completely distinct from, and precedes the implementation of the analysis plan laid out in the preregistration. In fact, preregistration has been defined as “the action of confirming an unalterable version of one’s research plan prior to collecting data” (Nosek et al. 2018) or prior to analysing the data [@Mertens2019]. In this process, researcher sequentially shifts from ideation, to study/analysis design and preregistration, to collecting and analysing the data, writing the report or manuscript, to documenting the research and publishing (Figure 1). The iterative nature of model development, however, inherently precludes this model of preregistration from being applied to model-based research in ecology and conservation.
+The iterative nature of model development is a significant barrier to adopting preregistration for model-based research.
+Translating the preregistration process to a modelling research context is challenging because the iterative nature of model development conflicts with the inner logic of existing preregistration templates that presume a linear research workflow.
+The process of preregistration as it is currently implemented is tailored towards the hypothetico-deductive model of the scientific method.
+As such, the process of preregistration is completely distinct from, and precedes the implementation of the analysis plan laid out in the preregistration.
+In fact, preregistration has been defined as "the action of confirming an unalterable version of one's research plan prior to collecting data" (Nosek et al. 2018) or prior to analysing the data [@Mertens2019].
+In this process, researcher sequentially shifts from ideation, to study/analysis design and preregistration, to collecting and analysing the data, writing the report or manuscript, to documenting the research and publishing (Figure 1).
+The iterative nature of model development, however, inherently precludes this model of preregistration from being applied to model-based research in ecology and conservation.
 
 ## Iterative Cycle of Model Development
 
-Firstly, as Srivastava notes [-@Srivastava2018], there are some decisions that are either difficult to anticipate, or simply cannot be made in advance. This is particularly true for decisions occurring at the later phases of the modelling construction and development process (Figure 2, TBC), where downstream decisions depend on the outcomes of earlier decisions and outcomes of modelling analyses. Some items on the template might not be able to be answered on the first go by the researcher until the model is fully or at least close to fully specified, for example, specifying precisely what and how sensitivity analyses or uncertainty analyses will be conducted.
+Firstly, as Srivastava notes [-@Srivastava2018], there are some decisions that are either difficult to anticipate, or simply cannot be made in advance.
+This is particularly true for decisions occurring at the later phases of the modelling construction and development process (Figure 2, TBC), where downstream decisions depend on the outcomes of earlier decisions and outcomes of modelling analyses.
+Some items on the template might not be able to be answered on the first go by the researcher until the model is fully or at least close to fully specified, for example, specifying precisely what and how sensitivity analyses or uncertainty analyses will be conducted.
 
-Secondly, very often in modelling, preliminary or investigatory analyses might need to be conducted before being able to specify future decision-steps in the analysis plan. For example, modellers might need to check the distribution of particular variables in order to determine how to specify the model, perform assumption checks, or check for collinearity or spatial autocorrelation. In addition, sometimes the results of these analyses and checks mean that the modeller is forced to return to earlier decision-points and change the analysis. For instance, the model might fail to converge, or is saturated and runs out of variation to apportion, such that the model must be respecified. Other times, the modelling process itself may generate knowledge and learning about the system, and the model structure changes throughout the process of model development.
+Secondly, very often in modelling, preliminary or investigatory analyses might need to be conducted before being able to specify future decision-steps in the analysis plan.
+For example, modellers might need to check the distribution of particular variables in order to determine how to specify the model, perform assumption checks, or check for collinearity or spatial autocorrelation.
+In addition, sometimes the results of these analyses and checks mean that the modeller is forced to return to earlier decision-points and change the analysis.
+For instance, the model might fail to converge, or is saturated and runs out of variation to apportion, such that the model must be respecified.
+Other times, the modelling process itself may generate knowledge and learning about the system, and the model structure changes throughout the process of model development.
 
-In these examples, if an analyst were to try and preregister their research, they would switch back and forth between preregistration and analysis, implementing parts of the analysis plan that were specified in the previous preregistration step, and letting the outcomes in that analysis step inform the next specification of the analysis. This contravenes a critical feature of preregistration as currently implemented in hypothetico-deductive frameworks, where the analysis plan must be fully specified prior to observing and analysing the data. This is not a flaw of existing preregistration, but rather reflects the inner-logic of preregistration for hypothesis-testing contexts. The procedure for implementing preregistration in modelling must therefore account for this iterative and non-linear feature of model development, should we wish to preregister model-based research.
+In these examples, if an analyst were to try and preregister their research, they would switch back and forth between preregistration and analysis, implementing parts of the analysis plan that were specified in the previous preregistration step, and letting the outcomes in that analysis step inform the next specification of the analysis.
+This contravenes a critical feature of preregistration as currently implemented in hypothetico-deductive frameworks, where the analysis plan must be fully specified prior to observing and analysing the data.
+This is not a flaw of existing preregistration, but rather reflects the inner-logic of preregistration for hypothesis-testing contexts.
+The procedure for implementing preregistration in modelling must therefore account for this iterative and non-linear feature of model development, should we wish to preregister model-based research.
 
 ## The *Checking Problem*
 
-The iterative nature of model construction and development complicates what is known as the preregistration checking problem even further. Authors, reviewers, editors and readers may all engage in the process of checking a manuscript or published paper against its preregistration to verify that the study and analyses were conducted as specified in the preregistration. Existing pre-registration formats hinder checking, because the prevailing format of a single static text-based document is designed for authors to very quickly input the required information, rather than to facilitate a comparison of the reported analysis and results against the planned analysis within the preregistration. In fact, Pu et al. [-@Pu2019] go so far as to say that this format “verge[s] on being write-only media” and are therefore completely ill-suited to the checking task. The task of model checking is further complicated by the non-linear and iterative nature of model development, and by our proposed adaptive preregistration methodology because in most modelling studies there will likely be interim preregistrations, such that there are multiple versions of the preregistration to check against the completed analysis.
+The iterative nature of model construction and development complicates what is known as the preregistration checking problem even further.
+Authors, reviewers, editors and readers may all engage in the process of checking a manuscript or published paper against its preregistration to verify that the study and analyses were conducted as specified in the preregistration.
+Existing pre-registration formats hinder checking, because the prevailing format of a single static text-based document is designed for authors to very quickly input the required information, rather than to facilitate a comparison of the reported analysis and results against the planned analysis within the preregistration.
+In fact, Pu et al. [-@Pu2019] go so far as to say that this format "verge[s] on being write-only media" and are therefore completely ill-suited to the checking task.
+The task of model checking is further complicated by the non-linear and iterative nature of model development, and by our proposed adaptive preregistration methodology because in most modelling studies there will likely be interim preregistrations, such that there are multiple versions of the preregistration to check against the completed analysis.
 
 ## Preregistration Template Format & Procedure
 
-Given the iterative nature of adaptive preregistration then, the current convention of the single-use, deterministic and static text-based document format of preregistration is inadequate. Interim versions of a preregistration must be time-stamped and ideally version-controlled, such that it is clear not just that two or more versions differ from each other, and in what order they were created, but so that it is explicitly clear in how they differ. To facilitate preregistration checking of flexible modelling and analysis strategies, we must link the results of both final and preliminary analyses back to the specified strategy: the link between a particular triggered analysis decision, and the analysis outcome that triggered the decision must be explicit. Additionally, if the results of some preliminary analyses cause revisions to the model itself or a different modelling procedure or approach to be selected than was originally or previously planned, then the trigger for this decision must be explicitly linked to the next version of the preregistration.
+Given the iterative nature of adaptive preregistration then, the current convention of the single-use, deterministic and static text-based document format of preregistration is inadequate.
+Interim versions of a preregistration must be time-stamped and ideally version-controlled, such that it is clear not just that two or more versions differ from each other, and in what order they were created, but so that it is explicitly clear in how they differ.
+To facilitate preregistration checking of flexible modelling and analysis strategies, we must link the results of both final and preliminary analyses back to the specified strategy: the link between a particular triggered analysis decision, and the analysis outcome that triggered the decision must be explicit.
+Additionally, if the results of some preliminary analyses cause revisions to the model itself or a different modelling procedure or approach to be selected than was originally or previously planned, then the trigger for this decision must be explicitly linked to the next version of the preregistration.
 
 # Adaptive Preregistration
 
-In order to address the disjuncture between the iterative nature of model development, and the single-use, deterministic preregistration template format, we take an ‘expanded view of preregistration’, that fits with the concept of ‘adaptive preregistration’ proposed by Srivastava [-@Srivastava2018]. This view of preregistration breaks with the current model of preregistration, wherein the author writes a single deterministic preregistration containing a rule for every decision, and sequentially shifts from ideation, preregistration to execution of the plan. Two features define adaptive preregistration. It contains ‘plans to deploy flexible strategies’ [@Srivastava2018] wherein the author can supply a heuristic consisting of multiple different analysis or modelling strategies whose execution depends on the outcome of previous decision-points or analyses. Secondly, the preregistration may be iterative and consist of interim preregistrations that mark phases of modelling and analysis as different parts of the data are observed [@Srivastava2018]. Thus, as the modeller proceeds through the model development process, they will shift from ideation, preregistration, execution of the analysis and back to ideation and preregistration again, depending on the observed outcomes as each interim preregistration is executed (Figure 3). Consequently we propose a methodology for implementing adaptive preregistration that leverages features of GitHub to also facilitate the task of linking the actual study and analysis conducted to the pre-specified plan in the preregistration.
+In order to address the disjuncture between the iterative nature of model development, and the single-use, deterministic preregistration template format, we take an 'expanded view of preregistration', that fits with the concept of 'adaptive preregistration' proposed by Srivastava [-@Srivastava2018].
+This view of preregistration breaks with the current model of preregistration, wherein the author writes a single deterministic preregistration containing a rule for every decision, and sequentially shifts from ideation, preregistration to execution of the plan.
+Two features define adaptive preregistration.
+It contains 'plans to deploy flexible strategies' [@Srivastava2018] wherein the author can supply a heuristic consisting of multiple different analysis or modelling strategies whose execution depends on the outcome of previous decision-points or analyses.
+Secondly, the preregistration may be iterative and consist of interim preregistrations that mark phases of modelling and analysis as different parts of the data are observed [@Srivastava2018].
+Thus, as the modeller proceeds through the model development process, they will shift from ideation, preregistration, execution of the analysis and back to ideation and preregistration again, depending on the observed outcomes as each interim preregistration is executed (Figure 3).
+Consequently we propose a methodology for implementing adaptive preregistration that leverages features of GitHub to also facilitate the task of linking the actual study and analysis conducted to the pre-specified plan in the preregistration.
 
 ![Figure 3: Adaptive Preregistration for model-based research using GitHub](../figures/LivingPreregistration.png)
 
 ## Adaptive Preregistration using GitHub
 
-We propose leveraging both the version-control and the project management features of GitHub ([www.github.com](www.github.com)) as a tool for implementing adaptive preregistration. When a document is version-controlled using git and GitHub, each version of a document is time-stamped, and is assigned its own unique identifier, or commit-hash ^[https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-glossary#commit-id]. Because GitHub documents are ‘time-stamped’ the genesis of the preregistration from one version to the next is apparent. Moreover, using the diff view of a document on GitHub, exactly how and where a document has changed between versions is clear - additions are coloured green, deletions are coloured red, and changes within a line are highlighted. 
+We propose leveraging both the version-control and the project management features of GitHub ([www.github.com](www.github.com)) as a tool for implementing adaptive preregistration.
+When a document is version-controlled using git and GitHub, each version of a document is time-stamped, and is assigned its own unique identifier, or commit-hash [^1].
+Because GitHub documents are 'time-stamped' the genesis of the preregistration from one version to the next is apparent.
+Moreover, using the diff view of a document on GitHub, exactly how and where a document has changed between versions is clear - additions are coloured green, deletions are coloured red, and changes within a line are highlighted.
 
 ```{r, fig.margin = TRUE, fig.width=10, fig.height = 5, echo = FALSE, fig.cap= "'Diff View' of changes made to a preregistration in process."}
 magick::image_read(path = "./DiffView-PRT.png")
 ```
 
-The preregistration document should be saved within the project repository that contains the data and modelling and analysis code, such that any results from analyses that cause the analysis plan to change can be linked and referenced in the updated version of the plan -- thus facilitating the process of model checking. By providing a method for contrasting the actual analysis undertaken against the preregistered analysis, this provides a mechanism for allowing reviewers to properly evaluate the preregistration against the reported analysis. It thus provides a way of marking preregistered parts of a report from non-preregistered parts of the analysis.
+The preregistration document should be saved within the project repository that contains the data and modelling and analysis code, such that any results from analyses that cause the analysis plan to change can be linked and referenced in the updated version of the plan -- thus facilitating the process of model checking.
+By providing a method for contrasting the actual analysis undertaken against the preregistered analysis, this provides a mechanism for allowing reviewers to properly evaluate the preregistration against the reported analysis.
+It thus provides a way of marking preregistered parts of a report from non-preregistered parts of the analysis.
 
 ## How it works...
 
-GitHub is used to track amendments to the preregistration — each time an additional template item is answered, or an alteration is made to the preregistration, the change should be committed to the repository. *Semantic versioning* is used to document each version of the preregistration. Semantic versioning^[The semantic version is a 3-part numeric identifier separated by points, e.g.: `0.0.1`, wherein the first number sequences a major version of the preregistration, the second number sequences a minor change, and the third number sequences small changes or patches, yielding: `MAJOR.MINOR.PATCH`. See https://semver.org/ for further information. We provide more details on how to use semantic versioning with adaptive preregistration below.] is an open-source software engineering practice used to document and and communicate the development of software, in a way that allows others to depend on it [@Kitzes2018vn]. We have created our own semantic versioning scheme to be used to specifically document the incremental version of the preregistration, in tandem with GitHub’s tag and release feature, each interim preregistration is tagged and released with its semantic version number. All questions that can be answered should be completed before any data analysis or modelling proceeds. The preregistration should be completed until a) no further detail can be supplied or b) no additional template item can be answered until preliminary investigations or analyses are undertaken (Fig 3, steps 1 - 3).
+GitHub is used to track amendments to the preregistration --- each time an additional template item is answered, or an alteration is made to the preregistration, the change should be committed to the repository.
+*Semantic versioning* is used to document each version of the preregistration.
+Semantic versioning[^2] is an open-source software engineering practice used to document and and communicate the development of software, in a way that allows others to depend on it [@Kitzes2018vn].
+We have created our own semantic versioning scheme to be used to specifically document the incremental version of the preregistration, in tandem with GitHub's tag and release feature, each interim preregistration is tagged and released with its semantic version number.
+All questions that can be answered should be completed before any data analysis or modelling proceeds.
+The preregistration should be completed until a) no further detail can be supplied or b) no additional template item can be answered until preliminary investigations or analyses are undertaken (Fig 3, steps 1 - 3).
 
 ```{r, fig.margin = TRUE, fig.width=10, fig.height = 5, echo = FALSE, fig.cap= "Initial Preregistration: All questions that can be answered should be completed prior to data analysis or modelling."}
 magick::image_read(path = "./initial_prereg-closeup.png")
 ```
 
-
-### …Shifting from planning to execution…
+### ...Shifting from planning to execution...
 
 ```{r, fig.margin = TRUE, fig.width=10, fig.height = 5, echo = FALSE, fig.cap= "Document: After the initial preregistration, document the initial preregistration using GitHub issues."}
 magick::image_read(path = "./document-initial-prereg.png")
 ```
 
-Before shifting from planning to the execution of the interim preregistration, each complete response in the interim preregistration should have a corresponding GitHub issue^[https://guides.github.com/features/issues/] created (Figure 3, step 3, ‘Document’). Relevant discussion between analysts about how to proceed with the intended analysis or interpreting preliminary results are tracked within an issue’s thread. Each issue is automatically assigned a unique number by GitHub. Any code or analysis outputs, such as figures, tables or other files, should be committed and tagged with the issue number, so that all analysis addressing that task is tracked within the issue’s thread (Fig 3, step 4, ‘Do’). The URL for the GitHub issue should then be added to the relevant preregistration item, the preregistration document should then be committed with the changes, and the version number of the preregistration updated in a new release.
+Before shifting from planning to the execution of the interim preregistration, each complete response in the interim preregistration should have a corresponding GitHub issue[^3] created (Figure 3, step 3, 'Document').
+Relevant discussion between analysts about how to proceed with the intended analysis or interpreting preliminary results are tracked within an issue's thread.
+Each issue is automatically assigned a unique number by GitHub.
+Any code or analysis outputs, such as figures, tables or other files, should be committed and tagged with the issue number, so that all analysis addressing that task is tracked within the issue's thread (Fig 3, step 4, 'Do').
+The URL for the GitHub issue should then be added to the relevant preregistration item, the preregistration document should then be committed with the changes, and the version number of the preregistration updated in a new release.
 
-### … And back again.
+### ... And back again.
 
 ```{r, fig.margin = TRUE, fig.width=10, fig.height = 5, echo = FALSE, fig.cap= "Adaptive Preregistration - When Plans Change"}
 magick::image_read(path = "./when-plans-change.png")
 ```
 
-As the modelling proceeds, further detail on later phases of the analysis can be iteratively updated and preregistered. Where the results of model evaluation and analysis reveal that there are problems with the model, plans can be changed, and again the next phase can be preregistered. For example, if a researcher finds that assumptions are violated or other unexpected results occur that force a change to the planned analysis, the preregistration can be updated based on the findings of those analyses. When this occurs, the major version number of the preregistration document should be incremented (Fig 3 steps 5 - 6). Since the findings of the analyses are tracked within the relevant issue for that template item, and the issue is recorded in the preregistration itself, the trigger for the change in the plan is made explicitly clear.
+As the modelling proceeds, further detail on later phases of the analysis can be iteratively updated and preregistered.
+Where the results of model evaluation and analysis reveal that there are problems with the model, plans can be changed, and again the next phase can be preregistered.
+For example, if a researcher finds that assumptions are violated or other unexpected results occur that force a change to the planned analysis, the preregistration can be updated based on the findings of those analyses.
+When this occurs, the major version number of the preregistration document should be incremented (Fig 3 steps 5 - 6).
+Since the findings of the analyses are tracked within the relevant issue for that template item, and the issue is recorded in the preregistration itself, the trigger for the change in the plan is made explicitly clear.
 
-For each altered or new preregistration item, the issue thread should either be updated, or a new issue created respectively (Fig 3, step 6). Those analyses are then either reconnected based on the revised plan or the new investigatory analyses are then conducted (Fig 3, step 7).
+For each altered or new preregistration item, the issue thread should either be updated, or a new issue created respectively (Fig 3, step 6).
+Those analyses are then either reconnected based on the revised plan or the new investigatory analyses are then conducted (Fig 3, step 7).
 
 This process continues until the preregistration is complete, and the researcher can continue to execute the plan as it has been fully described in the final version of the preregistration document (Fig 3, step 8 - 9).
 
@@ -95,10 +138,9 @@ This process continues until the preregistration is complete, and the researcher
 
 When a researcher needs to conduct preliminary analyses or check parts of the data before committing to a particular decision about the model or analysis, they can specify a flexible strategy in their response to that preregistration item by:
 
-- stating what needs to be known to move forward with the modelling and analysis and why the analysis is necessary
-- explaining how the researcher will test this, and what parts of the data will be used in that analysis
-- describing how the results will be interpreted, listing each potential decision and the analysis result that will trigger that decision, where possible.
-
+-   stating what needs to be known to move forward with the modelling and analysis and why the analysis is necessary
+-   explaining how the researcher will test this, and what parts of the data will be used in that analysis
+-   describing how the results will be interpreted, listing each potential decision and the analysis result that will trigger that decision, where possible.
 
 # A step-by-step guide to implementing Adaptive Preregistration with GitHub
 
@@ -106,19 +148,18 @@ When a researcher needs to conduct preliminary analyses or check parts of the da
 
 ### The first iteration of preregistration
 
-1. Edit the document with your responses to the template items
+1.  Edit the document with your responses to the template items
 
-- View the document in GitHub [here](https://github.com/egouldo/VEFMAP_VEG_Stage6/blob/master/analysis/preregistration_template.Rmd) 
-- Click on The 'edit document' button:
-![Screen Shot 2020-05-10 at 6 29 33 pm](https://user-images.githubusercontent.com/8400682/81494459-791b7080-92ec-11ea-979b-900317b4a9b6.png)
-- You will be able to edit the document directly in GitHub, Edit away!
+-   View the document in GitHub [here](https://github.com/egouldo/VEFMAP_VEG_Stage6/blob/master/analysis/preregistration_template.Rmd)
+-   Click on The 'edit document' button: ![Screen Shot 2020-05-10 at 6 29 33 pm](https://user-images.githubusercontent.com/8400682/81494459-791b7080-92ec-11ea-979b-900317b4a9b6.png)
+-   You will be able to edit the document directly in GitHub, Edit away!
 
-2. Commit changes
+2.  Commit changes
 
-- If you are finished, or ready to save your changes by 'committing' them, commit by scrolling underneath the document editing window. There will be a box called "commit changes", enter in the commit message box the following:
-- Your message should contain the following: `Initial Preregistration #IssueNumber`. Tag the Preregistration GitHub issue number in the commit message (For this repository, it's `#17`).
-- Fill out the additional description box briefly describing the changes you just made
-- Click "commit"
+-   If you are finished, or ready to save your changes by 'committing' them, commit by scrolling underneath the document editing window. There will be a box called "commit changes", enter in the commit message box the following:
+-   Your message should contain the following: `Initial Preregistration #IssueNumber`. Tag the Preregistration GitHub issue number in the commit message (For this repository, it's `#17`).
+-   Fill out the additional description box briefly describing the changes you just made
+-   Click "commit"
 
 ![Screen Shot 2020-05-18 at 12 19 29 pm](https://user-images.githubusercontent.com/8400682/82168463-2b14f700-9902-11ea-95a0-21fe385629bb.png)
 
@@ -127,7 +168,8 @@ When a researcher needs to conduct preliminary analyses or check parts of the da
 ### Moving from general to specific: Incrementally updating the preregistration
 
 You will likely find that some items on the template cannot be answered just yet.
-One reason being that the level of detail required to adequately answer the template item just isn't clear yet, and more thought and time is needed, or you need to be further along the modelling process to be able to adequately answer the question. Another reason is that downstream decisions might depend on some preliminary investigations of the data -- for example, you might need to explore the shape of a measured variable before you can properly specify the full model. 
+One reason being that the level of detail required to adequately answer the template item just isn't clear yet, and more thought and time is needed, or you need to be further along the modelling process to be able to adequately answer the question.
+Another reason is that downstream decisions might depend on some preliminary investigations of the data -- for example, you might need to explore the shape of a measured variable before you can properly specify the full model.
 
 In the latter situation, where possible, you can preregister your preliminary analysis: describing what the preliminary analysis entails, providing a short and relevant list of plausible outcomes, and describing for each of those possible outcomes how the dependent or down-stream decision-point will change depending on the outcome.
 
@@ -143,43 +185,51 @@ As for the situation where you are responding to findings of a preliminary analy
 
 Before you begin to do or start anything you've planned within your preregistration, you **must** create a GitHub issue for that item, phase, or step in the modelling process, follow these steps:
 
-1. View the preregistration document in Github, and click on the line-numbers on the left to highlight the PRT item text, as well as your response to the item. For example, let's say you want to start working the model checking, you would highlight the following in the document. Note that once you've highlighted some lines, a little box with an ellipsis appears on top of the lines numbers.
-![Screen Shot 2020-05-13 at 1 06 25 pm](https://user-images.githubusercontent.com/8400682/81767208-2d9ad980-951b-11ea-8f59-6d6f583eb155.png) 
-2. Click on the tiny box with the ellipsis, and a pop-up dialogue box will appear with 4 options: `Copy lines`, `Copy permalink`, `View git blame`, `References in new issue`. Select the last option `Reference in new issue.`
-![Screen Shot 2020-05-13 at 1 06 58 pm](https://user-images.githubusercontent.com/8400682/81767344-80749100-951b-11ea-8b76-1e829528973a.png)
-3. This will open up a new window with a new GitHub Issue for you to complete. Note that part of the issue description has already been filled out for you, this is a reference to the lines you just highlighted: 
-![Screen Shot 2020-05-13 at 1 07 30 pm](https://user-images.githubusercontent.com/8400682/81767518-ef51ea00-951b-11ea-9398-18fffdcbbeae.png)
-Which is cool, because if you open the `Preview` tab to view the preview of your issue, it will look like this:
-![Screen Shot 2020-05-13 at 1 17 21 pm](https://user-images.githubusercontent.com/8400682/81767585-1c9e9800-951c-11ea-9d2c-46d2faf6368a.png)
+1.  View the preregistration document in Github, and click on the line-numbers on the left to highlight the PRT item text, as well as your response to the item. For example, let's say you want to start working the model checking, you would highlight the following in the document. Note that once you've highlighted some lines, a little box with an ellipsis appears on top of the lines numbers. ![Screen Shot 2020-05-13 at 1 06 25 pm](https://user-images.githubusercontent.com/8400682/81767208-2d9ad980-951b-11ea-8f59-6d6f583eb155.png)
+2.  Click on the tiny box with the ellipsis, and a pop-up dialogue box will appear with 4 options: `Copy lines`, `Copy permalink`, `View git blame`, `References in new issue`. Select the last option `Reference in new issue.` ![Screen Shot 2020-05-13 at 1 06 58 pm](https://user-images.githubusercontent.com/8400682/81767344-80749100-951b-11ea-8b76-1e829528973a.png)
+3.  This will open up a new window with a new GitHub Issue for you to complete. Note that part of the issue description has already been filled out for you, this is a reference to the lines you just highlighted: ![Screen Shot 2020-05-13 at 1 07 30 pm](https://user-images.githubusercontent.com/8400682/81767518-ef51ea00-951b-11ea-9398-18fffdcbbeae.png) Which is cool, because if you open the `Preview` tab to view the preview of your issue, it will look like this: ![Screen Shot 2020-05-13 at 1 17 21 pm](https://user-images.githubusercontent.com/8400682/81767585-1c9e9800-951c-11ea-9d2c-46d2faf6368a.png)
 
-Add any further information or technical details about going forward and working on this task, as necessary. Submit the issue to save. Any work, and subsequent commits on this topic should be tagged with the issue number. We now have a mechanism for linking your actual analysis and actions to the planned analysis in the preregistration document.
+Add any further information or technical details about going forward and working on this task, as necessary.
+Submit the issue to save.
+Any work, and subsequent commits on this topic should be tagged with the issue number.
+We now have a mechanism for linking your actual analysis and actions to the planned analysis in the preregistration document.
 
 ### Dealing with unexpected outcomes, and changing plans: Shifting back to planning from doing
 
-Sometimes assumptions are violated, or there are other unexpected outcomes of preliminary analyses, and you will need to change plans. How do we deal with this?
+Sometimes assumptions are violated, or there are other unexpected outcomes of preliminary analyses, and you will need to change plans.
+How do we deal with this?
 
-- Add the URL to the relevant GitHub issue under the corresponding Preregistration Item.
-- Add any the URL for any linked commits to the Preregistration Item. 
-- revise the Preregistration, where necessary by editing the Preregistration document in GitHub, as per previous instructions.
-- Commit the changes with the following commit message header:
-- Describe the trigger for the Preregistration revisions in brief detail within the commit message body, adding the link to the relevant GitHub issue containing the tagged commits that triggered the revision.
+-   Add the URL to the relevant GitHub issue under the corresponding Preregistration Item.
+-   Add any the URL for any linked commits to the Preregistration Item.
+-   revise the Preregistration, where necessary by editing the Preregistration document in GitHub, as per previous instructions.
+-   Commit the changes with the following commit message header:
+-   Describe the trigger for the Preregistration revisions in brief detail within the commit message body, adding the link to the relevant GitHub issue containing the tagged commits that triggered the revision.
 
 ## 'Living preregistration' - tracking changes to the Preregistration Draft with GitHub
 
 We will leverage [GitHub's tagging and release feature](https://help.github.com/en/github/administering-a-repository/releasing-projects-on-github) in conjunction with [Semantic Versioning]((https://semver.org/)) to document and track changes to the preregistration document.
 
-GitHub releases mark software iterations that you can release and deploy^[Instructions for creating releases are here: [https://help.github.com/en/github/administering-a-repository/managing-releases-in-a-repository](https://help.github.com/en/github/administering-a-repository/managing-releases-in-a-repository)]. Within the context of adaptive preregistration, we can use releases to mark interim versions of the preregistration, as well as to take a snapshot of the entire repository at that moment in time.
+GitHub releases mark software iterations that you can release and deploy[^4].
+Within the context of adaptive preregistration, we can use releases to mark interim versions of the preregistration, as well as to take a snapshot of the entire repository at that moment in time.
 
 Note that anything up until the complete preregistration should be additionally tagged as a 'pre-release'
 
+| Preregistration Change or Action                                                                                                                                                                                                                                                                                       | GitHub Mechanism                                                                                                                                                                                                                                                        | Semantic Versioning                                                      |
+|-------------------------------|--------------------------|---------------|
+| **Changes preceding initial completion of preregistration**                                                                                                                                                                                                                                                            | Tag and Mark as 'pre-release'                                                                                                                                                                                                                                           | `Minor` increment. E.g. `0.2.0` The `Major` value should not exceed `0`. |
+| **Incremental Change**, e.g. respond to new question.                                                                                                                                                                                                                                                                  | Tag and Release                                                                                                                                                                                                                                                         | `Minor` increment. E.g. `0.2.0` The `Major` value should not exceed `0`. |
+| **Initial Preregistration complete**. Note that 'complete' needs to be decided. Is complete after all preliminary and investigatory analyses have been done and the final Preregistration is complete, or is it the first iteration, where no more items can be filled out until some initial analyses are undertaken? | Tag and Release                                                                                                                                                                                                                                                         | `Major` increment to `1.0.0`                                             |
+| **Major change to a complete Preregistration** -- no looking or analysing at data                                                                                                                                                                                                                                      | Tag and Release                                                                                                                                                                                                                                                         | `Major` increment `>1.0.0`                                               |
+| **Linking implemented work to the Preregistration Item**                                                                                                                                                                                                                                                               | Update Preregistration with GH Issue Link and all relevant commit hashes pertaining to that Preregistration Item + Commit. Tag and Release that preregistration commit.                                                                                                 | `Minor` increment.                                                       |
+| **When plans change** Adapting the Preregistration on the basis of results from preliminary or investigatory analyses                                                                                                                                                                                                  | Update Preregistration with GH Issue Link and all relevant commit hashes pertaining to that Preregistration Item + Commit. Respond to dependent incomplete Preregistration Items or Update existing / already completed Preregistration Items + Commit. Tag and Release | `Major` increment.                                                       |
+| **Minor mistakes**                                                                                                                                                                                                                                                                                                     | Changes including small typos, or minor elaborations on existing specified plans                                                                                                                                                                                        | `Patch` increment. E.g. `0.1.2`.                                         |
 
-Preregistration Change or Action | GitHub Mechanism | Semantic Versioning|
-------|-------|--------|
-**Changes preceding initial completion of preregistration** | Tag and Mark as 'pre-release' | `Minor` increment. E.g. `0.2.0` The `Major` value should not exceed `0`. |
-**Incremental Change**, e.g. respond to new question. | Tag and Release | `Minor` increment. E.g. `0.2.0` The `Major` value should not exceed `0`. |
-**Initial Preregistration complete**. Note that 'complete' needs to be decided. Is complete after all preliminary and investigatory analyses have been done and the final Preregistration is complete, or is it the first iteration, where no more items can be filled out until some initial analyses are undertaken? | Tag and Release | `Major` increment to `1.0.0` |
-**Major change to a complete Preregistration** -- no looking or analysing at data | Tag and Release | `Major` increment `>1.0.0` |
-**Linking implemented work to the Preregistration Item** | Update Preregistration with GH Issue Link and all relevant commit hashes pertaining to that Preregistration Item + Commit. Tag and Release that preregistration commit. | `Minor` increment. |
-**When plans change** Adapting the Preregistration on the basis of results from preliminary or investigatory analyses |  Update Preregistration with GH Issue Link and all relevant commit hashes pertaining to that Preregistration Item + Commit. Respond to dependent incomplete Preregistration Items or Update existing / already completed Preregistration Items + Commit. Tag and Release | `Major` increment.
-**Minor mistakes** | Changes including small typos, or minor elaborations on existing specified plans | `Patch` increment. E.g. `0.1.2`. |
+[^1]: [https://docs.github.com/en/free-pro-team\@latest/github/getting-started-with-github/github-glossary#commit-id](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-glossary#commit-id){.uri}
 
+[^2]: The semantic version is a 3-part numeric identifier separated by points, e.g.: `0.0.1`, wherein the first number sequences a major version of the preregistration, the second number sequences a minor change, and the third number sequences small changes or patches, yielding: `MAJOR.MINOR.PATCH`.
+    See <https://semver.org/> for further information.
+    We provide more details on how to use semantic versioning with adaptive preregistration below.
+
+[^3]: <https://guides.github.com/features/issues/>
+
+[^4]: Instructions for creating releases are here: <https://help.github.com/en/github/administering-a-repository/managing-releases-in-a-repository>
