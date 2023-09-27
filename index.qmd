@@ -1,11 +1,12 @@
 ---
-title: "quarto"
+title: "Adaptive Preregistration for Model-Based Research"
 ---
 
-This is a Quarto website.
+This site provides a guide to implementing *Adaptive Preregistration for Model-Based Research*, with a focus on ecological modelling as it is used in both basic and applied contexts.
+This site covers the following topics:
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
-
-```{r}
-1 + 1
-```
+1.  Background on researcher degrees of freedom, the risk of questionable research practices (QRPs), and introduction to preregistration as a tool for mitigating QRPs.
+2.  Adaptive Preregistration
+    1.  *Background*: What is it and what are its key features
+    2.  *A practical guide*: How to implement adaptive preregistration with git and github.
+3.  Preregistration of model-based research in ecology and conservation. Provides an overview of the sorts of things that we should preregister when modelling, what practices to look out for, what things should be registered as decision-trees.
