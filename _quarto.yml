@@ -4,10 +4,34 @@ project:
 website:
   title: "Adaptive Preregistration for Model-Based Research"
   navbar:
+    search: true
     left:
       - href: index.qmd
         text: Home
+      - text: "Researcher Degrees of Freedom"
+        file: RDF_QRP.qmd
+      - text: "Adaptive Preregistration"
+        file: adaptive_preregistration_background.qmd
+      - text: "Preregistration for Modelling"
+        file: preregistration_modelling.qmd
       - about.qmd
+  sidebar:
+    - title: "Researcher Degrees of Freedom"
+      contents:
+        - RDF_QRP.qmd
+        # navigation items
+        
+    - title: "Adaptive Preregistration"
+      style: "docked"
+      background: light
+      contents:
+        - adaptive_preregistration_background.qmd
+        - adaptive_preregistration_implementation.qmd
+
+    - title: "Preregistration for Modelling" 
+      contents:
+        - preregistration_modelling.qmd
+        # navigation items
 
 format:
   html:

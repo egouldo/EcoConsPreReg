@@ -1,0 +1,3 @@
+---
+title: Implementing Adaptive Preregistration with Git and Github
+---
