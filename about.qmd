@@ -2,8 +2,7 @@
 title: "About"
 ---
 
-About this site
+This site is a practical guide to accompany the paper:
 
-```{r}
-1 + 1
-```
+> Gould, E., Jones, C.J., Fraser, H.F., Rumpff, L., Fidler, F.M.
+> (in prep.) "But I can't preregister my research: Improving the reproducibility and transparency of ecology modelling with adaptive preregistration." TBD.
