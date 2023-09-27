@@ -1,3 +1,18 @@
 ---
-title: Preregistration for Modelling
+title: Adaptive Preregistration for Modelling
+sidebar: false
 ---
+
+How does adaptive preregistration differ from existing preregistration?
+
+-   interim preregistrations for the iterative cycle of model development
+-   registrered flexibility for when planned analyses need to change based on the outcomes of previous decisions
+-   moving back and forth between different preregistration phases
+
+Communicating deviations, additional analyses, outcomes of registered flexibility
+
+-   fledge, News.md
+
+Interim Preregistrations:
+
+-   GitHub releases, semantic versioning, fledge
