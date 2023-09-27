@@ -1,3 +1,70 @@
 ---
 title: A primer on Adaptive Preregistration
+author: Elliot Gould
+date: today
+link-citations: true
+bibliography: data/references.bib
 ---
+
+# Background & Motivation
+
+```{r}
+#| label: fig-traditional-prereg
+#| fig-width: 10
+#| fig-height: 5
+#| echo: false
+#| fig-cap: "Conventional Preregistration Process, as illustrated by [@Pu2019]"
+magick::image_read(path = "_supp-mat/Pu_et_al_fig_prereg.png")
+```
+
+The iterative nature of model development is a significant barrier to adopting preregistration for model-based research.
+Translating the preregistration process to a modelling research context is challenging because the iterative nature of model development conflicts with the inner logic of existing preregistration templates that presume a linear research workflow.
+The process of preregistration as it is currently implemented is tailored towards the hypothetico-deductive model of the scientific method.
+As such, the process of preregistration is completely distinct from, and precedes the implementation of the analysis plan laid out in the preregistration.
+In fact, preregistration has been defined as "the action of confirming an unalterable version of one's research plan prior to collecting data" [@Pu2019] or prior to analysing the data [@Mertens2019].
+In this process, researcher sequentially shifts from ideation, to study/analysis design and preregistration, to collecting and analysing the data, writing the report or manuscript, to documenting the research and publishing (@fig-traditional-prereg).
+The iterative nature of model development, however, inherently precludes this model of preregistration from being applied to model-based research in ecology and conservation.
+
+## Iterative Cycle of Model Development
+
+Firstly, as Srivastava notes [-@Srivastava2018], there are some decisions that are either difficult to anticipate, or simply cannot be made in advance.
+This is particularly true for decisions occurring at the later phases of the modelling construction and development process (Figure 2, TBC), where downstream decisions depend on the outcomes of earlier decisions and outcomes of modelling analyses.
+Some items on the template might not be able to be answered on the first go by the researcher until the model is fully or at least close to fully specified, for example, specifying precisely what and how sensitivity analyses or uncertainty analyses will be conducted.
+
+Secondly, very often in modelling, preliminary or investigatory analyses might need to be conducted before being able to specify future decision-steps in the analysis plan.
+For example, modellers might need to check the distribution of particular variables in order to determine how to specify the model, perform assumption checks, or check for collinearity or spatial autocorrelation.
+In addition, sometimes the results of these analyses and checks mean that the modeller is forced to return to earlier decision-points and change the analysis.
+For instance, the model might fail to converge, or is saturated and runs out of variation to apportion, such that the model must be respecified.
+Other times, the modelling process itself may generate knowledge and learning about the system, and the model structure changes throughout the process of model development.
+
+In these examples, if an analyst were to try and preregister their research, they would switch back and forth between preregistration and analysis, implementing parts of the analysis plan that were specified in the previous preregistration step, and letting the outcomes in that analysis step inform the next specification of the analysis.
+This contravenes a critical feature of preregistration as currently implemented in hypothetico-deductive frameworks, where the analysis plan must be fully specified prior to observing and analysing the data.
+This is not a flaw of existing preregistration, but rather reflects the inner-logic of preregistration for hypothesis-testing contexts.
+The procedure for implementing preregistration in modelling must therefore account for this iterative and non-linear feature of model development, should we wish to preregister model-based research.
+
+## The *Checking Problem*
+
+The iterative nature of model construction and development complicates what is known as the preregistration checking problem even further.
+Authors, reviewers, editors and readers may all engage in the process of checking a manuscript or published paper against its preregistration to verify that the study and analyses were conducted as specified in the preregistration.
+Existing pre-registration formats hinder checking, because the prevailing format of a single static text-based document is designed for authors to very quickly input the required information, rather than to facilitate a comparison of the reported analysis and results against the planned analysis within the preregistration.
+In fact, Pu et al. [-@Pu2019] go so far as to say that this format "verge\[s\] on being write-only media" and are therefore completely ill-suited to the checking task.
+The task of model checking is further complicated by the non-linear and iterative nature of model development, and by our proposed adaptive preregistration methodology because in most modelling studies there will likely be interim preregistrations, such that there are multiple versions of the preregistration to check against the completed analysis.
+
+## Preregistration Template Format & Procedure
+
+Given the iterative nature of adaptive preregistration then, the current convention of the single-use, deterministic and static text-based document format of preregistration is inadequate.
+Interim versions of a preregistration must be time-stamped and ideally version-controlled, such that it is clear not just that two or more versions differ from each other, and in what order they were created, but so that it is explicitly clear in how and why they differ.
+To facilitate preregistration checking of flexible modelling and analysis strategies, we must link the results of both final and preliminary analyses back to the specified strategy: the link between a particular triggered analysis decision, and the analysis outcome that triggered the decision must be explicit.
+Additionally, if the results of some preliminary analyses cause revisions to the model itself or a different modelling procedure or approach to be selected than was originally or previously planned, then the trigger for this decision must be explicitly linked to the next version of the preregistration.
+
+# Adaptive Preregistration
+
+In order to address the disjuncture between the iterative nature of model development, and the single-use, deterministic preregistration template format, we take an 'expanded view of preregistration', that fits with the concept of 'adaptive preregistration' proposed by Srivastava [-@Srivastava2018].
+This view of preregistration breaks with the current model of preregistration, wherein the author writes a single deterministic preregistration containing a rule for every decision, and sequentially shifts from ideation, preregistration to execution of the plan.
+Two features define adaptive preregistration.
+It contains 'plans to deploy flexible strategies' [@Srivastava2018] wherein the author can supply a heuristic consisting of multiple different analysis or modelling strategies whose execution depends on the outcome of previous decision-points or analyses.
+Secondly, the preregistration may be iterative and consist of interim preregistrations that mark phases of modelling and analysis as different parts of the data are observed [@Srivastava2018].
+Thus, as the modeller proceeds through the model development process, they will shift from ideation, preregistration, execution of the analysis and back to ideation and preregistration again, depending on the observed outcomes as each interim preregistration is executed ( @fig-adaptive-preregistration).
+Consequently we propose a methodology for implementing adaptive preregistration that leverages features of GitHub to also facilitate the task of linking the actual study and analysis conducted to the pre-specified plan in the preregistration.
+
+![Adaptive Preregistration for model-based research using GitHub](figures/LivingPreregistration.png){#fig-adaptive-preregistration}
