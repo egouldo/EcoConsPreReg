@@ -1,3 +1,4 @@
 ---
 title: From Researcher Degrees of Freedom to Questionable Research Practices
+sidebar: false
 ---
