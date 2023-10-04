@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Note: Black boxes provide an explanation or justification of a particular section or preregistration item. Text contained in ‘preregistration item’ boxes requires a response.">
+
+<title>Adaptive Preregistration for Model-Based Research - Adaptive Preregistration for Modelling</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Adaptive Preregistration for Model-Based Research</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./RDF_QRP.html" rel="" target="">
+ <span class="menu-text">Researcher Degrees of Freedom</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./adaptive_preregistration_background.html" rel="" target="">
+ <span class="menu-text">Adaptive Preregistration</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./preregistration_modelling.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Preregistration for Modelling</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="99">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#problem-formulation" id="toc-problem-formulation" class="nav-link active" data-scroll-target="#problem-formulation"><span class="header-section-number">1</span> 1. Problem Formulation</a>
+  <ul class="collapse">
+  <li><a href="#model-purpose" id="toc-model-purpose" class="nav-link" data-scroll-target="#model-purpose"><span class="header-section-number">1.1</span> 1.1 Model Purpose</a>
+  <ul class="collapse">
+  <li><a href="#define-model-purpose-and-problem-context" id="toc-define-model-purpose-and-problem-context" class="nav-link" data-scroll-target="#define-model-purpose-and-problem-context"><span class="header-section-number">1.1.1</span> 1.1.1 Define model purpose and problem context</a></li>
+  </ul></li>
+  <li><a href="#specify-modelling-context" id="toc-specify-modelling-context" class="nav-link" data-scroll-target="#specify-modelling-context"><span class="header-section-number">1.2</span> 1.2 Specify modelling context</a>
+  <ul class="collapse">
+  <li><a href="#identify-model-users-stakeholders" id="toc-identify-model-users-stakeholders" class="nav-link" data-scroll-target="#identify-model-users-stakeholders"><span class="header-section-number">1.2.1</span> 1.2.1 Identify model users / stakeholders</a></li>
+  <li><a href="#model-scope-and-scale" id="toc-model-scope-and-scale" class="nav-link" data-scroll-target="#model-scope-and-scale"><span class="header-section-number">1.2.2</span> 1.2.2 Model Scope and Scale</a></li>
+  <li><a href="#logistical-constraints" id="toc-logistical-constraints" class="nav-link" data-scroll-target="#logistical-constraints"><span class="header-section-number">1.2.3</span> 1.2.3 Logistical Constraints</a></li>
+  </ul></li>
+  <li><a href="#explain-analytical-objectives" id="toc-explain-analytical-objectives" class="nav-link" data-scroll-target="#explain-analytical-objectives"><span class="header-section-number">1.3</span> 1.3.1 Explain analytical objectives</a>
+  <ul class="collapse">
+  <li><a href="#identify-how-the-model-will-tell-you-about-your-analytic-objectives" id="toc-identify-how-the-model-will-tell-you-about-your-analytic-objectives" class="nav-link" data-scroll-target="#identify-how-the-model-will-tell-you-about-your-analytic-objectives"><span class="header-section-number">1.3.1</span> 1.3.2 - Identify how the model will tell you about your analytic objectives</a></li>
+  </ul></li>
+  <li><a href="#define-candidate-decisions-and-method-of-identifying-relevant-management-actions" id="toc-define-candidate-decisions-and-method-of-identifying-relevant-management-actions" class="nav-link" data-scroll-target="#define-candidate-decisions-and-method-of-identifying-relevant-management-actions"><span class="header-section-number">1.4</span> 1.4 Define candidate decisions and method of identifying relevant management actions</a></li>
+  <li><a href="#specify-scenarios" id="toc-specify-scenarios" class="nav-link" data-scroll-target="#specify-scenarios"><span class="header-section-number">1.5</span> 1.5 Specify scenarios</a></li>
+  </ul></li>
+  <li><a href="#define-conceptual-model" id="toc-define-conceptual-model" class="nav-link" data-scroll-target="#define-conceptual-model"><span class="header-section-number">2</span> 2.0 Define Conceptual Model</a>
+  <ul class="collapse">
+  <li><a href="#choose-elicitation-and-representation-method" id="toc-choose-elicitation-and-representation-method" class="nav-link" data-scroll-target="#choose-elicitation-and-representation-method"><span class="header-section-number">2.1</span> 2.1 Choose elicitation and representation method</a></li>
+  <li><a href="#explain-critical-conceptual-design-decisions" id="toc-explain-critical-conceptual-design-decisions" class="nav-link" data-scroll-target="#explain-critical-conceptual-design-decisions"><span class="header-section-number">2.2</span> 2.2.1 Explain Critical Conceptual Design Decisions</a></li>
+  <li><a href="#specify-key-assumptions-and-uncertainties-underlying-the-models-design." id="toc-specify-key-assumptions-and-uncertainties-underlying-the-models-design." class="nav-link" data-scroll-target="#specify-key-assumptions-and-uncertainties-underlying-the-models-design."><span class="header-section-number">2.3</span> 2.2.2 Specify key assumptions and uncertainties underlying the model’s design.</a></li>
+  <li><a href="#identify-predictor-and-response-variables" id="toc-identify-predictor-and-response-variables" class="nav-link" data-scroll-target="#identify-predictor-and-response-variables"><span class="header-section-number">2.4</span> 2.3 Identify predictor and response variables</a></li>
+  <li><a href="#define-prior-knowledge-data-specification-and-evaluation" id="toc-define-prior-knowledge-data-specification-and-evaluation" class="nav-link" data-scroll-target="#define-prior-knowledge-data-specification-and-evaluation"><span class="header-section-number">2.5</span> 2.4 Define prior knowledge, data specification and evaluation</a>
+  <ul class="collapse">
+  <li><a href="#collate-available-data-sources-that-could-be-used-to-parameterise-or-structure-the-model" id="toc-collate-available-data-sources-that-could-be-used-to-parameterise-or-structure-the-model" class="nav-link" data-scroll-target="#collate-available-data-sources-that-could-be-used-to-parameterise-or-structure-the-model"><span class="header-section-number">2.5.1</span> 2.4.1 Collate available data sources that could be used to parameterise or structure the model</a></li>
+  <li><a href="#data-processing-and-preparation" id="toc-data-processing-and-preparation" class="nav-link" data-scroll-target="#data-processing-and-preparation"><span class="header-section-number">2.5.2</span> 2.4.2 Data Processing and Preparation</a></li>
+  <li><a href="#describe-any-data-exploration-or-preliminary-data-analyses." id="toc-describe-any-data-exploration-or-preliminary-data-analyses." class="nav-link" data-scroll-target="#describe-any-data-exploration-or-preliminary-data-analyses."><span class="header-section-number">2.5.3</span> 2.4.3 Describe any data exploration or preliminary data analyses.</a></li>
+  <li><a href="#data-evaluation" id="toc-data-evaluation" class="nav-link" data-scroll-target="#data-evaluation"><span class="header-section-number">2.5.4</span> 2.4.4 Data Evaluation</a></li>
+  <li><a href="#data-evaluation-data-exclusion" id="toc-data-evaluation-data-exclusion" class="nav-link" data-scroll-target="#data-evaluation-data-exclusion"><span class="header-section-number">2.5.5</span> 2.4.6. Data evaluation: data exclusion</a></li>
+  <li><a href="#data-evaluation-missing-data" id="toc-data-evaluation-missing-data" class="nav-link" data-scroll-target="#data-evaluation-missing-data"><span class="header-section-number">2.5.6</span> 2.4.7 Data Evaluation: Missing Data</a></li>
+  </ul></li>
+  <li><a href="#conceptual-model-evaluation" id="toc-conceptual-model-evaluation" class="nav-link" data-scroll-target="#conceptual-model-evaluation"><span class="header-section-number">2.6</span> 2.5 Conceptual model evaluation</a></li>
+  </ul></li>
+  <li><a href="#formalise-and-specify-model" id="toc-formalise-and-specify-model" class="nav-link" data-scroll-target="#formalise-and-specify-model"><span class="header-section-number">3</span> 3.0 Formalise and Specify Model</a>
+  <ul class="collapse">
+  <li><a href="#choose-model-class-framework-and-approach" id="toc-choose-model-class-framework-and-approach" class="nav-link" data-scroll-target="#choose-model-class-framework-and-approach"><span class="header-section-number">3.1</span> 3.1 Choose model class, framework and approach</a></li>
+  <li><a href="#choose-model-features-and-family" id="toc-choose-model-features-and-family" class="nav-link" data-scroll-target="#choose-model-features-and-family"><span class="header-section-number">3.2</span> 3.2 Choose model features and family</a>
+  <ul class="collapse">
+  <li><a href="#explain-how-you-will-operationalise-response-variables" id="toc-explain-how-you-will-operationalise-response-variables" class="nav-link" data-scroll-target="#explain-how-you-will-operationalise-response-variables"><span class="header-section-number">3.2.1</span> 3.2.1 Explain how you will operationalise response variable(s)</a></li>
+  <li><a href="#choose-model-family" id="toc-choose-model-family" class="nav-link" data-scroll-target="#choose-model-family"><span class="header-section-number">3.2.2</span> 3.2.2 Choose model family</a></li>
+  <li><a href="#choose-model-features" id="toc-choose-model-features" class="nav-link" data-scroll-target="#choose-model-features"><span class="header-section-number">3.2.3</span> 3.2.3 Choose model features</a></li>
+  </ul></li>
+  <li><a href="#choose-approach-for-identifying-model-structure-and-parameters" id="toc-choose-approach-for-identifying-model-structure-and-parameters" class="nav-link" data-scroll-target="#choose-approach-for-identifying-model-structure-and-parameters"><span class="header-section-number">3.3</span> 3.3 Choose approach for identifying model structure and parameters</a></li>
+  <li><a href="#choose-estimation-technique-and-performance-criteria" id="toc-choose-estimation-technique-and-performance-criteria" class="nav-link" data-scroll-target="#choose-estimation-technique-and-performance-criteria"><span class="header-section-number">3.4</span> 3.4 Choose estimation technique and performance criteria</a>
+  <ul class="collapse">
+  <li><a href="#choice-of-performance-criteria" id="toc-choice-of-performance-criteria" class="nav-link" data-scroll-target="#choice-of-performance-criteria"><span class="header-section-number">3.4.1</span> 3.4.1 Choice of performance criteria</a></li>
+  <li><a href="#choice-of-parameter-estimation-technique" id="toc-choice-of-parameter-estimation-technique" class="nav-link" data-scroll-target="#choice-of-parameter-estimation-technique"><span class="header-section-number">3.4.2</span> 3.4.2 Choice of parameter estimation technique</a></li>
+  </ul></li>
+  <li><a href="#specify-model-assumptions-and-uncertainties" id="toc-specify-model-assumptions-and-uncertainties" class="nav-link" data-scroll-target="#specify-model-assumptions-and-uncertainties"><span class="header-section-number">3.5</span> 3.5 Specify model assumptions and uncertainties</a></li>
+  <li><a href="#specify-formal-model" id="toc-specify-formal-model" class="nav-link" data-scroll-target="#specify-formal-model"><span class="header-section-number">3.6</span> 3.6 Specify formal model</a></li>
+  </ul></li>
+  <li><a href="#model-calibration-model-fitting-checking" id="toc-model-calibration-model-fitting-checking" class="nav-link" data-scroll-target="#model-calibration-model-fitting-checking"><span class="header-section-number">4</span> Model Calibration, Model Fitting &amp; Checking</a>
+  <ul class="collapse">
+  <li><a href="#model-calibration-and-validation-scheme" id="toc-model-calibration-and-validation-scheme" class="nav-link" data-scroll-target="#model-calibration-and-validation-scheme"><span class="header-section-number">4.1</span> Model calibration and validation scheme</a>
+  <ul class="collapse">
+  <li><a href="#describe-validation-data" id="toc-describe-validation-data" class="nav-link" data-scroll-target="#describe-validation-data"><span class="header-section-number">4.1.1</span> Describe validation data</a></li>
+  </ul></li>
+  <li><a href="#implementation-verification" id="toc-implementation-verification" class="nav-link" data-scroll-target="#implementation-verification"><span class="header-section-number">4.2</span> Implementation verification</a></li>
+  <li><a href="#model-checking" id="toc-model-checking" class="nav-link" data-scroll-target="#model-checking"><span class="header-section-number">4.3</span> Model checking</a>
+  <ul class="collapse">
+  <li><a href="#quantitative-model-checking" id="toc-quantitative-model-checking" class="nav-link" data-scroll-target="#quantitative-model-checking"><span class="header-section-number">4.3.1</span> Quantitative Model Checking</a></li>
+  <li><a href="#qualitative-model-checking" id="toc-qualitative-model-checking" class="nav-link" data-scroll-target="#qualitative-model-checking"><span class="header-section-number">4.3.2</span> Qualitative Model Checking</a></li>
+  <li><a href="#assumption-violation-checks" id="toc-assumption-violation-checks" class="nav-link" data-scroll-target="#assumption-violation-checks"><span class="header-section-number">4.3.3</span> Assumption Violation Checks</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#model-validation-and-evaluation" id="toc-model-validation-and-evaluation" class="nav-link" data-scroll-target="#model-validation-and-evaluation"><span class="header-section-number">5</span> 5.0 Model Validation and Evaluation</a>
+  <ul class="collapse">
+  <li><a href="#model-output-corroboration" id="toc-model-output-corroboration" class="nav-link" data-scroll-target="#model-output-corroboration"><span class="header-section-number">5.1</span> 5.1 Model output corroboration</a></li>
+  <li><a href="#choose-performance-metrics-and-criteria" id="toc-choose-performance-metrics-and-criteria" class="nav-link" data-scroll-target="#choose-performance-metrics-and-criteria"><span class="header-section-number">5.2</span> 5.2 Choose performance metrics and criteria</a></li>
+  <li><a href="#model-analysis" id="toc-model-analysis" class="nav-link" data-scroll-target="#model-analysis"><span class="header-section-number">5.3</span> Model analysis</a>
+  <ul class="collapse">
+  <li><a href="#uncertainty-analyses" id="toc-uncertainty-analyses" class="nav-link" data-scroll-target="#uncertainty-analyses"><span class="header-section-number">5.3.1</span> Uncertainty Analyses</a></li>
+  <li><a href="#sensitivity-analyses" id="toc-sensitivity-analyses" class="nav-link" data-scroll-target="#sensitivity-analyses"><span class="header-section-number">5.3.2</span> Sensitivity Analyses</a></li>
+  <li><a href="#model-application-or-scenario-analysis" id="toc-model-application-or-scenario-analysis" class="nav-link" data-scroll-target="#model-application-or-scenario-analysis"><span class="header-section-number">5.3.3</span> Model application or scenario analysis</a></li>
+  <li><a href="#other-simulation-experiments-robustness-analyses" id="toc-other-simulation-experiments-robustness-analyses" class="nav-link" data-scroll-target="#other-simulation-experiments-robustness-analyses"><span class="header-section-number">5.3.4</span> Other simulation experiments / robustness analyses</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">6</span> References</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Adaptive Preregistration for Modelling</h1>
+<p class="subtitle lead">A template suitable for use in Ecology and Conservation with accompanying rationale and explanation.</p>
+</div>
+
+<div>
+  <div class="description">
+    Note: Black boxes provide an explanation or justification of a particular section or preregistration item. Text contained in ‘preregistration item’ boxes requires a response.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="problem-formulation" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> 1. Problem Formulation</h1>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rationale &amp; Explanation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This section specifies the decision-making context in which the model will be used or the intended scope and context of conclusions. Important components include the decision maker and stakeholders (including experts) and their view on: i) the nature of the problem or decision addressed and how the scope of the modelling tool fits within the (broader) context (i.e.&nbsp;model purpose; ii) the spatial and temporal scales relevant to the decision context; iii) specified desired outputs; iv) role and inclusion in model development and testing; v) whether they foresee unacceptable outcomes that need to be represented in the model (i.e.&nbsp;as constraints), and; vi) what future scenarios does the model need to account for (noting this may be revised later). It should also provide a summary of the domain of applicability of the model, and reasonable extrapolation limits <span class="citation" data-cites="Grimm:2014es">(<a href="#ref-Grimm:2014es" role="doc-biblioref">Grimm et al. 2014</a>)</span>.</p>
+</div>
+</div>
+<section id="model-purpose" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="model-purpose"><span class="header-section-number">1.1</span> 1.1 Model Purpose</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rationale &amp; Explanation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Defining the purpose of the model is critical because the model purpose influences choices at later stages of model development <span class="citation" data-cites="Jakeman:2006ii">(<a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman, Letcher, and Norton 2006</a>)</span>. Common model purposes in ecology include: gaining a better qualitative understanding of the target system, synthesising and reviewing knowledge, and providing guidance for management and decision-making <span class="citation" data-cites="Jakeman:2006ii">(<a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman, Letcher, and Norton 2006</a>)</span>. Note that modelling objectives are distinct from the analytical objectives of the model.</p>
+</div>
+</div>
+<section id="define-model-purpose-and-problem-context" class="level3" data-number="1.1.1">
+<h3 data-number="1.1.1" class="anchored" data-anchor-id="define-model-purpose-and-problem-context"><span class="header-section-number">1.1.1</span> 1.1.1 Define model purpose and problem context</h3>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Preregistration Item
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul class="task-list">
+<li><input type="checkbox">Provide a clear statement of the modelling objectives and problem that the model seeks to illuminate. What is the purpose of the model/s? Ensure that you specify any focal taxa and study objectives, as well as any clients for whom the model is developed. Briefly outline the ecological problem and the decision-problem, including the decision-trigger and any regulatory frameworks relevant to the problem.</li>
+</ul>
+</div>
+</div>
+</section>
+</section>
+<section id="specify-modelling-context" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="specify-modelling-context"><span class="header-section-number">1.2</span> 1.2 Specify modelling context</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rationale &amp; Explanation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The scope of the model, including temporal and spatial resolutions are defined here <span class="citation" data-cites="Mahmoud2009">(<a href="#ref-Mahmoud2009" role="doc-biblioref">Mahmoud et al. 2009</a>)</span>, and any limitations on model development analysis and flexibility should be outlined in this section <span class="citation" data-cites="Jakeman:2006ii">(<a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman, Letcher, and Norton 2006</a>)</span>. Note that the modelling context is different from the problem context which are described in 1.3.1.</p>
+</div>
+</div>
+<section id="identify-model-users-stakeholders" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="identify-model-users-stakeholders"><span class="header-section-number">1.2.1</span> 1.2.1 Identify model users / stakeholders</h3>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Preregistration Item
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Identify interest groups in the modelling context. This includes clients, and end-users of the model. Who is the model for, who is involved in formulating the model? Who needs buy in? Describe the decision-making context in which the model will be used.</p>
+</div>
+</div>
+</section>
+<section id="model-scope-and-scale" class="level3" data-number="1.2.2">
+<h3 data-number="1.2.2" class="anchored" data-anchor-id="model-scope-and-scale"><span class="header-section-number">1.2.2</span> 1.2.2 Model Scope and Scale</h3>
+<p><em>Determine the temporal and spatial scope of the model. Where is the boundary of the modelled system? Everything outside beyond the boundary and not crossing it is to be ignored within the domain of the model, and everything crossing the boundary is to be treated as external forcing (known/unknown), or else as model outputs (observed, or not, Jakeman et al.&nbsp;2006)</em> <strong>HF comment I dont understand the preceeding sentence, the concept of boundaries of the model is foreign to me. Also, is this question more to do with describing the scope and limitations of the data rather then the model?</strong>*. The choice of a model’s boundaries is closely linked to the choice of how finely to aggregate the behaviour within the model (Jakeman et al., 2006) - what is the intended scale and resolution of the model (temporal, spatial or otherwise)?</p>
+<p>Explain how any key concepts or terms within problem or decision-making contexts, such as regulatory terms, will be operationalised and defined in a biologically meaningful way to answer the research question appropriately? (Should this last step go here or within define conceptual framework?. <strong><em>HF comment. I think it belongs with the conceptual framework</em></strong>).</p>
+<p>What is the intended domain of applicability of the model, what is the extent of acceptable extrapolations (Grimm)? This is relevant to model transferability… (similar to a COG statement..)* A comment:This section feels a bit too big and confusing from my perspective and I do think you might need to move some of it to a different section to reduce the risk of misinterpretation. I’m just thinking about how I might fill this out for an imagined study. The literal boundaries of the study are usually straightforward, but the theoretic boundaries are a different and also big thing to try to conceptualise in one section. You could have a section for the spatial/temporal boundaries of the study, and another section on how far the results can be extrapolated based on the study design. This makes sense to me in how I design experiments, if I have too many confounding variables and not enough spatial and environmental replication then I’m less likely to make any broad claims. However, if I have controlled or experimentally manipulated factors then I feel safer making bigger generalisations about results.</p>
+</section>
+<section id="logistical-constraints" class="level3" data-number="1.2.3">
+<h3 data-number="1.2.3" class="anchored" data-anchor-id="logistical-constraints"><span class="header-section-number">1.2.3</span> 1.2.3 Logistical Constraints</h3>
+<p><em>Time-frame - When must the model by completed, e.g.&nbsp;to help make a decision?</em></p>
+<p><em>What effort and resources are available for both developing the model and operating the model?</em> <strong><em>HF comment; as written this might be slightly confronting because you could interpret this to include writing explictly about budget constraints which might be confidential. Maybe this could be alleviated with with an example?</em></strong></p>
+<p><em>What degree of flexibility is required from the model? Might the model need to be quickly reconfigured to explore new scenarios or problems proposed by clients / managers / model-users?</em></p>
+</section>
+</section>
+<section id="explain-analytical-objectives" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="explain-analytical-objectives"><span class="header-section-number">1.3</span> 1.3.1 Explain analytical objectives</h2>
+<p><em>How will the model be analysed, what analytical questions will the model be used to answer? Examples from ecological decision-making include: to compare the performance of alternative management actions under budget constraint <span class="citation" data-cites="Fraser:2017jf">(<a href="#ref-Fraser:2017jf" role="doc-biblioref">Fraser et al. 2017</a>)</span> to search for robust decisions under uncertainty <span class="citation" data-cites="McDonald-Madden2008">(<a href="#ref-McDonald-Madden2008" role="doc-biblioref">McDonald-Madden, Baxter, and Possingham 2008</a>)</span>, to choose the conservation policy that minimises uncertainty [insert ref]. See other examples in <span class="citation" data-cites="Moallemi2019">(<a href="#ref-Moallemi2019" role="doc-biblioref">Moallemi, Elsawah, and Ryan 2019</a>)</span>.</em></p>
+<section id="identify-how-the-model-will-tell-you-about-your-analytic-objectives" class="level3" data-number="1.3.1">
+<h3 data-number="1.3.1" class="anchored" data-anchor-id="identify-how-the-model-will-tell-you-about-your-analytic-objectives"><span class="header-section-number">1.3.1</span> 1.3.2 - Identify how the model will tell you about your analytic objectives</h3>
+<p><em>The outcomes should speak directly to the analytical objectives identified in 1.3.1. Outcomes could be qualitative or quantitative. For example, you might be using your model in a scenario analysis to determine which management decision is associated with minimum regret or the highest likelihood of improvement.</em> To be honest, I don’t know how I might apply this to my work or any future works. Maybe I do not have enough knowledge of this type of research to apply it to my basic ecology research. But this isn’t to say it’s not important, I just wonder if there’s a way to make this accessible to non-decision or modelling peeps. Like, how would I apply it to the woodland condition analysis?</p>
+</section>
+</section>
+<section id="define-candidate-decisions-and-method-of-identifying-relevant-management-actions" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="define-candidate-decisions-and-method-of-identifying-relevant-management-actions"><span class="header-section-number">1.4</span> 1.4 Define candidate decisions and method of identifying relevant management actions</h2>
+<p><em>Candidate decisions should be investigated and are specified a priori. Depending on the modelling context, they may be specified by stakeholders, model users or the analyst<span class="citation" data-cites="Moallemi2019">(<a href="#ref-Moallemi2019" role="doc-biblioref">Moallemi, Elsawah, and Ryan 2019</a>)</span>. Describe the method used to identify relevant management actions.</em></p>
+</section>
+<section id="specify-scenarios" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="specify-scenarios"><span class="header-section-number">1.5</span> 1.5 Specify scenarios</h2>
+<p><em>Describe what processes you will use to elicit and identify relevant scenarios, e.g.&nbsp;literature review, structured workshops with stakeholders or decision-makers. Specify scenarios under which decisions are investigated. Scenarios should be set a priori <span class="citation" data-cites="Moallemi2019">(i.e.&nbsp;before the model is built, <a href="#ref-Moallemi2019" role="doc-biblioref">Moallemi, Elsawah, and Ryan 2019</a>)</span> and may be stakeholder-defined or driven by the judgement of the modeller or other experts <span class="citation" data-cites="Mahmoud2009">(<a href="#ref-Mahmoud2009" role="doc-biblioref">Mahmoud et al. 2009</a>)</span>.</em></p>
+</section>
+</section>
+<section id="define-conceptual-model" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> 2.0 Define Conceptual Model</h1>
+<p><em>Conceptual models underpin the formal or quantitative model</em></p>
+<p><em>(Cartwright et al.&nbsp;2016). The conceptual model describes the biological mechanisms relevant to the ecological problem and should capture basic premises about how the target system works, including any prior knowledge and assumptions about system processes. Conceptual models may be representeed in a variety of formats, such as influence diagrams, linguistic model block diagram or bond graphs, and these illustrate how model drivers are linked to both outputs or observed responses, and internal (state) variables <span class="citation" data-cites="Jakeman:2006ii">(<a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman, Letcher, and Norton 2006</a>)</span>.</em></p>
+<section id="choose-elicitation-and-representation-method" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="choose-elicitation-and-representation-method"><span class="header-section-number">2.1</span> 2.1 Choose elicitation and representation method</h2>
+<p><em>Describe what method you will use to elicit or identify the conceptual model. Some common methods include interviews, drawings, and mapping techniques including influence diagrams, cognitive maps and Bayesian belief networks (Moon et al.&nbsp;2019). (Libby, to provide link to any structured expert elicitation methods?).While it is difficult to decide and justify which method is most appropriate, however Moon et al.&nbsp;(2019) provide guidance addressing this methodological question. Finally, how do you intend on representing the final conceptual model? This will likely depend on the method chosen to elicit the conceptual model.</em></p>
+</section>
+<section id="explain-critical-conceptual-design-decisions" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="explain-critical-conceptual-design-decisions"><span class="header-section-number">2.2</span> 2.2.1 Explain Critical Conceptual Design Decisions</h2>
+<p><em>This step should list and explain the critical conceptual design decisions, including: spatial and temporal scales, selection of entities and processes, representation of stochasticity and heterogeneity, consideration of local versus global interactions, environmental drivers, etc. <span class="citation" data-cites="Grimm:2014es">(<a href="#ref-Grimm:2014es" role="doc-biblioref">Grimm et al. 2014</a>)</span>. The influence of particular theories, concepts, or importantly, earlier models, should be explained and justified against alternative conceptual design decisions that might lead to alternative model structures <span class="citation" data-cites="Grimm:2014es">(<a href="#ref-Grimm:2014es" role="doc-biblioref">Grimm et al. 2014</a>)</span>.</em></p>
+</section>
+<section id="specify-key-assumptions-and-uncertainties-underlying-the-models-design." class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="specify-key-assumptions-and-uncertainties-underlying-the-models-design."><span class="header-section-number">2.3</span> 2.2.2 Specify key assumptions and uncertainties underlying the model’s design.</h2>
+<ul>
+<li>Describe how uncertainty and variation will be represented in this model. This includes both exogenous uncertainties affecting the system, parametric uncertainty in input data and structural / conceptual nonparametric uncertainty in the model <span class="citation" data-cites="Moallemi2019">(<a href="#ref-Moallemi2019" role="doc-biblioref">Moallemi, Elsawah, and Ryan 2019</a>)</span>.*</li>
+</ul>
+</section>
+<section id="identify-predictor-and-response-variables" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="identify-predictor-and-response-variables"><span class="header-section-number">2.4</span> 2.3 Identify predictor and response variables</h2>
+<p><em>The identification and definition of primary model input variables should be driven by scenario definitions, and by the scope of the model described in the problem formulation phase <span class="citation" data-cites="Mahmoud2009">(<a href="#ref-Mahmoud2009" role="doc-biblioref">Mahmoud et al. 2009</a>)</span> – Identify and define system variables structures:</em></p>
+<ul>
+<li><em>What variables would support taking this action or making this decision?</em></li>
+<li><em>What additional variables may interact with this system (things we can’t control, but can hopefully measure)?</em></li>
+<li><em>What variables have not been measured, but may interact with the system (often occurs in field or observational studies)?</em></li>
+<li><em>What variables are indice or surrogate measures of variables that we cannot or have not measured?</em></li>
+<li><em>In what ways do we expect these variables to interact (model structures)?</em></li>
+</ul>
+</section>
+<section id="define-prior-knowledge-data-specification-and-evaluation" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="define-prior-knowledge-data-specification-and-evaluation"><span class="header-section-number">2.5</span> 2.4 Define prior knowledge, data specification and evaluation</h2>
+<p><em>Collect, process and prepare data available for parameterisation, determining model structure, and for scenario analysis.</em></p>
+<section id="collate-available-data-sources-that-could-be-used-to-parameterise-or-structure-the-model" class="level3" data-number="2.5.1">
+<h3 data-number="2.5.1" class="anchored" data-anchor-id="collate-available-data-sources-that-could-be-used-to-parameterise-or-structure-the-model"><span class="header-section-number">2.5.1</span> 2.4.1 Collate available data sources that could be used to parameterise or structure the model</h3>
+<p><em>Document the identity, quantity and provenance of any data that will be used to develop, identify and test the model. Describe how the data is arranged, in terms of replicates and covariates.</em></p>
+<p><strong>For pre-existing data: – delete as appropriate.</strong></p>
+<ul>
+<li><em>For each dataset, is the data open or publically available? (Y/N)</em></li>
+<li><em>How can the data be accessed? Provide a link or contact as appropriate, indicating any restrctions on the use of data.</em></li>
+<li><em>Date of download, access, or future access:</em></li>
+<li><em>Describe the source of the data - what entity originally collected this data? (National Data Set, Private Organisational Data, Own Lab Collection, Other Lab Collection, External Contractor, Meta-Analysis, Expert Elicitation, Other).</em></li>
+<li><em>Codebook and meta-data. If a Codebook or other meta-data is available, please link to it here and / or upload the document(s).</em></li>
+<li><em>Prior work based on this dataset - Have you published / presented any previous work based on this dataset? Include any publications, conference presentations (papers, posters), or working papers (in-prep, unpublished, preprints) based on this dataset you have worked on.</em> HF- Love this question</li>
+<li><em>Unpublished Prior Research Activity - Describe any prior but unpublished research activity using these data. Be specific and transparent.</em></li>
+<li><em>Prior knowledge of the current dataset - Describe any prior knowledge of or interaction with the dataset before commencing this study. For example, have you read any reports or publications about this data?</em></li>
+</ul>
+<p><strong>Sampling Plan (For data you will collect) – delete as appropriate.</strong></p>
+<ul>
+<li>Data collection procedures - Please describe your data collection process, including how sites and transects or any other physical unit were selected and arranged. Describe any inclusion or exclusion rules, and the study timeline.</li>
+<li>Sample Size - Describe the sample size of your study.</li>
+<li>Sample Size Rationale - Describe how you determined the appropriate sample size for your study. It could include feasibility constraints, such as time, money or personnel.</li>
+<li>If sample size cannot be specified, specify a stopping rule - i.e.&nbsp;how will you decide when to terminate your data collection?</li>
+</ul>
+</section>
+<section id="data-processing-and-preparation" class="level3" data-number="2.5.2">
+<h3 data-number="2.5.2" class="anchored" data-anchor-id="data-processing-and-preparation"><span class="header-section-number">2.5.2</span> 2.4.2 Data Processing and Preparation</h3>
+<p><em>Describe any data preparation and processing steps, including manipulation of environmental layers, e.g.&nbsp;standardisation and geographic projection.</em></p>
+<p><em>Describe how you will separate and distinguish between raw data, manipulated data, and outputs from modelling or any analyses of the model.</em></p>
+</section>
+<section id="describe-any-data-exploration-or-preliminary-data-analyses." class="level3" data-number="2.5.3">
+<h3 data-number="2.5.3" class="anchored" data-anchor-id="describe-any-data-exploration-or-preliminary-data-analyses."><span class="header-section-number">2.5.3</span> 2.4.3 Describe any data exploration or preliminary data analyses.</h3>
+<p><em>In most modelling cases, it is necessary to perform preliminary analyses to understand the data and check that assumptions and requirements of the chosen modelling procedures are met. Data exploration prior to model fitting or development may include exploratory analyses to check for collinearity, spatial and temporal coverage, quality and resolution, outliers, or the need for transformations <span class="citation" data-cites="Yates2018">(<a href="#ref-Yates2018" role="doc-biblioref">Yates et al. 2018</a>)</span>. Describe how you will summarise and explore your data, and explain what method you will use (graphical, tabular or otherwise) to represent your data and any analyses. Specify what you intend to find out or hope to learn from each data exploration analysis.</em></p>
+</section>
+<section id="data-evaluation" class="level3" data-number="2.5.4">
+<h3 data-number="2.5.4" class="anchored" data-anchor-id="data-evaluation"><span class="header-section-number">2.5.4</span> 2.4.4 Data Evaluation</h3>
+<p><em>Describe how you will determine how reliable the data is for the given purpose. Ideally, model input data should be internally consistent across temporal and spatial scales and resolutions, and appropriate to the problem at hand <span class="citation" data-cites="Mahmoud2009">(<a href="#ref-Mahmoud2009" role="doc-biblioref">Mahmoud et al. 2009</a>)</span>.</em> ### 2.4.5 Data Evaluation: Data reliability reporting ### 2.4.5. Data Evaluation: data reliability reporting</p>
+<p><em>Document any issues with data reliability. This is important because data quality and ecological relevance might be constrained by measurement error, inappropriate experimental design, and heterogeneity and variability inherent in ecological systems <span class="citation" data-cites="Grimm:2014es">(<a href="#ref-Grimm:2014es" role="doc-biblioref">Grimm et al. 2014</a>)</span>.</em></p>
+</section>
+<section id="data-evaluation-data-exclusion" class="level3" data-number="2.5.5">
+<h3 data-number="2.5.5" class="anchored" data-anchor-id="data-evaluation-data-exclusion"><span class="header-section-number">2.5.5</span> 2.4.6. Data evaluation: data exclusion</h3>
+<p><em>How will you determine what data, if any, will be excluded from your analyses? How will outliers be handled? Describe rules for identifying outlier data, and for excluding a site, transect, quadrat, year or season, species, trait, etc.</em></p>
+</section>
+<section id="data-evaluation-missing-data" class="level3" data-number="2.5.6">
+<h3 data-number="2.5.6" class="anchored" data-anchor-id="data-evaluation-missing-data"><span class="header-section-number">2.5.6</span> 2.4.7 Data Evaluation: Missing Data</h3>
+<p><em>How will you identify and deal with incomplete or missing data?</em></p>
+</section>
+</section>
+<section id="conceptual-model-evaluation" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="conceptual-model-evaluation"><span class="header-section-number">2.6</span> 2.5 Conceptual model evaluation</h2>
+<p><em>Describe how your conceptual model will be critically evaluated. Evaluation includes both the completeness and suitability of the overall model structure.</em></p>
+<p><em>How will any simplifying assumptions be critically assessed <span class="citation" data-cites="Augusiak:2014gz">(<a href="#ref-Augusiak:2014gz" role="doc-biblioref">Augusiak, Van den Brink, and Grimm 2014</a>)</span>?</em></p>
+<p><em>Explain whether this process will include consultation or feedback from a client, manager, or model user.</em></p>
+</section>
+</section>
+<section id="formalise-and-specify-model" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> 3.0 Formalise and Specify Model</h1>
+<p><em>In this section describe what quantitative methods you will use to build the model/s, explain how they are relevant to the client/manager/user’s purpose.</em></p>
+<section id="choose-model-class-framework-and-approach" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="choose-model-class-framework-and-approach"><span class="header-section-number">3.1</span> 3.1 Choose model class, framework and approach</h2>
+<p><em>Describe what class or approach of model you will use and¬†explain how the choice of model class was informed by the analytical objectives of the model. Modelling approaches lie on a spectrum from correlative or phenomenological to mechanistic or process-based¬† <span class="citation" data-cites="Yates2018">(<a href="#ref-Yates2018" role="doc-biblioref">Yates et al. 2018</a>)</span>; where correlative models use mathematical functions fitted to data to describe underlying processes, and mechanistic models explicitly represent processes and details of component parts of a biological system that are expected to give rise to the data <span class="citation" data-cites="White2019a">(<a href="#ref-White2019a" role="doc-biblioref">White and Marshall 2019</a>)</span>.</em></p>
+</section>
+<section id="choose-model-features-and-family" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="choose-model-features-and-family"><span class="header-section-number">3.2</span> 3.2 Choose model features and family</h2>
+<p><em>All modelling approaches require the selection of model features, which conform with the conceptual model and data specified in previous steps (Jakeman 2006). The choice of model are determined in conjunction with features are selected. Usually difficult to change fundamental features of a model beyond an early stage of model development, so careful thought and planning here is useful to the modeller (Jakeman, 2006). However, if changes to these fundamental aspects of the model do need to change, please document how and why these choices were made.</em> HF- it’s not clear to me what a model feature is and I find this a little confusing. I wonder if we need the text describing the 3.2 heading when it’s stepped out in the subsections.</p>
+<section id="explain-how-you-will-operationalise-response-variables" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="explain-how-you-will-operationalise-response-variables"><span class="header-section-number">3.2.1</span> 3.2.1 Explain how you will operationalise response variable(s)</h3>
+<p><em>Specify how you will operationalise the response variables in the model. This should relate directly to the analytical and or management objectives specified during the problem formulation phase. Operationalisations could include:- the extent of a response- an extreme value- a trend- a long-term mean- a probability distribution- a spatial pattern- a time-series, - qualitative change, such as a direction of change or- the frequency, location, or probability of some event occuring. Provide a rationale for your choices, including why plausible alternatives were not chosen (Jakeman, 2006).</em> HF- this is great. Only slight concern is the deceptively difficult task that last sentence represents</p>
+</section>
+<section id="choose-model-family" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="choose-model-family"><span class="header-section-number">3.2.2</span> 3.2.2 Choose model family</h3>
+<p><em>Specify which family of statistical distributions you will use in your model, and describe any transformations, or link functions. Justify your decision based on the purpose, objectives, prior knowledge and logistical constraints (Jakeman, 2006) specified in the problem formulation phase.</em></p>
+<p><em>Include in your rational for selection, detail about which variables the model outputs are sensitive to, what aspects of their behaviour are important, and any associated spatial or temporal dimensions in sampling.</em></p>
+</section>
+<section id="choose-model-features" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="choose-model-features"><span class="header-section-number">3.2.3</span> 3.2.3 Choose model features</h3>
+<p><em>Specify which variables are included in the model, and the nature of their treatment (e.g.&nbsp;lumped/distributed, linear/non-linear, stochastic/deterministic, Jakeman, 2006).</em></p>
+<p><em>Specify model structural features, including: - the functional form of interactions, - data structures - measures used to specify links, - any bins or discretisation of continuous variables.</em></p>
+</section>
+</section>
+<section id="choose-approach-for-identifying-model-structure-and-parameters" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="choose-approach-for-identifying-model-structure-and-parameters"><span class="header-section-number">3.3</span> 3.3 Choose approach for identifying model structure and parameters</h2>
+<p><em>This refers to the process of determining the best/most efficient/parsimonious representation of the system at the appropriate scale of concern (Jakeman, 2006) that best meets the analytical objectives specified in the problem formulation phase. Approaches to finding model structure and parameters may be knowledge-supported, or data-driven <span class="citation" data-cites="Boets:2015gl">(<a href="#ref-Boets:2015gl" role="doc-biblioref">Boets et al. 2015</a>)</span>. Model selection methods can include traditional inferential approaches such as unconstrained searches of a dataset for patterns that explain variations in the response variable, or use of ensemble-modelling methods (Barnard et al.&nbsp;2019). Ensemble modelling procedures might aim to derive a single model, or a multi-model average <span class="citation" data-cites="Yates2018">(<a href="#ref-Yates2018" role="doc-biblioref">Yates et al. 2018</a>)</span>. Refining actions to develop a model could include iteratively dropping parameters or adding them, or aggregating / disaggregating system descriptors, such as dimensionality and processes (Jakeman, 2006). Specify what approach and methods you will use to identify model structure and parameters.</em></p>
+</section>
+<section id="choose-estimation-technique-and-performance-criteria" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="choose-estimation-technique-and-performance-criteria"><span class="header-section-number">3.4</span> 3.4 Choose estimation technique and performance criteria</h2>
+<p><em>Before calibrating the model to the data, the performance criteria on which the calibration is judged are chosen. These criteria and their underlying assumptions should reflect the desired properties of the parameter estimates / structure <span class="citation" data-cites="Jakeman:2006ii">(<a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman, Letcher, and Norton 2006</a>)</span>. For example, modellers might seek parameter estimates that are robust to outliers, unbiased, and yield appropriate predictive performance. Modellers will need to consider whether the assumptions of the estimation technique yielding those desired criteria are appropriate to the problem at hand. For integrated or sub-divided models, other considerations might include choices about where to disaggregate the model for parameter estimation; e.g.&nbsp;spatial sectioning (streams into reaches) and temporal sectioning (piece-wise linear models) <span class="citation" data-cites="Jakeman:2006ii">(<a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman, Letcher, and Norton 2006</a>)</span>. Specifying performance criteria a priori is important because it involves pre-specifying how the fitted or quantitative model will be interpreted in advance, avoiding biases like confirmation bias, HARKing, and cherry-picking some performance tests from the full suite of tests undertaken.</em> HF- I think this paragraph is only relevant to performance criteria- doesn’t really explore estimation technique. As above though, I’m not sure that this paragraph is neessary given that it’s stepped out in the subheadings below</p>
+<section id="choice-of-performance-criteria" class="level3" data-number="3.4.1">
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="choice-of-performance-criteria"><span class="header-section-number">3.4.1</span> 3.4.1 Choice of performance criteria</h3>
+<p><em>Specify which suite of performance criteria you will use to judge the performance of the model. Examples include correlation scores, coefficient of determination, specificity, sensitivity, AUC, etcetera (Yates et al.&nbsp;2018). Relate any underlying assumptions of each criterion to the desired properties of the model, and justify the choice of performance metric in relation into whether it is sensitive to the problem at hand. Explain how you will identify which model features or components are significant or meaningful.</em></p>
+</section>
+<section id="choice-of-parameter-estimation-technique" class="level3" data-number="3.4.2">
+<h3 data-number="3.4.2" class="anchored" data-anchor-id="choice-of-parameter-estimation-technique"><span class="header-section-number">3.4.2</span> 3.4.2 Choice of parameter estimation technique</h3>
+<p>HF- I think that it might be double dipping to include structure here as well as in 3.3 <em>Specify what technique you will use to estimate parameter values, and how you will supply non-parametric variables and/or data (e.g.&nbsp;distributed boundary conditions). For example, will you calibrate all variables simultaneously by optimising fit of model outputs to observations, or will you parameterise the model in a piecemeal fashion by either direct measurement, inference from secondary data, or some combination (Jakeman, 2006). Identify which variables were parameterised directly, such as by expert elicitation or prior knowledge. Specify which algorithm(s) you will use for any data-driven parameter estimation, including supervised, or unsupervised machine learning, decision-tree, K-nearest neighbour or cluster algorithms <span class="citation" data-cites="Liu2018b">(<a href="#ref-Liu2018b" role="doc-biblioref">Liu et al. 2018</a>)</span>.</em></p>
+</section>
+</section>
+<section id="specify-model-assumptions-and-uncertainties" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="specify-model-assumptions-and-uncertainties"><span class="header-section-number">3.5</span> 3.5 Specify model assumptions and uncertainties</h2>
+<p><em>Specify all assumptions and key uncertainties in the formal model. Describe what gaps exist between the model conception, and the real-world problem, what biases might this introduce and how might this impact any interpretation of the model outputs, and what implications are there on evaluating model-output to inform decisions?</em></p>
+</section>
+<section id="specify-formal-model" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="specify-formal-model"><span class="header-section-number">3.6</span> 3.6 Specify formal model</h2>
+<p><em>Once critical decisions have been made about the approach and method of model specification,translate the conceptual model into the quantitative model. For data-driven and model-selection approaches that determine model structure and parameters, describe any initial model specifications and parameterisations, including for any tune-in parameters. (Should this go here or in model calibration?)</em></p>
+</section>
+</section>
+<section id="model-calibration-model-fitting-checking" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Model Calibration, Model Fitting &amp; Checking</h1>
+<section id="model-calibration-and-validation-scheme" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="model-calibration-and-validation-scheme"><span class="header-section-number">4.1</span> Model calibration and validation scheme</h2>
+<p><em>Describe how you will validate and check the calibration of the model. The model may be tested on data independent of those used to parameterise the model (external validation), or the model may be cross-validated on random sub-samples of the data used to parameterise the model (internal cross-validation) <span class="citation" data-cites="Yates2018 Barnard2019">(<a href="#ref-Yates2018" role="doc-biblioref">Yates et al. 2018</a>; <a href="#ref-Barnard2019" role="doc-biblioref">Barnard et al. 2019</a>)</span>. Justify your choices.</em></p>
+<section id="describe-validation-data" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="describe-validation-data"><span class="header-section-number">4.1.1</span> Describe validation data</h3>
+<p><em>If partitioning data for cross-validation: describe the approach specifying the number of folds that will be created and the relative size of each. Describe how will you document and/or share the partitioned data such that the data partitioning and any subsequent modelling based on this partitioning can be computationally reproduced.</em></p>
+<p><em>If using external data: describe any known differences between the training and validation datasets and the size of the validation dataset. Describe how will you document and/or share the external data such that any subsequent modelling can be computationally reproduced.</em></p>
+</section>
+</section>
+<section id="implementation-verification" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="implementation-verification"><span class="header-section-number">4.2</span> Implementation verification</h2>
+<p><em>What Quality Assurance measures will you take to verify the model has been correctly implemented? Tests could include syntax checking of code, and code reviews by peers. Checks for verification implementation should include i) thoroughly checking for bugs or programming errors, and ii) whether the implemented model performs as dictated by the model description <span class="citation" data-cites="Grimm:2014es">(<a href="#ref-Grimm:2014es" role="doc-biblioref">Grimm et al. 2014</a>)</span>. Specifying up front quality assurance tests for implementation verification may help to avoid selective debugging.</em></p>
+</section>
+<section id="model-checking" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="model-checking"><span class="header-section-number">4.3</span> Model checking</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rationale &amp; Explanation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>“Model Checking” goes by many names (“conditional verification”, “quantitative verification”, “model output verification” ), and refers to a series of analyses that assess a model’s performance in representing the system of interest <span class="citation" data-cites="Conn:2018hd">(<a href="#ref-Conn:2018hd" role="doc-biblioref">Conn et al. 2018</a>)</span>. Model checking aids in diagnosing assumption violations, and reveals where a model might need to be altered to better represent the data, and therefore system <span class="citation" data-cites="Conn:2018hd">(<a href="#ref-Conn:2018hd" role="doc-biblioref">Conn et al. 2018</a>)</span>. Quantitative model checking diagnostics include goodness of fit, tests on residuals or errors, such as for heteroscedascity, cross-correlation, and autocorrelation <span class="citation" data-cites="Jakeman:2006ii">(<a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman, Letcher, and Norton 2006</a>)</span>.</p>
+</div>
+</div>
+<section id="quantitative-model-checking" class="level3" data-number="4.3.1">
+<h3 data-number="4.3.1" class="anchored" data-anchor-id="quantitative-model-checking"><span class="header-section-number">4.3.1</span> Quantitative Model Checking</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Preregistration Item
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><em>During this process, observed data, or data and patterns that guided model design and calibration is compared to model output in order to identify if and where there are any systematic differences.</em></p>
+<ul class="task-list">
+<li><input type="checkbox">Specify any diagnostics or tests you will use during model checking to assess a model’s performance in representing the system of interest.</li>
+<li><input type="checkbox">For each test, specify the criteria that will you use to interpret the outcome of the test in assessing the model’s ability to sufficiently represent the gathered data used to develop and parameterise the model.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="qualitative-model-checking" class="level3" data-number="4.3.2">
+<h3 data-number="4.3.2" class="anchored" data-anchor-id="qualitative-model-checking"><span class="header-section-number">4.3.2</span> Qualitative Model Checking</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Explanation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This step is largely informal and case-specific, but requires‚ ‘face validation’ with model users / clients / managers who aren’t involved in the development of the model to assess whether the interactions and outcomes of the model are feasible an defensible <span class="citation" data-cites="Grimm:2014es">(<a href="#ref-Grimm:2014es" role="doc-biblioref">Grimm et al. 2014</a>)</span>. This process is sometimes called a ‚“laugh test” or a “pub test” and in addition to checking the model’s believability, it builds the client’s confidence in the model <span class="citation" data-cites="Jakeman:2006ii">(<a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman, Letcher, and Norton 2006</a>)</span>. Face validation could include structured walk-throughs, or presenting descriptions, visualisations or summaries of model results to experts for assessment.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Preregistration Item
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul class="task-list">
+<li><input type="checkbox">Briefly explain how you will qualitatively check the model, and whether and how you will include users and clients in the process.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="assumption-violation-checks" class="level3" data-number="4.3.3">
+<h3 data-number="4.3.3" class="anchored" data-anchor-id="assumption-violation-checks"><span class="header-section-number">4.3.3</span> Assumption Violation Checks</h3>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The consequences of assumption violations on the interpretation of results should be assessed <span class="citation" data-cites="Araujo2019">(<a href="#ref-Araujo2019" role="doc-biblioref">Araújo et al. 2019</a>)</span>.</p>
+<ul>
+<li><p>Explain how you will demonstrate robustness to model assumptions and check for violations of model assumptions.</p></li>
+<li><p>If you cannot perform quantitative assumption checks, describe what theoretical justifications would justify a lack of violation of or robustness to model assumptions.</p></li>
+<li><p>If you cannot demonstrate or theoretically justify violation or robustness to assumptions, explain why not, and specify whether you will discuss assumption violations and their consequences for interpretation of model outputs.</p></li>
+<li><p>If assumption violations cannot be avoided, explain how you will explore the consequences of assumption violations on the interpretation of results (To be completed in interim iterations of the preregistration, only if there are departures from assumptions as demonstrated in the planned tests above).</p></li>
+</ul>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="model-validation-and-evaluation" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> 5.0 Model Validation and Evaluation</h1>
+<p>HF- I think that this is covered in section 4 with descriptions of validation and checking. I’m not sure how this section is different.</p>
+<p><em>Model Validation &amp; Evaluation - This phase consists of a suite of analyses that collectively inform the decision and whether and when a model is suitable to meet its intended purpose (Augusiak, Van den Brink and Grimm 2014). Errors in design and implementation of the model and their implication on the model output are assessed. Ideally independent data is used against the model outputs to assess whether the model output behaviour exhibits the required accuracy for the model’s intended purpose. The outcomes of these analyses build confidence in the model applications and increase understandingof model strengths and limitations. Model evaluation including model analysis and other testing should complement model checking. It should evaluate model checking, and consider over-fitting and extrapolation. The higher the proportion of calibrated, or uncertain parameters, the greater the risk that the model seems to work correctly [‚Ä¶] but for the wrong reasons” Evaluation thus complements model checking because we can rule out the chance that the model fits the calibration data well, but has not captured the relevant ecological mecahnisms of the system (Grimm). Evaluation of model outputs against external data in conjunction with the results from model checking provide information about the structural realism and therefore credibility of the model (Grimm et al.&nbsp;2014).</em></p>
+<section id="model-output-corroboration" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="model-output-corroboration"><span class="header-section-number">5.1</span> 5.1 Model output corroboration</h2>
+<p><em>Ideally, model outputs or predictions are compared to independent data and patterns that were not used to develop, parameterise, or verify the model. Testing against a dataset of response and predictor variables that are sptially and/or temporally independent from the training dataset¬†minimises the risk of artificially inflating model performance measures <span class="citation" data-cites="Araujo2019">(<a href="#ref-Araujo2019" role="doc-biblioref">Araújo et al. 2019</a>)</span>.State whether you will corroborate the model outputs on external data, and please document any independent validation data in step &lt;2.4&gt;.It is preferable that any independent data used for model evaluation remains unknown to modellers during the process of model building, please describe the relationship modllers have to model validation data, will independent datasets be known to any modeller or analyst involved in the model building process?Although the corroboration of model outputs against an independent validation dataset is considered the ‘gold standard’ for showing that a model properly represents the internal organisation of the system ), model validation is not always possible because empirical experiments are infeasible or model users are working on rapid-response time-frames ‚Äî hence, why ecologists often model in the first place (Grimm, et al.&nbsp;2014. Independent predictions can instead be tested on submodels. Alternatively, patterns in model output that are robust and seem characteristic of the system can be identified and evaluated in consultation with the literature or by experts to judge how accurate the model’s output is (Grimm et al.2014). If unable to evaluate the model outputs against independent data, explain why and explain what steps you will take to interrogate the model.</em></p>
+</section>
+<section id="choose-performance-metrics-and-criteria" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="choose-performance-metrics-and-criteria"><span class="header-section-number">5.2</span> 5.2 Choose performance metrics and criteria</h2>
+<p><em>Model performance can be quantified by a range of tests, including measures of agreement between predictions and independent observations, or estimates of accuracy, bias, calibration, discrimination refinement, resolution and skill <span class="citation" data-cites="Araujo2019">(<a href="#ref-Araujo2019" role="doc-biblioref">Araújo et al. 2019</a>)</span>. Specify what performance measures you will use to evaluate the model and briefly explain how each test relates to different desired properties of a model’s performance.Spatial, temporal and environmental pattern of errors and variance can change the interpretation of model predictions and conservation decisions <span class="citation" data-cites="Araujo2019">(<a href="#ref-Araujo2019" role="doc-biblioref">Araújo et al. 2019</a>)</span>, where relevant and possible, describe how you will characterise and report the spatial, temporal and environmental pattern of errors and variance. If comparing alternative models, specify what measures of model comparison or out-of-sample performance metrics will you use to find support for alternative models or else to optimise predictive ability. State what numerical threshold or qualities you will use for each of these metrics.</em></p>
+</section>
+<section id="model-analysis" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="model-analysis"><span class="header-section-number">5.3</span> Model analysis</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rationale &amp; Explanation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Uncertainty in models arises due to incomplete system understanding (which processes to include, or which interact), from imprecise, finite and sparese data measurements, and from uncertainty in input conditions and scenarios for model simulations or runs <span class="citation" data-cites="Jakeman:2006ii">(<a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman, Letcher, and Norton 2006</a>)</span>. Non-technical uncertainties can also be introduced throughout the modellign process, such as uncertainties arising from issues in problem-framing, indeterminicies, and modeller / client values <span class="citation" data-cites="Jakeman:2006ii">(<a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman, Letcher, and Norton 2006</a>)</span>.</p>
+<p>The purpose of model analysis is to prevent blind trust in the model by understanding how model outputs have emerged, and to ‘challenge’ the model by verifying whether the model is still believable and fit for purpose if one or more parameters are changed <span class="citation" data-cites="Grimm:2014es">(<a href="#ref-Grimm:2014es" role="doc-biblioref">Grimm et al. 2014</a>)</span>.</p>
+<p>Model analysis should increase understanding of the model behaviour by identifying which processes and process interactions explain characteristic behaviours of the model system. Model analysis typically consists of sensitivity analyses preceded by uncertainty analyses <span class="citation" data-cites="Saltelli2019">(<a href="#ref-Saltelli2019" role="doc-biblioref">Saltelli et al. 2019</a>)</span>, and a suite of other simulation or other computational experiments. The aim of such computational experiments is to increase understanding of the model behaviour by identifying which processes and process interactions explain characteristic behaviours of the model system <span class="citation" data-cites="Grimm:2014es">(<a href="#ref-Grimm:2014es" role="doc-biblioref">Grimm et al. 2014</a>)</span>. Uncertainty analyses and sensitivity analyses augment one another to draw conclusions about model uncertainty.</p>
+<p>Because the results from a full suite of sensitivity analysis and uncertainty analysis can be difficult to interpret due to the number and complexity of causal relations examined <span class="citation" data-cites="Jakeman:2006ii">(<a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman, Letcher, and Norton 2006</a>)</span>, it is useful for the analyst to relate the choice of analysis to the modelling context, purpose and analytical objectives defined in the problem formulation phase, in tandem with any critical uncertainties that have emerged during model development and testing prior to this point.</p>
+</div>
+</div>
+<section id="uncertainty-analyses" class="level3" data-number="5.3.1">
+<h3 data-number="5.3.1" class="anchored" data-anchor-id="uncertainty-analyses"><span class="header-section-number">5.3.1</span> Uncertainty Analyses</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Explanation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Uncertainty can arise from different modelling techniques, response data and predictor variables <span class="citation" data-cites="Araujo2019">(<a href="#ref-Araujo2019" role="doc-biblioref">Araújo et al. 2019</a>)</span>. Uncertainty analyses characterise the uncertainty in model outputs, and identify how uncertainty in model parameters affects uncertainty in model output, but does not identify which model assumptions are driving this behaviour <span class="citation" data-cites="Grimm:2014es Saltelli2019">(<a href="#ref-Grimm:2014es" role="doc-biblioref">Grimm et al. 2014</a>; <a href="#ref-Saltelli2019" role="doc-biblioref">Saltelli et al. 2019</a>)</span>. Uncertainty analyses can include propagating known uncertainties through the model, or by investigating the effect of different model scenarios with different parameters and modelling technique combinations <span class="citation" data-cites="Araujo2019">(<a href="#ref-Araujo2019" role="doc-biblioref">Araújo et al. 2019</a>)</span>, for example. It could also include characterising the output distribution, such as through empirical construction using model output data points. It could also include extracting summary statistics like the mean, median and variance from this distribution, and perhaps constructing confidence intervals on the mean <span class="citation" data-cites="Saltelli2019">(<a href="#ref-Saltelli2019" role="doc-biblioref">Saltelli et al. 2019</a>)</span>.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Preregistration Item
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul class="task-list">
+<li><p><input type="checkbox">Please describe how you will characterise model and data uncertainties, e.g.&nbsp;propagating known uncertainties through the model, investigating the effect of different model scenarios with different parameters and modelling technique combinations <span class="citation" data-cites="Araujo2019">(<a href="#ref-Araujo2019" role="doc-biblioref">Araújo et al. 2019</a>)</span>, or empirically constructing model distributions from model output data points, and extracting summary statistics, including the mean, median, variance, and constructing confidence intervals <span class="citation" data-cites="Saltelli2019">(<a href="#ref-Saltelli2019" role="doc-biblioref">Saltelli et al. 2019</a>)</span>.</p></li>
+<li><p><input type="checkbox">Relate your choice of analysis to the context and purposes of the model described in the problem formulation phase. For instance ‚discrepancies between model output and observed output may be important for forecasting models, where cost, benefit, an risk over a substantial period must be gauged, but much less critical for decision-making or management models where the user may be satisfied with knowing that the predicted ranking order of impacts of alternative scenarios or management options is likely to be correct, with only a rough indication of their sizes” <span class="citation" data-cites="Jakeman:2006ii">(<a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman, Letcher, and Norton 2006</a>)</span>.</p></li>
+<li><p><input type="checkbox">Briefly describe how you will summarise the results of these in silico experiments with graphical, tabular, or other devices, such as summary statistics.</p></li>
+<li><p><input type="checkbox">If the chosen modelling approach is able to explicitly articulate uncertainty due to data, measurements or baseline conditions, such as by providing estimates of uncertainty (typically in the form of probabilistic parameter covariance, <span class="citation" data-cites="Jakeman:2006ii">(<a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman, Letcher, and Norton 2006</a>)</span>), specify which measure of uncertainty you will use.</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="sensitivity-analyses" class="level3" data-number="5.3.2">
+<h3 data-number="5.3.2" class="anchored" data-anchor-id="sensitivity-analyses"><span class="header-section-number">5.3.2</span> Sensitivity Analyses</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Explanation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><em>Sensitivity analysis examines how uncertainty in model outputs can be apportioned to different sources of uncertainty in model input <span class="citation" data-cites="Saltelli2019">(<a href="#ref-Saltelli2019" role="doc-biblioref">Saltelli et al. 2019</a>)</span>.</em></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Preregistration Item
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul class="task-list">
+<li><p><input type="checkbox">Describe the sensitivity analysis approach you will take: deterministic sensitivity, stochastic sensitivity (variability in the model), or scenario sensitivity (effect of changes based on scenarios).</p></li>
+<li><p><input type="checkbox">Describe any sensitivity analyses you will conduct by specifying which parameters will be held constant, which will be varied, and the range and intervals of values over which those parameters will be varied.</p></li>
+<li><p><input type="checkbox">State the primary objective of each sensitivity analysis, for example, to identify which input variables contribute the most to model uncertainty so that these variables can be targeted for further data collection, or alternatively to identify which variables or factors contribute little to overall model outputs, and so can be ‘dropped’ from future iterations of the model <span class="citation" data-cites="Saltelli2019">(<a href="#ref-Saltelli2019" role="doc-biblioref">Saltelli et al. 2019</a>)</span>.</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="model-application-or-scenario-analysis" class="level3" data-number="5.3.3">
+<h3 data-number="5.3.3" class="anchored" data-anchor-id="model-application-or-scenario-analysis"><span class="header-section-number">5.3.3</span> Model application or scenario analysis</h3>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Preregistration Item
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul class="task-list">
+<li><p><input type="checkbox">Specify any input conditions and relevant parameter values for initial environmental conditions and decision-variables under each scenario specified in section 1.</p></li>
+<li><p><input type="checkbox">Describe any other relevant technical details of model application, such as methods for how you will implement any simulations or model projections.</p></li>
+<li><p><input type="checkbox">What raw and transformed model outputs will you extract from the model simulations or projections, and how will you map, plot, or otherwise display and synthesise the results of scenario and model analyses.</p></li>
+<li><p><input type="checkbox">Explain how you will analyse the outputs to answer your analytical objectives. For instance, describe any trade-off or robustness analyses you will undertake to help evaluate and choose between different alternatives in consultation with experts or decision-makers.</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="other-simulation-experiments-robustness-analyses" class="level3" data-number="5.3.4">
+<h3 data-number="5.3.4" class="anchored" data-anchor-id="other-simulation-experiments-robustness-analyses"><span class="header-section-number">5.3.4</span> Other simulation experiments / robustness analyses</h3>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Preregistration Item
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul class="task-list">
+<li><input type="checkbox">Describe any other simulation experiments, robustness analyses or other analyses you will perform on the model, including any metrics and their criteria / thresholds for interpreting the results of the analysis.</li>
+</ul>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="references" class="level1" data-number="6">
+
+
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">6 References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-Araujo2019" class="csl-entry" role="listitem">
+Araújo, MB, RP Anderson, A Márcia Barbosa, CM Beale, CF Dormann, R Early, RA Garcia, et al. 2019. <span>“Standards for Distribution Models in Biodiversity Assessments.”</span> <em>Sci Adv</em> 5 (1): eaat4858.
+</div>
+<div id="ref-Augusiak:2014gz" class="csl-entry" role="listitem">
+Augusiak, Jacqueline, Paul J Van den Brink, and Volker Grimm. 2014. <span>“Merging Validation and Evaluation of Ecological Models to <span>‘Evaludation’</span>: A Review of Terminology and a Practical Approach.”</span> <em>Ecological Modelling</em> 280: 117–28.
+</div>
+<div id="ref-Barnard2019" class="csl-entry" role="listitem">
+Barnard, David M., Matthew J. Germino, David S. Pilliod, Robert S. Arkle, Cara Applestein, Bill E. Davidson, and Matthew R. Fisk. 2019. <span>“Can’t See the Random Forest for the Decision Trees: Selecting Predictive Models for Restoration Ecology.”</span> <em>Restoration Ecology</em>.
+</div>
+<div id="ref-Boets:2015gl" class="csl-entry" role="listitem">
+Boets, Pieter, Dries Landuyt, Gert Everaert, Steven Broekx, and Peter L M Goethals. 2015. <span>“Evaluation and Comparison of Data-Driven and Knowledge-Supported Bayesian Belief Networks to Assess the Habitat Suitability for Alien Macroinvertebrates”</span> 74: 92–103.
+</div>
+<div id="ref-Conn:2018hd" class="csl-entry" role="listitem">
+Conn, Paul B, Devin S Johnson, Perry J Williams, Sharon R Melin, and Mevin B Hooten. 2018. <span>“A Guide to Bayesian Model Checking for Ecologists.”</span> <em>Ecological Monographs</em> 9: 341–17.
+</div>
+<div id="ref-Fraser:2017jf" class="csl-entry" role="listitem">
+Fraser, Hannah, Libby Rumpff, Jian D L Yen, Doug Robinson, and Brendan A Wintle. 2017. <span>“Integrated Models to Support Multiobjective Ecological Restoration Decisions.”</span> <em>Conservation Biology</em> 31 (6): 1418–27.
+</div>
+<div id="ref-Grimm:2014es" class="csl-entry" role="listitem">
+Grimm, Volker, Jacqueline Augusiak, Andreas Focks, Béatrice M Frank, Faten Gabsi, Alice S A Johnston, Chun Liu, et al. 2014. <span>“Towards Better Modelling and Decision Support: Documenting Model Development, Testing, and Analysis Using TRACE.”</span> <em>Ecological Modelling</em> 280: 129–39.
+</div>
+<div id="ref-Jakeman:2006ii" class="csl-entry" role="listitem">
+Jakeman, A J, R A Letcher, and J P Norton. 2006. <span>“Ten Iterative Steps in Development and Evaluation of Environmental Models.”</span> <em>Environmental Modelling &amp; Software</em> 21 (5): 602–14.
+</div>
+<div id="ref-Liu2018b" class="csl-entry" role="listitem">
+Liu, Zelin, Changhui Peng, Timothy Work, Jean-Noel Candau, Annie DesRochers, and Daniel Kneeshaw. 2018. <span>“Application of Machine-Learning Methods in Forest Ecology: Recent Progress and Future Challenges.”</span> <em>Environmental Reviews</em> 26 (4): 339–50.
+</div>
+<div id="ref-Mahmoud2009" class="csl-entry" role="listitem">
+Mahmoud, Mohammed, Yuqiong Liu, Holly Hartmann, Steven Stewart, Thorsten Wagener, Darius Semmens, Robert Stewart, et al. 2009. <span>“A Formal Framework for Scenario Development in Support of Environmental Decision-Making.”</span> <em>Environmental Modelling &amp; Software</em> 24 (7): 798–808.
+</div>
+<div id="ref-McDonald-Madden2008" class="csl-entry" role="listitem">
+McDonald-Madden, Eve, Peter W. J. Baxter, and Hugh P. Possingham. 2008. <span>“Making Robust Decisions for Conservation with Restricted Money and Knowledge.”</span> <em>Journal of Applied Ecology</em> 45 (6): 1630–38.
+</div>
+<div id="ref-Moallemi2019" class="csl-entry" role="listitem">
+Moallemi, Enayat A., Sondoss Elsawah, and Michael J. Ryan. 2019. <span>“Strengthening <span>‘Good’</span> Modelling Practices in Robust Decision Support: A Reporting Guideline for Combining Multiple Model-Based Methods.”</span> <em>Mathematics and Computers in Simulation</em>.
+</div>
+<div id="ref-Saltelli2019" class="csl-entry" role="listitem">
+Saltelli, Andrea, Ksenia Aleksankina, William Becker, Pamela Fennell, Federico Ferretti, Niels Holst, Sushan Li, and Qiongli Wu. 2019. <span>“Why so Many Published Sensitivity Analyses Are False: A Systematic Review of Sensitivity Analysis Practices.”</span> <em>Environmental Modelling &amp; Software</em> 114: 29–39.
+</div>
+<div id="ref-White2019a" class="csl-entry" role="listitem">
+White, Craig R, and Dustin J Marshall. 2019. <span>“Should We Care If Models Are Phenomenological or Mechanistic.”</span> <em>Trends in Ecology &amp; Evolution</em> 34 (4): 276–78.
+</div>
+<div id="ref-Yates2018" class="csl-entry" role="listitem">
+Yates, KL, PJ Bouchet, MJ Caley, K Mengersen, CF Randin, S Parnell, AH Fielding, et al. 2018. <span>“Outstanding Challenges in the Transferability of Ecological Models.”</span> <em>Trends Ecol. Evol. (Amst.)</em> 33 (10): 790–802.
+</div>
+</div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
