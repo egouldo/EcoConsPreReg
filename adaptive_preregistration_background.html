@@ -109,10 +109,21 @@ div.csl-indent {
     <a class="nav-link" href="./RDF_QRP.html" rel="" target="">
  <span class="menu-text">Researcher Degrees of Freedom</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="./adaptive_preregistration_background.html" rel="" target="" aria-current="page">
- <span class="menu-text">Adaptive Preregistration</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-adaptive-preregistration" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Adaptive Preregistration</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-adaptive-preregistration">    
+        <li>
+    <a class="dropdown-item" href="./adaptive_preregistration_background.html" rel="" target="">
+ <span class="dropdown-text">A primer on <em>Adaptive Preregistration</em></span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./adaptive_preregistration_implementation.html" rel="" target="">
+ <span class="dropdown-text">Implementing Adaptive Preregistration with Git and Github</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="./preregistration_modelling.html" rel="" target="">
  <span class="menu-text">Preregistration for Modelling</span></a>
@@ -123,6 +134,11 @@ div.csl-indent {
   </li>  
 </ul>
             <div class="quarto-navbar-tools ms-auto">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
 </div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
@@ -297,7 +313,7 @@ div.csl-indent {
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-Baldwin2022a" class="csl-entry" role="listitem">
 Baldwin, J. R., J. B. Pingault, T. Schoeler, H. M. Sallis, and M. R. Munafò. 2022. <span>“Protecting Against Researcher Bias in Secondary Data Analysis: Challenges and Potential Solutions.”</span> <em>Eur J Epidemiol</em> 37 (1): 1–10. <a href="https://doi.org/10.1007/s10654-021-00839-0">https://doi.org/10.1007/s10654-021-00839-0</a>.
 </div>
@@ -554,6 +570,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">Copyright 2023, Elliot Gould</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
 
 
 

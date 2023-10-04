@@ -89,10 +89,21 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./RDF_QRP.html" rel="" target="">
  <span class="menu-text">Researcher Degrees of Freedom</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./adaptive_preregistration_background.html" rel="" target="">
- <span class="menu-text">Adaptive Preregistration</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-adaptive-preregistration" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Adaptive Preregistration</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-adaptive-preregistration">    
+        <li>
+    <a class="dropdown-item" href="./adaptive_preregistration_background.html" rel="" target="">
+ <span class="dropdown-text">A primer on <em>Adaptive Preregistration</em></span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./adaptive_preregistration_implementation.html" rel="" target="">
+ <span class="dropdown-text">Implementing Adaptive Preregistration with Git and Github</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="./preregistration_modelling.html" rel="" target="">
  <span class="menu-text">Preregistration for Modelling</span></a>
@@ -103,6 +114,11 @@ ul.task-list li input[type="checkbox"] {
   </li>  
 </ul>
             <div class="quarto-navbar-tools ms-auto">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
 </div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
@@ -137,18 +153,19 @@ ul.task-list li input[type="checkbox"] {
 
 <p>This site provides a guide to implementing <em>Adaptive Preregistration for Model-Based Research</em>, with a focus on ecological modelling as it is used in both basic and applied contexts. This site covers the following topics:</p>
 <ol type="1">
-<li>Background on researcher degrees of freedom, the risk of questionable research practices (QRPs), and introduction to preregistration as a tool for mitigating QRPs.</li>
+<li><a href="./RDF_QRP.html">Background on researcher degrees of freedom</a>, the risk of questionable research practices (QRPs), and introduction to preregistration as a tool for mitigating QRPs.</li>
 <li>Adaptive Preregistration
 <ol type="1">
-<li><em>Background</em>: What is adaptive preregistration, why do we need it for registering modeling analyses, and what are its defining features?</li>
-<li><em>A practical guide</em>: How to implement adaptive preregistration using <a href="https://git-scm.com">git</a> and <a href="www.github.com">GitHub</a>.</li>
+<li><a href="./adaptive_preregistration_background.html"><em>Background</em></a>: What is adaptive preregistration, why do we need it for registering modeling analyses, and what are its defining features?</li>
+<li><a href="./adaptive_preregistration_implementation.html"><em>A practical guide</em></a>: How to implement adaptive preregistration using <a href="https://git-scm.com">git</a> and <a href="www.github.com">GitHub</a>.</li>
 </ol></li>
-<li>Preregistration of model-based research in ecology and conservation. Provides an overview of the sorts of things that we should preregister when modelling, what practices to look out for, what things should be registered as decision-trees.</li>
+<li><a href="./preregistration_modelling.html">Preregistration template</a> for model-based research in ecology and conservation.</li>
+<li>TBC An overview of the sorts of things that we should preregister when modelling, what practices to look out for, what things should be registered as decision-trees.</li>
 </ol>
 
 
 
-</main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -383,6 +400,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">Copyright 2023, Elliot Gould</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
 
 
 
