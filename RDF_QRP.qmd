@@ -1,4 +1,39 @@
 ---
 title: From Researcher Degrees of Freedom to Questionable Research Practices
 sidebar: false
+bibliography: references.bib
 ---
+
+## Researcher Degrees of Freedom
+
+Throughout the course of model development and analysis researchers make numerous decisions.
+These alternative decisions are termed 'researcher degrees of freedom' [@Wicherts2016; @Simmons:2011iw].
+These decisions are usually subjective and arbitrary yet methodologically and substantively acceptable [@Wicherts2016], however may collectively significantly influence the final 'analysis strategy' [*sensu* @Hoffmann2021] or 'specification' [*sensu* @Simonsohn2020], and consequently the research findings and conclusions drawn from that analysis [@Desbureaux2021].
+
+Alternative decisions about model assumptions and implementation can lead researchers down very different analytical paths that result in 'parallel' or 'adjacent' worlds with different interpretations, and potentially conflicting conclusions originating from a single underlying dataset [@Young2021; @Liu2020].
+The set of all (plausible or reasonable) possible decisions that a researcher could make over the entire analysis from beginning to end has been termed collectively as the 'garden of forking paths' [@Gelman2013] or the 'multiverse', which consists of multiple universes of plausible analysis strategies [@Steegen2016].
+
+Researcher degrees of freedom are not inherently problematic, but rather are a product of the uncertainty that besets model development and analysis, whether due to incomplete theoretical understanding of underlying ecological processes, or because modelling is an act of simplification and abstraction; there is always some degree of choice about which ecological processes and phenomena should be included in the model, how they should be represented [@Babel2019; @Getz:2017ic].
+Further uncertainty and multiplicity of analysis strategies stems from uncertainty in data preprocessing, model, parameter, and method uncertainty [@Hoffmann2021].
+
+## Questionable Research Practices
+
+When researchers are faced with ambiguous decisions where there is no single decision or strategy acceptable according to scientific standards and consensus, we are likely to select the decision that results in the most 'favourable' finding with "convincing self-justification" [@Simmons:2011iw; @Hoffmann2021].
+Researchers routinely execute and explore alternative analysis pathways in service of identifying the most favourable (i.e. publishable) result, selectively reporting only one or several preferred results [@Liu2020; @Simmons:2011iw].
+
+Importantly, as Gelman and Loken note [@Gelman2013] this behaviour is not a consciously nefarious 'fishing expedition', rather, because researchers are motivated actors in a 'publish or perish' culture who are susceptible to cognitive biases and are willing to change their modelling assumptions when the results conflict with desired outcomes -- sincerely and self-convincingly believing that the more favourable model is superior [@Young2021].
+
+Thus researcher degrees of freedom precipitate questionable research practices when they remain both undisclosed and exploited opportunistically [@Bakker2018].
+Undisclosed and opportunistic use of researcher degrees of freedom artificially increases the probability of false positive results, inflates effect size estimates and ultimately reduces the replicability of published findings while encouraging overconfidence in the precision of results and exascerbating the risk of accepting and propagating false facts [@Wicherts2016; @Hoffmann2021; @Roettger2019; @Nissen2016].
+Emerging evidence suggests that rates of QRPs in ecology and evolutionary biology are similar to rates observed in other disciplines beset by reproducibility crises [@Fraser:2018cl].
+
+## Preregistration mitigates against researcher degrees of freedom
+
+Preregistration is an open-science practice adopted in scientific disciplines that have begun to confront the 'reproducibility crisis', and aims to improve research transparency and mitigate questionable research practices within a study by distinguishing between what is a genuine a priori planned analysis, and what is not [@Parker2019].
+Preregistration requires the methods and analysis plan of a future study are registered in a secure and publicly accessible platform prior to any data collection, and after submission it can no longer be altered.
+
+Despite enthusiastic uptake of preregistration in some scientific disciplines, there has been little uptake of pre-registration in ecology and conservation, and many modellers and researchers engaged in non-hypothesis testing research both within and outside of ecology have eschewed preregistration on the grounds that preregistration and existing templates are irrelevant because they are focused on null-hypothesis significance testing [e.g. @McDermott2021; @Prosperi2019].
+
+Instead of throwing out the baby with the bathwater, this guide is premised on the idea that preregistration can and should be used in model-based research in ecology and conservation, but its particular form should reflect the norms and practice of the research context in which it is applied, in order to adequately restrict researcher degrees of freedom that may uniquely emerge within a domain-specific methodology.
+The work presented in this guide aims to translate preregistration into model-based research within ecology and conservation by proposing an expanded view of preregistration we term [*Adaptive Preregistration*](adaptive_preregistration_background.qmd).
+We also present a template for preregistering model-based research in ecology and conservation.
