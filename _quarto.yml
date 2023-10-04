@@ -1,8 +1,12 @@
 project:
   type: website
   output-dir: docs
+  
 
 website:
+  reader-mode: true
+  page-footer: "Copyright 2023, Elliot Gould"
+  back-to-top-navigation: true
   title: "Adaptive Preregistration for Model-Based Research"
   navbar:
     search: true
@@ -12,7 +16,9 @@ website:
       - text: "Researcher Degrees of Freedom"
         file: RDF_QRP.qmd
       - text: "Adaptive Preregistration"
-        file: adaptive_preregistration_background.qmd
+        menu: 
+          - adaptive_preregistration_background.qmd
+          - adaptive_preregistration_implementation.qmd
       - text: "Preregistration for Modelling"
         file: preregistration_modelling.qmd
       - about.qmd

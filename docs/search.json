@@ -172,7 +172,7 @@
     "href": "index.html",
     "title": "Adaptive Preregistration for Model-Based Research",
     "section": "",
-    "text": "This site provides a guide to implementing Adaptive Preregistration for Model-Based Research, with a focus on ecological modelling as it is used in both basic and applied contexts. This site covers the following topics:\n\nBackground on researcher degrees of freedom, the risk of questionable research practices (QRPs), and introduction to preregistration as a tool for mitigating QRPs.\nAdaptive Preregistration\n\nBackground: What is adaptive preregistration, why do we need it for registering modeling analyses, and what are its defining features?\nA practical guide: How to implement adaptive preregistration using git and GitHub.\n\nPreregistration of model-based research in ecology and conservation. Provides an overview of the sorts of things that we should preregister when modelling, what practices to look out for, what things should be registered as decision-trees."
+    "text": "This site provides a guide to implementing Adaptive Preregistration for Model-Based Research, with a focus on ecological modelling as it is used in both basic and applied contexts. This site covers the following topics:\n\nBackground on researcher degrees of freedom, the risk of questionable research practices (QRPs), and introduction to preregistration as a tool for mitigating QRPs.\nAdaptive Preregistration\n\nBackground: What is adaptive preregistration, why do we need it for registering modeling analyses, and what are its defining features?\nA practical guide: How to implement adaptive preregistration using git and GitHub.\n\nPreregistration template for model-based research in ecology and conservation.\nTBC An overview of the sorts of things that we should preregister when modelling, what practices to look out for, what things should be registered as decision-trees.\n\n\n\n\n Back to top"
   },
   {
     "objectID": "RDF_QRP.html",
@@ -305,6 +305,6 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "This site is a practical guide to accompany the paper:\n\nGould, E., Jones, C.J., Fraser, H.F., Rumpff, L., Fidler, F.M. (in prep.) “But I can’t preregister my research: Improving the reproducibility and transparency of ecology modelling with adaptive preregistration.” TBD."
+    "text": "This site is a practical guide to accompany the paper:\n\nGould, E., Jones, C.J., Fraser, H.F., Rumpff, L., Fidler, F.M. (in prep.) “But I can’t preregister my research: Improving the reproducibility and transparency of ecology modelling with adaptive preregistration.” TBD.\n\n\n\n\n Back to top"
   }
 ]
