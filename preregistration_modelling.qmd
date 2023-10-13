@@ -2,6 +2,12 @@
 title: "Adaptive Preregistration for Modelling"
 subtitle: "A template suitable for use in Ecology and Conservation with accompanying rationale and explanation."
 description: "Note: Black boxes provide an explanation or justification of a particular section or preregistration item. Text contained in 'preregistration item' boxes requires a response."
+authors:
+  - Elliot Gould
+  - Hannah Fraser
+  - Libby Rumpff
+  - Megan Good
+  - Chris Jones
 sidebar: false
 bibliography: data/references.bib
 toc-location: left
@@ -9,7 +15,7 @@ toc-expand: true
 number-sections: true
 ---
 
-# 1. Problem Formulation
+# Problem Formulation
 
 ::: callout-note
 ## Rationale & Explanation
@@ -54,153 +60,269 @@ Briefly outline
 
 -   [ ] the ecological problem,
 -   [ ] the decision problem (if relevant), including the decision-trigger and any regulatory frameworks relevant to the problem,
--   [ ] how the model will address the problem, being clear about the scope of the model i.e. is the model addressing the whole problem, or part of it? Are there any linked problems that your model should consider?\
+-   [ ] how the model will address the problem, being clear about the scope of the model i.e. is the model addressing the whole problem, or part of it? Are there any linked problems that your model should consider?
 -   [ ] Ensure that you specify any focal taxa and study objectives,
 -   [ ] Briefly outline the ecological problem and the decision-problem, including the decision-trigger and any regulatory frameworks relevant to the problem.
 :::
 
-### Model Scope and Scale
+### Analytical objectives {#analyticalobjectives}
 
-*Determine the temporal and spatial scope of the model. Where is the boundary of the modelled system? Everything outside beyond the boundary and not crossing it is to be ignored within the domain of the model, and everything crossing the boundary is to be treated as external forcing (known/unknown), or else as model outputs (observed, or not, Jakeman et al. 2006)*
+::: callout-note
+## Explanation
 
-**HF comment I dont understand the preceeding sentence, the concept of boundaries of the model is foreign to me. Also, is this question more to do with describing the scope and limitations of the data rather then the model?**\*.
-The choice of a model's boundaries is closely linked to the choice of how finely to aggregate the behaviour within the model (Jakeman et al., 2006) - what is the intended scale and resolution of the model (temporal, spatial or otherwise)?
-
-What is the intended domain of applicability of the model, what is the extent of acceptable extrapolations (Grimm)?
-This is relevant to model transferability... (similar to a COG statement..)\* A comment:This section feels a bit too big and confusing from my perspective and I do think you might need to move some of it to a different section to reduce the risk of misinterpretation.
-I'm just thinking about how I might fill this out for an imagined study.
-The literal boundaries of the study are usually straightforward, but the theoretic boundaries are a different and also big thing to try to conceptualise in one section.
-You could have a section for the spatial/temporal boundaries of the study, and another section on how far the results can be extrapolated based on the study design.
-This makes sense to me in how I design experiments, if I have too many confounding variables and not enough spatial and environmental replication then I'm less likely to make any broad claims.
-However, if I have controlled or experimentally manipulated factors then I feel safer making bigger generalisations about results.
-
-### Logistical Constraints
+How will the model be analysed, what analytical questions will the model be used to answer?
+For example, you might be using your model in a scenario analysis to determine which management decision is associated with minimum regret or the highest likelihood of improvement.
+Other examples from ecological decision-making include: to compare the performance of alternative management actions under budget constraint [@Fraser:2017jf] to search for robust decisions under uncertainty [@McDonald-Madden2008], to choose the conservation policy that minimises uncertainty \[insert ref\].
+See other examples in [@Moallemi2019].
+:::
 
 ::: callout-caution
 ## Preregistration Item
 
--   [ ] Time-frame: When must the model be completed by, e.g. to help make a decision?
--   [ ] What degree of flexibility is required from the model? Might the model need to be quickly reconfigured to explore new scenarios or problems proposed by clients / managers / model-users?
+*Provide detail on the analytical purpose and scope of the model:* 
+
+-   [ ] How will the model be analysed and what analytical questions will the model be used to answer? 
+-   [ ] Candidate decisions should be investigated and are specified a priori. Depending on the modelling context, they may be specified by stakeholders, model users or the analyst [@Moallemi2019].
+    -   [ ] Describe the method used to identify relevant management actions and
+    -   [ ] specify management actions to be considered included in the model.
+    -   [ ] Are there potentially unacceptable management or policy outcomes identified by stakeholders that should be captured in the model, i.e. as constraints?
+-   [ ] Are there scenarios that model inputs or outputs that must accommodated? Scenarios should be set a priori, [i.e. before the model is built, @Moallemi2019] and may be stakeholder-defined or driven by the judgement of the modeller or other experts [@Mahmoud2009].
+    -   [ ] If relevant, describe what processes you will use to elicit and identify relevant scenarios, e.g. literature review, structured workshops with stakeholders or decision-makers. 
+    -   [ ]  Specify scenarios under which decisions are investigated.
 :::
 
-## Explain analytical objectives
+### Logistical Constraints
+
+::: callout-caution
+-   [ ] What degree of flexibility is required from the model? Might the model need to be quickly reconfigured to explore new scenarios or problems proposed by clients / managers / model-users?
+-   [ ] Are there any limitations on model development analysis and flexibility, such as time or budget constraints, for example, does a model need to be deployed rapidly?
+    -   [ ] When must the model be completed by, e.g. to help make a decision?
+:::
+
+### Model Scope, Scale and Resolution
+
+::: callout-caution
+## Preregistration Item
+
+-   [ ] The choice of a model's boundaries is closely linked to the choice of how finely to aggregate the behaviour within the model [@Jakeman:2006ii] - what is the intended scale, and resolution of the model (temporal, spatial or otherwise)?
+-   [ ] Where is the boundary of the modelled system? Everything outside beyond the boundary and not crossing it is to be ignored within the domain of the model, and everything crossing the boundary is to be treated as external forcing (known/unknown), or else as model outputs [observed, or not, @Jakeman:2006ii].
+:::
+
+### Intended application of results
 
 ::: callout-note
-## Rationale & Explanation
+## Explanation
 
-How will the model be analysed, what analytical questions will the model be used to answer?
-Examples from ecological decision-making include: to compare the performance of alternative management actions under budget constraint [@Fraser:2017jf] to search for robust decisions under uncertainty [@McDonald-Madden2008], to choose the conservation policy that minimises uncertainty \[insert ref\].
-See other examples in [@Moallemi2019].
+Preregistration Items in this section are relevant to model transferability [@Yates2018] and constraints on generality in model analysis interpretation.
+How far do can the results be extrapolated based on the study design (data + model + analysis)?
+For instance, if there are many confounding variables and not enough spatial / environmental replication, then making broader more general claims beyond the stated boundaries of the model (@analyticalobjectives) may not be warranted.
+However, larger generalisations about results may be acceptable if the data comes from experimentally manipulated or controlled systems.
 :::
 
-### Identify how the model will tell you about your analytic objectives
+::: callout-caution
+## Preregistration Item
 
-*The outcomes should speak directly to the analytical objectives identified in 1.3.1. Outcomes could be qualitative or quantitative. For example, you might be using your model in a scenario analysis to determine which management decision is associated with minimum regret or the highest likelihood of improvement.*
+-   [ ] What is the intended domain in which the model is to be applied? Are there any reasonable extrapolation limits beyond which you expect the model should not be applied [@Grimm:2014es]?
+:::
 
-To be honest, I don't know how I might apply this to my work or any future works.
-Maybe I do not have enough knowledge of this type of research to apply it to my basic ecology research.
-But this isn't to say it's not important, I just wonder if there's a way to make this accessible to non-decision or modelling peeps.
-Like, how would I apply it to the woodland condition analysis?
+## Scenario Analysis Operationalisation
 
-## 1.4 Define candidate decisions and method of identifying relevant management actions
+::: callout-caution
+## Preregistration Item (delete as necessary)
 
-*Candidate decisions should be investigated and are specified a priori. Depending on the modelling context, they may be specified by stakeholders, model users or the analyst [@Moallemi2019]. Describe the method used to identify relevant management actions.*
+-   How will you operationalise any scenarios identified in 1.1.3?
+    For example, how will you operationalise any qualitative changes of interest, such as ‚ \'deterioration\' or \'improvement\'?
 
-## 1.5 Specify scenarios
+-   Describe how you will evaluate and distinguish the performance of alternative scenario outcomes
 
-*Describe what processes you will use to elicit and identify relevant scenarios, e.g. literature review, structured workshops with stakeholders or decision-makers. Specify scenarios under which decisions are investigated. Scenarios should be set a priori [i.e. before the model is built, @Moallemi2019] and may be stakeholder-defined or driven by the judgement of the modeller or other experts [@Mahmoud2009].*
+-   Justify or otherwise explain how you chose these measures and determined performance criteria in relation to the analytical objectives, model purpose and modelling context, such as the risk attitudes of decision-makers and stakeholders within this system
+:::
 
-# 2.0 Define Conceptual Model
+# Define Conceptual Model
 
-*Conceptual models underpin the formal or quantitative model*
+::: callout-note
+## Explanation
 
-*(Cartwright et al. 2016). The conceptual model describes the biological mechanisms relevant to the ecological problem and should capture basic premises about how the target system works, including any prior knowledge and assumptions about system processes. Conceptual models may be representeed in a variety of formats, such as influence diagrams, linguistic model block diagram or bond graphs, and these illustrate how model drivers are linked to both outputs or observed responses, and internal (state) variables [@Jakeman:2006ii].*
+Conceptual models underpin the formal or quantitative model [@Cartwright:2016kr].
+The conceptual model describes the biological mechanisms relevant to the ecological problem and should capture basic premises about how the target system works, including any prior knowledge and assumptions about system processes.
+Conceptual models may be represented in a variety of formats, such as influence diagrams, linguistic model block diagram or bond graphs, and these illustrate how model drivers are linked to both outputs or observed responses, and internal (state) variables [@Jakeman:2006ii].
+:::
 
-## 2.1 Choose elicitation and representation method
+## Choose elicitation and representation method
 
-*Describe what method you will use to elicit or identify the conceptual model. Some common methods include interviews, drawings, and mapping techniques including influence diagrams, cognitive maps and Bayesian belief networks (Moon et al. 2019). (Libby, to provide link to any structured expert elicitation methods?).While it is difficult to decide and justify which method is most appropriate, however Moon et al. (2019) provide guidance addressing this methodological question. Finally, how do you intend on representing the final conceptual model? This will likely depend on the method chosen to elicit the conceptual model.*
+::: callout-caution
+## Preregistration Item
 
-## 2.2.1 Explain Critical Conceptual Design Decisions
+-   [ ] Describe what method you will use to elicit or identify the conceptual model. Some common methods include interviews, drawings, and mapping techniques including influence diagrams, cognitive maps and Bayesian belief networks \[@Moon2019\]. It is difficult to decide and justify which method is most appropriate, see Moon et al. [-@Moon2019] for guidance addressing this methodological question.
+-   [ ] Finally, how do you intend on representing the final conceptual model? This will likely depend on the method chosen to elicit the conceptual model.
+:::
 
-*This step should list and explain the critical conceptual design decisions, including: spatial and temporal scales, selection of entities and processes, representation of stochasticity and heterogeneity, consideration of local versus global interactions, environmental drivers, etc. [@Grimm:2014es]. The influence of particular theories, concepts, or importantly, earlier models, should be explained and justified against alternative conceptual design decisions that might lead to alternative model structures [@Grimm:2014es].*
+## Explain Critical Conceptual Design Decisions
 
-## 2.2.2 Specify key assumptions and uncertainties underlying the model's design.
+::: callout-caution
+## Preregistration Item
 
--   Describe how uncertainty and variation will be represented in this model. This includes both exogenous uncertainties affecting the system, parametric uncertainty in input data and structural / conceptual nonparametric uncertainty in the model [@Moallemi2019].\*
--   Explain how any key concepts or terms within problem or decision-making contexts, such as regulatory terms, will be operationalised and defined in a biologically meaningful way to answer the research question appropriately? (Should this last step go here or within define conceptual framework?. ***HF comment. I think it belongs with the conceptual framework***).
+List and explain critical conceptual design decisions [@Grimm:2014es], including:
 
-## 2.3 Identify predictor and response variables
+-   [ ] spatial and temporal scales,
 
-*The identification and definition of primary model input variables should be driven by scenario definitions, and by the scope of the model described in the problem formulation phase [@Mahmoud2009] -- Identify and define system variables structures:*
+-   [ ] selection of entities and processes,
 
--   *What variables would support taking this action or making this decision?*
--   *What additional variables may interact with this system (things we can't control, but can hopefully measure)?*
--   *What variables have not been measured, but may interact with the system (often occurs in field or observational studies)?*
--   *What variables are indice or surrogate measures of variables that we cannot or have not measured?*
--   *In what ways do we expect these variables to interact (model structures)?*
+-   [ ] representation of stochasticity and heterogeneity,
 
-## 2.4 Define prior knowledge, data specification and evaluation
+-   [ ] consideration of local versus global interactions, environmental drivers, etc.
 
-*Collect, process and prepare data available for parameterisation, determining model structure, and for scenario analysis.*
+-   [ ] Explain and justify the influence of particular theories, concepts, or earlier models against alternative conceptual design decisions that might lead to alternative model structures.
+:::
 
-### 2.4.1 Collate available data sources that could be used to parameterise or structure the model
+## Model assumptions and uncertainties
 
-*Document the identity, quantity and provenance of any data that will be used to develop, identify and test the model. Describe how the data is arranged, in terms of replicates and covariates.*
+::: callout-caution
+## Preregistration Item
 
-**For pre-existing data: -- delete as appropriate.**
+Specify key assumptions and uncertainties underlying the model design, describing how uncertainty and variation will be represented in the model [@Moallemi2019].
+Sources of uncertainty may include:
 
--   *For each dataset, is the data open or publically available? (Y/N)*
--   *How can the data be accessed? Provide a link or contact as appropriate, indicating any restrctions on the use of data.*
--   *Date of download, access, or future access:*
--   *Describe the source of the data - what entity originally collected this data? (National Data Set, Private Organisational Data, Own Lab Collection, Other Lab Collection, External Contractor, Meta-Analysis, Expert Elicitation, Other).*
--   *Codebook and meta-data. If a Codebook or other meta-data is available, please link to it here and / or upload the document(s).*
--   *Prior work based on this dataset - Have you published / presented any previous work based on this dataset? Include any publications, conference presentations (papers, posters), or working papers (in-prep, unpublished, preprints) based on this dataset you have worked on.* HF- Love this question
--   *Unpublished Prior Research Activity - Describe any prior but unpublished research activity using these data. Be specific and transparent.*
--   *Prior knowledge of the current dataset - Describe any prior knowledge of or interaction with the dataset before commencing this study. For example, have you read any reports or publications about this data?*
+-   [ ] exogenous uncertainties affecting the system,
 
-**Sampling Plan (For data you will collect) -- delete as appropriate.**
+```{=html}
+<!-- -->
+```
+-   [ ] parametric uncertainty in input data and
 
--   Data collection procedures - Please describe your data collection process, including how sites and transects or any other physical unit were selected and arranged. Describe any inclusion or exclusion rules, and the study timeline.
--   Sample Size - Describe the sample size of your study.
--   Sample Size Rationale - Describe how you determined the appropriate sample size for your study. It could include feasibility constraints, such as time, money or personnel.
--   If sample size cannot be specified, specify a stopping rule - i.e. how will you decide when to terminate your data collection?
+-   [ ] structural / conceptual nonparametric uncertainty in the model.
+:::
 
-### 2.4.2 Data Processing and Preparation
+## Identify predictor and response variables
 
-*Describe any data preparation and processing steps, including manipulation of environmental layers, e.g. standardisation and geographic projection.*
+::: callout-note
+## Explanation
 
-*Describe how you will separate and distinguish between raw data, manipulated data, and outputs from modelling or any analyses of the model.*
+The identification and definition of primary model input variables should be driven by scenario definitions, and by the scope of the model described in the problem formulation phase [@Mahmoud2009].
+:::
 
-### 2.4.3 Describe any data exploration or preliminary data analyses.
+::: callout-caution
+## Preregistration Item
 
-*In most modelling cases, it is necessary to perform preliminary analyses to understand the data and check that assumptions and requirements of the chosen modelling procedures are met. Data exploration prior to model fitting or development may include exploratory analyses to check for collinearity, spatial and temporal coverage, quality and resolution, outliers, or the need for transformations [@Yates2018]. Describe how you will summarise and explore your data, and explain what method you will use (graphical, tabular or otherwise) to represent your data and any analyses. Specify what you intend to find out or hope to learn from each data exploration analysis.*
+Identify and define system system variables and structures, referencing scenario definitions, and the scope of the model as described within problem formulation (1.1.3):
 
-### 2.4.4 Data Evaluation
+-   [ ] What variables would support taking this action or making this decision?
+-   [ ] What additional variables may interact with this system (things we can't control, but can hopefully measure)?
+-   [ ] What variables have not been measured, but may interact with the system (often occurs in field or observational studies)?
+-   [ ] What variables are index or surrogate measures of variables that we cannot or have not measured?
+-   [ ] In what ways do we expect these variables to interact (model structures)?
+-   [ ] Explain how any key concepts or terms within problem or decision-making contexts, such as regulatory terms, will be operationalised and defined in a biologically meaningful way to answer the research question appropriately? (Should this last step go here or within define conceptual framework?.
+:::
 
-*Describe how you will determine how reliable the data is for the given purpose. Ideally, model input data should be internally consistent across temporal and spatial scales and resolutions, and appropriate to the problem at hand [@Mahmoud2009].* \### 2.4.5 Data Evaluation: Data reliability reporting \### 2.4.5.
-Data Evaluation: data reliability reporting
+## Define prior knowledge, data specification and evaluation
 
-*Document any issues with data reliability. This is important because data quality and ecological relevance might be constrained by measurement error, inappropriate experimental design, and heterogeneity and variability inherent in ecological systems [@Grimm:2014es].*
+::: callout-note
+## Explanation
 
-### 2.4.6. Data evaluation: data exclusion
+*This section specifies the plan for collecting, processing and preparing data available for parameterisation, determining model structure, and for scenario analysis.*
+:::
 
-*How will you determine what data, if any, will be excluded from your analyses? How will outliers be handled? Describe rules for identifying outlier data, and for excluding a site, transect, quadrat, year or season, species, trait, etc.*
+### Collate available data sources that could be used to parameterise or structure the model
 
-### 2.4.7 Data Evaluation: Missing Data
+::: callout-caution
+## Preregistration Item
 
-*How will you identify and deal with incomplete or missing data?*
+**For pre-existing data (delete as appropriate):**
 
-## 2.5 Conceptual model evaluation
+-   [ ] Document the identity, quantity and provenance of any data that will be used to develop, identify and test the model.
+-   [ ] For each dataset, is the data open or publicly available?
+-   [ ] How can the data be accessed? Provide a link or contact as appropriate, indicating any restrictions on the use of data.
+-   [ ] Date of download, access, or future access.
+-   [ ] Describe the source of the data - what entity originally collected this data? (National Data Set, Private Organisational Data, Own Lab Collection, Other Lab Collection, External Contractor, Meta-Analysis, Expert Elicitation, Other).
+-   [ ] Codebook and meta-data. If a codebook or other meta-data is available, link to it here and / or upload the document(s).
+-   [ ] Prior work based on this dataset - Have you published / presented any previous work based on this dataset? Include any publications, conference presentations (papers, posters), or working papers (in-prep, unpublished, preprints) based on this dataset you have worked on.
+-   [ ] Unpublished Prior Research Activity - Describe any prior but unpublished research activity using these data. Be specific and transparent.
+-   [ ] Prior knowledge of the current dataset - Describe any prior knowledge of or interaction with the dataset before commencing this study. For example, have you read any reports or publications about this data?
+-   [ ] Describe how the data is arranged, in terms of replicates and covariates.
 
-*Describe how your conceptual model will be critically evaluated. Evaluation includes both the completeness and suitability of the overall model structure.*
+**Sampling Plan (for data you will collect, delete as appropriate):**
 
-*How will any simplifying assumptions be critically assessed [@Augusiak:2014gz]?*
+-   [ ] Data collection procedures - Please describe your data collection process, including how sites and transects or any other physical unit were selected and arranged. Describe any inclusion or exclusion rules, and the study timeline.
+-   [ ] Sample Size - Describe the sample size of your study.
+-   [ ] Sample Size Rationale - Describe how you determined the appropriate sample size for your study. It could include feasibility constraints, such as time, money or personnel.
+-   [ ] If sample size cannot be specified, specify a stopping rule - i.e. how will you decide when to terminate your data collection?
+:::
 
-*Explain whether this process will include consultation or feedback from a client, manager, or model user.*
+### Data Processing and Preparation
+
+::: callout-caution
+## Preregistration Item
+
+-   [ ] Describe any data preparation and processing steps, including manipulation of environmental layers (e.g. standardisation and geographic projection) or variable construction (e.g. Principal Component Analysis).
+:::
+
+### Describe any data exploration or preliminary data analyses.
+
+::: callout-note
+## Explanation
+
+In most modelling cases, it is necessary to perform preliminary analyses to understand the data and check that assumptions and requirements of the chosen modelling procedures are met.
+Data exploration prior to model fitting or development may include exploratory analyses to check for collinearity, spatial and temporal coverage, quality and resolution, outliers, or the need for transformations [@Yates2018].
+:::
+
+::: callout-caution
+## Preregistration Item
+
+For each separate preliminary or investigatory analysis:
+
+-   [ ] State what needs to be known to proceed with further decision-making about the modelling procedure, and why the analysis is necessary.
+
+-   [ ] Explain how you will implement this analysis, as well as any techniques you will use to summarise and explore your data.
+
+-   [ ] What method will you use to represent this analysis (graphical, tabular, or otherwise, describe)
+
+-   [ ] Specify exactly which parts of the data will be used
+
+-   [ ] Describe how the results will be interpreted, listing each potential analytic decision, as well as the analysis finding that will trigger each decision, where possible.
+:::
+
+### Data evaluation, exclusion and missing data
+
+::: callout-note
+## Explanation
+
+Documenting issues with reliability is important because data quality and ecological relevance might be constrained by measurement error, inappropriate experimental design, and heterogeneity and variability inherent in ecological systems [@Grimm:2014es].
+Ideally, model input data should be internally consistent across temporal and spatial scales and resolutions, and appropriate to the problem at hand [@Mahmoud2009].
+:::
+
+::: callout-caution
+## Preregistration Item
+
+-   [ ] Describe how you will determine how reliable the data is for the given model purpose.
+    Ideally, model input data should be internally consistent across temporal and spatial scales and resolutions, and appropriate to the problem at hand
+
+-   [ ] Document any issues with data reliability.
+
+-   [ ] How will you determine what data, if any, will be excluded from your analyses?
+
+-   [ ] How will outliers be handled?
+    Describe rules for identifying outlier data, and for excluding a site, transect, quadrat, year or season, species, trait, etc.
+
+-   [ ] How will you identify and deal with incomplete or missing data?
+:::
+
+## Conceptual model evaluation
+
+::: callout-caution
+## Preregistration Item
+
+-   [ ] Describe how your conceptual model will be critically evaluated. Evaluation includes both the completeness and suitability of the overall model structure.
+-   [ ] How will you critically assess any simplifying assumptions [@Augusiak:2014gz]?
+-   [ ] Will this process will include consultation or feedback from a client, manager, or model user.
+:::
 
 # Formalise and Specify Model
 
-*In this section describe what quantitative methods you will use to build the model/s, explain how they are relevant to the client/manager/user's purpose.*
+::: callout-note
+## Explanation
+
+In this section describe what quantitative methods you will use to build the model/s, explain how they are relevant to the client/manager/user's purpose.
+:::
 
 ## Model class, modelling framework and approach
 
@@ -208,7 +330,7 @@ Data Evaluation: data reliability reporting
 ## Explanation
 
 Modelling approaches can be described as occurring on a spectrum from correlative or phenomenological to mechanistic or process-based [@Yates2018]; where correlative models use mathematical functions fitted to data to describe underlying processes, and mechanistic models explicitly represent processes and details of component parts of a biological system that are expected to give rise to the data [@White2019a].
-A model \'class,\' \'family\'\' or \'type\' is often used to describe a set of models each of which has a distinct but related sampling distribution [@Liu2008].
+A model 'class,' 'family'' or 'type' is often used to describe a set of models each of which has a distinct but related sampling distribution [@Liu2008].
 The model family is driven by choices about the types of variables covered and the nature of their treatment, as well as structural features of the model, such as link functions, spatial and temporal scales of processes and their interactions [@Jakeman:2006ii].
 :::
 
@@ -248,7 +370,7 @@ Only slight concern is the deceptively difficult task that last sentence represe
 This section relates to the process of determining the best/most efficient/parsimonious representation of the system at the appropriate scale of concern [@Jakeman:2006ii] that best meets the analytical objectives specified in the problem formulation phase.
 Model structure refers to the choice of variables included in the model, and the nature of the relationship among those variables.
 Approaches to finding model structure and parameters may be knowledge-supported, or data-driven [@Boets:2015gl].
-Model selection methods can include traditional inferential approaches such as unconstrained searches of a dataset for patterns that explain variations in the response variable, or use of ensemble-modelling methods \[@Barnard2019\].
+Model selection methods can include traditional inferential approaches such as unconstrained searches of a dataset for patterns that explain variations in the response variable, or use of ensemble-modelling methods [@Barnard2019].
 Ensemble modelling procedures might aim to derive a single model, or a multi-model average [@Yates2018].
 Refining actions to develop a model could include iteratively dropping parameters or adding them, or aggregating / disaggregating system descriptors, such as dimensionality and processes [@Jakeman:2006ii].
 :::
@@ -276,7 +398,7 @@ NOTE THIS DOESN"T SAY ANYTHING ABOUT PARAMETER ESTIMATION! ONLY PErformacne crit
 ::: callout-caution
 ## Preregistration Item
 
--   [ ] Specify what technique you will use to estimate parameter values, and how you will supply non-parametric variables and/or data (e.g. distributed boundary conditions). For example, will you calibrate all variables simultaneously by optimising fit of model outputs to observations, or will you parameterise the model in a piecemeal fashion by either direct measurement, inference from secondary data, or some combination \[@Jakeman:2006ii\].
+-   [ ] Specify what technique you will use to estimate parameter values, and how you will supply non-parametric variables and/or data (e.g. distributed boundary conditions). For example, will you calibrate all variables simultaneously by optimising fit of model outputs to observations, or will you parameterise the model in a piecemeal fashion by either direct measurement, inference from secondary data, or some combination [@Jakeman:2006ii].
 -   [ ] Identify which variables will be parameterised directly, such as by expert elicitation or prior knowledge.
 -   [ ] Specify which algorithm(s) you will use for any data-driven parameter estimation, including supervised, or unsupervised machine learning, decision-tree, K-nearest neighbour or cluster algorithms [@Liu2018b].
 :::
@@ -342,7 +464,7 @@ The following items pertain to properties of the *datasets* used for calibration
 -   [ ] What Quality Assurance measures will you take to verify the model has been correctly implemented?
     Specifying a priori quality assurance tests for implementation verification may help to avoid selective debugging and silent errors.
 
-    -   Checks for verification implementation should include i) thoroughly checking for bugs or programming errors, and ii) whether the implemented model performs as described by the model description *\[@Grimm:2014es\].*
+    -   Checks for verification implementation should include i) thoroughly checking for bugs or programming errors, and ii) whether the implemented model performs as described by the model description [@Grimm:2014es]*.*
 
     -   Qualitative tests could include syntax checking of code, and peer-code review [@ivimey2023].
         Technical measures include using unit tests, or in-built checks within functions to prevent potential errors.
@@ -498,4 +620,4 @@ It could also include extracting summary statistics like the mean, median and va
 -   [ ] Describe any other simulation experiments, robustness analyses or other analyses you will perform on the model, including any metrics and their criteria / thresholds for interpreting the results of the analysis.
 :::
 
-# References
+# References {.unnumbered}
