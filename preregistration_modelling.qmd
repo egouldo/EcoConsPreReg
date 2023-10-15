@@ -88,7 +88,7 @@ See other examples in [@Moallemi2019].
     -   [ ] Are there potentially unacceptable management or policy outcomes identified by stakeholders that should be captured in the model, i.e. as constraints?
 -   [ ] Are there scenarios that model inputs or outputs that must accommodated? Scenarios should be set a priori, [i.e. before the model is built, @Moallemi2019] and may be stakeholder-defined or driven by the judgement of the modeller or other experts [@Mahmoud2009].
     -   [ ] If relevant, describe what processes you will use to elicit and identify relevant scenarios, e.g. literature review, structured workshops with stakeholders or decision-makers. 
-    -   [ ]  Specify scenarios under which decisions are investigated.
+    -   [ ] Specify scenarios under which decisions are investigated.
 :::
 
 ### Logistical Constraints
@@ -131,7 +131,7 @@ However, larger generalisations about results may be acceptable if the data come
 ## Preregistration Item (delete as necessary)
 
 -   How will you operationalise any scenarios identified in 1.1.3?
-    For example, how will you operationalise any qualitative changes of interest, such as ‚ \'deterioration\' or \'improvement\'?
+    For example, how will you operationalise any qualitative changes of interest, such as ‚ 'deterioration' or 'improvement'?
 
 -   Describe how you will evaluate and distinguish the performance of alternative scenario outcomes
 
@@ -153,7 +153,7 @@ Conceptual models may be represented in a variety of formats, such as influence 
 ::: callout-caution
 ## Preregistration Item
 
--   [ ] Describe what method you will use to elicit or identify the conceptual model. Some common methods include interviews, drawings, and mapping techniques including influence diagrams, cognitive maps and Bayesian belief networks \[@Moon2019\]. It is difficult to decide and justify which method is most appropriate, see Moon et al. [-@Moon2019] for guidance addressing this methodological question.
+-   [ ] Describe what method you will use to elicit or identify the conceptual model. Some common methods include interviews, drawings, and mapping techniques including influence diagrams, cognitive maps and Bayesian belief networks [@Moon2019]. It is difficult to decide and justify which method is most appropriate, see Moon et al. [-@Moon2019] for guidance addressing this methodological question.
 -   [ ] Finally, how do you intend on representing the final conceptual model? This will likely depend on the method chosen to elicit the conceptual model.
 :::
 
@@ -184,12 +184,7 @@ Specify key assumptions and uncertainties underlying the model design, describin
 Sources of uncertainty may include:
 
 -   [ ] exogenous uncertainties affecting the system,
-
-```{=html}
-<!-- -->
-```
 -   [ ] parametric uncertainty in input data and
-
 -   [ ] structural / conceptual nonparametric uncertainty in the model.
 :::
 
@@ -337,30 +332,38 @@ The model family is driven by choices about the types of variables covered and t
 ::: callout-caution
 ## Preregistration Item
 
--   Describe what modelling framework, approach or class of model you will use to implement your model and relate your choice to the model purpose and analytical objectives described in 1.1.2 and 1.1.3.
+-   [ ] Describe what modelling framework, approach or class of model you will use to implement your model and relate your choice to the model purpose and analytical objectives described in 1.1.2 and 1.1.3.
 :::
 
-## 3.2 Choose model features and family
+## Choose model features and family
 
-*All modelling approaches require the selection of model features, which conform with the conceptual model and data specified in previous steps (Jakeman 2006). The choice of model are determined in conjunction with features are selected. Usually difficult to change fundamental features of a model beyond an early stage of model development, so careful thought and planning here is useful to the modeller (Jakeman, 2006). However, if changes to these fundamental aspects of the model do need to change, please document how and why these choices were made.* HF- it's not clear to me what a model feature is and I find this a little confusing.
-I wonder if we need the text describing the 3.2 heading when it's stepped out in the subsections.
+::: callout-note
+## Explanation
 
-### 3.2.1 Explain how you will operationalise response variable(s)
+All modelling approaches require the selection of model features, which conform with the conceptual model and data specified in previous steps [@Jakeman:2006ii].
+The choice of model are determined in conjunction with features are selected.
+Model features include elements such as the functional form of interactions, data structures, measures used to specify links, any bins or discretisation of continuous variables.
+It is usually difficult to change fundamental features of a model beyond an early stage of model development, so careful thought and planning here is useful to the modeller \[@Jakeman:2006ii\].
+However, if changes to these fundamental aspects of the model do need to change, document how and why these choices were made, including any results used to support any changes in the model.
+:::
 
-*Specify how you will operationalise the response variables in the model. This should relate directly to the analytical and or management objectives specified during the problem formulation phase. Operationalisations could include:- the extent of a response- an extreme value- a trend- a long-term mean- a probability distribution- a spatial pattern- a time-series, - qualitative change, such as a direction of change or- the frequency, location, or probability of some event occuring. Provide a rationale for your choices, including why plausible alternatives were not chosen (Jakeman, 2006).* HF- this is great.
-Only slight concern is the deceptively difficult task that last sentence represents
+### Explain how you will operationalise response and predictor variables, and covariates
 
-### 3.2.2 Choose model family
+::: callout-caution
+## Preregistration Item
 
-*Specify which family of statistical distributions you will use in your model, and describe any transformations, or link functions. Justify your decision based on the purpose, objectives, prior knowledge and logistical constraints (Jakeman, 2006) specified in the problem formulation phase.*
+-   [ ] For each response, predictor, and covariate, *specify how these variables will be operationalised in the model. This should relate directly to the analytical and/or management objectives specified during the problem formulation phase. Operationalisations could include: the extent of a response, an extreme value, a trend, a long-term mean, a probability distribution, a spatial pattern, a time-series, qualitative change, such as a direction of change or, the frequency, location, or probability of some event occuring. Specify any treatment of model variables, including whether they are lumped / distributed, lienar / non-linear, stochastic / deterministic [@Jakeman:2006ii]* .
+-   [ ] *Provide a rationale for your choices, including why plausible alternatives under consideration were not chosen, and relate your justification bacj to the purpose, objectives, prior knowledge and or logistical constraints specified in the problem formulation phase \[@Jakeman:2006ii\].*
+:::
 
-*Include in your rational for selection, detail about which variables the model outputs are sensitive to, what aspects of their behaviour are important, and any associated spatial or temporal dimensions in sampling.*
+### Choose model family
 
-### 3.2.3 Choose model features
+::: callout-caution
+## Preregistration Item
 
-*Specify which variables are included in the model, and the nature of their treatment (e.g. lumped/distributed, linear/non-linear, stochastic/deterministic, Jakeman, 2006).*
-
-*Specify model structural features, including: - the functional form of interactions, - data structures - measures used to specify links, - any bins or discretisation of continuous variables.*
+-   [ ] Specify which family of statistical distributions you will use in your model, and describe any transformations, or link functions.
+-   [ ] Include in your rational for selection, detail about which variables the model outputs are likely sensitive to, what aspects of their behaviour are important, and any associated spatial or temporal dimensions in sampling.
+:::
 
 ## Describe *approach* for identifying model structure
 
@@ -379,7 +382,7 @@ Refining actions to develop a model could include iteratively dropping parameter
 ## Preregistration Item
 
 -   [ ] Specify what approach and methods you will use to identify model structure and parameters.
--   [ ] If using a knowledge-supported approach to deriving model strucure (either in whole or in part), specify model structural features, including:
+-   [ ] If using a knowledge-supported approach to deriving model structure (either in whole or in part), specify model structural features, including:
     -   the functional form of interactions (if any)
     -   data structures,
     -   measures used to specify links,
@@ -389,11 +392,19 @@ Refining actions to develop a model could include iteratively dropping parameter
 
 ## Describe parameter estimation technique and performance criteria
 
-*Before calibrating the model to the data, the performance criteria on which the calibration is judged are chosen. These criteria and their underlying assumptions should reflect the desired properties of the parameter estimates / structure [@Jakeman:2006ii]. For example, modellers might seek parameter estimates that are robust to outliers, unbiased, and yield appropriate predictive performance. Modellers will need to consider whether the assumptions of the estimation technique yielding those desired criteria are suited to the problem at hand. For integrated or sub-divided models, other considerations might include choices about where to disaggregate the model for parameter estimation; e.g. spatial sectioning (streams into reaches) and temporal sectioning (piece-wise linear models) [@Jakeman:2006ii].*
+::: callout-note
+## Explanation
 
-NOTE THIS DOESN"T SAY ANYTHING ABOUT PARAMETER ESTIMATION! ONLY PErformacne criteria
+Before calibrating the model to the data, the performance criteria on which the calibration is judged are specified.
+These criteria and their underlying assumptions should reflect the desired properties of the parameter estimates / structure [@Jakeman:2006ii].
+For example, modellers might seek parameter estimates that are robust to outliers, unbiased, and yield appropriate predictive performance.
+Modellers will need to consider whether the assumptions of the estimation technique yielding those desired properties are suited to the problem at hand.
+For integrated or sub-divided models, other considerations might include choices about where to disaggregate the model for parameter estimation; e.g. spatial sectioning (streams into reaches) and temporal sectioning (piece-wise linear models) [@Jakeman:2006ii].
 
-### 3.4.2 Choice of parameter estimation technique
+<!-- #TODO NOTE THIS DOESN"T SAY ANYTHING ABOUT PARAMETER ESTIMATION! ONLY PErformacne criteria -->
+:::
+
+### Parameter estimation technique
 
 ::: callout-caution
 ## Preregistration Item
@@ -403,17 +414,36 @@ NOTE THIS DOESN"T SAY ANYTHING ABOUT PARAMETER ESTIMATION! ONLY PErformacne crit
 -   [ ] Specify which algorithm(s) you will use for any data-driven parameter estimation, including supervised, or unsupervised machine learning, decision-tree, K-nearest neighbour or cluster algorithms [@Liu2018b].
 :::
 
-### 3.4.1 Choice of performance criteria
+### Performance Criteria
 
-*Specify which suite of performance criteria you will use to judge the performance of the model. Examples include correlation scores, coefficient of determination, specificity, sensitivity, AUC, etcetera (Yates et al. 2018). Relate any underlying assumptions of each criterion to the desired properties of the model, and justify the choice of performance metric in relation into whether it is sensitive to the problem at hand. Explain how you will identify which model features or components are significant or meaningful.*
+::: callout-caution
+## Preregistration Item
 
-## 3.5 Specify model assumptions and uncertainties
+-   [ ] Specify which suite of performance criteria you will use to judge the performance of the model. Examples include correlation scores, coefficient of determination, specificity, sensitivity, AUC, etcetera [@Yates2018].
+-   [ ] Relate any underlying assumptions of each criterion to the desired properties of the model, and justify the choice of performance metric in relation
+-   [ ] Explain how you will identify which model features or components are significant or meaningful.
+:::
 
-*Specify all assumptions and key uncertainties in the formal model. Describe what gaps exist between the model conception, and the real-world problem, what biases might this introduce and how might this impact any interpretation of the model outputs, and what implications are there on evaluating model-output to inform decisions?*
+## Model assumptions and uncertainties
 
-## 3.6 Specify formal model(s)
+::: callout-caution
+## Preregistration Item
 
-*Once critical decisions have been made about the approach and method of model specification, translate the conceptual model into the quantitative model. For data-driven and model-selection approaches that determine model structure and parameters, describe any initial model specifications and parameterisations, including for any tune-in parameters. (Should this go here or in model calibration?)*
+Specify assumptions and key uncertainties in the formal model.
+Describe what gaps exist between the model conception, and the real-world problem, what biases might this introduce and how might this impact any interpretation of the model outputs, and what implications are there for evaluating model-output to inform inferences or decisions?
+:::
+
+## Specify formal model(s)
+
+::: callout-caution
+## Preregistration Item
+
+Once critical decisions have been made about the modelling approach and method of model specification, the conceptual model is translated into the quantitative model.
+
+-   [ ] Specify all formal models
+    -   Note, For data-driven approaches to determining model structure and or parameterisation, it will not be able to complete this preregistration item.
+-   [ ] For quantitative model selection approaches, including ensemble modelling, specify each model used in the candidate set, including any null or full/global model.
+:::
 
 # Model Calibration, Validation & Checking
 
@@ -521,20 +551,60 @@ The consequences of assumption violations on the interpretation of results shoul
 -   If assumption violations cannot be avoided, explain how you will explore the consequences of assumption violations on the interpretation of results (To be completed in interim iterations of the preregistration, only if there are departures from assumptions as demonstrated in the planned tests above).
 :::
 
-# 5.0 Model Validation and Evaluation
+# Model Validation and Evaluation
 
-HF- I think that this is covered in section 4 with descriptions of validation and checking.
-I'm not sure how this section is different.
+::: callout-note
+## Explanation
 
-*Model Validation & Evaluation - This phase consists of a suite of analyses that collectively inform the decision and whether and when a model is suitable to meet its intended purpose (Augusiak, Van den Brink and Grimm 2014). Errors in design and implementation of the model and their implication on the model output are assessed. Ideally independent data is used against the model outputs to assess whether the model output behaviour exhibits the required accuracy for the model's intended purpose. The outcomes of these analyses build confidence in the model applications and increase understanding of model strengths and limitations. Model evaluation including model analysis and other testing should complement model checking. It should evaluate model checking, and consider over-fitting and extrapolation. The higher the proportion of calibrated, or uncertain parameters, the greater the risk that the model seems to work correctly \[‚Ä¶\] but for the wrong reasons" Evaluation thus complements model checking because we can rule out the chance that the model fits the calibration data well, but has not captured the relevant ecological mecahnisms of the system (Grimm). Evaluation of model outputs against external data in conjunction with the results from model checking provide information about the structural realism and therefore credibility of the model (Grimm et al. 2014).*
+The model validation & evaluation phase comprises a suite of analyses that collectively inform inferences about whether, and under what conditions, a model is suitable to meet its intended purpose \[@Augusiak:2014gz\].
+Errors in design and implementation of the model and their implication on the model output are assessed.
+Ideally independent data is used against the model outputs to assess whether the model output behaviour exhibits the required accuracy for the model's intended purpose.
+The outcomes of these analyses build confidence in the model applications and increase understanding of model strengths and limitations.
+Model evaluation including, model analysis, should complement model checking.
+It should evaluate model checking, and consider over-fitting and extrapolation.
+The higher the proportion of calibrated, or uncertain parameters, "the greater the risk that the model seems to work correctly, but for the wrong reasons" (citaiton).
+Evaluation thus complements model checking because we can rule out the chance that the model fits the calibration data well, but has not captured the relevant ecological mechanisms of the system pertinent to the research question or the decision problem underpinning the model [@Grimm:2014es].
+Evaluation of model outputs against external data in conjunction with the results from model checking provide information about the structural realism and therefore credibility of the model [@Grimm2016].
 
-## 5.1 Model output corroboration
+<!-- #NOTE, explain how model-checking is different to model validation / evaluation. What am i defining as model analysis / application?? the phases of the modelling process underlying this template need exposition somewhere -->
+:::
 
-*Ideally, model outputs or predictions are compared to independent data and patterns that were not used to develop, parameterise, or verify the model. Testing against a dataset of response and predictor variables that are sptially and/or temporally independent from the training dataset¬†minimises the risk of artificially inflating model performance measures [@Araujo2019].State whether you will corroborate the model outputs on external data, and please document any independent validation data in step \<2.4\>.It is preferable that any independent data used for model evaluation remains unknown to modellers during the process of model building, please describe the relationship modllers have to model validation data, will independent datasets be known to any modeller or analyst involved in the model building process?Although the corroboration of model outputs against an independent validation dataset is considered the 'gold standard' for showing that a model properly represents the internal organisation of the system ), model validation is not always possible because empirical experiments are infeasible or model users are working on rapid-response time-frames ‚Äî hence, why ecologists often model in the first place (Grimm, et al. 2014. Independent predictions can instead be tested on submodels. Alternatively, patterns in model output that are robust and seem characteristic of the system can be identified and evaluated in consultation with the literature or by experts to judge how accurate the model's output is (Grimm et al.2014). If unable to evaluate the model outputs against independent data, explain why and explain what steps you will take to interrogate the model.*
+## Model output corroboration
 
-## 5.2 Choose performance metrics and criteria
+::: callout-note
+## Explanation
 
-*Model performance can be quantified by a range of tests, including measures of agreement between predictions and independent observations, or estimates of accuracy, bias, calibration, discrimination refinement, resolution and skill [@Araujo2019]. Specify what performance measures you will use to evaluate the model and briefly explain how each test relates to different desired properties of a model's performance.Spatial, temporal and environmental pattern of errors and variance can change the interpretation of model predictions and conservation decisions [@Araujo2019], where relevant and possible, describe how you will characterise and report the spatial, temporal and environmental pattern of errors and variance. If comparing alternative models, specify what measures of model comparison or out-of-sample performance metrics will you use to find support for alternative models or else to optimise predictive ability. State what numerical threshold or qualities you will use for each of these metrics.*
+Ideally, model outputs or predictions are compared to independent data and patterns that were not used to develop, parameterise, or verify the model.
+Testing against a dataset of response and predictor variables that are spatially and/or temporally independent from the training dataset minimises the risk of artificially inflating model performance measures [@Araujo2019].
+Although the corroboration of model outputs against an independent validation dataset is considered the 'gold standard' for showing that a model properly represents the internal organisation of the system, model validation is not always possible because empirical experiments are infeasible or model users are working on rapid-response time-frames, hence, why ecologists often model in the first place \[@Grimm:2014es\].
+Independent predictions might instead be tested on sub-models.
+Alternatively, patterns in model output that are robust and seem characteristic of the system can be identified and evaluated in consultation with the literature or by experts to judge how accurate the model output is [@Grimm:2014es].
+:::
+
+::: callout-caution
+## Preregistration Item
+
+-   [ ] State whether you will corroborate the model outputs on external data, and document any independent validation data in step.
+-   [ ] It is preferable that any independent data used for model evaluation remains unknown to modellers during the process of model building [@Dwork2015], describe the relationship modellers have to model validation data, e.g. will independent datasets be known to any modeller or analyst involved in the model building process?
+-   [ ] If unable to evaluate the model outputs against independent data, explain why and explain what steps you will take to interrogate the model.
+:::
+
+## Choose performance metrics and criteria
+
+::: callout-note
+## Explanation
+
+Model performance can be quantified by a range of tests, including measures of agreement between predictions and independent observations, or estimates of accuracy, bias, calibration, discrimination refinement, resolution and skill [@Araujo2019].
+Note that the performance metrics and criteria in this section are used for evaluating the structured and parameterised models (ideally) on independent holdout data, so this step is additional to any performance criteria used for determining model structure or parameterisation in section X.
+:::
+
+::: callout-caution
+## Preregistration Item
+
+-   [ ] Specify what performance measures you will use to evaluate the model and briefly explain how each test relates to different desired properties of a model's performance.
+-   [ ] Spatial, temporal and environmental pattern of errors and variance can change the interpretation of model predictions and conservation decisions [@Araujo2019], where relevant and possible, describe how you will characterise and report the spatial, temporal and environmental pattern of errors and variance.
+-   [ ] If comparing alternative models, specify what measures of model comparison or out-of-sample performance metrics will you use to find support for alternative models or else to optimise predictive ability. State what numerical threshold or qualities you will use for each of these metrics.
+:::
 
 ## Model analysis
 
