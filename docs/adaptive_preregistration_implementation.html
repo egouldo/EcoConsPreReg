@@ -378,15 +378,15 @@ div.csl-indent {
 <section id="living-preregistration---tracking-changes-to-the-preregistration-draft" class="level2">
 <h2 class="anchored" data-anchor-id="living-preregistration---tracking-changes-to-the-preregistration-draft">‘Living preregistration’ - tracking changes to the Preregistration Draft</h2>
 <p>We will leverage <a href="https://help.github.com/en/github/administering-a-repository/releasing-projects-on-github">GitHub’s tagging and release feature</a> in conjunction with <a href="(https://semver.org/)">Semantic Versioning</a> to document and track changes to the preregistration document.</p>
-<p>GitHub releases mark software iterations that you can release and deploy<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>. Within the context of adaptive preregistration, we can use releases to mark interim versions of the preregistration, as well as to take a snapshot of the entire repository at that moment in time.</p>
-<p>Note that anything up until the complete preregistration should be additionally tagged as a ‘pre-release’ to communicate that the initial preregistration is not yet complete.</p>
+<p>GitHub releases mark software iterations that you can release and deploy<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>. Within the context of adaptive preregistration, we can use releases to mark interim versions of the preregistration, as well as to take a snapshot of the state of the entire repository at that moment in time.</p>
+<p>A summary of the types of preregistration changes, and the corresponding required version and GitHub features are presented in <a href="#tbl-preregistration-versioning">Table&nbsp;1</a>. Note that anything up until the complete preregistration should be additionally tagged as a ‘pre-release’ to communicate that the initial preregistration is not yet complete.</p>
 <div id="tbl-preregistration-versioning" class="anchored">
 <table class="table">
 <caption>Table&nbsp;1: Types of changes to the preregistration and corresponding actions and versioning adjustments</caption>
 <colgroup>
-<col style="width: 39%">
-<col style="width: 34%">
-<col style="width: 26%">
+<col style="width: 45%">
+<col style="width: 38%">
+<col style="width: 15%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -399,43 +399,46 @@ div.csl-indent {
 <tr class="odd">
 <td><strong>Changes preceding initial completion of preregistration</strong></td>
 <td>Tag and Mark as ‘pre-release’</td>
-<td><code>Minor</code> increment. E.g. <code>0.2.0</code> The <code>Major</code> value should not exceed <code>0</code>.</td>
+<td><code>Minor</code> increment. E.g. <code>0.2.0</code> The <code>Major</code> value should not exceed <code>0</code>.<br>
+<code>fledge::bump_version("minor")</code></td>
 </tr>
 <tr class="even">
 <td><strong>Incremental Change</strong>, e.g.&nbsp;respond to new question.</td>
 <td>Tag and Release</td>
-<td><code>Minor</code> increment. E.g. <code>0.2.0</code> The <code>Major</code> value should not exceed <code>0</code>.</td>
+<td><code>Minor</code> increment. E.g. <code>0.2.0</code> The <code>Major</code> value should not exceed <code>0</code>. <code>fledge::bump_version("minor")</code></td>
 </tr>
 <tr class="odd">
 <td><strong>Initial Preregistration complete</strong>. Note that ‘complete’ needs to be decided. Is complete after all preliminary and investigatory analyses have been done and the final Preregistration is complete, or is it the first iteration, where no more items can be filled out until some initial analyses are undertaken?</td>
 <td>Tag and Release</td>
-<td><code>Major</code> increment to <code>1.0.0</code></td>
+<td><code>Major</code> increment to <code>1.0.0</code>. <code>fledge::bump_version("major"); fledge::finalize_version()</code>.</td>
 </tr>
 <tr class="even">
-<td><strong>Major change to a complete Preregistration</strong> – no looking or analysing at data</td>
+<td><strong>Major change to a complete Preregistration</strong> – no looking or analysing at data.</td>
 <td>Tag and Release</td>
-<td><code>Major</code> increment <code>&gt;1.0.0</code></td>
+<td><code>Major</code> increment <code>&gt;1.0.0</code>. <code>fledge::bump_version("major"); fledge::finalize_version()</code>.</td>
 </tr>
 <tr class="odd">
 <td><strong>Linking implemented work to the Preregistration Item</strong></td>
-<td>Update Preregistration with GH Issue Link and all relevant commit hashes pertaining to that Preregistration Item + Commit. Tag and Release that preregistration commit.</td>
-<td><code>Minor</code> increment.</td>
+<td>Update Preregistration with GH Issue URL and all relevant commit hashes pertaining to that Preregistration Item + Commit. Tag and Release that preregistration commit.</td>
+<td><code>Minor</code> increment. <code>fledge::bump_version("minor")</code>.</td>
 </tr>
 <tr class="even">
 <td><strong>Data-dependent changes with registered flexibility</strong> Adapting the Preregistration on the basis of results from preliminary or investigatory analyses</td>
-<td>Update Preregistration with GH Issue Link and all relevant commit hashes pertaining to that Preregistration Item + Commit. Respond to dependent incomplete Preregistration Items or Update existing / already completed Preregistration Items + Commit. Tag and Release</td>
-<td><code>Major</code> increment.</td>
+<td>Update Preregistration with GH Issue Link and all relevant commit hashes pertaining to that Preregistration Item + Commit. Respond to dependent incomplete Preregistration Items or Update existing / already completed Preregistration Items + Commit. Tag and Release.</td>
+<td><code>Major</code> increment. <code>fledge::bump_version("major")</code>.</td>
 </tr>
 <tr class="odd">
-<td><strong>Minor mistakes</strong></td>
+<td><strong>Minor mistakes or changes</strong></td>
 <td>Changes including small typos, or minor elaborations on existing specified plans</td>
-<td><code>Patch</code> increment. E.g. <code>0.1.2</code>.</td>
+<td><code>Patch</code> increment. E.g. <code>0.1.2</code>. <code>fledge::bump_version("patch")</code></td>
 </tr>
 </tbody>
 </table>
 </div>
 <section id="using-the-fledge-r-package-for-semantic-versioning-and-to-document-preregistration-changes" class="level3">
 <h3 class="anchored" data-anchor-id="using-the-fledge-r-package-for-semantic-versioning-and-to-document-preregistration-changes">Using the <a href="https://fledge.cynkra.com"><code>fledge::</code></a> R package for semantic versioning and to document preregistration changes</h3>
+<p>The package <code>fledge::</code> can be used right from the R console to bump the version number, make releases, and auto catalogue a chronological history of changes recorded a <code>NEWS.md</code> file that is updated and published with every release. A detailed guide to using <code>fledge::</code> can be found here <a href="https://fledge.cynkra.com/articles/fledge.html" class="uri">https://fledge.cynkra.com/articles/fledge.html</a>.</p>
+<p>This package is not a mandatory component of the process, however can be a useful tool for implementing semantic versioning, tagging and releasing. All of these actions can be implemented in the GitHub browser with a point and click interface.</p>
 </section>
 </section>
 </section>
