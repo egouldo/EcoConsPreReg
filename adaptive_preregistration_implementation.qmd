@@ -108,7 +108,7 @@ When a researcher needs to conduct preliminary analyses or check parts of the da
 1.  Edit the document with your responses to the template items
 
 -   View the document in GitHub [here](https://github.com/egouldo/VEFMAP_VEG_Stage6/blob/master/analysis/preregistration_template.Rmd)
--   Click on The 'edit document' button: ![Screen Shot 2020-05-10 at 6 29 33 pm](https://user-images.githubusercontent.com/8400682/81494459-791b7080-92ec-11ea-979b-900317b4a9b6.png)
+-   Click on The 'edit document' button: ![](https://github.com/egouldo/VEFMAP_VEG_Stage6/assets/8400682/dd6ee5b6-9595-46e0-8576-7d2a3c7e2c9a)
 -   You will be able to edit the document directly in GitHub, Edit away!
 
 2.  Commit changes
@@ -118,7 +118,7 @@ When a researcher needs to conduct preliminary analyses or check parts of the da
 -   Fill out the additional description box briefly describing the changes you just made
 -   Click "commit"
 
-![Screen Shot 2020-05-18 at 12 19 29 pm](https://user-images.githubusercontent.com/8400682/82168463-2b14f700-9902-11ea-95a0-21fe385629bb.png)
+![](https://github.com/egouldo/VEFMAP_VEG_Stage6/assets/8400682/55fe090c-b72c-45f4-808f-039960796dc0.png)
 
 ## Incrementally Updating the Preregistration Plan
 
