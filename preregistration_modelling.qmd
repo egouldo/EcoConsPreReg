@@ -343,7 +343,7 @@ The model family is driven by choices about the types of variables covered and t
 All modelling approaches require the selection of model features, which conform with the conceptual model and data specified in previous steps [@Jakeman:2006ii].
 The choice of model are determined in conjunction with features are selected.
 Model features include elements such as the functional form of interactions, data structures, measures used to specify links, any bins or discretisation of continuous variables.
-It is usually difficult to change fundamental features of a model beyond an early stage of model development, so careful thought and planning here is useful to the modeller \[@Jakeman:2006ii\].
+It is usually difficult to change fundamental features of a model beyond an early stage of model development, so careful thought and planning here is useful to the modeller [@Jakeman:2006ii].
 However, if changes to these fundamental aspects of the model do need to change, document how and why these choices were made, including any results used to support any changes in the model.
 :::
 
@@ -353,7 +353,7 @@ However, if changes to these fundamental aspects of the model do need to change,
 ## Preregistration Item
 
 -   [ ] For each response, predictor, and covariate, *specify how these variables will be operationalised in the model. This should relate directly to the analytical and/or management objectives specified during the problem formulation phase. Operationalisations could include: the extent of a response, an extreme value, a trend, a long-term mean, a probability distribution, a spatial pattern, a time-series, qualitative change, such as a direction of change or, the frequency, location, or probability of some event occuring. Specify any treatment of model variables, including whether they are lumped / distributed, lienar / non-linear, stochastic / deterministic [@Jakeman:2006ii]* .
--   [ ] *Provide a rationale for your choices, including why plausible alternatives under consideration were not chosen, and relate your justification bacj to the purpose, objectives, prior knowledge and or logistical constraints specified in the problem formulation phase \[@Jakeman:2006ii\].*
+-   [ ] *Provide a rationale for your choices, including why plausible alternatives under consideration were not chosen, and relate your justification bacj to the purpose, objectives, prior knowledge and or logistical constraints specified in the problem formulation phase [@Jakeman:2006ii].*
 :::
 
 ### Choose model family
@@ -556,7 +556,7 @@ The consequences of assumption violations on the interpretation of results shoul
 ::: callout-note
 ## Explanation
 
-The model validation & evaluation phase comprises a suite of analyses that collectively inform inferences about whether, and under what conditions, a model is suitable to meet its intended purpose \[@Augusiak:2014gz\].
+The model validation & evaluation phase comprises a suite of analyses that collectively inform inferences about whether, and under what conditions, a model is suitable to meet its intended purpose [@Augusiak:2014gz].
 Errors in design and implementation of the model and their implication on the model output are assessed.
 Ideally independent data is used against the model outputs to assess whether the model output behaviour exhibits the required accuracy for the model's intended purpose.
 The outcomes of these analyses build confidence in the model applications and increase understanding of model strengths and limitations.
@@ -576,7 +576,7 @@ Evaluation of model outputs against external data in conjunction with the result
 
 Ideally, model outputs or predictions are compared to independent data and patterns that were not used to develop, parameterise, or verify the model.
 Testing against a dataset of response and predictor variables that are spatially and/or temporally independent from the training dataset minimises the risk of artificially inflating model performance measures [@Araujo2019].
-Although the corroboration of model outputs against an independent validation dataset is considered the 'gold standard' for showing that a model properly represents the internal organisation of the system, model validation is not always possible because empirical experiments are infeasible or model users are working on rapid-response time-frames, hence, why ecologists often model in the first place \[@Grimm:2014es\].
+Although the corroboration of model outputs against an independent validation dataset is considered the 'gold standard' for showing that a model properly represents the internal organisation of the system, model validation is not always possible because empirical experiments are infeasible or model users are working on rapid-response time-frames, hence, why ecologists often model in the first place [@Grimm:2014es].
 Independent predictions might instead be tested on sub-models.
 Alternatively, patterns in model output that are robust and seem characteristic of the system can be identified and evaluated in consultation with the literature or by experts to judge how accurate the model output is [@Grimm:2014es].
 :::
