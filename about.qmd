@@ -4,5 +4,4 @@ title: "About"
 
 This site is a practical guide to accompany the paper:
 
-> Gould, E., Jones, C.J., Fraser, H.F., Rumpff, L., Fidler, F.M.
-> (in prep.) "But I can't preregister my research: Improving the reproducibility and transparency of ecology modelling with adaptive preregistration." TBD.
+> Gould, E., Jones, C.S., Yen, J.D.L., Fraser, H.F., Wootton, H., Vivian, L., Good, M., Duncan, D.H., Rumpff, L., Fidler, F.M., et al. (in prep., 2024) "But I can't preregister my research: Improving the reproducibility and transparency of ecological modelling with adaptive preregistration".
