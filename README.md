@@ -2,7 +2,7 @@
 
 ## About
 
-This repository provides the source-code for [a practical guide to implementing _Adaptive Preregistration for Model-Based Research](https://egouldo.github.io/EcoConsPreReg/) that accompanies the paper:
+This repository provides the source-code for [a practical guide to implementing _Adaptive Preregistration_ for Model-Based Research](https://egouldo.github.io/EcoConsPreReg/) that accompanies the paper:
 
 > Gould, E., Jones, C.S., Yen, J.D.L., Fraser, H.F., Wootton, H., Vivian, L., Good, M., Duncan, D.H., Rumpff, L., Fidler, F.M., _et al._ (in prep., 2024) "But I can't preregister my research: Improving the reproducibility and transparency of ecological modelling with adaptive preregistration. 
 
