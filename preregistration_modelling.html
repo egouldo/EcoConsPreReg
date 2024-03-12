@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -25,6 +25,7 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -65,7 +66,13 @@ div.csl-indent {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -74,6 +81,7 @@ div.csl-indent {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -88,9 +96,9 @@ div.csl-indent {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Adaptive Preregistration for Model-Based Research</span>
     </a>
@@ -102,52 +110,69 @@ div.csl-indent {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html" rel="" target="">
- <span class="menu-text">Home</span></a>
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./RDF_QRP.html" rel="" target="">
- <span class="menu-text">Researcher Degrees of Freedom</span></a>
+    <a class="nav-link" href="./RDF_QRP.html"> 
+<span class="menu-text">Researcher Degrees of Freedom</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-adaptive-preregistration" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-adaptive-preregistration" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Adaptive Preregistration</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-adaptive-preregistration">    
         <li>
-    <a class="dropdown-item" href="./adaptive_preregistration_background.html" rel="" target="">
+    <a class="dropdown-item" href="./adaptive_preregistration_background.html">
  <span class="dropdown-text">A primer on <em>Adaptive Preregistration</em></span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./adaptive_preregistration_implementation.html" rel="" target="">
+    <a class="dropdown-item" href="./adaptive_preregistration_implementation.html">
  <span class="dropdown-text">Implementing Adaptive Preregistration with Git and Github</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link active" href="./preregistration_modelling.html" rel="" target="" aria-current="page">
- <span class="menu-text">Preregistration for Modelling</span></a>
+    <a class="nav-link active" href="./preregistration_modelling.html" aria-current="page"> 
+<span class="menu-text">Preregistration for Modelling</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
   </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bi-github" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-bi-github">    
+        <li>
+    <a class="dropdown-item" href="https://github.com/egouldo/EcoConsPreReg">
+ <span class="dropdown-text">Source Code</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://github.com/egouldo/EcoConsPreReg/issues/new">
+ <span class="dropdown-text">Report a Bug</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
   </div>
 </a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="99">
     <h2 id="toc-title">On this page</h2>
    
@@ -185,7 +210,7 @@ div.csl-indent {
   <li><a href="#model-class-modelling-framework-and-approach" id="toc-model-class-modelling-framework-and-approach" class="nav-link" data-scroll-target="#model-class-modelling-framework-and-approach"><span class="header-section-number">3.1</span> Model class, modelling framework and approach</a></li>
   <li><a href="#choose-model-features-and-family" id="toc-choose-model-features-and-family" class="nav-link" data-scroll-target="#choose-model-features-and-family"><span class="header-section-number">3.2</span> Choose model features and family</a>
   <ul class="collapse">
-  <li><a href="#explain-how-you-will-operationalise-response-and-predictor-variables-and-covariates" id="toc-explain-how-you-will-operationalise-response-and-predictor-variables-and-covariates" class="nav-link" data-scroll-target="#explain-how-you-will-operationalise-response-and-predictor-variables-and-covariates"><span class="header-section-number">3.2.1</span> Explain how you will operationalise response and predictor variables, and covariates</a></li>
+  <li><a href="#operationalising-model-variables" id="toc-operationalising-model-variables" class="nav-link" data-scroll-target="#operationalising-model-variables"><span class="header-section-number">3.2.1</span> Operationalising Model Variables</a></li>
   <li><a href="#choose-model-family" id="toc-choose-model-family" class="nav-link" data-scroll-target="#choose-model-family"><span class="header-section-number">3.2.2</span> Choose model family</a></li>
   </ul></li>
   <li><a href="#describe-approach-for-identifying-model-structure" id="toc-describe-approach-for-identifying-model-structure" class="nav-link" data-scroll-target="#describe-approach-for-identifying-model-structure"><span class="header-section-number">3.3</span> Describe <em>approach</em> for identifying model structure</a></li>
@@ -203,12 +228,12 @@ div.csl-indent {
   <ul class="collapse">
   <li><a href="#describe-calibrationvalidation-data" id="toc-describe-calibrationvalidation-data" class="nav-link" data-scroll-target="#describe-calibrationvalidation-data"><span class="header-section-number">4.1.1</span> Describe calibration/validation data</a></li>
   </ul></li>
-  <li><a href="#implementation-verification" id="toc-implementation-verification" class="nav-link" data-scroll-target="#implementation-verification"><span class="header-section-number">4.3</span> Implementation verification</a></li>
-  <li><a href="#model-checking" id="toc-model-checking" class="nav-link" data-scroll-target="#model-checking"><span class="header-section-number">4.4</span> Model checking</a>
+  <li><a href="#implementation-verification" id="toc-implementation-verification" class="nav-link" data-scroll-target="#implementation-verification"><span class="header-section-number">4.2</span> Implementation verification</a></li>
+  <li><a href="#model-checking" id="toc-model-checking" class="nav-link" data-scroll-target="#model-checking"><span class="header-section-number">4.3</span> Model checking</a>
   <ul class="collapse">
-  <li><a href="#quantitative-model-checking" id="toc-quantitative-model-checking" class="nav-link" data-scroll-target="#quantitative-model-checking"><span class="header-section-number">4.4.1</span> Quantitative Model Checking</a></li>
-  <li><a href="#qualitative-model-checking" id="toc-qualitative-model-checking" class="nav-link" data-scroll-target="#qualitative-model-checking"><span class="header-section-number">4.4.2</span> Qualitative Model Checking</a></li>
-  <li><a href="#assumption-violation-checks" id="toc-assumption-violation-checks" class="nav-link" data-scroll-target="#assumption-violation-checks"><span class="header-section-number">4.4.3</span> Assumption Violation Checks</a></li>
+  <li><a href="#quantitative-model-checking" id="toc-quantitative-model-checking" class="nav-link" data-scroll-target="#quantitative-model-checking"><span class="header-section-number">4.3.1</span> Quantitative Model Checking</a></li>
+  <li><a href="#qualitative-model-checking" id="toc-qualitative-model-checking" class="nav-link" data-scroll-target="#qualitative-model-checking"><span class="header-section-number">4.3.2</span> Qualitative Model Checking</a></li>
+  <li><a href="#assumption-violation-checks" id="toc-assumption-violation-checks" class="nav-link" data-scroll-target="#assumption-violation-checks"><span class="header-section-number">4.3.3</span> Assumption Violation Checks</a></li>
   </ul></li>
   </ul></li>
   <li><a href="#model-validation-and-evaluation" id="toc-model-validation-and-evaluation" class="nav-link" data-scroll-target="#model-validation-and-evaluation"><span class="header-section-number">5</span> Model Validation and Evaluation</a>
@@ -225,9 +250,9 @@ div.csl-indent {
   </ul></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/egouldo/EcoConsPreReg/edit/master/preregistration_modelling.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/egouldo/EcoConsPreReg/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
 </nav>
-</nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
     </div>
@@ -265,7 +290,9 @@ div.csl-indent {
   </div>
   
 
+
 </header>
+
 
 <section id="problem-formulation" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Problem Formulation</h1>
@@ -312,10 +339,10 @@ Preregistration Item
 <div class="callout-body-container callout-body">
 <p>Identify relevant interest groups:</p>
 <ul class="task-list">
-<li><input type="checkbox">Who is the model for?</li>
-<li><input type="checkbox">Who is involved in formulating the model?</li>
-<li><input type="checkbox">How will key stakeholders be involved in model development?</li>
-<li><input type="checkbox">Describe the decision-making context in which the model will be used (if relevant).</li>
+<li><label><input type="checkbox">Who is the model for?</label></li>
+<li><label><input type="checkbox">Who is involved in formulating the model?</label></li>
+<li><label><input type="checkbox">How will key stakeholders be involved in model development?</label></li>
+<li><label><input type="checkbox">Describe the decision-making context in which the model will be used (if relevant).</label></li>
 </ul>
 </div>
 </div>
@@ -334,11 +361,11 @@ Preregistration Item
 <div class="callout-body-container callout-body">
 <p>Briefly outline</p>
 <ul class="task-list">
-<li><input type="checkbox">the ecological problem,</li>
-<li><input type="checkbox">the decision problem (if relevant), including the decision-trigger and any regulatory frameworks relevant to the problem,</li>
-<li><input type="checkbox">how the model will address the problem, being clear about the scope of the model i.e.&nbsp;is the model addressing the whole problem, or part of it? Are there any linked problems that your model should consider?</li>
-<li><input type="checkbox">Ensure that you specify any focal taxa and study objectives,</li>
-<li><input type="checkbox">Briefly outline the ecological problem and the decision-problem, including the decision-trigger and any regulatory frameworks relevant to the problem.</li>
+<li><label><input type="checkbox">the ecological problem,</label></li>
+<li><label><input type="checkbox">the decision problem (if relevant), including the decision-trigger and any regulatory frameworks relevant to the problem,</label></li>
+<li><label><input type="checkbox">how the model will address the problem, being clear about the scope of the model i.e.&nbsp;is the model addressing the whole problem, or part of it? Are there any linked problems that your model should consider?</label></li>
+<li><label><input type="checkbox">Ensure that you specify any focal taxa and study objectives,</label></li>
+<li><label><input type="checkbox">Briefly outline the ecological problem and the decision-problem, including the decision-trigger and any regulatory frameworks relevant to the problem.</label></li>
 </ul>
 </div>
 </div>
@@ -370,17 +397,17 @@ Preregistration Item
 <div class="callout-body-container callout-body">
 <p><em>Provide detail on the analytical purpose and scope of the model:</em>&nbsp;</p>
 <ul class="task-list">
-<li><input type="checkbox">How will the model be analysed and what analytical questions will the model be used to answer?&nbsp;</li>
-<li><input type="checkbox">Candidate decisions should be investigated and are specified a priori. Depending on the modelling context, they may be specified by stakeholders, model users or the analyst <span class="citation" data-cites="Moallemi2019">(<a href="#ref-Moallemi2019" role="doc-biblioref">Moallemi, Elsawah, and Ryan 2019</a>)</span>.
+<li><label><input type="checkbox">How will the model be analysed and what analytical questions will the model be used to answer?&nbsp;</label></li>
+<li><label><input type="checkbox">Candidate decisions should be investigated and are specified a priori. Depending on the modelling context, they may be specified by stakeholders, model users or the analyst <span class="citation" data-cites="Moallemi2019">(<a href="#ref-Moallemi2019" role="doc-biblioref">Moallemi, Elsawah, and Ryan 2019</a>)</span>.</label>
 <ul class="task-list">
-<li><input type="checkbox">Describe the method used to identify relevant management actions and</li>
-<li><input type="checkbox">specify management actions to be considered included in the model.</li>
-<li><input type="checkbox">Are there potentially unacceptable management or policy outcomes identified by stakeholders that should be captured in the model, i.e.&nbsp;as constraints?</li>
+<li><label><input type="checkbox">Describe the method used to identify relevant management actions and</label></li>
+<li><label><input type="checkbox">specify management actions to be considered included in the model.</label></li>
+<li><label><input type="checkbox">Are there potentially unacceptable management or policy outcomes identified by stakeholders that should be captured in the model, i.e.&nbsp;as constraints?</label></li>
 </ul></li>
-<li><input type="checkbox">Are there scenarios that model inputs or outputs that must accommodated? Scenarios should be set a priori, <span class="citation" data-cites="Moallemi2019">(i.e.&nbsp;before the model is built, <a href="#ref-Moallemi2019" role="doc-biblioref">Moallemi, Elsawah, and Ryan 2019</a>)</span> and may be stakeholder-defined or driven by the judgement of the modeller or other experts <span class="citation" data-cites="Mahmoud2009">(<a href="#ref-Mahmoud2009" role="doc-biblioref">Mahmoud et al. 2009</a>)</span>.
+<li><label><input type="checkbox">Are there scenarios that model inputs or outputs that must accommodated? Scenarios should be set a priori, <span class="citation" data-cites="Moallemi2019">(i.e.&nbsp;before the model is built, <a href="#ref-Moallemi2019" role="doc-biblioref">Moallemi, Elsawah, and Ryan 2019</a>)</span> and may be stakeholder-defined or driven by the judgement of the modeller or other experts <span class="citation" data-cites="Mahmoud2009">(<a href="#ref-Mahmoud2009" role="doc-biblioref">Mahmoud et al. 2009</a>)</span>.</label>
 <ul class="task-list">
-<li><input type="checkbox">If relevant, describe what processes you will use to elicit and identify relevant scenarios, e.g.&nbsp;literature review, structured workshops with stakeholders or decision-makers.&nbsp;</li>
-<li><input type="checkbox">Specify scenarios under which decisions are investigated.</li>
+<li><label><input type="checkbox">If relevant, describe what processes you will use to elicit and identify relevant scenarios, e.g.&nbsp;literature review, structured workshops with stakeholders or decision-makers.&nbsp;</label></li>
+<li><label><input type="checkbox">Specify scenarios under which decisions are investigated.</label></li>
 </ul></li>
 </ul>
 </div>
@@ -394,15 +421,15 @@ Preregistration Item
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Caution
+Preregistration Item
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <ul class="task-list">
-<li><input type="checkbox">What degree of flexibility is required from the model? Might the model need to be quickly reconfigured to explore new scenarios or problems proposed by clients / managers / model-users?</li>
-<li><input type="checkbox">Are there any limitations on model development analysis and flexibility, such as time or budget constraints, for example, does a model need to be deployed rapidly?
+<li><label><input type="checkbox">What degree of flexibility is required from the model? Might the model need to be quickly reconfigured to explore new scenarios or problems proposed by clients / managers / model-users?</label></li>
+<li><label><input type="checkbox">Are there any limitations on model development analysis and flexibility, such as time or budget constraints, for example, does a model need to be deployed rapidly?</label>
 <ul class="task-list">
-<li><input type="checkbox">When must the model be completed by, e.g.&nbsp;to help make a decision?</li>
+<li><label><input type="checkbox">When must the model be completed by, e.g.&nbsp;to help make a decision?</label></li>
 </ul></li>
 </ul>
 </div>
@@ -421,8 +448,8 @@ Preregistration Item
 </div>
 <div class="callout-body-container callout-body">
 <ul class="task-list">
-<li><input type="checkbox">The choice of a model’s boundaries is closely linked to the choice of how finely to aggregate the behaviour within the model <span class="citation" data-cites="Jakeman:2006ii">(<a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman, Letcher, and Norton 2006</a>)</span> - what is the intended scale, and resolution of the model (temporal, spatial or otherwise)?</li>
-<li><input type="checkbox">Where is the boundary of the modelled system? Everything outside beyond the boundary and not crossing it is to be ignored within the domain of the model, and everything crossing the boundary is to be treated as external forcing (known/unknown), or else as model outputs <span class="citation" data-cites="Jakeman:2006ii">(observed, or not, <a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman, Letcher, and Norton 2006</a>)</span>.</li>
+<li><label><input type="checkbox">The choice of a model’s boundaries is closely linked to the choice of how finely to aggregate the behaviour within the model <span class="citation" data-cites="Jakeman:2006ii">(<a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman, Letcher, and Norton 2006</a>)</span> - what is the intended scale, and resolution of the model (temporal, spatial or otherwise)?</label></li>
+<li><label><input type="checkbox">Where is the boundary of the modelled system? Everything outside beyond the boundary and not crossing it is to be ignored within the domain of the model, and everything crossing the boundary is to be treated as external forcing (known/unknown), or else as model outputs <span class="citation" data-cites="Jakeman:2006ii">(observed, or not, <a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman, Letcher, and Norton 2006</a>)</span>.</label></li>
 </ul>
 </div>
 </div>
@@ -453,7 +480,7 @@ Preregistration Item
 </div>
 <div class="callout-body-container callout-body">
 <ul class="task-list">
-<li><input type="checkbox">What is the intended domain in which the model is to be applied? Are there any reasonable extrapolation limits beyond which you expect the model should not be applied <span class="citation" data-cites="Grimm:2014es">(<a href="#ref-Grimm:2014es" role="doc-biblioref">Grimm et al. 2014</a>)</span>?</li>
+<li><label><input type="checkbox">What is the intended domain in which the model is to be applied? Are there any reasonable extrapolation limits beyond which you expect the model should not be applied <span class="citation" data-cites="Grimm:2014es">(<a href="#ref-Grimm:2014es" role="doc-biblioref">Grimm et al. 2014</a>)</span>?</label></li>
 </ul>
 </div>
 </div>
@@ -508,8 +535,8 @@ Preregistration Item
 </div>
 <div class="callout-body-container callout-body">
 <ul class="task-list">
-<li><input type="checkbox">Describe what method you will use to elicit or identify the conceptual model. Some common methods include interviews, drawings, and mapping techniques including influence diagrams, cognitive maps and Bayesian belief networks <span class="citation" data-cites="Moon2019">(<a href="#ref-Moon2019" role="doc-biblioref">Moon et al. 2019</a>)</span>. It is difficult to decide and justify which method is most appropriate, see Moon et al. <span class="citation" data-cites="Moon2019">(<a href="#ref-Moon2019" role="doc-biblioref">2019</a>)</span> for guidance addressing this methodological question.</li>
-<li><input type="checkbox">Finally, how do you intend on representing the final conceptual model? This will likely depend on the method chosen to elicit the conceptual model.</li>
+<li><label><input type="checkbox">Describe what method you will use to elicit or identify the conceptual model. Some common methods include interviews, drawings, and mapping techniques including influence diagrams, cognitive maps and Bayesian belief networks <span class="citation" data-cites="Moon2019">(<a href="#ref-Moon2019" role="doc-biblioref">Moon et al. 2019</a>)</span>. It is difficult to decide and justify which method is most appropriate, see Moon et al. <span class="citation" data-cites="Moon2019">(<a href="#ref-Moon2019" role="doc-biblioref">2019</a>)</span> for guidance addressing this methodological question.</label></li>
+<li><label><input type="checkbox">Finally, how do you intend on representing the final conceptual model? This will likely depend on the method chosen to elicit the conceptual model.</label></li>
 </ul>
 </div>
 </div>
@@ -528,11 +555,11 @@ Preregistration Item
 <div class="callout-body-container callout-body">
 <p>List and explain critical conceptual design decisions <span class="citation" data-cites="Grimm:2014es">(<a href="#ref-Grimm:2014es" role="doc-biblioref">Grimm et al. 2014</a>)</span>, including:</p>
 <ul class="task-list">
-<li><p><input type="checkbox">spatial and temporal scales,</p></li>
-<li><p><input type="checkbox">selection of entities and processes,</p></li>
-<li><p><input type="checkbox">representation of stochasticity and heterogeneity,</p></li>
-<li><p><input type="checkbox">consideration of local versus global interactions, environmental drivers, etc.</p></li>
-<li><p><input type="checkbox">Explain and justify the influence of particular theories, concepts, or earlier models against alternative conceptual design decisions that might lead to alternative model structures.</p></li>
+<li><p><label><input type="checkbox">spatial and temporal scales,</label></p></li>
+<li><p><label><input type="checkbox">selection of entities and processes,</label></p></li>
+<li><p><label><input type="checkbox">representation of stochasticity and heterogeneity,</label></p></li>
+<li><p><label><input type="checkbox">consideration of local versus global interactions, environmental drivers, etc.</label></p></li>
+<li><p><label><input type="checkbox">Explain and justify the influence of particular theories, concepts, or earlier models against alternative conceptual design decisions that might lead to alternative model structures.</label></p></li>
 </ul>
 </div>
 </div>
@@ -551,9 +578,9 @@ Preregistration Item
 <div class="callout-body-container callout-body">
 <p>Specify key assumptions and uncertainties underlying the model design, describing how uncertainty and variation will be represented in the model <span class="citation" data-cites="Moallemi2019">(<a href="#ref-Moallemi2019" role="doc-biblioref">Moallemi, Elsawah, and Ryan 2019</a>)</span>. Sources of uncertainty may include:</p>
 <ul class="task-list">
-<li><input type="checkbox">exogenous uncertainties affecting the system,</li>
-<li><input type="checkbox">parametric uncertainty in input data and</li>
-<li><input type="checkbox">structural / conceptual nonparametric uncertainty in the model.</li>
+<li><label><input type="checkbox">exogenous uncertainties affecting the system,</label></li>
+<li><label><input type="checkbox">parametric uncertainty in input data and</label></li>
+<li><label><input type="checkbox">structural / conceptual nonparametric uncertainty in the model.</label></li>
 </ul>
 </div>
 </div>
@@ -585,12 +612,12 @@ Preregistration Item
 <div class="callout-body-container callout-body">
 <p>Identify and define system system variables and structures, referencing scenario definitions, and the scope of the model as described within problem formulation (1.1.3):</p>
 <ul class="task-list">
-<li><input type="checkbox">What variables would support taking this action or making this decision?</li>
-<li><input type="checkbox">What additional variables may interact with this system (things we can’t control, but can hopefully measure)?</li>
-<li><input type="checkbox">What variables have not been measured, but may interact with the system (often occurs in field or observational studies)?</li>
-<li><input type="checkbox">What variables are index or surrogate measures of variables that we cannot or have not measured?</li>
-<li><input type="checkbox">In what ways do we expect these variables to interact (model structures)?</li>
-<li><input type="checkbox">Explain how any key concepts or terms within problem or decision-making contexts, such as regulatory terms, will be operationalised and defined in a biologically meaningful way to answer the research question appropriately? (Should this last step go here or within define conceptual framework?.</li>
+<li><label><input type="checkbox">What variables would support taking this action or making this decision?</label></li>
+<li><label><input type="checkbox">What additional variables may interact with this system (things we can’t control, but can hopefully measure)?</label></li>
+<li><label><input type="checkbox">What variables have not been measured, but may interact with the system (often occurs in field or observational studies)?</label></li>
+<li><label><input type="checkbox">What variables are index or surrogate measures of variables that we cannot or have not measured?</label></li>
+<li><label><input type="checkbox">In what ways do we expect these variables to interact (model structures)?</label></li>
+<li><label><input type="checkbox">Explain how any key concepts or terms within problem or decision-making contexts, such as regulatory terms, will be operationalised and defined in a biologically meaningful way to answer the research question appropriately? (Should this last step go here or within define conceptual framework?.</label></li>
 </ul>
 </div>
 </div>
@@ -624,23 +651,23 @@ Preregistration Item
 <div class="callout-body-container callout-body">
 <p><strong>For pre-existing data (delete as appropriate):</strong></p>
 <ul class="task-list">
-<li><input type="checkbox">Document the identity, quantity and provenance of any data that will be used to develop, identify and test the model.</li>
-<li><input type="checkbox">For each dataset, is the data open or publicly available?</li>
-<li><input type="checkbox">How can the data be accessed? Provide a link or contact as appropriate, indicating any restrictions on the use of data.</li>
-<li><input type="checkbox">Date of download, access, or future access.</li>
-<li><input type="checkbox">Describe the source of the data - what entity originally collected this data? (National Data Set, Private Organisational Data, Own Lab Collection, Other Lab Collection, External Contractor, Meta-Analysis, Expert Elicitation, Other).</li>
-<li><input type="checkbox">Codebook and meta-data. If a codebook or other meta-data is available, link to it here and / or upload the document(s).</li>
-<li><input type="checkbox">Prior work based on this dataset - Have you published / presented any previous work based on this dataset? Include any publications, conference presentations (papers, posters), or working papers (in-prep, unpublished, preprints) based on this dataset you have worked on.</li>
-<li><input type="checkbox">Unpublished Prior Research Activity - Describe any prior but unpublished research activity using these data. Be specific and transparent.</li>
-<li><input type="checkbox">Prior knowledge of the current dataset - Describe any prior knowledge of or interaction with the dataset before commencing this study. For example, have you read any reports or publications about this data?</li>
-<li><input type="checkbox">Describe how the data is arranged, in terms of replicates and covariates.</li>
+<li><label><input type="checkbox">Document the identity, quantity and provenance of any data that will be used to develop, identify and test the model.</label></li>
+<li><label><input type="checkbox">For each dataset, is the data open or publicly available?</label></li>
+<li><label><input type="checkbox">How can the data be accessed? Provide a link or contact as appropriate, indicating any restrictions on the use of data.</label></li>
+<li><label><input type="checkbox">Date of download, access, or future access.</label></li>
+<li><label><input type="checkbox">Describe the source of the data - what entity originally collected this data? (National Data Set, Private Organisational Data, Own Lab Collection, Other Lab Collection, External Contractor, Meta-Analysis, Expert Elicitation, Other).</label></li>
+<li><label><input type="checkbox">Codebook and meta-data. If a codebook or other meta-data is available, link to it here and / or upload the document(s).</label></li>
+<li><label><input type="checkbox">Prior work based on this dataset - Have you published / presented any previous work based on this dataset? Include any publications, conference presentations (papers, posters), or working papers (in-prep, unpublished, preprints) based on this dataset you have worked on.</label></li>
+<li><label><input type="checkbox">Unpublished Prior Research Activity - Describe any prior but unpublished research activity using these data. Be specific and transparent.</label></li>
+<li><label><input type="checkbox">Prior knowledge of the current dataset - Describe any prior knowledge of or interaction with the dataset before commencing this study. For example, have you read any reports or publications about this data?</label></li>
+<li><label><input type="checkbox">Describe how the data is arranged, in terms of replicates and covariates.</label></li>
 </ul>
 <p><strong>Sampling Plan (for data you will collect, delete as appropriate):</strong></p>
 <ul class="task-list">
-<li><input type="checkbox">Data collection procedures - Please describe your data collection process, including how sites and transects or any other physical unit were selected and arranged. Describe any inclusion or exclusion rules, and the study timeline.</li>
-<li><input type="checkbox">Sample Size - Describe the sample size of your study.</li>
-<li><input type="checkbox">Sample Size Rationale - Describe how you determined the appropriate sample size for your study. It could include feasibility constraints, such as time, money or personnel.</li>
-<li><input type="checkbox">If sample size cannot be specified, specify a stopping rule - i.e.&nbsp;how will you decide when to terminate your data collection?</li>
+<li><label><input type="checkbox">Data collection procedures - Please describe your data collection process, including how sites and transects or any other physical unit were selected and arranged. Describe any inclusion or exclusion rules, and the study timeline.</label></li>
+<li><label><input type="checkbox">Sample Size - Describe the sample size of your study.</label></li>
+<li><label><input type="checkbox">Sample Size Rationale - Describe how you determined the appropriate sample size for your study. It could include feasibility constraints, such as time, money or personnel.</label></li>
+<li><label><input type="checkbox">If sample size cannot be specified, specify a stopping rule - i.e.&nbsp;how will you decide when to terminate your data collection?</label></li>
 </ul>
 </div>
 </div>
@@ -658,7 +685,7 @@ Preregistration Item
 </div>
 <div class="callout-body-container callout-body">
 <ul class="task-list">
-<li><input type="checkbox">Describe any data preparation and processing steps, including manipulation of environmental layers (e.g.&nbsp;standardisation and geographic projection) or variable construction (e.g.&nbsp;Principal Component Analysis).</li>
+<li><label><input type="checkbox">Describe any data preparation and processing steps, including manipulation of environmental layers (e.g.&nbsp;standardisation and geographic projection) or variable construction (e.g.&nbsp;Principal Component Analysis).</label></li>
 </ul>
 </div>
 </div>
@@ -690,11 +717,11 @@ Preregistration Item
 <div class="callout-body-container callout-body">
 <p>For each separate preliminary or investigatory analysis:</p>
 <ul class="task-list">
-<li><p><input type="checkbox">State what needs to be known to proceed with further decision-making about the modelling procedure, and why the analysis is necessary.</p></li>
-<li><p><input type="checkbox">Explain how you will implement this analysis, as well as any techniques you will use to summarise and explore your data.</p></li>
-<li><p><input type="checkbox">What method will you use to represent this analysis (graphical, tabular, or otherwise, describe)</p></li>
-<li><p><input type="checkbox">Specify exactly which parts of the data will be used</p></li>
-<li><p><input type="checkbox">Describe how the results will be interpreted, listing each potential analytic decision, as well as the analysis finding that will trigger each decision, where possible.</p></li>
+<li><p><label><input type="checkbox">State what needs to be known to proceed with further decision-making about the modelling procedure, and why the analysis is necessary.</label></p></li>
+<li><p><label><input type="checkbox">Explain how you will implement this analysis, as well as any techniques you will use to summarise and explore your data.</label></p></li>
+<li><p><label><input type="checkbox">What method will you use to represent this analysis (graphical, tabular, or otherwise, describe)</label></p></li>
+<li><p><label><input type="checkbox">Specify exactly which parts of the data will be used</label></p></li>
+<li><p><label><input type="checkbox">Describe how the results will be interpreted, listing each potential analytic decision, as well as the analysis finding that will trigger each decision, where possible.</label></p></li>
 </ul>
 </div>
 </div>
@@ -725,11 +752,11 @@ Preregistration Item
 </div>
 <div class="callout-body-container callout-body">
 <ul class="task-list">
-<li><p><input type="checkbox">Describe how you will determine how reliable the data is for the given model purpose. Ideally, model input data should be internally consistent across temporal and spatial scales and resolutions, and appropriate to the problem at hand</p></li>
-<li><p><input type="checkbox">Document any issues with data reliability.</p></li>
-<li><p><input type="checkbox">How will you determine what data, if any, will be excluded from your analyses?</p></li>
-<li><p><input type="checkbox">How will outliers be handled? Describe rules for identifying outlier data, and for excluding a site, transect, quadrat, year or season, species, trait, etc.</p></li>
-<li><p><input type="checkbox">How will you identify and deal with incomplete or missing data?</p></li>
+<li><p><label><input type="checkbox">Describe how you will determine how reliable the data is for the given model purpose. Ideally, model input data should be internally consistent across temporal and spatial scales and resolutions, and appropriate to the problem at hand</label></p></li>
+<li><p><label><input type="checkbox">Document any issues with data reliability.</label></p></li>
+<li><p><label><input type="checkbox">How will you determine what data, if any, will be excluded from your analyses?</label></p></li>
+<li><p><label><input type="checkbox">How will outliers be handled? Describe rules for identifying outlier data, and for excluding a site, transect, quadrat, year or season, species, trait, etc.</label></p></li>
+<li><p><label><input type="checkbox">How will you identify and deal with incomplete or missing data?</label></p></li>
 </ul>
 </div>
 </div>
@@ -748,9 +775,9 @@ Preregistration Item
 </div>
 <div class="callout-body-container callout-body">
 <ul class="task-list">
-<li><input type="checkbox">Describe how your conceptual model will be critically evaluated. Evaluation includes both the completeness and suitability of the overall model structure.</li>
-<li><input type="checkbox">How will you critically assess any simplifying assumptions <span class="citation" data-cites="Augusiak:2014gz">(<a href="#ref-Augusiak:2014gz" role="doc-biblioref">Augusiak, Van den Brink, and Grimm 2014</a>)</span>?</li>
-<li><input type="checkbox">Will this process will include consultation or feedback from a client, manager, or model user.</li>
+<li><label><input type="checkbox">Describe how your conceptual model will be critically evaluated. Evaluation includes both the completeness and suitability of the overall model structure.</label></li>
+<li><label><input type="checkbox">How will you critically assess any simplifying assumptions <span class="citation" data-cites="Augusiak:2014gz">(<a href="#ref-Augusiak:2014gz" role="doc-biblioref">Augusiak, Van den Brink, and Grimm 2014</a>)</span>?</label></li>
+<li><label><input type="checkbox">Will this process will include consultation or feedback from a client, manager, or model user.</label></li>
 </ul>
 </div>
 </div>
@@ -797,7 +824,7 @@ Preregistration Item
 </div>
 <div class="callout-body-container callout-body">
 <ul class="task-list">
-<li><input type="checkbox">Describe what modelling framework, approach or class of model you will use to implement your model and relate your choice to the model purpose and analytical objectives described in 1.1.2 and 1.1.3.</li>
+<li><label><input type="checkbox">Describe what modelling framework, approach or class of model you will use to implement your model and relate your choice to the model purpose and analytical objectives described in 1.1.2 and 1.1.3.</label></li>
 </ul>
 </div>
 </div>
@@ -817,8 +844,8 @@ Explanation
 <p>All modelling approaches require the selection of model features, which conform with the conceptual model and data specified in previous steps <span class="citation" data-cites="Jakeman:2006ii">(<a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman, Letcher, and Norton 2006</a>)</span>. The choice of model are determined in conjunction with features are selected. Model features include elements such as the functional form of interactions, data structures, measures used to specify links, any bins or discretisation of continuous variables. It is usually difficult to change fundamental features of a model beyond an early stage of model development, so careful thought and planning here is useful to the modeller <span class="citation" data-cites="Jakeman:2006ii">(<a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman, Letcher, and Norton 2006</a>)</span>. However, if changes to these fundamental aspects of the model do need to change, document how and why these choices were made, including any results used to support any changes in the model.</p>
 </div>
 </div>
-<section id="explain-how-you-will-operationalise-response-and-predictor-variables-and-covariates" class="level3" data-number="3.2.1">
-<h3 data-number="3.2.1" class="anchored" data-anchor-id="explain-how-you-will-operationalise-response-and-predictor-variables-and-covariates"><span class="header-section-number">3.2.1</span> Explain how you will operationalise response and predictor variables, and covariates</h3>
+<section id="operationalising-model-variables" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="operationalising-model-variables"><span class="header-section-number">3.2.1</span> Operationalising Model Variables</h3>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -830,8 +857,8 @@ Preregistration Item
 </div>
 <div class="callout-body-container callout-body">
 <ul class="task-list">
-<li><input type="checkbox">For each response, predictor, and covariate, <em>specify how these variables will be operationalised in the model. This should relate directly to the analytical and/or management objectives specified during the problem formulation phase. Operationalisations could include: the extent of a response, an extreme value, a trend, a long-term mean, a probability distribution, a spatial pattern, a time-series, qualitative change, such as a direction of change or, the frequency, location, or probability of some event occuring. Specify any treatment of model variables, including whether they are lumped / distributed, lienar / non-linear, stochastic / deterministic <span class="citation" data-cites="Jakeman:2006ii">(<a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman, Letcher, and Norton 2006</a>)</span></em> .</li>
-<li><input type="checkbox"><em>Provide a rationale for your choices, including why plausible alternatives under consideration were not chosen, and relate your justification bacj to the purpose, objectives, prior knowledge and or logistical constraints specified in the problem formulation phase <span class="citation" data-cites="Jakeman:2006ii">(<a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman, Letcher, and Norton 2006</a>)</span>.</em></li>
+<li><label><input type="checkbox">For each response, predictor, and covariate, <em>specify how these variables will be operationalised in the model. This should relate directly to the analytical and/or management objectives specified during the problem formulation phase. Operationalisations could include: the extent of a response, an extreme value, a trend, a long-term mean, a probability distribution, a spatial pattern, a time-series, qualitative change, such as a direction of change or, the frequency, location, or probability of some event occuring. Specify any treatment of model variables, including whether they are lumped / distributed, lienar / non-linear, stochastic / deterministic <span class="citation" data-cites="Jakeman:2006ii">(<a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman, Letcher, and Norton 2006</a>)</span></em> .</label></li>
+<li><label><input type="checkbox"><em>Provide a rationale for your choices, including why plausible alternatives under consideration were not chosen, and relate your justification bacj to the purpose, objectives, prior knowledge and or logistical constraints specified in the problem formulation phase <span class="citation" data-cites="Jakeman:2006ii">(<a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman, Letcher, and Norton 2006</a>)</span>.</em></label></li>
 </ul>
 </div>
 </div>
@@ -849,8 +876,8 @@ Preregistration Item
 </div>
 <div class="callout-body-container callout-body">
 <ul class="task-list">
-<li><input type="checkbox">Specify which family of statistical distributions you will use in your model, and describe any transformations, or link functions.</li>
-<li><input type="checkbox">Include in your rational for selection, detail about which variables the model outputs are likely sensitive to, what aspects of their behaviour are important, and any associated spatial or temporal dimensions in sampling.</li>
+<li><label><input type="checkbox">Specify which family of statistical distributions you will use in your model, and describe any transformations, or link functions.</label></li>
+<li><label><input type="checkbox">Include in your rational for selection, detail about which variables the model outputs are likely sensitive to, what aspects of their behaviour are important, and any associated spatial or temporal dimensions in sampling.</label></li>
 </ul>
 </div>
 </div>
@@ -882,8 +909,8 @@ Preregistration Item
 </div>
 <div class="callout-body-container callout-body">
 <ul class="task-list">
-<li><input type="checkbox">Specify what approach and methods you will use to identify model structure and parameters.</li>
-<li><input type="checkbox">If using a knowledge-supported approach to deriving model structure (either in whole or in part), specify model structural features, including:
+<li><label><input type="checkbox">Specify what approach and methods you will use to identify model structure and parameters.</label></li>
+<li><label><input type="checkbox">If using a knowledge-supported approach to deriving model structure (either in whole or in part), specify model structural features, including:</label>
 <ul>
 <li>the functional form of interactions (if any)</li>
 <li>data structures,</li>
@@ -924,9 +951,9 @@ Preregistration Item
 </div>
 <div class="callout-body-container callout-body">
 <ul class="task-list">
-<li><input type="checkbox">Specify what technique you will use to estimate parameter values, and how you will supply non-parametric variables and/or data (e.g.&nbsp;distributed boundary conditions). For example, will you calibrate all variables simultaneously by optimising fit of model outputs to observations, or will you parameterise the model in a piecemeal fashion by either direct measurement, inference from secondary data, or some combination <span class="citation" data-cites="Jakeman:2006ii">(<a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman, Letcher, and Norton 2006</a>)</span>.</li>
-<li><input type="checkbox">Identify which variables will be parameterised directly, such as by expert elicitation or prior knowledge.</li>
-<li><input type="checkbox">Specify which algorithm(s) you will use for any data-driven parameter estimation, including supervised, or unsupervised machine learning, decision-tree, K-nearest neighbour or cluster algorithms <span class="citation" data-cites="Liu2018b">(<a href="#ref-Liu2018b" role="doc-biblioref">Z. Liu et al. 2018</a>)</span>.</li>
+<li><label><input type="checkbox">Specify what technique you will use to estimate parameter values, and how you will supply non-parametric variables and/or data (e.g.&nbsp;distributed boundary conditions). For example, will you calibrate all variables simultaneously by optimising fit of model outputs to observations, or will you parameterise the model in a piecemeal fashion by either direct measurement, inference from secondary data, or some combination <span class="citation" data-cites="Jakeman:2006ii">(<a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman, Letcher, and Norton 2006</a>)</span>.</label></li>
+<li><label><input type="checkbox">Identify which variables will be parameterised directly, such as by expert elicitation or prior knowledge.</label></li>
+<li><label><input type="checkbox">Specify which algorithm(s) you will use for any data-driven parameter estimation, including supervised, or unsupervised machine learning, decision-tree, K-nearest neighbour or cluster algorithms <span class="citation" data-cites="Liu2018b">(<a href="#ref-Liu2018b" role="doc-biblioref">Z. Liu et al. 2018</a>)</span>.</label></li>
 </ul>
 </div>
 </div>
@@ -944,9 +971,9 @@ Preregistration Item
 </div>
 <div class="callout-body-container callout-body">
 <ul class="task-list">
-<li><input type="checkbox">Specify which suite of performance criteria you will use to judge the performance of the model. Examples include correlation scores, coefficient of determination, specificity, sensitivity, AUC, etcetera <span class="citation" data-cites="Yates2018">(<a href="#ref-Yates2018" role="doc-biblioref">Yates et al. 2018</a>)</span>.</li>
-<li><input type="checkbox">Relate any underlying assumptions of each criterion to the desired properties of the model, and justify the choice of performance metric in relation</li>
-<li><input type="checkbox">Explain how you will identify which model features or components are significant or meaningful.</li>
+<li><label><input type="checkbox">Specify which suite of performance criteria you will use to judge the performance of the model. Examples include correlation scores, coefficient of determination, specificity, sensitivity, AUC, etcetera <span class="citation" data-cites="Yates2018">(<a href="#ref-Yates2018" role="doc-biblioref">Yates et al. 2018</a>)</span>.</label></li>
+<li><label><input type="checkbox">Relate any underlying assumptions of each criterion to the desired properties of the model, and justify the choice of performance metric in relation</label></li>
+<li><label><input type="checkbox">Explain how you will identify which model features or components are significant or meaningful.</label></li>
 </ul>
 </div>
 </div>
@@ -982,11 +1009,11 @@ Preregistration Item
 <div class="callout-body-container callout-body">
 <p>Once critical decisions have been made about the modelling approach and method of model specification, the conceptual model is translated into the quantitative model.</p>
 <ul class="task-list">
-<li><input type="checkbox">Specify all formal models
+<li><label><input type="checkbox">Specify all formal models</label>
 <ul>
 <li>Note, For data-driven approaches to determining model structure and or parameterisation, it will not be able to complete this preregistration item.</li>
 </ul></li>
-<li><input type="checkbox">For quantitative model selection approaches, including ensemble modelling, specify each model used in the candidate set, including any null or full/global model.</li>
+<li><label><input type="checkbox">For quantitative model selection approaches, including ensemble modelling, specify each model used in the candidate set, including any null or full/global model.</label></li>
 </ul>
 </div>
 </div>
@@ -1020,12 +1047,12 @@ Preregistration Item
 </div>
 <div class="callout-body-container callout-body">
 <ul class="task-list">
-<li><input type="checkbox">Describe any data calibration, validation and testing scheme you will implement, including any procedures for tuning or estimating model hyper-parameters (if any).</li>
+<li><label><input type="checkbox">Describe any data calibration, validation and testing scheme you will implement, including any procedures for tuning or estimating model hyper-parameters (if any).</label></li>
 </ul>
 </div>
 </div>
 <section id="describe-calibrationvalidation-data" class="level3" data-number="4.1.1">
-<h3 data-number="4.1.1" class="anchored"><span class="header-section-number">4.1.1</span> Describe calibration/validation data</h3>
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="describe-calibrationvalidation-data"><span class="header-section-number">4.1.1</span> Describe calibration/validation data</h3>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1037,27 +1064,36 @@ Explanation &amp; Rationale
 </div>
 <div class="callout-body-container callout-body">
 <p>The following items pertain to properties of the <em>datasets</em> used for calibration (training), validation, and testing.</p>
-<section id="preregistration-item-23" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="preregistration-item-23"><span class="header-section-number">4.2</span> Preregistration Item</h2>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Preregistration Item
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ul>
 <li><p>If partitioning data for cross-validation or similar approach:</p>
 <ul class="task-list">
-<li><input type="checkbox">Describe the approach specifying the number of folds that will be created, the relative size of each fold, and any stratification methods used for ensuring evenness of groups between folds and between calibration / validation data?</li>
+<li><label><input type="checkbox">Describe the approach specifying the number of folds that will be created, the relative size of each fold, and any stratification methods used for ensuring evenness of groups between folds and between calibration / validation data?</label></li>
 </ul></li>
 <li><p>If using external / independent holdout data for model testing and evaluation:</p>
 <ul class="task-list">
-<li><p><input type="checkbox">Which data will be used as a the testing data? What method will you be used for generating training / test data subsets?</p></li>
-<li><p><input type="checkbox">Describe any known differences between the training/validation and testing datasets, the relative size of each, as well as any stratification methods used for ensuring evenness of groups between data sets?</p></li>
-<li><p><input type="checkbox">It is preferable that any independent data used for model testing remains unknown to modellers during the process of model development, please describe the relationship modellers have to model validation data, will independent datasets be known or accessible to any modeller or analyst?</p></li>
+<li><p><label><input type="checkbox">Which data will be used as a the testing data? What method will you be used for generating training / test data subsets?</label></p></li>
+<li><p><label><input type="checkbox">Describe any known differences between the training/validation and testing datasets, the relative size of each, as well as any stratification methods used for ensuring evenness of groups between data sets?</label></p></li>
+<li><p><label><input type="checkbox">It is preferable that any independent data used for model testing remains unknown to modellers during the process of model development, please describe the relationship modellers have to model validation data, will independent datasets be known or accessible to any modeller or analyst?</label></p></li>
 </ul></li>
 </ul>
-</section>
 </div>
 </div>
 </section>
 </section>
-<section id="implementation-verification" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="implementation-verification"><span class="header-section-number">4.3</span> Implementation verification</h2>
+<section id="implementation-verification" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="implementation-verification"><span class="header-section-number">4.2</span> Implementation verification</h2>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1069,7 +1105,7 @@ Preregistration Item
 </div>
 <div class="callout-body-container callout-body">
 <ul class="task-list">
-<li><p><input type="checkbox">What Quality Assurance measures will you take to verify the model has been correctly implemented? Specifying a priori quality assurance tests for implementation verification may help to avoid selective debugging and silent errors.</p>
+<li><p><label><input type="checkbox">What Quality Assurance measures will you take to verify the model has been correctly implemented? Specifying a priori quality assurance tests for implementation verification may help to avoid selective debugging and silent errors.</label></p>
 <ul>
 <li><p>Checks for verification implementation should include i) thoroughly checking for bugs or programming errors, and ii) whether the implemented model performs as described by the model description <span class="citation" data-cites="Grimm:2014es">(<a href="#ref-Grimm:2014es" role="doc-biblioref">Grimm et al. 2014</a>)</span><em>.</em></p></li>
 <li><p>Qualitative tests could include syntax checking of code, and peer-code review <span class="citation" data-cites="ivimey2023">(<a href="#ref-ivimey2023" role="doc-biblioref">Ivimey et al. 2023</a>)</span>. Technical measures include using unit tests, or in-built checks within functions to prevent potential errors.</p></li>
@@ -1078,8 +1114,8 @@ Preregistration Item
 </div>
 </div>
 </section>
-<section id="model-checking" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="model-checking"><span class="header-section-number">4.4</span> Model checking</h2>
+<section id="model-checking" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="model-checking"><span class="header-section-number">4.3</span> Model checking</h2>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1093,9 +1129,9 @@ Rationale &amp; Explanation
 <p>“Model Checking” goes by many names (“conditional verification”, “quantitative verification”, “model output verification” ), and refers to a series of analyses that assess a model’s performance in representing the system of interest <span class="citation" data-cites="Conn:2018hd">(<a href="#ref-Conn:2018hd" role="doc-biblioref">Conn et al. 2018</a>)</span>. Model checking aids in diagnosing assumption violations, and reveals where a model might need to be altered to better represent the data, and therefore system <span class="citation" data-cites="Conn:2018hd">(<a href="#ref-Conn:2018hd" role="doc-biblioref">Conn et al. 2018</a>)</span>. Quantitative model checking diagnostics include goodness of fit, tests on residuals or errors, such as for heteroscedascity, cross-correlation, and autocorrelation <span class="citation" data-cites="Jakeman:2006ii">(<a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman, Letcher, and Norton 2006</a>)</span>.</p>
 </div>
 </div>
-<section id="quantitative-model-checking" class="level3" data-number="4.4.1">
-<h3 data-number="4.4.1" class="anchored" data-anchor-id="quantitative-model-checking"><span class="header-section-number">4.4.1</span> Quantitative Model Checking</h3>
-<div class="callout callout-style-default callout-note callout-titled">
+<section id="quantitative-model-checking" class="level3" data-number="4.3.1">
+<h3 data-number="4.3.1" class="anchored" data-anchor-id="quantitative-model-checking"><span class="header-section-number">4.3.1</span> Quantitative Model Checking</h3>
+<div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -1105,16 +1141,16 @@ Preregistration Item
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><em>During this process, observed data, or data and patterns that guided model design and calibration is compared to model output in order to identify if and where there are any systematic differences.</em></p>
+<p><em>During this process, observed data, or data and patterns that guided model design and calibration, are compared to model output in order to identify if and where there are any systematic differences.</em></p>
 <ul class="task-list">
-<li><input type="checkbox">Specify any diagnostics or tests you will use during model checking to assess a model’s performance in representing the system of interest.</li>
-<li><input type="checkbox">For each test, specify the criteria that will you use to interpret the outcome of the test in assessing the model’s ability to sufficiently represent the gathered data used to develop and parameterise the model.</li>
+<li><label><input type="checkbox">Specify any diagnostics or tests you will use during model checking to assess a model’s performance in representing the system of interest.</label></li>
+<li><label><input type="checkbox">For each test, specify the criteria that will you use to interpret the outcome of the test in assessing the model’s ability to sufficiently represent the gathered data used to develop and parameterise the model.</label></li>
 </ul>
 </div>
 </div>
 </section>
-<section id="qualitative-model-checking" class="level3" data-number="4.4.2">
-<h3 data-number="4.4.2" class="anchored" data-anchor-id="qualitative-model-checking"><span class="header-section-number">4.4.2</span> Qualitative Model Checking</h3>
+<section id="qualitative-model-checking" class="level3" data-number="4.3.2">
+<h3 data-number="4.3.2" class="anchored" data-anchor-id="qualitative-model-checking"><span class="header-section-number">4.3.2</span> Qualitative Model Checking</h3>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1139,20 +1175,20 @@ Preregistration Item
 </div>
 <div class="callout-body-container callout-body">
 <ul class="task-list">
-<li><input type="checkbox">Briefly explain how you will qualitatively check the model, and whether and how you will include users and clients in the process.</li>
+<li><label><input type="checkbox">Briefly explain how you will qualitatively check the model, and whether and how you will include users and clients in the process.</label></li>
 </ul>
 </div>
 </div>
 </section>
-<section id="assumption-violation-checks" class="level3" data-number="4.4.3">
-<h3 data-number="4.4.3" class="anchored" data-anchor-id="assumption-violation-checks"><span class="header-section-number">4.4.3</span> Assumption Violation Checks</h3>
+<section id="assumption-violation-checks" class="level3" data-number="4.3.3">
+<h3 data-number="4.3.3" class="anchored" data-anchor-id="assumption-violation-checks"><span class="header-section-number">4.3.3</span> Assumption Violation Checks</h3>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Caution
+Preregistration Item
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1210,9 +1246,9 @@ Preregistration Item
 </div>
 <div class="callout-body-container callout-body">
 <ul class="task-list">
-<li><input type="checkbox">State whether you will corroborate the model outputs on external data, and document any independent validation data in step.</li>
-<li><input type="checkbox">It is preferable that any independent data used for model evaluation remains unknown to modellers during the process of model building <span class="citation" data-cites="Dwork2015">(<a href="#ref-Dwork2015" role="doc-biblioref">Dwork et al. 2015</a>)</span>, describe the relationship modellers have to model validation data, e.g.&nbsp;will independent datasets be known to any modeller or analyst involved in the model building process?</li>
-<li><input type="checkbox">If unable to evaluate the model outputs against independent data, explain why and explain what steps you will take to interrogate the model.</li>
+<li><label><input type="checkbox">State whether you will corroborate the model outputs on external data, and document any independent validation data in step.</label></li>
+<li><label><input type="checkbox">It is preferable that any independent data used for model evaluation remains unknown to modellers during the process of model building <span class="citation" data-cites="Dwork2015">(<a href="#ref-Dwork2015" role="doc-biblioref">Dwork et al. 2015</a>)</span>, describe the relationship modellers have to model validation data, e.g.&nbsp;will independent datasets be known to any modeller or analyst involved in the model building process?</label></li>
+<li><label><input type="checkbox">If unable to evaluate the model outputs against independent data, explain why and explain what steps you will take to interrogate the model.</label></li>
 </ul>
 </div>
 </div>
@@ -1243,9 +1279,9 @@ Preregistration Item
 </div>
 <div class="callout-body-container callout-body">
 <ul class="task-list">
-<li><input type="checkbox">Specify what performance measures you will use to evaluate the model and briefly explain how each test relates to different desired properties of a model’s performance.</li>
-<li><input type="checkbox">Spatial, temporal and environmental pattern of errors and variance can change the interpretation of model predictions and conservation decisions <span class="citation" data-cites="Araujo2019">(<a href="#ref-Araujo2019" role="doc-biblioref">Araújo et al. 2019</a>)</span>, where relevant and possible, describe how you will characterise and report the spatial, temporal and environmental pattern of errors and variance.</li>
-<li><input type="checkbox">If comparing alternative models, specify what measures of model comparison or out-of-sample performance metrics will you use to find support for alternative models or else to optimise predictive ability. State what numerical threshold or qualities you will use for each of these metrics.</li>
+<li><label><input type="checkbox">Specify what performance measures you will use to evaluate the model and briefly explain how each test relates to different desired properties of a model’s performance.</label></li>
+<li><label><input type="checkbox">Spatial, temporal and environmental pattern of errors and variance can change the interpretation of model predictions and conservation decisions <span class="citation" data-cites="Araujo2019">(<a href="#ref-Araujo2019" role="doc-biblioref">Araújo et al. 2019</a>)</span>, where relevant and possible, describe how you will characterise and report the spatial, temporal and environmental pattern of errors and variance.</label></li>
+<li><label><input type="checkbox">If comparing alternative models, specify what measures of model comparison or out-of-sample performance metrics will you use to find support for alternative models or else to optimise predictive ability. State what numerical threshold or qualities you will use for each of these metrics.</label></li>
 </ul>
 </div>
 </div>
@@ -1294,10 +1330,10 @@ Preregistration Item
 </div>
 <div class="callout-body-container callout-body">
 <ul class="task-list">
-<li><p><input type="checkbox">Please describe how you will characterise model and data uncertainties, e.g.&nbsp;propagating known uncertainties through the model, investigating the effect of different model scenarios with different parameters and modelling technique combinations <span class="citation" data-cites="Araujo2019">(<a href="#ref-Araujo2019" role="doc-biblioref">Araújo et al. 2019</a>)</span>, or empirically constructing model distributions from model output data points, and extracting summary statistics, including the mean, median, variance, and constructing confidence intervals <span class="citation" data-cites="Saltelli2019">(<a href="#ref-Saltelli2019" role="doc-biblioref">Saltelli et al. 2019</a>)</span>.</p></li>
-<li><p><input type="checkbox">Relate your choice of analysis to the context and purposes of the model described in the problem formulation phase. For instance ‚discrepancies between model output and observed output may be important for forecasting models, where cost, benefit, an risk over a substantial period must be gauged, but much less critical for decision-making or management models where the user may be satisfied with knowing that the predicted ranking order of impacts of alternative scenarios or management options is likely to be correct, with only a rough indication of their sizes” <span class="citation" data-cites="Jakeman:2006ii">(<a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman, Letcher, and Norton 2006</a>)</span>.</p></li>
-<li><p><input type="checkbox">Briefly describe how you will summarise the results of these in silico experiments with graphical, tabular, or other devices, such as summary statistics.</p></li>
-<li><p><input type="checkbox">If the chosen modelling approach is able to explicitly articulate uncertainty due to data, measurements or baseline conditions, such as by providing estimates of uncertainty (typically in the form of probabilistic parameter covariance, <span class="citation" data-cites="Jakeman:2006ii">(<a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman, Letcher, and Norton 2006</a>)</span>), specify which measure of uncertainty you will use.</p></li>
+<li><p><label><input type="checkbox">Please describe how you will characterise model and data uncertainties, e.g.&nbsp;propagating known uncertainties through the model, investigating the effect of different model scenarios with different parameters and modelling technique combinations <span class="citation" data-cites="Araujo2019">(<a href="#ref-Araujo2019" role="doc-biblioref">Araújo et al. 2019</a>)</span>, or empirically constructing model distributions from model output data points, and extracting summary statistics, including the mean, median, variance, and constructing confidence intervals <span class="citation" data-cites="Saltelli2019">(<a href="#ref-Saltelli2019" role="doc-biblioref">Saltelli et al. 2019</a>)</span>.</label></p></li>
+<li><p><label><input type="checkbox">Relate your choice of analysis to the context and purposes of the model described in the problem formulation phase. For instance ‚discrepancies between model output and observed output may be important for forecasting models, where cost, benefit, an risk over a substantial period must be gauged, but much less critical for decision-making or management models where the user may be satisfied with knowing that the predicted ranking order of impacts of alternative scenarios or management options is likely to be correct, with only a rough indication of their sizes” <span class="citation" data-cites="Jakeman:2006ii">(<a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman, Letcher, and Norton 2006</a>)</span>.</label></p></li>
+<li><p><label><input type="checkbox">Briefly describe how you will summarise the results of these in silico experiments with graphical, tabular, or other devices, such as summary statistics.</label></p></li>
+<li><p><label><input type="checkbox">If the chosen modelling approach is able to explicitly articulate uncertainty due to data, measurements or baseline conditions, such as by providing estimates of uncertainty (typically in the form of probabilistic parameter covariance, <span class="citation" data-cites="Jakeman:2006ii">(<a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman, Letcher, and Norton 2006</a>)</span>), specify which measure of uncertainty you will use.</label></p></li>
 </ul>
 </div>
 </div>
@@ -1328,9 +1364,9 @@ Preregistration Item
 </div>
 <div class="callout-body-container callout-body">
 <ul class="task-list">
-<li><p><input type="checkbox">Describe the sensitivity analysis approach you will take: deterministic sensitivity, stochastic sensitivity (variability in the model), or scenario sensitivity (effect of changes based on scenarios).</p></li>
-<li><p><input type="checkbox">Describe any sensitivity analyses you will conduct by specifying which parameters will be held constant, which will be varied, and the range and intervals of values over which those parameters will be varied.</p></li>
-<li><p><input type="checkbox">State the primary objective of each sensitivity analysis, for example, to identify which input variables contribute the most to model uncertainty so that these variables can be targeted for further data collection, or alternatively to identify which variables or factors contribute little to overall model outputs, and so can be ‘dropped’ from future iterations of the model <span class="citation" data-cites="Saltelli2019">(<a href="#ref-Saltelli2019" role="doc-biblioref">Saltelli et al. 2019</a>)</span>.</p></li>
+<li><p><label><input type="checkbox">Describe the sensitivity analysis approach you will take: deterministic sensitivity, stochastic sensitivity (variability in the model), or scenario sensitivity (effect of changes based on scenarios).</label></p></li>
+<li><p><label><input type="checkbox">Describe any sensitivity analyses you will conduct by specifying which parameters will be held constant, which will be varied, and the range and intervals of values over which those parameters will be varied.</label></p></li>
+<li><p><label><input type="checkbox">State the primary objective of each sensitivity analysis, for example, to identify which input variables contribute the most to model uncertainty so that these variables can be targeted for further data collection, or alternatively to identify which variables or factors contribute little to overall model outputs, and so can be ‘dropped’ from future iterations of the model <span class="citation" data-cites="Saltelli2019">(<a href="#ref-Saltelli2019" role="doc-biblioref">Saltelli et al. 2019</a>)</span>.</label></p></li>
 </ul>
 </div>
 </div>
@@ -1348,10 +1384,10 @@ Preregistration Item
 </div>
 <div class="callout-body-container callout-body">
 <ul class="task-list">
-<li><p><input type="checkbox">Specify any input conditions and relevant parameter values for initial environmental conditions and decision-variables under each scenario specified in section 1.</p></li>
-<li><p><input type="checkbox">Describe any other relevant technical details of model application, such as methods for how you will implement any simulations or model projections.</p></li>
-<li><p><input type="checkbox">What raw and transformed model outputs will you extract from the model simulations or projections, and how will you map, plot, or otherwise display and synthesise the results of scenario and model analyses.</p></li>
-<li><p><input type="checkbox">Explain how you will analyse the outputs to answer your analytical objectives. For instance, describe any trade-off or robustness analyses you will undertake to help evaluate and choose between different alternatives in consultation with experts or decision-makers.</p></li>
+<li><p><label><input type="checkbox">Specify any input conditions and relevant parameter values for initial environmental conditions and decision-variables under each scenario specified in section 1.</label></p></li>
+<li><p><label><input type="checkbox">Describe any other relevant technical details of model application, such as methods for how you will implement any simulations or model projections.</label></p></li>
+<li><p><label><input type="checkbox">What raw and transformed model outputs will you extract from the model simulations or projections, and how will you map, plot, or otherwise display and synthesise the results of scenario and model analyses.</label></p></li>
+<li><p><label><input type="checkbox">Explain how you will analyse the outputs to answer your analytical objectives. For instance, describe any trade-off or robustness analyses you will undertake to help evaluate and choose between different alternatives in consultation with experts or decision-makers.</label></p></li>
 </ul>
 </div>
 </div>
@@ -1369,7 +1405,7 @@ Preregistration Item
 </div>
 <div class="callout-body-container callout-body">
 <ul class="task-list">
-<li><input type="checkbox">Describe any other simulation experiments, robustness analyses or other analyses you will perform on the model, including any metrics and their criteria / thresholds for interpreting the results of the analysis.</li>
+<li><label><input type="checkbox">Describe any other simulation experiments, robustness analyses or other analyses you will perform on the model, including any metrics and their criteria / thresholds for interpreting the results of the analysis.</label></li>
 </ul>
 </div>
 </div>
@@ -1383,7 +1419,7 @@ Preregistration Item
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-Araujo2019" class="csl-entry" role="listitem">
 Araújo, MB, RP Anderson, A Márcia Barbosa, CM Beale, CF Dormann, R Early, RA Garcia, et al. 2019. <span>“Standards for Distribution Models in Biodiversity Assessments.”</span> <em>Sci Adv</em> 5 (1): eaat4858.
 </div>
@@ -1527,10 +1563,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1540,8 +1575,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1554,6 +1598,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1597,6 +1760,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1622,6 +1786,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1687,12 +1877,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-left">
       &nbsp;
     </div>   
-    <div class="nav-footer-center">Copyright 2023, Elliot Gould</div>
+    <div class="nav-footer-center">
+<p>Copyright 2023, Elliot Gould</p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/egouldo/EcoConsPreReg/edit/master/preregistration_modelling.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/egouldo/EcoConsPreReg/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
   </div>
 </footer>
+
 
 
 
