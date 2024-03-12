@@ -86,6 +86,8 @@ How will the model be analysed, what analytical questions will the model be used
 ### Logistical Constraints
 
 ::: callout-caution
+## Preregistration Item
+
 -   [ ] What degree of flexibility is required from the model? Might the model need to be quickly reconfigured to explore new scenarios or problems proposed by clients / managers / model-users?
 -   [ ] Are there any limitations on model development analysis and flexibility, such as time or budget constraints, for example, does a model need to be deployed rapidly?
     -   [ ] When must the model be completed by, e.g. to help make a decision?
@@ -322,7 +324,7 @@ Modelling approaches can be described as occurring on a spectrum from correlativ
 All modelling approaches require the selection of model features, which conform with the conceptual model and data specified in previous steps [@Jakeman:2006ii]. The choice of model are determined in conjunction with features are selected. Model features include elements such as the functional form of interactions, data structures, measures used to specify links, any bins or discretisation of continuous variables. It is usually difficult to change fundamental features of a model beyond an early stage of model development, so careful thought and planning here is useful to the modeller [@Jakeman:2006ii]. However, if changes to these fundamental aspects of the model do need to change, document how and why these choices were made, including any results used to support any changes in the model.
 :::
 
-### Explain how you will operationalise response and predictor variables, and covariates
+### Operationalising Model Variables
 
 ::: callout-caution
 ## Preregistration Item
@@ -433,6 +435,10 @@ This section pertains to any data calibration, validation or testing schemes tha
 
 The following items pertain to properties of the *datasets* used for calibration (training), validation, and testing.
 
+:::
+
+::: callout-caution
+
 ## Preregistration Item
 
 -   If partitioning data for cross-validation or similar approach:
@@ -496,6 +502,8 @@ This step is largely informal and case-specific, but requires‚ 'face validatio
 ### Assumption Violation Checks
 
 ::: callout-caution
+## Preregistration Item
+
 The consequences of assumption violations on the interpretation of results should be assessed [@Araujo2019].
 
 -   Explain how you will demonstrate robustness to model assumptions and check for violations of model assumptions.
