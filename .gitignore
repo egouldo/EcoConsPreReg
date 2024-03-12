@@ -3,5 +3,6 @@
 .RData
 .Ruserdata
 *.docx
-
 /.quarto/
+README.html
+README_files
