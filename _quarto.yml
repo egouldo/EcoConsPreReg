@@ -4,6 +4,9 @@ project:
   
 
 website:
+  repo-url: https://github.com/egouldo/EcoConsPreReg/
+  repo-branch: master
+  repo-actions: [edit, issue]
   reader-mode: true
   page-footer: "Copyright 2023, Elliot Gould"
   back-to-top-navigation: true
@@ -22,6 +25,12 @@ website:
       - text: "Preregistration for Modelling"
         file: preregistration_modelling.qmd
       - about.qmd
+      - icon: github
+        menu:
+          - text: Source Code
+            url: https://github.com/egouldo/EcoConsPreReg
+          - text: Report a Bug
+            url:  https://github.com/egouldo/EcoConsPreReg/issues/new
   sidebar:
     - title: "Researcher Degrees of Freedom"
       contents:
