@@ -1,3 +1,4 @@
 ^\.github/workflows$
 ^LICENSE\.md$
 ^CITATION\.cff$
+^\.github$
