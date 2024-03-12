@@ -1,5 +1,10 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
+# EcoConsPreReg 1.0.1.9002 (2024-03-12)
+
+-   update README with case study info/links
+-   ignore README.html and files/
+
 # EcoConsPreReg 1.0.1.9001 (2024-03-12)
 
 -   Add CITATION.cff file to force update Zenodo metadata
