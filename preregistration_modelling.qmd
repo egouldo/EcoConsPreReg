@@ -6,6 +6,7 @@ authors:
   - Elliot Gould
   - Hannah Fraser
   - Libby Rumpff
+  - Jian Yen
   - Megan Good
   - Chris Jones
 sidebar: false
@@ -434,11 +435,9 @@ This section pertains to any data calibration, validation or testing schemes tha
 ## Explanation & Rationale
 
 The following items pertain to properties of the *datasets* used for calibration (training), validation, and testing.
-
 :::
 
 ::: callout-caution
-
 ## Preregistration Item
 
 -   If partitioning data for cross-validation or similar approach:
