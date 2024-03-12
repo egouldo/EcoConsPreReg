@@ -2,11 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2023-10-16">
+<meta name="dcterms.date" content="2024-03-12">
 
 <title>Adaptive Preregistration for Model-Based Research - A primer on Adaptive Preregistration</title>
 <style>
@@ -25,6 +25,7 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -65,7 +66,13 @@ div.csl-indent {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -74,6 +81,7 @@ div.csl-indent {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -88,9 +96,9 @@ div.csl-indent {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Adaptive Preregistration for Model-Based Research</span>
     </a>
@@ -102,62 +110,79 @@ div.csl-indent {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html" rel="" target="">
- <span class="menu-text">Home</span></a>
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./RDF_QRP.html" rel="" target="">
- <span class="menu-text">Researcher Degrees of Freedom</span></a>
+    <a class="nav-link" href="./RDF_QRP.html"> 
+<span class="menu-text">Researcher Degrees of Freedom</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-adaptive-preregistration" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-adaptive-preregistration" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Adaptive Preregistration</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-adaptive-preregistration">    
         <li>
-    <a class="dropdown-item" href="./adaptive_preregistration_background.html" rel="" target="">
+    <a class="dropdown-item" href="./adaptive_preregistration_background.html">
  <span class="dropdown-text">A primer on <em>Adaptive Preregistration</em></span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./adaptive_preregistration_implementation.html" rel="" target="">
+    <a class="dropdown-item" href="./adaptive_preregistration_implementation.html">
  <span class="dropdown-text">Implementing Adaptive Preregistration with Git and Github</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./preregistration_modelling.html" rel="" target="">
- <span class="menu-text">Preregistration for Modelling</span></a>
+    <a class="nav-link" href="./preregistration_modelling.html"> 
+<span class="menu-text">Preregistration for Modelling</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
   </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bi-github" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-bi-github">    
+        <li>
+    <a class="dropdown-item" href="https://github.com/egouldo/EcoConsPreReg">
+ <span class="dropdown-text">Source Code</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://github.com/egouldo/EcoConsPreReg/issues/new">
+ <span class="dropdown-text">Report a Bug</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
   </div>
 </a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./adaptive_preregistration_background.html">A primer on <em>Adaptive Preregistration</em></a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./adaptive_preregistration_background.html">A primer on <em>Adaptive Preregistration</em></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
     </div>
   </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
@@ -175,7 +200,7 @@ div.csl-indent {
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -195,7 +220,7 @@ div.csl-indent {
   </ul></li>
   <li><a href="#implementing-adaptive-preregistration-with-git-and-github" id="toc-implementing-adaptive-preregistration-with-git-and-github" class="nav-link" data-scroll-target="#implementing-adaptive-preregistration-with-git-and-github">Implementing <em>Adaptive Preregistration</em> with git and GitHub</a></li>
   </ul>
-</nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/egouldo/EcoConsPreReg/edit/master/adaptive_preregistration_background.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/egouldo/EcoConsPreReg/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content">
@@ -213,7 +238,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 16, 2023</p>
+      <p class="date">March 12, 2024</p>
     </div>
   </div>
   
@@ -221,22 +246,28 @@ div.csl-indent {
   </div>
   
 
+
 </header>
+
 
 <section id="background-motivation" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="background-motivation">Background &amp; Motivation</h2>
 <div class="cell page-columns page-full">
-<div class="cell-output-display column-body">
-<div id="fig-traditional-prereg" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="adaptive_preregistration_background_files/figure-html/fig-traditional-prereg-1.png" width="700" class="figure-img"></p>
-<figcaption class="figure-caption">Figure&nbsp;1: Conventional preregistration process for registered reports, as illustrated by <span class="citation" data-cites="Pu2019">(<a href="#ref-Pu2019" role="doc-biblioref">Pu et al. 2019</a>)</span>.</figcaption>
+<div class="cell-output-display page-columns page-full">
+<div id="fig-traditional-prereg" class="quarto-figure quarto-figure-center quarto-float anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-traditional-prereg-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="page-columns page-full">
+<img src="adaptive_preregistration_background_files/figure-html/fig-traditional-prereg-1.png" width="700" class="figure-img column-body">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-traditional-prereg-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Conventional preregistration process for registered reports, as illustrated by <span class="citation" data-cites="Pu2019">(<a href="#ref-Pu2019" role="doc-biblioref">Pu et al. 2019</a>)</span>.
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p>The iterative nature of model development is a significant barrier to adopting preregistration for model-based research. Translating the preregistration process to a modelling research context is challenging because the iterative nature of model development conflicts with the inner logic of existing preregistration templates that presume a linear research workflow. The process of preregistration as it is currently implemented is tailored towards the hypothetico-deductive model of the scientific method. As such, the process of preregistration is completely distinct from, and precedes the implementation of the analysis plan laid out in the preregistration – analytic decisions are completely independent from the data.</p>
-<p>In fact, preregistration has been defined as “the action of confirming an unalterable version of one’s research plan prior to collecting data” <span class="citation" data-cites="Pu2019">(<a href="#ref-Pu2019" role="doc-biblioref">Pu et al. 2019</a>)</span> or prior to analysing the data <span class="citation" data-cites="Mertens2019">(<a href="#ref-Mertens2019" role="doc-biblioref">Mertens and Krypotos 2019</a>)</span>. In this process, researcher sequentially shifts from ideation, to study/analysis design and preregistration, to collecting and analysing the data, writing the report or manuscript, to documenting the research and publishing (<a href="#fig-traditional-prereg">Figure&nbsp;1</a>). The iterative nature of model development, however, inherently precludes this model of preregistration from being applied to model-based research in ecology and conservation.</p>
+<p>In fact, preregistration has been defined as “the action of confirming an unalterable version of one’s research plan prior to collecting data” <span class="citation" data-cites="Pu2019">(<a href="#ref-Pu2019" role="doc-biblioref">Pu et al. 2019</a>)</span> or prior to analysing the data <span class="citation" data-cites="Mertens2019">(<a href="#ref-Mertens2019" role="doc-biblioref">Mertens and Krypotos 2019</a>)</span>. In this process, researcher sequentially shifts from ideation, to study/analysis design and preregistration, to collecting and analysing the data, writing the report or manuscript, to documenting the research and publishing (<a href="#fig-traditional-prereg" class="quarto-xref">Figure&nbsp;1</a>). The iterative nature of model development, however, inherently precludes this model of preregistration from being applied to model-based research in ecology and conservation.</p>
 </section>
 <section id="iterative-cycle-of-model-development-and-preregistration" class="level2">
 <h2 class="anchored" data-anchor-id="iterative-cycle-of-model-development-and-preregistration">Iterative Cycle of Model Development and Preregistration</h2>
@@ -247,7 +278,7 @@ div.csl-indent {
 </section>
 <section id="adaptive-preregistration" class="level2">
 <h2 class="anchored" data-anchor-id="adaptive-preregistration">Adaptive Preregistration</h2>
-<p>In order to address the disjuncture between the iterative nature of model development, and the single-use, deterministic preregistration template format, we take an ‘expanded view of preregistration’, that fits with the concept of ‘adaptive preregistration’ proposed by Srivastava <span class="citation" data-cites="Srivastava2018">(<a href="#ref-Srivastava2018" role="doc-biblioref">2018</a>)</span>. The modeller proceeds through the model development process, they will switch they will shift from ideation, preregistration, execution of the analysis and back to ideation and preregistration again, implementing implementing parts of the analysis plan that were specified in the previous preregistration step, and letting the outcomes in that analysis step inform the specification of the next analysis ( <a href="#fig-adaptive-preregistration">Figure&nbsp;4</a>).</p>
+<p>In order to address the disjuncture between the iterative nature of model development, and the single-use, deterministic preregistration template format, we take an ‘expanded view of preregistration’, that fits with the concept of ‘adaptive preregistration’ proposed by Srivastava <span class="citation" data-cites="Srivastava2018">(<a href="#ref-Srivastava2018" role="doc-biblioref">2018</a>)</span>. The modeller proceeds through the model development process, they will switch they will shift from ideation, preregistration, execution of the analysis and back to ideation and preregistration again, implementing implementing parts of the analysis plan that were specified in the previous preregistration step, and letting the outcomes in that analysis step inform the specification of the next analysis ( <a href="#fig-adaptive-preregistration" class="quarto-xref">Figure&nbsp;4</a>).</p>
 <p>This view of preregistration breaks with the current model of preregistration, wherein the author writes a single deterministic preregistration containing a rule for every decision, and sequentially shifts from ideation, preregistration to execution of the plan. Two features define adaptive preregistration:</p>
 <ol type="1">
 <li>It contains ‘plans to deploy flexible strategies’ <span class="citation" data-cites="Srivastava2018">(<a href="#ref-Srivastava2018" role="doc-biblioref">Srivastava 2018</a>)</span> wherein the author can supply heuristic consisting of multiple different analysis or modelling strategies whose execution depends on the outcome of previous decision-points or analyses, for example, decision-trees could be preregistered prior to analysing the data <span class="citation" data-cites="Baldwin2022a">(<a href="#ref-Baldwin2022a" role="doc-biblioref">Baldwin et al. 2022</a>)</span>.</li>
@@ -263,10 +294,14 @@ div.csl-indent {
 </ul>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-registering-flexibility" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="adaptive_preregistration_background_files/figure-html/fig-registering-flexibility-1.png" class="img-fluid figure-img" width="2655"></p>
-<figcaption class="figure-caption">Figure&nbsp;2: A general heuristic in the form of a decision-tree for registering flexibile analyses.</figcaption>
+<div id="fig-registering-flexibility" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-registering-flexibility-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="adaptive_preregistration_background_files/figure-html/fig-registering-flexibility-1.png" class="img-fluid figure-img" width="2655">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-registering-flexibility-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: A general heuristic in the form of a decision-tree for registering flexibile analyses.
+</figcaption>
 </figure>
 </div>
 </div>
@@ -277,10 +312,14 @@ div.csl-indent {
 <p>The modeller follows an iterative process of preregistration. As they proceed through the model development process, they can shift from ideation, preregistration and execution of the analysis plan, to preregistration again. Depending on observed outcomes of the pre-specified decision-trees or registered flexible heuristics, interim preregistrations are created at multiple points in the model development process, each time there is an addition or amendment to the analysis plan.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-interim-preregistrations" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="adaptive_preregistration_background_files/figure-html/fig-interim-preregistrations-1.png" class="img-fluid figure-img" width="694"></p>
-<figcaption class="figure-caption">Figure&nbsp;3: Adaptive preregistration can cycle through the specification, execution and ideation phases multiple times in adaptive preregistration, with interim versions of the preregistration being generated at each preregistration point.</figcaption>
+<div id="fig-interim-preregistrations" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-interim-preregistrations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="adaptive_preregistration_background_files/figure-html/fig-interim-preregistrations-1.png" class="img-fluid figure-img" width="694">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-interim-preregistrations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Adaptive preregistration can cycle through the specification, execution and ideation phases multiple times in adaptive preregistration, with interim versions of the preregistration being generated at each preregistration point.
+</figcaption>
 </figure>
 </div>
 </div>
@@ -297,13 +336,17 @@ div.csl-indent {
 <section id="implementing-adaptive-preregistration-with-git-and-github" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="implementing-adaptive-preregistration-with-git-and-github">Implementing <em>Adaptive Preregistration</em> with git and GitHub</h2>
 <p>Given the iterative nature of adaptive preregistration then, the current convention of the single-use, deterministic and static text-based document format for preregistration is inadequate. Interim versions of a preregistration must be time-stamped and ideally version-controlled, such that it is clear not just that two or more versions differ from each other, and in what order they were created, but so that it is explicitly clear in how and why they differ. To facilitate preregistration checking of flexible modelling and analysis strategies, we must link the results of both final and preliminary analyses back to the specified strategy: the link between a particular triggered analysis decision, and the analysis outcome that triggered the decision must be explicit. Additionally, if the results of some preliminary analyses cause revisions to the model itself or a different modelling procedure or approach to be selected than was originally or previously planned, then the trigger for this decision must be explicitly linked to the next version of the preregistration.</p>
-<p>We propose leveraging the features of <a href="https://git-scm.com">git</a> and <a href="www.github.com">GitHub</a> to facilitate implementation both adaptive preregistration in a transparently documented manner (<a href="#fig-adaptive-preregistration">Figure&nbsp;4</a>), and provide a <a href="./adaptive_preregistration_implementation.html">step-by-step guide</a>.</p>
+<p>We propose leveraging the features of <a href="https://git-scm.com">git</a> and <a href="www.github.com">GitHub</a> to facilitate implementation both adaptive preregistration in a transparently documented manner (<a href="#fig-adaptive-preregistration" class="quarto-xref">Figure&nbsp;4</a>), and provide a <a href="./adaptive_preregistration_implementation.html">step-by-step guide</a>.</p>
 <div class="cell page-columns page-full">
-<div class="cell-output-display column-screen">
-<div id="fig-adaptive-preregistration" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="adaptive_preregistration_background_files/figure-html/fig-adaptive-preregistration-1.png" class="img-fluid figure-img" width="2648"></p>
-<figcaption class="figure-caption">Figure&nbsp;4: Adaptive Preregistration for model-based research using GitHub.</figcaption>
+<div class="cell-output-display page-columns page-full">
+<div id="fig-adaptive-preregistration" class="quarto-figure quarto-figure-center quarto-float anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-adaptive-preregistration-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="page-columns page-full">
+<img src="adaptive_preregistration_background_files/figure-html/fig-adaptive-preregistration-1.png" class="img-fluid figure-img column-screen" width="2648">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-adaptive-preregistration-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Adaptive Preregistration for model-based research using GitHub.
+</figcaption>
 </figure>
 </div>
 </div>
@@ -313,7 +356,7 @@ div.csl-indent {
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-Baldwin2022a" class="csl-entry" role="listitem">
 Baldwin, J. R., J. B. Pingault, T. Schoeler, H. M. Sallis, and M. R. Munafò. 2022. <span>“Protecting Against Researcher Bias in Secondary Data Analysis: Challenges and Potential Solutions.”</span> <em>Eur J Epidemiol</em> 37 (1): 1–10. <a href="https://doi.org/10.1007/s10654-021-00839-0">https://doi.org/10.1007/s10654-021-00839-0</a>.
 </div>
@@ -415,10 +458,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -428,8 +470,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -442,6 +493,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -485,6 +655,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -510,6 +681,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -575,12 +772,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-left">
       &nbsp;
     </div>   
-    <div class="nav-footer-center">Copyright 2023, Elliot Gould</div>
+    <div class="nav-footer-center">
+<p>Copyright 2023, Elliot Gould</p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/egouldo/EcoConsPreReg/edit/master/adaptive_preregistration_background.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/egouldo/EcoConsPreReg/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
   </div>
 </footer>
+
 
 
 
