@@ -5,9 +5,9 @@ bibliography: data/references.bib
 
 ## Adaptive Preregistration using GitHub
 
-We propose leveraging both the version-control and the project management features of GitHub ([www.github.com](www.github.com)) as a tool for implementing adaptive preregistration.
-GitHub is a web-interface that utilises the version-control system, 'git', to store files, track changes, and enable collaboration on computer code [@braga2023].
-When a document is version-controlled using Git and GitHub, each version of a document can be time-stamped, and is assigned its own unique identifier, or commit-hash[^1] so that chronological records of changes to a collection of files, stored in a 'repository', are made transparent [@braga2023; @Bryan:2008en].
+We propose leveraging both the version-control and the project management features of GitHub ([www.github.com](www.github.com)) as a tool for implementing adaptive preregistration. GitHub is a web-interface that utilises the version-control system, 'git', to store files, track changes, and enable collaboration on computer code [@braga2023]. When a document is version-controlled using Git and GitHub, each version of a document can be time-stamped, and is assigned its own unique identifier, or commit-hash[^1] so that chronological records of changes to a collection of files, stored in a 'repository', are made transparent [@braga2023; @Bryan:2008en].
+
+[^1]: [https://docs.github.com/en/free-pro-team\@latest/github/getting-started-with-github/github-glossary#commit-id](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-glossary#commit-id){.uri}
 
 Why GitHub for Adaptive Preregistration?
 
@@ -29,18 +29,13 @@ GitHub also integrates several communication features, such as Github Issues, Gi
 magick::image_read(path = "_supp-mat/DiffView-PRT.png")
 ```
 
-The preregistration document should be saved within the project repository that contains the data and modelling and analysis code, such that any results from analyses that cause the analysis plan to change can be linked and referenced in the updated version of the plan -- thus facilitating the process of model checking.
-By providing a method for contrasting the actual analysis undertaken against the preregistered analysis, this provides a mechanism for allowing reviewers to properly evaluate the preregistration against the reported analysis.
-It thus provides a way of marking preregistered parts of a report from non-preregistered parts of the analysis.
+The preregistration document should be saved within the project repository that contains the data and modelling and analysis code, such that any results from analyses that cause the analysis plan to change can be linked and referenced in the updated version of the plan -- thus facilitating the process of model checking. By providing a method for contrasting the actual analysis undertaken against the preregistered analysis, this provides a mechanism for allowing reviewers to properly evaluate the preregistration against the reported analysis. It thus provides a way of marking preregistered parts of a report from non-preregistered parts of the analysis.
 
 ## How it works...
 
-GitHub is used to track amendments to the preregistration --- each time an additional template item is answered, or an alteration is made to the preregistration, the change should be *committed* to the repository.
-*Semantic versioning* is used to document each version of the preregistration.
-Semantic versioning[^2] is an open-source software engineering practice used to document and and communicate the development of software, in a way that allows others to depend on it [@Kitzes2018vn].
-We have created our own semantic versioning scheme to be used to specifically document the incremental version of the preregistration, in tandem with GitHub's tag and release feature, each interim preregistration is tagged and released with its semantic version number.
-All template items that can be completed should be completed before any data analysis or modelling proceeds.
-The preregistration should be completed until a) no further detail can be supplied or b) no additional template item can be answered until preliminary investigations or analyses are undertaken (Fig 3, steps 1 - 3).
+GitHub is used to track amendments to the preregistration --- each time an additional template item is answered, or an alteration is made to the preregistration, the change should be *committed* to the repository. *Semantic versioning* is used to document each version of the preregistration. Semantic versioning[^2] is an open-source software engineering practice used to document and and communicate the development of software, in a way that allows others to depend on it [@Kitzes2018vn]. We have created our own semantic versioning scheme to be used to specifically document the incremental version of the preregistration, in tandem with GitHub's tag and release feature, each interim preregistration is tagged and released with its semantic version number. All template items that can be completed should be completed before any data analysis or modelling proceeds. The preregistration should be completed until a) no further detail can be supplied or b) no additional template item can be answered until preliminary investigations or analyses are undertaken (Fig 3, steps 1 - 3).
+
+[^2]: The semantic version is a 3-part numeric identifier separated by points, e.g.: `0.0.1`, wherein the first number sequences a major version of the preregistration, the second number sequences a minor change, and the third number sequences small changes or patches, yielding: `MAJOR.MINOR.PATCH`. See <https://semver.org/> for further information. Further detail on how to use semantic versioning with adaptive preregistration is summarised in @tbl-preregistration-versioning.
 
 ```{r}
 #| label: fig-initial-prereg-zoom
@@ -62,11 +57,9 @@ magick::image_read(path = "_supp-mat/initial_prereg-closeup.png")
 magick::image_read(path = "_supp-mat/document-initial-prereg.png")
 ```
 
-Before shifting from planning to the execution of the interim preregistration, each complete response in the interim preregistration should have a corresponding GitHub issue[^3] created (Figure 3, step 3, 'Document').
-Relevant discussion between analysts about how to proceed with the intended analysis or interpreting preliminary results are tracked within an issue's thread.
-Each issue is automatically assigned a unique number by GitHub.
-Any code or analysis outputs, such as figures, tables or other files, should be committed and tagged with the issue number, so that all analysis addressing that task is tracked within the issue's thread (Fig 3, step 4, 'Do').
-The URL for the GitHub issue should then be added to the relevant preregistration item, the preregistration document should then be committed with the changes, and the version number of the preregistration updated in a new release.
+Before shifting from planning to the execution of the interim preregistration, each complete response in the interim preregistration should have a corresponding GitHub issue[^3] created (Figure 3, step 3, 'Document'). Relevant discussion between analysts about how to proceed with the intended analysis or interpreting preliminary results are tracked within an issue's thread. Each issue is automatically assigned a unique number by GitHub. Any code or analysis outputs, such as figures, tables or other files, should be committed and tagged with the issue number, so that all analysis addressing that task is tracked within the issue's thread (Fig 3, step 4, 'Do'). The URL for the GitHub issue should then be added to the relevant preregistration item, the preregistration document should then be committed with the changes, and the version number of the preregistration updated in a new release.
+
+[^3]: <https://guides.github.com/features/issues/>
 
 ### ... And back again.
 
@@ -80,14 +73,9 @@ The URL for the GitHub issue should then be added to the relevant preregistratio
 magick::image_read(path = "_supp-mat/when-plans-change.png")
 ```
 
-As the modelling proceeds, further detail on later phases of the analysis can be iteratively updated and preregistered.
-Where the results of model evaluation and analysis reveal that there are problems with the model, plans can be changed, and again the next phase can be preregistered.
-For example, if a researcher finds that assumptions are violated or other unexpected results occur that force a change to the planned analysis, the preregistration can be updated based on the findings of those analyses.
-When this occurs, the major version number of the preregistration document should be incremented (Fig 3 steps 5 - 6).
-Since the findings of the analyses are tracked within the relevant issue for that template item, and the issue is recorded in the preregistration itself, the trigger for the change in the plan is made explicitly clear.
+As the modelling proceeds, further detail on later phases of the analysis can be iteratively updated and preregistered. Where the results of model evaluation and analysis reveal that there are problems with the model, plans can be changed, and again the next phase can be preregistered. For example, if a researcher finds that assumptions are violated or other unexpected results occur that force a change to the planned analysis, the preregistration can be updated based on the findings of those analyses. When this occurs, the major version number of the preregistration document should be incremented (Fig 3 steps 5 - 6). Since the findings of the analyses are tracked within the relevant issue for that template item, and the issue is recorded in the preregistration itself, the trigger for the change in the plan is made explicitly clear.
 
-For each altered or new preregistration item, the issue thread should either be updated, or a new issue created respectively (Fig 3, step 6).
-Those analyses are then either reconnected based on the revised plan or the new investigatory analyses are then conducted (Fig 3, step 7).
+For each altered or new preregistration item, the issue thread should either be updated, or a new issue created respectively (Fig 3, step 6). Those analyses are then either reconnected based on the revised plan or the new investigatory analyses are then conducted (Fig 3, step 7).
 
 This process continues until the preregistration is complete, and the researcher can continue to execute the plan as it has been fully described in the final version of the preregistration document (Fig 3, step 8 - 9).
 
@@ -114,7 +102,7 @@ When a researcher needs to conduct preliminary analyses or check parts of the da
 2.  Commit changes
 
 -   If you are finished, or ready to save your changes by 'committing' them. There is a box called "commit changes" at the top right of the window, a pop-up window will appear, enter in the commit message box the following:
-    -    `Initial Preregistration #IssueNumber`. Tag the Preregistration GitHub issue number in the commit message (For this repository, it's `#17`).
+    -   `Initial Preregistration #IssueNumber`. Tag the Preregistration GitHub issue number in the commit message (For this repository, it's `#17`).
 -   Fill out the additional description box briefly describing the changes you just made
 -   Ensure that the radio button for creating a new branch is selected, an auto-generated branch name will appear, e.g. `egould-patch-1`.
 -   Click "Propose Changes" to start a [pull request](https://docs.github.com/en/get-started/quickstart/github-flow):
@@ -125,9 +113,7 @@ When a researcher needs to conduct preliminary analyses or check parts of the da
 
 ### Moving from general to specific: Incrementally updating the preregistration
 
-You will likely find that some items on the template cannot be answered just yet.
-One reason being that the level of detail required to adequately answer the template item just isn't clear yet, and more thought and time is needed, or you need to be further along the modelling process to be able to adequately answer the question.
-Another reason is that downstream decisions might depend on some preliminary investigations of the data -- for example, you might need to explore the shape of a measured variable before you can properly specify the full model.
+You will likely find that some items on the template cannot be answered just yet. One reason being that the level of detail required to adequately answer the template item just isn't clear yet, and more thought and time is needed, or you need to be further along the modelling process to be able to adequately answer the question. Another reason is that downstream decisions might depend on some preliminary investigations of the data -- for example, you might need to explore the shape of a measured variable before you can properly specify the full model.
 
 In the latter situation, where possible, you can preregister your preliminary analysis: describing what the preliminary analysis entails, providing a short and relevant list of plausible outcomes, and describing for each of those possible outcomes how the dependent or down-stream decision-point will change depending on the outcome.
 
@@ -147,15 +133,11 @@ Before you begin to do or start anything you've planned within your preregistrat
 2.  Click on the tiny box with the ellipsis, and a pop-up dialogue box will appear with 4 options: `Copy lines`, `Copy permalink`, `View git blame`, `References in new issue`. Select the last option `Reference in new issue.` ![Screen Shot 2020-05-13 at 1 06 58 pm](figures/reference-in-new-issue.png)
 3.  This will open up a new window with a new GitHub Issue for you to complete. Note that part of the issue description has already been filled out for you, this is a reference to the lines you just highlighted: ![](figures/new-issue.png) Which is cool, because if you open the `Preview` tab to view the preview of your issue, it will look like this: ![](figures/preview-new-issue.png)
 
-Add any further information or technical details about going forward and working on this task, as necessary.
-Submit the issue to save.
-Any work, and subsequent commits on this topic should be tagged with the issue number.
-We now have a mechanism for linking your actual analysis and actions to the planned analysis in the preregistration document.
+Add any further information or technical details about going forward and working on this task, as necessary. Submit the issue to save. Any work, and subsequent commits on this topic should be tagged with the issue number. We now have a mechanism for linking your actual analysis and actions to the planned analysis in the preregistration document.
 
 ### Dealing with unexpected outcomes, and changing plans: Shifting back to planning from doing
 
-Sometimes assumptions are violated, or there are other unexpected outcomes of preliminary analyses, and you will need to change plans.
-How do we deal with this?
+Sometimes assumptions are violated, or there are other unexpected outcomes of preliminary analyses, and you will need to change plans. How do we deal with this?
 
 -   Add the URL to the relevant GitHub issue under the corresponding Preregistration Item.
 -   Add any the URL for any linked commits to the Preregistration Item.
@@ -167,11 +149,11 @@ How do we deal with this?
 
 We will leverage [GitHub's tagging and release feature](https://help.github.com/en/github/administering-a-repository/releasing-projects-on-github) in conjunction with [Semantic Versioning]((https://semver.org/)) to document and track changes to the preregistration document.
 
-GitHub releases mark software iterations that you can release and deploy[^4].
-Within the context of adaptive preregistration, we can use releases to mark interim versions of the preregistration, as well as to take a snapshot of the state of the entire repository at that moment in time.
+GitHub releases mark software iterations that you can release and deploy[^4]. Within the context of adaptive preregistration, we can use releases to mark interim versions of the preregistration, as well as to take a snapshot of the state of the entire repository at that moment in time.
 
-A summary of the types of preregistration changes, and the corresponding required version and GitHub features are presented in @tbl-preregistration-versioning.
-Note that anything up until the complete preregistration should be additionally tagged as a 'pre-release' to communicate that the initial preregistration is not yet complete.
+[^4]: Instructions for creating releases are here: <https://help.github.com/en/github/administering-a-repository/managing-releases-in-a-repository>
+
+A summary of the types of preregistration changes, and the corresponding required version and GitHub features are presented in @tbl-preregistration-versioning. Note that anything up until the complete preregistration should be additionally tagged as a 'pre-release' to communicate that the initial preregistration is not yet complete.
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+
 | Preregistration Change or Action                                                                                                                                                                                                                                                                                       | GitHub Mechanism                                                                                                                                                                                                                                                         | Semantic Versioning                                                                                      |
@@ -196,23 +178,11 @@ Note that anything up until the complete preregistration should be additionally 
 
 ### Using the [`fledge::`](https://fledge.cynkra.com) R package for semantic versioning and to document preregistration changes
 
-The package `fledge::` can be used right from the R console to bump the version number, make releases, and auto catalogue a chronological history of changes recorded a `NEWS.md` file that is updated and published with every release.
-A detailed guide to using `fledge::` can be found here <https://fledge.cynkra.com/articles/fledge.html>.
+The package `fledge::` can be used right from the R console to bump the version number, make releases, and auto catalogue a chronological history of changes recorded a `NEWS.md` file that is updated and published with every release. A detailed guide to using `fledge::` can be found here <https://fledge.cynkra.com/articles/fledge.html>.
 
-This package is not a mandatory component of the process, however can be a useful tool for implementing semantic versioning, tagging and releasing.
-All of these actions can be implemented in the GitHub browser with a point and click interface.
+This package is not a mandatory component of the process, however can be a useful tool for implementing semantic versioning, tagging and releasing. All of these actions can be implemented in the GitHub browser with a point and click interface.
 
 # References
 
 ::: {#refs}
 :::
-
-[^1]: [https://docs.github.com/en/free-pro-team\@latest/github/getting-started-with-github/github-glossary#commit-id](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-glossary#commit-id){.uri}
-
-[^2]: The semantic version is a 3-part numeric identifier separated by points, e.g.: `0.0.1`, wherein the first number sequences a major version of the preregistration, the second number sequences a minor change, and the third number sequences small changes or patches, yielding: `MAJOR.MINOR.PATCH`.
-    See <https://semver.org/> for further information.
-    Further detail on how to use semantic versioning with adaptive preregistration is summarised in @tbl-preregistration-versioning.
-
-[^3]: <https://guides.github.com/features/issues/>
-
-[^4]: Instructions for creating releases are here: <https://help.github.com/en/github/administering-a-repository/managing-releases-in-a-repository>
