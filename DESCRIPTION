@@ -1,5 +1,5 @@
 Package: EcoConsPreReg
-Title: What the Package Does (One Line, Title Case)
+Title: Adaptive Preregistration for Model-Based Research in Ecology and Conservation
 Version: 1.0.0.9000
 Authors@R: 
     person("Elliot", "Gould", , "elliot.gould@unimelb.edu.au", role = c("aut", "cre"),
