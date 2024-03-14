@@ -1,9 +1,13 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
+# EcoConsPreReg 1.0.1.9004 (2024-03-14)
+
+- Add elsevier template and paper metadata
+
+
 # EcoConsPreReg 1.0.1.9003 (2024-03-14)
 
-- use cff github action
-
+-   use cff github action
 
 # EcoConsPreReg 1.0.1.9002 (2024-03-12)
 
