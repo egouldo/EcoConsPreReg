@@ -1,9 +1,15 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
+# EcoConsPreReg 1.0.2 (2024-03-27)
+
+-   update CITATION. Fix indentaiton and check that file is valid. Change title to 'guide', add keywords, zenodo link, and release date so citation may be generated. Add link to website. Add link to repo.
+    -   Guide to be cited as: "Gould E, Jones C, Yen J, Fraser H, Wootton H, Vivian L, GoodM, Duncan D, Rumpff L, Fidler F (2024). "EcoConsPreReg: AGuide to Adaptive Preregistration for Model-Based Research inEcology and Conservation. <https://github.com/egouldo/EcoConsPreReg>"
+-   fix rel filepath to references.bib
+-   remove empty line in -quarto.yaml
+
 # EcoConsPreReg 1.0.1.9004 (2024-03-14)
 
-- Add elsevier template and paper metadata
-
+-   Add elsevier template and paper metadata
 
 # EcoConsPreReg 1.0.1.9003 (2024-03-14)
 
