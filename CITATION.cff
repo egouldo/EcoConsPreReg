@@ -7,56 +7,63 @@ cff-version: 1.2.0
 message: 'To cite "EcoConsPreReg" in publications use:'
 type: software
 license: CC-BY-4.0
-title: 'EcoConsPreReg: Adaptive Preregistration for Model-Based Research in Ecology and Conservation'
-version: 1.0.1.9000
-abstract: This repository contains the source code and data for the EcoConsPreReg project website at https://egouldo.github.io/EcoConsPreReg/. For more details, see the repo README.
+title: 'EcoConsPreReg: A Guide to Adaptive Preregistration for Model-Based Research in Ecology and Conservation'
+version: 1.0.1.9003
+abstract: 'This repository contains the source code and data for the EcoConsPreReg project website at https://egouldo.github.io/EcoConsPreReg/. For more details, see the repo README.'
 authors:
-  - family-names: Gould
-    given-names: Elliot
-    email: elliot.gould@unimelb.edu.au
-    orcid: https://orcid.org/0000-0002-6585-538X
-  - family-names: Jones
-    given-names: Christopher, S.
-    email: chris.jones@delwp.vic.gov.au
-    orcid: https://orcid.org/0000-0003-2833-0194
-  - family-names: Yen
-    given-names: J.D.L.
-    email: jian.yen@delwp.vic.gov.au
-    orcid: https://orcid.org/0000-0001-7964-923X
+- family-names: Gould
+  given-names: Elliot
+  email: elliot.gould@unimelb.edu.au
+  orcid: https://orcid.org/0000-0002-6585-538X
+- family-names: Jones
+  given-names: Christopher, S.
+  email: chris.jones@delwp.vic.gov.au
+  orcid: https://orcid.org/0000-0003-2833-0194
+- family-names: Yen
+  given-names: J.D.L.
+  email: jian.yen@delwp.vic.gov.au
+  orcid: https://orcid.org/0000-0001-7964-923X
 - family-names: Fraser
-    given-names: Hannah, S.
-    email: jhannahsfraser@gmail.com
-    orcid: https://orcid.org/0000-0003-2443-4463
+  given-names: Hannah, S.
+  email: jhannahsfraser@gmail.com
+  orcid: https://orcid.org/0000-0003-2443-4463
 - family-names: Wootton
-    given-names: Henry
-    email: henry.wootton@delwp.vic.gov.au
-    orcid: https://orcid.org/0000-0001-6506-0248
-  - family-names: Vivian
-    given-names: Lyndsey
-    email: lyndsey.vivian@delwp.vic.gov.au
-    orcid: https://orcid.org/0000-0003-1927-723X
-  - family-names: Good
-    given-names: Megan
-    email: goodm@unimelb.edu.au
-    orcid: https://orcid.org/0000-0002-6908-1633
-  - family-names: Duncan
-    given-names: David, H.
-    email: david.duncan@unimelb.edu.au
-    orcid: https://orcid.org/0000-0003-4411-8214
-  - family-names: Rumpff
-    given-names: Libby
-    email: lrumpff@unimelb.edu.au
-    orcid: https://orcid.org/0000-0001-9400-8086
-  - family-names: Fidler
-    given-names: Fiona
-    email: fidlerfm@unimelb.edu.au
-    orcid: https://orcid.org/0000-0002-2700-2562
+  given-names: Henry
+  email: henry.wootton@delwp.vic.gov.au
+  orcid: https://orcid.org/0000-0001-6506-0248
+- family-names: Vivian
+  given-names: Lyndsey
+  email: lyndsey.vivian@delwp.vic.gov.au
+  orcid: https://orcid.org/0000-0003-1927-723X
+- family-names: Good
+  given-names: Megan
+  email: goodm@unimelb.edu.au
+  orcid: https://orcid.org/0000-0002-6908-1633
+- family-names: Duncan
+  given-names: David, H.
+  email: david.duncan@unimelb.edu.au
+  orcid: https://orcid.org/0000-0003-4411-8214
+- family-names: Rumpff
+  given-names: Libby
+  email: lrumpff@unimelb.edu.au
+  orcid: https://orcid.org/0000-0001-9400-8086
+- family-names: Fidler
+  given-names: Fiona
+  email: fidlerfm@unimelb.edu.au
+  orcid: https://orcid.org/0000-0002-2700-2562
 contact:
-  - family-names: Elliot
-    given-names: Gould
-    email: elliot.gould@unimelb.edu.au
-    orcid: https://orcid.org/0000-0002-6585-538X
+- family-names: Elliot
+  given-names: Gould
+  email: elliot.gould@unimelb.edu.au
+  orcid: https://orcid.org/0000-0002-6585-538X
 identifiers: 
-  - type: doi
-    value: 10.5281/zenodo.10807200
+- type: doi
+  value: 10.5281/zenodo.10807200
 repository-code: "https://github.com/egouldo/EcoConsPreReg"
+date-released: 2024-03-27
+keywords: 
+- preregistration,
+- adaptive preregistration,
+- ecology, 
+- conservation, 
+- model-based research
