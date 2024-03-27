@@ -2,7 +2,6 @@ project:
   type: website
   output-dir: docs
   
-
 website:
   repo-url: https://github.com/egouldo/EcoConsPreReg/
   repo-branch: master
