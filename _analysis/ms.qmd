@@ -202,6 +202,7 @@ affiliations:
   - id: aff2
     name: Arthur Rylah Institute for Environmental Research
 format:
+  docx: default
   pdf: default
   elsevier-pdf:
     journal:
