@@ -262,7 +262,7 @@ We approached the task of translating preregistration into model-based research 
 
 We borrow from the methodology proposed by Pavelin et al. [-@Pavelin2012] to design, test and refine a preregistration template suitable for ecological modelling, and a methodology for preregistering model-based research (@fig-UCD). The methods description is structured following the key steps illustrated in @fig-UCD.
 
-![Insert caption. Number each step so i can refer to it in the headings and text below. Make it clear in the figure that we're not doing the build interface and conduct usability testing component of implement, nor the evaluate and iterate. we throw that out to the community of practice to do that part.](images/Pasted image 20240314123346.png){#fig-UCD}
+![Insert caption. Number each step so i can refer to it in the headings and text below. Make it clear in the figure that we're not doing the build interface and conduct usability testing component of implement, nor the evaluate and iterate. we throw that out to the community of practice to do that part.](images/Pasted%20image%2020240314123346.png){#fig-UCD}
 
 ## Define Vision & Objectives
 
@@ -451,7 +451,7 @@ In terms of substantive changes to the structure and content of the preregistrat
 
 Modellers think about the modelling process differently, and use different terms for the same or similar practices and modelling concepts, depending on their particular modelling background, and at times the language used in the original version of the template was confusing and unclear to the VEFMAP modellers.
 
--    \[ \] #todo consider as #discussion point in this manuscript #writing
+-   [ ] #todo consider as #discussion point in this manuscript #writing
 
 ### Adaptive Preregistration of the Case Study
 
@@ -521,13 +521,34 @@ One of the key features of user-centred design is the principle of ‘continuous
 
 We took a user-centred design approach to the task of developing a preregistration template and methodology that accounts for the domain and methodology-specific nuances of ecological modelling. We did this by: 1. Identifying idealised norms and norms of practices to develop ‘idealised’ / ‘generalised’ research workflows that describe sets of commonly undertaken tasks (and some sort of order/sequence to reflect the workflow, both idealised and as practically conducted), within an ecological modelling study. 2. We then transformed these workflows into a ‘preregistration template’, by distilling a set of decision-items that, should a) adequately constrain researcher degrees of freedom to mitigate the risk of Questionable Research Practices in an ecological modelling exercise and b) adequately facilitates research/analytic transparency. We transformed the decision-steps (the highest resolution) into template items posed as directives or questions for preregistration users to complete, in accordance with the particularities of the study. 3. We qualitatively evaluated the template and the adaptive preregistration methodology for its feasibility of use in MBR using a case-study of environmental flows modelling in Victoria, Australia... The VEFMAP modelling study faced particular challenges to preregistration in terms of data complexity and patchiness that made this study a good candidate for trialling adaptive preregistration...
 
-## Preregistration Template
+## Benefits, challenges, Limitations of Adaptive Preregistration
 
-Blah what to say?
+User research revealed inherent features of the model development process, namely its iterative workflow and adaptive decision making, were critical barriers to modellers adopting preregistration in their modelling practice. In the case of the VEFMAP modelling study, there were critical uncertainties about the the appropriate model specification given limitations of the underlying dataset which prevented the researchers from being able to pre-register fully specified models without undertaking some exploratory analysis. Such practices would preclude the application of preregistration to this study because these decisions would violate preregistration's core principle of *data-independent* decision-making.
 
-## Adaptive Preregistration Methodology
+*What would have happened without preregistration / adaptive preregistration??* (insert into last sentence of above para)
 
-User research revealed critical features of the model development process, namely the inherent iterative nature of model development, and requirements for model checking that forced us to reconsider the procedure for completing a preregistration suitable to ecological modelling. Consequently, we took an ‘expanded view of preregistration’, “Adaptive Preregistration”. Key features: - plans for preregistering and deploying flexible analysis strategies: - Iterative, cyclical preregistration rather than linear process that maps onto the iterative cycles of model development generating - interim preregistrations marking key points in the analysis
+-   In the absence of any preregistration, adaptive or not, (#todo check this with Jian, because maybe his practices are different), modellers would typically explore the entire dataset
+-   Explain what is wrong with this, what the risk of this is.
+
+*Next para:*
+
+To mitigate the risk of researcher degrees of freedom and to try to preserve some degree of data-independence in decision-making we combined data-partitioning into the adaptive preregistration process and split the preregistration process into two phases, resulting in three interim preregistrations. We first preregistered a preliminary or 'pilot' analysis, in which the researchers under took directed exploration of a subset of the dataset. The pilot analysis helped the researchers to understand what models could feasibly be fitted for their two outcome variables given uneven spatio-temporal density and patchiness of the dataset. Although the pilot analysis was 'exploratory' in nature, by preregistering the preliminary analysis, any exploration occurring here was still *directed* in that the scope of the pilot analysis was bounded and determined by transparently explicated analysis goals and articulartion of critical uncertainties. Following preregistration of the pilot analysis, the researchers then switched back to the *analysis* phase of *adaptive preregistration*. Carrying out the preregistered pilot analysis. The results of the pilot analysis aided in determining the *main analysis* which would be conducted on the full dataset and preregistered using the EcoEvoModelling template.
+
+Researchers preregistered flexibility into their main analysis, because despite the pilot analysis, some critical uncertainties still reamined cf. limitations on the data.
+
+-   outline the uncertainties: model family, and something else. see results.
+
+Explain the different models, and the different
+
+-   loosely preregistered (Baldwin) grounds for interpretation made explicit
+
+Consequently, we took an ‘expanded view of preregistration’, “Adaptive Preregistration”. Key features:
+
+\- plans for preregistering and deploying flexible analysis strategies:
+
+\- Iterative, cyclical preregistration rather than linear process that maps onto the iterative cycles of model development generating
+
+\- interim preregistrations marking key points in the analysis
 
 We also propose combining adaptive preregistration with previously proposed technical strategies for reducing the risk of overfitting and bias in MBR. E.g. using data-partitioning with a exploratory/training vs. test/holdout dataset / data scrambling for preliminary or exploratory analyses. We depart from existing research, e.g. Baldwin, by proposing that these preliminary analyses also be pre-registered, even if preregistration is not yet complete. The results of the preliminary or exploratory analyses may be used to inform analytic decision-making that can then be preregistered.
 
@@ -537,19 +558,17 @@ Presently there are no existing preregistration repository services that meet th
 
 We approached the application and evaluation of both the template and adaptive preregistration and sought to evaluate the feasibility of preregistration for MBR. We genuinely did not know what to expect when we began preregistering the case study, but approached this goal with a 'proof is in the pudding mentality' to ask what are the limits of preregistration.... Here we reflect on the parts that worked, and those that did not.
 
-**Time & Timing**
+**Restricting Researcher Degrees of Freedom, not creativity!**
 
--   “A natural consequence of increased transparency, is that preregistrations become longer as more possible decisions are made transparent: *increased transparency* implies *increased length*. This trade-off was something we considered important during the design phase, and deciding what was in and out of scope for the preregistration template was particularly challenging.
+Counter arguments to both preregistration and preregistration for modelling express fear that preregistation will restrict creativity and lead to 'punch card style analysis' [@MacEachern2019]. However, modellers in our preregistration of the case study found the opposite, that it prompted critical thinking about analytic choices during modelling, that might have only ever been tacit and never explicitly recorded (cite paper saying many modelling decisions never thought of as decisions and therefore never reported).
 
--   However, as Pu et al. note, some participants who were both authors and reviewers didn’t think that the time-costs of preregistration in research were significantly greater than not preregistering research. Instead they thought of the preregistration process invoking a ‘time shift’, that brought ‘decision points’ before data collection instead of during analysis.” P.19. In addition, “some reviewers thought that preregistration saves them the time they might have spent wondering about undisclosed flexibilities when working on an un-preregistered paper.”
+Combining the use of data partitioning, and splitting the analysis into a 'pilot' and 'main' analysis aided the modellers in understanding what models could feasibly be preregistered given constraints on the data, while also helping inform the preregistration of flexible analyses. The addition of the pilot study components to the template, and into the modelling process was good. And I think we should recommend doing this where possible. Link to that arxiv paper on preregistering machine learning studies. Might seem less natural for ecological modelling studies since we are data poor! BUT, in machine learning and other computer-science focussed modelling contexts, this type of practice is the norm. One issue to flag is the potential for \[\[information leakage\]\], however. Because part of the data *is* used again in the full dataset. However, given that this study is situated within an ongoing program of monitoring and decision-making, I think it's ok. The modelling can be built into an adaptive monitoring / modelling context where future modelling can be used to test / evaluate and then update the model.
 
--   Even in adaptive preregistration where the process is iterative, modellers reflected on the front-heavy reserach timeline forced by the process of adaptive preregistration. Shifting decision-making to the start of the project timeline delayed the start of the analysis, but modellers felt that this resulted in better decision-making because the decision-making was more carefully reasoned. Additionally, the case study researchers felt that the level of detail reported in the preregistration aided in efficiently writing the internal report.
+\- How do we think the process actually went in terms of restricting researcher degrees of freedom / improving reliability / reproducibility? **What other reflections are there?**
 
-    -   This relates to what Pu et al. found where participants ‘felt their research workflow improved by having preregistration as a “forcing function” \[…\] For example, writing down study plans ahead of time might prompt them to think more thoroughly and to anticipate flexibilities / researchers’ degree of freedmen advance.’ (Page 13). For reviewers ‘participant reports that preregistration makes the review process “easier”.’
+\- Tricky to anticipate?? But can certainly say that all of the exploratory analysis undertaken on the pilot dataset would have surely been applied to the full dataset had we not partitioned the dataset and the preregistration process.
 
--   Mention difficulties I had with the internal deadlines of DEECA, and that we could not preregister everything we wanted to (i..e the analysis of the model and its outputs used for presentation in the report, which were extremely vaguely specified, aside from model checking). Preregistration could be challenging for modelling in such settings where there extremely tight timelines. BUT, as we are doing for the stage 2 report preregistration of the second study now, could be used during early consultation / scoping. So the document could begin to be filled out much earlier than we did here (data already collected).
-
-**Resolution of the template**
+**Resolution of the template - tradeoff between meeting preregistration objectives, and burden and benefits to the researcher.**
 
 -   Competing objectives? Although the purposes of preregistration are not mutually exclusive - as we have decided the purpose of preregistration we have defined here is to both delimit/state flexibility, *and* be flexible. However, “the preference of one purpose over another can have tangible effects on the design of preregistration” p15.. Pu.
 
@@ -563,15 +582,19 @@ We approached the application and evaluation of both the template and adaptive p
 
     -   We can see this in the disjuncture between all of the modelling outputs conducted and reported for the internal report, but that weren't fully specified in the preregistration due to time-constraints on the modellers.
 
-**Restricting Researcher Degrees of Freedom, not creativity!**
+*This will lead in nicely to the final criticism*
 
-Counter arguments to both preregistration and preregistration for modelling express fear that preregistation will restrict creativity and lead to 'punch card style analysis' [@MacEachern2019]. However, modellers in our preregistration of the case study found the opposite, that it prompted critical thinking about analytic choices during modelling, that might have only ever been tacit and never explicitly recorded (cite paper saying many modelling decisions never thought of as decisions and therefore never reported).
+**Time & Timing**
 
-Combining the use of data partitioning, and splitting the analysis into a 'pilot' and 'main' analysis aided the modellers in understanding what models could feasibly be preregistered given constraints on the data, while also helping inform the preregistration of flexible analyses. The addition of the pilot study components to the template, and into the modelling process was good. And I think we should recommend doing this where possible. Link to that arxiv paper on preregistering machine learning studies. Might seem less natural for ecological modelling studies since we are data poor! BUT, in machine learning and other computer-science focussed modelling contexts, this type of practice is the norm. One issue to flag is the potential for \[\[information leakage\]\], however. Because part of the data *is* used again in the full dataset. However, given that this study is situated within an ongoing program of monitoring and decision-making, I think it's ok. The modelling can be built into an adaptive monitoring / modelling context where future modelling can be used to test / evaluate and then update the model.
+-   “A natural consequence of increased transparency, is that preregistrations become longer as more possible decisions are made transparent: *increased transparency* implies *increased length*. This trade-off was something we considered important during the design phase, and deciding what was in and out of scope for the preregistration template was particularly challenging.
 
-\- How do we think the process actually went in terms of restricting researcher degrees of freedom / improving reliability / reproducibility? **What other reflections are there?**
+-   However, as Pu et al. note, some participants who were both authors and reviewers didn’t think that the time-costs of preregistration in research were significantly greater than not preregistering research. Instead they thought of the preregistration process invoking a ‘time shift’, that brought ‘decision points’ before data collection instead of during analysis.” P.19. In addition, “some reviewers thought that preregistration saves them the time they might have spent wondering about undisclosed flexibilities when working on an un-preregistered paper.”
 
-\- Tricky to anticipate?? But can certainly say that all of the exploratory analysis undertaken on the pilot dataset would have surely been applied to the full dataset had we not partitioned the dataset and the preregistration process.
+-   Even in adaptive preregistration where the process is iterative, modellers reflected on the front-heavy reserach timeline forced by the process of adaptive preregistration. Shifting decision-making to the start of the project timeline delayed the start of the analysis, but modellers felt that this resulted in better decision-making because the decision-making was more carefully reasoned. Additionally, the case study researchers felt that the level of detail reported in the preregistration aided in efficiently writing the internal report.
+
+    -   This relates to what Pu et al. found where participants ‘felt their research workflow improved by having preregistration as a “forcing function” \[…\] For example, writing down study plans ahead of time might prompt them to think more thoroughly and to anticipate flexibilities / researchers’ degree of freedmen advance.’ (Page 13). For reviewers ‘participant reports that preregistration makes the review process “easier”.’
+
+-   Mention difficulties I had with the internal deadlines of DEECA, and that we could not preregister everything we wanted to (i..e the analysis of the model and its outputs used for presentation in the report, which were extremely vaguely specified, aside from model checking). Preregistration could be challenging for modelling in such settings where there extremely tight timelines. BUT, as we are doing for the stage 2 report preregistration of the second study now, could be used during early consultation / scoping. So the document could begin to be filled out much earlier than we did here (data already collected).
 
 ## Future Implementation & Testing
 
@@ -664,7 +687,7 @@ In south-eastern Australia, river regulation (including water extraction), lives
 #### Modelling Dataset
 
 | Variable Name                            | Unit                  | Definition                                                                                                                                     | Variable Type | Variable Group                                                         |
-|-----------|-----------|----------------------------|-----------|-----------|
+|-------------|-------------|----------------------|-------------|-------------|
 | Species Vegetation Cover                 | Cover                 | Cover per-species, per sub-transect                                                                                                            | Response      | Vegetation Cover                                                       |
 | Plant Functional Group Cover             | Cover                 | Cover per-plant functional group, per-sub-transect                                                                                             | Response      | Vegetation Cover                                                       |
 | Sub-transect Vegetation Cover            | Cover                 | Total cover (sum all species), per sub-transect                                                                                                | Response      | Vegetation Cover                                                       |
