@@ -536,6 +536,8 @@ Ideally, model outputs or predictions are compared to independent data and patte
 ## Explanation
 
 Model performance can be quantified by a range of tests, including measures of agreement between predictions and independent observations, or estimates of accuracy, bias, calibration, discrimination refinement, resolution and skill [@Araujo2019]. Note that the performance metrics and criteria in this section are used for evaluating the structured and parameterised models (ideally) on independent holdout data, so this step is additional to any performance criteria used for determining model structure or parameterisation in section X.
+
+<!-- #TODO add section-cross referencing -->
 :::
 
 ::: callout-caution
