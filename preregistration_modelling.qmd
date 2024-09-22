@@ -208,7 +208,7 @@ The identification and definition of primary model input variables should be dri
 -   [ ] Document the identity, quantity and provenance of any data that will be used to develop, identify and test the model.
 -   [ ] For each dataset, is the data open or publicly available?
 -   [ ] How can the data be accessed? Provide a link or contact as appropriate, indicating any restrictions on the use of data.
--   [ ] Date of download, access, or future access.
+-   [ ] Date of download, access, or expected timing offuture access.
 -   [ ] Describe the source of the data - what entity originally collected this data? (National Data Set, Private Organisational Data, Own Lab Collection, Other Lab Collection, External Contractor, Meta-Analysis, Expert Elicitation, Other).
 -   [ ] Codebook and meta-data. If a codebook or other meta-data is available, link to it here and / or upload the document(s).
 -   [ ] Prior work based on this dataset - Have you published / presented any previous work based on this dataset? Include any publications, conference presentations (papers, posters), or working papers (in-prep, unpublished, preprints) based on this dataset you have worked on.
