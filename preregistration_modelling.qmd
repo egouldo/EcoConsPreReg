@@ -353,9 +353,8 @@ This section relates to the process of determining the best/most efficient/parsi
 ::: callout-note
 ## Explanation
 
-Before calibrating the model to the data, the performance criteria on which the calibration is judged are specified. These criteria and their underlying assumptions should reflect the desired properties of the parameter estimates / structure [@Jakeman:2006ii]. For example, modellers might seek parameter estimates that are robust to outliers, unbiased, and yield appropriate predictive performance. Modellers will need to consider whether the assumptions of the estimation technique yielding those desired properties are suited to the problem at hand. For integrated or sub-divided models, other considerations might include choices about where to disaggregate the model for parameter estimation; e.g. spatial sectioning (streams into reaches) and temporal sectioning (piece-wise linear models) [@Jakeman:2006ii].
+Before calibrating the model to the data, the performance criteria for judging the calibration (or model fit) are specified. These criteria and their underlying assumptions should reflect the desired properties of the parameter estimates / structure [@Jakeman:2006ii]. For example, modellers might seek parameter estimates that are robust to outliers, unbiased, and yield appropriate predictive performance. Modellers will need to consider whether the assumptions of the estimation technique yielding those desired properties are suited to the problem at hand. For integrated or sub-divided models, other considerations might include choices about where to disaggregate the model for parameter estimation; e.g. spatial sectioning (streams into reaches) and temporal sectioning (piece-wise linear models) [@Jakeman:2006ii].
 
-<!-- #TODO NOTE THIS DOESN"T SAY ANYTHING ABOUT PARAMETER ESTIMATION! ONLY PErformacne criteria -->
 :::
 
 ### Parameter estimation technique
