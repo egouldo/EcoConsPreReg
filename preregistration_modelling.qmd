@@ -57,8 +57,7 @@ The scope of the model includes temporal and spatial resolutions, which should a
 -   [ ] the ecological problem,
 -   [ ] the decision problem (if relevant), including the decision-trigger and any regulatory frameworks relevant to the problem,
 -   [ ] how the model will address the problem, being clear about the scope of the model i.e. is the model addressing the whole problem, or part of it? Are there any linked problems that your model should consider?
--   [ ] Ensure that you specify any focal taxa and study objectives,
--   [ ] Briefly outline the ecological problem and the decision-problem, including the decision-trigger and any regulatory frameworks relevant to the problem.
+-   [ ] Ensure that you specify any focal taxa and study objectives.
 :::
 
 ### Analytical objectives {#analyticalobjectives}
