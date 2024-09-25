@@ -448,87 +448,113 @@ Model development and adaptive preregistration processes occurred in tandem, and
 ### Final Template Version & Changes
 
 ```{r}
-#| label: tbl-preregistration-template-final
-#| tbl-cap: "Final version of preregistation template developed after user-testing."
+#| label: preregistration-template-final
+#| eval: true
+#| echo: false
+#| message: false
 
 library(tidyverse)
 library(gt)
+library(gtExtras)
+
 prereg_tbl_data <- 
   readr::read_csv(
-    here::here("outputs/quarto_preregistration_template.csv")
-) %>% 
-    drop_na(phase) %>% 
-    nest(.by = phase) %>% 
-    mutate(phase_id = row_number()) %>% 
-    unnest(data) %>% 
-    nest(.by = c(phase, 
-                 step)) %>% 
-    group_by(phase) %>%  
-    mutate(step_id = row_number()) %>% 
-    unnest(data) %>%  
-    ungroup %>% 
-    nest(.by = c(phase, 
-                 step, 
-                 substep)) %>% 
-    group_by(phase, step) %>% 
-    mutate(substep_id = row_number()) %>% 
-    unnest(data) %>% 
-    ungroup %>% 
-    nest(.by = c(phase, 
-                 step, 
-                 substep, 
-                 preregistration_item)) %>% 
-    group_by(phase, step, substep) %>% 
-    mutate(preregistration_item_id = row_number()) %>% 
-    unnest(data) %>% ungroup %>% 
-    nest(.by = c(phase, 
-                 step, 
-                 substep, 
-                 preregistration_item, 
-                 preregistration_subitem)) %>% 
-    group_by(phase, step, substep, preregistration_item) %>% 
-  mutate(preregistration_subitem_id = row_number()) %>% 
-    unnest(data) %>% 
+    here::here("outputs/quarto_preregistration_template.csv")) %>% 
+  drop_na(phase) %>% 
+  mutate(across(everything(), ~ stringr::str_remove_all(.x, "\\*")),
+         phase = forcats::as_factor(phase), 
+         step = forcats::as_factor(step), 
+         substep = forcats::as_factor(substep)) %>% 
+  mutate(phase_id = cur_group_id(), .by = phase) %>% 
+  group_by(pick(starts_with("phase"), 
+                starts_with("step"), 
+                starts_with("substep"),
+                -ends_with("_id")), 
+           preregistration_item) %>% 
+  reframe(preregistration_subitem = list(preregistration_subitem), 
+          subitem_na = map_lgl(preregistration_subitem, rlang::is_na)) %>% 
+  group_by(pick(starts_with("phase"), 
+                starts_with("step"), 
+                starts_with("substep"),
+                -ends_with("_id"), 
+                "subitem_na")) %>% 
+  reframe(preregistration_item = 
+            case_when(subitem_na ~ list(preregistration_item), 
+                      .default = map(preregistration_item, list)),  
+          preregistration_subitem = 
+            case_when(subitem_na ~ list(NA), 
+                      .default = map(preregistration_subitem, 
+                                     ~ gluedown::md_list(.x, type = "bullet", marker = "-")))) %>% 
+  rowwise() %>% 
+  mutate(preregistration_item = 
+           list(gluedown::md_list(preregistration_item, type = "bullet", marker = "-"))) %>% 
+  arrange(phase, step, substep) %>% 
   ungroup %>%  
-    mutate(preregistration_item = 
-             case_when(preregistration_subitem_id != 1 ~ NA, 
-                       .default = preregistration_item),) %>% 
-    mutate(substep = 
-             case_when(substep_id != row_number() ~ NA, 
-                               .default = substep),
-           substep_description = 
-             case_when(substep_id != row_number() ~ NA, 
-                       .default = substep_description), 
-           .by = substep) %>% 
-    mutate(step = 
-             case_when(step_id != row_number() ~ NA, 
-                            .default = step),
-           step_description = 
-             case_when(substep_id != row_number() ~ NA, 
-                                        .default = step_description),
-           .by = step)  %>% 
-    mutate(across(everything(), ~ stringr::str_remove_all(.x, "\\*")),
-           phase = gluedown::md_bold(phase),
-           phase_description = gluedown::md_italic(phase_description),
-           across(ends_with("_id"), as.numeric))
+  mutate(step_id = 1:n(), 
+         step = case_when(step_id == 1 ~ step, .default = NA),
+         step_description = case_when(step_id == 1 ~ step_description, .default = NA),
+         .by = c(phase, step)) %>% 
+  mutate(substep_id = 1:n(), 
+         substep = 
+           case_when(substep_id == 1 ~ substep, 
+                     .default = NA),
+         substep_description = 
+           case_when(substep_id == 1 ~ substep_description, 
+                     .default = NA),
+         .by = c(phase, step, substep)) %>% 
+  mutate( phase = gluedown::md_bold(phase),
+          phase_description = gluedown::md_italic(phase_description),
+          across(ends_with("_id"), as.numeric)) %>% 
+  rowwise() %>% 
+  mutate(step = 
+           forcats::fct_relabel(step, 
+                                .fun = ~ if(!rlang::is_na(.x)) gluedown::md_bold(.x)),
+         substep = 
+           forcats::fct_relabel(substep, 
+                                .fun = ~ if(!rlang::is_na(.x)) gluedown::md_bold(.x)),
+         step_description = 
+           forcats::fct_relabel(step_description, 
+                                .fun = ~ if(!rlang::is_na(.x)) gluedown::md_italic(.x)),
+         substep_description = 
+           forcats::fct_relabel(substep_description, 
+                                .fun = ~ if(!rlang::is_na(.x)) gluedown::md_italic(.x))) %>% 
+  ungroup %>% 
+  select(starts_with("phase"), 
+         starts_with("step"), 
+         starts_with("substep"), 
+         ends_with("_item"), 
+         ends_with("subitem"), 
+         everything(),
+         -subitem_na) 
 
 prereg_tbl_data %>% 
-    select(starts_with("phase"), starts_with("step"), starts_with("substep"), ends_with("_item"), ends_with("subitem"), everything()) %>% 
-    mutate(step = case_when(!is.na(step) ~ gluedown::md_bold(step), .default = step),
-           step_description = case_when(!is.na(step_description) ~ gluedown::md_italic(step_description), .default = step_description)) %>% 
-    gt::gt(groupname_col = c("phase", "phase_description"),
-           row_group.sep = ": ") %>% 
-    gt::cols_hide(ends_with("_id")) %>% 
-    gt::sub_missing(missing_text = "") %>% 
-    gt::text_transform(fn = function(x) map(x, gt::md), 
-                       locations = gt::cells_row_groups()) %>% 
-   gt::text_transform(fn = gt::md, 
-                       locations = gt::cells_body()) %>% 
-    gt::cols_merge(columns = c("step", "step_description"), pattern = "{1} {2}") %>% 
-    gt::cols_merge(columns = c("substep", "substep_description"), pattern = "{1} {2}") 
+  gt::gt(
+    groupname_col = c("phase", "phase_description"),
+    rowname_col = "step",
+    row_group.sep = ": ") %>% 
+  gt::cols_hide(ends_with("_id")) %>% 
+  gt::sub_missing(missing_text = "") %>% 
+  gt::cols_merge(columns = c("step", "step_description"),
+                 pattern =   "{1}\n {2}",) %>% 
+  gt::cols_merge(columns = c("substep", "substep_description"),
+                 pattern = "{1}\n {2}") %>% 
+  gt::text_transform(fn = gt::md, 
+                     locations = gt::cells_stub()) %>%
+  gt::text_transform(fn = function(x) map(x, gt::md), 
+                     locations = gt::cells_row_groups()) %>% 
+  gt::text_transform(fn = gt::md, gt::cells_body()) %>% 
+  gt::sub_missing(missing_text = "") %>% 
+  gt::cols_align(align = "left") %>% 
+  # gt::cols_label(substep = "Substep") %>% 
+  # gt::tab_spanner(columns = starts_with("preregistration_item"), 
+                  # label = "Preregistration Items", gather = TRUE) %>% 
+  gt::tab_options(column_labels.hidden = TRUE, table.width = 10,table.font.size = 10) %>%
+  gt::opt_stylize(2,color = "cyan") %>% 
+  gt::tab_style(style = gt::cell_text(v_align = "top", whitespace = "break-spaces"), 
+                locations = cells_body()) %>% 
+   gt::tab_style(style = gt::cell_text(v_align = "top", whitespace = "break-spaces"), 
+                locations = cells_stub()) 
 ```
-
-gt
 
 The template used in the VEFMAP study underwent a series of changes to both its content and visual formatting during the analysis to better suit the needs of the modellers. The preregistration template was written as an *Rmarkdown* document saved within the project GitHub repository (INSERT LINK TO DOCUMENT #todo). Using knitr (CITE) and pandoc (CITE), this document is converted to a markdown document using RStudio's `github_document` format, which is automatically rendered into HTML for viewing in the web browser by GitHub (<https://rmarkdown.rstudio.com/github_document_format.html).>
 
