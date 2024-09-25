@@ -2,23 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://egouldo.github.io/EcoConsPreReg/preregistration_modelling.html</loc>
-    <lastmod>2024-03-12T03:29:53.319Z</lastmod>
+    <lastmod>2024-09-22T04:15:11.027Z</lastmod>
   </url>
   <url>
     <loc>https://egouldo.github.io/EcoConsPreReg/index.html</loc>
     <lastmod>2024-03-12T02:52:06.223Z</lastmod>
   </url>
   <url>
-    <loc>https://egouldo.github.io/EcoConsPreReg/RDF_QRP.html</loc>
-    <lastmod>2024-01-17T06:18:15.720Z</lastmod>
+    <loc>https://egouldo.github.io/EcoConsPreReg/NEWS.html</loc>
+    <lastmod>2024-03-27T04:18:34.535Z</lastmod>
   </url>
   <url>
     <loc>https://egouldo.github.io/EcoConsPreReg/adaptive_preregistration_background.html</loc>
     <lastmod>2024-03-12T03:04:37.710Z</lastmod>
   </url>
   <url>
+    <loc>https://egouldo.github.io/EcoConsPreReg/LICENSE.html</loc>
+    <lastmod>2024-03-12T03:47:09.430Z</lastmod>
+  </url>
+  <url>
+    <loc>https://egouldo.github.io/EcoConsPreReg/RDF_QRP.html</loc>
+    <lastmod>2024-09-22T04:14:26.826Z</lastmod>
+  </url>
+  <url>
     <loc>https://egouldo.github.io/EcoConsPreReg/adaptive_preregistration_implementation.html</loc>
-    <lastmod>2024-03-12T03:04:35.058Z</lastmod>
+    <lastmod>2024-03-27T22:55:20.997Z</lastmod>
   </url>
   <url>
     <loc>https://egouldo.github.io/EcoConsPreReg/about.html</loc>
