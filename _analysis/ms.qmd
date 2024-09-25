@@ -202,8 +202,14 @@ affiliations:
   - id: aff2
     name: Arthur Rylah Institute for Environmental Research
 format:
+  preprint-typst:
+    fontsize: 11pt
+    mainfont: Libertinus Serif 
   docx: default
-  pdf: default
+  preprint-docx:
+    toc: false
+    number-sections: true
+    highlight-style: github
   elsevier-pdf:
     journal:
       name: Journal Name
