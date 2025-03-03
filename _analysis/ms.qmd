@@ -183,10 +183,12 @@ author:
     affiliations:
       - ref: aff1
 abstract: |
-  1. Preregistration is an open-science practice adopted in scientific disciplines that have begun to confront the ‘reproducibility crisis’, which aims to improve research transparency and mitigate questionable research practices within a study. There has been little uptake of preregistration in ecology and conservation, and many modellers and researchers engaged in non-hypothesis testing research both within and outside of ecology have eschewed pre- registration on the grounds that existing templates are irrelevant because they are focused on null-hypothesis significance testing.
-  2. We advocate that preregistration can and should be used in model-based research in ecology and conservation, but that preregistration should reflect the norms and practice of the research context in which it is applied, in order to adequately restrict researcher degrees of freedom that are unique to a domain-specific methodology. We took a user-centred design approach to the task of translating preregistration into model- based research contexts for ecology and conservation.
-  3. We identified a generalised ‘modelling workflow’ that captures critical analysis decisions in the process of the model development cycle. The workflow informed the content and structure of a preregistration template to be used in model-based research. The iterative nature of model development was identified as a key barrier to implementing preregistration for modelling research because it conflicts with the current format and linear process of preregistration. To better align the internal logic of preregistration with the iterative and non-linear process of ecological modelling, we propose a methodology for implementing ‘adaptive preregistration’ leveraging git and GitHub. We tested and evaluated the preregistration template and methodology using a case- study of environmental flows modelling for decision-support in Victoria, Australia.
-  4. This research provides a template and methodology for implementing adaptive preregistration of ecological models in either pure or applied settings and will facilitate the wider uptake of preregistration in ecology. Although we focus on ecology and conservation in this paper, the template is extensible to alternative fields and methods, and the proposed methodology for implementing adaptive preregistration can be applied in model- based re- search within science more broadly. Modellers need no longer cry “but, I can’t preregister my research.”
+  1.	Preregistration is an open-science practice which aims to improve research transparency and mitigate questionable research practices, like cherry picking results. It helps protects against cognitive biases, like hindsight bias, that can influence how study outcomes are interpreted. There has been little uptake of preregistration in ecology and conservation, arguably because existing pre-registration templates focus on null-hypothesis significance testing whereas ecology and conservation often rely on different types of statistical modelling.
+  2.	We argue that preregistration in model-based research in ecology and conservation is both possible and beneficial, using templates adapted for domain-specific methodologies. We applied a user-centred design approach to translate the concept of preregistration into model-based research practice for ecology and conservation.
+  3.	We developed a generalised ‘modelling workflow’ to capture critical analysis decisions in the model development cycle, informing a preregistration template for model-based research. The iterative nature of model development is incompatible with existing, linear preregistration templates, creating a barrier to implementing preregistration for model-based research.
+  4.	To better align the internal logic of preregistration with the iterative and non-linear process of ecological modelling, we propose, test and evaluate a methodology for ‘adaptive preregistration’, using a case-study of environmental flows modelling for decision-support in Victoria, Australia.
+  5. This research provides a template and methodology for implementing adaptive preregistration of ecological models. Although we focus on ecology and conservation in this paper, the concept of adaptive preregistration, and the templates developed here, could be applied in model-based research in other scientific disciplines within science more broadly. Modellers need no longer cry “but I can’t preregister my research.”
+ 
 keywords:
   - preregistration
   - transparency
@@ -202,10 +204,10 @@ affiliations:
   - id: aff2
     name: Arthur Rylah Institute for Environmental Research
 format:
-  preprint-typst:
-    fontsize: 11pt
-    mainfont: Libertinus Serif 
-  docx: default
+  # preprint-typst:
+    # fontsize: 11pt
+    # mainfont: Libertinus Serif 
+  # docx: default
   preprint-docx:
     toc: false
     number-sections: true
@@ -223,643 +225,64 @@ format:
         # - Highlight 2 
         # - Highlight 3
     keep-tex: true
-bibliography: references_obsidian.bib
+bibliography: "references_obsidian.bib"
+csl: methods-in-ecology-and-evolution.csl
 ---
 
 # Introduction
 
-Science's replication crisis, and the subsequent recognition of problems with reliability of scientific research findings, has triggered a 'credibility revolution' spawning a suite of proposed methodological and policy reforms, including *preregistration* [@parker2019]. Preregistration is an open-science practice that aims to distinguish between planned and ad hoc analyses  [@Parker2019] and aims to combat the risk of questionable research practices by requiring researchers to register their methods and analysis plan in a secure and publicly accessible platform prior to collecting and/or analysing data, which cannot be altered after submission ( #todo #citation). The purpose of preregistration is to prevent biased research findings by guarding against questionable research practices (such as selective reporting, p-hacking, HARKing, among others #todo #citation ) by distinguishing what is a genuine *a priori* planned analysis, and what is not, thereby preventing the opportunistic misuse of researcher degrees of freedom, or those many analytic decisions researchers make during the planning, data collection, data analysis and reporting of results in scientific studies (See Box 1 for background). QRPs have been labelled as one of the primary cause of the replication crisis (Shrout and Rodgers, 2018 in [@Fife2022]) and serve to XYZ bias the overall literature, etc ( #todo finish this point).
+Over the past ten years or so, a ‘replication crisis’ in some scientific fields has exposed problems with the reliability of research findings [@Neoh2023; @OpenScienceCollaboration:2015cn; @camererEvaluatingReplicabilitySocial2018; @Ioannidis:2014cm]. One such problem is the prevalence of Questionable Research Practices (QRPs), including p-hacking, Hypothesising After Results are Known (HARKing), and cherry-picking [@Wicherts2016]. QRPs increase the probability of false positive results, artificially inflate effect size estimates, and ultimately reduce the replicability of published findings, while encouraging overconfidence in the precision of results and exacerbating the risk of accepting and propagating false facts [@Hoffmann2021; @Roettger2019; @Nissen2016]. Self-reports from researchers show that QRPs are surprisingly common across disciplines [@John:2012eo; @Agnoli:2017kl; @Makel2023], including in ecology [@Fraser:2018cl; @kimmel2023]. Although these self-report surveys of QRPs are heavily focused on statistical significance testing research employing p-values, some broader concepts, like selective reporting/cherry picking, have counterparts in other inferential frameworks.
 
-Despite enthusiastic uptake in some scientific disciplines, such as psychology and medicine ( #todo #citation ), the use of registered reports and preregistration in ecology and conservation more broadly is new and limited [@Desbureaux2021], particularly for model-based research ( #todo Joel Pick preprint?)**. Ecologists have brushed preregistration off on the basis that existing templates are irrelevant since they are focussed on null-hypothesis significance testing**, whereas in applied ecology and conservation, we don't usually explicitly test hypotheses [@Betts2021], but instead use explanatory models, or increasingly predictive models that generate anticipatory predictions, to inform management decisions [@Wood2020]. Model-fitting and evaluation, rather than falsification of hypotheses about natural phenomena, are increasingly prevalent approaches to scientific inquiry in ecology [@Connolly2017]
+QRPs are precipitated when researchers opportunistically or systematically misuse ‘researcher degrees of freedom’ without disclosure [@Bakker2018; @Wicherts2016]. Researcher degrees of freedom refer to the many decisions and alternative analytic choices researchers make throughout the research process [@Simmons:2011iw; @Wicherts2016]. Analytic decisions are typically subjective but methodologically defensible, however, choices and omissions taken at each ‘fork’ may collectively and significantly influence the final ‘analysis strategy’ [*sensu* @Hoffmann2021], ‘specification’ [*sensu* @Simonsohn2020], or ‘modelling path’ [*sensu* @hamalainen2016]. The set of all (plausible or reasonable) possible decisions that a researcher could make over the entire analysis from beginning to end has been termed collectively as the ‘garden of forking paths’ [@Gelman2013] or the ‘multiverse’ [@Steegen2016]. ‘Many-studies’ have now demonstrated the consequences of the ‘garden of forking paths’, whereby alternative analytical decisions can lead researchers to make vastly different interpretations of results, with conflicting conclusions, even when investigating the same research question using the same underlying dataset [@Gould2025; @Hoogeveen2022; @Silberzahn2018; @Desbureaux2021; @Young2021].
 
-Preregistration in model-based research has been eschewed on several grounds by modellers and researchers engaged in model-based research both within and outside of ecology. Much of the literature advocating for the use of preregistration assumes a hypothetico-deductive model of scientific inquiry, and the templates used to write preregistrations have been accused of being focussed on null-hypothesis significance testing [e.g. @McDermott2021; @Prosperi2019]. Approaches and advocacy for preregistration of MBR across all scientific disciplines are limited, and focussed have focused on the phases of the modelling process and modelling approaches that are more confirmatory ( #todo see @ioannidis2022). For example, @Cruwell2019b present a template for preregistration of MBR where the model construction and development phase is explicitly and intentionally excluded from the preregistration process, while much of the discussion around preregistration for models has centred on machine learning [@Hildebrandt2018] or predictive modelling [@hofman2023] ( #todo see \[preregistration for modelling\] for more refs).
+Good intentions and simply being ‘aware’ of the potential for researcher degrees of freedom to lead to QRPs cannot sufficiently mitigate their risk because of the unconscious nature of their origin [@Nosek:2018eg; @Zvereva2021]. Fortunately, there are some potential solutions to this problem. Preregistration is an open-science practice that aims to distinguish between planned and ad hoc analyses [@Parker2019] thereby restricting opportunities for trialling analytical alternatives (‘researcher degrees of freedom’) and making any deviations from the preregistered plan transparent [@Wicherts2016]. Preregistration requires researchers to register their methods and analysis plan in a secure and publicly accessible platform prior to collecting and/or analysing data, which cannot be altered after submission [@Parker2019]. Preliminary empirical evidence indicates that studies with preregistered analysis plans are less likely to have positive or significant results and are more transparently reported [@brodeur2024; @toth2021], especially when the preregistration template includes detailed instructions and requirements [@Bakker2018] or the preregistered study is published as a ‘Registered Report’ [@scheel2021] – a new publication format that aims to combat selective reporting and publication bias wherein the peer-review process and decision to publish is made prior to the results are known.
 
-A second argument against preregistration for model-based research is based on the mischaracterisation of the model development process as a intrinsically exploratory process [@McDermott2021] , and since only the preregistration of confirmatory research, such as hypothesis testing, is considered necessary [@Prosperi2019], there is no need to pre-register model-based research ( #todo #citation). The description of modelling as a wholly exploratory process is a mischaracterisation based on a misunderstanding of sensemaking and reasoning within the modelling process stemming from a lack of clear formal definitions distinguishing confirmatory research from exploratory research [@Flournoy2020; @Devezer2020; @alspaugh2019]. Although modelling includes some tasks and activities that are exploratory in nature, it can be distinguished from wholly *exploratory analysis* in that tends be goal-driven, directed analysis that is less open-ended [@alspaugh2019]. For model-based research, the exploratory/confirmatory divide is an idealised and simplifying dichotomy that, in practice, is more complicated and nuanced and can be considered as a spectrum on which exploratory analysis sits at the analysis is open-ended, high-level and opportunistic end, to goal-driven, low-level and precise analyses at the other [@alspaugh2019]. In practice the divide is often blurred, and researchers will move back and forth between different types of reasoning and inference throughout the modelling process, switching from activity at one end of the spectrum to the other and back again [@alspaugh2019], with deductions leading to abductions as the analysis process proceeds [@alspaugh2019; @Prosperi2019], or even occuring together in a hybridized manner [@Prosperi2019].
+One potential objection to preregistration for modelling is that model development is an intrinsically exploratory process [@McDermott2021], while preregistration is for confirmatory research [i.e. hypothesis or theory testing, @Prosperi2019]. These conceptions of modelling and preregistration are not entirely wrong, but they are oversimplified. In practice, the distinction between exploratory and confirmatory activities is not a sharp one [@Flournoy2020; @Devezer2020; @alspaugh2019]. Modelling includes some tasks and activities that are exploratory in nature, but it can be distinguished from wholly *exploratory analysis* in that modelling is often goal-driven and directed [@alspaugh2019]. In practice, researchers move back and forth between different types of reasoning and inference throughout the modelling process, with deductions leading to abductions as the analysis proceeds [@alspaugh2019; @Prosperi2019] or even occurring together in a hybridized manner [@Prosperi2019]. This bears a strong resemblance to more general philosophical observations about the iterative nature of science [@Chang2004].
 
-When critics of preregistration for MBR describe modelling as intrinsically 'exploratory', what is seemingly being referred to is the iterative, adaptive and non-linear nature of model-development. In practice, modelling proceeds in an adaptive manner by which models are iteratively developed and refined [@Augusiak:2014gz; @Babel2019; @Bennett2013; @Bodner2020]. New analyses are often chosen based on the basis of data exploration and previous analyses of the same data [@Dwork2015], For example, modellers may perform exploratory analyses to validate distributional assumptions are met, such as no over-dispersion or zero-inflation in count-data to ensure valid inference when using particular models [@Campbell2021] ( #todo also see @alspaugh2019 for list of examples). Such practices violate a key tenet of preregistration, that is 'data-independent' analytic decision-making ( #todo #citation). Consequently, the iterative nature of model development, wherein models are continually refined through analysing and reanalysing a dataset and the model, is considered to be in conflict with the practice of preregistration; by requiring researchers to commit to a single static plan that prevents changes or deviations from the original plan it is seen to be forcing adaptive analysis to be *non-adaptive* through 'defining the entire analysis protocol ahead of time' [@Dwork2015; @Benning2019; @MacEachern2019; @McDermott2021]. In short, we can't write off preregistration for modelling on the basis that it is exploratory, because in practice it employs a range of modes of reasoning from induction, deduction, to abduction, with analysts switching between those types of reasoning or even hybridising them.
+In this iterative and non-linear process of modelling, initial analyses often inform future analyses of the same data whereby the modeller’s understanding of the problem and the model itself are incrementally adjusted in light of intermediate results from previous decision points [@hamalainen2016; @Schweinsberg2021; @Dwork2015]. Modellers are typically uncertain about which model is most appropriate for the data [@popovic2024] and are reluctant to risk registering a modelling strategy that may be incompatible with the data [@Roettger2019]. For example, modellers may perform exploratory analyses to validate distributional assumptions are met [@Campbell2021], which may result in subsequent changes to the model specification. Should data-dependent decisions like these be interpreted as violating a key tenet of preregistration, that is, failing to define the entire analysis protocol ahead of time [@Dwork2015; @Benning2019; @MacEachern2019]? Our answer to this is ‘no’, and within this paper we outline a methodology for implementing an expanded view of preregistration called *Adaptive Preregistration* [*sensu* @Srivastava2018], which captures decision points and reasoning about modelling choices, but which embraces the data-dependency practices that constitute the modelling development process. This goes beyond the work of others who offer discussion and guidance about when and how to deviate from a preregistration [@Lakens2024; @willroth2024], instead providing an approach to preregistration embodying the principles of *registered flexibility* [@Roettger2019; @Benning2019; @Srivastava2018] and iterative or *interim preregistrations* [@ioannidis2022; @hofman2023].
 
-What *is* important to consider when considering the application of preregistration within MBR is whether the reliability of MBR may be potentially threatened by the potential for Questionable Research Practices (Box 1). Evidence from ecology more broadly has revealed that the rate of QRPs is similar to those in other disciplines [@Fraser:2018cl] and while there has been little study of QRPs in MBR (except @Gould:2020ebg #todo preprint doc & cross-ref here), preliminary evidence reveals that modellers do engage in QRPs such as selective reporting, for example, they may may omit explored analysis paths from their reported analyses if they did not corroborate their conclusions [@Liu2020]. Furthermore, QRPs are likely to arise in conditions where there is incomplete and opaque reporting practices [@Fidler:2018ho], and poor model-reporting practices and an overall lack of transparency about the modelling process are endemic in MBR in ecology. Concerns about the state of model reporting in ecological modelling have been raised repeatedly, arguing that current practices are neither transparent or comprehensive [@Schmolke:2010fd; @deVos:2011uk]. Despite a number of attempts to promote thorough and transparent reporting, (e.g. @Jakeman:2006ii; @Alexandrov:2011iv; @Bodner2020) as a critical component of *Good Modelling Practice*, a culture of adequate research transparency in modelling is yet to be established and remains limited [@deVos:2011uk; @Grimm:2014es]. The lack of transparency in describing ecological models and reporting the modelling process and results provides significant opportunity for undisclosed researcher degrees of freedom, and hence, the potential for Questionable Research Practices.
-
-Although the purpose of preregistration is predominantly conceptualised in terms of distinguishing exploratory from confirmatory research (e.g. @Nosek:2018eg, @munafo2017 and #todo insert other refs), we we adopt a more general stance towards the purpose of preregistration, i.e. that preregistration may mitigate against questionable research practices by reducing the potential for cognitive biases to cause opportunistic misuse of researcher degrees of freedom. In this paper, we advocate that preregistration can and should be used in model-based research in ecology and conservation, but its particular form should reflect the norms and practices of the research context in which it is applied, in order to adequately restrict researcher degrees of freedom that may uniquely emerge within this domain-specific methodology.
-
-The goal of this study is to rethink preregistration to better suit the domain-specific challenges and methodological particularities of model-based research in ecology and conservation. Preregistration cannot simply be ported over to other disciplines and adopted as-is. Different research methodologies, and their domain-specific application across different domains and fields of study follow different analytical choices and are therefore susceptible to different QRPs. Consequently, domain-specific templates are necessary for guiding preregistration in such a way that restricts researcher degrees of freedom as they uniquely emerge within a domain or field-specific application of a particular research methodology. If we wish to adopt preregistration for ecological modelling, both the content required to be preregistered, as well as the procedure for creating a preregistration must be adapted to suit model-based research as it is undertaken in ecology.
-
-We first aimed to build a preregistration template for ecological modelling. We identified a generalised ‘modelling workflow’ that captured critical analysis decisions in the process of the model development cycle. The workflow informed the content and structure of a preregistration template to be used in model-based research. The iterative nature of model development was identified as a key barrier to implementing preregistration for modelling research because it conflicts with the current format and linear process of preregistration. To better align the internal logic of preregistration with the iterative and non-linear process of ecological modelling, we devised a methodology for implementing an expanded view of preregistration that we term *Adaptive Preregistration* [sensu @Srivastava2018]. Adaptive preregistration allows for the iterative cycle of model development to be reflected in the preregistration and better accounts for the inherently adaptive nature of model development than current approaches to preregistration in which researchers are committed to a static, unalterable and deterministic view of preregistration. Finally, to assess the feasibility and practicality of preregistration for MBR, we tested and evaluated the preregistration template and methodology using a case-study of environmental flows modelling for decision-support in Victoria, Australia.
-
-------------------------------------------------------------------------
-
-# Box 1: How Researcher Degrees of Freedom become Questionable Research Practices in MBR
-
-Modellers are faced with numerous 'researcher degrees of freedom' [@Wicherts2016] or subjective decisions during the course of modelling that may substantially impact the chosen analysis strategy, and therefore the research findings and conclusions drawn from that analysis [@Hoffmann2021; @Simonsohn2020; @Desbureaux2021; @gouldSameDataDifferent2023]. The set of all plausible or reasonable potential decisions that a researcher could take from the beginning to end of analysis has been described as the 'garden of forking paths' [@Gelman2013]. 'Many analyst'-style studies, whereby multiple separate teams of researchers independently analyse the same dataset and same research question, demonstrate that different pathways in this 'garden of forking paths' can lead to potentially conflicting conclusions [@Young2021; @Liu2020; @gouldSameDataDifferent2023].
-
-Researcher degrees of freedom arise because there is inherent analytic uncertainty in model-based research whether due to incomplete theoretical understanding of underlying ecological processes, or because modelling is an act of simplification and abstraction; there is always some degree of choice about which ecological processes and phenomena should be included in the model, how they should be represented [@Babel2019; @Getz:2017ic]. Further analytic uncertainty may arise due to uncertainty in data processing or choice about which analysis method is best [@Hoffmann2021].
-
--   *Analytic Uncertainty* [@Walker2003] talks about uncertainty specifically in terms of *model based* decision-making. #todo
-
-When researchers are faced with ambiguous decisions where there is no single decision or strategy acceptable according to scientific standards and consensus, we are likely to select the decision that results in the most 'favourable' finding with "convincing self-justification" [@Simmons:2011iw; @Hoffmann2021]. Researchers routinely execute and explore alternative analysis pathways in service of identifying the most favourable (i.e. publishable) result, selectively reporting only one or several preferred results [@Liu2020; @Simmons:2011iw]. Thus researcher degrees of freedom precipitate 'questionable' research practices, or QRPs, when they remain both undisclosed and exploited opportunistically [@Bakker2018]. Such 'questionable' research practices have been demonstrated to be surprisingly common upon admission among ecologists, with comparable rates to other scientific disciplines [@Fraser:2018cl]. Questionable research practices are categorically distinct from fraudulent practices, arising not from consciously nefarious 'fishing expedition\[s\]' [@Gelman2013], but rather because researchers are motivated actors working within a 'publish or perish' culture who are susceptible to cognitive biases and are willing to change their modelling assumptions when the results conflict with desired outcomes, for example, sincerely and self-convincingly believing that the more favourable model is superior [@Young2021].
-
-QRPs may increase the probability of false positive results, may artificially inflate effect size estimates, and ultimately reduce the replicability of published findings, while encouraging overconfidence in the precision of results and exacerbating the risk of accepting and propagating false facts [@Wicherts2016; @Hoffmann2021; @Roettger2019; @Nissen2016]. Good intentions, and simply being 'aware' of the potential for researcher degrees of freedom to lead to questionable research practices cannot sufficiently mitigate their risk [@Nosek:2018eg].
-
-------------------------------------------------------------------------
+In this study we aim to translate preregistration for application to model-based research, specifically aimed at ecology, conservation and related disciplines. Here, we first identify a generalised ‘modelling workflow’ that captured critical analysis decisions in the model development cycle and use it to build an Adaptive Preregistration template that can work for ecological modelling. We then tested and evaluated our template using a case-study of environmental flows modelling for decision-support in Victoria, Australia. This is the first attempt at developing a fully-fledged preregistration template designed for model development and evaluation that we are aware of, and we propose it can be extended to work in disciplines outside of ecology.
 
 # Methods
 
-We approached the task of translating preregistration into model-based research contexts for ecology and conservation with a user-centred design (UCD) framework. UCD is a philosophy for designing processes, services or products that account for user requirements at all stages of the design process so that the resource generated by this approach is effective and usable for specific people in specific contexts [@Pavelin2012]. Because it is difficult to predict how users will actually engage with a resource [@Pavelin2012] and a designer's intention for preregistration may conflict with the user's purpose and undermine the overarching goal of preregistration [@Pu2019], we heed the advice of Pu et al. [-@Pu2019], who recommend treating preregistration as a UCD problem so that preregistration can effectively meet its intended objectives, despite UCD being typically used within software engineering domains, rather than academic domains.
+We modified a typical preregistration into model-based research contexts with a user-centred design framework, where users were engaged at all stages to produce an implementation of preregistration that is fit for purpose [@Pavelin2012, Fig. 1].
 
-We borrow from the methodology proposed by Pavelin et al. [-@Pavelin2012] to design, test and refine a preregistration template suitable for ecological modelling, and a methodology for preregistering model-based research (@fig-UCD). The methods description is structured following the key steps illustrated in @fig-UCD.
+<!--# Insert Figure 1 Here -->
 
-![Insert caption. Number each step so i can refer to it in the headings and text below. Make it clear in the figure that we're not doing the build interface and conduct usability testing component of implement, nor the evaluate and iterate. we throw that out to the community of practice to do that part.](images/Pasted%20image%2020240314123346.png){#fig-UCD}
+Figure 1 Process for translating preregistration to ecological modelling research [adapted from @Pavelin2012]. Note that the ‘Evaluate and Iterate’ component of the process was not undertaken in this study
 
-## Define Vision & Objectives
+## Problem Formulation: Defining Vision & Objectives for a preregistration template for model-based research
 
-> Define the goals of the research under development and identify the audience
+We first specified the research context, purpose, target users and use-cases, per (Pu et al. 2019a; Pavelin et al. 2012). Our context is model-based research, defined broadly as any research that uses quantitative modelling to answer its research question (Brudvig 2017). The purposes of the preregistration template and methodology are to:
 
-The first step in a UCD approach is to articulate the goals, objectives and target audience of the resource, consequently we define the intended purpose of the preregistration template and methodology, the community of users, as well as their research contexts and use-cases. Finally, we explicate the aspirations and desirable attributes of the template and methodology. Much like in 'Good Modelling Practice', articulating the overarching purpose, intended audience, as well as the objectives and aspirations will guide the development and evaluation of preregistration for model-based research in ecology and conservation, with important implications for the design of the template -- from its structure, content, user-interface and broader workflow in which it is designed to be used.
+1.  **Delimit 'researcher degrees of freedom'** [@pu2019a], to mitigate the the risk of questionable research practices when conducting model-based research in applied ecology and conservation.
+2.  **Increase ‘research transparency’ of ecological modelling,** including both:
+    1.  *production transparency* — including research artefacts like open-access data and materials, or data collection procedures [@Lupia2014],
+    2.  *analytic transparency* — a complete account of how analytic conclusions are drawn from the data [@Lupia2014] where model choices, steps in the modelling process, assumptions and expectations about model outputs are clearly articulated [@Bodner2020].
 
-### Articulating Intended purpose of preregistration template & methodology
+We specified two use-cases for our Adaptive Preregistration template:
 
-We define the purposes of the template as:
+1.  Study authors or modellers seeking to preregister their modelling study,
+2.  Editors, reviewers, and/or readers of the completed preregistration [@Pu2019; @pu2019a], who are tasked with verifying that analyses and findings reported in the final manuscript are consistent with the preregistered analysis plan.
 
-1\. *To delimit researcher degrees of freedom* \> when conducting model-based research in applied ecology and conservation so as to mitigate the risk of questionable research practices in order to improve the reliability and credibility of this research.
+Existing preregistration formats are designed primarily for study authors; they are static text-based documents that do not easily facilitate ‘preregistration checking.’ We designed our template to address this.
 
-2\. *Increase research transparency* \> of model-based research in ecology and conservation. *Research transparency* refers to both production transparency — which includes research artefacts like open-access data and materials, or data collection procedures — and analytic transparency — which describes a complete account of how the analytic conclusions are drawn from the data [@Lupia2014].
+## Designing the General Modelling Workflow
 
-### Target user community and their research-contexts
+We conducted a literature review to identify a modelling workflow suitable for application to a range of different modelling goals, e.g. exploration, inference and prediction, including both explanatory and anticipatory predictions [@Tredennick2021; @Mouquet2015; @Maris2018; @Shmueli:2010ec]; research contributions, e.g. development of new methods, or application / extension of existing methods and model transfers [@Yates2018]; types of models, e.g. phenomenological vs. mechanistic [@Connolly2017; @White2019; @lewis2023], across basic and applied contexts and across fields / disciplines in ecology and conservation [@Carmel2013; @Brudvig2017] while offering prescriptive guidelines based on ‘Good Modelling Practice’ [@Augusiak:2014gz]. The final output was a workflow reflecting a balance between idealised and actual modelling in practice.
 
-We aim for the template and preregistration process developed in this study to be used for model-based research, which we define as any research, empirical or applied, that uses quantitative modelling to answer its research question [@Brudvig2017], where *quantitative modelling* may be defined as any modelling that "describes and/or forecast(s) the behaviour of a system using mathematical and statistical concepts, and whose parameters and their relationships are expressed as quantities" [@Garcia-Diaz2019].
+We developed an Adaptive Preregistration methodology, so that users have the flexibility to adapt the preregistration template to their own needs and processes [see user guide <https://egouldo.github.io/EcoConsPreReg/>, @gould2024]. This can be facilitated in two ways: 1). The preregistration author can supply analytical or modelling heuristics or strategies that depend on the outcome of the previous decision-point or analysis, for example, decision-trees for certain points in the analysis or items in the preregistration template could be preregistered prior to analysing [@Baldwin2022a]. 2) using interim preregistrations that mark the transition between phases of modelling and analysis as different parts of the data are observed [@Srivastava2018].
 
-We define model-based research loosely in order to capture the breadth of different modelling goals (e.g. exploration, inference and prediction; @Tredennick2021) and type of research contributions (e.g. development of a new method, etc #todo see @Moallemi2019 and across both pure and applied ecological modelling.
+Modellers can preregister ‘plans to deploy flexible strategies’ [@Srivastava2018] describing heuristics consisting of multiple analysis or modelling strategies, whose execution depends on the outcome of previous decision-points or analyses. For example, the modeller can preregister a ‘decision-tree’ [@Baldwin2022a] consisting of pre-defined rules about when a particular modelling strategy or decision should be implemented. Modellers can specify a ‘flexible’ strategy within their preregistration when faced with methodological or analytic uncertainty that cannot be resolved without observing parts of the data or by engaging in preliminary analyses, model checking, or other data-dependent decisions.
 
-### Specifying Preregistration use-cases
+The modeller may follow an iterative process of preregistration in parallel with modelling, consisting of interim preregistrations that mark phases of modelling and analysis as different parts of the data are observe [@Srivastava2018]. As they proceed through the model development process the researcher shifts from ideation, preregistration and execution of the preregistered analysis plan and back again, generating interim preregistrations at different points within the model development process, depending on observed outcomes of the flexible heuristics described in the interim preregistration. The analyses executed in practice will depend on the observed outcomes of the registered flexible analyses.
 
-Pu et al. [-@Pu2019] describe two key use-cases of preregistration, depending on the role assumed in interacting with the preregistration. Users have different requirements of preregistration depending on the role that they assume, that is, study authors and modellers have a different use-case than reviewers, editors and readers, however this latter use-case is often not explicitly designed and accounted for in current platforms/infrastructure/processes [@Pu2019]. Reviewers and editors are usually tasked with the process of 'checking' the preregistration, comparing the final manuscript to its preregistration and verifying that the preregistered analyses are conducted and reported as specified [@Pu2019]. However existing formats are designed primarily for the use-case of the author - they are text-based static documents that are ill-suited to checking the reported study against the preregistration.
+Last, to facilitate transparency and preregistration checking of flexible modelling and analysis strategies, the results of any final and preliminary analyses must be linked back to the preregistered flexible strategy such that the link between a particular triggered analysis decision, and the analysis outcome that triggered the decision is explicit. Fig. 2 demonstrates a generalised process for using git and GitHub as the vehicle for transparently documenting Adaptive Preregistration of a modelling study. The procedure leverages [GitHub’s tag and release feature](https://help.github.com/en/github/administering-a-repository/releasing-projects-on-github) in conjunction with [Semantic Versioning](https://egouldo.github.io/EcoConsPreReg/(https:/semver.org/)) to track, document and collaborate on changes to the preregistration document. The preregistration is stored alongside modelling code and results with GitHub issues [see @braga2023 for explanation] tracking analysis tasks and results for a discrete task described in the preregistration and providing the opportunity to document interpretation of discussion informing the rationale for potential changes or updates to the preregistration that generate interim preregistrations. The use GitHub issues is particularly handy for registered flexible analyses: the outcome of the registered flexible analysis is recorded within that issue, linked to the described heuristic, and modellers can use the discussion features to document interpretation of those results, and provide interpretation to explain which registered decision alternative is to be selected in light of those results.
 
-Although preregistration authorship is the primary target use-case of the preregistration template and methodology developed in this study, we aim to consider and incorporate features into the preregistration process, such as template formatting, that will facilitate preregistration checking to also address non-authorship use-cases.
+## Designing the Preregistration Template
 
-### Articulating desirable attributes of the preregistration template and adaptive preregistration methodology
+We facilitated a workshop with 10 ecologists and ecological modellers. A key task was to identifycommon modelling workflows and critical decision-steps in model development. ‘Critical’ decision-steps are points in the modelling process where researchers, or modellers, make analytical decisions that could change the output of the analysis. In this activity, workshop participants first individually reflected on their own scientific process for a recent or memorable research project, listing the steps undertaken throughout the process. Next, participants collaboratively mapped the decision steps in their own personal modelling workflows onto a pre-prepared modelling workflow template (<https://osf.io/fgd23>), informed by our general workflow. We then collaboratively reviewed and refined the modelling workflow into a standard set of key modelling phases and commonly implemented decision steps.
 
-The preregistration template should capture critical decision-points that may influence the overall model and analysis as well as any recommendations or decisions drawn from analysis of the model, thus delimiting researcher degrees of freedom at these junctures in the modelling decision process. The structure and content of the template is necessarily opinionated, encouraging Good Modelling Practices, while reflecting community norms and practices in model-development while still meeting the objective of mitigating the risk of Questionable Research Practices by delimiting researcher degrees of freedom. The template needs to be generalisable enough to apply to a range of common modelling purposes, methods and research contributions, and flexible enough that if a particular decision is not applicable for the planned study, that those items may be removed or altered, and other items may be added onto the template.
+<!--# Insert Figure 2 - Adaptive Preregistration Workflow -->
 
-Secondary to the aim of mitigating QRPs, is that the the template should also enhance the research transparency of the preregistered study, ensuring that analysis choices are documented with sufficient transparency to facilitate the reader of the preregistered completed study in making informed assessments about the credibility and reliability of the model and any associated analysis and recommended interventions. Borrowing from @Bodner2020's framework to increase the accuracy, reliability and transparency of predictive models, in order to increase transparency of model-reporting, the template should explicitly outline critical model choices and their assumptions, steps in the modelling process, and explicit expectations about the outputs and analysis of the model.
-
-**Adaptive Preregistration Methodology**
-
-The Adaptive Preregistration Methodology aims to capture the entire modelling process, including model development and construction, rather than beginning at the point of analysing a pre-existing and parameterised model for deductive inference / prediction. Critically, the methodology must not preclude the iterative and adaptive nature of model construction, while simultaneously restricting the types of data-dependent analytic decision-making that may compromise the reliability and validity of the model and its contingent analysis and conclusions.
-
-## User Research & Analysis
-
-> Characterise users and their needs
-
-On the 4th and 5th of March 2020, we facilitated a series of structured activities at the Arthur Rylah Institute for Environmental Research which aimed to inform the development of two preregistration templates, one for field-work and sampling design, the other for modelling and data-analysis. We split the activities into two groups, to better focus discussion for each of these templates.
-
--   [ ] <mark style="background: #FFF3A3A6;">Note: might need to reframe this and omit the field study stuff, but should probably state that we did this but decided not to pursue?</mark>
-
-The objectives of the collaborative workshop activities were to aid in: 1. Understanding how modelling is done in practice to inform and tailor the preregistration templates to adequately capture key decision-points in the scientific modelling process; 2. Understanding how science in practice -- whether due to logistical, technical, feasibility or normative constraints -- differs from some idealised practice, in order to: 3. Identifying challenges and roadblocks to the use and uptake of preregistration in among ecological modellers, both in empirical and applied research contexts; and to 4. Using the above knowledge to inform the preregistration template and process design so they meet their intended purpose, and are adopted by our target user community for their particular use-cases.
-
-### Workshop 1: Identifying Ecological Modelling Workflows, Norms, and Practice
-
-The objective of this workshop was to identify modelling workflows that capture critical decision-steps in the model development cycle that should be included in a preregistration template. By "critical", we mean that without these decision-steps being included, the template would not adequately constrain researcher degrees of freedom nor b) transparently document the analytic decision-process. The activity consisted of two-parts, first, we individually reflected on our scientific process for a recent or memorable research project, listing the steps we undertook from the beginning to end. In the second part of this exercise, we came together as a group to collate each of the steps in our personal workflows onto pre-prepared workflow template (insert specific OSF link to the document, Supp Mat 1). The template consisted of several key 'phases' of the modelling process, with commonly implemented decision-steps grouped under each phase. The development of this modelling workflow sheet was derived from previous work by Gould et al. *in prep* (insert link to paper preprint) and is outlined in Appendix 1 ( #todo insert ). We sorted and categorised each decision-step in our personal workflows as belonging to a particular workflow phase. Next we grouped similar decision-steps that could be included as a single item on a preregistration template. At the end of this process we reviewed the suggested phases of the workflow to assess whether phases needed further discretisation, aggregation, removal, or amendment.
-
-### Workshop 2: Understanding ecology- and modelling-specific challenges to adopting preregistration in research practice
-
-This second activity aimed to identify critical challenges and roadblocks to undertaking preregistration in ecology and conservation in general, and for model-based research in particular. We facilitated a discussion structured around a series of pre-prepared questions and talking points informed by recent debates about preregistration in the literature ( #todo Supp Mat 1). These talking points were chosen with the aim of identifying problems in the content and or structuring of the phases and decision steps that were collectively identified in Workshop 1, as well as any conceptual or philosophical issues with preregistration in ecology, conservation, and in particular modelling, that might impact on the template structure, content and procedural implementation of preregistration. Discussion points included the following: - What should a research workflow look like for a modeller in an applied ecological setting who wishes to preregister their work? - What barriers are there for preregistering model-based research? - How do we accommodate the iterative cycle of model development into the preregistration process? - At what stage in a modelling or structured decision-making process should preregistration begin? - should we and how can we change the medium of the template and/or archiving platform to accomodate any roadblocks? - How could we change the medium of both the template and the archiving platform to accommodate these issues? - What procedural and or technical solutions could we implement to address these roadblocks to preregistration? - What decision-tools could be used to aid in completing a preregistration? - What sort of parsimony should we aim for in terms of the resolution of the templates and therefore their applicability across different methodologies?
-
-### Analysis of Workshop Outputs & Design
-
-> Analyse outputs of user-research workshops to inform the design of resource mockups
-
-**1. Identify Scientific Workflows for ecological modelling, both real/in-practice and idealised.**
-
-The goal of this analysis task was to describe a generalised workflow of the modelling cycle that will underpin the structure and content of the preregistration template. We used a combination of inductive and deductive coding ( #todo is this what it is called and #citation) using the qualitative coding software ATLAS.ti [-@atlasTI] to analyse the workshop outputs and generate a model of scientific workflow for model-based research that would constitute the presumed scientific workflow that would be used to guide the structure of the preregistration template. We collated and coded the workshop outputs using. All workshop outputs can be found here ( #todo Link to Workshop Outputs OSF repository), and the coded analysis can be found here ( #todo link to analysis files / screeen caps).
-
-A preliminary idealised scientific workflow for ecological modelling research was synthesised after reviewing the literature on ‘good modelling practice’ and structured decision-making literature in ecological management. Steps in the workflow were coded and broken down into ‘phases’ consisting of ‘steps’ and ‘sub-steps’, in line with the ontology we specified earlier for translating a modelling workflow into a preregistration template (section link), <mark style="background: #FF5582A6;">(insert link to appendices or just present the final?)</mark>. Each decision-point in the personal modelling workflows generated from activity one of the collaborative workshop were coded as belonging to one of these phases, steps and sub-steps. We revised the coding structure (inductively is this the word?), according to patterns and themes identified across multiple personal workflows. This workflow is used to provide structure and content to the preregistration template ( #todo insert link to this workflow).
-
-**2. Translating Workflows into Preregistration Templates**
-
-We translated the model-based workflow identified in part one of workshop analysis into a text-based preregistration template. Reflecting on existing templates ( #todo link to OSF repository of templates page, and others, namely secondary data analysis, see Olmo's links), we identified common elements / units of preregistration templates that we mapped onto the generalised modelling workflow identified in part 1 of workshop outputs analysis. Following the features of a good guideline identified by Moallemi et al. [-@Moallemi2019], we provide examples of choices or illustrations to clarify each step of the preregistration, especially for phases or steps in the the modelling process that are semantically, epistemically and/or philosophically contentious or ambiguous (link to paper describing contentious issues in modelling history)\_. We synthesised the following ontology with which to build our preregistration template: 1.        Decision Phase - each has a “title” and “description” or “definition”, steps are grouped under phases. (Note, that these are being scrapped from the template and are turned into tool-tips for formatting) 2.        Decision Step - each has a “title” and “description” or “definition” choices are grouped into ‘steps’, which corresponds to an activity or set of related activities in a scientific workflow. (again, these are being scrapped and turned into tool-tips. CHECK THIS, it's changed) 3.        Choices —\> each ‘choice’ corresponds to a uniquely numbered item on the PRT requiring a response from user. The style should be in the form of a directive or a question. E.g. “explain how you will do xyzzy”. Or “What performance measure will you use for assessing ‘goodness of fit’?”
-
-**3. Identifying challenges and solutions for implementing preregistration in model-based research**
-
-We analysed the outputs of Activity 2 in the collaborative workshop identifying barriers and solutions to undertaking preregistration in model-based research and to broader adoption of preregistration in the modelling community of practice. The analysis of Activity 2 in the collaborative workshop was used to inform the design of a suitable preregistration procedure for preregistering MBR in the domain of ecology.
-
-## User Testing
-
-> Build mock-ups of the product and test with users
-
-While user-testing is an essential step in the UCD framework, we also concur with @Devezer2020 that open-science reforms should be evaluated against their stated objectives. We therefore preregistered a real-world model-based research problem as a case-study for evaluating and testing the preregistration templates and proposed adaptive preregistration methodology.
-
-### Case Study
-
-We preregistered a real-world study of vegetation responses to environmental flows in Victoria, Australia. This study is one component of a larger set of studies within the Stage 6 Victorian Environmental Flows Monitoring and Assessment Program (VEFMAP), managed by Department of Energy, Environment and Climate Action (DEECA) and delivered through the Arthur Rylah Institute for Environmental Research. The case-study analysis aimed to evaluate the effectiveness of environmental-flows on riparian vegetation with the following objectives: - Quantify short and medium-term vegetation responses to individual flow events and regimes.  - Describe detailed vegetation trends associated with season, flow, rainfall and other factors such as livestock grazing and exotic vegetation  - Quantify the effect of various factors on vegetation in order to guide future management expectations and planning.
-
-Details of the study background, methods and results are described in Appendix A4.
-
-### Evaluation Criteria & Rationale
-
--   [ ] *Evaluation Criteria and Rationale (should this be moved to earlier aims section?* Seems like there's a little bit of overlap between the two...
-
-The content of the template should be 'parsimonious' in that the included items within the template should adequately a) constrain researcher degrees of freedom and by being specific, precise and exhaustive [@Wicherts2016] b) facilitate transparent documentation of the modelling process and analytic decisions during model development and analysis, while c) not being too detailed to the point that the preregistration is too difficult and time-consuming to complete.
-
-Many modellers [e.g. @MacEachern2019] #todo #citation are concerned about preregistration making modelling a more difficult task than it already is, and hampering the ability to meet project deadlines, especially in applied settings in which models directly underpin decisions. Modellers already struggle with sufficiently documenting models during publication and reporting , and there is a resource cost to increasing transparency of model-reporting [@deVos:2011uk]. Consequently we will also assess the preregistration template and process on its perceived feasibility and practicality.
-
-### Evaluation Method
-
-Rather than attempting to reconstruct the process of creating the preregistration through using interview questions alone and digging back through the version history of a completed preregistration [e.g. @Pu2019], we aimed to capture the analysts 'thinking in the moment' by utilising the version-control and collaborative project management features of Git and GitHub (Ben, Smith, and Bailey 2018; Blischak, Davenport, and Wilson 2016) as a tool for documenting both the analytic decisions of the researcher, and for using the preregistration process itself to ‘live-develop’ the template template. For example, if it turned out that we had missed an important item, or perhaps the phrasing of an item or the order and structure of the template needed to change whilst in the process of completing the preregistration, the suggested change, and its justification would be both recorded in GitHub and linked to the actual preregistration.
-
-Finally, we supplemented this ‘in situ’ testing and evaluation process with follow-up semi-structured interviews on 9th May 2024 in order to capture more detailed reflections of the analysts. Lead analysts of the case study were often under strict time constraints for meeting deliverables on the project, and the process of preregistration was a new and unfamiliar task, so capturing reflections on the broader preregistration process during preregistration and analysis of the case-study was not always possible.
-
-## Implementation
-
-> Implement the product, write technical implementations and build the product
-
-We wrote the initial template as a text-based document in Rmarkdown. The initial template used to preregister the case-study underwent a series of changes throughout the preregistration process, including changes to the organisation, content, help-text and visual appearance. The final preregistration template is made available as a quarto markdown extension ( #citation & link to doc) that can be installed and used to populate a new preregistration document for a new modelling study, and as a form that can be used with the `preregr` R package [@Gjalt-Jorn2023].
-
-To aid the case-study analysts in using the adaptive preregistration methodology to preregister their study, we wrote a detailed user-guide outlining the key principles of adaptive preregistration and a protocol for implementing adaptive preregistration using git and GitHub. The guide is presented as a publicly available website and also includes the template.
-
-# Results
-
-## User-research and analysis
-
-The outputs and analysis for both Workshop 1 and 2 is archived at (insert OSF link). The modelling workflow generated from the analysis of Workshop 1 that informed the development of the initial preregistration template is archived at the same link. During user-testing with our case-study, the preregistration template structure, and therefore its underlying modelling workflow on which it is based underwent, a series of changes. Consequently we present the revised workflow alongside the refined preregistration template in section X below.
-
-Discussions from Workshop Activity 2 focussing on challenges to preregistering MBR revealed that the iterative nature of model development is a significant barrier to adopting preregistration for model-based research. Modellers felt that adopting preregistration in their workflows was impossible because preregistration was understood to be a process that precludes iterative model development because its inner logic presumes a linear research workflow premised on hypothesis-testing research, and because it requires researchers to confirm an unalterable version of the analysis plan prior to collecting or analysing the data [@Pu2019; @mertens2019].
-
-The key tenets of preregistration are based on NHST-focused accounts of questionable research practices that prescribe the principle of 'decision-independence' where analysis decisions are made independently of and *a priori* to analysing the data [@Srivastava2018; @Gelman2013]. However, analysts reflected on their personal modelling workflows and described situations in the modelling process that may violate the principle of 'decision-independence' that could not be avoided and were considered to be an intrinsic feature of the model-development process. During modelling a researcher will almost always engage in state-dependent or data-dependent decision-making -- that is, decisions about whether to alter the model in a subsequent round of model development depend on the results of model testing, evaluation and analysis at the end of the previous iteration of model development.
-
-Very often in modelling, there are decisions that are necessarily dependent on the outcome of previous analytic decisions in the modelling workflow [@Liu2020]. Firstly, preliminary or investigatory analyses might need to be conducted before being able to specify future decision-steps in the analysis plan. For example, modellers might need to check the distribution of particular variables in order to determine how to specify the model, perform assumption checks, or check for collinearity or spatial autocorrelation. Secondly, data-dependent decisions from model checking may justifiably result in changes to either the analysis or to interpretations of the model [@Srivastava2018]. For instance, inspection of the residuals and other model checking tests may force the modeller to return to earlier decision-points and change the planned analysis or model. Other times, the planned analysis and specified model may simply not converge, or the model is saturated and runs out of variation to apportion such that the model and or the model fitting algorithm must be respecified and re-implemented. Other times, the modelling process itself may generate knowledge and learning about the system, and the model structure changes throughout the process of model development.
-
-Data-dependent decision-making is not necessarily intrinsically *questionable*, but it does have the *potential* to reduce the reliability of the model and its findings if they are exploited in service of artificially inflating the accuracy or precision of the model, its predictions or evaluation tests to the effect that the model is perceived to be more credible than it would be if that practice did not occur -- essentially data-dependent decisions that lead to consumers of the model placing unsubstantiated belief in the reliability, validity and utility of the model and its outputs are questionable [@Gould:2019ebg] and can be mitigated through the practice of preregistration.
-
-The concept of preregistering all modelling choices *a priori* was seemingly overwhelming for analysts. They described situations where decisions are too difficult to anticipate, or cannot be made in advance, particularly for decisions occurring at the later phases of model construction and development process (Figure 2, TBC), where downstream decisions depend on the outcomes of earlier decisions and outcomes of modelling analyses. Some decisions might not be able to be specified on the first attempt at writing the preregistration until the model is fully or at least close to fully specified, for example, specifying precisely what and how sensitivity analyses or uncertainty analyses will be conducted.
-
--   Finally, sometimes there are some decisions that are too difficult to anticipate, or simply cannot be made in advance [@Srivastava2018].
--   I think Pu or Pavelin describe the same thing... they coin a name for these types of decisions too but I can't find it.
-
-## Design
-
-### Adaptive Preregistration: A methodology for preregistering model-based research
-
-In order to address the disjuncture between the iterative nature of model development and the single-use, deterministic preregistration procedure, we propose an expanded view of preregistration, *adaptive reregistration*, which allows for some degree of flexibility and adaptivity in the analysis workflow, while still mitigating against unconstrained and undisclosed researcher degrees of freedom. Adaptive preregistration breaks with the current preregistration workflow, wherein the author writes a single deterministic preregistration containing a single deterministic choice for every decision-step and the research shifts from ideation, to preregistration to execution of the plan (fig or #citation to ref?). Instead, in adaptive preregistration, as the modeller proceeds through the model development process, they will transition from ideation, preregistration, execution, and back to preregistration and execution again. The modeller may repeatedly cycle through the preregistration process rather than proceeding in a linear fashion. Two features facilitate this process: 1. An *adaptive preregistration* contains 'plans to deploy flexible strategies' [@Srivastava2018] whereby the preregistration author can supply a heuristic consisting of different analysis or modelling strategies whose execution depends on the outcome of the previous decision-point or analysis, for example, decision-trees for certain points in the analysis or items in the preregistration template could be preregistered prior to analysing [@Baldwin2022a]. 2. The preregistration may be iterative and consist of interim preregistrations that mark the transition between phases of modelling and analysis as different parts of the data are observed [@Srivastava2018].
-
--   [ ] Other refs to chase up... Benning, Schuwirth, Latihan, hamalainen, hofman, reusable holdout paper, Dwork?
-
-#### Preregistering Flexibility
-
-When preliminary analyses, model checking or other data-dependent analytic decisions are to be preregistered, the modeller can specify a 'flexible strategy' within their preregistration. This is particularly relevant for when it is uncertain as to whether the planned analyses will be appropriate for the data [@Baldwin2022a], which is a commonly encountered issue in ecological modelling, because often-times the model we might ideally want to fit that best represents our conceptual model of the target phenomena cannot be fitted due to a paucity of data ( #todo citaiton for this? was a motivating factor for the VEFMAP project). Like existing approaches to preregistration, the registered heuristic is still a deterministic one, but there there may be multiple potential choices rather than one, and their realisation depends on the outcome of an earlier decision step or analysis.
-
-To preregister flexibility, there are some critical requirements: 1. State what quantity or outcome needs to be known in order to move forward with the modelling and analysis, and 2. explain what test or analysis will be performed to obtain this quantity or outcome, and which parts of the data will be used in this analysis, and 3. describe how the results will be interpreted, linking each potential decision to its outcome trigger, where possible.
-
--   [ ] Might want to give an example of this...? Or could give example in reporting the case study and cross-ref that? Alternatively, could put an example in the guide, and send readers there? I think second option is best.
--   [ ] SEE ALSO OTHER refs in this vault, the idea of registering flexibility e.g. using decision-trees is not new.. which paper was it?- e.g. BENNING?
-
-#### Interim Preregistrations
-
-Just as model development proceeds in an iterative process of preregistration, so too does the process of adaptive preregistration. As the modeller proceeds, they will implement parts of the analysis plan that were specified in the previous preregistration step, letting the outcomes of that preregistered analysis inform either the specification or the realisation of the pre-registered specification in the next step of the analysis workflow (@fig-adaptive-preregistration).
-
-The initial preregistration should have as many items as possible, if not all items, in the preregistration template answered. If an item cannot be answered with a single decision because that decision is data-dependent, then the analyst should register flexibility for that item following the aforementioned requirements. Depending on observed outcomes of the registered decision-trees or flexible heuristics, interim preregistrations are created at multiple points in the model development process, each time there is an addition or amendment to the plan.
-
-### Integrating additional data handling and modelling practices
-
-We propose additional data handling and analysis techniques be embedded into the both the modelling and adaptive preregistration processes to help avoid the pitfalls of data-dependent decisions, such as partitioning the data to create a holdout dataset or using blinded datasets for data exploration.
-
-Partitioning data into train/test splits is a modelling technique that has been suggested for incorporation into preregistration for predictive modelling [@hofman2023] or other non-hypothesis testing research [@Baldwin2022a; @Dwork2015]. We suggest that activities considered as typically 'exploratory' partition the data into 'training' and 'holdout' datasets where the training dataset can be used to inform potential models or analyses that will be preregistered in later versions. The holdout set may then be used for components of the modelling process that align more closely with confirmatory modes of inquiry, such as model evaluation or testing, forecasting, hind-casting and other predictive methods [@lewis2023; @Pu2018; @hofman2023] #todo add pred modelling citations, e.g. @Houlahan:2016fl etc. see memo for Lewis et al. ). However, partitioning ecological data is not always feasible due to small datasets, studies that are limited in duration or spatial extent compared to the target phenomena, or data patchiness due to the logistical and financial challenges to data acquisition in ecology [@Wood2020].
-
-In these cases where preregistration of flexibility and data partitioning is not feasible or where the analyst may need to check the data in order to pre-specify a decision, e.g. checking for data distributions or missingness, blinded datasets, such as those generated by data scrambling [@Baldwin2022a]. Data blinding can prevent data-peeking that may influence downstream modelling decisions while aiding the modeller in making informed analytic decisions that are appropriate for the dataset on hand.
-
-Finally, oftentimes interpretation of the model and its outputs are based on subjective assessments, such as visually interpreting plots of model fit quality for indications of issues such as heteroscedasticity, interpreting the results of model performance where there is no clear decision threshold, or interpreting model performance across a suite of different metrics and indicators. We encourage analysts to follow Baldwin et al.'s [-@Baldwin2022a] suggestion whereby both the research questions and the conditions for interpretation are preregistered. We have embedded this approach to preregistering MBR into our template as well, by including prompts within help and explanatory text that direct the researcher to ensure that the con
-
-### Implementing Adaptive Preregistration with GitHub
-
--   [ ] #todo insert summarised version of guide
-
-### Draft Template & Modelling Workflow
-
-We developed a draft template for preregistering model-based research in ecology and conservation that was tested and further refined using our case-study of adaptive preregistration ( #todo Appendix A2). We report the final preregistration template refined through the case-study, as well as the refined description of the modelling workflow underlying the preregistration template.
-
--   [ ] How do I present this in the manuscript?? Do I just refer to this in the supp mat? Feels important to present but this manuscript is already LONG!
--   [ ] Also need to either make fig or table based on preregistration template for the underlying model development workflow underpinning it.
-
-## User Testing
-
-Model development and adaptive preregistration processes occurred in tandem, and were implemented using git and GitHub, Leveraging GitHub's version control features. This approach is summarised in the guide <https://egouldo.github.io/EcoConsPreReg/adaptive_preregistration_implementation.html,> [@gould2024]. The GitHub repository is located at <https://github.com/egouldo/VEFMAP_VEG_Stage6,> but is currently embargoed as of today (30 April 2024).
-
--   [ ] #todo consider whether we explain the GitHub procedure here... in the 'Design' section, in an appendix section, OR leave out and just reference the website and zenodo link. I DO think however, that it has some key features that map onto the adaptive preregistration process that I want to highlight. So perhaps we can present in the 'Design' section.
-
-### Final Template Version & Changes
-
-```{r}
-#| label: preregistration-template-final
-#| eval: true
-#| echo: false
-#| message: false
-
-library(tidyverse)
-library(gt)
-library(gtExtras)
-
-prereg_tbl_data <- 
-  readr::read_csv(
-    here::here("outputs/quarto_preregistration_template.csv")) %>% 
-  drop_na(phase) %>% 
-  mutate(across(everything(), ~ stringr::str_remove_all(.x, "\\*")),
-         phase = forcats::as_factor(phase), 
-         step = forcats::as_factor(step), 
-         substep = forcats::as_factor(substep)) %>% 
-  mutate(phase_id = cur_group_id(), .by = phase) %>% 
-  group_by(pick(starts_with("phase"), 
-                starts_with("step"), 
-                starts_with("substep"),
-                -ends_with("_id")), 
-           preregistration_item) %>% 
-  reframe(preregistration_subitem = list(preregistration_subitem), 
-          subitem_na = map_lgl(preregistration_subitem, rlang::is_na)) %>% 
-  group_by(pick(starts_with("phase"), 
-                starts_with("step"), 
-                starts_with("substep"),
-                -ends_with("_id"), 
-                "subitem_na")) %>% 
-  reframe(preregistration_item = 
-            case_when(subitem_na ~ list(preregistration_item), 
-                      .default = map(preregistration_item, list)),  
-          preregistration_subitem = 
-            case_when(subitem_na ~ list(NA), 
-                      .default = map(preregistration_subitem, 
-                                     ~ gluedown::md_list(.x, type = "bullet", marker = "-")))) %>% 
-  rowwise() %>% 
-  mutate(preregistration_item = 
-           list(gluedown::md_list(preregistration_item, type = "bullet", marker = "-"))) %>% 
-  arrange(phase, step, substep) %>% 
-  ungroup %>%  
-  mutate(step_id = 1:n(), 
-         step = case_when(step_id == 1 ~ step, .default = NA),
-         step_description = case_when(step_id == 1 ~ step_description, .default = NA),
-         .by = c(phase, step)) %>% 
-  mutate(substep_id = 1:n(), 
-         substep = 
-           case_when(substep_id == 1 ~ substep, 
-                     .default = NA),
-         substep_description = 
-           case_when(substep_id == 1 ~ substep_description, 
-                     .default = NA),
-         .by = c(phase, step, substep)) %>% 
-  mutate( phase = gluedown::md_bold(phase),
-          phase_description = gluedown::md_italic(phase_description),
-          across(ends_with("_id"), as.numeric)) %>% 
-  rowwise() %>% 
-  mutate(step = 
-           forcats::fct_relabel(step, 
-                                .fun = ~ if(!rlang::is_na(.x)) gluedown::md_bold(.x)),
-         substep = 
-           forcats::fct_relabel(substep, 
-                                .fun = ~ if(!rlang::is_na(.x)) gluedown::md_bold(.x)),
-         step_description = 
-           forcats::fct_relabel(step_description, 
-                                .fun = ~ if(!rlang::is_na(.x)) gluedown::md_italic(.x)),
-         substep_description = 
-           forcats::fct_relabel(substep_description, 
-                                .fun = ~ if(!rlang::is_na(.x)) gluedown::md_italic(.x))) %>% 
-  ungroup %>% 
-  select(starts_with("phase"), 
-         starts_with("step"), 
-         starts_with("substep"), 
-         ends_with("_item"), 
-         ends_with("subitem"), 
-         everything(),
-         -subitem_na) 
-
-prereg_tbl_data %>% 
-  gt::gt(
-    groupname_col = c("phase", "phase_description"),
-    rowname_col = "step",
-    row_group.sep = ": ") %>% 
-  gt::cols_hide(ends_with("_id")) %>% 
-  gt::sub_missing(missing_text = "") %>% 
-  gt::cols_merge(columns = c("step", "step_description"),
-                 pattern =   "{1}\n {2}",) %>% 
-  gt::cols_merge(columns = c("substep", "substep_description"),
-                 pattern = "{1}\n {2}") %>% 
-  gt::text_transform(fn = gt::md, 
-                     locations = gt::cells_stub()) %>%
-  gt::text_transform(fn = function(x) map(x, gt::md), 
-                     locations = gt::cells_row_groups()) %>% 
-  gt::text_transform(fn = gt::md, gt::cells_body()) %>% 
-  gt::sub_missing(missing_text = "") %>% 
-  gt::cols_align(align = "left") %>% 
-  # gt::cols_label(substep = "Substep") %>% 
-  # gt::tab_spanner(columns = starts_with("preregistration_item"), 
-                  # label = "Preregistration Items", gather = TRUE) %>% 
-  gt::tab_options(column_labels.hidden = TRUE, table.width = 10,table.font.size = 10) %>%
-  gt::opt_stylize(2,color = "cyan") %>% 
-  gt::tab_style(style = gt::cell_text(v_align = "top", whitespace = "break-spaces"), 
-                locations = cells_body()) %>% 
-   gt::tab_style(style = gt::cell_text(v_align = "top", whitespace = "break-spaces"), 
-                locations = cells_stub()) 
-```
-
-The template used in the VEFMAP study underwent a series of changes to both its content and visual formatting during the analysis to better suit the needs of the modellers. The preregistration template was written as an *Rmarkdown* document saved within the project GitHub repository (INSERT LINK TO DOCUMENT #todo). Using knitr (CITE) and pandoc (CITE), this document is converted to a markdown document using RStudio's `github_document` format, which is automatically rendered into HTML for viewing in the web browser by GitHub (<https://rmarkdown.rstudio.com/github_document_format.html).>
-
-Improvements to template formatting include the use of dropdown boxes to store template text. Template text was divided into a) text that describes the rationale for the inclusion of a particular preregistration section or item within the template, as well as any explanation of key terms and definitions of some modelling practice / process terms, and b) text that contains specific questions with check-boxes for researchers to address in their preregistration. Each text-type is given a different icon to help differentiate between them. The use of drop-down text-boxes with icons better differentiates template prompts and text from authors' responses to preregistration items and the VEFMAP modellers noted that these changes greatly improved readability of the preregistration document <https://github.com/egouldo/VEFMAP_VEG_Stage6/pull/75#pullrequestreview-1959017213.>
-
-In terms of substantive changes to the structure and content of the preregistration template, significant changes were made to the structure of the document (reorganized different section), and to descriptions of item rationale and explanations, as well as the preregistration items themselves. Some items were omitted, some were added, most were reworded for improved expression, and some were re-structured into different sections.
-
--   [ ] Collate comments, pull requests and reviews and issues describing problems with the changes see: <https://github.com/egouldo/VEFMAP_VEG_Stage6/issues/29> #chrisjones and also other comments from #jdyen
-
-Modellers think about the modelling process differently, and use different terms for the same or similar practices and modelling concepts, depending on their particular modelling background, and at times the language used in the original version of the template was confusing and unclear to the VEFMAP modellers.
-
--   [ ] #todo consider as #discussion point in this manuscript #writing
-
-### Adaptive Preregistration of the Case Study
-
-We tested and refined both the preregistration template and adaptive preregistration protocol as outlined in Version X of the guide using the VEFMAP modelling study as a case study. We did not preregister this study on an existing official preregistration platform that meets the three core requirements of preregistration outlined by Haroz [-@haroz2022] because existing platforms are unable to accommodate adaptive preregistration where there are multiple and interim versions of the preregistration. Consequently tracked changes to the preregistration using version control with git and GitHub, and used GitHub's tag and release features to demarcate major changes and interim versions of the preregistration.
-
-The preregistration process was marked by three main phases of analysis and modelling, each marked with an interim preregistration:
-
-1\. V1 - Data analysis and cleaning, specification of problem context and background preregistered (insert link to supp mat)
-
-2\. V2 - Pilot Analysis preregistered (insert link to supp mat)
-
-3\. V3 - Main analysis including decision tree for informing model selection based on results of pilot analysis (insert link to supp mat)
-
-**V1: Preregistration of problem context, data analysis and cleaning**
-
-Prior to preregistration and analysis, data for the VEFMAP study had already been collected, as this study is a small component of a broader project that has been running for a number of years. The preregistration was iteratively completed and updated prior to beginning any analysis or modelling with the VEFMAP dataset, however, data cleaning and wrangling was undertaken in tandem with completion of the initial preregistration document by different researchers on different git branches due to project time-constraints.
-
-**V2: Preregistration of Pilot Analysis**
-
-There was a great deal of uncertainty about whether the dataset would support fitting the desired candidate models due to temporal and spatial patchiness and density of the data. The dataset consisted of over 2 million observations across different waterbodies which were missing data during some years, while other sites had been surveyed more times than others (insert table from meeting with DEECA into supp. mat and cross-ref \[\[2024-03-27_Meeting_Notes\]\]). Some preliminary analysis and exploration of the dataset was needed in order to make appropriate decisions about how best to operationalise the models given the patterns in the underlying dataset and the spatio-temporal variation in the density / patchiness of the dataset. For example, simple tests of data distributions within hierarchies needed to be implemented to check for data spread and presence of zero-inflation, and checks for collinearity among candidate predictor variables were needed to reduce overfitting and to ensure the relevant interactions and captured in the models. Consequently, we decided to implement the use of a holdout dataset by partitioning the data into a smaller 'pilot analysis' dataset and 'main analysis' dataset. The pilot analysis dataset consisted of data from only a single site that had good temporal data coverage, while the dataset for the main analysis consisted of the entire dataset, including the pilot dataset.
-
-The pilot analysis was exploratory in nature and aimed to resolve critical uncertainties about how best to operationalise the models given data constraints in order to identify a candidate set of models that could feasibly be fitted using the full dataset. In addition to the preliminary analyses described above, two initial models for the two response variables, cover and richness, were preregistered. The same model checking procedure was preregistered for both the pilot and main analyses. The pilot analysis was preregistered in section "2.5.3 Describe any data exploration or preliminary data analyses" of the template.
-
-*Pilot Analysis Outcomes*
-
-The pilot analysis resolved some uncertainties, while some further analytic uncertainty about the best model operationalisation remained. Firstly, for models of both response variables, the data were unable to support a single model containing separate terms representing both flow regimes and flow events. Consequently two separate models, one with each term operationalising flow, were fitted to the pilot dataset instead. Secondly, separate models for each plant functional group were desired to help understand how each group responds to environmental flows. However, there was not enough data for each functional groups split across both native and introduced species to get these models to converge so plant functional group was included as a random effect instead and fitted to the pilot data.
-
-Model checking revealed both high levels of over-dispersion and over-inflation. To account for different proportions of zeros among plant functional groupings, the pilot analysis allowed for zero-inflation to differ among plant functional groups, however did not account for over-dispersion. During the pilot analysis, models were refitted using negative-binomial distributions but failed to converge.
-
--   [ ] #todo Report models here!
-
--   [ ] #todo Report Decision tree here!
-
--   [ ] See notes from the report back meeting here: \[\[2024-03-25_Meeting_Notes\]\] and \[\[2024-03-27_Meeting_Notes\]\]
-
-**V3: Preregistration of Main Analysis and Decision Tree**
-
-Although the full models with complex three-way interactions failed to converge on the smaller pilot dataset, it was hoped that they may still converge on the full dataset in the main analysis. Consequently, the full models were also specified in the main analysis, but with the two simplified 'flow events' and 'flow regime' models preregistered also in the event that the full models were unable to converge and/or provide reliable parameter estimates.
-
-Given that zero-inflated Poisson models both converged, and reliably captured the proportion of zeros within the pilot dataset, this model family was preregistered for all models fitted to the full dataset, including simplified models. However, modellers were concerned that there may be unexpected issues with these approaches due to actual data distributions in the full dataset not matching expectations informed by the pilot analysis, such as unaccounted over-dispersion of the data. Consequently a second flexible strategy was preregistered to account for the case where over-dispersion was identified.
-
-First, the two key vegetation response variables were to be modelled as zero-inflated Poisson distributions with a log-link function. However, in the case that model-checking identified over-dispersion in any of the models, the models were to be refitted using a negative binomial distribution. However, a rule was preregistered that the models re-fitted using the negative binomial distribution would only be accepted over the Poisson models if they *both* improved over-dispersion *and* did not decline in model performance, particularly in terms of model fit, zero-inflation, and posterior predictive checks.
-
-The final decision on which model family should be selected based on model checking in the instance that overdispersion is identified is a fuzzy and subjective one in which explicit weightings between the different model performance criteria cannot be expressed or preregistered. Instead, modellers attempted to provide an explanation and description of the conditions for interpretation informing decisions about the model family:
-
-> While we are unable to *a priori* precisely weight these criteria in determining the final distribution, the final decision will be guided by the model’s overall ability to capture key associations reliably. This is especially likely to occur when there is no ‘perfect model’ and there is no dominant alternative choice of model distribution.
-
-**Analysis following final preregistration**
-
-TBD, briefly summarise what outcomes from the preregistered decision heuristics were realised in the final analysis.
-
-## Implementation: User Guides and Documentation
-
-We have developed a guide for modellers on how to implement adaptive preregistration for model-based research packaged as a website at <https://egouldo.github.io/EcoConsPreReg/> [@gould2024]. The guide first provides background material on the risk of researcher degrees of freedom to transparency and reliability of model-based research in order to motivate the use of preregistration in model-based research. The core materials include an overview of adaptive preregistration, as well as a practical step-by-step guide to implementing adaptive preregistration using [git](https://git-scm.com) and [GitHub](www.github.com), two commonly used tools by modellers for version-controlling modelling code during model development [@braga2023]. The preregistration template for model-based research in ecology and conservation is also hosted on this website. Components of the guide to adaptive preregistration have been repackaged and incorporated into this manuscript.
-
-**Continuous Improvement and Feedback**
-
-One of the key features of user-centred design is the principle of ‘continuous feedback’. We therefore encourage modellers to preregister their research using our template and adaptive preregistration protocol outlined in this manuscript, and to provide feedback and suggestions for improvement. Suggested changes may be submitted in the form of a pull-request to the repository ( #todo insert link to how to make a pull request to the new template repository), or by posting a new issue ( #todo link to creating a new issue on the repo and setup template). The repository and issues are publicly available, so any future discussion will be transparent and open to the ecological modelling community to participate in.
-
-# Discussion
-
--   intro para summarising problem / objective:
-    -   Preregistration of model-based research has been rejected both within ecology and in other disciplines.
-        -   But the problems that preregistration addresses, i.e. RDFs / QRPs, are likely to exist for MBR too.
-    -   There is a lack of discipline-specific preregistration templates and this impedes the uptake of open-science tools, such as preregistration, within ecology.
-    -   This study aimed to expand preregistration for use within ecological modelling and modelling more broadly by developing a preregistration template for ecological modelling research, and a methdology for preregistering model-based research more generally.
-
-We took a user-centred design approach to the task of developing a preregistration template and methodology that accounts for the domain and methodology-specific nuances of ecological modelling. We did this by: 1. Identifying idealised norms and norms of practices to develop ‘idealised’ / ‘generalised’ research workflows that describe sets of commonly undertaken tasks (and some sort of order/sequence to reflect the workflow, both idealised and as practically conducted), within an ecological modelling study. 2. We then transformed these workflows into a ‘preregistration template’, by distilling a set of decision-items that, should a) adequately constrain researcher degrees of freedom to mitigate the risk of Questionable Research Practices in an ecological modelling exercise and b) adequately facilitates research/analytic transparency. We transformed the decision-steps (the highest resolution) into template items posed as directives or questions for preregistration users to complete, in accordance with the particularities of the study. 3. We qualitatively evaluated the template and the adaptive preregistration methodology for its feasibility of use in MBR using a case-study of environmental flows modelling in Victoria, Australia... The VEFMAP modelling study faced particular challenges to preregistration in terms of data complexity and patchiness that made this study a good candidate for trialling adaptive preregistration...
-
-## Benefits, challenges, Limitations of Adaptive Preregistration
-
-User research revealed inherent features of the model development process, namely its iterative workflow and adaptive decision making, were critical barriers to modellers adopting preregistration in their modelling practice. In the case of the VEFMAP modelling study, there were critical uncertainties about the the appropriate model specification given limitations of the underlying dataset which prevented the researchers from being able to pre-register fully specified models without undertaking some exploratory analysis. Such practices would preclude the application of preregistration to this study because these decisions would violate preregistration's core principle of *data-independent* decision-making.
-
-*What would have happened without preregistration / adaptive preregistration??* (insert into last sentence of above para)
-
--   In the absence of any preregistration, adaptive or not, (#todo check this with Jian, because maybe his practices are different), modellers would typically explore the entire dataset
--   Explain what is wrong with this, what the risk of this is.
-
-*Next para:*
-
-To mitigate the risk of researcher degrees of freedom and to try to preserve some degree of data-independence in decision-making we combined data-partitioning into the adaptive preregistration process and split the preregistration process into two phases, resulting in three interim preregistrations. We first preregistered a preliminary or 'pilot' analysis, in which the researchers under took directed exploration of a subset of the dataset. The pilot analysis helped the researchers to understand what models could feasibly be fitted for their two outcome variables given uneven spatio-temporal density and patchiness of the dataset. Although the pilot analysis was 'exploratory' in nature, by preregistering the preliminary analysis, any exploration occurring here was still *directed* in that the scope of the pilot analysis was bounded and determined by transparently explicated analysis goals and articulartion of critical uncertainties. Following preregistration of the pilot analysis, the researchers then switched back to the *analysis* phase of *adaptive preregistration*. Carrying out the preregistered pilot analysis. The results of the pilot analysis aided in determining the *main analysis* which would be conducted on the full dataset and preregistered using the EcoEvoModelling template.
-
-Researchers preregistered flexibility into their main analysis, because despite the pilot analysis, some critical uncertainties still reamined cf. limitations on the data.
-
--   outline the uncertainties: model family, and something else. see results.
-
-Explain the different models, and the different
-
--   loosely preregistered (Baldwin) grounds for interpretation made explicit
-
-Consequently, we took an ‘expanded view of preregistration’, “Adaptive Preregistration”. Key features:
-
-\- plans for preregistering and deploying flexible analysis strategies:
-
-\- Iterative, cyclical preregistration rather than linear process that maps onto the iterative cycles of model development generating
-
-\- interim preregistrations marking key points in the analysis
-
-We also propose combining adaptive preregistration with previously proposed technical strategies for reducing the risk of overfitting and bias in MBR. E.g. using data-partitioning with a exploratory/training vs. test/holdout dataset / data scrambling for preliminary or exploratory analyses. We depart from existing research, e.g. Baldwin, by proposing that these preliminary analyses also be pre-registered, even if preregistration is not yet complete. The results of the preliminary or exploratory analyses may be used to inform analytic decision-making that can then be preregistered.
-
-Presently there are no existing preregistration repository services that meet the critical requirements of a preregistration platform outlined by Haroz [-@haroz2022] that can be used for adaptive preregistration. We proposed and refined an implementation of the Adaptive Preregistration methodology that leverages features of git and GitHub for transparently tracking the evolution of the preregistration document as the modelling progresses.
-
-### Reflections (heading TBD, can we make a water pun given case study and concluding sentence or is that lame)
-
-We approached the application and evaluation of both the template and adaptive preregistration and sought to evaluate the feasibility of preregistration for MBR. We genuinely did not know what to expect when we began preregistering the case study, but approached this goal with a 'proof is in the pudding mentality' to ask what are the limits of preregistration.... Here we reflect on the parts that worked, and those that did not.
-
-**Restricting Researcher Degrees of Freedom, not creativity!**
-
-Counter arguments to both preregistration and preregistration for modelling express fear that preregistation will restrict creativity and lead to 'punch card style analysis' [@MacEachern2019]. However, modellers in our preregistration of the case study found the opposite, that it prompted critical thinking about analytic choices during modelling, that might have only ever been tacit and never explicitly recorded (cite paper saying many modelling decisions never thought of as decisions and therefore never reported).
-
-Combining the use of data partitioning, and splitting the analysis into a 'pilot' and 'main' analysis aided the modellers in understanding what models could feasibly be preregistered given constraints on the data, while also helping inform the preregistration of flexible analyses. The addition of the pilot study components to the template, and into the modelling process was good. And I think we should recommend doing this where possible. Link to that arxiv paper on preregistering machine learning studies. Might seem less natural for ecological modelling studies since we are data poor! BUT, in machine learning and other computer-science focussed modelling contexts, this type of practice is the norm. One issue to flag is the potential for \[\[information leakage\]\], however. Because part of the data *is* used again in the full dataset. However, given that this study is situated within an ongoing program of monitoring and decision-making, I think it's ok. The modelling can be built into an adaptive monitoring / modelling context where future modelling can be used to test / evaluate and then update the model.
-
-\- How do we think the process actually went in terms of restricting researcher degrees of freedom / improving reliability / reproducibility? **What other reflections are there?**
-
-\- Tricky to anticipate?? But can certainly say that all of the exploratory analysis undertaken on the pilot dataset would have surely been applied to the full dataset had we not partitioned the dataset and the preregistration process.
-
-**Resolution of the template - tradeoff between meeting preregistration objectives, and burden and benefits to the researcher.**
-
--   Competing objectives? Although the purposes of preregistration are not mutually exclusive - as we have decided the purpose of preregistration we have defined here is to both delimit/state flexibility, *and* be flexible. However, “the preference of one purpose over another can have tangible effects on the design of preregistration” p15.. Pu.
-
--   Compared to Hofman [-@hofman2023], a template for preregistering predictive modelling research, our template was much more detailed and contained many more items to be preregistered.
-
--   Get Jian / Chris' thoughts on template. I suspect it's a bit long / overwhelming. But potentially that's because of the visual presentation / limitations of a static text based medium for the document.
-
--   However, the benefit of a more exhaustive, specific and detailed preregistration is increased transparency (link back to intro on transparency in ecological modelling). By adopting preregistration for MBR we can also improve the transparency of ecological modelling, which is done terribly!!!
-
--   cost to completeness, and specificity / precision is that it is time-consuming. But aside from increasing transparency, it is also critical for appropriately restraining unmitigated and undisclosed RDFs by preventing loose interpretation / operationalisation of the preregistration in instances where the preregistration is vague.
-
-    -   We can see this in the disjuncture between all of the modelling outputs conducted and reported for the internal report, but that weren't fully specified in the preregistration due to time-constraints on the modellers.
-
-*This will lead in nicely to the final criticism*
-
-**Time & Timing**
-
--   “A natural consequence of increased transparency, is that preregistrations become longer as more possible decisions are made transparent: *increased transparency* implies *increased length*. This trade-off was something we considered important during the design phase, and deciding what was in and out of scope for the preregistration template was particularly challenging.
-
--   However, as Pu et al. note, some participants who were both authors and reviewers didn’t think that the time-costs of preregistration in research were significantly greater than not preregistering research. Instead they thought of the preregistration process invoking a ‘time shift’, that brought ‘decision points’ before data collection instead of during analysis.” P.19. In addition, “some reviewers thought that preregistration saves them the time they might have spent wondering about undisclosed flexibilities when working on an un-preregistered paper.”
-
--   Even in adaptive preregistration where the process is iterative, modellers reflected on the front-heavy reserach timeline forced by the process of adaptive preregistration. Shifting decision-making to the start of the project timeline delayed the start of the analysis, but modellers felt that this resulted in better decision-making because the decision-making was more carefully reasoned. Additionally, the case study researchers felt that the level of detail reported in the preregistration aided in efficiently writing the internal report.
-
-    -   This relates to what Pu et al. found where participants ‘felt their research workflow improved by having preregistration as a “forcing function” \[…\] For example, writing down study plans ahead of time might prompt them to think more thoroughly and to anticipate flexibilities / researchers’ degree of freedmen advance.’ (Page 13). For reviewers ‘participant reports that preregistration makes the review process “easier”.’
-
--   Mention difficulties I had with the internal deadlines of DEECA, and that we could not preregister everything we wanted to (i..e the analysis of the model and its outputs used for presentation in the report, which were extremely vaguely specified, aside from model checking). Preregistration could be challenging for modelling in such settings where there extremely tight timelines. BUT, as we are doing for the stage 2 report preregistration of the second study now, could be used during early consultation / scoping. So the document could begin to be filled out much earlier than we did here (data already collected).
-
-## Future Implementation & Testing
-
-We did not undertake the 'usability testing' component of User-Centered design set out in fig 1. We offer this template and adaptive preregistration methodology to the ecological modelling community, and modelling communities across disciplines, to use, refine and adapt in their modelling practices moving forward. We hope insights gained through trial and error of its application will be used to further refine and improve the preregistration template and adaptive preregistration methodology.
-
-Advocacy and uptake of preregistration is based on the working hypothesis that it is able to mitigate against QRPs by delimiting opportunistic exploitation of researcher degrees of freedom while improving transparency. While initial evidence suggests that preregistration may improve the reliability and reproducibility of research (cite study looking at replication rates of preregistered vs not), empirical testing of this working hypothesis is necessary for evaluating whether this new practice meets its intended purpose [@Devezer2020] (and others). Future research should evaluate the effectiveness of adaptive preregistration for improving the reliability and transparency of MBR.
-
-Hosting the preregistration template on GitHub, has the added benefit of providing a mechanism for dealing with *uncertain* *norms* in modelling practice [@Pu2019], and for following modelling methods and decision contexts that might not fit the presumed modelling development cycle underpinning the preregistration template. Anyone is free to *fork* our GitHub repository, meaning that the entire contents of the repository can be copied to a users own repository, and the template is free to be altered as the user sees fit. This provides the opportunity for creating domain-and/or modelling-approach-specific templates [@Cruwell2019b].
-
--   [ ] #todo need to explain a bit further what the hell i mean by 'uncertain norms'. I think I can link the confusion from VEFMAP modellers about some concepts within the preregistration document in here.
-
-In order to address this confusion among norms, I state the expected norms that the template has been designed around here. However, I don’t expect users to agree on this process. Because we have kept the template in a GitHub repository that can be *forked*, people are free to adapt the template (the items themselves) to suit whatever norm they see fit about how preregistrations should be created and used.
-
-### Using GitHub for Adaptive Preregistration
-
-**Benefits**
-
--   transparency
--   existing tool already used by many modellers for both version control and collaborative project management of computational code for models
-
-**Challenges**
-
-Separate branches... Under significant time pressure (internal reporting) to do the analysis. Data cleaning and analysis of pilot data was happening on one branch while the preregistration was happening on another! Also meant that the fledge release system outlined in the guide did not quite work because you had to wait until each branch had been merged back into the main / master branch in order to bump the version.
-
-\*\*Critiques of GitHub as a platform for preregistration. and combining other tools to meet the minimum requirements of preregistration: timestamps, persistence, registry\*
-
-While there are some proponents of the use of version control systems for preregistration [e.g. @braga2023; @hofman2023], [@haroz2022] make the compelling argument that GitHub (and potentially alternative version control systems) are inappropriate as preregistration platforms because it doesn't meet any of the three core requirements for a preregistration: timestamps, an indexed registry, and persistence. While we have described the use of GitHub timestamps in this study, [@haroz2022] illustrate that timestamps can be manipulated on GitHub. Moreover, currently GitHub does not have a formal registry for indexing or searching for preregistrations hosted on GitHub, which means that there is the potential for *\[\[preregistration hacking\]\]*, wherein preregistrations may be deleted changed and reuploaded [@haroz2022]. Finally, GitHub does not meet the *persistence* requirement, there is no immutable unique identifier, like a digital object identifier (DOI), and GitHub is not guaranteed as an archive service in perpetuity \[\[data sharing\]\] / \[\[data curation\]\].
-
-While the use of GitHub in this study was to test it as a platform for implementing *Adaptive Preregistration* rather than *Preregistration* per se, given these shortcomings, we recommend pairing GitHub with other platforms for implementing Adaptive Preregistration.
-
-Here we tested it as a system for managing and implementing *Adaptive Preregistration* rather than just preregistration in general. However, given these shortcomings, we recommend pairing the use of GitHub for Adaptive Preregistration with some additional tools to ensure that these three minimum requirements of preregistration are met, we outline two complementary approaches here that meet the three core requisites of preregistration:
-
-1.  Archive the GitHub repository using Zenodo (CITE) at the first draft preregistration (V.1.0) and combine with GitHub tag and release strategy, such that each interim preregistration is recorded as a new version / release on both GitHub and Zenodo . Deals with both the timestamped issue and the persistence issue by giving it a digital object identifier [@smithSoftwareCitationPrinciples2016], Furthermore, Because it is given a DOI, it is indexed and searchable [@hofman2023].
-    -   [ ] Add links to other papers suggesting Zenodo be combined with GitHub for data / code sharing #todo
-2.  But not a specifically preregistration registry. How to deal with the registry component? Can we add as component to OSF repo?? and then preregister? Yes. In fact, an alternative solution has been outlined by [@vanlissa2021], where they have used a similar approach to us with a version-controlled plain-text preregistration document containing the pre-analysis plan, and tagging and releasing this document on GitHub. However, they suggest a secondary optional step of uploding the preregistration to a dedicated preregistration server, without specifying what that server may be. We could use an 'open-ended Registration' template on the OSF [@hofman2023], and then link the document from GitHub component on the OSF project to the registry. Instructions for doing this are given in [@hofman2023].
-    -   [ ] WHAT ABOUT DIFFERENT VERSIONS OF THE PREREGISTRATION.. Can we make changes using the OSF?? DOUBLE CHECK THIS! Might not be able to use the registry here. #todo I think #MarkCall said there is the option to make changes now. Could we test with their staging platform?? Put the different versions on there?? But the template has changed.... Could just try it anyway as proof of concept. And note this as a limitation of the OSF templates approach (not being modular or flexible, as [@hofman2023] outline ).
-
--   [ ] #todo CHECK THIS: Embedding the repository within an OSF repository will fix the timestamp issue from GitHub that [@hofman2023] outline??
-
-# Conclusions
-
-Instead of throwing the baby out with the bathwater, in this study, we advocate that preregistration can and should be used isn model-based research in ecology and conservation, but its particular form should reflect the norms and practices of the research context in which it is applied, in order to  in order to adequately restrict researcher degrees of freedom that may uniquely emerge within a domain-specific methodology.
-
-This research provides a template and methodology for implementing adaptive preregistration of ecological models in either pure or applied settings and will facilitate the wider uptake of preregistration in ecology. Although we focus on ecology and conservation in this paper, the template is extensible to alternative fields and methods, and the proposed methodology for implementing adaptive preregistration can be applied in model-based re-search within science more broadly. Modellers need no longer cry “but, I can’t preregister my research.”
-
-## Software & Data Availability Statement
-
-## Author Contributions
-
-CRediT
-
-# Supp Material
-
--   [ ] Check out journal guidelines or papers #todo
-
-## SM1: Workshop Materials and Process Design
-
--   Design process for the modelling workflow template for activity 1. The actual materials are in A1.
--   Activity 2 structured discussion with prepared questions and talking points informed by recent debates about preregistration in the literature. Any literature review leading to this. Actual talking points in A1.
--   Mention that we also ran the above in separate groups for designing a field-study preregistration template, but decided not to pursue further here.
-
-## SM?: Analysis of Workshop Outputs
-
-"We revised the coding structure (inductively is this the word), according to patterns and themes identified across multiple personal workflows:" For example, we added the final phase (name for last phase), which aimed to capture the fact that analysts usually present the results of their modelling to clients, decision-makers or other stakeholders that must interpret the evidence and are responsible for making management decisions. In this way, we identified a common or generalised workflow from different types of applied ecological modelling projects that synthesised both (idealised norms and norms of practice, Pu et al., see other philosophy of sci refs).
-
-## A2: Preregistration Template
-
-## A3: Adaptive Preregistration Guide
-
-## A4: Environmental Flows Modelling Case Study
-
-**Study Background**
-
-Riparian vegetation is a critical ecosystem component for so many reasons (biodiversity, habitat, food, stability, filter, carbon source, aesthetic, etc.) but it is also severely degraded in many waterways all over the world. Vegetation clearing, livestock grazing, pollution, exotic species (flora and fauna) and alteration of flows are some of the most severe threats.  
-
-The impacts of river regulation on vegetation depend on the type and extent of flow alteration. Flows can increase or decrease total flow, be more or less variable, or have altered season flow timing. Environmental flows are designed to be manipulations of flow (usually flow releases from a reservoir) that aim to have specific and direct environmental benefits.   
-
-Evaluating the effects of environmental flows on waterways is difficult because of the need to evaluate the isolated impacts of specific flow events (short term response) as well as the impacts of successive flows (environmental or otherwise) within a broader flow regime (medium to long term response). Data collection at large temporal scales (annual or greater) prevents evaluation of any single flow event or component from the regime. Evaluating the effects of environmental flows in most cases is therefore only possible with repeated sampling at relatively short intervals. Evaluation also needs to be done with consideration of other major drivers of vegetation, such as rainfall, other flow attributes, livestock grazing, soil properties, exotic species and previous disturbance. 
-
-In south-eastern Australia, river regulation (including water extraction), livestock grazing and exotic species continue to have serious negative impacts on all major waterways, despite major government investment into waterway management. However, increased understanding of the impacts of major threats and the effectiveness of management is resulting in greatly improved management decisions. While many broad trends are known, critical details remain elusive and require concerted effort to address.  
-
-**Study Aims**
-
-### Study Methods
-
-#### Data Collection
-
--   [ ] 1 - 2 sentence overview, then point readers to details in \[\[project-VEFMAP\|VEFMAP\]\] manuscript #todo #writing
-
-#### Modelling Dataset
-
-| Variable Name                            | Unit                  | Definition                                                                                                                                     | Variable Type | Variable Group                                                         |
-|-------------|-------------|----------------------|-------------|-------------|
-| Species Vegetation Cover                 | Cover                 | Cover per-species, per sub-transect                                                                                                            | Response      | Vegetation Cover                                                       |
-| Plant Functional Group Cover             | Cover                 | Cover per-plant functional group, per-sub-transect                                                                                             | Response      | Vegetation Cover                                                       |
-| Sub-transect Vegetation Cover            | Cover                 | Total cover (sum all species), per sub-transect                                                                                                | Response      | Vegetation Cover                                                       |
-| Species Richness                         | Counts                | Number unique Species Functional Group, per sub-transect                                                                                       | Response      | Species Richness                                                       |
-| Days above baseflow / springfresh levels | Counts, Z-scale       | Number of days per year (averaged over prev 3 water years)<br>discharge \> baseflow or springfresh levels,<br>Z-scaled                         | Predictor     | Flow Regime                                                            |
-| Sub-transect zone                        | Factor                | Zone in which a sub-transect occurred:<br>- below baseflow level, <br>- between baseflow and spring-fresh levels<br>- Above spring-fresh level | Predictor     | Flow Regime                                                            |
-| Flow event                               | Factor                | Timing of sampling:<br>- before spring fresh<br>- Between spring and summer fresh<br>- After summer fresh                                      | Predictor     | Flow Event                                                             |
-| Site Grazing Status                      | Factor                | Grazing status of site:<br>- Grazed<br>- Ungrazed                                                                                              | Predictor     | Other factors influencing spatio-temporal variation in cover/abundance |
-| Species Functional Group                 | Factor                | For each Origin group (native or exotic):<br>- aquatic<br>- emergent<br>- riparian<br>- terrestrial                                            | Predictor     | Other factors influencing spatio-temporal variation in cover/abundance |
-| Site Identity                            | Factor                | Name / Identity of the site                                                                                                                    | Random effect | Other factors influencing spatio-temporal variation in cover/abundance |
-| Transect Identity                        | Factor                | Identity of Nested within sites                                                                                                                | Random effect | Other factors influencing spatio-temporal variation in cover/abundance |
-| Sub-transect height                      | Metres above baseflow | Height of the sub-transect along bank                                                                                                          | Random effect | Other factors influencing spatio-temporal variation in cover/abundance |
-| Survey Year                              | Date, YYYY            | Year in which the sample was recorded                                                                                                          | Random effect | Other factors influencing spatio-temporal variation in cover/abundance |
-| Waterbody                                | Factor                | Waterbody in which the site is located                                                                                                         | Random effect | Other factors influencing spatio-temporal variation in cover/abundance |
-
-#### Pilot Study
-
-The final data set comprised XYZ observations, which presented a significant computational challenge. In addition, exploratory data analysis revealed considerable zero-inflation and potential over-dispersion of the response variables, particularly vegetation cover. We conducted a pilot study to determine the feasibility of different model structures and identify likely decision points given these challenges.
-
--   [ ] when did the EDA occur... during the pilot study? On a different data set? #help-wanted #jdyen
-
-To address this, we defined a maximal model structure and tested this structure with a pilot data set (all observations from the Campaspe River from 2017–2020) to identify feasible model structures and likely decision points. We developed separate analyses for vegetation cover and species richness, with the same maximal model structure for both.
-
-Initial model fitting assumed a zero-inflated Poisson distribution for both vegetation cover and species richness, with zero-inflated negative binomial distributions designated in cases where over-dispersion was severe. This approach does not introduce an upper bound on estimates of cover (e.g., specifying a maximum cover level of 100%). We used this approach for three reasons. First, overlapping species may generate cover estimates that exceed 100%. Second, parameters of bounded distributions are challenging to estimate when many values occur near the bounds. Third, bounded distributions require link functions (e.g., the logit function) that complicate the specification and interpretation of autoregressive models. We note that the Poisson distribution approximates the bounded binomial distribution in the limit of many trials (REF). The extent of zero-inflation and over-dispersion (and a model’s capacity to capture these patterns) was assessed using posterior predictive checks, which use values simulated from the fitted model to determine whether the model structure captures the observed distribution of the response variable (REF). \### Results
-
-#### Pilot Study Results
-
-The final maximal model was as follows:
-
-``` r
-response (cover or species richness) ~ cover in previous survey +
-                                        functional group × origin × flow metrics +
-                                        functional group × origin × zone × sampling period +
-                                        grazing +
-                                        (1 | site / transect) + (1 | sub-transect height) + (1 | survey year) + (1 | waterbody) +
-                                        offset(number of points).
-```
-
-Vegetation cover in the previous survey was included only for analyses of cover and meant that models of vegetation cover examined how flow influenced the change in cover through time rather than absolute vegetation cover (akin to models of population growth rate used in the VEFMAP long-term fish monitoring project). Flow metrics are the (z-scaled) days above baseflow level and days above spring-fresh level in the three years preceding a survey and included both linear and quadratic associations[\[JDLY(1\]](#_msocom_1) . Zone is the location of a sub-transect relative to baseflow or spring-fresh levels and sampling period is the timing of a survey relative to the delivery of spring and summer freshes. Sub-transect height records the level of a sub-transect in metres above baseflow level. Waterbody was excluded from the pilot study given its focus on a single waterway (the Campaspe River).
-
-Results of the pilot study inform the subsequent analyses and are presented here. Models of vegetation cover at the species level did not converge in any instance. Models of vegetation cover aggregated to watering-response plant functional groups converged but required separate models of two-way interactions instead of the three- and four-way interactions included in the maximal model structure. Models of vegetation cover aggregated to structural groups (aquatic, emergent, riparian, terrestrial) converged but required removal of interactions with species origin and separate analyses of flow metrics and for each of the categorical flow terms (zone and sampling period). Models of vegetation species richness within watering-response functional groups converged but required separate models of two-way interactions instead of the three- and four-way interactions included in the maximal model structure. Models of vegetation species richness within structural groups converged but required removal of interactions with species origin and separate models for the two categorical flow variables (zone and sampling period). Therefore, subsequent analyses of vegetation cover and species richness focused on structural groups because these supported model structures closest to the maximal structure. The included interactions were re-assessed in models of the full data set because the inclusion of additional data was predicted to either support more-complex model structures or introduce additional heterogeneity (and, therefore, support less-complex model structures) than in the pilot study. This did not include re-assessment of the functional group classifications.
-
-Posterior predictive checks indicated that a zero-inflated Poisson distribution reliably captured the distribution of observed vegetation cover and a Poisson distribution (without zero-inflation) reliably captured observed distributions of species richness (FIGS). Models of cover had excess over-dispersion, but a zero-inflated negative binomial distribution did not substantially reduce unmodelled over-dispersion and resulted in worse characterisation of zero-inflation and the observed distribution of cover data (FIGS?). Therefore, subsequent models of vegetation cover and species richness assumed that data were derived from a Poisson distribution, with additional parameters for zero-inflation specific to each functional group in the case of vegetation cover.
-
-### Full Dataset
-
-# Appendices
-
-## A1 : Workshop Materials
-
--   Activity 1 Template, and instructions / materials provided to workshop attendees. (insert link to OSF)
--   Activity 2 structured discussion with prepared questions and talking points informed by recent debates about preregistration in the literature (insert link to OSF)
-
-## A2: Draft Preregistration Template
-
--   [ ] Insert draft template
-
-## A3: Final preregistration Template
-
--   [ ] Insert template
+Figure 2 - Implementing Adaptive Preregistration. The preregistration (blue steps) and modelling and analysis processes (orange steps) operate in parallel. Purple tags represent git tags, corresponding to incremental versions of the preregistration.  Any changes to the analysis plan receive a GitHub release and major version number increment. Step 3 corresponds to the initial preregistration document, Step 6 corresponds to an interim preregistration, and Step 8 corresponds to the final preregistration. The execution of the Final Preregistration occurs in Step 9.
