@@ -225,6 +225,7 @@ format:
         # - Highlight 3
     keep-tex: true
 bibliography: ReferencesObsidian.bib
+engine: knitr
 ---
 
 # Introduction
