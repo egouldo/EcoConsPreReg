@@ -414,4 +414,85 @@ Although some challenges remain outstanding in applying preregistration to ecolo
 
 We provide a template and methodology for ‘Adaptive Preregistration’ that we hope will extend the benefits of preregistration to model-based research in a way that strengthens rather than inhibits that research. Although we focus on ecological applications in this paper, many elements of the template are relevant across fields, and the template is open source and can be readily adapted to new fields and purposes.
 
-# References
+# Supporting Information {.unnumbered}
+
+## Supporting Information A - Modelling Workflow Identification {#sec-supp-inf-A}
+
+### Identify Scientific Workflows for Ecological Modelling {.unnumbered}
+
+The goal of this analysis task was to describe a generalised workflow of the modelling cycle that will underpin the structure and content of the preregistration template, aiming to identify scientific workflows for ecological modelling, both in practice, and idealised. We used a combination of inductive and deductive coding using the qualitative coding software ATLAS.ti (2019) to analyse the Activity 1 workshop outputs ( @sec-activity-1) and generate a model of scientific workflow for model-based research that would guide the structure of the preregistration template.
+
+A preliminary idealised scientific workflow for ecological modelling research was synthesised after reviewing the literature on ‘good modelling practice’ and structured decision-making literature in ecological management. Steps in the workflow were coded and broken down into ‘phases’ consisting of ‘steps’ and ‘sub-steps’. This was used to inform the modelling process on the group modelling workshop for activity 1 ( @sec-activity-1).
+
+### Identify a General Modelling Workflow {.unnumbered}
+
+Participant responses in workshop discussions Workshop outputs were analysed using a combination of inductive and deductive coding using the qualitative coding analysis software ATLAS.ti (2019). Each decision-point from the personal modelling workflows in activity 1 were coded as belonging to one of these phases, steps and sub-steps. We revised the coding structure according to patterns and themes identified across multiple personal workflows. For example, we added the final phase (name for last phase), which aimed to capture the fact that analysts usually present the results of their modelling to clients, decision-makers or other stakeholders that must interpret the evidence and are responsible for making management decisions. In this way, we identified a common or generalised workflow from different types of applied ecological modelling projects that synthesised both idealised norms and norms of practice. Analysis outputs are located on the OSF (insert link).
+
+## Supporting Information B - User Research & Workshop Analysis {#sec-supp-inf-B}
+
+-   Workshop agenda (<https://osf.io/ygup6>)
+-   Workshop Runsheet (<https://osf.io/5nz63>)
+-   Introductory Presentation 1 (Elliot Gould & Chris Jones, https://osf.io/xkty7)
+-   Introductory Presentation 2 (Hannah Fraser, https://osf.io/zanbv)
+
+### Activity 1 – Identifying Modelling workflows {#sec-activity-1-identifying-modelling-workflows}
+
+Note that this activity was run in two separate groups, with one group focusing on field work, and one focusing on modelling. Elements of the field work activity responses were collated into the analysis of the modelling activity outputs.
+
+#### Materials
+
+Workshop attendees were provided a ‘Project Workflow and Decision Sequence’ worksheet (<https://osf.io/stwx6>) for individually describing decision steps and alternatives taken in a recent or memorable study. Next, each group collated their decision-steps from their individual worksheets onto group worksheets for modelling (<https://osf.io/fgd23>) and for field studies (<https://osf.io/c8z2y>) with accompanying handouts describing workflow phases and steps (modelling: <https://osf.io/nshkg>; field work: https://osf.io/c8z2y).
+
+#### Outputs
+
+| **Participant** | **Project Workflow and Decision Sequence Worksheet URL** |
+|-----------------------------|-------------------------------------------|
+| *Modelling & Data Analysis* |  |
+| Whole Group Worksheet | <https://osf.io/p2uvk> |
+| Annotated Modelling Workflow Handout | <https://osf.io/n5cuy> |
+| Chris Jones | <https://osf.io/bcdrw> |
+| Rob Hale | <https://osf.io/56bem> |
+| Tracey Regan | <https://osf.io/3g79c> |
+| Elliot Gould | <https://osf.io/3xajc> |
+| Ben Fanson | <https://osf.io/qn2ej> |
+| Ashley Sparrow | <https://osf.io/s7ybj> |
+| *Field Work* |  |
+| Whole Group Worksheet | <https://osf.io/a5prs> |
+| Matt Bruce | <https://osf.io/f97wa> |
+| Lyndsey Vivian | <https://osf.io/pdxbj> |
+| Jarod Lyon | <https://osf.io/3kx6r> |
+| Hannah Fraser | <https://osf.io/6f5qr> |
+
+### Activity 2 – Identify Challenges and Solutions to Preregistration for Modelling in Ecology
+
+#### Materials
+
+Activity 2 consisted of facilitated group discussions based on prepared questions and talking points informed by recent debates about preregistration in the literature, for example:
+
+-   What should a research workflow look like for a modeller in an applied ecological setting who wishes to preregister their work?
+-   What barriers are there for preregistering model-based research?
+-   How do we accommodate the iterative cycle of model development into the preregistration process?
+-   At what stage in a modelling or structured decision-making process should preregistration begin?
+-   Should we and how can we change the medium of the template and/or archiving platform to accommodate any roadblocks?
+-   How could we change the medium of both the template and the archiving platform to accommodate these issues?
+-   What procedural and or technical solutions could we implement to address these roadblocks to preregistration?
+-   What decision-tools could be used to aid in completing a preregistration?
+-   What sort of parsimony should we aim for in terms of the resolution of the templates and therefore their applicability across different methodologies?
+
+#### Outputs
+
+Activity Notes: <https://osf.io/d8kjt>
+
+## Supporting Information C - Preregistration Template {#sec-supp-inf-C}
+
+Supporting_Information_C-EcoConsPreReg_template.pdf Supporting_Information_C-EcoConsPreReg_template.docx
+
+## Supporting Information D - Adaptive Preregistration Guide {#sec-supp-inf-D}
+
+https://github.com/egouldo/EcoConsPreReg/
+
+## Supporting Information E - Case Study Preregistration {#sec-supp-inf-E}
+
+Supplementary_Information_E-case_study_preregistration.pdf
+
+# References {.unnumbered}
