@@ -172,6 +172,12 @@ author:
       - writing - review & editing
     affiliations:
       - ref: aff1
+  - id: aut11
+    name: Co-authors TBD
+    attributes:
+      corresponding: false
+    affiliations:
+      - ref: aff2
 abstract: |
   1.	Preregistration is an open-science practice which aims to improve research transparency and mitigate questionable research practices, like cherry picking results. It helps protects against cognitive biases, like hindsight bias, that can influence how study outcomes are interpreted. There has been little uptake of preregistration in ecology and conservation, arguably because existing pre-registration templates focus on null-hypothesis significance testing whereas ecology and conservation often rely on different types of statistical modelling.
   2.	We argue that preregistration in model-based research in ecology and conservation is both possible and beneficial, using templates adapted for domain-specific methodologies. We applied a user-centred design approach to translate the concept of preregistration into model-based research practice for ecology and conservation.
