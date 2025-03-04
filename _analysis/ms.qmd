@@ -29,7 +29,6 @@ author:
     name:
       given: Chris
       family: Jones
-    email: chris.jones@delwp.vic.gov.au
     orcid: 0000-0003-2833-0194
     attributes:
       corresponding: false
@@ -52,7 +51,6 @@ author:
     name:
       given: Jian
       family: Yen
-    email: jian.yen@delwp.vic.gov.au
     orcid: 0000-0001-7964-923X
     attributes:
       corresponding: false
@@ -76,7 +74,6 @@ author:
       given: Hannah
       family: Fraser
     email: hannahsfraser@gmail.com
-    orcid: 0000-0003-2443-4463
     attributes:
       corresponding: false
     roles:
@@ -91,7 +88,6 @@ author:
     name:
       given: Henry
       family: Wootton
-    email: henry.wootton@delwp.vic.gov.au
     orcid: 0000-0001-6506-0248
     attributes:
       corresponding: false
@@ -110,7 +106,6 @@ author:
     name:
       given: Lyndsey
       family: Vivian
-    email: lyndsey.vivian@delwp.vic.gov.au
     orcid: 0000-0003-1927-723X
     attributes:
       corresponding: false
@@ -126,7 +121,6 @@ author:
     name:
       given: Megan
       family: Good
-    email: goodm@unimelb.edu.au
     orcid: 0000-0002-6908-1633
     attributes:
       corresponding: false
@@ -140,7 +134,6 @@ author:
     name:
       given: David
       family: Duncan
-    email: david.duncan@unimelb.edu.au
     orcid: 0000-0003-4411-8214
     attributes:
       corresponding: false
@@ -154,7 +147,6 @@ author:
     name:
       given: Libby
       family: Rumpff
-    email: lrumpff@unimelb.edu.au
     orcid: 0000-0001-9400-8086
     attributes:
       corresponding: false
@@ -170,7 +162,6 @@ author:
     name:
       given: Fiona
       family: Fidler
-    email: fidlerfm@unimelb.edu.au
     orcid: 0000-0002-2700-2562
     attributes:
       corresponding: false
@@ -187,7 +178,6 @@ abstract: |
   2.	We argue that preregistration in model-based research in ecology and conservation is both possible and beneficial, using templates adapted for domain-specific methodologies. We applied a user-centred design approach to translate the concept of preregistration into model-based research practice for ecology and conservation.
   3.	To better align the internal logic of preregistration with the iterative and non-linear process of ecological modelling, we propose, test and evaluate a methodology for ‘adaptive preregistration’, using a case-study of environmental flows modelling for decision-support in Victoria, Australia.
   4. This research provides a template and methodology for implementing adaptive preregistration of ecological models. Although we focus on ecology and conservation in this paper, the concept of adaptive preregistration, and the templates developed here, could be applied in model-based research in other scientific disciplines within science more broadly. Modellers need no longer cry “but I can’t preregister my research.”
- 
 keywords:
   - preregistration
   - transparency
@@ -203,6 +193,10 @@ affiliations:
   - id: aff2
     name: Arthur Rylah Institute for Environmental Research
 format:
+  html:
+   toc: true
+   number-sections: true
+   highlight-style: github
   # preprint-typst:
     # fontsize: 11pt
     # mainfont: Libertinus Serif 
@@ -320,7 +314,7 @@ In Version 3 of the Preregistration, we derived and preregistered:
 4.  A second flexible strategy, for determining model functional form and to account for potential over-dispersion (Fig. 3). Preregistering this flexibility was motivated by the modellers’ concerns that the actual data distributions in the full dataset did not match expectations informed by the pilot analysis. This final decision-point for choosing the model family is subjective and fuzzy, and explicit weightings between the three model performance criteria could not be expressed or preregistered. Instead, modellers explained that the final decision will be guided by the model’s overall ability to capture key associations reliably.
 
 | Preregistration Version | Preregistration Process | Modelling and Analysis Process |
-|------------------------|------------------------|------------------------|
+|----|----|----|
 | **Version 1:** (v0.10 – v0.8.1) | Establish problem context, study background and aims, describe data collection and data cleaning process, articulate modelling objectives, and specify candidate models. | Data cleaning and preparation undertaken concurrently by lead and supporting researchers due to limited resourcing and short timelines for project deliverables. Candidate models addressing different components of the research question were preregistered. Identify data structural properties and potential consequences for model fitting |
 | **Version 2:** (v0.9.0-v.0.12.5) | Describe Pilot Analysis on data subset and specify registered flexibility in the form of decision heuristics. | Critical uncertainties in modelling decisions were articulated (e.g. how do we classify best flow regime based on inundation data?). In addition, data partitioning, exploratory data analysis, refined candidate models and model checking procedure preregistered |
 | **Version 3:** (v0.13.0-v.0.20.1) | Describe Main Analysis, including specification of decision tree for model selection process based on results of pilot analysis. | Conducted modelling and analysis as outlined in preregistration. Reported deviations and rationale as necessary. |
