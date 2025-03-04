@@ -317,14 +317,16 @@ In Version 3 of the Preregistration, we derived and preregistered:
 3.  Decision-trees for triggering fitting and acceptance of the candidate simplified models should the preferred full model specifications fail to converge and/or provide appropriate parameter estimates (@fig-case-study-workflow).
 4.  A second flexible strategy, for determining model functional form and to account for potential over-dispersion (@fig-case-study-workflow). Preregistering this flexibility was motivated by the modellers’ concerns that the actual data distributions in the full dataset did not match expectations informed by the pilot analysis. This final decision-point for choosing the model family is subjective and fuzzy, and explicit weightings between the three model performance criteria could not be expressed or preregistered. Instead, modellers explained that the final decision will be guided by the model’s overall ability to capture key associations reliably.
 
+::: justify
 | Preregistration Version | Preregistration Process | Modelling and Analysis Process |
-|------------------------|------------------------|------------------------|
+|:----------------------:|:-----------------------|:-----------------------|
 | **Version 1:** (v0.10 – v0.8.1) | Establish problem context, study background and aims, describe data collection and data cleaning process, articulate modelling objectives, and specify candidate models. | Data cleaning and preparation undertaken concurrently by lead and supporting researchers due to limited resourcing and short timelines for project deliverables. Candidate models addressing different components of the research question were preregistered. Identify data structural properties and potential consequences for model fitting |
 | **Version 2:** (v0.9.0 – v.0.12.5) | Describe Pilot Analysis on data subset and specify registered flexibility in the form of decision heuristics. | Critical uncertainties in modelling decisions were articulated (e.g. how do we classify best flow regime based on inundation data?). In addition, data partitioning, exploratory data analysis, refined candidate models and model checking procedure preregistered |
 | **Version 3:** (v0.13.0 – v.0.20.1) | Describe Main Analysis, including specification of decision tree for model selection process based on results of pilot analysis. | Conducted modelling and analysis as outlined in preregistration. Reported deviations and rationale as necessary. |
 |  |  |  |
 
 : Key stages of the modelling and Adaptive Preregistration process implemented in the environmental flows modelling case study. Version numbers in parentheses are GitHub tags, marking snapshots of the repository for each Preregistration Version {#tbl-modelling-stages}
+:::
 
 ![illustrates the evolution of model development across preregistration iterations in the case study. The two Registered Flexibility steps in the Main Analysis (v3) (shown in blue) are further described in @fig-case-study-registered-flexibility .](images/Figure_3-Case_Study_Workflow.png){#fig-case-study-workflow width="12.5cm" height="20.5cm"}
 
@@ -336,9 +338,10 @@ In Version 3 of the Preregistration, we derived and preregistered:
 
 At the end of user-testing, case study researchers concluded that preregistration is a valuable tool to facilitate Good Modelling Practice, but also acknowledged several difficulties encountered during Adaptive Preregistration (@tbl-summary-pros-cons).
 
-::: landscape
+:::: landscape
+::: justify
 | **Type** | **Name & Description** | **Case Study Example** | **Practitioner Recommendations and Reflections** |
-|-----------------|-----------------|-------------------|---------------------|
+|:----------------:|:-----------------|:-----------------|:-----------------|
 | ![](images/clipboard-1612011823.png){width="24"} | **Decide on template resolution**<br><br>Time required to make preregistration templates specific, precise, and exhaustive may be off-putting. What is an appropriate resolution? | The preregistration template first used in the case-study was unwieldy and overwhelming. Resolution was reduced by restructuring, removing and merging template items, making the task more approachable. | *"Be willing to modify the template if it does not meet the needs of the project. Any attempt to preregister is better than none at all"* –JDLY. |
 | ![](images/clipboard-1612011823.png){width="24"} | **Decide on template formatting**<br><br>The visual design, presentation and formatting affects usability. | Reformatting template with collapsible help and explanatory text boxes, and coloured icons to differentiate preregistration items from explanatory text, improved the modellers’ experience in the initial case-study preregistration. |  |
 | ![](images/clipboard-1405385106.png){fig-alt="Challenge" width="20"} | **Choose a version-control platform that does not require too much investment in upskilling.**<br><br>Adaptive Preregistration requires interim versions of the preregistration be deposited in a single location that is ideally version controlled. Some platforms have a steeper learning curve than others, impacting on the efficiency of preregistration. | Using GitHub to track iterations in the preregistration proved difficult to combine with a [*GitFlow*](https://docs.github.com/en/get-started/using-github/github-flow) approach for simultaneously collaborating on the analysis code and preregistration across branches. The lead modeler (JDLY) regularly uses git for version control but was less familiar with the GitHub web GUI. Under broad direction of the lead modeller, a second modeler (HW) undertook much of the coding and exploratory analysis, but had limited familiarity with version-control systems, and was unfamiliar with collaborative code-base development tools, such as GitHub. Substantial project time was allocated to developing a collaborative GitHub workflow and familiarising both modellers with this approach. |  |
