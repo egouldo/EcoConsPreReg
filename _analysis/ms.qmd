@@ -361,6 +361,7 @@ At the end of user-testing, case study researchers concluded that preregistratio
 
 : Summary of challenges ![](images/clipboard-1405385106.png){fig-alt="Challenge" width="10"}, benefits and added value ![](images/clipboard-3879563450.png){fig-alt="Benefit" width="10"}, as well as tips ![](images/clipboard-1612011823.png){width="10"} for using Adaptive Preregistration for ecological modelling. {#tbl-summary-pros-cons}
 :::
+::::
 
 # Discussion
 
