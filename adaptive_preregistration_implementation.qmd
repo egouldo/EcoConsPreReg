@@ -3,6 +3,12 @@ title: Implementing Adaptive Preregistration with Git and Github
 bibliography: data/references.bib
 ---
 
+## About this guide
+
+This guide assumes a basic understanding and knowledge of version-control tools, like git and/or GitHub. However, we have provided some background knowledge, links and references throughout this guide so that any modellers or researchers can set up and implement adaptive preregistration with git and GitHub for a new project.
+
+We suggest some tooling that assumes use of the R statistical programming language (@R2024, see @sec-fledge), since that is the most common programming language in the fields of ecology and conservation, however the general approach and principles described in this document is language agnostic, and does not require the use of R.
+
 ## Adaptive Preregistration using GitHub
 
 We propose leveraging both the version-control and the project management features of GitHub ([www.github.com](www.github.com)) as a tool for implementing adaptive preregistration. GitHub is a web-interface that utilises the version-control system, 'git', to store files, track changes, and enable collaboration on computer code [@braga2023]. When a document is version-controlled using Git and GitHub, each version of a document can be time-stamped, and is assigned its own unique identifier, or commit-hash[^1] so that chronological records of changes to a collection of files, stored in a 'repository', are made transparent [@braga2023; @Bryan:2008en].
@@ -176,7 +182,7 @@ A summary of the types of preregistration changes, and the corresponding require
 
 : Types of changes to the preregistration and corresponding actions and versioning adjustments {#tbl-preregistration-versioning}
 
-### Using the [`fledge::`](https://fledge.cynkra.com) R package for semantic versioning and to document preregistration changes
+### Using the [`fledge::`](https://fledge.cynkra.com) R package for semantic versioning and to document preregistration changes {#sec-fledge}
 
 The package `fledge::` can be used right from the R console to bump the version number, make releases, and auto catalogue a chronological history of changes recorded a `NEWS.md` file that is updated and published with every release. A detailed guide to using `fledge::` can be found here <https://fledge.cynkra.com/articles/fledge.html>.
 
