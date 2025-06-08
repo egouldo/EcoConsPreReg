@@ -5,9 +5,9 @@ bibliography: data/references.bib
 
 ## Who is this guide for?
 
-This guide assumes a basic understanding and knowledge of version-control tools, like git and/or GitHub. However, we have provided some background knowledge, links and references throughout this guide so that any modellers or researchers can set up and implement adaptive preregistration with git and GitHub for a new project. As a starting point, we direct readers to [@braga2023] which provides an excellent introductory overview of the GitHub's functionality.
+This guide assumes a basic understanding and knowledge of version-control tools, like git and/or GitHub. However, we have provided some background knowledge, links and references throughout this guide so that any modellers or researchers can set up and implement adaptive preregistration with git and GitHub for a new project. As a starting point, we direct readers to @braga2023, which provides an excellent introductory overview of the GitHub's functionality.
 
-For those with basic familiarity of git and GitHub, we take a git flow approach, using git branches and pull requests. If you are not yet familiar with these GitHub features, we have linked to the relevant GitHub documentation pages throughout for further details.
+For those with basic familiarity of git and GitHub, we use [a shared repository model](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/getting-started/about-collaborative-development-models#shared-repository-model) for collaboration. If you are not yet familiar with GitHub features, such as pull requests and branches, we have linked to the relevant GitHub documentation pages where further background reading might be necessary.
 
 We suggest some tooling that assumes use of the R statistical programming language (@R2024, see @sec-fledge), since that is the most common programming language in the fields of ecology [@Gao2025], however the general approach and principles described in this document is language agnostic, and does not require the use of R.
 
@@ -20,6 +20,12 @@ Follow the instructions at <https://docs.github.com/en/get-started/git-basics/se
 -   Configure authentication with GitHub from git
 
 After you have installed and set-up the required software and GitHub account, you will need a git/GitHub repository (see Quickstart for repositories) where your preregistration document and analysis files will be version-controlled.
+
+::: callout-caution
+## Adaptive Preregistration Primer
+
+Make sure you have read the [primer on Adaptive Preregistration](adaptive_preregistration_background.qmd) and [background](RDF_QRP.qmd) before preceding with this guide.
+:::
 
 ## Adaptive Preregistration using GitHub
 
@@ -132,7 +138,7 @@ Ensure you have committed a preregistration template to your project repository 
     -   `Initial Preregistration #IssueNumber`. Tag the Preregistration GitHub issue number in the commit message (For this repository, it's `#17`, however if you have only created the issue for the initial preregistration, then your issue number will be `#1`).
 -   Fill out the extended description box briefly describing the changes you just made
 -   Ensure that the radio button for creating a new branch is selected, an auto-generated branch name will appear, e.g. `egouldo-patch-1`.
--   Click "Propose Changes" to start a [pull request](https://docs.github.com/en/get-started/quickstart/github-flow):
+-   Click "Propose Changes" to start a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests):
 
 ![](figures/propose-changes.png)
 
@@ -141,7 +147,7 @@ Ensure you have committed a preregistration template to your project repository 
 
 The approach to using GitHub in this document follows the [GitHub flow model](https://docs.github.com/en/get-started/using-github/github-flow) for collaboration on projects. However, if you are working independently rather than collaborating on your project in a team, you can instead skip the use of pull requests and [branches](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches), and select the 'commit directly to the `default` branch' radio button above.
 
-Note that if using the GitHub flow model demonstrated in this guide, you will need to make sure that the pull request is [reviewed](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews), [updated if necessary](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/incorporating-feedback-in-your-pull-request), and the [changes merged into the default branch](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request) once the pull request has been approved.
+Note that if using the GitHub flow model demonstrated in this guide, before proceeding to the next step, you will need to make sure that the pull request is [reviewed](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews), [updated if necessary](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/incorporating-feedback-in-your-pull-request), and the [changes merged into the default branch](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request) once the pull request has been approved.
 
 See the '[reviewing changes in pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests)' guide for further details.
 :::
@@ -150,7 +156,7 @@ See the '[reviewing changes in pull requests](https://docs.github.com/en/pull-re
 
 ### Moving from general to specific: Incrementally updating the preregistration
 
-You will likely find that some items on the template cannot be answered just yet. One reason being that the level of detail required to adequately answer the template item just isn't clear yet, and more thought and time is needed, or you need to be further along the modelling process to be able to adequately answer the question. Another reason is that downstream decisions might depend on some preliminary investigations of the data -- for example, you might need to explore the shape of a measured variable before you can properly specify the full model.
+You will likely find that some items on the template cannot be answered just yet. One reason being that the level of detail required to adequately answer the template item might not be clear yet, and more thought and time is needed, or else you need to be further along the modelling process in order to adequately answer the preregistration item. Another reason is that downstream decisions might depend on some preliminary investigations of the data -- for example, you might need to explore the shape of a measured variable before you can properly specify the full model.
 
 In the latter situation, where possible, you can preregister your preliminary analysis: describing what the preliminary analysis entails, providing a short and relevant list of plausible outcomes, and describing for each of those possible outcomes how the dependent or down-stream decision-point will change depending on the outcome.
 
