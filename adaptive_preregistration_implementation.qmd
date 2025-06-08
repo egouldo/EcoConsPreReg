@@ -184,8 +184,8 @@ Sometimes assumptions are violated, or there are other unexpected outcomes of pr
 
 -   Add the URL to the relevant GitHub issue under the corresponding Preregistration Item.
 -   Add any the URL for any linked commits to the Preregistration Item.
--   revise the Preregistration, where necessary by editing the Preregistration document in GitHub, as per previous instructions.
--   Commit the changes with the following commit message header:
+-   Revise the Preregistration, where necessary by editing the Preregistration document in GitHub, as per previous instructions.
+-   Commit the changes with the following commit message header (or similar): `Preregistration Deviation #issue`.
 -   Describe the trigger for the Preregistration revisions in brief detail within the commit message body, adding the link to the relevant GitHub issue containing the tagged commits that triggered the revision.
 
 ## 'Living preregistration' - tracking changes to the Preregistration Draft
