@@ -3,11 +3,23 @@ title: Implementing Adaptive Preregistration with Git and Github
 bibliography: data/references.bib
 ---
 
-## About this guide
+## Who is this guide for?
 
-This guide assumes a basic understanding and knowledge of version-control tools, like git and/or GitHub. However, we have provided some background knowledge, links and references throughout this guide so that any modellers or researchers can set up and implement adaptive preregistration with git and GitHub for a new project.
+This guide assumes a basic understanding and knowledge of version-control tools, like git and/or GitHub. However, we have provided some background knowledge, links and references throughout this guide so that any modellers or researchers can set up and implement adaptive preregistration with git and GitHub for a new project. As a starting point, we direct readers to [@braga2023] which provides an excellent introductory overview of the GitHub's functionality.
 
-We suggest some tooling that assumes use of the R statistical programming language (@R2024, see @sec-fledge), since that is the most common programming language in the fields of ecology and conservation, however the general approach and principles described in this document is language agnostic, and does not require the use of R.
+For those with basic familiarity of git and GitHub, we take a git flow approach, using git branches and pull requests. If you are not yet familiar with these GitHub features, we have linked to the relevant GitHub documentation pages throughout for further details.
+
+We suggest some tooling that assumes use of the R statistical programming language (@R2024, see @sec-fledge), since that is the most common programming language in the fields of ecology [@Gao2025], however the general approach and principles described in this document is language agnostic, and does not require the use of R.
+
+### Software and Set-up Requirements
+
+Follow the instructions at <https://docs.github.com/en/get-started/git-basics/set-up-git> to setup the following:
+
+-   git installation on your computer (Windows, Mac, linux supported)
+-   GitHub user account
+-   Configure authentication with GitHub from git
+
+After you have installed and set-up the required software and GitHub account, you will need a git/GitHub repository (see Quickstart for repositories) where your preregistration document and analysis files will be version-controlled.
 
 ## Adaptive Preregistration using GitHub
 
@@ -97,23 +109,42 @@ When a researcher needs to conduct preliminary analyses or check parts of the da
 
 ## The initial preregistration phase
 
+::: callout-tip
+# Preregistration Template
+
+We have developed a [template for preregistering ecological modelling studies](preregistration_modelling.qmd). The template is available for use as a [quarto template extension](https://github.com/egouldo/EcoConsModPreReg), which allows rendering to `.html`, `.pdf` or `.docx` file formats. Should you wish *not* to use [quarto markdown](https://quarto.org) as the format for your preregistration document, feel free to copy the relevant content into the text file format of your choice.
+
+Ensure you have committed a preregistration template to your project repository before proceeding with the following steps.
+:::
+
 ### The first iteration of preregistration
 
-1.  Edit the document with your responses to the template items
+1.  [Create a GitHub issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue) describing any tasks relevant to creation of the initial preregistration
+2.  Edit the document with your responses to the template items
 
--   View the document in GitHub [here](https://github.com/egouldo/VEFMAP_VEG_Stage6/blob/master/analysis/preregistration_template.Rmd)
--   Click on The 'edit document' button: ![](figures/edit-document.png)
+-   View our preregistration template document in GitHub [here](https://github.com/egouldo/EcoConsModPreReg/blob/master/template.qmd).
+-   In your own repository containing your preregistration document, click on the 'edit document' button: ![](figures/edit-document.png)
 -   You will be able to edit the document directly in GitHub, Edit away!
 
 2.  Commit changes
 
 -   If you are finished, or ready to save your changes by 'committing' them. There is a box called "commit changes" at the top right of the window, a pop-up window will appear, enter in the commit message box the following:
-    -   `Initial Preregistration #IssueNumber`. Tag the Preregistration GitHub issue number in the commit message (For this repository, it's `#17`).
--   Fill out the additional description box briefly describing the changes you just made
--   Ensure that the radio button for creating a new branch is selected, an auto-generated branch name will appear, e.g. `egould-patch-1`.
+    -   `Initial Preregistration #IssueNumber`. Tag the Preregistration GitHub issue number in the commit message (For this repository, it's `#17`, however if you have only created the issue for the initial preregistration, then your issue number will be `#1`).
+-   Fill out the extended description box briefly describing the changes you just made
+-   Ensure that the radio button for creating a new branch is selected, an auto-generated branch name will appear, e.g. `egouldo-patch-1`.
 -   Click "Propose Changes" to start a [pull request](https://docs.github.com/en/get-started/quickstart/github-flow):
 
 ![](figures/propose-changes.png)
+
+::: callout-important
+# Pull Requests & the GitHub flow model of collaboration
+
+The approach to using GitHub in this document follows the [GitHub flow model](https://docs.github.com/en/get-started/using-github/github-flow) for collaboration on projects. However, if you are working independently rather than collaborating on your project in a team, you can instead skip the use of pull requests and [branches](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches), and select the 'commit directly to the `default` branch' radio button above.
+
+Note that if using the GitHub flow model demonstrated in this guide, you will need to make sure that the pull request is [reviewed](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews), [updated if necessary](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/incorporating-feedback-in-your-pull-request), and the [changes merged into the default branch](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request) once the pull request has been approved.
+
+See the '[reviewing changes in pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests)' guide for further details.
+:::
 
 ## Incrementally Updating the Preregistration Plan
 
@@ -135,7 +166,7 @@ As for the situation where you are responding to findings of a preliminary analy
 
 Before you begin to do or start anything you've planned within your preregistration, you **must** create a GitHub issue for that item, phase, or step in the modelling process, follow these steps:
 
-1.  View the preregistration document in Github, and click on the line-numbers on the left to highlight the PRT item text, as well as your response to the item. For example, let's say you want to start working the model checking, you would highlight the following in the document. Note that once you've highlighted some lines, a little box with an ellipsis appears on top of the lines numbers. ![](figures/highlight-lines.png)
+1.  View the preregistration document in Github, and click on the line-numbers on the left to highlight the preregistration template item text, as well as your response to the item. For example, let's say you want to start working the model checking, you would highlight the following in the document. Note that once you've highlighted some lines, a little box with an ellipsis appears on top of the lines numbers. ![](figures/highlight-lines.png)
 2.  Click on the tiny box with the ellipsis, and a pop-up dialogue box will appear with 4 options: `Copy lines`, `Copy permalink`, `View git blame`, `References in new issue`. Select the last option `Reference in new issue.` ![Screen Shot 2020-05-13 at 1 06 58 pm](figures/reference-in-new-issue.png)
 3.  This will open up a new window with a new GitHub Issue for you to complete. Note that part of the issue description has already been filled out for you, this is a reference to the lines you just highlighted: ![](figures/new-issue.png) Which is cool, because if you open the `Preview` tab to view the preview of your issue, it will look like this: ![](figures/preview-new-issue.png)
 
