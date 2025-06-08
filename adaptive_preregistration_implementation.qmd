@@ -42,7 +42,7 @@ Why GitHub for Adaptive Preregistration?
 
 GitHub users can collaborate by contributing, modifying and discussing existing code, reporting bugs and other problems, discover new code and data, and publish new code.
 
-GitHub also integrates several communication features, such as Github Issues, Github Discussions, Github Pages, which allows users to engage in discussions, to plan and collaborate on code, and publish information to a webpage (see Box 1)." ([Braga et al., 2023, p. 1365](zotero://select/library/items/CQU6GUZL)) ([pdf](zotero://open-pdf/library/items/ML8SB436?page=2&annotation=GPAINXUB))
+GitHub also integrates several communication features, such as Github Issues, Github Discussions, Github Pages, which allows users to engage in discussions, to plan and collaborate on code, and publish information to a webpage [see Box 1 in @braga2023].
 
 ```{r}
 #| label: fig-git-diff
