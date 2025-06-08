@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.7.29">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -50,15 +50,16 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-6bdd2aebeb936dcddaa5f935a5de481c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -91,7 +92,7 @@ div.csl-indent {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-sidebar floating nav-fixed">
+<body class="nav-sidebar floating nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -206,7 +207,11 @@ div.csl-indent {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#adaptive-preregistration-using-github" id="toc-adaptive-preregistration-using-github" class="nav-link active" data-scroll-target="#adaptive-preregistration-using-github">Adaptive Preregistration using GitHub</a></li>
+  <li><a href="#who-is-this-guide-for" id="toc-who-is-this-guide-for" class="nav-link active" data-scroll-target="#who-is-this-guide-for">Who is this guide for?</a>
+  <ul class="collapse">
+  <li><a href="#software-and-set-up-requirements" id="toc-software-and-set-up-requirements" class="nav-link" data-scroll-target="#software-and-set-up-requirements">Software and Set-up Requirements</a></li>
+  </ul></li>
+  <li><a href="#adaptive-preregistration-using-github" id="toc-adaptive-preregistration-using-github" class="nav-link" data-scroll-target="#adaptive-preregistration-using-github">Adaptive Preregistration using GitHub</a></li>
   <li><a href="#how-it-works" id="toc-how-it-works" class="nav-link" data-scroll-target="#how-it-works">How it works…</a>
   <ul class="collapse">
   <li><a href="#shifting-from-planning-to-execution" id="toc-shifting-from-planning-to-execution" class="nav-link" data-scroll-target="#shifting-from-planning-to-execution">…Shifting from planning to execution…</a></li>
@@ -230,7 +235,7 @@ div.csl-indent {
   </ul></li>
   <li><a href="#living-preregistration---tracking-changes-to-the-preregistration-draft" id="toc-living-preregistration---tracking-changes-to-the-preregistration-draft" class="nav-link" data-scroll-target="#living-preregistration---tracking-changes-to-the-preregistration-draft">‘Living preregistration’ - tracking changes to the Preregistration Draft</a>
   <ul class="collapse">
-  <li><a href="#using-the-fledge-r-package-for-semantic-versioning-and-to-document-preregistration-changes" id="toc-using-the-fledge-r-package-for-semantic-versioning-and-to-document-preregistration-changes" class="nav-link" data-scroll-target="#using-the-fledge-r-package-for-semantic-versioning-and-to-document-preregistration-changes">Using the <code>fledge::</code> R package for semantic versioning and to document preregistration changes</a></li>
+  <li><a href="#sec-fledge" id="toc-sec-fledge" class="nav-link" data-scroll-target="#sec-fledge">Using the <code>fledge::</code> R package for semantic versioning and to document preregistration changes</a></li>
   </ul></li>
   </ul></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
@@ -259,6 +264,35 @@ div.csl-indent {
 </header>
 
 
+<section id="who-is-this-guide-for" class="level2">
+<h2 class="anchored" data-anchor-id="who-is-this-guide-for">Who is this guide for?</h2>
+<p>This guide assumes a basic understanding and knowledge of version-control tools, like git and/or GitHub. However, we have provided some background knowledge, links and references throughout this guide so that any modellers or researchers can set up and implement adaptive preregistration with git and GitHub for a new project. As a starting point, we direct readers to <span class="citation" data-cites="braga2023">Braga et al. (<a href="#ref-braga2023" role="doc-biblioref">2023</a>)</span>, which provides an excellent introductory overview of the GitHub’s functionality.</p>
+<p>For those with basic familiarity of git and GitHub, we use <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/getting-started/about-collaborative-development-models#shared-repository-model">a shared repository model</a> for collaboration. If you are not yet familiar with GitHub features, such as pull requests and branches, we have linked to the relevant GitHub documentation pages where further background reading might be necessary.</p>
+<p>We suggest some tooling that assumes use of the R statistical programming language (<span class="citation" data-cites="R2024">R Core Team (<a href="#ref-R2024" role="doc-biblioref">2024</a>)</span>, see <a href="#sec-fledge" class="quarto-xref">Section&nbsp;1.4.1</a>), since that is the most common programming language in the fields of ecology <span class="citation" data-cites="Gao2025">(<a href="#ref-Gao2025" role="doc-biblioref">Gao et al. 2025</a>)</span>, however the general approach and principles described in this document is language agnostic, and does not require the use of R.</p>
+<section id="software-and-set-up-requirements" class="level3">
+<h3 class="anchored" data-anchor-id="software-and-set-up-requirements">Software and Set-up Requirements</h3>
+<p>Follow the instructions at <a href="https://docs.github.com/en/get-started/git-basics/set-up-git" class="uri">https://docs.github.com/en/get-started/git-basics/set-up-git</a> to setup the following:</p>
+<ul>
+<li>git installation on your computer (Windows, Mac, linux supported)</li>
+<li>GitHub user account</li>
+<li>Configure authentication with GitHub from git</li>
+</ul>
+<p>After you have installed and set-up the required software and GitHub account, you will need a git/GitHub repository (see Quickstart for repositories) where your preregistration document and analysis files will be version-controlled.</p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Adaptive Preregistration Primer
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Make sure you have read the <a href="./adaptive_preregistration_background.html">primer on Adaptive Preregistration</a> and <a href="./RDF_QRP.html">background</a> before preceding with this guide.</p>
+</div>
+</div>
+</section>
+</section>
 <section id="adaptive-preregistration-using-github" class="level2">
 <h2 class="anchored" data-anchor-id="adaptive-preregistration-using-github">Adaptive Preregistration using GitHub</h2>
 <p>We propose leveraging both the version-control and the project management features of GitHub (<a href="www.github.com">www.github.com</a>) as a tool for implementing adaptive preregistration. GitHub is a web-interface that utilises the version-control system, ‘git’, to store files, track changes, and enable collaboration on computer code <span class="citation" data-cites="braga2023">(<a href="#ref-braga2023" role="doc-biblioref">Braga et al. 2023</a>)</span>. When a document is version-controlled using Git and GitHub, each version of a document can be time-stamped, and is assigned its own unique identifier, or commit-hash<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> so that chronological records of changes to a collection of files, stored in a ‘repository’, are made transparent <span class="citation" data-cites="braga2023 Bryan:2008en">(<a href="#ref-braga2023" role="doc-biblioref">Braga et al. 2023</a>; <a href="#ref-Bryan:2008en" role="doc-biblioref">Bryan and Crossman 2008</a>)</span>.</p>
@@ -270,7 +304,7 @@ div.csl-indent {
 <li>tagging and release</li>
 </ul>
 <p>GitHub users can collaborate by contributing, modifying and discussing existing code, reporting bugs and other problems, discover new code and data, and publish new code.</p>
-<p>GitHub also integrates several communication features, such as Github Issues, Github Discussions, Github Pages, which allows users to engage in discussions, to plan and collaborate on code, and publish information to a webpage (see Box 1).” (<a href="zotero://select/library/items/CQU6GUZL">Braga et al., 2023, p.&nbsp;1365</a>) (<a href="zotero://open-pdf/library/items/ML8SB436?page=2&amp;annotation=GPAINXUB">pdf</a>)</p>
+<p>GitHub also integrates several communication features, such as Github Issues, Github Discussions, Github Pages, which allows users to engage in discussions, to plan and collaborate on code, and publish information to a webpage <span class="citation" data-cites="braga2023">(see Box 1 in <a href="#ref-braga2023" role="doc-biblioref">Braga et al. 2023</a>)</span>.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-git-diff" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -289,7 +323,7 @@ Figure&nbsp;1: ‘Diff View’ of changes made to a preregistration in process.
 </section>
 <section id="how-it-works" class="level2">
 <h2 class="anchored" data-anchor-id="how-it-works">How it works…</h2>
-<p>GitHub is used to track amendments to the preregistration — each time an additional template item is answered, or an alteration is made to the preregistration, the change should be <em>committed</em> to the repository. <em>Semantic versioning</em> is used to document each version of the preregistration. Semantic versioning<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> is an open-source software engineering practice used to document and and communicate the development of software, in a way that allows others to depend on it <span class="citation" data-cites="Kitzes2018vn">(<a href="#ref-Kitzes2018vn" role="doc-biblioref">Kitzes, Turek, and Deniz 2018</a>)</span>. We have created our own semantic versioning scheme to be used to specifically document the incremental version of the preregistration, in tandem with GitHub’s tag and release feature, each interim preregistration is tagged and released with its semantic version number. All template items that can be completed should be completed before any data analysis or modelling proceeds. The preregistration should be completed until a) no further detail can be supplied or b) no additional template item can be answered until preliminary investigations or analyses are undertaken (Fig 3, steps 1 - 3).</p>
+<p>GitHub is used to track amendments to the preregistration – each time an additional template item is answered, or an alteration is made to the preregistration, the change should be <em>committed</em> to the repository. <em>Semantic versioning</em> is used to document each version of the preregistration. Semantic versioning<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> is an open-source software engineering practice used to document and and communicate the development of software, in a way that allows others to depend on it <span class="citation" data-cites="Kitzes2018vn">(<a href="#ref-Kitzes2018vn" role="doc-biblioref">Kitzes, Turek, and Deniz 2018</a>)</span>. We have created our own semantic versioning scheme to be used to specifically document the incremental version of the preregistration, in tandem with GitHub’s tag and release feature, each interim preregistration is tagged and released with its semantic version number. All template items that can be completed should be completed before any data analysis or modelling proceeds. The preregistration should be completed until a) no further detail can be supplied or b) no additional template item can be answered until preliminary investigations or analyses are undertaken (Fig 3, steps 1 - 3).</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-initial-prereg-zoom" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -356,14 +390,29 @@ Figure&nbsp;4: Adaptive Preregistration - When Plans Change
 <h1>A step-by-step guide to implementing Adaptive Preregistration with GitHub</h1>
 <section id="the-initial-preregistration-phase" class="level2">
 <h2 class="anchored" data-anchor-id="the-initial-preregistration-phase">The initial preregistration phase</h2>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Preregistration Template
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We have developed a <a href="./preregistration_modelling.html">template for preregistering ecological modelling studies</a>. The template is available for use as a <a href="https://github.com/egouldo/EcoConsModPreReg">quarto template extension</a>, which allows rendering to <code>.html</code>, <code>.pdf</code> or <code>.docx</code> file formats. Should you wish <em>not</em> to use <a href="https://quarto.org">quarto markdown</a> as the format for your preregistration document, feel free to copy the relevant content into the text file format of your choice.</p>
+<p>Ensure you have committed a preregistration template to your project repository before proceeding with the following steps.</p>
+</div>
+</div>
 <section id="the-first-iteration-of-preregistration" class="level3">
 <h3 class="anchored" data-anchor-id="the-first-iteration-of-preregistration">The first iteration of preregistration</h3>
 <ol type="1">
+<li><a href="https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue">Create a GitHub issue</a> describing any tasks relevant to creation of the initial preregistration</li>
 <li>Edit the document with your responses to the template items</li>
 </ol>
 <ul>
-<li>View the document in GitHub <a href="https://github.com/egouldo/VEFMAP_VEG_Stage6/blob/master/analysis/preregistration_template.Rmd">here</a></li>
-<li>Click on The ‘edit document’ button: <img src="figures/edit-document.png" class="img-fluid"></li>
+<li>View our preregistration template document in GitHub <a href="https://github.com/egouldo/EcoConsModPreReg/blob/master/template.qmd">here</a>.</li>
+<li>In your own repository containing your preregistration document, click on the ‘edit document’ button: <img src="figures/edit-document.png" class="img-fluid"></li>
 <li>You will be able to edit the document directly in GitHub, Edit away!</li>
 </ul>
 <ol start="2" type="1">
@@ -372,20 +421,35 @@ Figure&nbsp;4: Adaptive Preregistration - When Plans Change
 <ul>
 <li>If you are finished, or ready to save your changes by ‘committing’ them. There is a box called “commit changes” at the top right of the window, a pop-up window will appear, enter in the commit message box the following:
 <ul>
-<li><code>Initial Preregistration #IssueNumber</code>. Tag the Preregistration GitHub issue number in the commit message (For this repository, it’s <code>#17</code>).</li>
+<li><code>Initial Preregistration #IssueNumber</code>. Tag the Preregistration GitHub issue number in the commit message (For this repository, it’s <code>#17</code>, however if you have only created the issue for the initial preregistration, then your issue number will be <code>#1</code>).</li>
 </ul></li>
-<li>Fill out the additional description box briefly describing the changes you just made</li>
-<li>Ensure that the radio button for creating a new branch is selected, an auto-generated branch name will appear, e.g.&nbsp;<code>egould-patch-1</code>.</li>
-<li>Click “Propose Changes” to start a&nbsp;<a href="https://docs.github.com/en/get-started/quickstart/github-flow">pull request</a>:</li>
+<li>Fill out the extended description box briefly describing the changes you just made</li>
+<li>Ensure that the radio button for creating a new branch is selected, an auto-generated branch name will appear, e.g.&nbsp;<code>egouldo-patch-1</code>.</li>
+<li>Click “Propose Changes” to start a&nbsp;<a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests">pull request</a>:</li>
 </ul>
 <p><img src="figures/propose-changes.png" class="img-fluid"></p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Pull Requests &amp; the GitHub flow model of collaboration
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The approach to using GitHub in this document follows the <a href="https://docs.github.com/en/get-started/using-github/github-flow">GitHub flow model</a> for collaboration on projects. However, if you are working independently rather than collaborating on your project in a team, you can instead skip the use of pull requests and <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches">branches</a>, and select the ‘commit directly to the <code>default</code> branch’ radio button above.</p>
+<p>Note that if using the GitHub flow model demonstrated in this guide, before proceeding to the next step, you will need to make sure that the pull request is <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews">reviewed</a>, <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/incorporating-feedback-in-your-pull-request">updated if necessary</a>, and the <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request">changes merged into the default branch</a> once the pull request has been approved.</p>
+<p>See the ‘<a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests">reviewing changes in pull requests</a>’ guide for further details.</p>
+</div>
+</div>
 </section>
 </section>
 <section id="incrementally-updating-the-preregistration-plan" class="level2">
 <h2 class="anchored" data-anchor-id="incrementally-updating-the-preregistration-plan">Incrementally Updating the Preregistration Plan</h2>
 <section id="moving-from-general-to-specific-incrementally-updating-the-preregistration" class="level3">
 <h3 class="anchored" data-anchor-id="moving-from-general-to-specific-incrementally-updating-the-preregistration">Moving from general to specific: Incrementally updating the preregistration</h3>
-<p>You will likely find that some items on the template cannot be answered just yet. One reason being that the level of detail required to adequately answer the template item just isn’t clear yet, and more thought and time is needed, or you need to be further along the modelling process to be able to adequately answer the question. Another reason is that downstream decisions might depend on some preliminary investigations of the data – for example, you might need to explore the shape of a measured variable before you can properly specify the full model.</p>
+<p>You will likely find that some items on the template cannot be answered just yet. One reason being that the level of detail required to adequately answer the template item might not be clear yet, and more thought and time is needed, or else you need to be further along the modelling process in order to adequately answer the preregistration item. Another reason is that downstream decisions might depend on some preliminary investigations of the data – for example, you might need to explore the shape of a measured variable before you can properly specify the full model.</p>
 <p>In the latter situation, where possible, you can preregister your preliminary analysis: describing what the preliminary analysis entails, providing a short and relevant list of plausible outcomes, and describing for each of those possible outcomes how the dependent or down-stream decision-point will change depending on the outcome.</p>
 </section>
 <section id="using-github-to-update-the-plan" class="level3">
@@ -399,7 +463,7 @@ Figure&nbsp;4: Adaptive Preregistration - When Plans Change
 <h2 class="anchored" data-anchor-id="moving-from-planning-to-doing">Moving from planning to doing</h2>
 <p>Before you begin to do or start anything you’ve planned within your preregistration, you <strong>must</strong> create a GitHub issue for that item, phase, or step in the modelling process, follow these steps:</p>
 <ol type="1">
-<li>View the preregistration document in Github, and click on the line-numbers on the left to highlight the PRT item text, as well as your response to the item. For example, let’s say you want to start working the model checking, you would highlight the following in the document. Note that once you’ve highlighted some lines, a little box with an ellipsis appears on top of the lines numbers. <img src="figures/highlight-lines.png" class="img-fluid"></li>
+<li>View the preregistration document in Github, and click on the line-numbers on the left to highlight the preregistration template item text, as well as your response to the item. For example, let’s say you want to start working the model checking, you would highlight the following in the document. Note that once you’ve highlighted some lines, a little box with an ellipsis appears on top of the lines numbers. <img src="figures/highlight-lines.png" class="img-fluid"></li>
 <li>Click on the tiny box with the ellipsis, and a pop-up dialogue box will appear with 4 options: <code>Copy lines</code>, <code>Copy permalink</code>, <code>View git blame</code>, <code>References in new issue</code>. Select the last option <code>Reference in new issue.</code> <img src="figures/reference-in-new-issue.png" class="img-fluid" alt="Screen Shot 2020-05-13 at 1 06 58 pm"></li>
 <li>This will open up a new window with a new GitHub Issue for you to complete. Note that part of the issue description has already been filled out for you, this is a reference to the lines you just highlighted: <img src="figures/new-issue.png" class="img-fluid"> Which is cool, because if you open the <code>Preview</code> tab to view the preview of your issue, it will look like this: <img src="figures/preview-new-issue.png" class="img-fluid"></li>
 </ol>
@@ -410,8 +474,8 @@ Figure&nbsp;4: Adaptive Preregistration - When Plans Change
 <ul>
 <li>Add the URL to the relevant GitHub issue under the corresponding Preregistration Item.</li>
 <li>Add any the URL for any linked commits to the Preregistration Item.</li>
-<li>revise the Preregistration, where necessary by editing the Preregistration document in GitHub, as per previous instructions.</li>
-<li>Commit the changes with the following commit message header:</li>
+<li>Revise the Preregistration, where necessary by editing the Preregistration document in GitHub, as per previous instructions.</li>
+<li>Commit the changes with the following commit message header (or similar): <code>Preregistration Deviation #issue</code>.</li>
 <li>Describe the trigger for the Preregistration revisions in brief detail within the commit message body, adding the link to the relevant GitHub issue containing the tagged commits that triggered the revision.</li>
 </ul>
 </section>
@@ -482,8 +546,8 @@ Table&nbsp;1: Types of changes to the preregistration and corresponding actions 
 </div>
 </figure>
 </div>
-<section id="using-the-fledge-r-package-for-semantic-versioning-and-to-document-preregistration-changes" class="level3">
-<h3 class="anchored" data-anchor-id="using-the-fledge-r-package-for-semantic-versioning-and-to-document-preregistration-changes">Using the <a href="https://fledge.cynkra.com"><code>fledge::</code></a> R package for semantic versioning and to document preregistration changes</h3>
+<section id="sec-fledge" class="level3">
+<h3 class="anchored" data-anchor-id="sec-fledge">Using the <a href="https://fledge.cynkra.com"><code>fledge::</code></a> R package for semantic versioning and to document preregistration changes</h3>
 <p>The package <code>fledge::</code> can be used right from the R console to bump the version number, make releases, and auto catalogue a chronological history of changes recorded a <code>NEWS.md</code> file that is updated and published with every release. A detailed guide to using <code>fledge::</code> can be found here <a href="https://fledge.cynkra.com/articles/fledge.html" class="uri">https://fledge.cynkra.com/articles/fledge.html</a>.</p>
 <p>This package is not a mandatory component of the process, however can be a useful tool for implementing semantic versioning, tagging and releasing. All of these actions can be implemented in the GitHub browser with a point and click interface.</p>
 </section>
@@ -498,8 +562,14 @@ Braga, Pedro Henrique Pereira, Katherine Hébert, Emma J. Hudgins, Eric R. Scott
 <div id="ref-Bryan:2008en" class="csl-entry" role="listitem">
 Bryan, Brett A., and Neville D. Crossman. 2008. <span>“Systematic Regional Planning for Multiple Objective Natural Resource Management.”</span> <em>Journal of Environmental Management</em> 88 (4): 1175–89. <a href="https://doi.org/10.1016/j.jenvman.2007.06.003">https://doi.org/10.1016/j.jenvman.2007.06.003</a>.
 </div>
+<div id="ref-Gao2025" class="csl-entry" role="listitem">
+Gao, Meixiang, Yanyan Ye, Ye Zheng, and Jiangshan Lai. 2025. <span>“A Comprehensive Analysis of R<span>’</span>s Application in Ecological Research from 2008 to 2023.”</span> Edited by Jinbao Liao. <em>Journal of Plant Ecology</em> 18 (1): rtaf010. <a href="https://doi.org/10.1093/jpe/rtaf010">https://doi.org/10.1093/jpe/rtaf010</a>.
+</div>
 <div id="ref-Kitzes2018vn" class="csl-entry" role="listitem">
 Kitzes, J, D Turek, and F Deniz. 2018. <em>The Practice of Reproducible Research: Case Studies and Lessons from the Data-Intensive Sciences.</em> Edited by J Kitzes, D Turek, and F Deniz. Oakland, CA: University of California Press.
+</div>
+<div id="ref-R2024" class="csl-entry" role="listitem">
+R Core Team. 2024. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
 </div>
 </div>
 
@@ -517,239 +587,242 @@ Kitzes, J, D Turek, and F Deniz. 2018. <em>The Practice of Reproducible Research
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
-    }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
-      }
-    }
-    return false;
-  }
-  const onCopySuccess = function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
-      }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
-  });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/egouldo\.github\.io\/EcoConsPreReg\/");
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-      }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-    const config = {
-      allowHTML: true,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start',
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
     };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
         }
       }
+      return false;
     }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
           }
         }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/egouldo\.github\.io\/EcoConsPreReg\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
         }
-        return container.innerHTML
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
       } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      // TODO in 1.5, we should make sure this works without a callout special case
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
       }
     }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
           }
         } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
+            const note = htmlDoc.querySelector('main.content');
             if (note !== null) {
-              const html = processXRef(id, note);
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -757,185 +830,161 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            div.style.left = 0;
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+      }, function(instance) {
       });
     }
-  }
-});
-</script>
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
