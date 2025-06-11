@@ -85,3 +85,7 @@ We propose leveraging the features of [git](https://git-scm.com) and [GitHub](ww
 #| echo: false
 magick::image_read(path = "figures/LivingPreregistration.png", density = 600)
 ```
+## References
+
+::: {#refs}
+:::
