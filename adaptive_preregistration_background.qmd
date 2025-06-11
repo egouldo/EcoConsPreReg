@@ -78,6 +78,7 @@ Given the iterative nature of adaptive preregistration then, the current convent
 
 We propose leveraging the features of [git](https://git-scm.com) and [GitHub](www.github.com) to facilitate implementation both adaptive preregistration in a transparently documented manner (@fig-adaptive-preregistration), and provide a [step-by-step guide](adaptive_preregistration_implementation.qmd).
 
+::: landscape
 ```{r}
 #| label: fig-adaptive-preregistration
 #| column: screen
@@ -85,6 +86,8 @@ We propose leveraging the features of [git](https://git-scm.com) and [GitHub](ww
 #| echo: false
 magick::image_read(path = "figures/LivingPreregistration.png", density = 600)
 ```
+:::
+
 ## References
 
 ::: {#refs}
