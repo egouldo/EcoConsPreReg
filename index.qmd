@@ -1,4 +1,5 @@
 ---
+number-sections: false
 ---
 
 This site provides a guide to implementing *Adaptive Preregistration for Model-Based Research*, with a focus on ecological modelling as it is used in both basic and applied contexts.
