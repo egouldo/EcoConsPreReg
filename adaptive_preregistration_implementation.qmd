@@ -198,6 +198,13 @@ GitHub releases mark software iterations that you can release and deploy[^adapti
 
 A summary of the types of preregistration changes, and the corresponding required version and GitHub features are presented in @tbl-preregistration-versioning. Note that anything up until the complete preregistration should be additionally tagged as a 'pre-release' to communicate that the initial preregistration is not yet complete.
 
+#### Using the [`fledge::`](https://fledge.cynkra.com) R package for semantic versioning and to document preregistration changes {#sec-fledge}
+
+The package `fledge::` can be used right from the R console to bump the version number, make releases, and auto catalogue a chronological history of changes recorded a `NEWS.md` file that is updated and published with every release. A detailed guide to using `fledge::` can be found here <https://fledge.cynkra.com/articles/fledge.html>.
+
+This package is not a mandatory component of the process, however can be a useful tool for implementing semantic versioning, tagging and releasing. All of these actions can be implemented in the GitHub browser with a point and click interface.
+
+::: landscape
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+
 | Preregistration Change or Action                                                                                                                                                                                                                                                                                       | GitHub Mechanism                                                                                                                                                                                                                                                         | Semantic Versioning                                                                                      |
 +========================================================================================================================================================================================================================================================================================================================+==========================================================================================================================================================================================================================================================================+==========================================================================================================+
@@ -218,12 +225,7 @@ A summary of the types of preregistration changes, and the corresponding require
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+
 
 : Types of changes to the preregistration and corresponding actions and versioning adjustments {#tbl-preregistration-versioning}
-
-### Using the [`fledge::`](https://fledge.cynkra.com) R package for semantic versioning and to document preregistration changes {#sec-fledge}
-
-The package `fledge::` can be used right from the R console to bump the version number, make releases, and auto catalogue a chronological history of changes recorded a `NEWS.md` file that is updated and published with every release. A detailed guide to using `fledge::` can be found here <https://fledge.cynkra.com/articles/fledge.html>.
-
-This package is not a mandatory component of the process, however can be a useful tool for implementing semantic versioning, tagging and releasing. All of these actions can be implemented in the GitHub browser with a point and click interface.
+:::
 
 ## References
 
