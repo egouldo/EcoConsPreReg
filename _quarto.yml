@@ -1,15 +1,32 @@
 project:
-  type: website
+  type: book
   output-dir: docs
   
-website:
+book:
+  author: 
+    - name: "Elliot Gould"
+      affiliations:
+        - name: "University of Melbourne"
+          address: "Parkville, Victoria, Australia"
+          department: "School of Agriculture Food and Ecosystem Sciences"
+  date: last-modified
+  chapters:
+    - index.qmd
+    - part: "Part I: Researcher Degrees of Freedom"
+      chapters:
+      - RDF_QRP.qmd
+    - part: "Part II: Adaptive Preregistration"
+      chapters:
+        - adaptive_preregistration_background.qmd
+        - adaptive_preregistration_implementation.qmd
+    - part: "Part III: A Preregistration Template for Ecological Modelling"
+    - preregistration_modelling.qmd
   repo-url: https://github.com/egouldo/EcoConsPreReg/
   repo-branch: master
   repo-actions: [edit, issue]
   reader-mode: true
-  page-footer: "Copyright 2023, Elliot Gould"
+  page-footer: "Copyright 2025, Elliot Gould"
   back-to-top-navigation: true
-  title: "Adaptive Preregistration for Model-Based Research"
   navbar:
     search: true
     left:
