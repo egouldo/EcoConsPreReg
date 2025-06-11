@@ -60,7 +60,7 @@ book:
         - adaptive_preregistration_background.qmd
         - adaptive_preregistration_implementation.qmd
 
-    - title: "Preregistration for Modelling" 
+    - title: "Preregistration Template for Ecological Modelling" 
       contents:
         - preregistration_modelling.qmd
         # navigation items
