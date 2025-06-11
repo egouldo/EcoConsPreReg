@@ -1,6 +1,5 @@
 ---
-title: Implementing Adaptive Preregistration with Git and Github
-bibliography: data/references.bib
+title: Implementing *Adaptive Preregistration* with git and GitHub
 ---
 
 ## Who is this guide for?

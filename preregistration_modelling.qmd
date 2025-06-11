@@ -10,7 +10,6 @@ authors:
   - Megan Good
   - Chris Jones
 sidebar: false
-bibliography: data/references.bib
 toc-location: left
 toc-expand: true
 number-sections: true

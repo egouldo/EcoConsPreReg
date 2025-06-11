@@ -2,7 +2,6 @@
 title: A primer on *Adaptive Preregistration*
 date: today
 link-citations: true
-bibliography: data/references.bib
 ---
 
 ## Background & Motivation
