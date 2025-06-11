@@ -51,14 +51,12 @@ book:
       contents:
         - RDF_QRP.qmd
         # navigation items
-        
     - title: "Adaptive Preregistration"
       style: "docked"
       background: light
       contents:
         - adaptive_preregistration_background.qmd
         - adaptive_preregistration_implementation.qmd
-
     - title: "Preregistration Template for Ecological Modelling" 
       contents:
         - preregistration_modelling.qmd
