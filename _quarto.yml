@@ -62,14 +62,26 @@ book:
     - title: "Preregistration Template for Ecological Modelling" 
       contents:
         - preregistration_modelling.qmd
-        # navigation items
-
-format:
+  
+format: 
   html:
-    theme: flatly
+    # theme: flatly
     css: styles.css
     toc: true
-
+    default: true
+  titlepage-pdf:
+    titlepage: classic-lined
+    toc: true
+    number-sections: true
+    documentclass: scrbook
+    classoption: ["oneside", "open=any"]
+    papersize: A4
+    default: true
+    colorlinks: true
+    title: "Adaptive Preregistration for Model-Based Research"
+    subtitle: "A guide and template for preregistering ecological models"
+    citeproc: true
     bibliography: references.bib
+    csl: methods-in-ecology-and-evolution.csl
+    
 editor: visual
-
