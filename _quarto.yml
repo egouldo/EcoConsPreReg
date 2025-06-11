@@ -40,7 +40,6 @@ book:
           - adaptive_preregistration_implementation.qmd
       - text: "Preregistration for Modelling"
         file: preregistration_modelling.qmd
-      - about.qmd
       - icon: github
         menu:
           - text: Source Code

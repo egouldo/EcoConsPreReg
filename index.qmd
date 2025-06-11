@@ -10,3 +10,7 @@ This site covers the following topics:
     1.  [*Overview*](adaptive_preregistration_background.qmd): What is adaptive preregistration, why do we need it for registering modeling analyses, and what are its defining features?
     2.  [*A practical guide*](adaptive_preregistration_implementation.qmd): How to implement adaptive preregistration using [git](https://git-scm.com) and [GitHub](www.github.com).
 3.  [Preregistration template](preregistration_modelling.qmd) for model-based research in ecology and conservation.
+
+This practical guide accompanies the paper:
+
+> Gould, E., Jones, C.S., Yen, J.D.L., Fraser, H.F., Wootton, H., Vivian, L., Good, M., Duncan, D.H., Rumpff, L., Fidler, F.M., Wintle, B.C. (in prep., 2025) "But I can't preregister my research: Improving the reproducibility and transparency of ecological modelling with adaptive preregistration".
