@@ -1,9 +1,9 @@
 ---
-title: "Adaptive Preregistration for Model-Based Research"
 ---
 
 This site provides a guide to implementing *Adaptive Preregistration for Model-Based Research*, with a focus on ecological modelling as it is used in both basic and applied contexts.
 This site covers the following topics:
+# About this guide
 
 1.  [Background on researcher degrees of freedom](RDF_QRP.qmd), the risk of questionable research practices (QRPs), and introduction to preregistration as a tool for mitigating QRPs.
 2.  Adaptive Preregistration
