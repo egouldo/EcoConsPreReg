@@ -4,6 +4,21 @@ date: today
 link-citations: true
 ---
 
+
+
+```{r}
+#| label: setup
+#| message: false
+#| warning: false
+#| output: false
+#| echo: false
+#| result: hide
+
+suppressPackageStartupMessages(library(magick, quietly = TRUE))
+suppressPackageStartupMessages(library(dplyr))
+```
+
+
 ## Background & Motivation
 
 ```{r}
