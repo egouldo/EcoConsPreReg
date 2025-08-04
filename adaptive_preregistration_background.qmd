@@ -64,12 +64,47 @@ When preliminary analyses, model checking or other data-dependent decisions need
 -   explaining what test or analysis will be performed to obtain this quantity or outcome, and what parts of the data will be used in this analysis, and
 -   describing how the results will be interpreted, listing each potential decision and its trigger, where possible.
 
-```{r}
-#| label: fig-registering-flexibility
-#| echo: false
-#| fig-cap: "A general heuristic in the form of a decision-tree for registering flexibile analyses."
-magick::image_read_pdf(path = "figures/registering_flexibility.pdf", density = 500)
+
+::: {#fig-registering-flexibility .content-visible when-format="html"}
+```{mermaid}
+%%| column: body-outset
+---
+config:
+  theme: neutral
+---
+flowchart LR
+  A(Describe Data-Dependent Decision) --> B{Describe Analysis}
+  B --> C[Analysis Outcome 1]
+  B --> D[Analysis Outcome 2]
+  C --> E(Option 1)
+  D --> F(Option 2)
 ```
+
+A general heuristic for registering flexible analyses.
+
+:::
+
+::: {#fig-registering-flexibility .content-visible when-format="pdf"}
+```{mermaid}
+%%| fig-width: 6
+%%| column: body-outset
+---
+config:
+  theme: neutral
+  themeVariables:
+    fontSize: 10
+---
+flowchart LR
+  A(Describe Data-Dependent Decision) --> B{Describe Analysis}
+  B --> C[Analysis Outcome 1]
+  B --> D[Analysis Outcome 2]
+  C --> E(Option 1)
+  D --> F(Option 2)
+```
+A general heuristic for registering flexible analyses.
+
+:::
+
 
 ### Interim Preregistrations
 
