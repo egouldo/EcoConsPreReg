@@ -23,12 +23,14 @@ suppressPackageStartupMessages(library(dplyr))
 
 ```{r}
 #| label: fig-traditional-prereg
-#| out-width: 700px
-#| out-height: 100x
 #| echo: false
 #| column: body
-#| fig-cap: "Conventional preregistration process for registered reports, as illustrated by [@Pu2019]."
-magick::image_read(path = "_supp-mat/Pu_et_al_fig_prereg.png")
+#| fig-width: 10
+#| fig-cap: "Preregistration as a component of the registered report publication pathway, as illustrated by [@Pu2019]."
+
+magick::image_read(path = "_supp-mat/Pu_et_al_fig_prereg.png", 
+                   density = 1000) %>% 
+  magick::image_scale("250%")
 ```
 
 The iterative nature of model development is a significant barrier to adopting preregistration for model-based research. Translating the preregistration process to a modelling research context is challenging because the iterative nature of model development conflicts with the inner logic of existing preregistration templates that presume a linear research workflow. The process of preregistration as it is currently implemented is tailored towards the hypothetico-deductive model of the scientific method. As such, the process of preregistration is completely distinct from, and precedes the implementation of the analysis plan laid out in the preregistration -- analytic decisions are completely independent from the data.
