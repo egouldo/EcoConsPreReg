@@ -58,7 +58,7 @@ This view of preregistration breaks with the current model of preregistration, w
 
 ### Preregistering Flexibility
 
-When preliminary analyses, model checking or other data-dependent decisions need to be made, the modeller can specify a 'flexible strategy' within their preregistration by:
+When preliminary analyses, model checking or other data-dependent decisions need to be made, the modeller can specify a 'flexible strategy' (@fig-registering-flexibility) in their preregistration by:
 
 -   stating what quantity or outcome needs to be known to move forward with the modelling and analysis,
 -   explaining what test or analysis will be performed to obtain this quantity or outcome, and what parts of the data will be used in this analysis, and
