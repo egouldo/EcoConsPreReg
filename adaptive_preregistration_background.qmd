@@ -130,11 +130,10 @@ We propose leveraging the features of [git](https://git-scm.com) and [GitHub](ww
 #| column: screen
 #| fig-cap: "Adaptive Preregistration for model-based research using GitHub."
 #| echo: false
-magick::image_read(path = "figures/LivingPreregistration.png", density = 600)
+#| out-width: "900px"
+
+magick::image_read(path = "figures/LivingPreregistration.png", 
+                   density = 1000) %>% 
+  magick::image_scale("80%")
 ```
-:::
-
-## References
-
-::: {#refs}
 :::
