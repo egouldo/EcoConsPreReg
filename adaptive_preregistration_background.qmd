@@ -4,8 +4,6 @@ date: today
 link-citations: true
 ---
 
-
-
 ```{r}
 #| label: setup
 #| message: false
@@ -17,7 +15,6 @@ link-citations: true
 suppressPackageStartupMessages(library(magick, quietly = TRUE))
 suppressPackageStartupMessages(library(dplyr))
 ```
-
 
 ## Background & Motivation
 
@@ -64,7 +61,6 @@ When preliminary analyses, model checking or other data-dependent decisions need
 -   explaining what test or analysis will be performed to obtain this quantity or outcome, and what parts of the data will be used in this analysis, and
 -   describing how the results will be interpreted, listing each potential decision and its trigger, where possible.
 
-
 ::: {#fig-registering-flexibility .content-visible when-format="html"}
 ```{mermaid}
 %%| column: body-outset
@@ -81,7 +77,6 @@ flowchart LR
 ```
 
 A general heuristic for registering flexible analyses.
-
 :::
 
 ::: {#fig-registering-flexibility .content-visible when-format="pdf"}
@@ -101,10 +96,9 @@ flowchart LR
   C --> E(Option 1)
   D --> F(Option 2)
 ```
+
 A general heuristic for registering flexible analyses.
-
 :::
-
 
 ### Interim Preregistrations
 
@@ -114,6 +108,7 @@ The modeller follows an iterative process of preregistration. As they proceed th
 #| label: fig-interim-preregistrations
 #| echo: false
 #| fig-cap: Adaptive preregistration can cycle through the specification, execution and ideation phases multiple times in adaptive preregistration, with interim versions of the preregistration being generated at each preregistration point.
+
 magick::image_read_pdf(path = "figures/interim_preregistrations.pdf", density = 300)
 ```
 
