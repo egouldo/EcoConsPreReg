@@ -139,8 +139,8 @@ Ensure you have committed a preregistration template to your project repository 
 -   If you are finished, or ready to save your changes by 'committing' them. There is a box called "commit changes" at the top right of the window, a pop-up window will appear, enter in the commit message box the following:
     -   `Initial Preregistration #IssueNumber`. Tag the Preregistration GitHub issue number in the commit message (For this repository, it's `#17`, however if you have only created the issue for the initial preregistration, then your issue number will be `#1`).
 -   Fill out the extended description box briefly describing the changes you just made
--   Ensure that the radio button for creating a new branch is selected, an auto-generated branch name will appear, e.g. `egouldo-patch-1`.
--   Click "Propose Changes" to start a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests):
+-   Ensure that the radio button for creating a new branch is selected, an auto-generated branch name will appear, e.g. `egouldo-patch-1`.
+-   Click "Propose Changes" to start a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests):
 
 ![](figures/propose-changes.png)
 
@@ -164,7 +164,7 @@ In the latter situation, where possible, you can preregister your preliminary an
 
 #### Using GitHub to update the plan
 
-We will use GitHub to track amendments to the preregistration for the two situations described above ( a) adding more detail, answering incomplete questions; b) Responding to findings of a preliminary analysis already described in your preregistration).
+We will use GitHub to track amendments to the preregistration for the two situations described above ( a. adding more detail, answering incomplete questions; b. Responding to findings of a preliminary analysis already described in your preregistration).
 
 To make the changes to the preregistration document, follow the same instructions as for creating the initial preregistration above - simply edit the preregistration in GitHub, and commit the changes.
 
@@ -203,7 +203,6 @@ Sometimes assumptions are violated, or there are other unexpected outcomes of pr
 -   Describe the trigger for the Preregistration revisions in brief detail within the commit message body, adding the link to the relevant GitHub issue containing the tagged commits that triggered the revision.
 
 ### 'Living preregistration' - tracking changes to the Preregistration Draft
-
 
 We will leverage [GitHub's tagging and release feature](https://help.github.com/en/github/administering-a-repository/releasing-projects-on-github) in conjunction with [Semantic Versioning]((https://semver.org/)) to document and track changes to the preregistration document.
 
