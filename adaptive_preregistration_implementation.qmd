@@ -128,7 +128,10 @@ Ensure you have committed a preregistration template to your project repository 
 2.  Edit the document with your responses to the template items
 
 -   View our preregistration template document in GitHub [here](https://github.com/egouldo/EcoConsModPreReg/blob/master/template.qmd).
--   In your own repository containing your preregistration document, click on the 'edit document' button: ![](figures/edit-document.png)
+-   In your own repository containing your preregistration document, click on the 'edit document' button: 
+
+![](figures/edit-document.png)
+
 -   You will be able to edit the document directly in GitHub, Edit away!
 
 2.  Commit changes
@@ -171,9 +174,21 @@ As for the situation where you are responding to findings of a preliminary analy
 
 Before you begin to do or start anything you've planned within your preregistration, you **must** create a GitHub issue for that item, phase, or step in the modelling process, follow these steps:
 
-1.  View the preregistration document in GitHub, and click on the line-numbers on the left to highlight the preregistration template item text, as well as your response to the item. For example, let's say you want to start working the model checking, you would highlight the following in the document. Note that once you've highlighted some lines, a little box with an ellipsis appears on top of the lines numbers. ![](figures/highlight-lines.png)
-2.  Click on the tiny box with the ellipsis, and a pop-up dialogue box will appear with 4 options: `Copy lines`, `Copy permalink`, `View git blame`, `References in new issue`. Select the last option `Reference in new issue.` ![Screen Shot 2020-05-13 at 1 06 58 pm](figures/reference-in-new-issue.png)
-3.  This will open up a new window with a new GitHub Issue for you to complete. Note that part of the issue description has already been filled out for you, this is a reference to the lines you just highlighted: ![](figures/new-issue.png) Which is cool, because if you open the `Preview` tab to view the preview of your issue, it will look like this: ![](figures/preview-new-issue.png)
+1.  View the preregistration document in GitHub, and click on the line-numbers on the left to highlight the preregistration template item text, as well as your response to the item. For example, let's say you want to start working the model checking, you would highlight the following in the document. Note that once you've highlighted some lines, a little box with an ellipsis appears on top of the lines numbers. 
+
+![](figures/highlight-lines.png)
+
+2.  Click on the box with the ellipsis, and a pop-up dialogue box will appear with 4 options: `Copy lines`, `Copy permalink`, `View git blame`, `References in new issue`. Select the last option `Reference in new issue.` 
+
+![](figures/reference-in-new-issue.png)
+
+3.  This will open up a new window with a new GitHub Issue for you to complete. Note that part of the issue description has already been filled out for you, this is a reference to the lines you just highlighted: 
+
+![](figures/new-issue.png) 
+
+Which is cool, because if you open the `Preview` tab to view the preview of your issue, it will look like this: 
+
+![](figures/preview-new-issue.png)
 
 Add any further information or technical details about going forward and working on this task, as necessary. Submit the issue to save. Any work, and subsequent commits on this topic should be tagged with the issue number. We now have a mechanism for linking your actual analysis and actions to the planned analysis in the preregistration document.
 
