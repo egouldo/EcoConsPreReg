@@ -28,8 +28,13 @@ Despite enthusiastic uptake of preregistration in some scientific disciplines, t
 Instead of throwing out the baby with the bathwater, this guide is premised on the idea that preregistration can and should be used in model-based research in ecology and conservation, but its particular form should reflect the norms and practice of the research context in which it is applied, in order to adequately restrict researcher degrees of freedom that may uniquely emerge within a domain-specific methodology. The work presented in this guide aims to translate preregistration into model-based research within ecology and conservation by proposing an expanded view of preregistration we term [*Adaptive Preregistration*](adaptive_preregistration_background.qmd). We also present a template for preregistering model-based research in ecology and conservation.
 
 :::: {.content-visible when-format="html"}
-
-::: {.sectionrefs}
+::: sectionrefs
 :::
+::::
 
+:::: {.content-visible when-format="pdf"}
+## References {.sectionbibliography}
+
+::: sectionrefs
+:::
 ::::
