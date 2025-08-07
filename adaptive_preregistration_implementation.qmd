@@ -1,5 +1,6 @@
 ---
 title: Implementing *Adaptive Preregistration* with git and GitHub
+date: today
 ---
 
 ## Who is this guide for?
