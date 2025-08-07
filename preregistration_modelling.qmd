@@ -613,8 +613,6 @@ Uncertainty can arise from different modelling techniques, response data and pre
 
 ::: {.content-visible when-format="html"}
 
-## References {.sectionbibliography}
-
 ::: {.sectionrefs}
 :::
 

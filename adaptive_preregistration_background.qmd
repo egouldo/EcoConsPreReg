@@ -141,8 +141,6 @@ magick::image_read(path = "figures/LivingPreregistration.png",
 
 :::: {.content-visible when-format="html"}
 
-## References {.sectionbibliography}
-
 ::: {.sectionrefs}
 :::
 ::::

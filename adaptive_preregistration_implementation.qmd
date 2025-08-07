@@ -244,8 +244,6 @@ This package is not a mandatory component of the process, however can be a usefu
 
 ::: {.content-visible when-format="html"}
 
-## References {.sectionbibliography}
-
 ::: {.sectionrefs}
 :::
 

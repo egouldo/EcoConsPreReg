@@ -29,8 +29,6 @@ Instead of throwing out the baby with the bathwater, this guide is premised on t
 
 :::: {.content-visible when-format="html"}
 
-## References {.sectionbibliography}
-
 ::: {.sectionrefs}
 :::
 
