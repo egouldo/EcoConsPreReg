@@ -1,7 +1,6 @@
 ---
 title: A primer on *Adaptive Preregistration*
 date: today
-link-citations: true
 ---
 
 ```{r}

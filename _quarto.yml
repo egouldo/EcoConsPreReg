@@ -80,6 +80,7 @@ format:
     title: "Adaptive Preregistration for Model-Based Research"
     subtitle: "A guide and template for preregistering ecological models"
     citeproc: true
+    link-citations: true
     bibliography: references.bib
     csl: methods-in-ecology-and-evolution.csl
     
