@@ -138,3 +138,11 @@ magick::image_read(path = "figures/LivingPreregistration.png",
   magick::image_scale("80%")
 ```
 :::
+
+:::: {.content-visible when-format="html"}
+
+## References {.sectionbibliography}
+
+::: {.sectionrefs}
+:::
+::::

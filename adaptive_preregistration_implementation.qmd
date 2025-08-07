@@ -241,7 +241,11 @@ This package is not a mandatory component of the process, however can be a usefu
 : Types of changes to the preregistration and corresponding actions and versioning adjustments {#tbl-preregistration-versioning}
 :::
 
-## References
+::: {.content-visible when-format="html"}
 
-::: {#refs}
+## References {.sectionbibliography}
+
+::: {.sectionrefs}
+:::
+
 :::

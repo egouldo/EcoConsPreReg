@@ -68,6 +68,12 @@ format:
     css: styles.css
     toc: true
     default: true
+    filters:
+      - quarto
+      - section-bibliographies
+    bibliography: references.bib
+    reference-section-title: References
+    link-citations: true
   titlepage-pdf:
     titlepage: classic-lined
     toc: true

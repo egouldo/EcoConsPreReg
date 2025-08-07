@@ -612,4 +612,11 @@ Uncertainty can arise from different modelling techniques, response data and pre
 -   [ ] Describe any other simulation experiments, robustness analyses or other analyses you will perform on the model, including any metrics and their criteria / thresholds for interpreting the results of the analysis.
 :::
 
-# References {.unnumbered}
+::: {.content-visible when-format="html"}
+
+## References {.sectionbibliography}
+
+::: {.sectionrefs}
+:::
+
+:::
