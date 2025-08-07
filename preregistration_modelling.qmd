@@ -2,18 +2,9 @@
 title: "Adaptive Preregistration for Modelling"
 subtitle: "A template suitable for use in Ecology and Conservation with accompanying rationale and explanation."
 description: "Note: Black boxes provide an explanation or justification of a particular section or preregistration item. Text contained in 'preregistration item' boxes requires a response."
-authors:
-  - Elliot Gould
-  - Hannah Fraser
-  - Libby Rumpff
-  - Jian Yen
-  - Megan Good
-  - Chris Jones
-sidebar: false
-toc-location: left
-toc-expand: true
 number-sections: true
 reset-heading-numbering: true
+format: html
 ---
 
 ## Problem Formulation
