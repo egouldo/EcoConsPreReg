@@ -19,6 +19,9 @@ book:
       chapters:
         - adaptive_preregistration_background.qmd
         - adaptive_preregistration_implementation.qmd
+    - part: "Part III: Preregistration Template for Ecological Modelling"
+      chapters:
+        - preregistration_modelling.qmd
   repo-url: https://github.com/egouldo/EcoConsPreReg/
   repo-branch: master
   repo-actions: [edit, issue]
