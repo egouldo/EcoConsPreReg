@@ -26,7 +26,7 @@ book:
   repo-branch: master
   repo-actions: [edit, issue]
   reader-mode: true
-  page-footer: "Copyright 2025, Elliot Gould"
+  page-footer: "Copyright 2026, Elliot Gould"
   back-to-top-navigation: true
   navbar:
     search: true
