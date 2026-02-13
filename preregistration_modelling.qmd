@@ -51,7 +51,7 @@ The scope of the model includes temporal and spatial resolutions, which should a
 -   [ ] Ensure that you specify any focal taxa and study objectives.
 :::
 
-#### Analytical objectives {#analyticalobjectives}
+#### Analytical objectives {#sec-analyticalobjectives}
 
 ::: callout-note
 ## Explanation
@@ -98,7 +98,7 @@ How will the model be analysed, what analytical questions will the model be used
 ::: callout-note
 ## Explanation
 
-Preregistration Items in this section are relevant to model transferability [@Yates2018] and constraints on generality in model analysis interpretation. How far do can the results be extrapolated based on the study design (data + model + analysis)? For instance, if there are many confounding variables and not enough spatial / environmental replication, then making broader more general claims beyond the stated boundaries of the model (@analyticalobjectives) may not be warranted. However, larger generalisations about results may be acceptable if the data comes from experimentally manipulated or controlled systems.
+Preregistration Items in this section are relevant to model transferability [@Yates2018] and constraints on generality in model analysis interpretation. How far do can the results be extrapolated based on the study design (data + model + analysis)? For instance, if there are many confounding variables and not enough spatial / environmental replication, then making broader more general claims beyond the stated boundaries of the model (@sec-analyticalobjectives) may not be warranted. However, larger generalisations about results may be acceptable if the data comes from experimentally manipulated or controlled systems.
 :::
 
 ::: callout-caution
