@@ -108,8 +108,11 @@ The modeller follows an iterative process of preregistration. As they proceed th
 #| echo: false
 #| fig-cap: Adaptive preregistration can cycle through the specification, execution and ideation phases multiple times in adaptive preregistration, with interim versions of the preregistration being generated at each preregistration point.
 
-magick::image_read_pdf(path = "figures/interim_preregistrations.pdf", density = 300)
+magick::image_read_pdf(path = "figures/interim_preregistrations.pdf") %>% 
+  magick::image_resize(geometry = "35%")
 ```
+
+### Data-dependent decision-making and the risk of overfitting
 
 ## Documenting adaptive preregistration transparently
 
