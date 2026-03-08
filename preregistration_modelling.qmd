@@ -1,5 +1,5 @@
 ---
-title: "Adaptive Preregistration Template for Modelling"
+title: "Ecological Modelling Preregistration Template" #focussed, descriptive title with relevant key terms reflecting what will be done in study
 subtitle: "A template suitable for use in Ecology and Conservation with accompanying rationale and explanation."
 description: "Note: Black boxes provide an explanation or justification of a particular section or preregistration item. Text contained in 'preregistration item' boxes requires a response."
 number-sections: true
