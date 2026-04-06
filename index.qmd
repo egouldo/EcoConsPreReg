@@ -15,3 +15,7 @@ This book/site provides a guide to implementing *Adaptive Preregistration for Mo
 This practical guide accompanies the paper:
 
 > Gould, E., Jones, C.S., Yen, J.D.L., Fraser, H.S., Wootton, H., Good, M.K., Duncan, D.H., Hauser, C.E., Wintle, B.C., Rumpff, L. (in prep., 2026) "But I can't preregister my research: Improving the reproducibility and transparency of ecological modelling with adaptive preregistration". EcoEvoArXiv \[Preprint\]. <https://doi.org/10.32942/X2GW66>
+
+Please cite this guide as:
+
+> Gould, E., Jones, C.S., Yen, J.D.L., Fraser, H.S., Wootton, H., Good, M.K., Duncan, D.H., Hauser, C.E., Wintle, B.C., Rumpff, L. & Fidler, F. (2026). EcoConsPreReg: A Guide to Adaptive Preregistration for Model-Based Research in Ecology and Conservation. Zenodo. [https://doi.org/10.5281/zenodo.19064144](https://doi.org/10.5281/zenodo.10807029)

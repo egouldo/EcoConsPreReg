@@ -1,10 +1,11 @@
 ---
 title: "Adaptive Preregistration for Modelling"
-subtitle: "A template suitable for use in Ecology and Conservation with accompanying rationale and explanation."
+subtitle: "A template suitable for use in Ecology and Conservation with accompanying rationale and explanation. "
 description: "Note: Black boxes provide an explanation or justification of a particular section or preregistration item. Text contained in 'preregistration item' boxes requires a response."
 number-sections: true
 reset-heading-numbering: true
 format: html
+identifier: https://github.com/egouldo/EcoConsModPreReg
 ---
 
 ## Problem Formulation
