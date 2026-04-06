@@ -1,0 +1,19 @@
+---
+format: typst-letter
+---
+Dear Editors,
+
+I am writing to submit a research article manuscript titled '"But I can't preregister my research": Improving the reproducibility and transparency of ecology and conservation with adaptive preregistration for model-based research'. 
+
+This manuscript proposes, applies and evaluates a novel methodology called "adaptive preregistration" for preregistering ecological modelling studies. Preregistration is an open science practice that aims to improve research transparency and mitigate questionable research practices, but has seen little uptake in ecology and conservation. Existing preregistration templates are focussed on null-hypothesis significance testing, and the the current model of preregistration is incompatible with the iterative nature of ecological modelling, whereby data-contingent decision-making informs subsequent steps in the analysis. Consequently preregistration for model-based research has met resistance among ecological modellers.
+
+Our manuscript translates the concept of preregistration for application to ecological modelling by developing the 'adaptive preregistration' methodology, which accommodates iterative, data-contingent analytic decision-making through the mechanisms of 'registered flexibility' and 'interim preregistrations,' in tandem with exploratory pilot analyses and/or data partitioning. Our study also presents a preregistration template based on a generalised modelling workflow, capturing critical analysis decisions in the model development cycle. We then apply our template and methodology to preregister a study modelling managed water releases in regulated rivers ('environmental flows') to improve riparian vegetation condition in Victoria, Australia. This case study demonstrates how adaptive preregistration can be implemented in practice for complex ecological modelling studies, while qualitatively evaluating its feasibility, challenges and benefits. We provide an accompanying practical guide to help modellers implement preregistration.
+
+We consider this work to be timely and significant because preregistration remains underutilised despite increasing embedding of open science practice in ecology. To our knowledge, this is the first attempt to systematically address the problem of preregistering ecological modelling studies. 
+
+We believe this manuscript is highly suitable for Methods in Ecology and Evolution as it provides both a conceptual framework and practical tools for implementing an important open science practice in ecological research. Our approach is broadly applicable across different branches of ecological modelling, from species distribution models to population dynamics. By facilitating preregistration of model-based studies, this work supports MEE's aims of promoting new methodological developments and maximising their uptake in the research community.
+
+Thank you for your consideration. We look forward to your response.
+
+Sincerely,
+Elliot Gould, on behalf of all co-authors.

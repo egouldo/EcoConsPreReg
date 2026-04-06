@@ -1,15 +1,101 @@
 project:
-  type: website
+  type: book
   output-dir: docs
-  
-website:
+
+authors: # Replace with authors in your study
+  - name: Elliot Gould
+    email: elliot.gould@unimelb.edu.au
+    url: https://github.com/egouldo
+    orcid: 0000-0002-6585-538X
+    roles: [conceptualization, maintainer, funding, investigation, methodology, project administration, resources, software, validation, vizualisation, editing, writing]
+    attributes: corresponding
+    affiliations:
+      - ref: 1
+    affil-id: 1
+    id: EG
+  - name: Christopher S. Jones
+    roles: [contributor, data curation, analysis, funding, methodology, project administration, resources, editing]
+    orcid: 0000-0003-2833-0194
+    affiliations:
+      - ref: 1
+      - ref: 2
+    affil-id:
+      - 1
+      - 2
+    id: CJ
+  - name: Jian D.L. Yen
+    roles: [contributor, data curation, analysis, investigation, methodology, project administration, resources, software, validation, visualisation, editing]
+    orcid: 0000-0001-7964-923X
+    affiliations:
+      - ref: 2
+    affil-id: 2
+  - name: Hannah S. Fraser
+    orcid: 0000-0003-2443-4463
+    roles: [contributor, conceptualization, methodology, investigation, supervision, editing]
+    affiliations:
+      - ref: 1
+    affil-id: 1
+  - name: Henry Wootton
+    roles: [contributor, software, visualisation, methodology]
+    orcid: 0000-0001-6506-0248
+    affiliations:
+      - ref: 2
+    affil-id: 2
+  - name: Megan K. Good
+    orcid: 0000-0002-6908-1633
+    roles: [contributor, methodology, editing]
+    affiliations:
+      - ref: 1
+    affil-id: 1
+  - name: David H. Duncan
+    orcid: 0000-0003-4411-8214
+    roles: [contributor, methodology]
+    affiliations:
+      - ref: 1
+    affil-id: 1
+  - name: Cindy E. Hauser
+    orcid: 0000-0002-5187-6585
+    roles: [contributor, methodology, investigation, editing]
+    affiliations:
+      - ref: 2
+    affil-id: 2
+  - name: Bonnie C. Wintle
+    roles: [contributor, conceptualization, methodology, supervision, writing, editing]
+    orcid: 0000-0001-9400-8086
+    affiliations:
+      - ref: 1
+    affil-id: 1
+  - name: Libby Rumpff
+    roles: [contributor, conceptualization, methodology, supervision, writing, editing]
+    orcid: 0000-0001-9400-8086
+    affiliations:
+      - ref: 1
+    affil-id: 1
+affiliations:
+  - id: 1
+    name: "School of Agriculture, Food and Ecosystem Sciences, University of Melbourne"
+  - id: 2
+    name: "Arthur Rylah Institute for Environmental Research, Department of Energy, Environment and Climate Action"
+
+book:
+  chapters:
+    - index.qmd
+    - part: "Part I: Researcher Degrees of Freedom"
+      chapters:
+      - RDF_QRP.qmd
+    - part: "Part II: Adaptive Preregistration"
+      chapters:
+        - adaptive_preregistration_background.qmd
+        - adaptive_preregistration_implementation.qmd
+    - part: "Part III: Preregistration Template for Ecological Modelling"
+      chapters:
+        - preregistration_modelling.qmd
   repo-url: https://github.com/egouldo/EcoConsPreReg/
   repo-branch: master
   repo-actions: [edit, issue]
   reader-mode: true
-  page-footer: "Copyright 2023, Elliot Gould"
+  page-footer: "Copyright 2026, Elliot Gould"
   back-to-top-navigation: true
-  title: "Adaptive Preregistration for Model-Based Research"
   navbar:
     search: true
     left:
@@ -18,12 +104,11 @@ website:
       - text: "Researcher Degrees of Freedom"
         file: RDF_QRP.qmd
       - text: "Adaptive Preregistration"
-        menu: 
+        menu:
           - adaptive_preregistration_background.qmd
           - adaptive_preregistration_implementation.qmd
-      - text: "Preregistration for Modelling"
+      - text: "Preregistration Template for Modelling"
         file: preregistration_modelling.qmd
-      - about.qmd
       - icon: github
         menu:
           - text: Source Code
@@ -35,24 +120,49 @@ website:
       contents:
         - RDF_QRP.qmd
         # navigation items
-        
     - title: "Adaptive Preregistration"
       style: "docked"
       background: light
       contents:
         - adaptive_preregistration_background.qmd
         - adaptive_preregistration_implementation.qmd
-
-    - title: "Preregistration for Modelling" 
+    - title: "Preregistration Template for Ecological Modelling"
       contents:
         - preregistration_modelling.qmd
-        # navigation items
 
 format:
   html:
-    theme: flatly
+    # theme: flatly
+    title-block-style: none
     css: styles.css
     toc: true
+    default: true
+    filters:
+      - quarto
+      - section-bibliographies
+    bibliography: references.bib
+    reference-section-title: References
+    link-citations: true
+  titlepage-pdf:
+    date: last-modified
+    titlepage: classic-lined
+    toc: true
+    dpi: 300
+    number-sections: true
+    documentclass: scrbook
+    classoption: ["oneside", "open=any"]
+    papersize: A4
+    default: true
+    colorlinks: true
+    title: "Adaptive Preregistration for Model-Based Research"
+    subtitle: "A guide and template for preregistering ecological models"
+    filters:
+      - quarto
+      - section-bibliographies
+    bibliography: references.bib
+    reference-section-title: References
+    citeproc: false
+    link-citations: true
+    csl: methods-in-ecology-and-evolution.csl
 
 editor: visual
-

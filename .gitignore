@@ -6,3 +6,5 @@
 /.quarto/
 README.html
 README_files
+
+**/*.quarto_ipynb

@@ -1,20 +1,31 @@
 ---
 title: A primer on *Adaptive Preregistration*
-date: today
-link-citations: true
-bibliography: data/references.bib
 ---
+
+```{r}
+#| label: setup
+#| message: false
+#| warning: false
+#| output: false
+#| echo: false
+#| result: hide
+
+suppressPackageStartupMessages(library(magick, quietly = TRUE))
+suppressPackageStartupMessages(library(dplyr))
+```
 
 ## Background & Motivation
 
 ```{r}
 #| label: fig-traditional-prereg
-#| out-width: 700px
-#| out-height: 100x
 #| echo: false
 #| column: body
-#| fig-cap: "Conventional preregistration process for registered reports, as illustrated by [@Pu2019]."
-magick::image_read(path = "_supp-mat/Pu_et_al_fig_prereg.png")
+#| fig-width: 10
+#| fig-cap: "Preregistration as a component of the registered report publication pathway, as illustrated by [@Pu2019]."
+
+magick::image_read(path = "_supp-mat/Pu_et_al_fig_prereg.png",
+                   density = 1000) %>%
+  magick::image_scale("250%")
 ```
 
 The iterative nature of model development is a significant barrier to adopting preregistration for model-based research. Translating the preregistration process to a modelling research context is challenging because the iterative nature of model development conflicts with the inner logic of existing preregistration templates that presume a linear research workflow. The process of preregistration as it is currently implemented is tailored towards the hypothetico-deductive model of the scientific method. As such, the process of preregistration is completely distinct from, and precedes the implementation of the analysis plan laid out in the preregistration -- analytic decisions are completely independent from the data.
@@ -23,17 +34,19 @@ In fact, preregistration has been defined as "the action of confirming an unalte
 
 ## Iterative Cycle of Model Development and Preregistration
 
-Current preregistration practices based on NHST-focussed accounts of questionable research practices prescribe the principle of 'decision-independence', where analysis decisions are made independently of and *a priori* to analysing the data [@Srivastava2018; @Gelman2013]. However, the modelling process may genuinely violate the principle of 'decision-independence' because it is non-linear, iterative and usually generates many interim versions of the model preceding publication. During modelling a researcher will almost always engage in state-dependent decision-making --- that is, decisions about whether to alter the model in a subsequent round of model development depend on the results of model testing, evaluation and analysis at the end of the previous iteration of model development. These practices aren't necessarily questionable in and of themselves, but do have the *potential* to become questionable if they are exploited in service of artificially inflating the accuracy or precision of the model, its predictions or evaluation tests to the effect that the model is perceived to be more credible than it would be if that practice did not occur -- essentially data-dependent decisions that lead to consumers of the model placing unsubstantiated belief in the reliability, validity and utility of the model and its outputs are questionable [@gould] and can be mitigated through the practice of preregistration.
+Current preregistration practices based on NHST-focussed accounts of questionable research practices prescribe the principle of 'decision-independence', where analysis decisions are made independently of and *a priori* to analysing the data [@Srivastava2018; @Gelman2013]. However, the modelling process may genuinely violate the principle of 'decision-independence' because it is non-linear, iterative and usually generates many interim versions of the model preceding publication. During modelling a researcher will almost always engage in state-dependent decision-making --- that is, decisions about whether to alter the model in a subsequent round of model development depend on the results of model testing, evaluation and analysis at the end of the previous iteration of model development. These practices aren't necessarily questionable in and of themselves, but do have the *potential* to become questionable if they are exploited in service of artificially inflating the accuracy or precision of the model, its predictions or evaluation tests to the effect that the model is perceived to be more credible than it would be if that practice did not occur -- essentially data-dependent decisions that lead to consumers of the model placing unsubstantiated belief in the reliability, validity and utility of the model and its outputs are questionable and can be mitigated through the practice of preregistration.
+
+<!-- cite [@gould] above -->
 
 Very often in modelling, there are decisions that are necessarily dependent on the outcome of previous analytic decisions in the modelling workflow [@Liu2020]. Firstly, preliminary or investigatory analyses might need to be conducted before being able to specify future decision-steps in the analysis plan. For example, modellers might need to check the distribution of particular variables in order to determine how to specify the model, perform assumption checks, or check for collinearity or spatial autocorrelation. Secondly, data-dependent decisions from model checking may justifiably result in changes to either the analysis or to interpretations of the mode [@Srivastava2018]. For instance, inspection of the residuals and other model checking tests may force the modeller to return to earlier decision-points and change the planned analysis or model. Other times, the planned analysis and specified model may simply not converge, or the model is saturated and runs out of variation to apportion such that the model and or the model fitting algorithm must be respecified and re-implemented. Other times, the modelling process itself may generate knowledge and learning about the system, and the model structure changes throughout the process of model development.
 
-Finally, sometimes there are some decisions that are too difficult to anticipate, or simply cannot be made in advance [@Srivastava2018]. This is particularly true for decisions occurring at the later phases of the modelling construction and development process (Figure 2, TBC), where downstream decisions depend on the outcomes of earlier decisions and outcomes of modelling analyses. Some decisions might not be able to be specified on the first attempt at writing the preregistration until the model is fully or at least close to fully specified, for example, specifying precisely what and how sensitivity analyses or uncertainty analyses will be conducted.
+Finally, sometimes there are some decisions that are too difficult to anticipate, or simply cannot be made in advance [@Srivastava2018]. This is particularly true for decisions occurring at the later phases of the modelling construction and development process, where downstream decisions depend on the outcomes of earlier decisions and outcomes of modelling analyses. Some decisions might not be able to be specified on the first attempt at writing the preregistration until the model is fully or at least close to fully specified, for example, specifying precisely what and how sensitivity analyses or uncertainty analyses will be conducted.
 
 As illustrated above, the adaptive nature of analysis during the model development process contravenes the central principle of preregistration -- decision-independence and is fundamentally incompatible with the sequential, linear process of traditional preregistration where the analysis plan is fully specified prior to observing and analysing the data.
 
 ## Adaptive Preregistration
 
-In order to address the disjuncture between the iterative nature of model development, and the single-use, deterministic preregistration template format, we take an 'expanded view of preregistration', that fits with the concept of 'adaptive preregistration' proposed by Srivastava [-@Srivastava2018]. The modeller proceeds through the model development process, shifting from ideation, preregistration, execution of the analysis and back to ideation and preregistration again. As they progress, the modeller implements parts of the analysis plan that were specified in the previous preregistration step, with the outcomes of that analysis step either informing the specification of the next analysis ( @fig-adaptive-preregistration) or else resolving the preregistered decision.
+In order to address the disjuncture between the iterative nature of model development, and the single-use, deterministic preregistration template format, we take an 'expanded view of preregistration', that fits with the concept of 'adaptive preregistration' proposed by Srivastava [-@Srivastava2018]. The modeller proceeds through the model development process, shifting from ideation, preregistration, execution of the analysis and back to ideation and preregistration again. As they progress, the modeller implements parts of the analysis plan that were specified in the previous preregistration step, with the outcomes of that analysis step either informing the specification of the next analysis (@fig-adaptive-preregistration) or else resolving the preregistered decision.
 
 This view of preregistration breaks with the current model of preregistration, wherein the author writes a single deterministic preregistration containing a rule for every decision, and sequentially shifts from ideation, preregistration to execution of the plan. Two features define adaptive preregistration:
 
@@ -42,18 +55,50 @@ This view of preregistration breaks with the current model of preregistration, w
 
 ### Preregistering Flexibility
 
-When preliminary analyses, model checking or other data-dependent decisions need to be made, the modeller can specify a 'flexible strategy' within their preregistration by:
+When preliminary analyses, model checking or other data-dependent decisions need to be made, the modeller can specify a 'flexible strategy' (@fig-registering-flexibility) in their preregistration by:
 
--   stating what quantity or outcome needs to be known to move forward with the modelling and analysis,
--   explaining what test or analysis will be performed to obtain this quantity or outcome, and what parts of the data will be used in this analysis, and
--   describing how the results will be interpreted, listing each potential decision and its trigger, where possible.
+- stating what quantity or outcome needs to be known to move forward with the modelling and analysis,
+- explaining what test or analysis will be performed to obtain this quantity or outcome, and what parts of the data will be used in this analysis, and
+- describing how the results will be interpreted, listing each potential decision and its trigger, where possible.
 
-```{r}
-#| label: fig-registering-flexibility
-#| echo: false
-#| fig-cap: "A general heuristic in the form of a decision-tree for registering flexibile analyses."
-magick::image_read_pdf(path = "figures/registering_flexibility.pdf", density = 500)
+::::: {#fig-registering-flexibility}
+::: {.content-visible when-format="html"}
+```{mermaid}
+%%| column: body-outset
+---
+config:
+  theme: neutral
+---
+flowchart LR
+  A(Describe Data-Dependent Decision) --> B{Describe Analysis}
+  B --> C[Analysis Outcome 1]
+  B --> D[Analysis Outcome 2]
+  C --> E(Option 1)
+  D --> F(Option 2)
 ```
+:::
+
+::: {.content-visible when-format="pdf"}
+```{mermaid}
+%%| fig-width: 6
+%%| column: body-outset
+---
+config:
+  theme: neutral
+  themeVariables:
+    fontSize: 10
+---
+flowchart LR
+  A(Describe Data-Dependent Decision) --> B{Describe Analysis}
+  B --> C[Analysis Outcome 1]
+  B --> D[Analysis Outcome 2]
+  C --> E(Option 1)
+  D --> F(Option 2)
+```
+:::
+
+A general heuristic for registering flexible analyses.
+:::::
 
 ### Interim Preregistrations
 
@@ -63,6 +108,7 @@ The modeller follows an iterative process of preregistration. As they proceed th
 #| label: fig-interim-preregistrations
 #| echo: false
 #| fig-cap: Adaptive preregistration can cycle through the specification, execution and ideation phases multiple times in adaptive preregistration, with interim versions of the preregistration being generated at each preregistration point.
+
 magick::image_read_pdf(path = "figures/interim_preregistrations.pdf", density = 300)
 ```
 
@@ -78,10 +124,28 @@ Given the iterative nature of adaptive preregistration then, the current convent
 
 We propose leveraging the features of [git](https://git-scm.com) and [GitHub](www.github.com) to facilitate implementation both adaptive preregistration in a transparently documented manner (@fig-adaptive-preregistration), and provide a [step-by-step guide](adaptive_preregistration_implementation.qmd).
 
+::: landscape
 ```{r}
 #| label: fig-adaptive-preregistration
 #| column: screen
 #| fig-cap: "Adaptive Preregistration for model-based research using GitHub."
 #| echo: false
-magick::image_read(path = "figures/LivingPreregistration.png", density = 600)
+#| out-width: "900px"
+
+magick::image_read(path = "figures/LivingPreregistration.png",
+                   density = 1000) %>%
+  magick::image_scale("80%")
 ```
+:::
+
+:::: {.content-visible when-format="html"}
+::: sectionrefs
+:::
+::::
+
+:::: {.content-visible when-format="pdf"}
+## References {.sectionbibliography}
+
+::: sectionrefs
+:::
+::::

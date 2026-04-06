@@ -1,0 +1,240 @@
+---
+title: "Main Analysis: Preregistered vs Realised Models"
+format:
+  html:
+    self-contained: true
+    code-line-numbers: true
+    code-copy: false
+filters:
+  - quarto
+  - line-highlight
+---
+
+For simplicity, elements of the R model specification have been omitted, e.g. the data argument.
+
+# Maximal Model
+
+```{r}
+#| eval: false
+#| echo: true
+#| filename: "maximal_model_preregistered.R"
+maximal_model_preregistered <- glmmTMB::glmmTMB(
+  response # cover or species richness
+  ~ cover_in_prev_survey + # cover only
+  wpfg * origin * flow_metrics +
+  wpfg * origin * zone * period +
+  grazing +
+  (1 | site / transect) +
+  (1 | sub_transect_height) +
+  (1 | survey_year) +
+  (1 | waterbody) +
+  offset(npoint), # cover only
+  family = poisson
+  # family = nbinom2,
+  # ziformula = ~ wpfg,
+  # dispformula = ~ wpfg
+)
+```
+
+# Vegetation Cover
+
+## Flow Regime Models
+
+```{r}
+#| file: !expr here::here("figures/cover_ar_TMBmod_1.R")
+#| eval: false
+#| echo: true
+#| filename: "cover_regime_preregistered.R"
+#| source-line-numbers: "3,4,5,14,15,18"
+```
+
+1.  Preregistration Deviation
+2.  Preregistered Flexibility
+
+```{r}
+#| file: !expr here::here("figures/cover_ar_TMBmod_1_realised.R")
+#| eval: false
+#| echo: true
+#| filename: "cover_regime_final.R"
+#| source-line-numbers: "3,4,5,9,10"
+```
+
+```{r}
+#| echo: false
+library(diffviewer)
+path1 <- here::here("figures/cover_ar_TMBmod_1.R")
+path2 <- here::here("figures/cover_ar_TMBmod_1_realised.R")
+
+visual_diff(path1, path2)
+```
+
+## Flow Event Models
+
+### Preregistered Model A
+
+```{r}
+#| eval: false
+#| echo: true
+#| filename: "cover_events_A_preregistered.R"
+
+cover_events_A_preregistered <- glmmTMB::glmmTMB(
+  hits ~ cover_in_prev_survey +
+  # days_above_baseflow_std * wpfg * origin +
+  # days_above_springfresh_std * wpfg * origin +
+  # days_above_baseflow_std^2 +
+  # days_above_springfresh_std_sq +
+  zone * period +
+  origin + wpfg +
+  grazing +
+  (1 | site / transect) +
+  # (1 | site / period) +
+  (1 | sub_transect_height) +
+  (1 | survey_year) +
+  (1 | waterbody),
+  # offset(npoint),
+  family = poisson,
+  ziformula = ~ wpfg,
+  # dispformula = ~ wpfg
+)
+```
+
+### Preregistered Model B
+
+```{r}
+#| eval: false
+#| echo: true
+#| filename: "cover_events_B_preregistered.R"
+
+cover_events_B_preregistered <- glmmTMB::glmmTMB(
+  hits ~ cover_in_prev_survey +
+    # days_above_baseflow_std * wpfg * origin +
+    # days_above_springfresh_std * wpfg * origin +
+    # days_above_baseflow_std^2 +
+    # days_above_springfresh_std^2 +
+    zone * period +
+    origin + wpfg +
+    grazing +
+    (1 | site / transect) +
+    # (1 | site / period) +
+    (1 | sub_transect_height) +
+    (1 | survey_year) +
+    (1 | waterbody),
+  # offset(npoint),
+  family = poisson,
+  ziformula = ~ wpfg,
+  # dispformula = ~ wpfg
+)
+```
+
+### Final Cover Flow Events Model
+
+```{r}
+#| eval: false
+#| echo: true
+#| filename: "cover_events_final.R"
+cover_events_final <- glmmTMB::glmmTMB(
+  hits ~ cover_in_prev_survey +
+    zone * wpfg * period +
+    origin +
+    grazing +
+    (1 | site / transect) +
+    (1 | metres) +
+    (1 | survey_year) +
+    (1 | waterbody),
+  family = poisson,
+  ziformula = ~ wpfg,
+  dispformula = ~ wpfg
+)
+```
+
+The final cover flow events model merged the two candidate simplified models.
+
+# Vegetation Richness
+
+## Flow Regime Model
+
+```{r}
+#| eval: false
+#| echo: true
+#| filename: "richness_regime_preregistered.R"
+
+richness_regime <- glmmTMB::glmmTMB(
+  richness ~
+    days_above_baseflow_std * wpfg * origin +
+    days_above_springfresh_std * wpfg * origin +
+    # days_above_baseflow_std^2 +
+    # days_above_springfresh_std^2 +
+    # zone * period +
+    # zone * wpfg +
+    # wpfg * period +
+    # grazing + origin +
+    # (1 | site / period) +
+    (1 | site / transect) +
+    (1 | sub_transect_height) +
+    (1 | survey_year) +
+    (1 | waterbody),
+  family = poisson,
+  # family = nbinom2,
+  # ziformula = ~ wpfg,
+  # dispformula = ~ wpfg
+)
+```
+
+## Flow Events Model
+
+```{r}
+#| eval: false
+#| echo: true
+#| filename: "richness_events_preregistered.R"
+
+richness_events <- glmmTMB::glmmTMB(
+  richness ~
+    # days_above_baseflow_std +
+    # days_above_springfresh_std +
+    # days_above_baseflow_std^2 +
+    # days_above_springfresh_std^2 +
+    # zone * period +
+    zone * period +
+    zone * wpfg +
+    wpfg * period +
+    grazing +
+    origin +
+    # (1 | site / period) +
+    (1 | site / transect) +
+    (1 | sub_transect_height) +
+    (1 | survey_year) +
+    (1 | waterbody),
+  family = poisson,
+  # family = nbinom2,
+  # ziformula = ~ wpfg,
+  # dispformula = ~ wpfg
+)
+```
+
+## Final Richness Model
+
+```{r}
+#| eval: false
+#| echo: true
+#| filename: "richness_final.R"
+#| #source-line-numbers: "4"
+
+richness_ar_TMB_final <- glmmTMB::glmmTMB(
+  richness ~
+    days_above_baseflow_std * wpfg + # flow regime model, rm origin
+    days_above_springfresh_std * wpfg +
+    days_above_baseflow_std^2 +
+    days_above_springfresh_std^2 +
+    zone * wpfg * period + # maximal model, rm origin
+    grazing + # flow events model
+    origin +  # flow events model
+    (1 | site / transect) +
+    (1 | sub_transect_height) +
+    (1 | survey_year) +
+    (1 | waterbody),
+  family = poisson
+)
+```
+
+> The full dataset supported a more complex model than the pilot study, with all predictors included in a single model, and a three-way interaction between zone, sampling period, and functional group.\
+> Quadratic associations with flow metrics were unable to be fitted at the functional-group level and were instead included as a single term for all functional groups.

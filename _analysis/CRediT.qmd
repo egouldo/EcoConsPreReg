@@ -1,0 +1,49 @@
+---
+title: "CRediT Statement"
+---
+
+```{r}
+#| label: load_data
+#| message: false
+#| warning: false
+
+library(tidyverse,quietly = TRUE)
+library(googlesheets4, quietly = TRUE)
+library(tenzing, quietly = TRUE)
+
+credit_gsheet <- googlesheets4::read_sheet("https://docs.google.com/spreadsheets/d/1NDoS2GZmsPLazMFotlRx51jOr9r2nACeWfM4SqFeuM8/edit?pli=1&gid=0#gid=0")
+
+credit_roles_key <- googlesheets4::read_sheet("https://docs.google.com/spreadsheets/d/1NDoS2GZmsPLazMFotlRx51jOr9r2nACeWfM4SqFeuM8/edit?pli=1&gid=0#gid=0", sheet = 2)
+
+config_path <- system.file("config/title_validation.yaml", package = "tenzing")
+```
+
+```{r}
+#| label: credit_statement
+#| output: asis
+
+contrib_table <-
+  credit_gsheet %>%
+  arrange(author_number) %>%
+  filter( if_any(contains("Consent"), ~ . == "Y")) %>%
+  select(-contains("Consent")) %>%
+  rename(!!! {credit_roles_key %>%
+      select(2, 1) %>%
+      deframe() }
+  ) %>%
+  tenzing::clean_contributors_table()
+
+# Validate the contributors table
+
+validate_output_instance <- ValidateOutput$new(config_path = config_path)
+
+validate_results <- validate_output_instance$run_validations(contributors_table = contrib_table)
+
+stopifnot(
+  purrr::map(validate_results, "type") %>%
+    purrr::map_lgl(~ .x == "success" | .x == "warning") %>%
+    all()
+)
+credit_roles_key %>% knitr::kable()
+tenzing::print_credit_roles(contrib_table,order_by = "role")
+```
