@@ -32,10 +32,10 @@ The scope of the model includes temporal and spatial resolutions, which should a
 
 *Identify relevant interest groups:*
 
--   [ ] Who is the model for?
--   [ ] Who is involved in formulating the model?
--   [ ] How will key stakeholders be involved in model development?
--   [ ] Describe the decision-making context in which the model will be used (if relevant).
+- [ ] Who is the model for?
+- [ ] Who is involved in formulating the model?
+- [ ] How will key stakeholders be involved in model development?
+- [ ] Describe the decision-making context in which the model will be used (if relevant).
 :::
 
 #### Model purpose, context and problem context
@@ -45,10 +45,10 @@ The scope of the model includes temporal and spatial resolutions, which should a
 
 *Briefly outline:*
 
--   [ ] the ecological problem,
--   [ ] the decision problem (if relevant), including the decision-trigger and any regulatory frameworks relevant to the problem,
--   [ ] how the model will address the problem, being clear about the scope of the model i.e. is the model addressing the whole problem, or part of it? Are there any linked problems that your model should consider?
--   [ ] Ensure that you specify any focal taxa and study objectives.
+- [ ] the ecological problem,
+- [ ] the decision problem (if relevant), including the decision-trigger and any regulatory frameworks relevant to the problem,
+- [ ] how the model will address the problem, being clear about the scope of the model i.e. is the model addressing the whole problem, or part of it? Are there any linked problems that your model should consider?
+- [ ] Ensure that you specify any focal taxa and study objectives.
 :::
 
 #### Analytical objectives {#sec-analyticalobjectives}
@@ -64,14 +64,14 @@ How will the model be analysed, what analytical questions will the model be used
 
 *Provide detail on the analytical purpose and scope of the model:*
 
--   [ ] How will the model be analysed and what analytical questions will the model be used to answer?
--   [ ] Candidate decisions should be investigated and are specified a priori. Depending on the modelling context, they may be specified by stakeholders, model users or the analyst [@Moallemi2019].
-    -   [ ] Describe the method used to identify relevant management actions and
-    -   [ ] specify management actions to be considered included in the model.
-    -   [ ] Are there potentially unacceptable management or policy outcomes identified by stakeholders that should be captured in the model, i.e. as constraints?
--   [ ] Are there scenarios that model inputs or outputs that must accommodated? Scenarios should be set a priori, [i.e. before the model is built, @Moallemi2019] and may be stakeholder-defined or driven by the judgement of the modeller or other experts [@Mahmoud2009].
-    -   [ ] If relevant, describe what processes you will use to elicit and identify relevant scenarios, e.g. literature review, structured workshops with stakeholders or decision-makers.
-    -   [ ] Specify scenarios under which decisions are investigated.
+- [ ] How will the model be analysed and what analytical questions will the model be used to answer?
+- [ ] Candidate decisions should be investigated and are specified a priori. Depending on the modelling context, they may be specified by stakeholders, model users or the analyst [@Moallemi2019].
+  - [ ] Describe the method used to identify relevant management actions and
+  - [ ] specify management actions to be considered included in the model.
+  - [ ] Are there potentially unacceptable management or policy outcomes identified by stakeholders that should be captured in the model, i.e. as constraints?
+- [ ] Are there scenarios that model inputs or outputs that must accommodated? Scenarios should be set a priori, [i.e. before the model is built, @Moallemi2019] and may be stakeholder-defined or driven by the judgement of the modeller or other experts [@Mahmoud2009].
+  - [ ] If relevant, describe what processes you will use to elicit and identify relevant scenarios, e.g. literature review, structured workshops with stakeholders or decision-makers.
+  - [ ] Specify scenarios under which decisions are investigated.
 :::
 
 #### Logistical Constraints
@@ -79,9 +79,9 @@ How will the model be analysed, what analytical questions will the model be used
 ::: callout-caution
 ## Preregistration Item
 
--   [ ] What degree of flexibility is required from the model? Might the model need to be quickly reconfigured to explore new scenarios or problems proposed by clients / managers / model-users?
--   [ ] Are there any limitations on model development analysis and flexibility, such as time or budget constraints, for example, does a model need to be deployed rapidly?
-    -   [ ] When must the model be completed by, e.g. to help make a decision?
+- [ ] What degree of flexibility is required from the model? Might the model need to be quickly reconfigured to explore new scenarios or problems proposed by clients / managers / model-users?
+- [ ] Are there any limitations on model development analysis and flexibility, such as time or budget constraints, for example, does a model need to be deployed rapidly?
+  - [ ] When must the model be completed by, e.g. to help make a decision?
 :::
 
 #### Model Scope, Scale and Resolution
@@ -89,8 +89,8 @@ How will the model be analysed, what analytical questions will the model be used
 ::: callout-caution
 ## Preregistration Item
 
--   [ ] The choice of a model's boundaries is closely linked to the choice of how finely to aggregate the behaviour within the model [@Jakeman:2006ii] - what is the intended scale, and resolution of the model (temporal, spatial or otherwise)?
--   [ ] Where is the boundary of the modelled system? Everything outside beyond the boundary and not crossing it is to be ignored within the domain of the model, and everything crossing the boundary is to be treated as external forcing (known/unknown), or else as model outputs [observed, or not, @Jakeman:2006ii].
+- [ ] The choice of a model's boundaries is closely linked to the choice of how finely to aggregate the behaviour within the model [@Jakeman:2006ii] - what is the intended scale, and resolution of the model (temporal, spatial or otherwise)?
+- [ ] Where is the boundary of the modelled system? Everything outside beyond the boundary and not crossing it is to be ignored within the domain of the model, and everything crossing the boundary is to be treated as external forcing (known/unknown), or else as model outputs [observed, or not, @Jakeman:2006ii].
 :::
 
 #### Intended application of results
@@ -104,7 +104,7 @@ Preregistration Items in this section are relevant to model transferability [@Ya
 ::: callout-caution
 ## Preregistration Item
 
--   [ ] What is the intended domain in which the model is to be applied? Are there any reasonable extrapolation limits beyond which you expect the model should not be applied [@Grimm:2014es]?
+- [ ] What is the intended domain in which the model is to be applied? Are there any reasonable extrapolation limits beyond which you expect the model should not be applied [@Grimm:2014es]?
 :::
 
 ### Scenario Analysis Operationalisation
@@ -112,9 +112,9 @@ Preregistration Items in this section are relevant to model transferability [@Ya
 ::: callout-caution
 ## Preregistration Item (delete as necessary)
 
--   [ ] How will you operationalise any scenarios identified in 1.1.3? For example, how will you operationalise any qualitative changes of interest, such as ‚ 'deterioration' or 'improvement'?
--   [ ] Describe how you will evaluate and distinguish the performance of alternative scenario outcomes
--   [ ] Justify or otherwise explain how you chose these measures and determined performance criteria in relation to the analytical objectives, model purpose and modelling context, such as the risk attitudes of decision-makers and stakeholders within this system
+- [ ] How will you operationalise any scenarios identified in 1.1.3? For example, how will you operationalise any qualitative changes of interest, such as ‚ 'deterioration' or 'improvement'?
+- [ ] Describe how you will evaluate and distinguish the performance of alternative scenario outcomes
+- [ ] Justify or otherwise explain how you chose these measures and determined performance criteria in relation to the analytical objectives, model purpose and modelling context, such as the risk attitudes of decision-makers and stakeholders within this system
 :::
 
 ## Define Conceptual Model
@@ -130,8 +130,8 @@ Conceptual models underpin the formal or quantitative model [@Cartwright:2016kr]
 ::: callout-caution
 ## Preregistration Item
 
--   [ ] Describe what method you will use to elicit or identify the conceptual model. Some common methods include interviews, drawings, and mapping techniques including influence diagrams, cognitive maps and Bayesian belief networks [@Moon2019]. It is difficult to decide and justify which method is most appropriate, see Moon et al. [-@Moon2019] for guidance addressing this methodological question.
--   [ ] Finally, how do you intend on representing the final conceptual model? This will likely depend on the method chosen to elicit the conceptual model.
+- [ ] Describe what method you will use to elicit or identify the conceptual model. Some common methods include interviews, drawings, and mapping techniques including influence diagrams, cognitive maps and Bayesian belief networks [@Moon2019]. It is difficult to decide and justify which method is most appropriate, see Moon et al. [-@Moon2019] for guidance addressing this methodological question.
+- [ ] Finally, how do you intend on representing the final conceptual model? This will likely depend on the method chosen to elicit the conceptual model.
 :::
 
 ### Explain Critical Conceptual Design Decisions
@@ -141,11 +141,11 @@ Conceptual models underpin the formal or quantitative model [@Cartwright:2016kr]
 
 *List and explain critical conceptual design decisions [@Grimm:2014es], including:*
 
--   [ ] spatial and temporal scales,
--   [ ] selection of entities and processes,
--   [ ] representation of stochasticity and heterogeneity,
--   [ ] consideration of local versus global interactions, environmental drivers, etc.
--   [ ] Explain and justify the influence of particular theories, concepts, or earlier models against alternative conceptual design decisions that might lead to alternative model structures.
+- [ ] spatial and temporal scales,
+- [ ] selection of entities and processes,
+- [ ] representation of stochasticity and heterogeneity,
+- [ ] consideration of local versus global interactions, environmental drivers, etc.
+- [ ] Explain and justify the influence of particular theories, concepts, or earlier models against alternative conceptual design decisions that might lead to alternative model structures.
 :::
 
 ### Model assumptions and uncertainties
@@ -155,9 +155,9 @@ Conceptual models underpin the formal or quantitative model [@Cartwright:2016kr]
 
 *Specify key assumptions and uncertainties underlying the model design, describing how uncertainty and variation will be represented in the model [@Moallemi2019]. Sources of uncertainty may include:*
 
--   [ ] exogenous uncertainties affecting the system,
--   [ ] parametric uncertainty in input data and
--   [ ] structural / conceptual nonparametric uncertainty in the model.
+- [ ] exogenous uncertainties affecting the system,
+- [ ] parametric uncertainty in input data and
+- [ ] structural / conceptual nonparametric uncertainty in the model.
 :::
 
 ### Identify predictor and response variables
@@ -173,12 +173,12 @@ The identification and definition of primary model input variables should be dri
 
 *Identify and define system system variables and structures, referencing scenario definitions, and the scope of the model as described within problem formulation:*
 
--   [ ] What variables would support taking this action or making this decision?
--   [ ] What additional variables may interact with this system (things we can't control, but can hopefully measure)?
--   [ ] What variables have not been measured, but may interact with the system (often occurs in field or observational studies)?
--   [ ] What variables are index or surrogate measures of variables that we cannot or have not measured?
--   [ ] In what ways do we expect these variables to interact (model structures)?
--   [ ] Explain how any key concepts or terms within problem or decision-making contexts, such as regulatory terms, will be operationalised and defined in a biologically meaningful way to answer the research question appropriately?
+- [ ] What variables would support taking this action or making this decision?
+- [ ] What additional variables may interact with this system (things we can't control, but can hopefully measure)?
+- [ ] What variables have not been measured, but may interact with the system (often occurs in field or observational studies)?
+- [ ] What variables are index or surrogate measures of variables that we cannot or have not measured?
+- [ ] In what ways do we expect these variables to interact (model structures)?
+- [ ] Explain how any key concepts or terms within problem or decision-making contexts, such as regulatory terms, will be operationalised and defined in a biologically meaningful way to answer the research question appropriately?
 :::
 
 ### Define prior knowledge, data specification and evaluation
@@ -196,23 +196,23 @@ The identification and definition of primary model input variables should be dri
 
 **For pre-existing data (delete as appropriate):**
 
--   [ ] Document the identity, quantity and provenance of any data that will be used to develop, identify and test the model.
--   [ ] For each dataset, is the data open or publicly available?
--   [ ] How can the data be accessed? Provide a link or contact as appropriate, indicating any restrictions on the use of data.
--   [ ] Date of download, access, or expected timing offuture access.
--   [ ] Describe the source of the data - what entity originally collected this data? (National Data Set, Private Organisational Data, Own Lab Collection, Other Lab Collection, External Contractor, Meta-Analysis, Expert Elicitation, Other).
--   [ ] Codebook and meta-data. If a codebook or other meta-data is available, link to it here and / or upload the document(s).
--   [ ] Prior work based on this dataset - Have you published / presented any previous work based on this dataset? Include any publications, conference presentations (papers, posters), or working papers (in-prep, unpublished, preprints) based on this dataset you have worked on.
--   [ ] Unpublished Prior Research Activity - Describe any prior but unpublished research activity using these data. Be specific and transparent.
--   [ ] Prior knowledge of the current dataset - Describe any prior knowledge of or interaction with the dataset before commencing this study. For example, have you read any reports or publications about this data?
--   [ ] Describe how the data is arranged, in terms of replicates and covariates.
+- [ ] Document the identity, quantity and provenance of any data that will be used to develop, identify and test the model.
+- [ ] For each dataset, is the data open or publicly available?
+- [ ] How can the data be accessed? Provide a link or contact as appropriate, indicating any restrictions on the use of data.
+- [ ] Date of download, access, or expected timing offuture access.
+- [ ] Describe the source of the data - what entity originally collected this data? (National Data Set, Private Organisational Data, Own Lab Collection, Other Lab Collection, External Contractor, Meta-Analysis, Expert Elicitation, Other).
+- [ ] Codebook and meta-data. If a codebook or other meta-data is available, link to it here and / or upload the document(s).
+- [ ] Prior work based on this dataset - Have you published / presented any previous work based on this dataset? Include any publications, conference presentations (papers, posters), or working papers (in-prep, unpublished, preprints) based on this dataset you have worked on.
+- [ ] Unpublished Prior Research Activity - Describe any prior but unpublished research activity using these data. Be specific and transparent.
+- [ ] Prior knowledge of the current dataset - Describe any prior knowledge of or interaction with the dataset before commencing this study. For example, have you read any reports or publications about this data?
+- [ ] Describe how the data is arranged, in terms of replicates and covariates.
 
 **Sampling Plan (for data you will collect, delete as appropriate):**
 
--   [ ] Data collection procedures - Please describe your data collection process, including how sites and transects or any other physical unit were selected and arranged. Describe any inclusion or exclusion rules, and the study timeline.
--   [ ] Sample Size - Describe the sample size of your study.
--   [ ] Sample Size Rationale - Describe how you determined the appropriate sample size for your study. It could include feasibility constraints, such as time, money or personnel.
--   [ ] If sample size cannot be specified, specify a stopping rule - i.e. how will you decide when to terminate your data collection?
+- [ ] Data collection procedures - Please describe your data collection process, including how sites and transects or any other physical unit were selected and arranged. Describe any inclusion or exclusion rules, and the study timeline.
+- [ ] Sample Size - Describe the sample size of your study.
+- [ ] Sample Size Rationale - Describe how you determined the appropriate sample size for your study. It could include feasibility constraints, such as time, money or personnel.
+- [ ] If sample size cannot be specified, specify a stopping rule - i.e. how will you decide when to terminate your data collection?
 :::
 
 #### Data Processing and Preparation
@@ -220,7 +220,7 @@ The identification and definition of primary model input variables should be dri
 ::: callout-caution
 ## Preregistration Item
 
--   [ ] Describe any data preparation and processing steps, including manipulation of environmental layers (e.g. standardisation and geographic projection) or variable construction (e.g. Principal Component Analysis).
+- [ ] Describe any data preparation and processing steps, including manipulation of environmental layers (e.g. standardisation and geographic projection) or variable construction (e.g. Principal Component Analysis).
 :::
 
 #### Describe any data exploration or preliminary data analyses.
@@ -236,11 +236,11 @@ In most modelling cases, it is necessary to perform preliminary analyses to unde
 
 *For each separate preliminary or investigatory analysis:*
 
--   [ ] State what needs to be known to proceed with further decision-making about the modelling procedure, and why the analysis is necessary.
--   [ ] Explain how you will implement this analysis, as well as any techniques you will use to summarise and explore your data.
--   [ ] What method will you use to represent this analysis (graphical, tabular, or otherwise, describe)
--   [ ] Specify exactly which parts of the data will be used
--   [ ] Describe how the results will be interpreted, listing each potential analytic decision, as well as the analysis finding that will trigger each decision, where possible.
+- [ ] State what needs to be known to proceed with further decision-making about the modelling procedure, and why the analysis is necessary.
+- [ ] Explain how you will implement this analysis, as well as any techniques you will use to summarise and explore your data.
+- [ ] What method will you use to represent this analysis (graphical, tabular, or otherwise, describe)
+- [ ] Specify exactly which parts of the data will be used
+- [ ] Describe how the results will be interpreted, listing each potential analytic decision, as well as the analysis finding that will trigger each decision, where possible.
 :::
 
 #### Data evaluation, exclusion and missing data
@@ -254,11 +254,11 @@ Documenting issues with reliability is important because data quality and ecolog
 ::: callout-caution
 ## Preregistration Item
 
--   [ ] Describe how you will determine how reliable the data is for the given model purpose. Ideally, model input data should be internally consistent across temporal and spatial scales and resolutions, and appropriate to the problem at hand
--   [ ] Document any issues with data reliability.
--   [ ] How will you determine what data, if any, will be excluded from your analyses?
--   [ ] How will outliers be handled? Describe rules for identifying outlier data, and for excluding a site, transect, quadrat, year or season, species, trait, etc.
--   [ ] How will you identify and deal with incomplete or missing data?
+- [ ] Describe how you will determine how reliable the data is for the given model purpose. Ideally, model input data should be internally consistent across temporal and spatial scales and resolutions, and appropriate to the problem at hand
+- [ ] Document any issues with data reliability.
+- [ ] How will you determine what data, if any, will be excluded from your analyses?
+- [ ] How will outliers be handled? Describe rules for identifying outlier data, and for excluding a site, transect, quadrat, year or season, species, trait, etc.
+- [ ] How will you identify and deal with incomplete or missing data?
 :::
 
 ### Conceptual model evaluation
@@ -266,9 +266,9 @@ Documenting issues with reliability is important because data quality and ecolog
 ::: callout-caution
 ## Preregistration Item
 
--   [ ] Describe how your conceptual model will be critically evaluated. Evaluation includes both the completeness and suitability of the overall model structure.
--   [ ] How will you critically assess any simplifying assumptions [@Augusiak:2014gz]?
--   [ ] Will this process will include consultation or feedback from a client, manager, or model user.
+- [ ] Describe how your conceptual model will be critically evaluated. Evaluation includes both the completeness and suitability of the overall model structure.
+- [ ] How will you critically assess any simplifying assumptions [@Augusiak:2014gz]?
+- [ ] Will this process will include consultation or feedback from a client, manager, or model user.
 :::
 
 ## Formalise and Specify Model
@@ -290,7 +290,7 @@ Modelling approaches can be described as occurring on a spectrum from correlativ
 ::: callout-caution
 ## Preregistration Item
 
--   [ ] Describe what modelling framework, approach or class of model you will use to implement your model and relate your choice to the model purpose and analytical objectives described in 1.1.2 and 1.1.3.
+- [ ] Describe what modelling framework, approach or class of model you will use to implement your model and relate your choice to the model purpose and analytical objectives described in 1.1.2 and 1.1.3.
 :::
 
 ### Choose model features and family
@@ -306,8 +306,8 @@ All modelling approaches require the selection of model features, which conform 
 ::: callout-caution
 ## Preregistration Item
 
--   [ ] For each response, predictor, and covariate, *specify how these variables will be operationalised in the model. This should relate directly to the analytical and/or management objectives specified during the problem formulation phase. Operationalisations could include: the extent of a response, an extreme value, a trend, a long-term mean, a probability distribution, a spatial pattern, a time-series, qualitative change, such as a direction of change or, the frequency, location, or probability of some event occuring. Specify any treatment of model variables, including whether they are lumped / distributed, lienar / non-linear, stochastic / deterministic [@Jakeman:2006ii]* .
--   [ ] *Provide a rationale for your choices, including why plausible alternatives under consideration were not chosen, and relate your justification bacj to the purpose, objectives, prior knowledge and or logistical constraints specified in the problem formulation phase [@Jakeman:2006ii].*
+- [ ] For each response, predictor, and covariate, *specify how these variables will be operationalised in the model. This should relate directly to the analytical and/or management objectives specified during the problem formulation phase. Operationalisations could include: the extent of a response, an extreme value, a trend, a long-term mean, a probability distribution, a spatial pattern, a time-series, qualitative change, such as a direction of change or, the frequency, location, or probability of some event occuring. Specify any treatment of model variables, including whether they are lumped / distributed, lienar / non-linear, stochastic / deterministic [@Jakeman:2006ii]* .
+- [ ] *Provide a rationale for your choices, including why plausible alternatives under consideration were not chosen, and relate your justification bacj to the purpose, objectives, prior knowledge and or logistical constraints specified in the problem formulation phase [@Jakeman:2006ii].*
 :::
 
 #### Choose model family
@@ -315,8 +315,8 @@ All modelling approaches require the selection of model features, which conform 
 ::: callout-caution
 ## Preregistration Item
 
--   [ ] Specify which family of statistical distributions you will use in your model, and describe any transformations, or link functions.
--   [ ] Include in your rational for selection, detail about which variables the model outputs are likely sensitive to, what aspects of their behaviour are important, and any associated spatial or temporal dimensions in sampling.
+- [ ] Specify which family of statistical distributions you will use in your model, and describe any transformations, or link functions.
+- [ ] Include in your rational for selection, detail about which variables the model outputs are likely sensitive to, what aspects of their behaviour are important, and any associated spatial or temporal dimensions in sampling.
 :::
 
 ### Describe *approach* for identifying model structure
@@ -330,13 +330,13 @@ This section relates to the process of determining the best/most efficient/parsi
 ::: callout-caution
 ## Preregistration Item
 
--   [ ] Specify what approach and methods you will use to identify model structure and parameters.
--   [ ] If using a knowledge-supported approach to deriving model structure (either in whole or in part), specify model structural features, including:
-    -   the functional form of interactions (if any)
-    -   data structures,
-    -   measures used to specify links,
-    -   any bins or discretisation of continuous variables [@Jakeman:2006ii],
-    -   any other relevant features of the model structure.
+- [ ] Specify what approach and methods you will use to identify model structure and parameters.
+- [ ] If using a knowledge-supported approach to deriving model structure (either in whole or in part), specify model structural features, including:
+  - the functional form of interactions (if any)
+  - data structures,
+  - measures used to specify links,
+  - any bins or discretisation of continuous variables [@Jakeman:2006ii],
+  - any other relevant features of the model structure.
 :::
 
 ### Describe parameter estimation technique and performance criteria
@@ -352,9 +352,9 @@ Before calibrating the model to the data, the performance criteria for judging t
 ::: callout-caution
 ## Preregistration Item
 
--   [ ] Specify what technique you will use to estimate parameter values, and how you will supply non-parametric variables and/or data (e.g. distributed boundary conditions). For example, will you calibrate all variables simultaneously by optimising fit of model outputs to observations, or will you parameterise the model in a piecemeal fashion by either direct measurement, inference from secondary data, or some combination [@Jakeman:2006ii].
--   [ ] Identify which variables will be parameterised directly, such as by expert elicitation or prior knowledge.
--   [ ] Specify which algorithm(s) you will use for any data-driven parameter estimation, including supervised, or unsupervised machine learning, decision-tree, K-nearest neighbour or cluster algorithms [@Liu2018b].
+- [ ] Specify what technique you will use to estimate parameter values, and how you will supply non-parametric variables and/or data (e.g. distributed boundary conditions). For example, will you calibrate all variables simultaneously by optimising fit of model outputs to observations, or will you parameterise the model in a piecemeal fashion by either direct measurement, inference from secondary data, or some combination [@Jakeman:2006ii].
+- [ ] Identify which variables will be parameterised directly, such as by expert elicitation or prior knowledge.
+- [ ] Specify which algorithm(s) you will use for any data-driven parameter estimation, including supervised, or unsupervised machine learning, decision-tree, K-nearest neighbour or cluster algorithms [@Liu2018b].
 :::
 
 #### Parameter estimation / model fit performance criteria
@@ -362,9 +362,9 @@ Before calibrating the model to the data, the performance criteria for judging t
 ::: callout-caution
 ## Preregistration Item
 
--   [ ] Specify which suite of performance criteria you will use to judge the performance of the model. Examples include correlation scores, coefficient of determination, specificity, sensitivity, AUC, etcetera [@Yates2018].
--   [ ] Relate any underlying assumptions of each criterion to the desired properties of the model, and justify the choice of performance metric in relation
--   [ ] Explain how you will identify which model features or components are significant or meaningful.
+- [ ] Specify which suite of performance criteria you will use to judge the performance of the model. Examples include correlation scores, coefficient of determination, specificity, sensitivity, AUC, etcetera [@Yates2018].
+- [ ] Relate any underlying assumptions of each criterion to the desired properties of the model, and justify the choice of performance metric in relation
+- [ ] Explain how you will identify which model features or components are significant or meaningful.
 :::
 
 ### Model assumptions and uncertainties
@@ -372,7 +372,7 @@ Before calibrating the model to the data, the performance criteria for judging t
 ::: callout-caution
 ## Preregistration Item
 
--   [ ] Specify assumptions and key uncertainties in the formal model. Describe what gaps exist between the model conception, and the real-world problem, what biases might this introduce and how might this impact any interpretation of the model outputs, and what implications are there for evaluating model-output to inform inferences or decisions?
+- [ ] Specify assumptions and key uncertainties in the formal model. Describe what gaps exist between the model conception, and the real-world problem, what biases might this introduce and how might this impact any interpretation of the model outputs, and what implications are there for evaluating model-output to inform inferences or decisions?
 :::
 
 ### Specify formal model(s)
@@ -386,9 +386,9 @@ Once critical decisions have been made about the modelling approach and method o
 ::: callout-caution
 ## Preregistration Item
 
--   [ ] Specify all formal models
-    -   [ ] Note, For data-driven approaches to determining model structure and or parameterisation, it may not be possible to respond to this preregistration item. In such cases, explain why this is the case, and how you will document the model(s) used in the final analysis.
--   [ ] For quantitative model selection approaches, including ensemble modelling, specify each model used in the candidate set, including any null or full/global model.
+- [ ] Specify all formal models
+  - [ ] Note, For data-driven approaches to determining model structure and or parameterisation, it may not be possible to respond to this preregistration item. In such cases, explain why this is the case, and how you will document the model(s) used in the final analysis.
+- [ ] For quantitative model selection approaches, including ensemble modelling, specify each model used in the candidate set, including any null or full/global model.
 :::
 
 ## Model Calibration, Validation & Checking
@@ -404,7 +404,7 @@ This section pertains to any data calibration, validation or testing schemes tha
 ::: callout-caution
 ## Preregistration Item
 
--   [ ] Describe any data calibration, validation and testing scheme you will implement, including any procedures for tuning or estimating model hyper-parameters (if any).
+- [ ] Describe any data calibration, validation and testing scheme you will implement, including any procedures for tuning or estimating model hyper-parameters (if any).
 :::
 
 #### Describe calibration/validation data
@@ -420,13 +420,13 @@ The following items pertain to properties of the *datasets* used for calibration
 
 *If partitioning data for cross-validation or similar approach (delete as needed):*
 
--   [ ] Describe the approach specifying the number of folds that will be created, the relative size of each fold, and any stratification methods used for ensuring evenness of groups between folds and between calibration / validation data?
+- [ ] Describe the approach specifying the number of folds that will be created, the relative size of each fold, and any stratification methods used for ensuring evenness of groups between folds and between calibration / validation data?
 
 *If using external / independent holdout data for model testing and evaluation (delete as needed):*
 
--   [ ] Which data will be used as a the testing data? What method will you be used for generating training / test data subsets?
--   [ ] Describe any known differences between the training/validation and testing datasets, the relative size of each, as well as any stratification methods used for ensuring evenness of groups between data sets?
--   [ ] It is preferable that any independent data used for model testing remains unknown to modellers during the process of model development, please describe the relationship modellers have to model validation data, will independent datasets be known or accessible to any modeller or analyst?
+- [ ] Which data will be used as a the testing data? What method will you be used for generating training / test data subsets?
+- [ ] Describe any known differences between the training/validation and testing datasets, the relative size of each, as well as any stratification methods used for ensuring evenness of groups between data sets?
+- [ ] It is preferable that any independent data used for model testing remains unknown to modellers during the process of model development, please describe the relationship modellers have to model validation data, will independent datasets be known or accessible to any modeller or analyst?
 :::
 
 ### Implementation verification
@@ -436,14 +436,14 @@ The following items pertain to properties of the *datasets* used for calibration
 
 Model implementation verification is the process of ensuring that the model has been correctly implemented, and that the model performs as described by the model description [@Grimm:2014es]. This process is distinct from model checking, which assesses the model's performance in representing the system of interest [@Conn:2018hd].
 
--   Checks for verification implementation should include i) thoroughly checking for bugs or programming errors, and ii) whether the implemented model performs as described by the model description [@Grimm:2014es].
--   Qualitative tests could include syntax checking of code, and peer-code review [@ivimey2023]. Technical measures include using unit tests, or in-built checks within functions to prevent potential errors.
+- Checks for verification implementation should include i) thoroughly checking for bugs or programming errors, and ii) whether the implemented model performs as described by the model description [@Grimm:2014es].
+- Qualitative tests could include syntax checking of code, and peer-code review [@ivimey2023]. Technical measures include using unit tests, or in-built checks within functions to prevent potential errors.
 :::
 
 ::: callout-caution
 ## Preregistration Item
 
--   [ ] What Quality Assurance measures will you take to verify the model has been correctly implemented? Specifying a priori quality assurance tests for implementation verification may help to avoid selective debugging and silent errors.
+- [ ] What Quality Assurance measures will you take to verify the model has been correctly implemented? Specifying a priori quality assurance tests for implementation verification may help to avoid selective debugging and silent errors.
 :::
 
 ### Model checking
@@ -461,8 +461,8 @@ Model implementation verification is the process of ensuring that the model has 
 
 *During this process, observed data, or data and patterns that guided model design and calibration, are compared to model output in order to identify if and where there are any systematic differences.*
 
--   [ ] Specify any diagnostics or tests you will use during model checking to assess a model's performance in representing the system of interest.
--   [ ] For each test, specify the criteria that will you use to interpret the outcome of the test in assessing the model's ability to sufficiently represent the gathered data used to develop and parameterise the model.
+- [ ] Specify any diagnostics or tests you will use during model checking to assess a model's performance in representing the system of interest.
+- [ ] For each test, specify the criteria that will you use to interpret the outcome of the test in assessing the model's ability to sufficiently represent the gathered data used to develop and parameterise the model.
 :::
 
 #### Qualitative model checking
@@ -476,7 +476,7 @@ This step is largely informal and case-specific, but requires‚ 'face validatio
 ::: callout-caution
 ## Preregistration Item
 
--   [ ] Briefly explain how you will qualitatively check the model, and whether and how you will include users and clients in the process.
+- [ ] Briefly explain how you will qualitatively check the model, and whether and how you will include users and clients in the process.
 :::
 
 #### Assumption Violation Checks
@@ -486,10 +486,10 @@ This step is largely informal and case-specific, but requires‚ 'face validatio
 
 *The consequences of assumption violations on the interpretation of results should be assessed [@Araujo2019].*
 
--   [ ] Explain how you will demonstrate robustness to model assumptions and check for violations of model assumptions.
--   [ ] If you cannot perform quantitative assumption checks, describe what theoretical justifications would justify a lack of violation of or robustness to model assumptions.
--   [ ] If you cannot demonstrate or theoretically justify violation or robustness to assumptions, explain why not, and specify whether you will discuss assumption violations and their consequences for interpretation of model outputs.
--   [ ] If assumption violations cannot be avoided, explain how you will explore the consequences of assumption violations on the interpretation of results (To be completed in interim iterations of the preregistration, only if there are departures from assumptions as demonstrated in the planned tests above).
+- [ ] Explain how you will demonstrate robustness to model assumptions and check for violations of model assumptions.
+- [ ] If you cannot perform quantitative assumption checks, describe what theoretical justifications would justify a lack of violation of or robustness to model assumptions.
+- [ ] If you cannot demonstrate or theoretically justify violation or robustness to assumptions, explain why not, and specify whether you will discuss assumption violations and their consequences for interpretation of model outputs.
+- [ ] If assumption violations cannot be avoided, explain how you will explore the consequences of assumption violations on the interpretation of results (To be completed in interim iterations of the preregistration, only if there are departures from assumptions as demonstrated in the planned tests above).
 :::
 
 ## Model Validation and Evaluation
@@ -513,9 +513,9 @@ Ideally, model outputs or predictions are compared to independent data and patte
 ::: callout-caution
 ## Preregistration Item
 
--   [ ] State whether you will corroborate the model outputs on external data, and document any independent validation data in step.
--   [ ] It is preferable that any independent data used for model evaluation remains unknown to modellers during the process of model building [@Dwork2015], describe the relationship modellers have to model validation data, e.g. will independent datasets be known to any modeller or analyst involved in the model building process?
--   [ ] If unable to evaluate the model outputs against independent data, explain why and explain what steps you will take to interrogate the model.
+- [ ] State whether you will corroborate the model outputs on external data, and document any independent validation data in step.
+- [ ] It is preferable that any independent data used for model evaluation remains unknown to modellers during the process of model building [@Dwork2015], describe the relationship modellers have to model validation data, e.g. will independent datasets be known to any modeller or analyst involved in the model building process?
+- [ ] If unable to evaluate the model outputs against independent data, explain why and explain what steps you will take to interrogate the model.
 :::
 
 ### Choose performance metrics and criteria
@@ -531,9 +531,9 @@ Model performance can be quantified by a range of tests, including measures of a
 ::: callout-caution
 ## Preregistration Item
 
--   [ ] Specify what performance measures you will use to evaluate the model and briefly explain how each test relates to different desired properties of a model's performance.
--   [ ] Spatial, temporal and environmental pattern of errors and variance can change the interpretation of model predictions and conservation decisions [@Araujo2019], where relevant and possible, describe how you will characterise and report the spatial, temporal and environmental pattern of errors and variance.
--   [ ] If comparing alternative models, specify what measures of model comparison or out-of-sample performance metrics will you use to find support for alternative models or else to optimise predictive ability. State what numerical threshold or qualities you will use for each of these metrics.
+- [ ] Specify what performance measures you will use to evaluate the model and briefly explain how each test relates to different desired properties of a model's performance.
+- [ ] Spatial, temporal and environmental pattern of errors and variance can change the interpretation of model predictions and conservation decisions [@Araujo2019], where relevant and possible, describe how you will characterise and report the spatial, temporal and environmental pattern of errors and variance.
+- [ ] If comparing alternative models, specify what measures of model comparison or out-of-sample performance metrics will you use to find support for alternative models or else to optimise predictive ability. State what numerical threshold or qualities you will use for each of these metrics.
 :::
 
 ### Model analysis
@@ -561,10 +561,10 @@ Uncertainty can arise from different modelling techniques, response data and pre
 ::: callout-caution
 ## Preregistration Item
 
--   [ ] Please describe how you will characterise model and data uncertainties, e.g. propagating known uncertainties through the model, investigating the effect of different model scenarios with different parameters and modelling technique combinations [@Araujo2019], or empirically constructing model distributions from model output data points, and extracting summary statistics, including the mean, median, variance, and constructing confidence intervals [@Saltelli2019].
--   [ ] Relate your choice of analysis to the context and purposes of the model described in the problem formulation phase. For instance ‚ discrepancies between model output and observed output may be important for forecasting models, where cost, benefit, an risk over a substantial period must be gauged, but much less critical for decision-making or management models where the user may be satisfied with knowing that the predicted ranking order of impacts of alternative scenarios or management options is likely to be correct, with only a rough indication of their sizes" [@Jakeman:2006ii].
--   [ ] Briefly describe how you will summarise the results of these in silico experiments with graphical, tabular, or other devices, such as summary statistics.
--   [ ] If the chosen modelling approach is able to explicitly articulate uncertainty due to data, measurements or baseline conditions, such as by providing estimates of uncertainty (typically in the form of probabilistic parameter covariance, [@Jakeman:2006ii]), specify which measure of uncertainty you will use.
+- [ ] Please describe how you will characterise model and data uncertainties, e.g. propagating known uncertainties through the model, investigating the effect of different model scenarios with different parameters and modelling technique combinations [@Araujo2019], or empirically constructing model distributions from model output data points, and extracting summary statistics, including the mean, median, variance, and constructing confidence intervals [@Saltelli2019].
+- [ ] Relate your choice of analysis to the context and purposes of the model described in the problem formulation phase. For instance ‚ discrepancies between model output and observed output may be important for forecasting models, where cost, benefit, an risk over a substantial period must be gauged, but much less critical for decision-making or management models where the user may be satisfied with knowing that the predicted ranking order of impacts of alternative scenarios or management options is likely to be correct, with only a rough indication of their sizes" [@Jakeman:2006ii].
+- [ ] Briefly describe how you will summarise the results of these in silico experiments with graphical, tabular, or other devices, such as summary statistics.
+- [ ] If the chosen modelling approach is able to explicitly articulate uncertainty due to data, measurements or baseline conditions, such as by providing estimates of uncertainty (typically in the form of probabilistic parameter covariance, [@Jakeman:2006ii]), specify which measure of uncertainty you will use.
 :::
 
 #### Sensitivity analyses
@@ -578,9 +578,9 @@ Uncertainty can arise from different modelling techniques, response data and pre
 ::: callout-caution
 ## Preregistration Item
 
--   [ ] Describe the sensitivity analysis approach you will take: deterministic sensitivity, stochastic sensitivity (variability in the model), or scenario sensitivity (effect of changes based on scenarios).
--   [ ] Describe any sensitivity analyses you will conduct by specifying which parameters will be held constant, which will be varied, and the range and intervals of values over which those parameters will be varied.
--   [ ] State the primary objective of each sensitivity analysis, for example, to identify which input variables contribute the most to model uncertainty so that these variables can be targeted for further data collection, or alternatively to identify which variables or factors contribute little to overall model outputs, and so can be 'dropped' from future iterations of the model [@Saltelli2019].
+- [ ] Describe the sensitivity analysis approach you will take: deterministic sensitivity, stochastic sensitivity (variability in the model), or scenario sensitivity (effect of changes based on scenarios).
+- [ ] Describe any sensitivity analyses you will conduct by specifying which parameters will be held constant, which will be varied, and the range and intervals of values over which those parameters will be varied.
+- [ ] State the primary objective of each sensitivity analysis, for example, to identify which input variables contribute the most to model uncertainty so that these variables can be targeted for further data collection, or alternatively to identify which variables or factors contribute little to overall model outputs, and so can be 'dropped' from future iterations of the model [@Saltelli2019].
 :::
 
 #### Model application or scenario analysis
@@ -588,10 +588,10 @@ Uncertainty can arise from different modelling techniques, response data and pre
 ::: callout-caution
 ## Preregistration Item
 
--   [ ] Specify any input conditions and relevant parameter values for initial environmental conditions and decision-variables under each scenario specified in section 1.
--   [ ] Describe any other relevant technical details of model application, such as methods for how you will implement any simulations or model projections.
--   [ ] What raw and transformed model outputs will you extract from the model simulations or projections, and how will you map, plot, or otherwise display and synthesise the results of scenario and model analyses.
--   [ ] Explain how you will analyse the outputs to answer your analytical objectives. For instance, describe any trade-off or robustness analyses you will undertake to help evaluate and choose between different alternatives in consultation with experts or decision-makers.
+- [ ] Specify any input conditions and relevant parameter values for initial environmental conditions and decision-variables under each scenario specified in section 1.
+- [ ] Describe any other relevant technical details of model application, such as methods for how you will implement any simulations or model projections.
+- [ ] What raw and transformed model outputs will you extract from the model simulations or projections, and how will you map, plot, or otherwise display and synthesise the results of scenario and model analyses.
+- [ ] Explain how you will analyse the outputs to answer your analytical objectives. For instance, describe any trade-off or robustness analyses you will undertake to help evaluate and choose between different alternatives in consultation with experts or decision-makers.
 :::
 
 #### Other simulation experiments / robustness analyses
@@ -599,7 +599,7 @@ Uncertainty can arise from different modelling techniques, response data and pre
 ::: callout-caution
 ## Preregistration Item
 
--   [ ] Describe any other simulation experiments, robustness analyses or other analyses you will perform on the model, including any metrics and their criteria / thresholds for interpreting the results of the analysis.
+- [ ] Describe any other simulation experiments, robustness analyses or other analyses you will perform on the model, including any metrics and their criteria / thresholds for interpreting the results of the analysis.
 :::
 
 
