@@ -12,9 +12,17 @@ The guide provides background on researcher degrees of freedom and the risk of q
 
 Both the template and Adaptive Preregistration methodology were developed and tested using a case study of environmental flows modelling in Victoria, Australia, led by [Chris Jones](https://findanexpert.unimelb.edu.au/profile/189188-christopher-jones) and [Jian Yen](https://www.ari.vic.gov.au/about-us/staff#JianYen) at the Arthur Rylah Institute for Environmental Research, Department of Energy, Environment and Climate Action (Jones et al., 2026)[^1] [^2].
 
-## Resources
+## Citing this work
 
-The OSF repository for the Adaptive Preregistration project may be found at: <https://osf.io/sq5j4/>.
+Please cite the material in this repository as:
+
+> Gould, E., Jones, Christopher, S., Yen, J. D. L., Fraser, Hannah, S., Wootton, H., Vivian, L., Good, M., Duncan, David, H., Rumpff, L., & Fidler, F. (2026). EcoConsPreReg: A Guide to Adaptive Preregistration for Model-Based Research in Ecology and Conservation. Zenodo. [https://doi.org/10.5281/zenodo.19064144](https://doi.org/10.5281/zenodo.10807029)
+
+## Resources & References
+
+The OSF repository for the Adaptive Preregistration project is accessible at: <https://osf.io/sq5j4/>.
+
+The material presented in this repository's website is accessible in PDF format at: <https://osf.io/sq5j4/files/x2kpj>.
 
 [^1]: Jones, C., Vivian, L., Wootton, H., Gould, E., Yen, J., Mole, B., Thomas, F., Sutton, F., Crowther, D., Backstrom, A., & Just, K. (2026). Vegetation responses to managed river flow events and regimes. EcoEvoArXiv [Preprint]. https://doi.org/10.32942/X2S67G
 [^2]: Case study Source code repository: [https://github.com/egouldo/VEFMAP_VEG_Stage6/tree/EG-prereg-updates](https://github.com/egouldo/VEFMAP_VEG_Stage6/tree/EG-prereg-updates)
