@@ -15,9 +15,9 @@ We suggest some tooling that assumes use of the R statistical programming langua
 
 Follow the instructions at <https://docs.github.com/en/get-started/git-basics/set-up-git> to setup the following:
 
--   git installation on your computer (Windows, Mac, linux supported)
--   GitHub user account
--   Configure authentication with GitHub from git
+- git installation on your computer (Windows, Mac, linux supported)
+- GitHub user account
+- Configure authentication with GitHub from git
 
 After you have installed and set-up the required software and GitHub account, you will need a git/GitHub repository (see Quickstart for repositories) where your preregistration document and analysis files will be version-controlled.
 
@@ -35,10 +35,10 @@ We propose leveraging both the version-control and the project management featur
 
 Why GitHub for Adaptive Preregistration?
 
--   Because GitHub documents are 'time-stamped' the genesis of the preregistration from one version to the next is apparent.
--   Moreover, using the diff view of a document on GitHub, exactly how and where a document has changed between versions is clear - additions are coloured green, deletions are coloured red, and changes within a line are highlighted.
--   The project management and communication features of GitHub, such as GitHub Issues,
--   tagging and release
+- Because GitHub documents are 'time-stamped' the genesis of the preregistration from one version to the next is apparent.
+- Moreover, using the diff view of a document on GitHub, exactly how and where a document has changed between versions is clear - additions are coloured green, deletions are coloured red, and changes within a line are highlighted.
+- The project management and communication features of GitHub, such as GitHub Issues,
+- tagging and release
 
 GitHub users can collaborate by contributing, modifying and discussing existing code, reporting bugs and other problems, discover new code and data, and publish new code.
 
@@ -107,9 +107,9 @@ This process continues until the preregistration is complete, and the researcher
 
 When a researcher needs to conduct preliminary analyses or check parts of the data before committing to a particular decision about the model or analysis, they can specify a flexible strategy in their response to that preregistration item by:
 
--   stating what needs to be known to move forward with the modelling and analysis and why the analysis is necessary
--   explaining how the researcher will test this, and what parts of the data will be used in that analysis
--   describing how the results will be interpreted, listing each potential decision and the analysis result that will trigger that decision, where possible.
+- stating what needs to be known to move forward with the modelling and analysis and why the analysis is necessary
+- explaining how the researcher will test this, and what parts of the data will be used in that analysis
+- describing how the results will be interpreted, listing each potential decision and the analysis result that will trigger that decision, where possible.
 
 ## A step-by-step guide to implementing Adaptive Preregistration with GitHub
 
@@ -128,20 +128,20 @@ Ensure you have committed a preregistration template to your project repository 
 1.  [Create a GitHub issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue) describing any tasks relevant to creation of the initial preregistration
 2.  Edit the document with your responses to the template items
 
--   View our preregistration template document in GitHub [here](https://github.com/egouldo/EcoConsModPreReg/blob/master/template.qmd).
--   In your own repository containing your preregistration document, click on the 'edit document' button:
+- View our preregistration template document in GitHub [here](https://github.com/egouldo/EcoConsModPreReg/blob/master/template.qmd).
+- In your own repository containing your preregistration document, click on the 'edit document' button:
 
 ![](figures/edit-document.png)
 
--   You will be able to edit the document directly in GitHub, Edit away!
+- You will be able to edit the document directly in GitHub, Edit away!
 
 2.  Commit changes
 
--   If you are finished, or ready to save your changes by 'committing' them. There is a box called "commit changes" at the top right of the window, a pop-up window will appear, enter in the commit message box the following:
-    -   `Initial Preregistration #IssueNumber`. Tag the Preregistration GitHub issue number in the commit message (For this repository, it's `#17`, however if you have only created the issue for the initial preregistration, then your issue number will be `#1`).
--   Fill out the extended description box briefly describing the changes you just made
--   Ensure that the radio button for creating a new branch is selected, an auto-generated branch name will appear, e.g. `egouldo-patch-1`.
--   Click "Propose Changes" to start a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests):
+- If you are finished, or ready to save your changes by 'committing' them. There is a box called "commit changes" at the top right of the window, a pop-up window will appear, enter in the commit message box the following:
+  - `Initial Preregistration #IssueNumber`. Tag the Preregistration GitHub issue number in the commit message (For this repository, it's `#17`, however if you have only created the issue for the initial preregistration, then your issue number will be `#1`).
+- Fill out the extended description box briefly describing the changes you just made
+- Ensure that the radio button for creating a new branch is selected, an auto-generated branch name will appear, e.g. `egouldo-patch-1`.
+- Click "Propose Changes" to start a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests):
 
 ![](figures/propose-changes.png)
 
@@ -197,11 +197,11 @@ Add any further information or technical details about going forward and working
 
 Sometimes assumptions are violated, or there are other unexpected outcomes of preliminary analyses, and you will need to change plans. How do we deal with this?
 
--   Add the URL to the relevant GitHub issue under the corresponding Preregistration Item.
--   Add any the URL for any linked commits to the Preregistration Item.
--   Revise the Preregistration, where necessary by editing the Preregistration document in GitHub, as per previous instructions.
--   Commit the changes with the following commit message header (or similar): `Preregistration Deviation #issue`.
--   Describe the trigger for the Preregistration revisions in brief detail within the commit message body, adding the link to the relevant GitHub issue containing the tagged commits that triggered the revision.
+- Add the URL to the relevant GitHub issue under the corresponding Preregistration Item.
+- Add any the URL for any linked commits to the Preregistration Item.
+- Revise the Preregistration, where necessary by editing the Preregistration document in GitHub, as per previous instructions.
+- Commit the changes with the following commit message header (or similar): `Preregistration Deviation #issue`.
+- Describe the trigger for the Preregistration revisions in brief detail within the commit message body, adding the link to the relevant GitHub issue containing the tagged commits that triggered the revision.
 
 ### 'Living preregistration' - tracking changes to the Preregistration Draft
 
