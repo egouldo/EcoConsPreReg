@@ -1,6 +1,5 @@
 ---
 title: A primer on *Adaptive Preregistration*
-date: today
 ---
 
 ```{r}
@@ -62,8 +61,7 @@ When preliminary analyses, model checking or other data-dependent decisions need
 - explaining what test or analysis will be performed to obtain this quantity or outcome, and what parts of the data will be used in this analysis, and
 - describing how the results will be interpreted, listing each potential decision and its trigger, where possible.
 
-:::: {#fig-registering-flexibility}
-
+::::: {#fig-registering-flexibility}
 ::: {.content-visible when-format="html"}
 ```{mermaid}
 %%| column: body-outset
@@ -100,8 +98,7 @@ flowchart LR
 :::
 
 A general heuristic for registering flexible analyses.
-
-::::
+:::::
 
 ### Interim Preregistrations
 
@@ -149,6 +146,6 @@ magick::image_read(path = "figures/LivingPreregistration.png",
 :::: {.content-visible when-format="pdf"}
 ## References {.sectionbibliography}
 
-::: {.sectionrefs}
+::: sectionrefs
 :::
 ::::
