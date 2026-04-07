@@ -16,7 +16,7 @@ Both the template and Adaptive Preregistration methodology were developed and te
 
 Please cite the material in this repository as:
 
-> Gould, E., Jones, Christopher, S., Yen, J. D. L., Fraser, Hannah, S., Wootton, H., Vivian, L., Good, M., Duncan, David, H., Rumpff, L., & Fidler, F. (2026). EcoConsPreReg: A Guide to Adaptive Preregistration for Model-Based Research in Ecology and Conservation. Zenodo. [https://doi.org/10.5281/zenodo.19064144](https://doi.org/10.5281/zenodo.10807029)
+> Gould, E., Jones, Christopher, S., Yen, J. D. L., Fraser, Hannah, S., Wootton, H., Good, M., Duncan, David, H., Rumpff, L., & Fidler, F. (2026). EcoConsPreReg: A Guide to Adaptive Preregistration for Model-Based Research in Ecology and Conservation. Zenodo. [https://doi.org/10.5281/zenodo.19064144](https://doi.org/10.5281/zenodo.10807029)
 
 ## Resources & References
 
