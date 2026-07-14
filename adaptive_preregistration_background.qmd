@@ -1,5 +1,6 @@
 ---
 title: A primer on *Adaptive Preregistration*
+date: today
 ---
 
 ```{r}
@@ -23,8 +24,8 @@ suppressPackageStartupMessages(library(dplyr))
 #| fig-width: 10
 #| fig-cap: "Preregistration as a component of the registered report publication pathway, as illustrated by [@Pu2019]."
 
-magick::image_read(path = "_supp-mat/Pu_et_al_fig_prereg.png",
-                   density = 1000) %>%
+magick::image_read(path = "_supp-mat/Pu_et_al_fig_prereg.png", 
+                   density = 1000) %>% 
   magick::image_scale("250%")
 ```
 
@@ -61,8 +62,7 @@ When preliminary analyses, model checking or other data-dependent decisions need
 - explaining what test or analysis will be performed to obtain this quantity or outcome, and what parts of the data will be used in this analysis, and
 - describing how the results will be interpreted, listing each potential decision and its trigger, where possible.
 
-::::: {#fig-registering-flexibility}
-::: {.content-visible when-format="html"}
+::: {#fig-registering-flexibility .content-visible when-format="html"}
 ```{mermaid}
 %%| column: body-outset
 ---
@@ -76,9 +76,11 @@ flowchart LR
   C --> E(Option 1)
   D --> F(Option 2)
 ```
+
+A general heuristic for registering flexible analyses.
 :::
 
-::: {.content-visible when-format="pdf"}
+::: {#fig-registering-flexibility .content-visible when-format="pdf"}
 ```{mermaid}
 %%| fig-width: 6
 %%| column: body-outset
@@ -95,10 +97,9 @@ flowchart LR
   C --> E(Option 1)
   D --> F(Option 2)
 ```
-:::
 
 A general heuristic for registering flexible analyses.
-:::::
+:::
 
 ### Interim Preregistrations
 
@@ -111,6 +112,8 @@ The modeller follows an iterative process of preregistration. As they proceed th
 
 magick::image_read_pdf(path = "figures/interim_preregistrations.pdf", density = 300)
 ```
+
+### Data-dependent decision-making and the risk of overfitting
 
 ## Documenting adaptive preregistration transparently
 
@@ -132,8 +135,8 @@ We propose leveraging the features of [git](https://git-scm.com) and [GitHub](ww
 #| echo: false
 #| out-width: "900px"
 
-magick::image_read(path = "figures/LivingPreregistration.png",
-                   density = 1000) %>%
+magick::image_read(path = "figures/LivingPreregistration.png", 
+                   density = 1000) %>% 
   magick::image_scale("80%")
 ```
 :::
