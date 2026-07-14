@@ -2,14 +2,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.29">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-06-08">
+<meta name="dcterms.date" content="2026-07-14">
 
-<title>A primer on Adaptive Preregistration – Adaptive Preregistration for Model-Based Research</title>
+<title>3&nbsp; A primer on Adaptive Preregistration</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -25,7 +28,6 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -51,16 +53,17 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./adaptive_preregistration_implementation.html" rel="next">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6bdd2aebeb936dcddaa5f935a5de481c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-d81e29537ea34f11df8cda11d601f993.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -88,6 +91,9 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="styles.css">
@@ -99,11 +105,6 @@ div.csl-indent {
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Adaptive Preregistration for Model-Based Research</span>
-    </a>
-  </div>
             <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
@@ -129,17 +130,13 @@ div.csl-indent {
   </li>  
         <li>
     <a class="dropdown-item" href="./adaptive_preregistration_implementation.html">
- <span class="dropdown-text">Implementing Adaptive Preregistration with Git and Github</span></a>
+ <span class="dropdown-text">Implementing <em>Adaptive Preregistration</em> with git and GitHub</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="./preregistration_modelling.html"> 
-<span class="menu-text">Preregistration for Modelling</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
-<span class="menu-text">About</span></a>
+<span class="menu-text">Preregistration Template for Modelling</span></a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bi-github" role="link" data-bs-toggle="dropdown" aria-expanded="false">
@@ -161,6 +158,7 @@ div.csl-indent {
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
+    <a href="https://github.com/egouldo/EcoConsPreReg/" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
@@ -174,7 +172,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./adaptive_preregistration_background.html">A primer on <em>Adaptive Preregistration</em></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./adaptive_preregistration_background.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">A primer on <em>Adaptive Preregistration</em></span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -189,13 +187,13 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./adaptive_preregistration_background.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">A primer on <em>Adaptive Preregistration</em></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">A primer on <em>Adaptive Preregistration</em></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./adaptive_preregistration_implementation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Implementing Adaptive Preregistration with Git and Github</span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Implementing <em>Adaptive Preregistration</em> with git and GitHub</span></span></a>
   </div>
 </li>
     </ul>
@@ -205,181 +203,190 @@ div.csl-indent {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+    <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#background-motivation" id="toc-background-motivation" class="nav-link active" data-scroll-target="#background-motivation">Background &amp; Motivation</a></li>
-  <li><a href="#iterative-cycle-of-model-development-and-preregistration" id="toc-iterative-cycle-of-model-development-and-preregistration" class="nav-link" data-scroll-target="#iterative-cycle-of-model-development-and-preregistration">Iterative Cycle of Model Development and Preregistration</a></li>
-  <li><a href="#adaptive-preregistration" id="toc-adaptive-preregistration" class="nav-link" data-scroll-target="#adaptive-preregistration">Adaptive Preregistration</a>
+  <li><a href="#background-motivation" id="toc-background-motivation" class="nav-link active" data-scroll-target="#background-motivation"><span class="header-section-number">3.1</span> Background &amp; Motivation</a></li>
+  <li><a href="#iterative-cycle-of-model-development-and-preregistration" id="toc-iterative-cycle-of-model-development-and-preregistration" class="nav-link" data-scroll-target="#iterative-cycle-of-model-development-and-preregistration"><span class="header-section-number">3.2</span> Iterative Cycle of Model Development and Preregistration</a></li>
+  <li><a href="#adaptive-preregistration" id="toc-adaptive-preregistration" class="nav-link" data-scroll-target="#adaptive-preregistration"><span class="header-section-number">3.3</span> Adaptive Preregistration</a>
   <ul class="collapse">
-  <li><a href="#preregistering-flexibility" id="toc-preregistering-flexibility" class="nav-link" data-scroll-target="#preregistering-flexibility">Preregistering Flexibility</a></li>
-  <li><a href="#interim-preregistrations" id="toc-interim-preregistrations" class="nav-link" data-scroll-target="#interim-preregistrations">Interim Preregistrations</a></li>
+  <li><a href="#preregistering-flexibility" id="toc-preregistering-flexibility" class="nav-link" data-scroll-target="#preregistering-flexibility"><span class="header-section-number">3.3.1</span> Preregistering Flexibility</a></li>
+  <li><a href="#interim-preregistrations" id="toc-interim-preregistrations" class="nav-link" data-scroll-target="#interim-preregistrations"><span class="header-section-number">3.3.2</span> Interim Preregistrations</a></li>
+  <li><a href="#data-dependent-decision-making-and-the-risk-of-overfitting" id="toc-data-dependent-decision-making-and-the-risk-of-overfitting" class="nav-link" data-scroll-target="#data-dependent-decision-making-and-the-risk-of-overfitting"><span class="header-section-number">3.3.3</span> Data-dependent decision-making and the risk of overfitting</a></li>
   </ul></li>
-  <li><a href="#documenting-adaptive-preregistration-transparently" id="toc-documenting-adaptive-preregistration-transparently" class="nav-link" data-scroll-target="#documenting-adaptive-preregistration-transparently">Documenting adaptive preregistration transparently</a>
+  <li><a href="#documenting-adaptive-preregistration-transparently" id="toc-documenting-adaptive-preregistration-transparently" class="nav-link" data-scroll-target="#documenting-adaptive-preregistration-transparently"><span class="header-section-number">3.4</span> Documenting adaptive preregistration transparently</a>
   <ul class="collapse">
-  <li><a href="#the-checking-problem" id="toc-the-checking-problem" class="nav-link" data-scroll-target="#the-checking-problem">The <em>Checking Problem</em></a></li>
+  <li><a href="#the-checking-problem" id="toc-the-checking-problem" class="nav-link" data-scroll-target="#the-checking-problem"><span class="header-section-number">3.4.1</span> The <em>Checking Problem</em></a></li>
   </ul></li>
-  <li><a href="#implementing-adaptive-preregistration-with-git-and-github" id="toc-implementing-adaptive-preregistration-with-git-and-github" class="nav-link" data-scroll-target="#implementing-adaptive-preregistration-with-git-and-github">Implementing <em>Adaptive Preregistration</em> with git and GitHub</a></li>
+  <li><a href="#implementing-adaptive-preregistration-with-git-and-github" id="toc-implementing-adaptive-preregistration-with-git-and-github" class="nav-link" data-scroll-target="#implementing-adaptive-preregistration-with-git-and-github"><span class="header-section-number">3.5</span> Implementing <em>Adaptive Preregistration</em> with git and GitHub</a></li>
+  <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">References</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/egouldo/EcoConsPreReg/edit/master/adaptive_preregistration_background.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/egouldo/EcoConsPreReg/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">A primer on <em>Adaptive Preregistration</em></span></h1></header>
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">A primer on <em>Adaptive Preregistration</em></h1>
-</div>
+<header id="title-block-header">
 
 
-
-<div class="quarto-title-meta">
-
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">June 8, 2025</p>
-    </div>
-  </div>
-  
-    
-  </div>
-  
-
-
+<p class="date">2026-07-14</p>
 </header>
 
 
 <section id="background-motivation" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="background-motivation">Background &amp; Motivation</h2>
+<h2 class="anchored" data-anchor-id="background-motivation"><span class="header-section-number">3.1</span> Background &amp; Motivation</h2>
 <div class="cell page-columns page-full">
 <div class="cell-output-display page-columns page-full">
 <div id="fig-traditional-prereg" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
 <figure class="quarto-float quarto-float-fig figure page-columns page-full">
 <div aria-describedby="fig-traditional-prereg-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="page-columns page-full">
-<img src="adaptive_preregistration_background_files/figure-html/fig-traditional-prereg-1.png" width="700" class="figure-img column-body">
+<img src="adaptive_preregistration_background_files/figure-html/fig-traditional-prereg-1.png" class="img-fluid figure-img column-body" width="802">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-traditional-prereg-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Conventional preregistration process for registered reports, as illustrated by <span class="citation" data-cites="Pu2019">(<a href="#ref-Pu2019" role="doc-biblioref">Pu et al. 2019</a>)</span>.
+Figure&nbsp;3.1: Preregistration as a component of the registered report publication pathway, as illustrated by <span class="citation" data-cites="Pu2019">(<a href="#ref-Pu2019" role="doc-biblioref">Pu et al. 2019</a>)</span>.
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p>The iterative nature of model development is a significant barrier to adopting preregistration for model-based research. Translating the preregistration process to a modelling research context is challenging because the iterative nature of model development conflicts with the inner logic of existing preregistration templates that presume a linear research workflow. The process of preregistration as it is currently implemented is tailored towards the hypothetico-deductive model of the scientific method. As such, the process of preregistration is completely distinct from, and precedes the implementation of the analysis plan laid out in the preregistration – analytic decisions are completely independent from the data.</p>
-<p>In fact, preregistration has been defined as “the action of confirming an unalterable version of one’s research plan prior to collecting data” <span class="citation" data-cites="Pu2019">(<a href="#ref-Pu2019" role="doc-biblioref">Pu et al. 2019</a>)</span> or prior to analysing the data <span class="citation" data-cites="Mertens2019">(<a href="#ref-Mertens2019" role="doc-biblioref">Mertens and Krypotos 2019</a>)</span>. In this process, researcher sequentially shifts from ideation, to study/analysis design and preregistration, to collecting and analysing the data, writing the report or manuscript, to documenting the research and publishing (<a href="#fig-traditional-prereg" class="quarto-xref">Figure&nbsp;1</a>). The iterative nature of model development, however, inherently precludes this model of preregistration from being applied to model-based research in ecology and conservation.</p>
+<p>In fact, preregistration has been defined as “the action of confirming an unalterable version of one’s research plan prior to collecting data” <span class="citation" data-cites="Pu2019">(<a href="#ref-Pu2019" role="doc-biblioref">Pu et al. 2019</a>)</span> or prior to analysing the data <span class="citation" data-cites="Mertens2019">(<a href="#ref-Mertens2019" role="doc-biblioref">Mertens and Krypotos 2019</a>)</span>. In this process, researcher sequentially shifts from ideation, to study/analysis design and preregistration, to collecting and analysing the data, writing the report or manuscript, to documenting the research and publishing (<a href="#fig-traditional-prereg" class="quarto-xref">Figure&nbsp;<span>3.1</span></a>). The iterative nature of model development, however, inherently precludes this model of preregistration from being applied to model-based research in ecology and conservation.</p>
 </section>
 <section id="iterative-cycle-of-model-development-and-preregistration" class="level2">
-<h2 class="anchored" data-anchor-id="iterative-cycle-of-model-development-and-preregistration">Iterative Cycle of Model Development and Preregistration</h2>
-<p>Current preregistration practices based on NHST-focussed accounts of questionable research practices prescribe the principle of ‘decision-independence’, where analysis decisions are made independently of and <em>a priori</em> to analysing the data <span class="citation" data-cites="Srivastava2018 Gelman2013">(<a href="#ref-Srivastava2018" role="doc-biblioref">Srivastava 2018</a>; <a href="#ref-Gelman2013" role="doc-biblioref">Gelman and Loken 2013</a>)</span>. However, the modelling process may genuinely violate the principle of ‘decision-independence’ because it is non-linear, iterative and usually generates many interim versions of the model preceding publication. During modelling a researcher will almost always engage in state-dependent decision-making — that is, decisions about whether to alter the model in a subsequent round of model development depend on the results of model testing, evaluation and analysis at the end of the previous iteration of model development. These practices aren’t necessarily questionable in and of themselves, but do have the <em>potential</em> to become questionable if they are exploited in service of artificially inflating the accuracy or precision of the model, its predictions or evaluation tests to the effect that the model is perceived to be more credible than it would be if that practice did not occur – essentially data-dependent decisions that lead to consumers of the model placing unsubstantiated belief in the reliability, validity and utility of the model and its outputs are questionable <span class="citation" data-cites="gould">(<a href="#ref-gould" role="doc-biblioref">Gould et al., n.d.</a>)</span> and can be mitigated through the practice of preregistration.</p>
-<p>Very often in modelling, there are decisions that are necessarily dependent on the outcome of previous analytic decisions in the modelling workflow <span class="citation" data-cites="Liu2020">(<a href="#ref-Liu2020" role="doc-biblioref">Liu, Althoff, and Heer 2020</a>)</span>. Firstly, preliminary or investigatory analyses might need to be conducted before being able to specify future decision-steps in the analysis plan. For example, modellers might need to check the distribution of particular variables in order to determine how to specify the model, perform assumption checks, or check for collinearity or spatial autocorrelation. Secondly, data-dependent decisions from model checking may justifiably result in changes to either the analysis or to interpretations of the mode <span class="citation" data-cites="Srivastava2018">(<a href="#ref-Srivastava2018" role="doc-biblioref">Srivastava 2018</a>)</span>. For instance, inspection of the residuals and other model checking tests may force the modeller to return to earlier decision-points and change the planned analysis or model. Other times, the planned analysis and specified model may simply not converge, or the model is saturated and runs out of variation to apportion such that the model and or the model fitting algorithm must be respecified and re-implemented. Other times, the modelling process itself may generate knowledge and learning about the system, and the model structure changes throughout the process of model development.</p>
-<p>Finally, sometimes there are some decisions that are too difficult to anticipate, or simply cannot be made in advance <span class="citation" data-cites="Srivastava2018">(<a href="#ref-Srivastava2018" role="doc-biblioref">Srivastava 2018</a>)</span>. This is particularly true for decisions occurring at the later phases of the modelling construction and development process (Figure 2, TBC), where downstream decisions depend on the outcomes of earlier decisions and outcomes of modelling analyses. Some decisions might not be able to be specified on the first attempt at writing the preregistration until the model is fully or at least close to fully specified, for example, specifying precisely what and how sensitivity analyses or uncertainty analyses will be conducted.</p>
+<h2 class="anchored" data-anchor-id="iterative-cycle-of-model-development-and-preregistration"><span class="header-section-number">3.2</span> Iterative Cycle of Model Development and Preregistration</h2>
+<p>Current preregistration practices based on NHST-focussed accounts of questionable research practices prescribe the principle of ‘decision-independence’, where analysis decisions are made independently of and <em>a priori</em> to analysing the data <span class="citation" data-cites="Srivastava2018 Gelman2013">(<a href="#ref-Srivastava2018" role="doc-biblioref">Srivastava 2018</a>; <a href="#ref-Gelman2013" role="doc-biblioref">Gelman and Loken 2013</a>)</span>. However, the modelling process may genuinely violate the principle of ‘decision-independence’ because it is non-linear, iterative and usually generates many interim versions of the model preceding publication. During modelling a researcher will almost always engage in state-dependent decision-making — that is, decisions about whether to alter the model in a subsequent round of model development depend on the results of model testing, evaluation and analysis at the end of the previous iteration of model development. These practices aren’t necessarily questionable in and of themselves, but do have the <em>potential</em> to become questionable if they are exploited in service of artificially inflating the accuracy or precision of the model, its predictions or evaluation tests to the effect that the model is perceived to be more credible than it would be if that practice did not occur – essentially data-dependent decisions that lead to consumers of the model placing unsubstantiated belief in the reliability, validity and utility of the model and its outputs are questionable and can be mitigated through the practice of preregistration <span class="citation" data-cites="Gould2026">(<a href="#ref-Gould2026" role="doc-biblioref">Gould et al. 2026</a>)</span>.</p>
+<p>Very often in modelling, there are decisions that are necessarily dependent on the outcome of previous analytic decisions in the modelling workflow <span class="citation" data-cites="Liu2020">(<a href="#ref-Liu2020" role="doc-biblioref">Liu et al. 2020</a>)</span>. Firstly, preliminary or investigatory analyses might need to be conducted before being able to specify future decision-steps in the analysis plan. For example, modellers might need to check the distribution of particular variables in order to determine how to specify the model, perform assumption checks, or check for collinearity or spatial autocorrelation. Secondly, data-dependent decisions from model checking may justifiably result in changes to either the analysis or to interpretations of the mode <span class="citation" data-cites="Srivastava2018">(<a href="#ref-Srivastava2018" role="doc-biblioref">Srivastava 2018</a>)</span>. For instance, inspection of the residuals and other model checking tests may force the modeller to return to earlier decision-points and change the planned analysis or model. Other times, the planned analysis and specified model may simply not converge, or the model is saturated and runs out of variation to apportion such that the model and or the model fitting algorithm must be respecified and re-implemented. Other times, the modelling process itself may generate knowledge and learning about the system, and the model structure changes throughout the process of model development.</p>
+<p>Finally, sometimes there are some decisions that are too difficult to anticipate, or simply cannot be made in advance <span class="citation" data-cites="Srivastava2018">(<a href="#ref-Srivastava2018" role="doc-biblioref">Srivastava 2018</a>)</span>. This is particularly true for decisions occurring at the later phases of the modelling construction and development process, where downstream decisions depend on the outcomes of earlier decisions and outcomes of modelling analyses. Some decisions might not be able to be specified on the first attempt at writing the preregistration until the model is fully or at least close to fully specified, for example, specifying precisely what and how sensitivity analyses or uncertainty analyses will be conducted.</p>
 <p>As illustrated above, the adaptive nature of analysis during the model development process contravenes the central principle of preregistration – decision-independence and is fundamentally incompatible with the sequential, linear process of traditional preregistration where the analysis plan is fully specified prior to observing and analysing the data.</p>
 </section>
-<section id="adaptive-preregistration" class="level2">
-<h2 class="anchored" data-anchor-id="adaptive-preregistration">Adaptive Preregistration</h2>
-<p>In order to address the disjuncture between the iterative nature of model development, and the single-use, deterministic preregistration template format, we take an ‘expanded view of preregistration’, that fits with the concept of ‘adaptive preregistration’ proposed by Srivastava <span class="citation" data-cites="Srivastava2018">(<a href="#ref-Srivastava2018" role="doc-biblioref">2018</a>)</span>. The modeller proceeds through the model development process, shifting from ideation, preregistration, execution of the analysis and back to ideation and preregistration again. As they progress, the modeller implements parts of the analysis plan that were specified in the previous preregistration step, with the outcomes of that analysis step either informing the specification of the next analysis ( <a href="#fig-adaptive-preregistration" class="quarto-xref">Figure&nbsp;4</a>) or else resolving the preregistered decision.</p>
+<section id="adaptive-preregistration" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="adaptive-preregistration"><span class="header-section-number">3.3</span> Adaptive Preregistration</h2>
+<p>In order to address the disjuncture between the iterative nature of model development, and the single-use, deterministic preregistration template format, we take an ‘expanded view of preregistration’, that fits with the concept of ‘adaptive preregistration’ proposed by Srivastava <span class="citation" data-cites="Srivastava2018">(<a href="#ref-Srivastava2018" role="doc-biblioref">2018</a>)</span>. The modeller proceeds through the model development process, shifting from ideation, preregistration, execution of the analysis and back to ideation and preregistration again. As they progress, the modeller implements parts of the analysis plan that were specified in the previous preregistration step, with the outcomes of that analysis step either informing the specification of the next analysis (<a href="#fig-adaptive-preregistration" class="quarto-xref">Figure&nbsp;<span>3.5</span></a>) or else resolving the preregistered decision.</p>
 <p>This view of preregistration breaks with the current model of preregistration, wherein the author writes a single deterministic preregistration containing a rule for every decision, and sequentially shifts from ideation, preregistration to execution of the plan. Two features define adaptive preregistration:</p>
 <ol type="1">
 <li>It contains ‘plans to deploy flexible strategies’ <span class="citation" data-cites="Srivastava2018">(<a href="#ref-Srivastava2018" role="doc-biblioref">Srivastava 2018</a>)</span> wherein the author can supply heuristic consisting of multiple different analysis or modelling strategies whose execution depends on the outcome of previous decision-points or analyses, for example, decision-trees could be preregistered prior to analysing the data <span class="citation" data-cites="Baldwin2022a">(<a href="#ref-Baldwin2022a" role="doc-biblioref">Baldwin et al. 2022</a>)</span>.</li>
 <li>The preregistration may be iterative and consist of interim preregistrations that mark phases of modelling and analysis as different parts of the data are observed <span class="citation" data-cites="Srivastava2018">(<a href="#ref-Srivastava2018" role="doc-biblioref">Srivastava 2018</a>)</span>.</li>
 </ol>
-<section id="preregistering-flexibility" class="level3">
-<h3 class="anchored" data-anchor-id="preregistering-flexibility">Preregistering Flexibility</h3>
-<p>When preliminary analyses, model checking or other data-dependent decisions need to be made, the modeller can specify a ‘flexible strategy’ within their preregistration by:</p>
+<section id="preregistering-flexibility" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="preregistering-flexibility"><span class="header-section-number">3.3.1</span> Preregistering Flexibility</h3>
+<p>When preliminary analyses, model checking or other data-dependent decisions need to be made, the modeller can specify a ‘flexible strategy’ (<a href="#fig-registering-flexibility" class="quarto-xref">Figure&nbsp;<span>3.3</span></a>) in their preregistration by:</p>
 <ul>
 <li>stating what quantity or outcome needs to be known to move forward with the modelling and analysis,</li>
 <li>explaining what test or analysis will be performed to obtain this quantity or outcome, and what parts of the data will be used in this analysis, and</li>
 <li>describing how the results will be interpreted, listing each potential decision and its trigger, where possible.</li>
 </ul>
-<div class="cell">
-<div class="cell-output-display">
-<div id="fig-registering-flexibility" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-registering-flexibility-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="adaptive_preregistration_background_files/figure-html/fig-registering-flexibility-1.png" class="img-fluid figure-img" width="2655">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-registering-flexibility-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="page-columns page-full">
+<div class="cell page-columns page-full" data-layout-align="default">
+<div class="cell-output-display column-body-outset">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">---
+config:
+  theme: neutral
+---
+flowchart LR
+  A(Describe Data-Dependent Decision) --&gt; B{Describe Analysis}
+  B --&gt; C[Analysis Outcome 1]
+  B --&gt; D[Analysis Outcome 2]
+  C --&gt; E(Option 1)
+  D --&gt; F(Option 2)
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-registering-flexibility-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: A general heuristic in the form of a decision-tree for registering flexibile analyses.
+Figure&nbsp;3.2: A general heuristic for registering flexible analyses.
 </figcaption>
 </figure>
-</div>
-</div>
-</div>
 </section>
 <section id="interim-preregistrations" class="level3">
-<h3 class="anchored" data-anchor-id="interim-preregistrations">Interim Preregistrations</h3>
+<h3 class="anchored" data-anchor-id="interim-preregistrations"><span class="header-section-number">3.3.2</span> Interim Preregistrations</h3>
 <p>The modeller follows an iterative process of preregistration. As they proceed through the model development process, they can shift from ideation, preregistration and execution of the analysis plan, to preregistration again. Depending on observed outcomes of the pre-specified decision-trees or registered flexible heuristics, interim preregistrations are created at multiple points in the model development process, each time there is an addition or amendment to the analysis plan.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-interim-preregistrations" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-interim-preregistrations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="adaptive_preregistration_background_files/figure-html/fig-interim-preregistrations-1.png" class="img-fluid figure-img" width="694">
+<img src="adaptive_preregistration_background_files/figure-html/fig-interim-preregistrations-1.png" class="img-fluid figure-img" width="243">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-interim-preregistrations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: Adaptive preregistration can cycle through the specification, execution and ideation phases multiple times in adaptive preregistration, with interim versions of the preregistration being generated at each preregistration point.
+Figure&nbsp;3.4: Adaptive preregistration can cycle through the specification, execution and ideation phases multiple times in adaptive preregistration, with interim versions of the preregistration being generated at each preregistration point.
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
 </section>
+<section id="data-dependent-decision-making-and-the-risk-of-overfitting" class="level3">
+<h3 class="anchored" data-anchor-id="data-dependent-decision-making-and-the-risk-of-overfitting"><span class="header-section-number">3.3.3</span> Data-dependent decision-making and the risk of overfitting</h3>
+</section>
 </section>
 <section id="documenting-adaptive-preregistration-transparently" class="level2">
-<h2 class="anchored" data-anchor-id="documenting-adaptive-preregistration-transparently">Documenting adaptive preregistration transparently</h2>
+<h2 class="anchored" data-anchor-id="documenting-adaptive-preregistration-transparently"><span class="header-section-number">3.4</span> Documenting adaptive preregistration transparently</h2>
 <section id="the-checking-problem" class="level3">
-<h3 class="anchored" data-anchor-id="the-checking-problem">The <em>Checking Problem</em></h3>
+<h3 class="anchored" data-anchor-id="the-checking-problem"><span class="header-section-number">3.4.1</span> The <em>Checking Problem</em></h3>
 <p>Following publication of the final study, authors, reviewers, editors and readers may all engage in the process of checking a manuscript or published paper against its preregistration to verify that the study and analyses were conducted as specified in the preregistration. The process of preregistration is already cumbersome, because the dominant format of the preregistration is a single, static text-based document designed with the study authors in mind to very quickly insert the required analysis plan information, rather than to facilitate a comparison of the reported analysis and results against the planned analysis in the preregistration. In their current form, they are almost exclusively exist as “write-only media” <span class="citation" data-cites="Pu2019">(<a href="#ref-Pu2019" role="doc-biblioref">Pu et al. 2019</a>)</span>. The task of model checking is further complicated by the non-linear and iterative nature of model development, and by our proposed adaptive preregistration methodology, because in most modelling studies there will likely be interim preregistrations, such that there are multiple versions of the preregistration to check against the completed analysis.</p>
 </section>
 </section>
 <section id="implementing-adaptive-preregistration-with-git-and-github" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="implementing-adaptive-preregistration-with-git-and-github">Implementing <em>Adaptive Preregistration</em> with git and GitHub</h2>
+<h2 class="anchored" data-anchor-id="implementing-adaptive-preregistration-with-git-and-github"><span class="header-section-number">3.5</span> Implementing <em>Adaptive Preregistration</em> with git and GitHub</h2>
 <p>Given the iterative nature of adaptive preregistration then, the current convention of the single-use, deterministic and static text-based document format for preregistration is inadequate. Interim versions of a preregistration must be time-stamped and ideally version-controlled, such that it is clear not just that two or more versions differ from each other, and in what order they were created, but so that it is explicitly clear in how and why they differ. To facilitate preregistration checking of flexible modelling and analysis strategies, we must link the results of both final and preliminary analyses back to the specified strategy: the link between a particular triggered analysis decision, and the analysis outcome that triggered the decision must be explicit. Additionally, if the results of some preliminary analyses cause revisions to the model itself or a different modelling procedure or approach to be selected than was originally or previously planned, then the trigger for this decision must be explicitly linked to the next version of the preregistration.</p>
-<p>We propose leveraging the features of <a href="https://git-scm.com">git</a> and <a href="www.github.com">GitHub</a> to facilitate implementation both adaptive preregistration in a transparently documented manner (<a href="#fig-adaptive-preregistration" class="quarto-xref">Figure&nbsp;4</a>), and provide a <a href="./adaptive_preregistration_implementation.html">step-by-step guide</a>.</p>
+<p>We propose leveraging the features of <a href="https://git-scm.com">git</a> and <a href="www.github.com">GitHub</a> to facilitate implementation both adaptive preregistration in a transparently documented manner (<a href="#fig-adaptive-preregistration" class="quarto-xref">Figure&nbsp;<span>3.5</span></a>), and provide a <a href="./adaptive_preregistration_implementation.html">step-by-step guide</a>.</p>
+<div class="landscape page-columns page-full">
 <div class="cell page-columns page-full">
 <div class="cell-output-display page-columns page-full">
 <div id="fig-adaptive-preregistration" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
 <figure class="quarto-float quarto-float-fig figure page-columns page-full">
 <div aria-describedby="fig-adaptive-preregistration-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="page-columns page-full">
-<img src="adaptive_preregistration_background_files/figure-html/fig-adaptive-preregistration-1.png" class="img-fluid figure-img column-screen" width="2648">
+<img src="adaptive_preregistration_background_files/figure-html/fig-adaptive-preregistration-1.png" class="img-fluid figure-img column-screen" width="900">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-adaptive-preregistration-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: Adaptive Preregistration for model-based research using GitHub.
+Figure&nbsp;3.5: Adaptive Preregistration for model-based research using GitHub.
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
+</div>
+<div class="sectionrefs">
 
+</div>
 
 
 </section>
-
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<section id="bibliography" class="level1 unnumbered">
+<h1 class="unnumbered">References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-Baldwin2022a" class="csl-entry" role="listitem">
-Baldwin, J. R., J. B. Pingault, T. Schoeler, H. M. Sallis, and M. R. Munafò. 2022. <span>“Protecting Against Researcher Bias in Secondary Data Analysis: Challenges and Potential Solutions.”</span> <em>Eur J Epidemiol</em> 37 (1): 1–10. <a href="https://doi.org/10.1007/s10654-021-00839-0">https://doi.org/10.1007/s10654-021-00839-0</a>.
+Baldwin, J. R., J. B. Pingault, T. Schoeler, H. M. Sallis, and M. R. Munafò. 2022. <span>“Protecting Against Researcher Bias in Secondary Data Analysis: Challenges and Potential Solutions.”</span> <em>European Journal of Epidemiology</em> 37 (1): 1–10. <a href="https://doi.org/10.1007/s10654-021-00839-0">https://doi.org/10.1007/s10654-021-00839-0</a>.
 </div>
 <div id="ref-Gelman2013" class="csl-entry" role="listitem">
-Gelman, Andrew, and Eric Loken. 2013. <span>“The Garden of Forking Paths: Why Multiple Comparisons Can Be a Problem, Even When There Is No <span>“</span>Fishing Expedition<span>”</span> or <span>“</span>p-Hacking<span>”</span> and the Research Hypothesis Was Posited Ahead of Time.”</span> <em>Department of Statistics, Columbia University</em>.
+Gelman, Andrew, and Eric Loken. 2013. <span>“The Garden of Forking Paths: Why Multiple Comparisons Can Be a Problem, Even When There Is No <span>“</span>Fishing Expedition<span>”</span> or <span>“</span>p-Hacking<span>”</span> and the Research Hypothesis Was Posited Ahead of Time.”</span> <em>Department of Statistics, Columbia University</em>. <a href="https://sites.stat.columbia.edu/gelman/research/unpublished/p_hacking.pdf">https://sites.stat.columbia.edu/gelman/research/unpublished/p_hacking.pdf</a>.
 </div>
-<div id="ref-gould" class="csl-entry" role="listitem">
-Gould, Elliot, Fraser, Hannah, Rumpff, Libby, and Fidler, Fiona. n.d. <span>“A Roadmap of Questionable Research Practices in Ecological Modelling.”</span>
+<div id="ref-Gould2026" class="csl-entry" role="listitem">
+Gould, Elliot, Fraser, Hannah, Rumpff, Libby, and Fidler, Fiona. 2026. <em>A Roadmap of Questionable Research Practices in Ecological Modelling</em>. February. <a href="https://doi.org/10.32942/X2DQ0K">https://doi.org/10.32942/X2DQ0K</a>.
 </div>
 <div id="ref-Liu2020" class="csl-entry" role="listitem">
-Liu, Yang, Tim Althoff, and Jeffrey Heer. 2020. <span>“Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems.”</span> In. ACM. <a href="https://doi.org/10.1145/3313831.3376533">https://doi.org/10.1145/3313831.3376533</a>.
+Liu, Yang, Tim Althoff, and Jeffrey Heer. 2020. <span>“Paths Explored, Paths Omitted, Paths Obscured: Decision Points &amp; Selective Reporting in End-to-End Data Analysis.”</span> <em>Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems</em>. <a href="https://doi.org/10.1145/3313831.3376533">https://doi.org/10.1145/3313831.3376533</a>.
 </div>
 <div id="ref-Mertens2019" class="csl-entry" role="listitem">
-Mertens, G, and AM Krypotos. 2019. <span>“Preregistration of Analyses of Preexisting Data.”</span> <em>Psychol Belg</em> 59 (1): 338–52.
+Mertens, G, and AM Krypotos. 2019. <span>“Preregistration of Analyses of Preexisting Data.”</span> <em>Psychologica Belgica</em> 59 (1): 338–52. <a href="https://doi.org/10.5334/pb.493">https://doi.org/10.5334/pb.493</a>.
 </div>
 <div id="ref-Pu2019" class="csl-entry" role="listitem">
-Pu, Xiaoying, Licheng Zhu, Matthew Kay, and Frederick Conrad. 2019. <span>“Designing for Preregistration in Practice: Multiple Norms and Purposes.”</span>
+Pu, Xiaoying, Licheng Zhu, Matthew Kay, and Frederick Conrad. 2019. <span>“Designing for Preregistration in Practice: Multiple Norms and Purposes.”</span> <em>Open Science Framework</em>, ahead of print. <a href="https://doi.org/10.31219/osf.io/w5ked">https://doi.org/10.31219/osf.io/w5ked</a>.
 </div>
 <div id="ref-Srivastava2018" class="csl-entry" role="listitem">
-Srivastava, Sanjay. 2018. <span>“Sound Inference in Complicated Research: A Multi-Strategy Approach.”</span>
+Srivastava, Sanjay. 2018. <span>“Sound Inference in Complicated Research: A Multi-Strategy Approach.”</span> <em>PsyArXiv</em>, ahead of print. <a href="https://doi.org/10.31234/osf.io/bwr48">https://doi.org/10.31234/osf.io/bwr48</a>.
 </div>
-</div></section></div></main> <!-- /main -->
+</div>
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -431,13 +438,14 @@ Srivastava, Sanjay. 2018. <span>“Sound Inference in Complicated Research: A Mu
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -452,7 +460,7 @@ Srivastava, Sanjay. 2018. <span>“Sound Inference in Complicated Research: A Mu
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/egouldo\.github\.io\/EcoConsPreReg\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -779,6 +787,15 @@ Srivastava, Sanjay. 2018. <span>“Sound Inference in Complicated Research: A Mu
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./adaptive_preregistration_implementation.html" class="pagination-link" aria-label="Implementing *Adaptive Preregistration* with git and GitHub">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Implementing <em>Adaptive Preregistration</em> with git and GitHub</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -786,7 +803,7 @@ Srivastava, Sanjay. 2018. <span>“Sound Inference in Complicated Research: A Mu
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-<p>Copyright 2023, Elliot Gould</p>
+<p>Copyright 2026, Elliot Gould</p>
 <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/egouldo/EcoConsPreReg/edit/master/adaptive_preregistration_background.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/egouldo/EcoConsPreReg/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;

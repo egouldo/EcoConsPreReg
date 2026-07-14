@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.29">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Implementing Adaptive Preregistration with Git and Github – Adaptive Preregistration for Model-Based Research</title>
+<title>4&nbsp; Implementing Adaptive Preregistration with git and GitHub</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -24,7 +27,6 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -50,16 +52,17 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./adaptive_preregistration_background.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6bdd2aebeb936dcddaa5f935a5de481c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-d81e29537ea34f11df8cda11d601f993.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -98,11 +101,6 @@ div.csl-indent {
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Adaptive Preregistration for Model-Based Research</span>
-    </a>
-  </div>
             <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
@@ -128,17 +126,13 @@ div.csl-indent {
   </li>  
         <li>
     <a class="dropdown-item" href="./adaptive_preregistration_implementation.html">
- <span class="dropdown-text">Implementing Adaptive Preregistration with Git and Github</span></a>
+ <span class="dropdown-text">Implementing <em>Adaptive Preregistration</em> with git and GitHub</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="./preregistration_modelling.html"> 
-<span class="menu-text">Preregistration for Modelling</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
-<span class="menu-text">About</span></a>
+<span class="menu-text">Preregistration Template for Modelling</span></a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bi-github" role="link" data-bs-toggle="dropdown" aria-expanded="false">
@@ -160,6 +154,7 @@ div.csl-indent {
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
+    <a href="https://github.com/egouldo/EcoConsPreReg/" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
@@ -173,7 +168,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./adaptive_preregistration_implementation.html">Implementing Adaptive Preregistration with Git and Github</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./adaptive_preregistration_implementation.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Implementing <em>Adaptive Preregistration</em> with git and GitHub</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -188,13 +183,13 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./adaptive_preregistration_background.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">A primer on <em>Adaptive Preregistration</em></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">A primer on <em>Adaptive Preregistration</em></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./adaptive_preregistration_implementation.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Implementing Adaptive Preregistration with Git and Github</span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Implementing <em>Adaptive Preregistration</em> with git and GitHub</span></span></a>
   </div>
 </li>
     </ul>
@@ -204,73 +199,47 @@ div.csl-indent {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+    <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#who-is-this-guide-for" id="toc-who-is-this-guide-for" class="nav-link active" data-scroll-target="#who-is-this-guide-for">Who is this guide for?</a>
+  <li><a href="#who-is-this-guide-for" id="toc-who-is-this-guide-for" class="nav-link active" data-scroll-target="#who-is-this-guide-for"><span class="header-section-number">4.1</span> Who is this guide for?</a>
   <ul class="collapse">
-  <li><a href="#software-and-set-up-requirements" id="toc-software-and-set-up-requirements" class="nav-link" data-scroll-target="#software-and-set-up-requirements">Software and Set-up Requirements</a></li>
+  <li><a href="#software-and-set-up-requirements" id="toc-software-and-set-up-requirements" class="nav-link" data-scroll-target="#software-and-set-up-requirements"><span class="header-section-number">4.1.1</span> Software and Set-up Requirements</a></li>
   </ul></li>
-  <li><a href="#adaptive-preregistration-using-github" id="toc-adaptive-preregistration-using-github" class="nav-link" data-scroll-target="#adaptive-preregistration-using-github">Adaptive Preregistration using GitHub</a></li>
-  <li><a href="#how-it-works" id="toc-how-it-works" class="nav-link" data-scroll-target="#how-it-works">How it works…</a>
+  <li><a href="#adaptive-preregistration-using-github" id="toc-adaptive-preregistration-using-github" class="nav-link" data-scroll-target="#adaptive-preregistration-using-github"><span class="header-section-number">4.2</span> Adaptive Preregistration using GitHub</a></li>
+  <li><a href="#how-it-works" id="toc-how-it-works" class="nav-link" data-scroll-target="#how-it-works"><span class="header-section-number">4.3</span> How it works…</a>
   <ul class="collapse">
-  <li><a href="#shifting-from-planning-to-execution" id="toc-shifting-from-planning-to-execution" class="nav-link" data-scroll-target="#shifting-from-planning-to-execution">…Shifting from planning to execution…</a></li>
-  <li><a href="#and-back-again." id="toc-and-back-again." class="nav-link" data-scroll-target="#and-back-again.">… And back again.</a></li>
-  <li><a href="#flexible-strategies-preliminary-analyses-or-investigations" id="toc-flexible-strategies-preliminary-analyses-or-investigations" class="nav-link" data-scroll-target="#flexible-strategies-preliminary-analyses-or-investigations">Flexible Strategies, Preliminary Analyses or Investigations</a></li>
+  <li><a href="#shifting-from-planning-to-execution" id="toc-shifting-from-planning-to-execution" class="nav-link" data-scroll-target="#shifting-from-planning-to-execution"><span class="header-section-number">4.3.1</span> …Shifting from planning to execution…</a></li>
+  <li><a href="#and-back-again." id="toc-and-back-again." class="nav-link" data-scroll-target="#and-back-again."><span class="header-section-number">4.3.2</span> … And back again.</a></li>
+  <li><a href="#flexible-strategies-preliminary-analyses-or-investigations" id="toc-flexible-strategies-preliminary-analyses-or-investigations" class="nav-link" data-scroll-target="#flexible-strategies-preliminary-analyses-or-investigations"><span class="header-section-number">4.3.3</span> Flexible Strategies, Preliminary Analyses or Investigations</a></li>
   </ul></li>
-  <li><a href="#a-step-by-step-guide-to-implementing-adaptive-preregistration-with-github" id="toc-a-step-by-step-guide-to-implementing-adaptive-preregistration-with-github" class="nav-link" data-scroll-target="#a-step-by-step-guide-to-implementing-adaptive-preregistration-with-github">A step-by-step guide to implementing Adaptive Preregistration with GitHub</a>
+  <li><a href="#a-step-by-step-guide-to-implementing-adaptive-preregistration-with-github" id="toc-a-step-by-step-guide-to-implementing-adaptive-preregistration-with-github" class="nav-link" data-scroll-target="#a-step-by-step-guide-to-implementing-adaptive-preregistration-with-github"><span class="header-section-number">4.4</span> A step-by-step guide to implementing Adaptive Preregistration with GitHub</a>
   <ul class="collapse">
-  <li><a href="#the-initial-preregistration-phase" id="toc-the-initial-preregistration-phase" class="nav-link" data-scroll-target="#the-initial-preregistration-phase">The initial preregistration phase</a>
-  <ul class="collapse">
-  <li><a href="#the-first-iteration-of-preregistration" id="toc-the-first-iteration-of-preregistration" class="nav-link" data-scroll-target="#the-first-iteration-of-preregistration">The first iteration of preregistration</a></li>
+  <li><a href="#the-initial-preregistration-phase" id="toc-the-initial-preregistration-phase" class="nav-link" data-scroll-target="#the-initial-preregistration-phase"><span class="header-section-number">4.4.1</span> The initial preregistration phase</a></li>
+  <li><a href="#incrementally-updating-the-preregistration-plan" id="toc-incrementally-updating-the-preregistration-plan" class="nav-link" data-scroll-target="#incrementally-updating-the-preregistration-plan"><span class="header-section-number">4.4.2</span> Incrementally Updating the Preregistration Plan</a></li>
+  <li><a href="#moving-from-planning-to-doing" id="toc-moving-from-planning-to-doing" class="nav-link" data-scroll-target="#moving-from-planning-to-doing"><span class="header-section-number">4.4.3</span> Moving from planning to doing</a></li>
+  <li><a href="#living-preregistration---tracking-changes-to-the-preregistration-draft" id="toc-living-preregistration---tracking-changes-to-the-preregistration-draft" class="nav-link" data-scroll-target="#living-preregistration---tracking-changes-to-the-preregistration-draft"><span class="header-section-number">4.4.4</span> ‘Living preregistration’ - tracking changes to the Preregistration Draft</a></li>
   </ul></li>
-  <li><a href="#incrementally-updating-the-preregistration-plan" id="toc-incrementally-updating-the-preregistration-plan" class="nav-link" data-scroll-target="#incrementally-updating-the-preregistration-plan">Incrementally Updating the Preregistration Plan</a>
-  <ul class="collapse">
-  <li><a href="#moving-from-general-to-specific-incrementally-updating-the-preregistration" id="toc-moving-from-general-to-specific-incrementally-updating-the-preregistration" class="nav-link" data-scroll-target="#moving-from-general-to-specific-incrementally-updating-the-preregistration">Moving from general to specific: Incrementally updating the preregistration</a></li>
-  <li><a href="#using-github-to-update-the-plan" id="toc-using-github-to-update-the-plan" class="nav-link" data-scroll-target="#using-github-to-update-the-plan">Using GitHub to update the plan</a></li>
-  </ul></li>
-  <li><a href="#moving-from-planning-to-doing" id="toc-moving-from-planning-to-doing" class="nav-link" data-scroll-target="#moving-from-planning-to-doing">Moving from planning to doing</a>
-  <ul class="collapse">
-  <li><a href="#dealing-with-unexpected-outcomes-and-changing-plans-shifting-back-to-planning-from-doing" id="toc-dealing-with-unexpected-outcomes-and-changing-plans-shifting-back-to-planning-from-doing" class="nav-link" data-scroll-target="#dealing-with-unexpected-outcomes-and-changing-plans-shifting-back-to-planning-from-doing">Dealing with unexpected outcomes, and changing plans: Shifting back to planning from doing</a></li>
-  </ul></li>
-  <li><a href="#living-preregistration---tracking-changes-to-the-preregistration-draft" id="toc-living-preregistration---tracking-changes-to-the-preregistration-draft" class="nav-link" data-scroll-target="#living-preregistration---tracking-changes-to-the-preregistration-draft">‘Living preregistration’ - tracking changes to the Preregistration Draft</a>
-  <ul class="collapse">
-  <li><a href="#sec-fledge" id="toc-sec-fledge" class="nav-link" data-scroll-target="#sec-fledge">Using the <code>fledge::</code> R package for semantic versioning and to document preregistration changes</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">References</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/egouldo/EcoConsPreReg/edit/master/adaptive_preregistration_implementation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/egouldo/EcoConsPreReg/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Implementing <em>Adaptive Preregistration</em> with git and GitHub</span></h1></header>
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Implementing Adaptive Preregistration with Git and Github</h1>
-</div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
+<header id="title-block-header">
 
 
 </header>
 
 
 <section id="who-is-this-guide-for" class="level2">
-<h2 class="anchored" data-anchor-id="who-is-this-guide-for">Who is this guide for?</h2>
+<h2 class="anchored" data-anchor-id="who-is-this-guide-for"><span class="header-section-number">4.1</span> Who is this guide for?</h2>
 <p>This guide assumes a basic understanding and knowledge of version-control tools, like git and/or GitHub. However, we have provided some background knowledge, links and references throughout this guide so that any modellers or researchers can set up and implement adaptive preregistration with git and GitHub for a new project. As a starting point, we direct readers to <span class="citation" data-cites="braga2023">Braga et al. (<a href="#ref-braga2023" role="doc-biblioref">2023</a>)</span>, which provides an excellent introductory overview of the GitHub’s functionality.</p>
 <p>For those with basic familiarity of git and GitHub, we use <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/getting-started/about-collaborative-development-models#shared-repository-model">a shared repository model</a> for collaboration. If you are not yet familiar with GitHub features, such as pull requests and branches, we have linked to the relevant GitHub documentation pages where further background reading might be necessary.</p>
-<p>We suggest some tooling that assumes use of the R statistical programming language (<span class="citation" data-cites="R2024">R Core Team (<a href="#ref-R2024" role="doc-biblioref">2024</a>)</span>, see <a href="#sec-fledge" class="quarto-xref">Section&nbsp;1.4.1</a>), since that is the most common programming language in the fields of ecology <span class="citation" data-cites="Gao2025">(<a href="#ref-Gao2025" role="doc-biblioref">Gao et al. 2025</a>)</span>, however the general approach and principles described in this document is language agnostic, and does not require the use of R.</p>
+<p>We suggest some tooling that assumes use of the R statistical programming language (<span class="citation" data-cites="R2024">R Core Team (<a href="#ref-R2024" role="doc-biblioref">2024</a>)</span>, see <a href="#sec-fledge" class="quarto-xref"><span>Section 4.4.4.1</span></a>), since that is the most common programming language in the fields of ecology <span class="citation" data-cites="Gao2025">(<a href="#ref-Gao2025" role="doc-biblioref">Gao et al. 2025</a>)</span>, however the general approach and principles described in this document is language agnostic, and does not require the use of R.</p>
 <section id="software-and-set-up-requirements" class="level3">
-<h3 class="anchored" data-anchor-id="software-and-set-up-requirements">Software and Set-up Requirements</h3>
+<h3 class="anchored" data-anchor-id="software-and-set-up-requirements"><span class="header-section-number">4.1.1</span> Software and Set-up Requirements</h3>
 <p>Follow the instructions at <a href="https://docs.github.com/en/get-started/git-basics/set-up-git" class="uri">https://docs.github.com/en/get-started/git-basics/set-up-git</a> to setup the following:</p>
 <ul>
 <li>git installation on your computer (Windows, Mac, linux supported)</li>
@@ -284,7 +253,7 @@ div.csl-indent {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Adaptive Preregistration Primer
+<span class="screen-reader-only">Caution</span>Adaptive Preregistration Primer
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -294,7 +263,7 @@ Adaptive Preregistration Primer
 </section>
 </section>
 <section id="adaptive-preregistration-using-github" class="level2">
-<h2 class="anchored" data-anchor-id="adaptive-preregistration-using-github">Adaptive Preregistration using GitHub</h2>
+<h2 class="anchored" data-anchor-id="adaptive-preregistration-using-github"><span class="header-section-number">4.2</span> Adaptive Preregistration using GitHub</h2>
 <p>We propose leveraging both the version-control and the project management features of GitHub (<a href="www.github.com">www.github.com</a>) as a tool for implementing adaptive preregistration. GitHub is a web-interface that utilises the version-control system, ‘git’, to store files, track changes, and enable collaboration on computer code <span class="citation" data-cites="braga2023">(<a href="#ref-braga2023" role="doc-biblioref">Braga et al. 2023</a>)</span>. When a document is version-controlled using Git and GitHub, each version of a document can be time-stamped, and is assigned its own unique identifier, or commit-hash<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> so that chronological records of changes to a collection of files, stored in a ‘repository’, are made transparent <span class="citation" data-cites="braga2023 Bryan:2008en">(<a href="#ref-braga2023" role="doc-biblioref">Braga et al. 2023</a>; <a href="#ref-Bryan:2008en" role="doc-biblioref">Bryan and Crossman 2008</a>)</span>.</p>
 <p>Why GitHub for Adaptive Preregistration?</p>
 <ul>
@@ -304,7 +273,7 @@ Adaptive Preregistration Primer
 <li>tagging and release</li>
 </ul>
 <p>GitHub users can collaborate by contributing, modifying and discussing existing code, reporting bugs and other problems, discover new code and data, and publish new code.</p>
-<p>GitHub also integrates several communication features, such as Github Issues, Github Discussions, Github Pages, which allows users to engage in discussions, to plan and collaborate on code, and publish information to a webpage <span class="citation" data-cites="braga2023">(see Box 1 in <a href="#ref-braga2023" role="doc-biblioref">Braga et al. 2023</a>)</span>.</p>
+<p>GitHub also integrates several communication features, such as GitHub Issues, GitHub Discussions, GitHub Pages, which allows users to engage in discussions, to plan and collaborate on code, and publish information to a webpage <span class="citation" data-cites="braga2023">(see Box 1 in <a href="#ref-braga2023" role="doc-biblioref">Braga et al. 2023</a>)</span>.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-git-diff" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -313,7 +282,7 @@ Adaptive Preregistration Primer
 <img src="adaptive_preregistration_implementation_files/figure-html/fig-git-diff-1.png" class="img-fluid figure-img" width="960">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-git-diff-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: ‘Diff View’ of changes made to a preregistration in process.
+Figure&nbsp;4.1: ‘Diff View’ of changes made to a preregistration in process.
 </figcaption>
 </figure>
 </div>
@@ -322,8 +291,8 @@ Figure&nbsp;1: ‘Diff View’ of changes made to a preregistration in process.
 <p>The preregistration document should be saved within the project repository that contains the data and modelling and analysis code, such that any results from analyses that cause the analysis plan to change can be linked and referenced in the updated version of the plan – thus facilitating the process of model checking. By providing a method for contrasting the actual analysis undertaken against the preregistered analysis, this provides a mechanism for allowing reviewers to properly evaluate the preregistration against the reported analysis. It thus provides a way of marking preregistered parts of a report from non-preregistered parts of the analysis.</p>
 </section>
 <section id="how-it-works" class="level2">
-<h2 class="anchored" data-anchor-id="how-it-works">How it works…</h2>
-<p>GitHub is used to track amendments to the preregistration – each time an additional template item is answered, or an alteration is made to the preregistration, the change should be <em>committed</em> to the repository. <em>Semantic versioning</em> is used to document each version of the preregistration. Semantic versioning<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> is an open-source software engineering practice used to document and and communicate the development of software, in a way that allows others to depend on it <span class="citation" data-cites="Kitzes2018vn">(<a href="#ref-Kitzes2018vn" role="doc-biblioref">Kitzes, Turek, and Deniz 2018</a>)</span>. We have created our own semantic versioning scheme to be used to specifically document the incremental version of the preregistration, in tandem with GitHub’s tag and release feature, each interim preregistration is tagged and released with its semantic version number. All template items that can be completed should be completed before any data analysis or modelling proceeds. The preregistration should be completed until a) no further detail can be supplied or b) no additional template item can be answered until preliminary investigations or analyses are undertaken (Fig 3, steps 1 - 3).</p>
+<h2 class="anchored" data-anchor-id="how-it-works"><span class="header-section-number">4.3</span> How it works…</h2>
+<p>GitHub is used to track amendments to the preregistration – each time an additional template item is answered, or an alteration is made to the preregistration, the change should be <em>committed</em> to the repository. <em>Semantic versioning</em> is used to document each version of the preregistration. Semantic versioning<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> is an open-source software engineering practice used to document and and communicate the development of software, in a way that allows others to depend on it <span class="citation" data-cites="Kitzes2018vn">(<a href="#ref-Kitzes2018vn" role="doc-biblioref">Kitzes et al. 2018</a>)</span>. We have created our own semantic versioning scheme to be used to specifically document the incremental version of the preregistration, in tandem with GitHub’s tag and release feature, each interim preregistration is tagged and released with its semantic version number. All template items that can be completed should be completed before any data analysis or modelling proceeds. The preregistration should be completed until a) no further detail can be supplied or b) no additional template item can be answered until preliminary investigations or analyses are undertaken (<a href="#fig-initial-prereg-zoom" class="quarto-xref">Figure&nbsp;<span>4.2</span></a>, steps 1 - 3).</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-initial-prereg-zoom" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -332,14 +301,14 @@ Figure&nbsp;1: ‘Diff View’ of changes made to a preregistration in process.
 <img src="adaptive_preregistration_implementation_files/figure-html/fig-initial-prereg-zoom-1.png" class="img-fluid figure-img" width="426">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-initial-prereg-zoom-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Initial Preregistration: All template items that can be answered should be completed prior to data analysis or modelling.
+Figure&nbsp;4.2: Initial Preregistration: All template items that can be answered should be completed prior to data analysis or modelling.
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
 <section id="shifting-from-planning-to-execution" class="level3">
-<h3 class="anchored" data-anchor-id="shifting-from-planning-to-execution">…Shifting from planning to execution…</h3>
+<h3 class="anchored" data-anchor-id="shifting-from-planning-to-execution"><span class="header-section-number">4.3.1</span> …Shifting from planning to execution…</h3>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-document-initial-prereg" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -348,16 +317,16 @@ Figure&nbsp;2: Initial Preregistration: All template items that can be answered 
 <img src="adaptive_preregistration_implementation_files/figure-html/fig-document-initial-prereg-1.png" class="img-fluid figure-img" width="432">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-document-initial-prereg-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: Document: After the initial preregistration, document the initial preregistration using GitHub issues.
+Figure&nbsp;4.3: Document: After the initial preregistration, document the initial preregistration using GitHub issues.
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>Before shifting from planning to the execution of the interim preregistration, each complete response in the interim preregistration should have a corresponding GitHub issue<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> created (Figure 3, step 3, ‘Document’). Relevant discussion between analysts about how to proceed with the intended analysis or interpreting preliminary results are tracked within an issue’s thread. Each issue is automatically assigned a unique number by GitHub. Any code or analysis outputs, such as figures, tables or other files, should be committed and tagged with the issue number, so that all analysis addressing that task is tracked within the issue’s thread (Fig 3, step 4, ‘Do’). The URL for the GitHub issue should then be added to the relevant preregistration item, the preregistration document should then be committed with the changes, and the version number of the preregistration updated in a new release.</p>
+<p>Before shifting from planning to the execution of the interim preregistration, each complete response in the interim preregistration should have a corresponding GitHub issue<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> created (<a href="#fig-document-initial-prereg" class="quarto-xref">Figure&nbsp;<span>4.3</span></a>, step 3, ‘Document’). Relevant discussion between analysts about how to proceed with the intended analysis or interpreting preliminary results are tracked within an issue’s thread. Each issue is automatically assigned a unique number by GitHub. Any code or analysis outputs, such as figures, tables or other files, should be committed and tagged with the issue number, so that all analysis addressing that task is tracked within the issue’s thread (<a href="adaptive_preregistration_background.html#fig-adaptive-preregistration" class="quarto-xref">Figure&nbsp;<span>3.5</span></a>, step 4, ‘Do’). The URL for the GitHub issue should then be added to the relevant preregistration item, the preregistration document should then be committed with the changes, and the version number of the preregistration updated in a new release.</p>
 </section>
 <section id="and-back-again." class="level3">
-<h3 class="anchored" data-anchor-id="and-back-again.">… And back again.</h3>
+<h3 class="anchored" data-anchor-id="and-back-again."><span class="header-section-number">4.3.2</span> … And back again.</h3>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-when-plans-change" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -366,18 +335,18 @@ Figure&nbsp;3: Document: After the initial preregistration, document the initial
 <img src="adaptive_preregistration_implementation_files/figure-html/fig-when-plans-change-1.png" class="img-fluid figure-img" width="264">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-when-plans-change-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: Adaptive Preregistration - When Plans Change
+Figure&nbsp;4.4: Adaptive Preregistration - When Plans Change
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>As the modelling proceeds, further detail on later phases of the analysis can be iteratively updated and preregistered. Where the results of model evaluation and analysis reveal that there are problems with the model, plans can be changed, and again the next phase can be preregistered. For example, if a researcher finds that assumptions are violated or other unexpected results occur that force a change to the planned analysis, the preregistration can be updated based on the findings of those analyses. When this occurs, the major version number of the preregistration document should be incremented (Fig 3 steps 5 - 6). Since the findings of the analyses are tracked within the relevant issue for that template item, and the issue is recorded in the preregistration itself, the trigger for the change in the plan is made explicitly clear.</p>
-<p>For each altered or new preregistration item, the issue thread should either be updated, or a new issue created respectively (Fig 3, step 6). Those analyses are then either reconnected based on the revised plan or the new investigatory analyses are then conducted (Fig 3, step 7).</p>
-<p>This process continues until the preregistration is complete, and the researcher can continue to execute the plan as it has been fully described in the final version of the preregistration document (Fig 3, step 8 - 9).</p>
+<p>As the modelling proceeds, further detail on later phases of the analysis can be iteratively updated and preregistered. Where the results of model evaluation and analysis reveal that there are problems with the model, plans can be changed, and again the next phase can be preregistered. For example, if a researcher finds that assumptions are violated or other unexpected results occur that force a change to the planned analysis, the preregistration can be updated based on the findings of those analyses. When this occurs, the major version number of the preregistration document should be incremented (<a href="#fig-when-plans-change" class="quarto-xref">Figure&nbsp;<span>4.4</span></a>, steps 5 - 6). Since the findings of the analyses are tracked within the relevant issue for that template item, and the issue is recorded in the preregistration itself, the trigger for the change in the plan is made explicitly clear.</p>
+<p>For each altered or new preregistration item, the issue thread should either be updated, or a new issue created respectively (<a href="#fig-when-plans-change" class="quarto-xref">Figure&nbsp;<span>4.4</span></a>, step 6). Those analyses are then either reconnected based on the revised plan or the new investigatory analyses are then conducted (<a href="adaptive_preregistration_background.html#fig-adaptive-preregistration" class="quarto-xref">Figure&nbsp;<span>3.5</span></a>, step 7).</p>
+<p>This process continues until the preregistration is complete, and the researcher can continue to execute the plan as it has been fully described in the final version of the preregistration document (<a href="adaptive_preregistration_background.html#fig-adaptive-preregistration" class="quarto-xref">Figure&nbsp;<span>3.5</span></a>, step 8 - 9).</p>
 </section>
 <section id="flexible-strategies-preliminary-analyses-or-investigations" class="level3">
-<h3 class="anchored" data-anchor-id="flexible-strategies-preliminary-analyses-or-investigations">Flexible Strategies, Preliminary Analyses or Investigations</h3>
+<h3 class="anchored" data-anchor-id="flexible-strategies-preliminary-analyses-or-investigations"><span class="header-section-number">4.3.3</span> Flexible Strategies, Preliminary Analyses or Investigations</h3>
 <p>When a researcher needs to conduct preliminary analyses or check parts of the data before committing to a particular decision about the model or analysis, they can specify a flexible strategy in their response to that preregistration item by:</p>
 <ul>
 <li>stating what needs to be known to move forward with the modelling and analysis and why the analysis is necessary</li>
@@ -386,17 +355,17 @@ Figure&nbsp;4: Adaptive Preregistration - When Plans Change
 </ul>
 </section>
 </section>
-<section id="a-step-by-step-guide-to-implementing-adaptive-preregistration-with-github" class="level1">
-<h1>A step-by-step guide to implementing Adaptive Preregistration with GitHub</h1>
-<section id="the-initial-preregistration-phase" class="level2">
-<h2 class="anchored" data-anchor-id="the-initial-preregistration-phase">The initial preregistration phase</h2>
+<section id="a-step-by-step-guide-to-implementing-adaptive-preregistration-with-github" class="level2">
+<h2 class="anchored" data-anchor-id="a-step-by-step-guide-to-implementing-adaptive-preregistration-with-github"><span class="header-section-number">4.4</span> A step-by-step guide to implementing Adaptive Preregistration with GitHub</h2>
+<section id="the-initial-preregistration-phase" class="level3">
+<h3 class="anchored" data-anchor-id="the-initial-preregistration-phase"><span class="header-section-number">4.4.1</span> The initial preregistration phase</h3>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Preregistration Template
+<span class="screen-reader-only">Tip</span>Preregistration Template
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -404,15 +373,18 @@ Preregistration Template
 <p>Ensure you have committed a preregistration template to your project repository before proceeding with the following steps.</p>
 </div>
 </div>
-<section id="the-first-iteration-of-preregistration" class="level3">
-<h3 class="anchored" data-anchor-id="the-first-iteration-of-preregistration">The first iteration of preregistration</h3>
+<section id="the-first-iteration-of-preregistration" class="level4">
+<h4 class="anchored" data-anchor-id="the-first-iteration-of-preregistration"><span class="header-section-number">4.4.1.1</span> The first iteration of preregistration</h4>
 <ol type="1">
 <li><a href="https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue">Create a GitHub issue</a> describing any tasks relevant to creation of the initial preregistration</li>
 <li>Edit the document with your responses to the template items</li>
 </ol>
 <ul>
 <li>View our preregistration template document in GitHub <a href="https://github.com/egouldo/EcoConsModPreReg/blob/master/template.qmd">here</a>.</li>
-<li>In your own repository containing your preregistration document, click on the ‘edit document’ button: <img src="figures/edit-document.png" class="img-fluid"></li>
+<li>In your own repository containing your preregistration document, click on the ‘edit document’ button:</li>
+</ul>
+<p><img src="figures/edit-document.png" class="img-fluid"></p>
+<ul>
 <li>You will be able to edit the document directly in GitHub, Edit away!</li>
 </ul>
 <ol start="2" type="1">
@@ -425,7 +397,7 @@ Preregistration Template
 </ul></li>
 <li>Fill out the extended description box briefly describing the changes you just made</li>
 <li>Ensure that the radio button for creating a new branch is selected, an auto-generated branch name will appear, e.g.&nbsp;<code>egouldo-patch-1</code>.</li>
-<li>Click “Propose Changes” to start a&nbsp;<a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests">pull request</a>:</li>
+<li>Click “Propose Changes” to start a <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests">pull request</a>:</li>
 </ul>
 <p><img src="figures/propose-changes.png" class="img-fluid"></p>
 <div class="callout callout-style-default callout-important callout-titled">
@@ -434,7 +406,7 @@ Preregistration Template
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Pull Requests &amp; the GitHub flow model of collaboration
+<span class="screen-reader-only">Important</span>Pull Requests &amp; the GitHub flow model of collaboration
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -445,31 +417,40 @@ Pull Requests &amp; the GitHub flow model of collaboration
 </div>
 </section>
 </section>
-<section id="incrementally-updating-the-preregistration-plan" class="level2">
-<h2 class="anchored" data-anchor-id="incrementally-updating-the-preregistration-plan">Incrementally Updating the Preregistration Plan</h2>
-<section id="moving-from-general-to-specific-incrementally-updating-the-preregistration" class="level3">
-<h3 class="anchored" data-anchor-id="moving-from-general-to-specific-incrementally-updating-the-preregistration">Moving from general to specific: Incrementally updating the preregistration</h3>
+<section id="incrementally-updating-the-preregistration-plan" class="level3">
+<h3 class="anchored" data-anchor-id="incrementally-updating-the-preregistration-plan"><span class="header-section-number">4.4.2</span> Incrementally Updating the Preregistration Plan</h3>
+<section id="moving-from-general-to-specific-incrementally-updating-the-preregistration" class="level4">
+<h4 class="anchored" data-anchor-id="moving-from-general-to-specific-incrementally-updating-the-preregistration"><span class="header-section-number">4.4.2.1</span> Moving from general to specific: Incrementally updating the preregistration</h4>
 <p>You will likely find that some items on the template cannot be answered just yet. One reason being that the level of detail required to adequately answer the template item might not be clear yet, and more thought and time is needed, or else you need to be further along the modelling process in order to adequately answer the preregistration item. Another reason is that downstream decisions might depend on some preliminary investigations of the data – for example, you might need to explore the shape of a measured variable before you can properly specify the full model.</p>
 <p>In the latter situation, where possible, you can preregister your preliminary analysis: describing what the preliminary analysis entails, providing a short and relevant list of plausible outcomes, and describing for each of those possible outcomes how the dependent or down-stream decision-point will change depending on the outcome.</p>
 </section>
-<section id="using-github-to-update-the-plan" class="level3">
-<h3 class="anchored" data-anchor-id="using-github-to-update-the-plan">Using GitHub to update the plan</h3>
-<p>We will use GitHub to track amendments to the preregistration for the two situations described above ( a) adding more detail, answering incomplete questions; b) Responding to findings of a preliminary analysis already described in your preregistration).</p>
+<section id="using-github-to-update-the-plan" class="level4">
+<h4 class="anchored" data-anchor-id="using-github-to-update-the-plan"><span class="header-section-number">4.4.2.2</span> Using GitHub to update the plan</h4>
+<p>We will use GitHub to track amendments to the preregistration for the two situations described above ( a. adding more detail, answering incomplete questions; b. Responding to findings of a preliminary analysis already described in your preregistration).</p>
 <p>To make the changes to the preregistration document, follow the same instructions as for creating the initial preregistration above - simply edit the preregistration in GitHub, and commit the changes.</p>
 <p>As for the situation where you are responding to findings of a preliminary analysis that you have already described in your preregistration, see the below sections on <code>Moving from planning to doing</code> and <code>Shifting back to planning from doing</code>.</p>
 </section>
 </section>
-<section id="moving-from-planning-to-doing" class="level2">
-<h2 class="anchored" data-anchor-id="moving-from-planning-to-doing">Moving from planning to doing</h2>
+<section id="moving-from-planning-to-doing" class="level3">
+<h3 class="anchored" data-anchor-id="moving-from-planning-to-doing"><span class="header-section-number">4.4.3</span> Moving from planning to doing</h3>
 <p>Before you begin to do or start anything you’ve planned within your preregistration, you <strong>must</strong> create a GitHub issue for that item, phase, or step in the modelling process, follow these steps:</p>
 <ol type="1">
-<li>View the preregistration document in Github, and click on the line-numbers on the left to highlight the preregistration template item text, as well as your response to the item. For example, let’s say you want to start working the model checking, you would highlight the following in the document. Note that once you’ve highlighted some lines, a little box with an ellipsis appears on top of the lines numbers. <img src="figures/highlight-lines.png" class="img-fluid"></li>
-<li>Click on the tiny box with the ellipsis, and a pop-up dialogue box will appear with 4 options: <code>Copy lines</code>, <code>Copy permalink</code>, <code>View git blame</code>, <code>References in new issue</code>. Select the last option <code>Reference in new issue.</code> <img src="figures/reference-in-new-issue.png" class="img-fluid" alt="Screen Shot 2020-05-13 at 1 06 58 pm"></li>
-<li>This will open up a new window with a new GitHub Issue for you to complete. Note that part of the issue description has already been filled out for you, this is a reference to the lines you just highlighted: <img src="figures/new-issue.png" class="img-fluid"> Which is cool, because if you open the <code>Preview</code> tab to view the preview of your issue, it will look like this: <img src="figures/preview-new-issue.png" class="img-fluid"></li>
+<li>View the preregistration document in GitHub, and click on the line-numbers on the left to highlight the preregistration template item text, as well as your response to the item. For example, let’s say you want to start working the model checking, you would highlight the following in the document. Note that once you’ve highlighted some lines, a little box with an ellipsis appears on top of the lines numbers.</li>
 </ol>
+<p><img src="figures/highlight-lines.png" class="img-fluid"></p>
+<ol start="2" type="1">
+<li>Click on the box with the ellipsis, and a pop-up dialogue box will appear with 4 options: <code>Copy lines</code>, <code>Copy permalink</code>, <code>View git blame</code>, <code>References in new issue</code>. Select the last option <code>Reference in new issue.</code></li>
+</ol>
+<p><img src="figures/reference-in-new-issue.png" class="img-fluid"></p>
+<ol start="3" type="1">
+<li>This will open up a new window with a new GitHub Issue for you to complete. Note that part of the issue description has already been filled out for you, this is a reference to the lines you just highlighted:</li>
+</ol>
+<p><img src="figures/new-issue.png" class="img-fluid"></p>
+<p>Which is cool, because if you open the <code>Preview</code> tab to view the preview of your issue, it will look like this:</p>
+<p><img src="figures/preview-new-issue.png" class="img-fluid"></p>
 <p>Add any further information or technical details about going forward and working on this task, as necessary. Submit the issue to save. Any work, and subsequent commits on this topic should be tagged with the issue number. We now have a mechanism for linking your actual analysis and actions to the planned analysis in the preregistration document.</p>
-<section id="dealing-with-unexpected-outcomes-and-changing-plans-shifting-back-to-planning-from-doing" class="level3">
-<h3 class="anchored" data-anchor-id="dealing-with-unexpected-outcomes-and-changing-plans-shifting-back-to-planning-from-doing">Dealing with unexpected outcomes, and changing plans: Shifting back to planning from doing</h3>
+<section id="dealing-with-unexpected-outcomes-and-changing-plans-shifting-back-to-planning-from-doing" class="level4">
+<h4 class="anchored" data-anchor-id="dealing-with-unexpected-outcomes-and-changing-plans-shifting-back-to-planning-from-doing"><span class="header-section-number">4.4.3.1</span> Dealing with unexpected outcomes, and changing plans: Shifting back to planning from doing</h4>
 <p>Sometimes assumptions are violated, or there are other unexpected outcomes of preliminary analyses, and you will need to change plans. How do we deal with this?</p>
 <ul>
 <li>Add the URL to the relevant GitHub issue under the corresponding Preregistration Item.</li>
@@ -480,15 +461,20 @@ Pull Requests &amp; the GitHub flow model of collaboration
 </ul>
 </section>
 </section>
-<section id="living-preregistration---tracking-changes-to-the-preregistration-draft" class="level2">
-<h2 class="anchored" data-anchor-id="living-preregistration---tracking-changes-to-the-preregistration-draft">‘Living preregistration’ - tracking changes to the Preregistration Draft</h2>
+<section id="living-preregistration---tracking-changes-to-the-preregistration-draft" class="level3">
+<h3 class="anchored" data-anchor-id="living-preregistration---tracking-changes-to-the-preregistration-draft"><span class="header-section-number">4.4.4</span> ‘Living preregistration’ - tracking changes to the Preregistration Draft</h3>
 <p>We will leverage <a href="https://help.github.com/en/github/administering-a-repository/releasing-projects-on-github">GitHub’s tagging and release feature</a> in conjunction with <a href="(https://semver.org/)">Semantic Versioning</a> to document and track changes to the preregistration document.</p>
 <p>GitHub releases mark software iterations that you can release and deploy<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>. Within the context of adaptive preregistration, we can use releases to mark interim versions of the preregistration, as well as to take a snapshot of the state of the entire repository at that moment in time.</p>
-<p>A summary of the types of preregistration changes, and the corresponding required version and GitHub features are presented in <a href="#tbl-preregistration-versioning" class="quarto-xref">Table&nbsp;1</a>. Note that anything up until the complete preregistration should be additionally tagged as a ‘pre-release’ to communicate that the initial preregistration is not yet complete.</p>
+<p>A summary of the types of preregistration changes, and the corresponding required version and GitHub features are presented in <a href="#tbl-preregistration-versioning" class="quarto-xref">Table&nbsp;<span>4.1</span></a>. Note that anything up until the complete preregistration should be additionally tagged as a ‘pre-release’ to communicate that the initial preregistration is not yet complete.</p>
+<section id="sec-fledge" class="level4">
+<h4 class="anchored" data-anchor-id="sec-fledge"><span class="header-section-number">4.4.4.1</span> Using the <a href="https://fledge.cynkra.com"><code>fledge::</code></a> R package for semantic versioning and to document preregistration changes</h4>
+<p>The package <code>fledge::</code> can be used right from the R console to bump the version number, make releases, and auto catalogue a chronological history of changes recorded a <code>NEWS.md</code> file that is updated and published with every release. A detailed guide to using <code>fledge::</code> can be found here <a href="https://fledge.cynkra.com/articles/fledge.html" class="uri">https://fledge.cynkra.com/articles/fledge.html</a>.</p>
+<p>This package is not a mandatory component of the process, however can be a useful tool for implementing semantic versioning, tagging and releasing. All of these actions can be implemented in the GitHub browser with a point and click interface.</p>
+<div class="landscape">
 <div id="tbl-preregistration-versioning" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-preregistration-versioning-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: Types of changes to the preregistration and corresponding actions and versioning adjustments
+Table&nbsp;4.1: Types of changes to the preregistration and corresponding actions and versioning adjustments
 </figcaption>
 <div aria-describedby="tbl-preregistration-versioning-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -546,46 +532,46 @@ Table&nbsp;1: Types of changes to the preregistration and corresponding actions 
 </div>
 </figure>
 </div>
-<section id="sec-fledge" class="level3">
-<h3 class="anchored" data-anchor-id="sec-fledge">Using the <a href="https://fledge.cynkra.com"><code>fledge::</code></a> R package for semantic versioning and to document preregistration changes</h3>
-<p>The package <code>fledge::</code> can be used right from the R console to bump the version number, make releases, and auto catalogue a chronological history of changes recorded a <code>NEWS.md</code> file that is updated and published with every release. A detailed guide to using <code>fledge::</code> can be found here <a href="https://fledge.cynkra.com/articles/fledge.html" class="uri">https://fledge.cynkra.com/articles/fledge.html</a>.</p>
-<p>This package is not a mandatory component of the process, however can be a useful tool for implementing semantic versioning, tagging and releasing. All of these actions can be implemented in the GitHub browser with a point and click interface.</p>
+</div>
+<div class="sectionrefs">
+
+</div>
+
+
 </section>
 </section>
 </section>
-<section id="references" class="level1">
-<h1>References</h1>
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<section id="bibliography" class="level1 unnumbered">
+<h1 class="unnumbered">References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-braga2023" class="csl-entry" role="listitem">
-Braga, Pedro Henrique Pereira, Katherine Hébert, Emma J. Hudgins, Eric R. Scott, Brandon P. M. Edwards, Luna L. Sánchez Reyes, Matthew J. Grainger, et al. 2023. <span>“Not Just for Programmers: How GitHub Can Accelerate Collaborative and Reproducible Research in Ecology and Evolution.”</span> <em>Methods in Ecology and Evolution</em> 14 (6): 1364–80. <a href="https://doi.org/10.1111/2041-210X.14108">https://doi.org/10.1111/2041-210X.14108</a>.
+Braga, Pedro Henrique Pereira, Katherine Hébert, Emma J. Hudgins, et al. 2023. <span>“Not Just for Programmers: How GitHub Can Accelerate Collaborative and Reproducible Research in Ecology and Evolution.”</span> <em>Methods in Ecology and Evolution</em> 14 (6): 1364–80. <a href="https://doi.org/10.1111/2041-210X.14108">https://doi.org/10.1111/2041-210X.14108</a>.
 </div>
 <div id="ref-Bryan:2008en" class="csl-entry" role="listitem">
 Bryan, Brett A., and Neville D. Crossman. 2008. <span>“Systematic Regional Planning for Multiple Objective Natural Resource Management.”</span> <em>Journal of Environmental Management</em> 88 (4): 1175–89. <a href="https://doi.org/10.1016/j.jenvman.2007.06.003">https://doi.org/10.1016/j.jenvman.2007.06.003</a>.
 </div>
 <div id="ref-Gao2025" class="csl-entry" role="listitem">
-Gao, Meixiang, Yanyan Ye, Ye Zheng, and Jiangshan Lai. 2025. <span>“A Comprehensive Analysis of R<span>’</span>s Application in Ecological Research from 2008 to 2023.”</span> Edited by Jinbao Liao. <em>Journal of Plant Ecology</em> 18 (1): rtaf010. <a href="https://doi.org/10.1093/jpe/rtaf010">https://doi.org/10.1093/jpe/rtaf010</a>.
+Gao, Meixiang, Yanyan Ye, Ye Zheng, and Jiangshan Lai. 2025. <span>“A Comprehensive Analysis of r<span>’</span>s Application in Ecological Research from 2008 to 2023.”</span> <em>Journal of Plant Ecology</em> 18 (1): rtaf010. <a href="https://doi.org/10.1093/jpe/rtaf010">https://doi.org/10.1093/jpe/rtaf010</a>.
 </div>
 <div id="ref-Kitzes2018vn" class="csl-entry" role="listitem">
-Kitzes, J, D Turek, and F Deniz. 2018. <em>The Practice of Reproducible Research: Case Studies and Lessons from the Data-Intensive Sciences.</em> Edited by J Kitzes, D Turek, and F Deniz. Oakland, CA: University of California Press.
+Kitzes, J, D Turek, and F Deniz. 2018. <em>The Practice of Reproducible Research: Case Studies and Lessons from the Data-Intensive Sciences.</em> Edited by J Kitzes, D Turek, and F Deniz. University of California Press. <a href="http://www.practicereproducibleresearch.org">http://www.practicereproducibleresearch.org</a>.
 </div>
 <div id="ref-R2024" class="csl-entry" role="listitem">
-R Core Team. 2024. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
+R Core Team. 2024. <em>R: A Language and Environment for Statistical Computing</em>. R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
 </div>
 </div>
-
-
 </section>
-
-
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
 <ol>
 <li id="fn1"><p><a href="https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-glossary#commit-id" class="uri">https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-glossary#commit-id</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>The semantic version is a 3-part numeric identifier separated by points, e.g.: <code>0.0.1</code>, wherein the first number sequences a major version of the preregistration, the second number sequences a minor change, and the third number sequences small changes or patches, yielding: <code>MAJOR.MINOR.PATCH</code>. See <a href="https://semver.org/" class="uri">https://semver.org/</a> for further information. Further detail on how to use semantic versioning with adaptive preregistration is summarised in <a href="#tbl-preregistration-versioning" class="quarto-xref">Table&nbsp;1</a>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>The semantic version is a 3-part numeric identifier separated by points, e.g.: <code>0.0.1</code>, wherein the first number sequences a major version of the preregistration, the second number sequences a minor change, and the third number sequences small changes or patches, yielding: <code>MAJOR.MINOR.PATCH</code>. See <a href="https://semver.org/" class="uri">https://semver.org/</a> for further information. Further detail on how to use semantic versioning with adaptive preregistration is summarised in <a href="#tbl-preregistration-versioning" class="quarto-xref">Table&nbsp;<span>4.1</span></a>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn3"><p><a href="https://guides.github.com/features/issues/" class="uri">https://guides.github.com/features/issues/</a><a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn4"><p>Instructions for creating releases are here: <a href="https://help.github.com/en/github/administering-a-repository/managing-releases-in-a-repository" class="uri">https://help.github.com/en/github/administering-a-repository/managing-releases-in-a-repository</a><a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
-</section></div></main> <!-- /main -->
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -637,13 +623,14 @@ R Core Team. 2024. <em>R: A Language and Environment for Statistical Computing</
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -658,7 +645,7 @@ R Core Team. 2024. <em>R: A Language and Environment for Statistical Computing</
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/egouldo\.github\.io\/EcoConsPreReg\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -985,6 +972,15 @@ R Core Team. 2024. <em>R: A Language and Environment for Statistical Computing</
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./adaptive_preregistration_background.html" class="pagination-link" aria-label="A primer on *Adaptive Preregistration*">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">A primer on <em>Adaptive Preregistration</em></span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -992,7 +988,7 @@ R Core Team. 2024. <em>R: A Language and Environment for Statistical Computing</
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-<p>Copyright 2023, Elliot Gould</p>
+<p>Copyright 2026, Elliot Gould</p>
 <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/egouldo/EcoConsPreReg/edit/master/adaptive_preregistration_implementation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/egouldo/EcoConsPreReg/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
