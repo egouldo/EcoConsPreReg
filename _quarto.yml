@@ -152,6 +152,11 @@ format:
     documentclass: scrbook
     classoption: ["oneside", "open=any"]
     papersize: A4
+    titlepage-geometry:
+      - top=2cm
+      - bottom=2cm
+      - left=2.5cm
+      - right=2.5cm
     default: true
     colorlinks: true
     title: "Adaptive Preregistration for Model-Based Research"
