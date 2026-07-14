@@ -1,0 +1,588 @@
+---
+title: "Appendix S7: Case Study Preliminary Analysis Summary Report"
+dpi: 600
+format:
+  html:
+    embed-resources: true
+  pdf:
+    documentclass: scrreprt
+    number-sections: true
+    geometry:
+      - top=30mm
+      - left=20mm
+      - bottom=30mm  # Decrease this value to reduce bottom margin
+      - right=20mm
+    header-includes:
+      - \usepackage{listings}
+      # - \lstset{breaklines=true}
+      - \lstset{columns=fullflexible,language=C, breaklines=true}
+bibliography: ../references.bib
+date: 2024-01-24
+authors:
+    - name: Jian D.L. Yen
+      roles: [contributor, data curation, analysis, investigation, methodology, project administration, resources, software, validation, visualisation, editing]
+      orcid: 0000-0001-7964-923X
+      affiliations:
+        - ref: 2
+      affil-id: 2
+    - name: Henry Wootton
+      roles: [contributor, software, visualisation, methodology]
+      orcid: 0000-0001-6506-0248
+      affiliations:
+        - ref: 2
+      affil-id: 2
+affiliations:
+  - id: 2
+    name: "Arthur Rylah Institute for Environmental Research, Department of Energy, Environment and Climate Action"
+---
+
+# Preliminary Analysis of VEFMAP Riparian Vegetation Surveys
+
+A pilot study was conducted to identify model structures that were estimable (i.e., generated reliable parameter estimates) and captured key features of the data (e.g., many zeros). The details are outlined in the preregistration document. In short, the process began with a preferred model structure and refined this by removing interactions until a suitable model was identified.
+
+::: {#lst-VEFMAP-full-model}
+```{=latex}
+\footnotesize
+```
+
+``` r
+Veg. response ~ wpfg * origin * flow predictors +
+ wpfg * origin * zone * period +
+ grazing +
+ (1 | site / transect) +
+ (1 | transect / metres) +
+ (1 | survey_year) +
+ (1 | species) +
+ offset(npoints)
+```
+
+The preferred full model structure (in high-level, R notation).
+:::
+
+The model for vegetation cover included an additional term for the previous cover in the previous survey, which made this an autoregressive model (i.e., modelling the change in cover rather than absolute cover).
+
+The flow predictors were simple metrics intended to capture broad features of the flow regime at a site. The two metrics were the number of days in which discharge was above baseflow levels, and the number of days in which discharge was above spring fresh levels. Values were calculated for each water year, and a 3-year rolling mean was used to represent broad changes in the multi-year flow regime (cf. variation within or among individual years). Quadratic transforms of these metrics were also included in the model.
+
+Models for cover and species richness were fitted with zero-inflated Poisson distributions, with negative binomial distributions as an alternative to address over-dispersion. For cover, this differs from the (generally preferred) use of a bounded distribution (e.g., binomial or beta). However, parameters of bounded distributions are challenging to estimate when many values are near the bounds (lower or upper), and typically introduce link functions that do not allow straightforward specifications of autoregressive models. For this reason, the Poisson distribution was used in models of cover, noting that this approximates the binomial distribution in the limit of large numbers of trials.
+
+Initial models aimed to include data at the level of species. This was infeasible for two reasons. First, data resolved to the level of species required an extremely large data set (due to the many species recorded), which made model estimation computationally challenging. Second, the large data set (with all species) comprised mostly zero observations, resulting in extreme zero-inflation that affected model convergence. The final models were fitted to cover summed over all species within a plant functional grouping, noting that these summed cover estimates sometimes (but rarely) exceeded 100% due to species overlap.
+
+## Key decisions and final model structures
+
+1.  High-level interactions are too challenging to estimate. Instead proposed three models for vegetation cover:
+    1.  A flow regime model that examines flow predictors only (with random effects).
+    2.  A flow event model (version 1) that examines `zone`-by-`period` interactions but assumes that all functional groups have similar patterns (within a `zone` and `period`).
+    3.  A flow event model (version 2) that examines functional group-by-`period` interactions but assumes that all zones respond similarly.
+2.  Species richness model is still being finalised, but should at least be able to encompass versions 1 and 2 of the cover model in a single analysis.
+3.  These models ask high-level questions about the effects of flows (and flow events) on vegetation cover and species richness and provide generalisable insight into how flows could be delivered to influence vegetation outcomes.
+4.  Quadratic flow effects too complex to fit: removed.
+5.  Metres within transect too complex to include: replaced with a random effect for metres, which assumes that the distance up the bank might influence vegetation outcomes but in similar ways among sites.
+6.  Zero-inflation specified as a function of plant functional group to allow for different proportions of zeros among groupings.
+7.  Over-dispersion present but not resolved by negative binomial model (even with `wpfg`-specific dispersion parameters): zero-inflated Poisson model retained, acknowledging lingering issues of over-dispersion.
+8.  Offset removed because all observations were based on the same number of points.
+
+## Decision points for full analysis
+
+Several decisions will need to be made prior to the full analysis (which should begin ASAP).
+
+1.  Assess whether the full `zone`-by-`period`-by- `wpfg` interaction is possible with the full data set. If not, use simplified models outlined above.
+2.  Decide whether to fit a single model to all waterbodies or separate models for each (decision based on model convergence and posterior checks – a single model is preferable if feasible).
+3.  Decide on how to visualise model outputs.
+
+# Vegetation Cover: regime model
+
+This model includes two flow predictors (days above baseflow, days above spring fresh) and the full suite of random effects. The aim is to examine how past flow conditions influence vegetation cover. The model does not consider `zone` or `period`.
+
+The model identifies functional group-specific impacts of days above baseflow or spring fresh levels. Interpretations here are based on the predicted associations ( @fig-S7-2 and @fig-S7-3) because interpreting forest plots of coefficients (@fig-S7-1) is challenging in models with many interactions. Positive effects of baseflows are clearest for native `ATl` and `ATe` and exotic `Tdr` and `Tda`, all of which have higher cover under baseflows. Positive effects of spring freshes are clearest for native `Sk`, `Tda`, and `Ate` and exotic `ATe`. Negative effects of spring freshes are clearest for `Tdr.`
+
+::: {#lst-VEFMAP-regime}
+```{=latex}
+\footnotesize
+```
+
+``` r
+cover_ar_TMBmod_1 <- glmmTMB::glmmTMB(
+    hits ~ log_hits_tm1 +
+    days_above_baseflow_std * wpfg * origin +
+    days_above_springfresh_std * wpfg * origin +
+    # days_above_baseflow_std^2 +
+    # days_above_springfresh_std^2 +
+    # zone * period +
+    # zone + period +
+    # grazing + wpfg  +
+    (1 | site / transect) +
+    # (1 | site / period) +
+    (1 | metres) +
+    (1 | survey_year),
+    # offset(npoint),
+    family = poisson,
+    ziformula = ~ wpfg,
+    # dispformula = ~ wpfg ,
+    data = veg_cover_ar_sum |>
+        filter(!wpfg_ori %in% c("Atl_native",
+                                "Ate_native",
+                                "Tda_unknown"))
+)
+```
+
+Vegetation cover, regime model structure.
+:::
+
+::: {#tbl-VEFMAP-cover-regime-summary tbl-colwidths="[50,12.5,12.5,10,15]" tbl-width="110%"}
+```{=latex}
+\begin{landscape}
+```
+
+| Conditional model | Estimate | $z$ value | Std. Error | Pr($\ge\lvert z \rvert$) |
+|---------------|---------------|---------------|---------------|---------------|
+| `(Intercept)` | -6.338926 | 3.945021 | -1.61 | 0.1081 |
+| `log_hits_tml` | 0.466865 | 0.084717 | 98.98 | \< 2e-16 `***` |
+| `days_above_baseflow_std` | 3.208391 | 3.369341 | 0.95 | 0.3410 |
+| `wpgATe` | 6.158428 | 3.941779 | 1.56 | 0.1182 |
+| `wpfgATl` | 3.547942 | 0.684107 |  | 5.19 2.15e-07 `***` |
+| `wpfgSe` | -21.385108 | 25.954264 | -0.82 | 0.4100 |
+| `wpfgsk` | 1.108790 | 1.345171 | 0.82 | 0.4132 |
+| `wpfgTda` | 7.307450 | 3.941643 | 1.85 | 0.0638 |
+| `wp fgTdr` | 7.736796 | 3.941596 | 1.96 | 0.0497 `*` |
+| `originative` | 2.784402 | 3.994830 | 0.70 | 0.4858 |
+| `days_above_springfresh_std` | -0.123400 | 0.390857 | -0.32 | 0.7522 |
+| `days_above_baseflow_std:wpfgATe` | -2.987176 | 3.367936 | -0.89 | 0.3751 |
+| `days_above_baseflow_std:wpfgATL` | 0.155333 | 0.657344 | 0.24 | 0.8132 |
+| `days_above_baseflow_std:wpfgSe` | 14.468021 | 26.401090 | 0.55 | 0.5837 |
+| `days_above_baseflow_std:wpfgSk` | 0.182377 | 1.265110 | 0.14 | 0.8854 |
+| `days_above_baseflow_std:wpfgTda` | -2.975603 | 3.367609 | -0.88 | 0.3769 |
+| `days_above_baseflow_std:wpfgTdr` | -2.989015 | 3.367573 | -0.89 | 0.3748 |
+| `days_above_baseflow_std:originnative` | -2.304494 | 3.430569 | -0.67 | 0.5017 |
+| `wpfgAle: originnative` | -1. 514880 | 3.995046 | -0.38 | 0.7045 |
+| `wpfgATl:originnative` | NA | NA | NA | NA |
+| `wpfgSe: originnative` | NA | NA | NA | NA |
+| `wpfgSk:originnative` | NA | NA | NA | NA |
+| `wpfgida: originnative` | -2.579748 | 3.994900 | -0.65 | 0.5184 |
+| `wpfgTdr: originnative` | -3.710273 | 3.995021 | -0.93 | 0.3530 |
+| `wpfgATe:days_above_springfresh_std` | 1.010669 | 0.382893 | 2.64 | 0.0083 `**` |
+| `wpfgATl:days_above_springfresh_std` | -1.755976 | 0.272420 |  | -6.45 1.15c-10 `***` |
+| `wpfgSe:days_above_springfresh_std` | 2.328011 | 3.084072 | 0.75 | 0.4503 |
+| `wpfgSk:days_above_springfresh_std` | -0.323750 | 0.546548 | -0.59 | 0.5536 |
+| `wpfgTda:days_above_springfresh_std` | 0.255564 | 0.381392 | 0.67 | 0.5028 |
+| `wpfgTdr:days_above_springfresh_std` | 0.271463 | 0.381315 | 0.71 | 0.4765 |
+| `originnative:days_above_springfresh_std` | 2.036161 | 0.468210 |  | 4.35 1.37e-05 `***` |
+| `days_above_baseflow_std:wpfgATe:originnative` | 2.376384 | 3.430972 | 0.69 | 0.4885 |
+| `days_above_baseflow_std:wpfgATl:originnative` | NA | NA | NA | NA |
+| `days_above_baseflow_std:wpfgSe:originnative` | NA | NA | NA | NA |
+| `days_above_baseflow_std:wpfg5k:originnative` | NA | NA | NA | NA |
+| `days_above_baseflow_std:wpfgTda:originnative` | 2.166421 | 3.430644 | 0.63 | 0.5277 |
+| `days_above_baseflow_std:wpfgTdr:originnative` | 2.291317 | 3.430663 | 0.67 | 0.5042 |
+| `wpfgATe:originnative:days_above_springfresh_std` | -2.761693 | 0.469796 | -5.88 | 4.14e-09 `***` |
+| `wpfgATl:originnative:days_above_springfresh_std` | NA | NA | NA | NA |
+| `wpfgSe:originnative:days_above_springfresh_std` | NA | NA | NA | NA |
+| `wpfgSk:originnative:days_above_springfresh_std` | NA | NA | NA | NA |
+| `wpfgTda:originnative:days_above_springfresh_std` | -1.953152 | 0.468932 | -4.17 | 3.11e-05 `***` |
+| `wpfgTdr:originnative:days_above_springfresh_std` | -2.770192 | 0.472856 | -5.86 | 4.67e-09 `***` |
+
+Vegetation cover flow regime model summary. Signif. codes: 0 '`***`' 0.001 '`**`' 0.01 '`*`' 0.05 '`.`' 0.1 ' ' 1.
+
+:::
+
+```{=latex}
+\end{landscape}
+```
+
+::: {#fig-S7-1 out-width="100%" fig-pos="t"}
+```{=latex}
+\makebox[\textwidth][c]{%
+\parbox{1.2\textwidth}{
+  \centering{
+    \pandocbounded{\includegraphics[keepaspectratio, width=1.1\textwidth]{cover_regime_effects.png}}
+  }
+}%
+}
+```
+
+Effects plot for vegetation cover flow regime model.
+
+:::
+
+
+
+::: {#fig-S7-2 out-width="100%" fig-pos="t"}
+```{=latex}
+\makebox[\textwidth][c]{%
+\parbox{1.2\textwidth}{
+  \centering{
+    \pandocbounded{\includegraphics[keepaspectratio, width=1.1\textwidth]{cover_regime_threeway.png}}
+  }
+}%
+}
+```
+
+Model predicted plant cover for the three way interaction between `Days above baseflow`, `functional group` and `origin`. Points are raw data.
+
+:::
+
+
+::: {#fig-S7-3 out-width="100%" fig-pos="t"}
+```{=latex}
+\makebox[\textwidth][c]{%
+\parbox{1.2\textwidth}{
+  \centering{
+    \pandocbounded{\includegraphics[keepaspectratio, width=1.1\textwidth]{cover_regime_springfresh.png}}
+  }
+}%
+}
+```
+
+Model predicted plant cover for the three way interaction between `Days above springfresh`, `functional group` and `origin`. Points are raw data.
+
+:::
+
+
+## Vegetation Cover: flow event model (version 1)
+
+This model includes several categorical predictors (`origin`, `wpfg`, `grazing`, and a `zone`-by-`period` interaction) and the full suite of random effects. The aim is to examine how vegetation cover changes in specific zones before and after key flow events (spring and summer freshes). This first version allows functional groups to have different levels of cover *but assumes that changes following flow events are similar in all groups within a zone*. Although this is not an ideal model structure, it is likely that functional groups are restricted to particular zones, in which case the `zone`-by-`period` interaction may capture some of the variation attributable to functional groupings.
+
+The model indicated that vegetation cover differed in its responses to spring and summer freshes in each zone (below baseflow, baseflow to spring fresh, above spring fresh). Below baseflow level, vegetation increased following the spring fresh and remained high following the summer event (@fig-S7-5). In the baseflow-to-spring fresh zone, vegetation increased following the spring fresh but returned to pre-spring levels following the summer fresh (@fig-S7-5). In the above-spring fresh zone, vegetation level declined following both the spring and the summer fresh (@fig-S7-5).
+
+::: {#lst-VEFMAP-cover-event-1}
+```{=latex}
+\footnotesize
+```
+
+``` r
+cover_ar_TMBmod_2 <- glmmTMB::glmmTMB(
+    hits ~ log_hits_tm1 +
+    # days_above_baseflow_std * wpfg * origin +
+    # days_above_springfresh_std * wpfg * origin +
+    # days_above_baseflow_std^2 +
+    # days_above_springfresh_std_sq +
+    zone * period +
+     origin + wpfg +
+    grazing +
+    (1 | site / transect) +
+    # (1 | site / period) +
+    (1 | metres) +
+    (1 | survey_year),
+    # offset(npoint),
+    family = poisson,
+    ziformula = ~ wpfg,
+    # dispformula = ~ wpfg ,
+    data = veg_cover_ar_sum |>
+    filter(!wpfg_ori %in% c("Atl_native",
+                            "Ate_native",
+                            "Tda_unknown"))
+)
+```
+
+Vegetation cover, flow event model (version 1).
+:::
+
+```{=latex}
+\scriptsize
+```
+
+::: {#tbl-VEFMAP-cover-event-1 tbl-colwidths="[50,12.5,12.5,10,15]" tbl-width="110%"}
+| Conditional model | Estimate | $z$ value | Std. Error | Pr($\ge\lvert z \rvert$) |
+|---------------|---------------|---------------|---------------|---------------|
+| `(Intercept)` | 0.507407 | 0.202834 | 2.50 | 0.0124 `*` |
+| `log_hits_tml` | 0.503130 | 0.004658 | 108.00 | \< 2e-16 `***` |
+| `zonebaseflow_to_springfresh` | 0.135690 | 0.019849 | 6.84 | 8.14e-12 `***` |
+| `zonebelow_baseflow` | 0.027219 | 0.062187 | 0.44 | 0.6616 |
+| `periodafter_summer` | -0.095429 | 0.019586 | -4.87 | 1.10e-06 `***` |
+| `periodbefore_spring` | 0.275100 | 0.019116 | 14.39 | \< 2e-16 `***` |
+| `originnative` | 0.022715 | 0.011601 | 1.96 | 0.0502 . |
+| `wpfgATe` | 0.568841 | 0.074505 | 7.63 | 2.26e-14 `***` |
+| `wpfgATl` | 0.392510 | 0.077440 | 5.07 | 4.01e-07 `***` |
+| `wpfgSe` | -0.532349 | 0.235144 | -2.26 | 0.0236 `*` |
+| `wpfgSk` | 0.785098 | 0.158281 | 4.96 | 7.04e-07 `***` |
+| `wpf gTda` | 0.580179 | 0.075459 | 7.69 | 1.49e-14 `***` |
+| `wpfgTdr` | 0.740681 | 0.076091 | 9.73 | \< 2e-16 `***` |
+| `grazingY` | -0.414008 | 0.207655 | -1.99 | 0.0462 `*` |
+| `zonebaseflow_to_springfresh:periodafter_summer` | -0.049931 | 0.022829 | -2.19 | 0.0287 `*` |
+| `zonebelow_baseflow:periodafter_summer` | 0.072623 | 0.060393 | 1.20 | 0.2292 |
+| `zonebaseflow_to_springfresh:periodbefore_spring` | -0.474324 | 0.023176 | -20.47 | \< 2e-16 `***` |
+| `zonebelow_baseflow:periodbefore_spring` | -0.844370 | 0.080058 | -10.55 | \< 2e-16 `***` |
+
+Vegetation cover flow event model (version 1) summary. Signif. codes: 0 '`***`' 0.001 '`**`' 0.01 '`*`' 0.05 '`.`' 0.1 ' ' 1.
+:::
+
+```{=latex}
+\begin{landscape}
+```
+
+::: {#fig-S7-4 out-width="100%" fig-pos="t"}
+```{=latex}
+\makebox[\textwidth][c]{%
+\parbox{1.5\textwidth}{
+  \centering{
+    \pandocbounded{\includegraphics[keepaspectratio, width=1.2\textwidth]{cover_event_01-effects.png}}
+  }
+}%
+}
+```
+
+Vegetation cover flow event model (version 1) effects plot.
+
+:::
+
+::: {#fig-S7-5 out-width="100%" fig-pos="t"}
+```{=latex}
+\makebox[\textwidth][c]{%
+\parbox{1.5\textwidth}{
+  \centering{
+    \pandocbounded{\includegraphics[keepaspectratio, width=1.2\textwidth]{cover_event_01-zone.png}}
+  }
+}%
+}
+```
+
+Model predicted plant cover for the two way interaction between `period` and `zone`. Points are raw data with the spread across x-axis representing data density.
+
+:::
+
+```{=latex}
+\end{landscape}
+```
+
+## Vegetation Cover: flow event model (version 2)
+
+This model includes several categorical predictors (`origin`, `zone`, `grazing`, and a `wpfg`-by-`period` interaction) and the full suite of random effects. The aim is to examine how vegetation cover of each functional grouping changes before and after key flow events (spring and summer freshes). This second version allows functional groups to have different responses to flow events (spring and summer freshes) *but assumes that vegetation in all zones changes similarly following each flow event*. As for version 1, this is not an ideal model structure but provides an avenue to tease apart `wpfg`-specific responses to flow events.
+
+The model indicated that cover of each functional group differed in its response to spring and summer freshes (@fig-S7-7). Key patterns were as follows:
+
+- `ARp`: increased after the spring fresh and again after the summer fresh.
+- `ATe`: increased after the spring fresh and returned to pre-spring levels after the summer fresh.
+- `ATl`: as for `ATe`.
+- `Se`: increased after the spring fresh and largely maintained this level after the summer fresh.
+- `Sk`: no change following the spring fresh but large increases following the summer fresh.
+- `Tda`: no change following either flow event.
+- `Tdr`: reduced following spring fresh then recovered slightly following the summer fresh, but not to pre-spring levels.
+
+::: {#lst-VEFMAP-cover-event-2}
+```{=latex}
+\footnotesize
+```
+
+``` r
+cover_ar_TMBmod_3 <- glmmTMB::glmmTMB(
+    hits ~ log_hits_tm1 +
+    # days_above_baseflow_std * wpfg * origin +
+    # days_above_springfresh_std * wpfg * origin +
+    # days_above_baseflow_std^2 +
+    # days_above_springfresh_std_sq +
+    zone + wpfg * period +
+    origin +
+    grazing +
+    (1 | site / transect) +
+    #(1 | site / period) +
+    (1 | metres) +
+    (1 | survey_year),
+    # offset(npoint),
+    family = poisson,
+    ziformula = ~ wpfg,
+    #dispformula = ~ wpfg ,
+    data = veg_cover_ar_sum |>
+        filter(!wpfg_ori %in% c("Atl_native",
+                                "Ate_native",
+                                "Tda_unknown"))
+)
+```
+
+Vegetation cover, flow event model (version 2).
+:::
+
+::: {#tbl-cover-event-2 tbl-colwidths="[50,12.5,12.5,10,15]" tbl-width="110%"}
+| Conditional model | Estimate | $z$ value | Std. Error | Pr($\ge\lvert z \rvert$) |
+|---------------|---------------|---------------|---------------|---------------|
+| `(Intercept)`                 | 0.490933  | 0.220532 | 2.23       | 0.026006 `*`   |
+| `log_hits_tml`                | 0.526108  | 0.004773 | 110.22     | \< 2e-16 `***` |
+| `zonebaseflow_to_springfresh` | -0.020485 | 0.014807 | -1.38      | 0.166522       |
+| `zonebelow_baseflow`          | -0.135442 | 0.051703 | -2.62      | 0.008803 `**`  |
+| `wpfgATe`                     | 0.762082  | 0.120587 | 6.32       | 2.62e-10 `***` |
+| `wpfgATL`                     | 0.826599  | 0.124319 | 6.65       | 2.95e-11 `***` |
+| `wpfgSe`                      | -0.219954 | 0.361766 | -0.61      | 0.543187       |
+| `wpfgSk`                      | -0.409777 | 0.497890 | -0.82      | 0.410493       |
+| `wpfgTda`                     | 0.640675  | 0.121310 | 5.28       | 1.28e-07 `***` |
+| `wpfgTdr`                     | 0.361223  | 0.122625 | 2.95       | 0.003222 `**`  |
+| `periodafter_summer`          | 0.259131  | 0.152882 | 1.69       | 0.090080 .     |
+| `periodbefore_spring`         | -0.769916 | 0.262410 | -2.93      | 0.003346 `**`  |
+| `originnative`                | 0.022738  | 0.011705 | 1.94       | 0.052058 .     |
+| `grazingY`                    | -0.406325 | 0.203425 | -2.00      | 0.045780 `*`   |
+| `wpfgATe:periodafter_summer`  | -0.570432 | 0.153550 | -3.71      | 0.000203 `***` |
+| `wpfgATl:periodafter_summer`  | -0.864219 | 0.159835 | -5.41      | 6.41e-08 `***` |
+| `wpfgSe:periodafter_summer`   | -0.445005 | 0.462139 | -0.96      | 0.335586       |
+| `wpfgSk:periodafter_summer`   | 1.502212  | 0.526754 | 2.85       | 0.004347 `**`  |
+| `wpfgTda:periodafter_summer`  | -0.310229 | 0.153846 | -2.02      | 0.043749       |
+| `wpfgTdr: periodafter_summer` | 0.052045  | 0.155180 | 0.34       | 0.737333       |
+| `wpfgATe:periodbefore_spring` | 0.414490  | 0.262945 | 1.58       | 0.114948       |
+| `wpfgATl:periodbefore_spring` | -0.060499 | 0.268355 | -0.23      | 0.821633       |
+| `wpfgSe:periodbefore_spring`  | -0.968411 | 0.865331 | -1.12      | 0.263088       |
+| `wpfgSk:periodbefore_spring`  | 0.760442  | 0.736038 | 1.03       | 0.301531       |
+| `wpfgTda:periodbefore_spring` | 0.611485  | 0.263133 | 2.32       | 0.020133 `*`   |
+| `wpfgTdr:periodbefore_spring` | 1.539382  | 0.263473 | 5.84       | 5.14e-09 `***` |
+
+Vegetation cover, flow event model (version 2) summary. Signif. codes: 0 '`***`' 0.001 '`**`' 0.01 '`*`' 0.05 '`.`' 0.1 ' ' 1.
+:::
+
+::: landscape
+
+::: {#fig-S7-6 out-width="100%" fig-pos="t"}
+```{=latex}
+\makebox[\textwidth][c]{%
+\parbox{1.2\textwidth}{
+  \centering{
+    \pandocbounded{\includegraphics[keepaspectratio, width=1.2\textwidth]{cover_event_02_effects.png}}
+  }
+}%
+}
+```
+
+Vegetation cover, flow event model (version 2) effects plot.
+
+:::
+
+::: {#fig-S7-7 out-width="100%" fig-pos="t"}
+```{=latex}
+\makebox[\textwidth][c]{%
+\parbox{1.2\textwidth}{
+  \centering{
+    \pandocbounded{\includegraphics[keepaspectratio, width=1.2\textwidth]{cover_event_02_wpfg.png}}
+  }
+}%
+}
+```
+
+Model predicted plant cover for the two way interaction between `period` and `functional group`. Points are raw data with the spread across x-axis representing data density.
+
+:::
+:::
+
+## Species Richness Model
+
+Species richness models are not fully determined yet. The below structure captures similar patterns to version 1 and version 2 of the cover model. The model includes two-way interactions between `zone` and `period`, `zone` and `plant functional group`, and `period` and `plant functional group`. Together, these terms aim to identify responses to flow events within a given zone or functional group, while accounting for differences in species richness of each functional group among zones.
+
+The models illustrate a general pattern of relatively low temporal variation in species richness once accounting for spatial patterns due to zone and functional grouping. @fig-S7-9 illustrates that total species richness does not change substantially within each zone following the spring or summer fresh. Similarly, @fig-S7-11 shows that total species richness of each plant functional group does not change substantially following spring or summer freshes. By contrast, @fig-S7-11 illustrates that the species richness of each plant functional group differs among zones. As expected, aquatic groupings are more species-richness below the baseflow level, whereas terrestrial groupings are more species richness above the spring fresh level.
+
+JDY comment on @lst-VEFMAP-richness: HW to update, the `dispformula` is probably ignored for a Poisson model, use `ziformula` instead. Can flow metrics be included?
+
+::: {#lst-VEFMAP-richness lst-cap="Species richness model structure."}
+```{=latex}
+\footnotesize
+```
+
+``` r
+richness_ar_TMBmod_1 <- glmmTMB::glmmTMB(
+    richness ~
+    days_above_baseflow_std * wpfg * origin +
+    days_above_springfresh_std * wpfg * origin +
+    # days_above_baseflow_std^2 + days_above_springfresh_std^2 +
+    # zone * period +
+    # zone * period + zone * wpfg + wpfg * period +
+    # grazing + origin +
+    (1 | site / transect) +
+    # (1 | site / period) +
+    (1 | metres) +
+    (1 | survey_year),
+    # offset(npoint),
+    family = poisson,
+    # family = nbinom2,
+    # ziformula = ~ wpfg,
+    # dispformula = ~ wpfg,
+    data = veg_richness |>
+        filter(!wpfg_ori %in% c("Atl_native",
+                                "Ate_native",
+                                "Tda_unknown"))
+)
+```
+:::
+
+Best fitting so far -- the three way interaction had convergence issues.
+
+::: {#tbl-VEFMAP-richness}
+| Conditional model | Estimate | z value | Std. Error | Pr(\>\|z\|) |
+|---------------|---------------|---------------|---------------|---------------|
+| (Intercept) | 0.490933 | 0.220532 | 2.23 | 0.026006 `*` |
+| log_hits_tml | 0.526108 | 0.004773 | 110.22 | \< 2e-16 `***` |
+| zonebaseflow_to_springfresh -0.020485 |  | 0.014807 | -1.38 | 0.166522 |
+| zonebelow_baseflow | -0.135442 | 0.051703 | -2.62 | 0.008803 `**` |
+| wpfgATe | 0.762082 | 0.120587 | 6.32 | 2.62e-10 `***` |
+| wpfgATL | 0.826599 | 0.124319 | 6.65 | 2.95e-11 |
+| wpfgSe | -0.219954 | 0.361766 | -0.61 | 0.543187 |
+| wpfgSk | -0.409777 | 0.497890 | -0.82 | 0.410493 |
+| wpfgTda | 0.640675 | 0.121310 | 5.28 | 1.28e-07 `***` |
+| wpfgTdr | 0.361223 | 0.122625 | 2.95 | 0.003222 `**` |
+| periodafter_summer | 0.259131 | 0.152882 | 1.69 | 0.090080 |
+| periodbefore_spring | -0.769916 | 0.262410 | -2.93 | 0.003346 `**` |
+| originnative | 0.022738 | 0.011705 | 1.94 | 0.052058 |
+| grazingY | -0.406325 | 0.203425 | -2.00 | 0.045780 `*` |
+| wpgATe: periodafter_summer | -0.570432 | 0.153550 | -3.71 | 0.000203 `***` |
+| wpfgATl:periodafter_summer | -0.864219 | 0.159835 | -5.41 | 6.41e-08 `*` |
+| wpfgSe:periodafter_summer | -0.445005 | 0.462139 | -0.96 | 0.335586 |
+| wpfgSk:periodafter_summer | 1.502212 | 0.526754 | 2.85 | 0.004347 `**` |
+| wpfgTda:periodafter_summer | -0.310229 | 0.153846 | -2.02 | 0.043749 `*` |
+| wpfgTdr:periodafter_summer | 0.052045 | 0.155180 | 0.34 | 0.737333 |
+| wpfgATe:periodbefore_spring | 0.414490 | 0.262945 | 1.58 | 0.114948 |
+| wpfgATl:periodbefore_spring | -0.060499 | 0.268355 | -0.23 | 0.821633 |
+| wpfgSe:periodbefore_spring | -0.968411 | 0.865331 | -1.12 | 0.263088 |
+| wpfgSk:periodbefore_spring | 0.760442 | 0.736038 | 1.03 | 0.301531 |
+| wpfgTda:periodbefore_spring | 0.611485 | 0.263133 | 2.32 | 0.020133 `*` |
+| wpfgTdr:periodbefore_spring | 1.539382 | 0.263473 | 5.84 | 5.14e-09 `***` |
+
+Species richness model summary. Signif. codes: 0 '`***`' 0.001 '`**`' 0.01 '`*`' 0.05 '`.`' 0.1 ' ' 1.
+:::
+
+::: landscape
+
+::: {#fig-S7-9 out-width="100%" fig-pos="t"}
+```{=latex}
+\makebox[\textwidth][c]{%
+\parbox{1.3\textwidth}{
+  \centering{
+    \pandocbounded{\includegraphics[keepaspectratio, width=1.3\textwidth]{richness_period_zone.png}}
+  }
+}%
+}
+```
+
+Model predicted species richness for the two way interaction between `period` and `zone`. Points are raw data with the spread across x-axis representing data density.
+
+:::
+
+
+
+::: {#fig-S7-10 out-width="100%" fig-pos="t"}
+```{=latex}
+\makebox[\textwidth][c]{%
+\parbox{1.3\textwidth}{
+  \centering{
+    \pandocbounded{\includegraphics[keepaspectratio, width=1.3\textwidth]{richness_wpfg.png}}
+  }
+}%
+}
+```
+
+Model predicted species richness for the two way interaction between `zone` and `functional group`. Points are raw data with the spread across x-axis representing data density.
+
+:::
+
+
+::: {#fig-S7-11 out-width="100%" fig-pos="t"}
+```{=latex}
+\makebox[\textwidth][c]{%
+\parbox{1.3\textwidth}{
+  \centering{
+    \pandocbounded{\includegraphics[keepaspectratio, width=1.3\textwidth]{richness_wpfg_period.png}}
+  }
+}%
+}
+```
+
+Model predicted species richness for the two way interaction between `period` and `functional group`. Points are raw data with the spread across x-axis representing data density.
+
+:::
+
+:::
+
+## Case Study Preregistration with git and GitHub
+
+![Screenshot of GitHub issue thread illustrating where the preregistered analysis tasks and rationale were transparently recorded. The full thread can be viewed at <https://github.com/egouldo/VEFMAP_VEG_Stage6/issues/23>.](clipboard-540699872.png){#fig-github-23 fig-scap="Screenshot of GitHub issue thread illustrating where the preregistered analysis tasks and rationale were transparently recorded." width="80%" fig-pos="H"}
+
+![Screenshot of [comment on](https://github.com/egouldo/VEFMAP_VEG_Stage6/issues/71#issuecomment-1990420515) GitHub issue illustrating data-dependent decision-making and where deviation from preregistration occurred during the case study. The full thread can be viewed at <https://github.com/egouldo/VEFMAP_VEG_Stage6/issues/71>.](clipboard-2389346837.png){#fig-github-71 fig-scap="Screenshot of comment on GitHub issue illustrating data-dependent decision-making and where deviation from preregistration occurred during the case study." width="80%"}
