@@ -24,8 +24,8 @@ suppressPackageStartupMessages(library(dplyr))
 #| fig-width: 10
 #| fig-cap: "Preregistration as a component of the registered report publication pathway, as illustrated by [@Pu2019]."
 
-magick::image_read(path = "_supp-mat/Pu_et_al_fig_prereg.png", 
-                   density = 1000) %>% 
+magick::image_read(path = "_supp-mat/Pu_et_al_fig_prereg.png",
+                   density = 1000) %>%
   magick::image_scale("250%")
 ```
 
@@ -108,7 +108,7 @@ The modeller follows an iterative process of preregistration. As they proceed th
 #| echo: false
 #| fig-cap: Adaptive preregistration can cycle through the specification, execution and ideation phases multiple times in adaptive preregistration, with interim versions of the preregistration being generated at each preregistration point.
 
-magick::image_read_pdf(path = "figures/interim_preregistrations.pdf") %>% 
+magick::image_read_pdf(path = "figures/interim_preregistrations.pdf") %>%
   magick::image_resize(geometry = "35%")
 ```
 
@@ -134,8 +134,8 @@ We propose leveraging the features of [git](https://git-scm.com) and [GitHub](ww
 #| echo: false
 #| out-width: "900px"
 
-magick::image_read(path = "figures/LivingPreregistration.png", 
-                   density = 1000) %>% 
+magick::image_read(path = "figures/LivingPreregistration.png",
+                   density = 1000) %>%
   magick::image_scale("80%")
 ```
 :::
