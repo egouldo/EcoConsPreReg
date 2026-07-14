@@ -24,5 +24,10 @@ The OSF repository for the Adaptive Preregistration project is accessible at: <h
 
 The material presented in this repository's website is accessible in PDF format at: <https://osf.io/sq5j4/files/x2kpj>.
 
+**N.B.**
+
+This page is built and published to GH-pages using the [quarto publish gh-pages workflow](https://quarto.org/docs/publishing/github-pages.html).
+
+
 [^1]: Jones, C., Vivian, L., Wootton, H., Gould, E., Yen, J., Mole, B., Thomas, F., Sutton, F., Crowther, D., Backstrom, A., & Just, K. (2026). Vegetation responses to managed river flow events and regimes. EcoEvoArXiv [Preprint]. https://doi.org/10.32942/X2S67G
 [^2]: Case study Source code repository: [https://github.com/egouldo/VEFMAP_VEG_Stage6/tree/EG-prereg-updates](https://github.com/egouldo/VEFMAP_VEG_Stage6/tree/EG-prereg-updates)
