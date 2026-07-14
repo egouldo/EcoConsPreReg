@@ -2,7 +2,7 @@
 # CITATION file created with {cffr} R package, v0.5.0
 # See also: https://docs.ropensci.org/cffr/
 # -----------------------------------------------------------
- 
+
 cff-version: 1.2.0
 message: 'To cite "EcoConsPreReg" in publications use:'
 type: software
@@ -52,14 +52,14 @@ contact:
   given-names: Gould
   email: elliot.gould@unimelb.edu.au
   orcid: https://orcid.org/0000-0002-6585-538X
-identifiers: 
+identifiers:
 - type: doi
   value: 10.5281/zenodo.10807200
 repository-code: "https://github.com/egouldo/EcoConsPreReg"
 date-released: 2024-03-27
-keywords: 
+keywords:
 - preregistration,
 - adaptive preregistration,
-- ecology, 
-- conservation, 
+- ecology,
+- conservation,
 - model-based research
